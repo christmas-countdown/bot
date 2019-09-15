@@ -12,12 +12,17 @@ module.exports = {
     args: false,
     cooldown: 10,
     guildOnly: true,
+    premiumOnly: true,
     execute(message, args) {
         const client = message.client;
         // command starts here
         if (message.channel.permissionsFor(message.channel.guild.me).has('MANAGE_MESSAGES')) {
             message.delete()
         };
+        const embed = new Discord.RichEmbed()
+            .setColor("#E74C3C")
+            .setDescription(`:star: **The live countdown command is limited to premium servers.**\n[${config.website}/donate](${config.url}donate/?utm_source=discord&utm_medium=cmd-embed&utm_campaign=countdown)`)
+        message.channel.send({embed})
 
 
 

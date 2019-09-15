@@ -24,7 +24,6 @@ const client = new Discord.Client({
 });
 client.commands = new Discord.Collection();
 const cooldowns = new Discord.Collection();
-const now = Date.now();
 const mysql = require('mysql');
 const BotsList = require("dblapi.js");
 const dbl = new BotsList(keys.botlist, client);
@@ -39,6 +38,9 @@ const db = mysql.createConnection({
   database: database.name
 });
 
+function now(){
+  return Date.now();
+}
 
 const commands = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
@@ -63,7 +65,7 @@ db.connect(function(err) {
     if(err) { // if table does not exist
       log.warn(`'${database.table}' table does not exist`)
       log.info(`Creating table...`)
-      db.query(`CREATE TABLE ${database.table} (id INT AUTO_INCREMENT PRIMARY KEY, guild VARCHAR(255), channel VARCHAR(255), enabled VARCHAR(255));`, function (err, result) {
+      db.query(`CREATE TABLE ${database.table} (id INT AUTO_INCREMENT PRIMARY KEY, guild VARCHAR(255), channel VARCHAR(255), enabled VARCHAR(255), premium VARCHAR(255));`, function (err, result) {
         if(err) {
            log.warn("Could not create database table");
            log.warn(log.colour.bgYellowBright(log.color.black("BOT WILL NOT FUNCTION CORRECTLY")) + log.colour.bgBlack(""));
@@ -116,7 +118,7 @@ client.once('ready', () => { // after bot has logged in
 
   log.info(`There ${countdown.days().verb} ${countdown.daysLeft()} ${countdown.days().text} left`, "yellowBright")
   log.info(`There ${countdown.sleeps().verb} ${countdown.sleepsLeft()} ${countdown.sleeps().text} left`, "yellowBright")
-
+  log.info(countdown.live())
   // [AUTO]  DAILY COUNTDOWN
   setInterval(() => {
     if(countdown.time().hours === "00" && countdown.time().minutes === "01") {
@@ -188,18 +190,19 @@ client.on('message', async message => {
   };
 
 
+
   if (!cooldowns.has(command.name)) {
     cooldowns.set(command.name, new Discord.Collection());
   }
 
   const timestamps = cooldowns.get(command.name);
-  const cooldownAmount = (command.cooldown || 3) * 1000;
+  const cooldownAmount = (command.cooldown || config.cooldown) * 1000;
 
   if (timestamps.has(message.author.id)) {
     const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
 
-    if (now < expirationTime) {
-      const timeLeft = (expirationTime - now) / 1000;
+    if (now() < expirationTime) {
+      const timeLeft = (expirationTime - now()) / 1000;
         const embed = new Discord.RichEmbed()
           .setColor("#E74C3C")
           .setDescription(`:x: **Please do not spam commands** (wait ${timeLeft.toFixed(1)}s)`)
@@ -207,7 +210,7 @@ client.on('message', async message => {
 
     }
   }
-  timestamps.set(message.author.id, now);
+  timestamps.set(message.author.id, now());
   setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 
 
@@ -235,13 +238,18 @@ client.on('message', async message => {
 
   if(message.author.id != config.ownerID) {
     try {
-      log.info(`Sending DEV notice to ${message.author.tag}`)
+      log.warn(`Sending DEV notice to ${message.author.tag}`)
       message.member.send("Hi. Due to the success of the bot last year, I have decided to rewrite the bot to make important improvements for this Christmas, as it was previously barely functional and I had to constantly restart it after crashes.\nDuring the re-development, many functions will not work correctly and the bot may be slow to respond. If something does not work (such as a command), please do not continue to try it, I am aware it does not work and I will fix it eventually.\nThe main feature of the bot (auto countdown) will not be working until close to the release (likely late October). If you have any questions, join https://discord.gg/pXc9vyC .")
     } catch {
       log.warn(`Could not send DEV notice to ${message.author.tag}`)
     }
   }
   
+
+
+
+
+
     
 
     try {
@@ -261,7 +269,7 @@ client.on('message', async message => {
       // has permissions
 
       // client.commands.get(command).execute(message, args, config);
-      command.execute(message, args); // EXECUTE THE COMMAND
+      command.execute(message, args, db); // EXECUTE THE COMMAND
 
 
       const embed = new Discord.RichEmbed()
@@ -288,10 +296,21 @@ client.on('message', async message => {
   
 });
 
+
+client.on('guildCreate', guild => {
+  if (!guild.owner.dmChannel) return;
+});
+
+client.on('guildDelete', guild => {
+  if (!guild.owner.dmChannel) return;
+});
+
+
 client.on('error', error => {
   log.warn(`Potential error detected\n(likely Discord API connection issue)\n`);
   log.error(`Client error:\n${error}`);
 });
+
 client.on('warn', (e) => log.warn(`${e}`));
 
 if(config.debug == true){ client.on('debug', (e) => log.debug(`${e}`)) };
@@ -300,22 +319,23 @@ process.on('unhandledRejection', error => {
   log.warn(`An error was not caught`);
   log.error(`Uncaught error: \n${error.stack}`);
 });
+
 process.on('beforeExit', (code) => {
-  log.basic(log.colour.yellowBright(`Disconected from Discord API`));
-  log.basic(`Exiting (${code})`);
+  log.info(log.colour.yellowBright(`Disconected from Discord API`));
+  log.info(`Exiting (${code})`);
 });
 
 // DBL EVENTS
 dbl.on('posted', () => {
   log.info(`Posted server count to bot lists. (${client.guilds.size})`);
 });
+
 dbl.on('vote', vote => {
   log.info(`[DBL] Someone (${vote.user}) just voted!`);
 });
 
 dbl.on('error', e => {
   log.error(`[DBL] ${e}`);
-  // console.log(`\nDBL encountered an error.\n`)
 });
 
 client.login(config.token);

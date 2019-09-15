@@ -2,10 +2,11 @@ const Discord = require("discord.js");
 const config = require("../config.json");
 const log = require("leekslazylogger");
 module.exports = {
-    name: 'website',
+    name: 'live',
+    long: 'Sends the link to the live web countdown',
     description: 'Link to the live countdown',
     usage: '',
-    aliases: ['none'],
+    aliases: ['website'],
     example: '',
     args: false,
     cooldown: config.cooldown,

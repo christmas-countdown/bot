@@ -18,39 +18,33 @@ module.exports = {
 			message.delete()
 		};
 
-		const data = [];
+
 		const { commands } = message.client;
 
 
 
-
 			if (!args.length) {
-				data.push('__**Commands**__');
-				data.push(commands.map(command => `**${config.prefix}${command.name}** : \`${command.description}\``).join('\n'));
-				data.push(`\nType \`${config.prefix}help [command]\` for more information about a specific command.\n\n`);
-
+				var cmds = [];
+				// cmds.push(commands.map(command => `**${config.prefix}${command.name}**\n> ${command.description}`).join('\n\n'));
+		
 				const embed = new Discord.RichEmbed()
 					.setTitle("Commands")
 					.setColor(config.colour)
-					.setDescription(`\nType \`${config.prefix}help [command]\` for more information about a specific command.\n\n`)
+					.setDescription(`\nType \`${config.prefix}help [command]\` for more information about a specific command.\n\n\n${cmds}`)
 					// .addField("...", `...`, true)
 					// .addField("...", `...`, true)
 					.setFooter(config.name, client.user.avatarURL);
 
-				var cmds = [];
-				cmds.push(commands.map(command => embed.addField(`${config.prefix}${command.name}`, `> ${command.description}`, true)));
+				cmds.push(commands.map(command => {
+					if (command.hide) return;
+					embed.addField(`__**${config.prefix}${command.name}**__`, `${command.description}\n`, false)
+				}));
+			
+				
 				message.channel.send(embed)
-					.then(() => {
-						if (message.channel.type === 'dm') return;
-						// message.channel.send(`A list of commands has been sent to you.`);
-					})
 					.catch(error => {
 						// console.error(`Could not send help DM to ${message.author.tag}.\n`, error);
-						log.warn(`Could not DM help menu to ${message.author.tag}, sending to server channel instead`);
-						message.channel.send(`:x: **Sorry!** There was an error whilst sending the help menu via DMs.`)
-						message.channel.send(data, {
-							split: true
-						})
+						log.warn(`Could not send help menu`);
 					});
 			} else {
 				const name = args[0].toLowerCase();
@@ -77,6 +71,7 @@ module.exports = {
 				if (command.usage) cmd.addField("Usage", `\`${config.prefix}${command.name} ${command.usage}\``, true)
 				if (command.example) cmd.addField("Example", `\`${config.prefix}${command.example}\``, true);
 				if (command.permission) cmd.addField("Required Permission", `\`${command.permission}\``, true);
+				if (command.premiumOnly) cmd.addField(":star: Premium", `[donate](${config.url}donate/?utm_source=discord&utm_medium=cmd-embed&utm_campaign=countdown)`, true)
 				message.channel.send(cmd)
 
 			};
