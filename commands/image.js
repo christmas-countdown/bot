@@ -1,13 +1,12 @@
 const Discord = require("discord.js");
 const config = require("../config.json");
 const log = require("leekslazylogger");
-const countdown = require("../functions/countdown.js")
 module.exports = {
-    name: 'countdown',
-    description: 'Displays countdown',
-    long: 'Displays the exact time left until Christmas',
+    name: 'image',
+    description: 'Displays a random image',
+    long: 'Displays a random Christmas / Winter image from Unsplash',
     usage: '',
-    aliases: ['none'],
+    aliases: ['random', 'photo', 'unsplash'],
     example: '',
     args: false,
     cooldown: 10,
@@ -21,8 +20,10 @@ module.exports = {
         };
         const embed = new Discord.RichEmbed()
             .setColor(config.colour)
-            .setDescription(`:star: **The live countdown command is limited to premium servers.**\n[${config.website}/donate](${config.url}donate/?utm_source=discord&utm_medium=cmd-embed&utm_campaign=countdown)`)
-        message.channel.send({embed})
+            .setDescription(`:star: **The random Christmas image command is limited to premium servers.**\n[${config.website}/donate](${config.url}donate/?utm_source=discord&utm_medium=cmd-embed&utm_campaign=countdown)`)
+        message.channel.send({
+            embed
+        })
 
 
 

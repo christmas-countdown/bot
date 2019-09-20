@@ -20,8 +20,8 @@ module.exports = {
 
 
 		const { commands } = message.client;
-
-
+		// log.debug(Array.from(commands.values()))
+	
 
 			if (!args.length) {
 				var cmds = [];
