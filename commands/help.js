@@ -19,26 +19,40 @@ module.exports = {
 		};
 
 
-		const { commands } = message.client;
-		// log.debug(Array.from(commands.values()))
+		const commands = Array.from(client.commands.values());
 	
 
 			if (!args.length) {
 				var cmds = [];
-				// cmds.push(commands.map(command => `**${config.prefix}${command.name}**\n> ${command.description}`).join('\n\n'));
-		
+				
+				for(command of commands) {
+					if(command.hide) continue;
+					if(command.permission && !message.member.hasPermission(command.permission)) {
+						if (command.premiumOnly) {
+							cmds.push(`**${config.prefix}${command.name}**　**·**　${command.description} :exclamation: **★**`);
+						} else {
+							cmds.push(`**${config.prefix}${command.name}**　**·**　${command.description} :exclamation:`);
+						};
+						continue;
+					}
+					if(command.premiumOnly) {
+						cmds.push(`**${config.prefix}${command.name}**　**·**　${command.description} **★**`);
+					} else {
+						cmds.push(`**${config.prefix}${command.name}**　**·**　${command.description}`);
+					};
+				};
 				const embed = new Discord.RichEmbed()
 					.setTitle("Commands")
 					.setColor(config.colour)
-					.setDescription(`\nType \`${config.prefix}help [command]\` for more information about a specific command.\n\n\n${cmds}`)
+					.setDescription(`\nType \`${config.prefix}help [command]\` for more information about a specific command.\n\n\n${cmds.join("\n\n")}\n\n`)
 					// .addField("...", `...`, true)
 					// .addField("...", `...`, true)
 					.setFooter(config.name, client.user.avatarURL);
 
-				cmds.push(commands.map(command => {
-					if (command.hide) return;
-					embed.addField(`__**${config.prefix}${command.name}**__`, `${command.description}\n`, false)
-				}));
+				// cmds.push(commands.map(command => {
+				// 	if (command.hide) return;
+				// 	embed.addField(`__**${config.prefix}${command.name}**__`, `${command.description}\n`, false)
+				// }));
 			
 				
 				message.channel.send(embed)
@@ -48,7 +62,7 @@ module.exports = {
 					});
 			} else {
 				const name = args[0].toLowerCase();
-				const command = commands.get(name) || commands.find(c => c.aliases && c.aliases.includes(name));
+				const command = client.commands.get(name) || client.commands.find(c => c.aliases && c.aliases.includes(name));
 
 				if (!command) {
 					const notCmd = new Discord.RichEmbed()
@@ -70,8 +84,16 @@ module.exports = {
 				if (command.aliases) cmd.addField("Aliases", `\`${command.aliases.join(', ')}\``, true);
 				if (command.usage) cmd.addField("Usage", `\`${config.prefix}${command.name} ${command.usage}\``, true)
 				if (command.example) cmd.addField("Example", `\`${config.prefix}${command.example}\``, true);
-				if (command.permission) cmd.addField("Required Permission", `\`${command.permission}\``, true);
 				if (command.premiumOnly) cmd.addField(":star: Premium", `[donate](${config.url}donate/?utm_source=discord&utm_medium=cmd-embed&utm_campaign=countdown)`, true)
+				if (command.permission) {
+					if(message.member.hasPermission(command.permission)) {
+						cmd.addField("Required Permission", `\`${command.permission}\``, true);
+					} else {
+						cmd.addField("Required Permission", `\`${command.permission}\` :exclamation: You don't have permission to use this command`, true);
+					}
+				}
+				// !message.member.hasPermission(command.permission)
+				// 
 				message.channel.send(cmd)
 
 			};

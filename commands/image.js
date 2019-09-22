@@ -20,7 +20,7 @@ module.exports = {
         };
         const embed = new Discord.RichEmbed()
             .setColor(config.colour)
-            .setDescription(`:star: **The random Christmas image command is limited to premium servers.**\n[${config.website}/donate](${config.url}donate/?utm_source=discord&utm_medium=cmd-embed&utm_campaign=countdown)`)
+            .setDescription(`**Coming soon**`)
         message.channel.send({
             embed
         })

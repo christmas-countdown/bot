@@ -17,10 +17,14 @@ module.exports = {
         if (message.channel.permissionsFor(message.channel.guild.me).has('MANAGE_MESSAGES')) {
             message.delete()
         };
+
+        const urlExt = "?utm_source=discord&utm_medium=cmd-embed&utm_campaign=website";
         
         const embed = new Discord.RichEmbed()
             .setColor(config.colour)
-            .setDescription(`[${config.website}](${config.url})`)
+            .setTitle("Countdown to Chrsitmas live")
+            .setURL(`${config.url}${urlExt}`)
+            .setDescription(`If you want to know exactly how long is left until Christmas, or  the total number of hours, minutes or seconds left, **go to [${config.website}](${config.url}${urlExt}) for a decorative & festive live countdown.**\n`)
         message.channel.send({
             embed
         })

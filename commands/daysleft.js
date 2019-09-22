@@ -3,11 +3,11 @@ const config = require("../config.json");
 const log = require("leekslazylogger");
 const countdown = require("../functions/countdown.js")
 module.exports = {
-    name: 'daysleft',
+    name: 'days',
     description: 'Displays days left',
     long: 'Displays the number of days left until Christmas (one less than number of days)',
     usage: '',
-    aliases: ['days', 'day'],
+    aliases: ['daysleft', 'day'],
     example: '',
     args: false,
     cooldown: 10,
