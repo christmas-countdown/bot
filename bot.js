@@ -163,7 +163,7 @@ client.once('ready', async () => { // after bot has logged in
   global.cache = {};
   global.cache.premium= [];
 
-  log.info(`Writing initial cache for ${client.guilds.size} servers`)
+  log.info(`[CACHE] Writing initial cache for ${client.guilds.size} servers`)
   db.query(`SELECT * FROM ${database.table} WHERE premium = true`, function (err, result) {
     if (err) {
       log.error(err)
@@ -177,13 +177,13 @@ client.once('ready', async () => { // after bot has logged in
       global.cache.premium[x] = result[x].guild;
     }
 
-    log.info(`Found ${result.length} premium ${utils.plural("server", result.length)}`)
+    log.info(`[CACHE] Found ${result.length} premium ${utils.plural("server", result.length)}`)
   });
 
 
   
   setInterval(() => {
-    log.info(`Refreshing cache for ${client.guilds.size} servers`)
+    log.info(`[CACHE] Refreshing cache for ${client.guilds.size} servers`)
     db.query(`SELECT * FROM ${database.table} WHERE premium = true`, function (err, result) {
       if (err) {
         log.error(err)
@@ -211,7 +211,7 @@ client.once('ready', async () => { // after bot has logged in
       countdown.daily(client, db);
     }
   }, 60000) // every 1 min / 60 secs
-
+countdown.daily(client, db)
 
 
 
