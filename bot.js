@@ -16,6 +16,7 @@ const log = require(`leekslazylogger`);
 const config = require('./config.json');
 const database = require('./database.json');
 const keys = require('./keys.json');
+const cache = require('./cache.json');
 const countdown = require("./functions/countdown.js");
 const utils = require("./functions/utils.js");
 const {
@@ -160,47 +161,14 @@ client.once('ready', async () => { // after bot has logged in
     }
   }, 1800000); // every 30 mins
 
-  global.cache = {};
-  global.cache.premium= [];
-
-  log.info(`[CACHE] Writing initial cache for ${client.guilds.size} servers`)
-  db.query(`SELECT * FROM ${database.table} WHERE premium = true`, function (err, result) {
-    if (err) {
-      log.error(err)
-    };
-    if (config.debug) {
-      log.debug(result)
-    }
-    // do something with result
-    if (!result) return log.warn("No database result");
-    for (x in result) {
-      global.cache.premium[x] = result[x].guild;
-    }
-
-    log.info(`[CACHE] Found ${result.length} premium ${utils.plural("server", result.length)}`)
-  });
 
 
+
+  utils.refreshCache(db, client, database, config);
   
   setInterval(() => {
-    log.info(`[CACHE] Refreshing cache for ${client.guilds.size} servers`)
-    db.query(`SELECT * FROM ${database.table} WHERE premium = true`, function (err, result) {
-      if (err) {
-        log.error(err)
-      };
-      if (config.debug) {
-        log.debug(result)
-      }
-      // do something with result
-      if (!result) return log.warn("No database result");
-      for(x in result){
-        global.cache.premium[x] = result[x].guild;
-      }
-
-      log.info(`${result.length} premium servers`)
-    });
-    
-  }, 3600000) // every hour
+    utils.refreshCache(db, client, database, config)
+  }, 300000) // every 5 mins
 
   // log.info(`There ${countdown.days().verb} ${countdown.daysLeft()} ${countdown.days().text} left`, "yellowBright")
   // log.info(`There ${countdown.sleeps().verb} ${countdown.sleepsLeft()} ${countdown.sleeps().text} left`, "yellowBright")
@@ -211,7 +179,6 @@ client.once('ready', async () => { // after bot has logged in
       countdown.daily(client, db);
     }
   }, 60000) // every 1 min / 60 secs
-countdown.daily(client, db)
 
 
 
@@ -261,7 +228,7 @@ client.on('message', async message => {
 
 
   if(command.premiumOnly) {
-    if(!global.cache.premium.includes(message.guild.id)){
+    if(!cache.premium.includes(message.guild.id)){
       log.console(`${message.author.tag} tried to use the "${command.name}" command on a non-premium server`);
       const embed = new Discord.RichEmbed()
         .setColor(config.colour)

@@ -1,6 +1,8 @@
 // CountdownToXMAS / Christmas Countdown [BOT] :: Utility Functions by Eartharoid
 
 const log = require("leekslazylogger");
+const fs = require("fs");
+let cache = require("../cache.json");
 
 
 
@@ -30,3 +32,25 @@ module.exports.affected = (rows, updated) => {
         log.type.db(`${rows} ${module.exports.plural("row", rows)} affected`);
     }
 };
+
+module.exports.refreshCache = (db, client, database, config) => {
+    log.info(`[CACHE] Refreshing cache for ${client.guilds.size} servers`);
+    db.query(`SELECT * FROM ${database.table} WHERE premium = true`, function (err, result) {
+        if (err) {
+            log.error(err)
+        };
+        if (config.debug) {
+            log.debug(result)
+        }
+        // do something with result
+        if (!result) return log.warn("No database result - CAN'T REFRESH CACHE");
+        let c = []
+        for (x in result) {
+           c[x] = result[x].guild;
+        }
+        cache.premium = c;
+        log.info(`[CACHE] Found ${result.length} premium ${module.exports.plural("server", result.length)}`);
+        fs.writeFileSync("./cache.json", JSON.stringify(cache), (err) => console.error);
+    });
+};
+

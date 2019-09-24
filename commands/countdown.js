@@ -44,7 +44,7 @@ module.exports = {
         } else {
             const embed = new Discord.RichEmbed()
                 .setColor(config.colour)
-                .setTitle(`${countdown.daysLeft()} ${countdown.days().text} left`)
+                .setTitle(`${countdown.daysLeft()} ${countdown.days().text} / ${countdown.sleepsLeft()} ${countdown.sleeps().text} left`)
                 .setTimestamp()
                 .setFooter(config.name, client.user.avatarURL);
 

@@ -35,6 +35,7 @@ module.exports = {
              if (config.debug) {
                  log.debug(result)
              }
+             if (!result) return log.warn("No database result");
             log.console(`Set countdown channel for "${message.guild.name}"`);
             utils.affected(result.affectedRows, result.changedRows);
 

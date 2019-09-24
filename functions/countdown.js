@@ -1,5 +1,5 @@
 // CountdownToXMAS / Christmas Countdown [BOT] :: Countdown Functions by Eartharoid
-
+const fs = require('fs');
 const log = require("leekslazylogger");
 const Discord = require('discord.js');
 const config = require("../config.json");
@@ -147,7 +147,7 @@ function disable(guild, db, client) {
 }
 module.exports.daily = async (client, db) => {
     // DAILY COUNTDOWN
-    log.info("Starting daily countdown...")
+    log.info("Starting daily countdown...");
     db.query(`SELECT * FROM ${database.table} WHERE enabled = true`, function (err, result) {
         if (err) {
             log.error(err)
@@ -156,7 +156,8 @@ module.exports.daily = async (client, db) => {
             log.debug(result)
         }
         // do something with result
-        if (!result) return log.warn("No database result");
+        if (!result) return log.warn("No database result - COULD NOT SEND DAILY COUNTDOWN!!");
+
         log.info(`Sending countdown to ${result.length} servers`, "magentaBright")
         for (x in result) {
             if (!typeof result[x].channel === "string") return;
@@ -185,7 +186,6 @@ module.exports.daily = async (client, db) => {
                     }
                 };
                 // bot has permission
-
                 if (module.exports.daysLeft() === -1) {
                     const embed = new Discord.RichEmbed()
                         .setColor(config.colour)
@@ -217,8 +217,7 @@ module.exports.daily = async (client, db) => {
                     channel.send({
                         embed
                     })
-                }
-
+                };
 
             } catch {
                 log.warn(`Error executing daily countdown for "${channel.guild.name}"`)
