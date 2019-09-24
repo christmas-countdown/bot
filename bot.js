@@ -63,7 +63,7 @@ log.info("Starting up...")
 log.info("Attempting to connect to database...")
 
 db.connect(function (err) {
-  // db.query(`DROP TABLE ${database.table}`) // reset database for de / testing purposes
+  // db.query(`DROP TABLE ${database.table}`) // reset database for testing purposes // MUST DISABLE!!!!!
   if (err) { // if connection fails
     log.warn("Could not connect to database");
     log.warn(log.colour.bgYellowBright(log.color.black("BOT WILL NOT FUNCTION CORRECTLY")) + log.colour.bgBlack(""));
@@ -79,7 +79,7 @@ db.connect(function (err) {
     if (err) { // if table does not exist
       log.warn(`'${database.table}' table does not exist`)
       log.info(`Creating table...`)
-      db.query(`CREATE TABLE ${database.table} (id INT AUTO_INCREMENT PRIMARY KEY, guild VARCHAR(255), channel VARCHAR(255), enabled BOOLEAN, premium BOOLEAN);`, function (err, result) {
+      db.query(`CREATE TABLE ${database.table} (id INT AUTO_INCREMENT PRIMARY KEY, guild VARCHAR(255), channel VARCHAR(255), role VARCHAR(255), enabled BOOLEAN, mention BOOLEAN, premium BOOLEAN);`, function (err, result) {
         if (err) {
           log.warn("Could not create database table");
           log.warn(log.colour.bgYellowBright(log.color.black("BOT WILL NOT FUNCTION CORRECTLY")) + log.colour.bgBlack(""));
@@ -168,7 +168,7 @@ client.once('ready', async () => { // after bot has logged in
   
   setInterval(() => {
     utils.refreshCache(db, client, database, config)
-  }, 300000) // every 5 mins
+  }, 900000) // every 15 mins
 
   // log.info(`There ${countdown.days().verb} ${countdown.daysLeft()} ${countdown.days().text} left`, "yellowBright")
   // log.info(`There ${countdown.sleeps().verb} ${countdown.sleepsLeft()} ${countdown.sleeps().text} left`, "yellowBright")
@@ -179,7 +179,7 @@ client.once('ready', async () => { // after bot has logged in
       countdown.daily(client, db);
     }
   }, 60000) // every 1 min / 60 secs
-
+countdown.daily(client, db);
 
 
 });

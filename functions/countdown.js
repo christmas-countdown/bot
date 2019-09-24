@@ -198,10 +198,14 @@ module.exports.daily = async (client, db) => {
                     } else {
                         embed.setDescription(`There ${module.exports.sleeps().verb} **${module.exports.sleepsLeft()} ${module.exports.sleeps().text}** left until Christmas!\n\nWatch the live countdown at [${config.website}](${config.url}?utm_source=discord&utm_medium=cmd-embed&utm_campaign=sleepsleft)`)
                     }
+                    if (typeof result[x].role === "string" && result[x].mention === 1) {
+                        channel.send(`<@&${result[x].role}>`)
+                    }
+
                     channel.send({
                         embed
                     })
-
+                    
                 } else {
                     const embed = new Discord.RichEmbed()
                         .setColor(config.colour)
@@ -214,9 +218,13 @@ module.exports.daily = async (client, db) => {
                     } else {
                         embed.setDescription(`There ${module.exports.sleeps().verb} **${module.exports.sleepsLeft()} ${module.exports.sleeps().text}** left until Christmas!\n\nWatch the live countdown at [${config.website}](${config.url}?utm_source=discord&utm_medium=cmd-embed&utm_campaign=sleepsleft)`)
                     }
+                    if (typeof result[x].role === "string" && result[x].mention === 1) {
+                        channel.send(`<@&${result[x].role}>`)
+                    }
                     channel.send({
                         embed
                     })
+
                 };
 
             } catch {

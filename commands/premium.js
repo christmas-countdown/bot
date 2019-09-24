@@ -72,6 +72,8 @@ module.exports = {
                     log.console(`${log.colour.greenBright("Given")} premium to \"${serv.name}\"`);
                     utils.affected(result.affectedRows, result.changedRows);
                     send(yes);
+                    log.info("Pushing cache refresh")
+                    utils.refreshCache(db, client, database, config);
                 });
             } else {
                 // is premium so set to 0 to disable
@@ -84,11 +86,12 @@ module.exports = {
                     }
                     log.console(`${log.colour.redBright("Removed")} premium from \"${serv.name}\"`);
                     utils.affected(result.affectedRows, result.changedRows);
-                    send(no)
+                    send(no);
+                    log.info("Pushing cache refresh")
+                    utils.refreshCache(db, client, database, config);
                 });
             };
-            log.info("Pushing cache refresh")
-            utils.refreshCache(db, client, database, config);
+            
         });
 
         // command ends here
