@@ -1,7 +1,6 @@
 const fs = require('fs');
 const Discord = require("discord.js");
 const config = require("../config.json");
-const stats = require("../stats.json");
 const database = require("../database.json");
 const log = require("leekslazylogger");
 const utils = require('../functions/utils.js');
@@ -48,7 +47,7 @@ module.exports = {
                 .addField("Bot version", `v${version}`, true)
                 .addField("Discord.JS version", `v${Discord.version}`, true)
                 .addField("Node.JS version", `${process.version}`, true)
-                .addField("Total joined", `${stats.totalServers}`, true)
+                .addField("Users", `${client.users.size}`, true)
                 .addField("Support", `[Join server](${config.support})`, true)
                 .addField("Created by", `[${config.creator}](${homepage})`, true)
                 .setTimestamp()
