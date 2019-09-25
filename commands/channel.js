@@ -23,7 +23,7 @@ module.exports = {
         if(!chan) {
             const embed = new Discord.RichEmbed()
                 .setColor(config.colour)
-                .setDescription(`:x: **You must mention a channel**\nType \`${config.prefix}help channel\` for more information`);
+                .setDescription(`:x: **You need to mention a channel**\nType \`${config.prefix}help channel\` for more information`);
             return message.channel.send({embed});
         };
  

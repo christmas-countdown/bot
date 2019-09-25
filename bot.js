@@ -17,6 +17,7 @@ const config = require('./config.json');
 const database = require('./database.json');
 const keys = require('./keys.json');
 const cache = require('./cache.json');
+const stats = require('./stats.json');
 const countdown = require("./functions/countdown.js");
 const utils = require("./functions/utils.js");
 const {
@@ -131,7 +132,6 @@ client.once('ready', async () => { // after bot has logged in
 
   log.info(`Ready to count down in ${client.guilds.size} servers for ${client.users.size} users\n`);
 
-
   setInterval(function () {
     client.user.setPresence({
         game: {
@@ -165,7 +165,7 @@ client.once('ready', async () => { // after bot has logged in
 
 
   utils.refreshCache(db, client, database, config);
-  
+
   setInterval(() => {
     utils.refreshCache(db, client, database, config)
   }, 900000) // every 15 mins
@@ -179,7 +179,6 @@ client.once('ready', async () => { // after bot has logged in
       countdown.daily(client, db);
     }
   }, 60000) // every 1 min / 60 secs
-countdown.daily(client, db);
 
 
 });
@@ -278,38 +277,6 @@ client.on('message', async message => {
   setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 
 
-
-
-
-
-
-
-
-
-
-
-
-  // MUST REMOVE DEV MESSAGE BELOW
-
-
-
-  if (message.author.id != config.ownerID) {
-    try {
-      log.warn(`Sending DEV notice to ${message.author.tag}`)
-      message.member.send("Hi. Due to the success of the bot last year, I have decided to rewrite the bot to make important improvements for this Christmas, as it was previously barely functional and I had to constantly restart it after crashes.\nDuring the re-development, many functions will not work correctly and the bot may be slow to respond. If something does not work (such as a command), please do not continue to try it, I am aware it does not work and I will fix it eventually.\nThe main feature of the bot (auto countdown) will not be working until close to the release (likely late October). If you have any questions, join https://discord.gg/pXc9vyC .")
-    } catch {
-      log.warn(`Could not send DEV notice to ${message.author.tag}`)
-    }
-  }
-
-
-
-
-
-
-
-
-
   try {
     // check permissions
     if (!message.channel.permissionsFor(message.channel.guild.me).has('EMBED_LINKS') || !message.channel.permissionsFor(message.channel.guild.me).has('SEND_MESSAGES')) {
@@ -347,7 +314,7 @@ client.on('message', async message => {
 
 
   } catch (error) {
-    log.error(error);
+    log.error(error.stack);
     message.channel.send(`:x: **Oof!** An error occured whilst executing that command.\nThe issue has been reported.`);
     log.error(`An unknown error occured whilst executing the '${command.name}' command`);
   }
@@ -357,11 +324,16 @@ client.on('message', async message => {
 
 client.on('guildCreate', guild => {
   log.success(`Added to "${guild.name}" / ${guild.id} (${client.guilds.size})`);
+  let servers = Array.from(client.guilds).length;
   try {
     // send message
-    // guild.owner.send(`**Thank you** for adding the Christmas Countdown bot to your server.\nPlease ensure you have given the bot permission to \`SEND_MESSAGES\` and \`EMBED_LINKS\` in any channel you want it to be able to respond to commands in.\nFor a list of commands, type \`x!help\`. If the prefix conflicts with another bot, you can request that your members use <@${client.user.id}> \`help\` instead. Please note that a couple of commands are reserved for **premium** servers. These are identified by a :star: icon. You can activate these commands on your server by typing \`x!donate\`.\n\nThe main features of this bot are all completely free:\n> \`x!sleeps\`  will display the number of sleeps left until Christmas (this is the one people usually want to know)\n> \`x!days\` will display the number of days left until Christmas\n\nIf you want the bot to count down daily, you need to first set the channel you would like the bot to use. \n> Type \`x!channel #channel\`, \`#channel\` being the channel you want the daily countdown to go to (you need to mention/tag it)\nThis will automatically enable the (auto) daily countdown, so at midnight the next day, the bot will send a message saying how many sleeps are left.\nIf you would like to display the daily countdown (for example, after Christmas has passed but you don't want to remove the bot), type \`x!toggle\`.\nThis command can also be used to re-enable the countdown at later date.\n\n~~-- -- -- -- -- -- -- --~~\nI created this bot to accompany my live Christmas Countdown website, which I made for fun and decoration some years ago.In the first year of releasing this bot, it was used by over a thousand servers in just a month, which I did not expect.After seeing the rapid growth, I decided to completely rewrite the bot this year to make it much more stable and easy to use for large numbers of servers. I would greatly appreciate if you shared this bot or my live countdown with your friends to help it grow.(Type \`x!about\` for links).\n\nI hope you and your community's members love the countdown provided by my bot this year, and hopefully you will use it next year too!\nIf you have any questions or suggestions, join the support server by typing \`x!about\`.\n\nThanks,\nEartharoid .`, {
-    //   split: true
-    // })
+    if (servers.toString().split().slice(servers - 2, servers) == "00") {
+      log.info(`"${guild.name}" is the ${utils.nth(servers)} server!`, "greenBright")
+      guild.owner.send(`> "${guild.name}" is the **${utils.nth(servers)}** server! :tada:`)
+    }
+    guild.owner.send(`**Thank you** for adding the Christmas Countdown bot to your server!\nPlease ensure you have given the bot permission to \`SEND_MESSAGES\` and \`EMBED_LINKS\` in any channel you want it to be able to respond to commands in.\nFor a list of commands, type \`x!help\`. If the prefix conflicts with another bot, you can use \`@${client.user.tag} help\` instead.\n\n> If you want the bot to send a message saying how many sleeps are left every morning, use \`x!channel [#channel]\`\n\nPlease consider donating a small amount at https://www.countdowntoxmas.tk/donate/ for access to premium-only commands on your server.`, {
+      split: true
+    })
   } catch {
     log.warn(`Could not send thank you message to ${guild.owner}`)
   }
@@ -387,7 +359,9 @@ client.on('guildCreate', guild => {
         log.warn("Could not insert row into database table");
         return log.error(err);
       };
-      utils.affected(result.affectedRows, result.changedRows);
+      utils.affected(result.affectedRows);
+      stats.totalServers = stats.totalServers + 1;
+      fs.writeFileSync("./stats.json", JSON.stringify(stats), (err) => console.error);
       if (config.debug) {
         log.debug(result)
       };
@@ -400,6 +374,9 @@ client.on('guildDelete', guild => {
   log.info(`Removed from "${guild.name}" / ${guild.id} (${client.guilds.size})`);
   try {
     // send message
+    guild.owner.send(`**Thank you** for using the Christmas Countdown bot!\nPlease consider sharing your experience with me at https://www.countdowntoxmas.tk/thank-you/survey so I know what I can do to improve the bot next year. :)`, {
+      split: true
+    })
   } catch {
     log.warn(`Could not send leaving message to ${guild.owner}`)
   }
@@ -426,7 +403,7 @@ client.on('guildDelete', guild => {
         log.warn("Could not delete row from database table");
         return log.error(err);
       };
-      utils.affected(result.affectedRows, result.changedRows);
+      utils.affected(result.affectedRows);
       if (config.debug) {
         log.debug(result)
       };

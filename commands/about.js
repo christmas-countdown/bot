@@ -1,7 +1,7 @@
 const fs = require('fs');
 const Discord = require("discord.js");
 const config = require("../config.json");
-const cache = require("../cache.json");
+const stats = require("../stats.json");
 const database = require("../database.json");
 const log = require("leekslazylogger");
 const utils = require('../functions/utils.js');
@@ -39,15 +39,17 @@ module.exports = {
             const embed = new Discord.RichEmbed()
                 .setColor(config.colour)
                 .setTitle("Information")
-                .setDescription(`> **Useful pages:**\n> [Days vs Sleeps](${config.url}understanding/days-vs-sleeps/${urlExt})\n> [About](${config.url}about/${urlExt})\n`)
+                .setDescription(`*If the \`${config.prefix}\` prefix conflicts with another bot, you can mention the bot instead:\n\`@${client.user.tag} help\`*\n> **Useful pages:**\n> [Days vs Sleeps](${config.url}understanding/days-vs-sleeps/${urlExt})\n> [About](${config.url}about/${urlExt})\n`)
                 .addField("Website", `[${config.website}](${config.url}${urlExt})`, true)
                 .addField("Total time left", `[${config.website}/total](${config.url}total/${urlExt})`, true)
                 .addField("Servers", `${client.guilds.size} ${utils.plural("server", client.guilds.size)}`, true)
-                .addField(":star: Premium", `${cache.premium.length} ${utils.plural("server", cache.premium.length)} [\(donate\)](${config.url}donate/${urlExt})`, true)
+                .addField(":star: Premium", `${utils.cache().premium.length} ${utils.plural("server", utils.cache().premium.length)} [\(donate\)](${config.url}donate/${urlExt})`, true)
                 .addField("Counting down in", `${channels} ${utils.plural("server", channels)}`, true)
                 .addField("Bot version", `v${version}`, true)
                 .addField("Discord.JS version", `v${Discord.version}`, true)
                 .addField("Node.JS version", `${process.version}`, true)
+                .addField("Total joined", `${stats.totalServers}`, true)
+                .addField("Support", `[Join server](${config.support})`, true)
                 .addField("Created by", `[${config.creator}](${homepage})`, true)
                 .setTimestamp()
                 .setFooter(`${config.name} | Created by ${config.creator}`, client.user.avatarURL);

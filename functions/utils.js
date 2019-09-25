@@ -54,3 +54,10 @@ module.exports.refreshCache = (db, client, database, config) => {
     });
 };
 
+module.exports.cache = () => {
+    return JSON.parse(fs.readFileSync("./cache.json"))
+}
+
+module.exports.nth = (n) => {
+    return n+=["st", "nd", "rd"][((n + 90) % 100 - 10) % 10 - 1] || "th";
+}
