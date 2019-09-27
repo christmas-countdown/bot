@@ -193,7 +193,7 @@ client.on('message', async message => {
       const embed = new Discord.RichEmbed()
         .setTitle("DM Logger")
         .addField("Username", message.author.tag, true)
-        .addField("Message", message.content, true)
+        .addField("Message", cont, true)
         .setTimestamp()
         .setFooter(config.name, client.user.avatarURL);
       client.channels.get(config.logChannel).send(embed)
@@ -208,9 +208,10 @@ client.on('message', async message => {
 
 
   const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|\\${config.prefix})\\s*`);
-  if (!prefixRegex.test(message.content)) return;
-  const [, matchedPrefix] = message.content.match(prefixRegex);
-  const args = message.content.slice(matchedPrefix.length).trim().split(/ +/);
+  let cont = message.content.toLowerCase()
+  if (!prefixRegex.test(cont)) return;
+  const [, matchedPrefix] = cont.match(prefixRegex);
+  const args = cont.slice(matchedPrefix.length).trim().split(/ +/);
   const commandName = args.shift().toLowerCase();
   // if (!client.commands.has(commandName)) return;
   const command = client.commands.get(commandName) ||
