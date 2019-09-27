@@ -1,7 +1,7 @@
 # ChristmasCountdownBot
 A Christmas Countdown bot for Discord
 
-[![Discord Bots](https://discordbots.org/api/widget/status/509851616216875019.svg)](https://discordbots.org/bot/509851616216875019) [![Discord Bots](https://discordbots.org/api/widget/servers/509851616216875019.svg)](https://discordbots.org/bot/509851616216875019) ![David](https://img.shields.io/david/eartharoid/ChristmasCountdownBot?style=flat)
+[![Discord Bots](https://discordbots.org/api/widget/status/509851616216875019.svg)](https://discordbots.org/bot/509851616216875019) [![Discord Bots](https://discordbots.org/api/widget/servers/509851616216875019.svg)](https://discordbots.org/bot/509851616216875019) ![David](https://img.shields.io/david/eartharoid/ChristmasCountdownBot?style=flat) ![Discord](https://img.shields.io/discord/451745464480432129?color=%237289DA&label=Discord&logo=discord&logoColor=white)
 
 
 **NOTE: Please ensure the bot has `SEND_MESSAGES` and `EMBED_LINKS` permissions in channels you want it to be able to respond in AND the countdown channel (if you use the daily countdown)**
@@ -33,6 +33,8 @@ __**Commands:**__ (★ = [premium](https://www.countdowntoxmas.tk/donate/?utm_so
 
 * `x!live` A link to the [live countdown](https://www.countdowntoxmas.tk/understanding/days-vs-sleeps/?utm_source=github&utm_medium=readme&utm_campaign=commands)
 
+
+**Support server:** https://discord.gg/pXc9vyC
 
 [![discord.boats](https://discord.boats/api/widget/509851616216875019)](https://discord.boats/bot/509851616216875019/)
 [![discordbots.org](https://discordbots.org/api/widget/509851616216875019.svg)](https://discordbots.org/bot/509851616216875019)
