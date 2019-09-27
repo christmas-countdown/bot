@@ -1,7 +1,7 @@
 # ChristmasCountdownBot
 A Christmas Countdown bot for Discord
 
-[![Discord Bots](https://discordbots.org/api/widget/status/509851616216875019.svg)](https://discordbots.org/bot/509851616216875019) [![Discord Bots](https://discordbots.org/api/widget/servers/509851616216875019.svg)](https://discordbots.org/bot/509851616216875019)
+[![Discord Bots](https://discordbots.org/api/widget/status/509851616216875019.svg)](https://discordbots.org/bot/509851616216875019) [![Discord Bots](https://discordbots.org/api/widget/servers/509851616216875019.svg)](https://discordbots.org/bot/509851616216875019) ![David](https://img.shields.io/david/eartharoid/ChristmasCountdownBot?style=flat)
 
 
 **NOTE: Please ensure the bot has `SEND_MESSAGES` and `EMBED_LINKS` permissions in channels you want it to be able to respond in AND the countdown channel (if you use the daily countdown)**
