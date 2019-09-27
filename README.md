@@ -31,7 +31,7 @@ __**Commands:**__ (★ = [premium](https://www.countdowntoxmas.tk/donate/?utm_so
 
 * `x!toggle` Enable / disable the daily countdown (channel must be set to enable)
 
-* `x!live` A link to the [live countdown](https://www.countdowntoxmas.tk/understanding/days-vs-sleeps/?utm_source=github&utm_medium=readme&utm_campaign=commands))
+* `x!live` A link to the [live countdown](https://www.countdowntoxmas.tk/understanding/days-vs-sleeps/?utm_source=github&utm_medium=readme&utm_campaign=commands)
 
 
 [![discord.boats](https://discord.boats/api/widget/509851616216875019)](https://discord.boats/bot/509851616216875019/)
