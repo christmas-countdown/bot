@@ -175,7 +175,7 @@ client.once('ready', async () => { // after bot has logged in
   // log.info(countdown.live())
   // [AUTO]  DAILY COUNTDOWN
   setInterval(() => {
-    if (countdown.time().hours === "00" && countdown.time().minutes === "01") {
+    if (countdown.time().hours === "23" /* midnight */ && countdown.time().minutes === "01") {
       countdown.daily(client, db);
     }
   }, 60000) // every 1 min / 60 secs
