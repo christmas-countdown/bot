@@ -121,9 +121,18 @@ module.exports.sleeps = () => {
     return res;
 }
 
+module.exports.text = ()  => {
+    let x = module.exports.live();
+    let res = {
+        "days": x.days !== 1 ? "Days" : "Day",
+        "hours": x.hours !== 1 ? "Hours" : "Hour",
+        "mins": x.mins !== 1 ? "Minutes" : "Minute",
+        "secs": x.secs !== 1 ? "Seconds" : "Second",
+    };
+    return res;
+};
+
 function disable(guild, db, client) {
-    log.warn(guild.id)
-    log.warn(guild.name)
     db.query(`UPDATE ${database.table} SET enabled = false WHERE guild = "${guild.id}"`, function (err, result) {
         if (err) {
             log.error(err)
