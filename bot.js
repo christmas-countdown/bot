@@ -168,14 +168,14 @@ client.once('ready', async () => { // after bot has logged in
 
   setInterval(() => {
     utils.refreshCache(db, client, database, config)
-  }, 900000) // every 15 mins
+  }, 3600000) // every hour
 
   // log.info(`There ${countdown.days().verb} ${countdown.daysLeft()} ${countdown.days().text} left`, "yellowBright")
   // log.info(`There ${countdown.sleeps().verb} ${countdown.sleepsLeft()} ${countdown.sleeps().text} left`, "yellowBright")
   // log.info(countdown.live())
   // [AUTO]  DAILY COUNTDOWN
   setInterval(() => {
-    if (countdown.time().hours === "00" /* midnight */ && countdown.time().minutes === "01") {
+    if (countdown.time().hours === "01" && countdown.time().minutes === "00") {
       countdown.daily(client, db);
     }
   }, 60000) // every 1 min / 60 secs
@@ -187,6 +187,7 @@ client.once('ready', async () => { // after bot has logged in
 
 client.on('message', async message => {
   if (message.author.bot) return;
+  let cont = message.content.toLowerCase()
   if (message.channel.type === "dm") {
     if (message.author.id === client.user.id) return;
     if (config.logDMs) {
@@ -197,18 +198,16 @@ client.on('message', async message => {
         .setTimestamp()
         .setFooter(config.name, client.user.avatarURL);
       client.channels.get(config.logChannel).send(embed)
-
+      log.console(`Received a message from ${message.author.tag}: "${cont}"`)
     } else {
       return;
     };
 
   }
-  if (message.channel.bot) return;
 
 
 
   const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|\\${config.prefix})\\s*`);
-  let cont = message.content.toLowerCase()
   if (!prefixRegex.test(cont)) return;
   const [, matchedPrefix] = cont.match(prefixRegex);
   const args = cont.slice(matchedPrefix.length).trim().split(/ +/);
@@ -373,14 +372,14 @@ client.on('guildCreate', guild => {
 
 client.on('guildDelete', guild => {
   log.info(`Removed from "${guild.name}" / ${guild.id} (${client.guilds.size})`);
-  try {
+  
     // send message
     guild.owner.send(`**Thank you** for using the Christmas Countdown bot!\nPlease consider sharing your experience with me at https://www.countdowntoxmas.tk/thank-you/survey so I know what I can do to improve the bot next year. :)`, {
       split: true
-    })
-  } catch {
-    log.warn(`Could not send leaving message to ${guild.owner}`)
-  }
+    }).catch(() => {
+      log.warn(`Could not send leaving message to ${guild.owner}`)
+    });
+  
 
   const embed = new Discord.RichEmbed()
     .setColor(0x009999)
