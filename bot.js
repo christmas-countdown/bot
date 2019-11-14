@@ -56,8 +56,10 @@ log.init({
       title: "MySQL",
       colour: "cyanBright"
     },
-    cache: "CACHE",
-    colour: "cyan"
+    cache: {
+      name: "CACHE",
+      colour: "cyan"
+    }
   }
 });
 // all log.* functions are logged to ./log/file.log from here onwards
