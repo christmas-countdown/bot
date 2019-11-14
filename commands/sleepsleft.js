@@ -20,7 +20,7 @@ module.exports = {
             message.delete()
         };
 
-        if(countdown.daysLeft() === -1) {
+        if(countdown.daysLeft() === 365) {
             const embed = new Discord.RichEmbed()
                 .setColor(config.colour)
                 .setTitle(`It's Christmas Day!`)

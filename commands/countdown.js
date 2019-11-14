@@ -25,10 +25,10 @@ module.exports = {
         const urlExt = "?utm_source=discord&utm_medium=cmd-embed&utm_campaign=countdown";
 
 
-        if (countdown.daysLeft() === -1) {
+        if (countdown.daysLeft() === 365) {
             const embed = new Discord.RichEmbed()
                 .setColor(config.colour)
-                .setTitle(`It's Christmas Day!`)
+                .setTitle(`It's Christmas Day! :tada:`)
                 .setTimestamp()
                 .setFooter(config.name, client.user.avatarURL);
 
@@ -44,7 +44,7 @@ module.exports = {
         } else {
             const embed = new Discord.RichEmbed()
                 .setColor(config.colour)
-                .setTitle(`${countdown.daysLeft()} ${countdown.days().text} / ${countdown.sleepsLeft()} ${countdown.sleeps().text} left`)
+                .setTitle(`${countdown.daysLeft()} ${countdown.days().text}  /  ${countdown.sleepsLeft()} ${countdown.sleeps().text} left`)
                 .setTimestamp()
                 .setFooter(config.name, client.user.avatarURL);
 

@@ -49,12 +49,15 @@ function now() {
 
 const commands = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
-log.init(config.name, {
+log.init({
+  name: config.name,
   custom: {
     db: {
       title: "MySQL",
       colour: "cyanBright"
-    }
+    },
+    cache: "CACHE",
+    colour: "cyan"
   }
 });
 // all log.* functions are logged to ./log/file.log from here onwards
@@ -225,14 +228,25 @@ client.on('message', async message => {
     return message.channel.send(`Sorry, this command can only be used in a server.`)
   }
 
+  if (command.restricted && !config.admins.includes(message.author.id)) {
+    const embed = new Discord.RichEmbed()
+      .setColor(config.colour)
+      .setDescription(`**You do not have permission to use this command!**\nType \`${config.prefix}help ${command.name}\` for more information`);
+    return message.channel.send({
+      embed
+    });
+  };
 
-  if(command.premiumOnly) {
-    if(!cache.premium.includes(message.guild.id)){
+
+  if (command.premiumOnly) {
+    if (!cache.premium.includes(message.guild.id)) {
       log.console(`${message.author.tag} tried to use the "${command.name}" command on a non-premium server`);
       const embed = new Discord.RichEmbed()
         .setColor(config.colour)
         .setDescription(`:star: **The \`${command.name}\` command is limited to premium servers.**\n[${config.website}/donate](${config.url}donate/?utm_source=discord&utm_medium=premium-embed&utm_campaign=${command.name})`);
-      return message.channel.send({ embed });
+      return message.channel.send({
+        embed
+      });
     }
   };
 
@@ -240,14 +254,18 @@ client.on('message', async message => {
     const embed = new Discord.RichEmbed()
       .setColor(config.colour)
       .setDescription(`**You must have \`${command.permission}\` permission to use this command**\nType \`${config.prefix}help ${command.name}\` for more information`);
-    return message.channel.send({ embed });
+    return message.channel.send({
+      embed
+    });
   };
 
   if (command.args && !args.length) {
     const embed = new Discord.RichEmbed()
       .setColor(config.colour)
       .setDescription(`**Usage:** \`${config.prefix}${command.name} ${command.usage}\`\nType \`${config.prefix}help ${command.name}\` for more information`);
-    return message.channel.send({ embed });
+    return message.channel.send({
+      embed
+    });
   };
 
 
@@ -372,14 +390,14 @@ client.on('guildCreate', guild => {
 
 client.on('guildDelete', guild => {
   log.info(`Removed from "${guild.name}" / ${guild.id} (${client.guilds.size})`);
-  
-    // send message
-    guild.owner.send(`**Thank you** for using the Christmas Countdown bot!\nPlease consider sharing your experience with me at https://www.countdowntoxmas.tk/thank-you/survey so I know what I can do to improve the bot next year. :)`, {
-      split: true
-    }).catch(() => {
-      log.warn(`Could not send leaving message to ${guild.owner}`)
-    });
-  
+
+  // send message
+  guild.owner.send(`**Thank you** for using the Christmas Countdown bot!\nPlease consider sharing your experience with me at https://www.countdowntoxmas.tk/thank-you/survey so I know what I can do to improve the bot next year. :)`, {
+    split: true
+  }).catch(() => {
+    log.warn(`Could not send leaving message to ${guild.owner}`)
+  });
+
 
   const embed = new Discord.RichEmbed()
     .setColor(0x009999)

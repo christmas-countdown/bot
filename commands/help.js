@@ -20,6 +20,7 @@ module.exports = {
 
 
 		const commands = Array.from(client.commands.values());
+		const urlExt = "?utm_source=discord&utm_medium=cmd-embed&utm_campaign=help";
 	
 
 			if (!args.length) {
@@ -44,7 +45,7 @@ module.exports = {
 				const embed = new Discord.RichEmbed()
 					.setTitle("Commands")
 					.setColor(config.colour)
-					.setDescription(`\nType \`${config.prefix}help [command]\` for more information about a specific command.\n\n\n${cmds.join("\n\n")}\n\n`)
+					.setDescription(`\n[Click here for support.](${config.url}discord/${urlExt})\n\nType \`${config.prefix}help [command]\` for more information about a specific command.\n\n\n${cmds.join("\n\n")}\n\n`)
 					// .addField("...", `...`, true)
 					// .addField("...", `...`, true)
 					.setFooter(config.name, client.user.avatarURL);

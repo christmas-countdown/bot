@@ -13,7 +13,8 @@ module.exports = {
     cooldown: config.cooldown,
     guildOnly: true,
     hide: true,
-    execute(message, args, db, log) {
+    restricted: true,
+    execute(message, args, db) {
         const client = message.client;
         // command starts here
         if (message.channel.permissionsFor(message.channel.guild.me).has('MANAGE_MESSAGES')) {

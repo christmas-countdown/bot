@@ -41,6 +41,7 @@ module.exports = {
                 .setDescription(`*If the \`${config.prefix}\` prefix conflicts with another bot, you can mention the bot instead:\n\`@${client.user.tag} help\`*\n> **Useful pages:**\n> [Days vs Sleeps](${config.url}understanding/days-vs-sleeps/${urlExt})\n> [About](${config.url}about/${urlExt})\n`)
                 .addField("Website", `[${config.website}](${config.url}${urlExt})`, true)
                 .addField("Total time left", `[${config.website}/total](${config.url}total/${urlExt})`, true)
+                .addBlankField()
                 .addField("Servers", `${client.guilds.size} ${utils.plural("server", client.guilds.size)}`, true)
                 .addField(":star: Premium", `${utils.cache().premium.length} ${utils.plural("server", utils.cache().premium.length)} [\(donate\)](${config.url}donate/${urlExt})`, true)
                 .addField("Counting down in", `${channels} ${utils.plural("server", channels)}`, true)

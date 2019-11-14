@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eartharoid/ChristmasCountdown.git"
+    "url": "git+https://github.com/Eartharoid/ChristmasCountdownBot.git"
   },
   "author": "Eartharoid",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Eartharoid/ChristmasCountdown/issues"
+    "url": "https://github.com/Eartharoid/ChristmasCountdownBot/issues"
   },
-  "homepage": "https://github.com/Eartharoid/ChristmasCountdown#readme",
+  "homepage": "https://github.com/Eartharoid/ChristmasCountdownBot#readme",
   "dependencies": {
     "boats.js": "^2.3.1",
     "dblapi.js": "^2.3.0",

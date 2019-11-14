@@ -28,7 +28,7 @@ module.exports.live = () => {
     let today = new Date();
     let xmas = new Date(today.getFullYear(), 11, 25);
 
-    if (today.getMonth() == 11 && today.getDate() > 25) {
+    if (today.getMonth() == 11 && today.getDate() > 24) {
         xmas.setFullYear(xmas.getFullYear() + 1);
     }
 
@@ -55,7 +55,7 @@ module.exports.weeksLeft = () => {
     let today = new Date();
     let xmas = new Date(today.getFullYear(), 11, 25); // 24
 
-    if (today.getMonth() == 11 && today.getDate() > 25) {
+    if (today.getMonth() == 11 && today.getDate() > 24) {
         xmas.setFullYear(xmas.getFullYear() + 1);
     }
 
@@ -71,7 +71,7 @@ module.exports.daysLeft = () => {
     let today = new Date();
     let xmas = new Date(today.getFullYear(), 11, 25);
 
-    if (today.getMonth() == 11 && today.getDate() > 25) {
+    if (today.getMonth() == 11 && today.getDate() > 24) {
         xmas.setFullYear(xmas.getFullYear() + 1);
     }
 
@@ -90,10 +90,10 @@ module.exports.sleepsLeft = () => {
 
 
 module.exports.message = () => {
-    let x = module.exports.sleepsLeft();
-    if (x === 0) {
+    let x = module.exports.daysLeft();
+    if (x === 365) {
         return ":snowflake: **Merry Christmas!** :snowflake:";
-    } else if (x === 1) {
+    } else if (x === 0) {
         return "It's Christmas Eve!";
     } else {
         return false;
@@ -121,7 +121,7 @@ module.exports.sleeps = () => {
     return res;
 }
 
-module.exports.text = ()  => {
+module.exports.text = () => {
     let x = module.exports.live();
     let res = {
         "days": x.days !== 1 ? "Days" : "Day",
@@ -172,11 +172,11 @@ module.exports.daily = async (client, db) => {
             if (!typeof result[x].channel === "string") return;
             let channel = client.channels.get(result[x].channel);
             let guild = client.guilds.get(result[x].guild);
-            if(!client.channels.has(result[x].channel)) {
+            if (!client.channels.has(result[x].channel)) {
                 try {
-                  guild.owner.send(`The daily countdown has been disabled due to the set channel being missing. Use \`${config.prefix}channel\` to re-enable.`);
+                    guild.owner.send(`The daily countdown has been disabled due to the set channel being missing. Use \`${config.prefix}channel\` to re-enable.`);
                 } catch {
-                  log.warn("Disabled countdown for a server due to missing channel and could not alert owner");
+                    log.warn("Disabled countdown for a server due to missing channel and could not alert owner");
                 }
                 return disable(guild, db, client);
             }
@@ -195,10 +195,10 @@ module.exports.daily = async (client, db) => {
                     }
                 };
                 // bot has permission
-                if (module.exports.daysLeft() === -1) {
+                if (module.exports.daysLeft() === 365) {
                     const embed = new Discord.RichEmbed()
                         .setColor(config.colour)
-                        .setTitle(`It's Christmas Day!`)
+                        .setTitle(`It's Christmas Day! :tada:`)
                         .setTimestamp()
                         .setFooter(config.name, client.user.avatarURL);
 
@@ -214,7 +214,7 @@ module.exports.daily = async (client, db) => {
                     channel.send({
                         embed
                     })
-                    
+
                 } else {
                     const embed = new Discord.RichEmbed()
                         .setColor(config.colour)
