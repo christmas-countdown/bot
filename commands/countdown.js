@@ -9,12 +9,12 @@ module.exports = {
     description: 'Displays countdown',
     long: 'Displays the exact time left until Christmas',
     usage: '',
-    aliases: ['none'],
+    aliases: ['exact', 'time', 'count'],
     example: '',
     args: false,
     cooldown: 10,
     guildOnly: true,
-    premiumOnly: true,
+    premiumOnly: false,
     execute(message, args, db) {
         const client = message.client;
         // command starts here

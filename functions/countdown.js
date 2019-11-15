@@ -172,25 +172,57 @@ module.exports.daily = async (client, db) => {
             if (!typeof result[x].channel === "string") return;
             let channel = client.channels.get(result[x].channel);
             let guild = client.guilds.get(result[x].guild);
+
+            if (!client.guilds.has(result[x].guild)) {
+                return db.query(`DELETE FROM ${database.table} WHERE guild = "${result[x].guild}";`, function (err, result) {
+                    if (err) {
+                        log.warn("Could not delete row from database table");
+                        return log.error(err);
+                    };
+                    log.console(`Automatically ${log.colour.redBright("removed")} a server (server doesn't exist)`);
+                    utils.affected(result.affectedRows);
+                    if (config.debug) {
+                        log.debug(result)
+                    };
+                });
+            }
+
+            if (typeof guild === "undefined") {
+                log.warn(`Skipping ${result[x].guild}`)
+                continue;
+            }
+
             if (!client.channels.has(result[x].channel)) {
-                try {
-                    guild.owner.send(`The daily countdown has been disabled due to the set channel being missing. Use \`${config.prefix}channel\` to re-enable.`);
-                } catch {
+                if (guild.owner.user.dmChannel) {
+                    try {
+                        guild.owner.send(`The daily countdown has been disabled for **${guild.name}** due to the set channel being missing. Use \`${config.prefix}channel\` to re-enable.`);
+                    } catch {
+                        log.warn("Error sending message to guild owner");
+                    }
+                } else {
                     log.warn("Disabled countdown for a server due to missing channel and could not alert owner");
                 }
+
                 return disable(guild, db, client);
-            }
+            };
+
             try {
                 if (!channel.permissionsFor(guild.me).has('EMBED_LINKS') || !channel.permissionsFor(guild.me).has('SEND_MESSAGES')) {
                     disable(guild, db, client)
                     if (channel.permissionsFor(channel.guild.me).has('SEND_MESSAGES')) {
-                        return channel.send(`:x: The bot needs \`EMBED_LINKS\` permission to send the daily countdown.\n\nThe daily countdown has been disabled due to missing permissions. Use \`${config.prefix}channel\` to re-enable.`)
+                        return channel.send(`:x: The bot needs \`EMBED_LINKS\` permission to send the daily countdown.\n\nThe daily countdown for **${guild.name}** has been disabled due to missing permissions. Use \`${config.prefix}channel\` to re-enable.`)
                     } else {
-                        try {
-                            return channel.guild.owner.send(`The bot needs \`SEND_MESSAGES\` and \`EMBED_LINKS\` permissions to send the daily countdown.\n\nThe daily countdown has been disabled due to missing permissions. Use \`${config.prefix}channel\` to re-enable.`);
-                        } catch {
+                        if (guild.owner.user.dmChannel) {
+                            try {
+                                return channel.guild.owner.send(`The bot needs \`SEND_MESSAGES\` and \`EMBED_LINKS\` permissions to send the daily countdown.\n\nThe daily countdown has been disabled due to missing permissions. Use \`${config.prefix}channel\` to re-enable.`);
+                            } catch {
+                                return log.warn(`Error sending message to guild owner`);
+                            }
+
+                        } else {
                             return log.warn(`Unable to notify owner of "${channel.guild.name}" of permission error`);
                         }
+
 
                     }
                 };

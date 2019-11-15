@@ -124,7 +124,9 @@ client.once('ready', async () => { // after bot has logged in
             log.warn("Could not insert row into database table");
             return log.error(err);
           };
+          log.console(`Automatically ${log.colour.greenBright("added")} a server (server wasn't in database)`);
           log.type.db(`"${g.name}" added to the database`);
+          utils.affected(result.affectedRows);
           if (config.debug) {
             log.debug(result)
           };
