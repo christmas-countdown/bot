@@ -33,8 +33,8 @@ module.exports.affected = (rows, updated) => {
     }
 };
 
-module.exports.refreshCache = (db, client, database, config) => {
-    log.type.cache(`Refreshing cache for ${client.guilds.size} servers`);
+module.exports.refreshCache = (db, client, database, config, logger) => {
+    logger.type.cache(`Refreshing cache for ${client.guilds.size} servers`);
     db.query(`SELECT * FROM ${database.table} WHERE premium = true`, function (err, result) {
         if (err) {
             log.error(err)
@@ -49,7 +49,7 @@ module.exports.refreshCache = (db, client, database, config) => {
            c[x] = result[x].guild;
         }
         cache.premium = c;
-        log.type.cache(`Found ${result.length} premium ${module.exports.plural("server", result.length)}`);
+        logger.type.cache(`Found ${result.length} premium ${module.exports.plural("server", result.length)}`);
         fs.writeFileSync("./cache.json", JSON.stringify(cache), (err) => console.error);
     });
 };

@@ -57,7 +57,7 @@ log.init({
       colour: "cyanBright"
     },
     cache: {
-      name: "CACHE",
+      title: "CACHE",
       colour: "cyan"
     }
   }
@@ -169,10 +169,10 @@ client.once('ready', async () => { // after bot has logged in
 
 
 
-  utils.refreshCache(db, client, database, config);
+  utils.refreshCache(db, client, database, config, log);
 
   setInterval(() => {
-    utils.refreshCache(db, client, database, config)
+    utils.refreshCache(db, client, database, config, log)
   }, 3600000) // every hour
 
   // log.info(`There ${countdown.days().verb} ${countdown.daysLeft()} ${countdown.days().text} left`, "yellowBright")
