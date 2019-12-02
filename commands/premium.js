@@ -74,7 +74,7 @@ module.exports = {
                     utils.affected(result.affectedRows, result.changedRows);
                     send(yes);
                     log.info("Pushing cache refresh")
-                    utils.refreshCache(db, client, database, config);
+                    utils.refreshCache(db, client, database, config, log);
                 });
             } else {
                 // is premium so set to 0 to disable
@@ -89,7 +89,7 @@ module.exports = {
                     utils.affected(result.affectedRows, result.changedRows);
                     send(no);
                     log.info("Pushing cache refresh")
-                    utils.refreshCache(db, client, database, config);
+                    utils.refreshCache(db, client, database, config, log);
                 });
             };
             

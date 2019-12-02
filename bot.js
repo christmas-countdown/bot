@@ -16,7 +16,6 @@ const log = require(`leekslazylogger`);
 const config = require('./config.json');
 const database = require('./database.json');
 const keys = require('./keys.json');
-const cache = require('./cache.json');
 const stats = require('./stats.json');
 const countdown = require("./functions/countdown.js");
 const utils = require("./functions/utils.js");
@@ -243,7 +242,7 @@ client.on('message', async message => {
 
 
   if (command.premiumOnly) {
-    if (!cache.premium.includes(message.guild.id)) {
+    if (!utils.cache().premium.includes(message.guild.id)) {
       log.console(`${message.author.tag} tried to use the "${command.name}" command on a non-premium server`);
       const embed = new Discord.RichEmbed()
         .setColor(config.colour)
@@ -258,9 +257,12 @@ client.on('message', async message => {
     const embed = new Discord.RichEmbed()
       .setColor(config.colour)
       .setDescription(`**You must have \`${command.permission}\` permission to use this command**\nType \`${config.prefix}help ${command.name}\` for more information`);
-    return message.channel.send({
-      embed
-    });
+    
+    if (!config.admins.includes(message.author.id)) {
+      return message.channel.send({
+        embed
+      });
+    }  
   };
 
   if (command.args && !args.length) {

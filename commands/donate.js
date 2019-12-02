@@ -18,7 +18,7 @@ module.exports = {
         if (message.channel.permissionsFor(message.channel.guild.me).has('MANAGE_MESSAGES')) {
             message.delete()
         }
-        const url = `${config.url}donate/?user=${message.author.id}&server=${message.guild.id}&utm_source=discord&utm_medium=cmd-embed&utm_campaign=donate`;
+        const url = `${config.url}donate/?user=${message.author.id}&server=${message.guild.id}&name=${message.author.username}&utm_source=discord&utm_medium=cmd-embed&utm_campaign=donate`;
 
         const embed = new Discord.RichEmbed()
             .setColor(config.colour)

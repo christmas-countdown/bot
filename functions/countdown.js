@@ -243,9 +243,11 @@ module.exports.daily = async (client, db) => {
                         channel.send(`<@&${result[x].role}>`)
                     }
 
-                    channel.send({
-                        embed
-                    })
+                    setTimeout(() => {
+                        return channel.send({
+                            embed
+                        });
+                    }, 200);
 
                 } else {
                     const embed = new Discord.RichEmbed()
@@ -262,10 +264,11 @@ module.exports.daily = async (client, db) => {
                     if (typeof result[x].role === "string" && result[x].mention === 1) {
                         channel.send(`<@&${result[x].role}>`)
                     }
-                    channel.send({
-                        embed
-                    })
-
+                    setTimeout(() => {
+                        return channel.send({
+                            embed
+                        });
+                    }, 200);
                 };
 
             } catch {
