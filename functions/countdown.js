@@ -157,6 +157,7 @@ function disable(guild, db, client) {
 module.exports.daily = async (client, db) => {
     // DAILY COUNTDOWN
     log.info("Starting daily countdown...");
+    let i = 0;
     db.query(`SELECT * FROM ${database.table} WHERE enabled = true`, function (err, result) {
         if (err) {
             log.error(err)
@@ -227,6 +228,7 @@ module.exports.daily = async (client, db) => {
                     }
                 };
                 // bot has permission
+                i += 200;
                 if (module.exports.daysLeft() === 365) {
                     const embed = new Discord.RichEmbed()
                         .setColor(config.colour)
@@ -247,7 +249,7 @@ module.exports.daily = async (client, db) => {
                         return channel.send({
                             embed
                         });
-                    }, 200);
+                    }, i);
 
                 } else {
                     const embed = new Discord.RichEmbed()
@@ -268,7 +270,7 @@ module.exports.daily = async (client, db) => {
                         return channel.send({
                             embed
                         });
-                    }, 200);
+                    }, i);
                 };
 
             } catch {
