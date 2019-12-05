@@ -1,0 +1,19 @@
+{
+  "token": "https://discordapp.com/developers/applications/me",
+  "prefix": "xmas!",
+  "website": "www.christmascountdown.live (display address)",
+  "url": "https://www.christmascountdown.live/ (don't include ?query stuff because it is added later AND MAKE SURE YOU INCLUDE THE TRALING /)",
+  "name": "Christmas Countdown",
+  "creator": "user#tag",
+  "ownerID": "id of user",
+  "logChannel": "id of channel to spam",
+  "colour": "#D5002C",
+  "playing": ["the countdown to Christmas", "xmas!help", "christmascountdown.live"],
+  "activityType": "WATCHING",
+  "status": "ONLINE",
+  "logDMs": true,
+  "cooldown": 5,
+  "support": "link to support server or help page",
+  "debug": false,
+  "admins": ["id of a user who will be able to use admin commands"]
+}
