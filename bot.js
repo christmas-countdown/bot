@@ -205,9 +205,9 @@ client.on('message', async message => {
         .setFooter(config.name, client.user.avatarURL);
       client.channels.get(config.logChannel).send(embed)
       log.console(`Received a message from ${message.author.tag}: "${cont}"`)
-    } else {
-      return;
     };
+    message.author.send(`Looking for help? Go to ${config.url}discord/ for info & the bot invite link`);
+    message.author.send(`> Prefix: \`${config.prefix}\`\n> Help: \`${config.prefix}help\``);
 
   }
 
