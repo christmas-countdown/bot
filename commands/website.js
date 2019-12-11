@@ -22,7 +22,7 @@ module.exports = {
         
         const embed = new Discord.RichEmbed()
             .setColor(config.colour)
-            .setTitle("Countdown to Chrsitmas live")
+            .setTitle("Countdown to Christmas live")
             .setURL(`${config.url}${urlExt}`)
             .setDescription(`If you want to know exactly how long is left until Christmas, or  the total number of hours, minutes or seconds left, **go to [${config.website}](${config.url}${urlExt}) for a decorative & festive live countdown.**\n`)
         message.channel.send({
