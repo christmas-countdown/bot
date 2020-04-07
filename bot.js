@@ -5,7 +5,7 @@
   @author Eartharoid <eartharoid@gmail.com>
   @license GNU-GPLv3
   @description CountdownToXMAS :: Countdown Bot
-  @website https://www.countdowntoxmas.tk/discord
+  @website https://www.christmascountdown.live/
 
 ###############################################################################################
 */
