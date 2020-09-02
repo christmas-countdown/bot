@@ -1,26 +1,42 @@
 {
-  "name": "christmas-countdown-bot",
-  "version": "1.5.0",
-  "description": "A Christmas countdown bot for Discord",
-  "main": "index.js",
+  "name": "christmascountdownbot",
+  "version": "3.0.0",
+  "description": "A Christmas countdown Discord bot and API",
+  "main": "src/",
   "scripts": {
+    "start": "node src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eartharoid/ChristmasCountdownBot.git"
+    "url": "git+https://github.com/eartharoid/ChristmasCountdownBot.git"
   },
-  "author": "Eartharoid",
+  "author": "eartharoid",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Eartharoid/ChristmasCountdownBot/issues"
+    "url": "https://github.com/eartharoid/ChristmasCountdownBot/issues"
   },
-  "homepage": "https://github.com/Eartharoid/ChristmasCountdownBot#readme",
+  "homepage": "https://github.com/eartharoid/ChristmasCountdownBot#readme",
   "dependencies": {
-    "boats.js": "^2.3.1",
-    "dblapi.js": "^2.3.0",
-    "discord.js": "^12.0.2",
-    "leekslazylogger": "^1.1.9",
-    "mysql": "^2.17.1"
+    "dblapi.js": "^2.4.1",
+    "discord-akairo": "^8.1.0",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "i18n": "^0.13.2",
+    "leekslazylogger": "^2.0.2",
+    "moment-timezone": "^0.5.31",
+    "mysql2": "^2.1.0",
+    "node-fetch": "^2.6.0",
+    "sequelize": "^6.3.5"
+  },
+  "optionalDependencies": {
+    "erlpack": "github:discord/erlpack",
+    "utf-8-validate": "^5.0.2",
+    "bufferutil": "^4.0.1",
+    "zlib-sync": "^0.1.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.0",
+    "nodemon": "^2.0.4"
   }
 }

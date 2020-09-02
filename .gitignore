@@ -1,14 +1,3 @@
 node_modules/
 logs/
-*.log
-/config.json
-/permissions.json
-/database.json
-/package-lock.json
-/keys.json
-shell.lnk
-/database.1.json
-.env
-/stats.json
-/cache.json
-img/
+src/storage/.env
