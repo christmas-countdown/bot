@@ -7,6 +7,10 @@
 
 const { Command } = require('discord-akairo');
 const { MessageEmbed } = require('discord.js');
+const { ChildLogger } = require('leekslazylogger');
+const log = new ChildLogger(); // required for i18n
+const { I18n } = require('i18n');
+const i18n = new I18n(require('../../bot').i18n);
 
 class TogglePremiumCommand extends Command {
 	constructor() {
@@ -14,7 +18,6 @@ class TogglePremiumCommand extends Command {
 			aliases: ['toggle-premium'],
 			ownerOnly: true,
 			prefix: 'x!admin.',
-			// channel: 'guild',
 			category: 'admin'
 		});
 	}

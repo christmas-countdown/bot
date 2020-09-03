@@ -17,22 +17,25 @@ const log = new Logger({
 });
 log.multi(log);
 
-module.exports = {
-	i18n: {
-		directory: path.join(__dirname, 'locales'),
-		defaultLocale: 'en-GB',
-		retryInDefaultLocale: true,
-		logDebugFn: str => {
-			log.debug(str);
-		},
-		logWarnFn: str => {
-			log.warn(str);
-		},
-		logErrorFn: str => {
-			log.error(str);
-		},
+let i18nOptions = {
+	directory: path.join(__dirname, 'locales'),
+	defaultLocale: 'en-GB',
+	retryInDefaultLocale: true,
+	logDebugFn: str => {
+		log.debug(str);
+	},
+	logWarnFn: str => {
+		log.warn(str);
+	},
+	logErrorFn: str => {
+		log.error(str);
 	},
 };
+module.exports = {
+	i18n: i18nOptions,
+};
+const { I18n } = require('i18n');
+const i18n = new I18n(i18nOptions);
 
 const {
 	Sequelize,
@@ -64,9 +67,6 @@ const structures = fs.readdirSync('src/structures').filter(file => file.endsWith
 for (const structure of structures)
 	require(`./structures/${structure}`);
 
-let owners = [];
-process.env.OWNERS.split(',').forEach(str => owners.push(str.trim()));
-
 const {
 	Intents
 } = require('discord.js');
@@ -82,7 +82,7 @@ class Client extends AkairoClient {
 	constructor() {
 		let num = Math.floor(Math.random() * config.presence.activities.length);
 		super({
-			ownerID: owners
+			ownerID: process.env.OWNERS.split(',').map(str => str.trim())
 		}, {
 			autoReconnect: true,
 			ws: {
@@ -117,6 +117,29 @@ class Client extends AkairoClient {
 			defaultCooldown: 5,
 		});
 
+		this.commandHandler.resolver.addType('boolean', (message, phrase) => {
+			if (!phrase) return null;
+			let value = phrase.toLowerCase() === 'true';
+			return value || null;
+		});
+
+		const timezones = require('timezones.json');
+		this.commandHandler.resolver.addType('timezone', (message, phrase) => {
+			if (!phrase) return null;
+			let tz = timezones.find(zone => 
+				zone.value.toLowerCase() === phrase.toLowerCase()
+				|| zone.abbr.toLowerCase() === phrase.toLowerCase()
+				|| zone.utc.find(z => z  === phrase.toLowerCase())
+			);
+			return tz || null;
+		});
+
+		this.commandHandler.resolver.addType('locale', (message, phrase) => {
+			if (!phrase) return null;
+			let locale = i18n.getLocales().find(l => l.toLowerCase() === phrase.toLowerCase());
+			return locale || null;
+		});
+
 		this.commandHandler.useListenerHandler(this.listenerHandler);
 		this.commandHandler.useInhibitorHandler(this.inhibitorHandler);
 
@@ -133,6 +156,10 @@ class Client extends AkairoClient {
 		this.db = {
 			User,
 			Guild
+		};
+
+		this.const = {
+			footer: 'Christmas Countdown by eartharoid'
 		};
 
 	}

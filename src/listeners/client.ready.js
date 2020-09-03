@@ -24,7 +24,7 @@ class OnReadyListener extends Listener {
 		const { config } = client;
 
 		log.success(`${global.prefix} Ready`);
-		// if (client.shard.ids.includes(0))
+		if (!client.shard.ids.includes(0)) return; // stop here if not primary shard
 
 		const updatePresence = () => {
 			let num = Math.floor(Math.random() * config.presence.activities.length);
@@ -34,18 +34,14 @@ class OnReadyListener extends Listener {
 					type: config.presence.types[num]
 				}
 			}).catch(log.error);
-			log.debug(`Updated presence: ${config.presence.types[num]} ${config.presence.activities[num]}`);
+			log.debug(`${global.prefix} Updated presence: ${config.presence.types[num]} ${config.presence.activities[num]}`);
 		};
 		
 		setInterval(updatePresence, 15000); // every 15 seconds
 
 		log.info(`${global.prefix} Checking database for guilds`);
 		client.guilds.cache.each(async guild => {
-			if(!await client.db.Guild.findOne({
-				where: {
-					id: guild.id
-				}
-			})) {	
+			if(!await guild.settings()) {	
 				client.db.Guild.create(require('../models/guild').defaults(guild));
 				log.console(log.f(`${global.prefix} Added '&7${guild.name}&f' to the database`));
 			}
@@ -55,14 +51,16 @@ class OnReadyListener extends Listener {
 
 		const postCount = () => {
 			client.shard.fetchClientValues('guilds.cache.size').then(total => {
+				total = total.reduce((acc, count) => acc + count, 0);
+				
 				log.notice(`${global.prefix} SENDING FAKE SERVER COUNT!`);
 				total = 897;
-				return log.notice(`${global.prefix} SKIPPED SENDING SERVER COUNT!`);
+				// return log.notice(`${global.prefix} SKIPPED SENDING SERVER COUNT!`);
 
 				// top.gg
 				dbl.postStats(total, client.shard.ids[0], client.shard.count);
 
-				// discord.boats
+				// discord.boats (because boats.js sucks)
 				fetch('https://discord.boats/api/bot/' + client.user.id, {
 					method: 'POST',
 					body:    JSON.stringify({
