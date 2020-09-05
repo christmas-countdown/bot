@@ -5,17 +5,44 @@
  * @license GPL-3.0
  */
 
+global.prefix = 'SHARD ' + process.env.SHARDS;
 const path = require('path');
 const fs = require('fs');
 const config = require('./storage/config');
+
 const Logger = require('leekslazylogger');
 const log = new Logger({
 	name: 'Christmas Countdown Bot',
 	debug: config.debug,
 	logToFile: false,
 	keepSilent: true,
+	custom: {
+		basic: {
+			prefix: global.prefix
+		},
+		console: {
+			prefix: global.prefix
+		},
+		info: {
+			prefix: global.prefix
+		},
+		success: {
+			prefix: global.prefix
+		},
+		debug: {
+			prefix: global.prefix
+		},
+		notice: {
+			prefix: global.prefix
+		},
+		warn: {
+			prefix: global.prefix
+		},
+		error: {
+			prefix: global.prefix
+		}
+	}
 });
-log.multi(log);
 
 let i18nOptions = {
 	directory: path.join(__dirname, 'locales'),
@@ -151,6 +178,7 @@ class Client extends AkairoClient {
 		this.inhibitorHandler.loadAll();
 		this.commandHandler.loadAll();
 
+		this.log = log;
 		this.config = config;
 
 		this.db = {
@@ -165,6 +193,5 @@ class Client extends AkairoClient {
 	}
 }
 const client = new Client();
-global.prefix = '[SHARD ' + client.shard.ids + ']';
 
 client.login();

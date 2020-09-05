@@ -23,10 +23,10 @@
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",
     "i18n": "^0.13.2",
-    "leekslazylogger": "^2.0.2",
+    "leekslazylogger": "^2.0.3",
     "moment-timezone": "^0.5.31",
     "mysql2": "^2.1.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "sequelize": "^6.3.5",
     "timezones.json": "^1.5.2"
   },
@@ -37,7 +37,10 @@
     "zlib-sync": "^0.1.7"
   },
   "devDependencies": {
-    "eslint": "^7.8.0",
+    "eslint": "^7.8.1",
     "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": ">=12.0.0"
   }
 }

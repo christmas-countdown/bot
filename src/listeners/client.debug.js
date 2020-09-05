@@ -6,8 +6,7 @@
  */
 
 const { Listener } = require('discord-akairo');
-const { ChildLogger } = require('leekslazylogger');
-const log = new ChildLogger();
+
 
 class OnDebugListener extends Listener {
 	constructor() {
@@ -18,7 +17,7 @@ class OnDebugListener extends Listener {
 	}
 
 	exec(e) {
-		log.debug(e);
+		this.client.log.debug(e);
 	}
 }
 

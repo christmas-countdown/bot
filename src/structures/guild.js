@@ -1,10 +1,4 @@
-const {
-	Structures
-} = require('discord.js');
-const {
-	ChildLogger
-} = require('leekslazylogger');
-const log = new ChildLogger();
+const { Structures } = require('discord.js');
 
 Structures.extend('Guild', Guild => {
 	class ExtendedGuild extends Guild {
@@ -20,7 +14,7 @@ Structures.extend('Guild', Guild => {
 
 			if (!this.settings()) {
 				client.db.Guild.create(require('../models/guild').defaults(this));
-				log.console(log.f(`${global.prefix} Added '&7${this.name}&f' to the database`));
+				client.log.console(client.log.f(`Added '&7${this.name}&f' to the database`));
 			}
 
 

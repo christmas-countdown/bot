@@ -6,8 +6,7 @@
  */
 
 const { Listener } = require('discord-akairo');
-const { ChildLogger } = require('leekslazylogger');
-const log = new ChildLogger();
+
 
 class OnGuildCreateListener extends Listener {
 	constructor() {
@@ -21,7 +20,7 @@ class OnGuildCreateListener extends Listener {
 		const { client } = this;
 
 		client.shard.fetchClientValues('guilds.cache.size').then(total => {
-			log.success(`${global.prefix} Added to '${guild.name}' (${client.guilds.cache.size}/${total})`);
+			this.client.log.success(`Added to '${guild.name}' (${client.guilds.cache.size}/${total})`);
 		});
 		
 		client.db.Guild.create(require('../models/guild').defaults(guild));

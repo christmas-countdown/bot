@@ -6,8 +6,7 @@
  */
 
 const { Listener } = require('discord-akairo');
-const { ChildLogger } = require('leekslazylogger');
-const log = new ChildLogger();
+
 
 class OnGuildDeleteListener extends Listener {
 	constructor() {
@@ -21,7 +20,7 @@ class OnGuildDeleteListener extends Listener {
 		const { client } = this;
 
 		client.shard.fetchClientValues('guilds.cache.size').then(total => {
-			log.info(`${global.prefix} Removed from '${guild.name}' (${client.guilds.cache.size}/${total})`);
+			this.client.log.info(`Removed from '${guild.name}' (${client.guilds.cache.size}/${total})`);
 		});
 		
 		let row = await guild.settings();

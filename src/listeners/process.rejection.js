@@ -6,8 +6,7 @@
  */
 
 const { Listener } = require('discord-akairo');
-const { ChildLogger } = require('leekslazylogger');
-const log = new ChildLogger();
+
 
 class UnhandledRejectionListener extends Listener {
 	constructor() {
@@ -18,9 +17,9 @@ class UnhandledRejectionListener extends Listener {
 	}
 
 	exec(error) {
-		log.warn(`${global.prefix} An error was not caught`);
-		log.warn(`${global.prefix} Uncaught ${error.name}: ${error.message}`);
-		log.error(error);
+		this.client.log.warn(`An error was not caught`);
+		this.client.log.warn(`Uncaught ${error.name}: ${error.message}`);
+		this.client.log.error(error);
 	}
 }
 

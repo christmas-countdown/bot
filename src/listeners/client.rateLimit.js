@@ -6,8 +6,7 @@
  */
 
 const { Listener } = require('discord-akairo');
-const { ChildLogger } = require('leekslazylogger');
-const log = new ChildLogger();
+
 
 class OnRateLimitListener extends Listener {
 	constructor() {
@@ -18,8 +17,8 @@ class OnRateLimitListener extends Listener {
 	}
 
 	exec(limit) {
-		log.warn(`${global.prefix} Rate-limited!`);
-		log.debug(limit);
+		this.client.log.warn(`Rate-limited!`);
+		this.client.log.debug(limit);
 	}
 }
 
