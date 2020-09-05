@@ -4,5 +4,9 @@
 	"Avg. ping": "Avg. ping",
 	"Shard ping": "Shard ping",
 	"Christmas Countdown by eartharoid": "Christmas Countdown by eartharoid",
-	"Overall latency": "Overall latency"
+	"Overall latency": "Overall latency",
+	"Server settings": "Server settings",
+	"The `%s` command has the following subcommands:\n\n❯ `set` » Set server settings\n❯ `reset` » Set server settings": "The `%s` command has the following subcommands:\n\n❯ `set` » Set server settings\n❯ `reset` » Set server settings",
+	"Usage": "Usage",
+	"Help": "Help"
 }
