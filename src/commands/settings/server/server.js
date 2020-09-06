@@ -45,7 +45,7 @@ class ServerSettingsCommand extends Command {
 				return new Embed()
 					.setTitle(i18n.__('Server settings'))
 					.setDescription(i18n.__(
-						'The \`%s\` command has the following subcommands:\n\n%s',
+						'The %s command has the following subcommands:\n\n%s',
 						`[\`${this.id}\`](${docs}#server)`,
 						`❯ [\`set\`](${docs}#server-set) » ${set}\n❯ [\`reset\`](${docs}#server-reset) » ${reset}`))
 					.addField(i18n.__('Usage'), `\`${prefix}server set <args>\``)

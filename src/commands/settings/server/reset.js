@@ -26,12 +26,18 @@ class ServerSetSettingsCommand extends Command {
 
 	async exec(message) {
 
-		i18n.setLocale((await message.guild.settings()).locale || 'en-GB');
+		let settings = await message.guild.settings();
+		settings.destroy(); // delete
+		settings = await this.client.db.Guild.create(require('../../../models/guild').defaults(message.guild));
+		let prefix = this.client.config.prefix;
+
+		i18n.setLocale(settings.locale || 'en-GB');
 
 		// ❯ return a promise
 		return message.util.send(
 			new Embed()
-				.setTitle('RESET')
+				.setTitle(i18n.__(':white_check_mark: Server settings reset'))
+				.setDescription(i18n.__('This server\'s settings have been reset to the defaults. Use `%s` to re-configure.', prefix + 'server set'))
 		);
 
 	}

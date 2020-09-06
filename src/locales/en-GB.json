@@ -8,14 +8,11 @@
 	"Server settings": "Server settings",
 	"Usage": "Usage",
 	"Help": "Help",
-	"The `%s` command has the following subcommands:\n\n%s": "The `%s` command has the following subcommands:\n\n%s",
 	"Missing permissions": "Missing permissions",
-	"You must have following missing permissions to use the `%s` command: \n`%s`": "You must have following missing permissions to use the `%s` command: \n`%s`",
 	"Required permissions": "Required permissions",
-	"You must have following permissions to use the `%s` command: \n\t\t\t`%s`.\n\nYou": "You must have following permissions to use the `%s` command: \n\t\t\t`%s`.\n\nYou",
-	"You must have following permissions to use the `%s` command: \n\t\t\t`%s`.": "You must have following permissions to use the `%s` command: \n\t\t\t`%s`.",
-	"You must have following permissions to use the `%s` command: \n`%s`.": "You must have following permissions to use the `%s` command: \n`%s`.",
 	"Hello!": "Hello!",
-	"": "",
-	"Server prefix": "Server prefix"
+	"Server prefix": "Server prefix",
+	"The %s command has the following subcommands:\n\n%s": "The %s command has the following subcommands:\n\n%s",
+	":white_check_mark: Server settings reset": ":white_check_mark: Server settings reset",
+	"This server's settings have been reset to the defaults. Use `%s` to re-configure.": "This server's settings have been reset to the defaults. Use `%s` to re-configure."
 }

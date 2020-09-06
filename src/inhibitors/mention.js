@@ -29,10 +29,12 @@ class MentionInhibitor extends Inhibitor {
 			// mention with no command
 			message.channel.send(message.author,
 				new Embed()
-					.setAuthor(message.author.username, message.author.displayAvatarURL())
+					// .setAuthor(message.author.username, message.author.displayAvatarURL())
 					.setTitle(i18n.__('Hello!'))
 					.setDescription(i18n.__(''))
+					.addField(i18n.__('Help'), i18n.__('`%s` or "%s"', `${prefix}help`, `${this.client.user.toString()} help`))
 					.addField(i18n.__('Server prefix'), `\`${prefix}\` ${prefix === this.client.config.prefix ? '(default)': ''}`)
+					.addField(i18n.__('Support server'), this.client.config.support)
 			);
 			return true; // stop command execution
 		} else {
