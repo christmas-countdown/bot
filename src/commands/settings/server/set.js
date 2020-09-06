@@ -72,12 +72,22 @@ class ServerSetSettingsCommand extends Command {
 	}
 
 
-	async exec(message) {
+	async exec(message, args) {
 
-		i18n.setLocale((await message.guild.settings()).locale || 'en-GB');
+		let settings = await message.guild.settings();
+		i18n.setLocale(settings.locale || 'en-GB');
 
-		// PERMS
-		// CMD?
+		/**
+		 * @TODO replace with for loop
+		 */
+		if (args.prefix)
+			settings = await this.client.db.Guild.update({
+				prefix: args.prefix
+			}, {
+				where: {
+					id: message.guild.id
+				}
+			});
 
 		// ❯ return a promise
 		return message.util.send(

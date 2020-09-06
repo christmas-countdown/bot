@@ -17,7 +17,7 @@ class OnRateLimitListener extends Listener {
 	}
 
 	exec(limit) {
-		this.client.log.warn(`Rate-limited!`);
+		this.client.log.warn('Rate-limited!');
 		this.client.log.debug(limit);
 	}
 }

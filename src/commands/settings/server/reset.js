@@ -27,8 +27,13 @@ class ServerSetSettingsCommand extends Command {
 	async exec(message) {
 
 		let settings = await message.guild.settings();
-		settings.destroy(); // delete
-		settings = await this.client.db.Guild.create(require('../../../models/guild').defaults(message.guild));
+		// settings.destroy(); // delete
+		// settings = await this.client.db.Guild.create();
+		settings = await this.client.db.Guild.update(require('../../../models/guild').defaults(message.guild), {
+			where: {
+				id: message.guild.id
+			}
+		});
 		let prefix = this.client.config.prefix;
 
 		i18n.setLocale(settings.locale || 'en-GB');
