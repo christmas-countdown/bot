@@ -35,7 +35,7 @@ class OnReadyListener extends Listener {
 			}).catch(this.client.log.error);
 			this.client.log.debug(`Updated presence: ${config.presence.types[num]} ${config.presence.activities[num]}`);
 		};
-		
+		updatePresence();
 		setInterval(updatePresence, 15000); // every 15 seconds
 
 		this.client.log.info('Checking database for guilds');

@@ -6,7 +6,16 @@
 	"Christmas Countdown by eartharoid": "Christmas Countdown by eartharoid",
 	"Overall latency": "Overall latency",
 	"Server settings": "Server settings",
-	"The `%s` command has the following subcommands:\n\n❯ `set` » Set server settings\n❯ `reset` » Set server settings": "The `%s` command has the following subcommands:\n\n❯ `set` » Set server settings\n❯ `reset` » Set server settings",
 	"Usage": "Usage",
-	"Help": "Help"
+	"Help": "Help",
+	"The `%s` command has the following subcommands:\n\n%s": "The `%s` command has the following subcommands:\n\n%s",
+	"Missing permissions": "Missing permissions",
+	"You must have following missing permissions to use the `%s` command: \n`%s`": "You must have following missing permissions to use the `%s` command: \n`%s`",
+	"Required permissions": "Required permissions",
+	"You must have following permissions to use the `%s` command: \n\t\t\t`%s`.\n\nYou": "You must have following permissions to use the `%s` command: \n\t\t\t`%s`.\n\nYou",
+	"You must have following permissions to use the `%s` command: \n\t\t\t`%s`.": "You must have following permissions to use the `%s` command: \n\t\t\t`%s`.",
+	"You must have following permissions to use the `%s` command: \n`%s`.": "You must have following permissions to use the `%s` command: \n`%s`.",
+	"Hello!": "Hello!",
+	"": "",
+	"Server prefix": "Server prefix"
 }

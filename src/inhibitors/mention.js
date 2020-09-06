@@ -6,7 +6,10 @@
  */
 
 const { Inhibitor } = require('discord-akairo');
-const { MessageEmbed } = require('discord.js');
+const { Embed } = require('../bot');
+
+const { I18n } = require('i18n');
+const i18n = new I18n(require('../bot').i18n);
 
 class MentionInhibitor extends Inhibitor {
 	constructor() {
@@ -16,20 +19,24 @@ class MentionInhibitor extends Inhibitor {
 		});
 	}
 
-	exec(message) {
-		const { client } = this;
-		const { config } = client;
+	async exec(message) {
 
-		if (message.mentions.has(client.user) && !message.content.trim().match(/[a-zA-Z]/gm)) {
+		let settings = await message.guild.settings();
+		i18n.setLocale(settings.locale || 'en-GB');
+		const prefix = settings.prefix || this.client.config.prefix;
+
+		if (message.mentions.has(this.client.user) && !message.content.trim().match(/[a-zA-Z]/gm)) {
 			// mention with no command
 			message.channel.send(message.author,
-				new MessageEmbed()
-					.setColor(config.colour)
-					.setTitle('Hello!')
+				new Embed()
+					.setAuthor(message.author.username, message.author.displayAvatarURL())
+					.setTitle(i18n.__('Hello!'))
+					.setDescription(i18n.__(''))
+					.addField(i18n.__('Server prefix'), `\`${prefix}\` ${prefix === this.client.config.prefix ? '(default)': ''}`)
 			);
-			return true;
+			return true; // stop command execution
 		} else {
-			return false;
+			return false; // otherwise, continue
 		}
 	}
 }

@@ -44,6 +44,12 @@ const log = new Logger({
 	}
 });
 
+/**
+ * 
+ * Localisation
+ * 
+ */
+
 let i18nOptions = {
 	directory: path.join(__dirname, 'locales'),
 	defaultLocale: 'en-GB',
@@ -58,11 +64,15 @@ let i18nOptions = {
 		log.error(str);
 	},
 };
-module.exports = {
-	i18n: i18nOptions,
-};
+
 const { I18n } = require('i18n');
 const i18n = new I18n(i18nOptions);
+
+/**
+ * 
+ * Database connection & models
+ * 
+ */
 
 const {
 	Sequelize,
@@ -89,14 +99,44 @@ Guild.init(require('./models/guild').model, {
 User.sync();
 Guild.sync();
 
+/**
+ * 
+ * Structures
+ * 
+ */
 
 const structures = fs.readdirSync('src/structures').filter(file => file.endsWith('.js'));
 for (const structure of structures)
 	require(`./structures/${structure}`);
 
+/** MessageEmbed can't be extended like User and Guild */
 const {
-	Intents
+	MessageEmbed, Intents
 } = require('discord.js');
+	
+class Embed extends MessageEmbed {
+	constructor(data) {
+		super(data);
+	
+		this.color = client.config.colour;
+	
+		this.footer = {
+			text: client.const.footer,
+			iconURL: client.user.displayAvatarURL(),
+		};
+	}
+}
+/** exports */
+module.exports = {
+	i18n: i18nOptions,
+	Embed
+};
+
+/**
+ * 
+ * Discord client
+ * 
+ */
 
 const {
 	AkairoClient,
@@ -135,13 +175,14 @@ class Client extends AkairoClient {
 			directory: 'src/inhibitors/'
 		});
 		this.commandHandler = new CommandHandler(this, {
-			directory: 'src/commands/',
-			prefix: async message => (await message.guild.settings()).prefix || config.prefix,
+			automateCategories: true,
 			allowMention: true,
 			aliasReplacement: /-/g,
 			commandUtil: true,
-			handleEdits: true,
 			defaultCooldown: 5,
+			directory: 'src/commands/',
+			handleEdits: true,
+			prefix: async message => (await message.guild.settings()).prefix || config.prefix,
 		});
 
 		this.commandHandler.resolver.addType('boolean', (message, phrase) => {
@@ -172,22 +213,25 @@ class Client extends AkairoClient {
 
 		this.listenerHandler.setEmitters({
 			process: process,
+			commandHandler: this.commandHandler,
 		});
 
 		this.listenerHandler.loadAll();
 		this.inhibitorHandler.loadAll();
 		this.commandHandler.loadAll();
 
+		// config and database etc
 		this.log = log;
 		this.config = config;
-
 		this.db = {
 			User,
 			Guild
 		};
-
 		this.const = {
-			footer: 'Christmas Countdown by eartharoid'
+			footer: 'Christmas Countdown by eartharoid',
+			docs: {
+				commands: 'https://docs.christmascountdown.live/discord/commands'
+			},
 		};
 
 	}

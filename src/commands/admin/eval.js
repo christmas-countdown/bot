@@ -6,7 +6,7 @@
  */
 
 const { Command } = require('discord-akairo');
-const { MessageEmbed } = require('discord.js');
+const { Embed } = require('../../bot');
 
 const { I18n } = require('i18n');
 const i18n = new I18n(require('../../bot').i18n);
@@ -17,6 +17,7 @@ class EvalCommand extends Command {
 			aliases: ['eval'],
 			ownerOnly: true,
 			prefix: 'x!admin.',
+			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
 			args: [
 				{
 					id: 'string',
@@ -52,13 +53,11 @@ class EvalCommand extends Command {
 			let out_title = `:desktop: Output ${promise?'(resolved Promise)':''} ${clean(res).length > 990?'(cut)':''}`;
 			// ❯ return a promise
 			return message.util.send(
-				new MessageEmbed()
-					.setColor(this.client.config.colour)
+				new Embed()
 					.setTitle('Evaluation')
 					.setAuthor(message.author.username, message.author.displayAvatarURL())
 					.addField(':keyboard: Input', `\`\`\`js\n${clean(code).substring(0, 990)}\`\`\``)
 					.addField(out_title, `\`\`\`js\n${clean(res).substring(0, 990)}\`\`\``)
-					.setFooter(i18n.__(this.client.const.footer), this.client.user.displayAvatarURL())
 					.setTimestamp()
 			);
 
@@ -66,13 +65,13 @@ class EvalCommand extends Command {
 			let out_title = `:desktop: Output ${promise?'(resolved Promise)':''} ${clean(res).length > 990?'(cut)':''}`;
 			// ❯ return a promise
 			return message.util.send(
-				new MessageEmbed()
+				new Embed()
 					.setColor('RED')
 					.setTitle('Evaluation error')
 					.setAuthor(message.author.username, message.author.displayAvatarURL())
 					.addField(':keyboard: Input', `\`\`\`js\n${clean(code).substring(0, 990)}\`\`\``)
 					.addField(out_title, `\`\`\`js\n${clean(err).substring(0, 990)}\`\`\``)
-					.setFooter(i18n.__(this.client.const.footer), this.client.user.displayAvatarURL())
+
 					.setTimestamp()
 			);
 

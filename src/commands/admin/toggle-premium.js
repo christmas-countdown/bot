@@ -6,7 +6,7 @@
  */
 
 const { Command } = require('discord-akairo');
-const { MessageEmbed } = require('discord.js');
+const { Embed } = require('../../bot');
 
 const { I18n } = require('i18n');
 const i18n = new I18n(require('../../bot').i18n);
@@ -17,7 +17,8 @@ class TogglePremiumCommand extends Command {
 			aliases: ['toggle-premium', 'premium'],
 			ownerOnly: true,
 			prefix: 'x!admin.',
-			category: 'admin'
+			category: 'admin',
+			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
 		});
 	}
 
