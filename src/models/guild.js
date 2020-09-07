@@ -5,13 +5,12 @@ module.exports.model = {
 		type: DataTypes.STRING,
 		primaryKey: true
 	},
-	shard: DataTypes.INTEGER,
 	prefix: DataTypes.STRING,
 	locale: DataTypes.STRING,
 	timezone: DataTypes.STRING,
-	offset: DataTypes.STRING,
 	channel: DataTypes.STRING,
 	role: DataTypes.STRING,
+	auto: DataTypes.BOOLEAN,
 	enabled: DataTypes.BOOLEAN,
 	mention: DataTypes.BOOLEAN,
 	premium: DataTypes.BOOLEAN,
@@ -20,11 +19,9 @@ module.exports.model = {
 module.exports.defaults = (guild) => {
 	return {
 		id: guild.id,
-		shard: guild.client.shard.ids[0],
 		prefix: guild.client.config.prefix,
-		locale: 'en-GB',
 		timezone: 'UTC',
-		offset: 0,
+		auto: false,
 		enabled: false,
 		mention: false,
 		premium: false

@@ -7,14 +7,11 @@ module.exports.model = {
 	},
 	locale: DataTypes.STRING,
 	timezone: DataTypes.STRING,
-	offset: DataTypes.STRING,
 };
 
 module.exports.defaults = (user) => {
 	return {
 		id: user.id,
-		locale: 'en-GB',
-		timezone: 'UTC',
-		offset: 0
+		timezone: 'UTC'
 	};
 };

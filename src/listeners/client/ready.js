@@ -41,7 +41,7 @@ class OnReadyListener extends Listener {
 		this.client.log.info('Checking database for guilds');
 		client.guilds.cache.each(async guild => {
 			if(!await guild.settings()) {	
-				client.db.Guild.create(require('../models/guild').defaults(guild));
+				client.db.Guild.create(require('../../models/guild').defaults(guild));
 				this.client.log.console(this.client.log.f(`Added '&7${guild.name}&f' to the database`));
 			}
 		});

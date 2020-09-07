@@ -32,7 +32,7 @@ class OnMissingPermissionsListener extends Listener {
 
 		if (type === 'client') {
 			// BOT
-			let text = i18n.__('The bot is missing the following permissions: \n`%s`', missing);	
+			let text = i18n.__('The bot is missing the following permissions: \n`%s`', missing.join(', '));	
 
 			if(message.guild.me.permissionsIn(message.channel).has('EMBED_LINKS')) 
 				return message.util.send(

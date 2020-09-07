@@ -121,7 +121,7 @@ class Embed extends MessageEmbed {
 		this.color = client.config.colour;
 	
 		this.footer = {
-			text: client.const.footer,
+			text: client.config.footer,
 			iconURL: client.user.displayAvatarURL(),
 		};
 	}
@@ -187,24 +187,34 @@ class Client extends AkairoClient {
 
 		this.commandHandler.resolver.addType('boolean', (message, phrase) => {
 			if (!phrase) return null;
-			let value = phrase.toLowerCase() === 'true';
-			return value || null;
+			phrase = phrase.trim().toLowerCase();
+			if(['true', 'yes', 'on', '1'].includes(phrase))
+				return [true];
+			else if (['false', 'no', 'off', '0'].includes(phrase))
+				return [false];
+			else
+				return null;
 		});
 
 		const timezones = require('timezones.json');
 		this.commandHandler.resolver.addType('timezone', (message, phrase) => {
 			if (!phrase) return null;
-			let tz = timezones.find(zone => 
+			phrase = phrase.trim().toLowerCase();
+			/* let tz = timezones.find(zone => 
 				zone.value.toLowerCase() === phrase.toLowerCase()
 				|| zone.abbr.toLowerCase() === phrase.toLowerCase()
-				|| zone.utc.find(z => z  === phrase.toLowerCase())
-			);
-			return tz || null;
+				|| zone.utc.find(z => z  === phrase.toLowerCase()) 	
+			); */
+			let tz = timezones.find(zone => zone.utc.find(z => z.toLowerCase() === phrase));
+			return tz.utc.find(z => z.toLowerCase() === phrase) || null;
 		});
 
 		this.commandHandler.resolver.addType('locale', (message, phrase) => {
 			if (!phrase) return null;
-			let locale = i18n.getLocales().find(l => l.toLowerCase() === phrase.toLowerCase());
+			phrase = phrase.trim().toLowerCase();
+			let locale = i18n.getLocales().find(l => l.toLowerCase() === phrase);
+			console.log(phrase);
+			console.log(locale);
 			return locale || null;
 		});
 
@@ -226,12 +236,6 @@ class Client extends AkairoClient {
 		this.db = {
 			User,
 			Guild
-		};
-		this.const = {
-			footer: 'Christmas Countdown by eartharoid',
-			docs: {
-				commands: 'https://docs.christmascountdown.live/discord/commands'
-			},
 		};
 
 	}

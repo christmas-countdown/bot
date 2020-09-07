@@ -11,6 +11,7 @@ const {
 } = require('discord-akairo');
 const { Embed } = require('../../../bot');
 
+const { stripIndents } = require('common-tags');
 const { I18n } = require('i18n');
 const i18n = new I18n(require('../../../bot').i18n);
 
@@ -29,6 +30,7 @@ class ServerSettingsCommand extends Command {
 	*args(message) {
 		const cmd = yield {
 			type: [
+				['server-setup', 'setup'],
 				['server-set', 'set'],
 				['server-reset', 'reset'],
 			],
@@ -38,16 +40,19 @@ class ServerSettingsCommand extends Command {
 				i18n.setLocale(settings.locale || 'en-GB');
 				const prefix = settings.prefix || this.client.config.prefix;
 
-				let docs = this.client.const.docs.commands,
-					set = this.handler.findCommand('server-set').description || 'Click subcommand for more information',
-					reset = this.handler.findCommand('server-reset').description || 'Click subcommand for more information';
+				let docs = this.client.config.docs.commands,
+					moreInfo = 'Click subcommand for more information';
 
 				return new Embed()
 					.setTitle(i18n.__('Server settings'))
 					.setDescription(i18n.__(
 						'The %s command has the following subcommands:\n\n%s',
+
 						`[\`${this.id}\`](${docs}#server)`,
-						`❯ [\`set\`](${docs}#server-set) » ${set}\n❯ [\`reset\`](${docs}#server-reset) » ${reset}`))
+						stripIndents`❯ [\`setup\`](${docs}#server-setup "server setup") » ${i18n.__(this.handler.findCommand('server-setup').description || moreInfo)}
+							❯ [\`set\`](${docs}#server-set "server set") » ${i18n.__(this.handler.findCommand('server-set').description || moreInfo)}
+							❯ [\`reset\`](${docs}#server-reset "server reset") » ${i18n.__(this.handler.findCommand('server-reset').description || moreInfo)}`,
+					))					
 					.addField(i18n.__('Usage'), `\`${prefix}server set <args>\``)
 					.addField(i18n.__('Help'), `\`${prefix}help server\``);
 			},

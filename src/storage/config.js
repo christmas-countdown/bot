@@ -8,9 +8,14 @@
 module.exports = {
 	prefix: 'x!',
 	colour: '#D5002C',
+	footer: 'Christmas Countdown by eartharoid',
 	website: {
 		pretty: 'www.christmascountdown.live',
 		url: 'https://www.christmascountdown.live/'
+	},
+	docs: {
+		commands: 'https://docs.christmascountdown.live/discord/commands',
+		settings: 'https://docs.christmascountdown.live/discord/settings',
 	},
 	support: 'https://go.eartharoid.me/discord',
 	presence: {

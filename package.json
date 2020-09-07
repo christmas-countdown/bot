@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/eartharoid/ChristmasCountdownBot#readme",
   "dependencies": {
+    "common-tags": "^1.8.0",
+    "countly-sdk-nodejs": "^20.4.0",
     "dblapi.js": "^2.4.1",
     "discord-akairo": "^8.1.0",
     "discord.js-light": "^3.2.8",

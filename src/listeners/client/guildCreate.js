@@ -23,7 +23,7 @@ class OnGuildCreateListener extends Listener {
 			this.client.log.success(`Added to '${guild.name}' (${client.guilds.cache.size}/${total})`);
 		});
 		
-		client.db.Guild.create(require('../models/guild').defaults(guild));
+		client.db.Guild.create(require('../../models/guild').defaults(guild));
 
 	}
 }
