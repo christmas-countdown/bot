@@ -6,7 +6,7 @@
  */
 
 const {
-	Argument,
+	// Argument,
 	Command,
 } = require('discord-akairo');
 
@@ -18,8 +18,6 @@ const {
 	I18n
 } = require('i18n');
 const i18n = new I18n(require('../../../bot').i18n);
-
-const timezones = require('timezones.json');
 
 class ServerSetSettingsCommand extends Command {
 	constructor() {
@@ -116,26 +114,12 @@ class ServerSetSettingsCommand extends Command {
 				break;
 
 			case 'locale': {
-				this.client.log.warn(args[arg]);
-				let locale = i18n.getLocales().find(l => l.toLowerCase() === args[arg].trim().toLowerCase());
-				if (!locale) {
-					invalid.push([arg, 'Invalid locale name']);
-					continue;
-				}
-
-				settings.set(arg, locale);
+				settings.set(arg, args[arg]);
 				break;
 			}
 
-
 			case 'timezone': {
-				this.client.log.warn(arg);
-				let tz = arg;
-				if (!tz) {
-					invalid.push([tz, 'Invalid timezone name']);
-					continue;
-				}
-				settings.set(arg, tz);
+				settings.set(arg, args[arg]);
 				break;
 			}
 
@@ -156,7 +140,7 @@ class ServerSetSettingsCommand extends Command {
 					invalid.push([arg, ':star: This is a premium option']);
 					continue;
 				}
-				settings.set(arg, args[arg]);
+				settings.set(arg[0], args[arg]);
 				break;
 
 			case 'enabled':
@@ -164,7 +148,7 @@ class ServerSetSettingsCommand extends Command {
 					invalid.push([arg, 'Cannot enable countdown before channel is set']);
 					continue;
 				}
-				settings.set(arg, args[arg]);
+				settings.set(arg[0], args[arg]);
 				break;
 
 			case 'mention':
@@ -176,7 +160,7 @@ class ServerSetSettingsCommand extends Command {
 					invalid.push([arg, 'Cannot enable mentioning before role is set']);
 					continue;
 				}
-				settings.set(arg, args[arg]);
+				settings.set(arg[0], args[arg]);
 				break;
 			}
 
@@ -201,16 +185,26 @@ class ServerSetSettingsCommand extends Command {
 			);
 		}
 
-		if (counter === 0 && invalid.length !== 0)
-			return message.util.send(
-				new Embed()
-					.setTitle('nothing changed')
-			);
+		const capitalise = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+		let embed = new Embed();
+
+		if (counter === 0 && invalid.length === 0)
+			embed
+				.setTitle(i18n.__('Server settings'))
+				.setDescription(i18n.__('Nothing changed.'));
+		else
+			embed
+				.setTitle(i18n.__(':white_check_mark: Server settings updated'));
 		
-		return message.util.send(
-			new Embed()
-				.setTitle(':white_check_mark: Server settings updated')
-		);
+		for (let arg in args)
+			if (arg === 'channel')
+				embed.addField(i18n.__(capitalise(arg)), settings.get(arg) !== null ? `<#${settings.get(arg)}>` : i18n.__('none'), true);
+			else if (arg === 'role')
+				embed.addField(i18n.__(capitalise(arg)), settings.get(arg) !== null ? `<@!${settings.get(arg)}>` : i18n.__('none'), true);
+			else 
+				embed.addField(i18n.__(capitalise(arg)), settings.get(arg) !== null ? `\`${settings.get(arg)}\`` : i18n.__('none'), true);
+
+		return message.util.send(embed);
 
 	}
 }

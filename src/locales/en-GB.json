@@ -21,10 +21,19 @@
 	"This server's settings have been reset to the defaults. Use `%s` to re-configure.": "This server's settings have been reset to the defaults. Use `%s` to re-configure.",
 	":star: Premium": ":star: Premium",
 	"%s is a [premium](%s) option.\nUse %s to enable premium on this server": "%s is a [premium](%s) option.\nUse %s to enable premium on this server",
-	"Invalid type.": "Invalid type.",
-	"Invalid timezone name": "Invalid timezone name",
-	"Invalid locale name": "Invalid locale name",
 	"Invalid input": "Invalid input",
 	"There were some issues with the provided options:\n%s\nClick on the blue setting name to see the documentation.": "There were some issues with the provided options:\n%s\nClick on the blue setting name to see the documentation.",
-	"Invalid input (see docs)": "Invalid input (see docs)"
+	"Invalid input (see docs)": "Invalid input (see docs)",
+	":white_check_mark: Server settings updated": ":white_check_mark: Server settings updated",
+	"Your new settings:": "Your new settings:",
+	"Prefix": "Prefix",
+	"Locale": "Locale",
+	"Timezone": "Timezone",
+	"Channel": "Channel",
+	"Role": "Role",
+	"Auto": "Auto",
+	"none": "none",
+	"Enabled": "Enabled",
+	"Mention": "Mention",
+	"Nothing changed.": "Nothing changed."
 }

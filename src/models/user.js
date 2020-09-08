@@ -12,6 +12,7 @@ module.exports.model = {
 module.exports.defaults = (user) => {
 	return {
 		id: user.id,
+		locale: 'en-GB',
 		timezone: 'UTC'
 	};
 };

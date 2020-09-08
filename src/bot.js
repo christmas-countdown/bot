@@ -206,15 +206,14 @@ class Client extends AkairoClient {
 				|| zone.utc.find(z => z  === phrase.toLowerCase()) 	
 			); */
 			let tz = timezones.find(zone => zone.utc.find(z => z.toLowerCase() === phrase));
+			if (!tz) return null;
 			return tz.utc.find(z => z.toLowerCase() === phrase) || null;
 		});
 
 		this.commandHandler.resolver.addType('locale', (message, phrase) => {
 			if (!phrase) return null;
-			phrase = phrase.trim().toLowerCase();
+			phrase = phrase.trim().toLowerCase().replace('_', '-');
 			let locale = i18n.getLocales().find(l => l.toLowerCase() === phrase);
-			console.log(phrase);
-			console.log(locale);
 			return locale || null;
 		});
 

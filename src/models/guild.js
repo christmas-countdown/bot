@@ -20,6 +20,7 @@ module.exports.defaults = (guild) => {
 	return {
 		id: guild.id,
 		prefix: guild.client.config.prefix,
+		locale: 'en-GB',
 		timezone: 'UTC',
 		auto: false,
 		enabled: false,
