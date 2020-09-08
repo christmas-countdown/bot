@@ -29,8 +29,7 @@
     "moment-timezone": "^0.5.31",
     "mysql2": "^2.1.0",
     "node-fetch": "^2.6.1",
-    "sequelize": "^6.3.5",
-    "timezones.json": "^1.5.2"
+    "sequelize": "^6.3.5"
   },
   "optionalDependencies": {
     "erlpack": "github:discord/erlpack",
@@ -44,5 +43,8 @@
   },
   "engines": {
     "node": ">=12.0.0"
+  },
+  "__store": {
+	"timezones.json": "^1.5.2"
   }
 }

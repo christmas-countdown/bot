@@ -196,18 +196,12 @@ class Client extends AkairoClient {
 				return null;
 		});
 
-		const timezones = require('timezones.json');
+		const timezones = require('./storage/timezones.json'); // generated with moment-timezone (moment.tz.names())
 		this.commandHandler.resolver.addType('timezone', (message, phrase) => {
 			if (!phrase) return null;
 			phrase = phrase.trim().toLowerCase();
-			/* let tz = timezones.find(zone => 
-				zone.value.toLowerCase() === phrase.toLowerCase()
-				|| zone.abbr.toLowerCase() === phrase.toLowerCase()
-				|| zone.utc.find(z => z  === phrase.toLowerCase()) 	
-			); */
-			let tz = timezones.find(zone => zone.utc.find(z => z.toLowerCase() === phrase));
-			if (!tz) return null;
-			return tz.utc.find(z => z.toLowerCase() === phrase) || null;
+			let tz = timezones.find(zone => zone.toLowerCase() === phrase);
+			return tz || null;
 		});
 
 		this.commandHandler.resolver.addType('locale', (message, phrase) => {
