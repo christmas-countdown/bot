@@ -26,11 +26,10 @@ class ServerSetupCommand extends Command {
 
 	async exec(message, args) {
 
-		let settings = await message.guild.settings();
-
-
-
-		i18n.setLocale(settings.locale || 'en-GB');
+		let uSettings = await message.author.settings(),
+			gSettings = await message.guild.settings();
+		
+		i18n.setLocale(uSettings?.locale || gSettings.locale || 'en-GB');
 
 		// ❯ return a promise
 		return message.util.send(

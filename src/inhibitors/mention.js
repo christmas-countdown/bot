@@ -21,9 +21,12 @@ class MentionInhibitor extends Inhibitor {
 
 	async exec(message) {
 
-		let settings = await message.guild.settings();
-		i18n.setLocale(settings.locale || 'en-GB');
-		const prefix = settings.prefix || this.client.config.prefix;
+		let uSettings = await message.author.settings(),
+			gSettings = await message.guild.settings();
+		
+		i18n.setLocale(uSettings?.locale || gSettings.locale || 'en-GB');
+
+		const prefix = gSettings.prefix || this.client.config.prefix;
 
 		if (message.mentions.has(this.client.user) && !message.content.trim().match(/[a-zA-Z]/gm)) {
 			// mention with no command

@@ -90,8 +90,10 @@ class ServerSetSettingsCommand extends Command {
 
 
 	async exec(message, args) {
-		let settings = await message.guild.settings();
-		i18n.setLocale(settings.locale || 'en-GB');
+		let uSettings = await message.author.settings(),
+			gSettings = await message.guild.settings();
+		
+		i18n.setLocale(uSettings?.locale || gSettings.locale || 'en-GB');
 
 		let invalid = [],
 			counter = 0;
@@ -110,64 +112,64 @@ class ServerSetSettingsCommand extends Command {
 					continue;
 				}
 				
-				settings.set(arg, args[arg]);
+				gSettings.set(arg, args[arg]);
 				break;
 
 			case 'locale': {
-				settings.set(arg, args[arg]);
+				gSettings.set(arg, args[arg]);
 				break;
 			}
 
 			case 'timezone': {
-				settings.set(arg, args[arg]);
+				gSettings.set(arg, args[arg]);
 				break;
 			}
 
 			case 'channel':
-				settings.set(arg, args[arg].id);
+				gSettings.set(arg, args[arg].id);
 				break;
 
 			case 'role':
-				if (!settings.get('premium')) {
+				if (!gSettings.get('premium')) {
 					invalid.push([arg, ':star: This is a premium option']);
 					continue;
 				}
-				settings.set(arg, args[arg].id);
+				gSettings.set(arg, args[arg].id);
 				break;
 
 			case 'auto':
-				if (!settings.get('premium')) {
+				if (!gSettings.get('premium')) {
 					invalid.push([arg, ':star: This is a premium option']);
 					continue;
 				}
-				settings.set(arg[0], args[arg]);
+				gSettings.set(arg[0], args[arg]);
 				break;
 
 			case 'enabled':
-				if (!settings.get('channel')) {
+				if (!gSettings.get('channel')) {
 					invalid.push([arg, 'Cannot enable countdown before channel is set']);
 					continue;
 				}
-				settings.set(arg[0], args[arg]);
+				gSettings.set(arg[0], args[arg]);
 				break;
 
 			case 'mention':
-				if (!settings.get('premium')) {
+				if (!gSettings.get('premium')) {
 					invalid.push([arg, ':star: This is a premium option']);
 					continue;
 				}
-				if (!settings.get('role')) {
+				if (!gSettings.get('role')) {
 					invalid.push([arg, 'Cannot enable mentioning before role is set']);
 					continue;
 				}
-				settings.set(arg[0], args[arg]);
+				gSettings.set(arg[0], args[arg]);
 				break;
 			}
 
 			counter++;
 		}
 
-		settings.save(); // update database
+		gSettings.save(); // update database
 
 		if (invalid.length > 0) {
 			let docs = this.client.config.docs.settings;
@@ -198,11 +200,11 @@ class ServerSetSettingsCommand extends Command {
 		
 		for (let arg in args)
 			if (arg === 'channel')
-				embed.addField(i18n.__(capitalise(arg)), settings.get(arg) !== null ? `<#${settings.get(arg)}>` : i18n.__('none'), true);
+				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `<#${gSettings.get(arg)}>` : i18n.__('none'), true);
 			else if (arg === 'role')
-				embed.addField(i18n.__(capitalise(arg)), settings.get(arg) !== null ? `<@!${settings.get(arg)}>` : i18n.__('none'), true);
+				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `<@!${gSettings.get(arg)}>` : i18n.__('none'), true);
 			else 
-				embed.addField(i18n.__(capitalise(arg)), settings.get(arg) !== null ? `\`${settings.get(arg)}\`` : i18n.__('none'), true);
+				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `\`${gSettings.get(arg)}\`` : i18n.__('none'), true);
 
 		return message.util.send(embed);
 

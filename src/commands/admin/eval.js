@@ -29,7 +29,10 @@ class EvalCommand extends Command {
 
 	async exec(message, args) {
 
-		i18n.setLocale((await message.guild.settings()).locale || 'en-GB');
+		let uSettings = await message.author.settings(),
+			gSettings = await message.guild.settings();
+		
+		i18n.setLocale(uSettings?.locale || gSettings.locale || 'en-GB');
 
 		const clean = text => {
 			if (typeof (text) === 'string')

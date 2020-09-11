@@ -36,9 +36,12 @@ class ServerSettingsCommand extends Command {
 			],
 			otherwise: async () => { 
 
-				let settings = await message.guild.settings();
-				i18n.setLocale(settings.locale || 'en-GB');
-				const prefix = settings.prefix || this.client.config.prefix;
+				let uSettings = await message.author.settings(),
+					gSettings = await message.guild.settings();
+		
+				i18n.setLocale(uSettings?.locale || gSettings.locale || 'en-GB');
+		
+				const prefix = gSettings.prefix || this.client.config.prefix;
 
 				let docs = this.client.config.docs.commands,
 					moreInfo = 'Click subcommand for more information';

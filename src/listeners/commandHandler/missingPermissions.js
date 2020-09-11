@@ -24,8 +24,11 @@ class OnMissingPermissionsListener extends Listener {
 		if(!message.guild.me.permissionsIn(message.channel).has('SEND_MESSAGES'))
 			return;
 
-		let settings = await message.guild.settings();
-		i18n.setLocale(settings.locale || 'en-GB');
+		let uSettings = await message.author.settings(),
+			gSettings = await message.guild.settings();
+		
+		i18n.setLocale(uSettings?.locale || gSettings.locale || 'en-GB');
+		
 		let cmd = command.id; // this.client.config.prefix + 
 
 		
