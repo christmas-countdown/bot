@@ -28,57 +28,58 @@ class ServerSetSettingsCommand extends Command {
 			userPermissions: ['MANAGE_GUILD'], // only server admins
 			ignorePermissions: process.env.OWNERS.split(',').map(str => str.trim()), // bot owners are exempt 
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
-			args: [{
-				id: 'prefix',
-				match: 'option',
-				flag: 'prefix:',
+			args: [
+				{
+					id: 'prefix',
+					match: 'option',
+					flag: 'prefix:',
 				// type: Argument.validate('string', (m, p, str) => str.length < 20),
-			},
-			{
-				id: 'locale',
-				match: 'option',
-				flag: 'locale:',
-				type: 'locale', // custom
+				},
+				{
+					id: 'locale',
+					match: 'option',
+					flag: 'locale:',
+					type: 'locale', // custom
 				// type: 'lowercase'
-			},
-			{
-				id: 'timezone',
-				match: 'option',
-				flag: 'timezone:',
-				type: 'timezone', // custom
+				},
+				{
+					id: 'timezone',
+					match: 'option',
+					flag: 'timezone:',
+					type: 'timezone', // custom
 				// type: 'lowercase'
-			},
-			{
-				id: 'channel',
-				match: 'option',
-				flag: 'channel:',
-				type: 'channelMention', // textChannel
-			},
-			{
-				id: 'role',
-				match: 'option',
-				flag: 'role:',
-				type: 'roleMention', // role
-			},
-			{
-				id: 'auto',
-				match: 'option',
-				flag: 'auto:',
-				type: 'boolean',
-			},
-			{
-				id: 'enabled',
-				match: 'option',
-				flag: 'enabled:',
-				type: 'boolean'
-			},
-			{
-				id: 'mention',
-				match: 'option',
-				flag: 'mention:',
-				type: 'boolean',
+				},
+				{
+					id: 'channel',
+					match: 'option',
+					flag: 'channel:',
+					type: 'channelMention', // textChannel
+				},
+				{
+					id: 'role',
+					match: 'option',
+					flag: 'role:',
+					type: 'roleMention', // role
+				},
+				{
+					id: 'auto',
+					match: 'option',
+					flag: 'auto:',
+					type: 'boolean',
+				},
+				{
+					id: 'enabled',
+					match: 'option',
+					flag: 'enabled:',
+					type: 'boolean'
+				},
+				{
+					id: 'mention',
+					match: 'option',
+					flag: 'mention:',
+					type: 'boolean',
 
-			}
+				}
 			],
 		});
 

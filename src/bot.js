@@ -8,7 +8,7 @@
 global.prefix = 'SHARD ' + process.env.SHARDS;
 const path = require('path');
 const fs = require('fs');
-const config = require('./storage/config');
+const config = require('../config');
 
 const Logger = require('leekslazylogger');
 const log = new Logger({
@@ -115,15 +115,16 @@ const {
 } = require('discord.js');
 	
 class Embed extends MessageEmbed {
-	constructor(data) {
-		super(data);
+	constructor(footer) {
+		super();
 	
 		this.color = client.config.colour;
 	
-		this.footer = {
-			text: client.config.footer,
-			iconURL: client.user.displayAvatarURL(),
-		};
+		if (footer !== false)
+			this.footer = {
+				text: footer ? client.config.footer + ' | ' + footer : client.config.footer,
+				iconURL: client.user.displayAvatarURL(),
+			};
 	}
 }
 /** exports */

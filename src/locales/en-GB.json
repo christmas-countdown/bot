@@ -47,5 +47,11 @@
 	"Valid timezones": "Valid timezones",
 	"Set the server timezone": "Set the server timezone",
 	"Set your personal timezone": "Set your personal timezone",
-	"The list is too long to send! Click [here](%s) to visit the docs.": "The list is too long to send! Click [here](%s) to visit the docs."
+	"The list is too long to send! Click [here](%s) to visit the docs.": "The list is too long to send! Click [here](%s) to visit the docs.",
+	"Invalid timezone. See the [docs](%s).": "Invalid timezone. See the [docs](%s).",
+	"Mention the text channel you want the countdown to use.": "Mention the text channel you want the countdown to use.",
+	"Invalid channel mention.": "Invalid channel mention.",
+	"Enable the countdown? (yes/no)": "Enable the countdown? (yes/no)",
+	"Invalid input.": "Invalid input.",
+	"Which timezone do you want the bot to use?": "Which timezone do you want the bot to use?"
 }

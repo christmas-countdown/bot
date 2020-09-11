@@ -5,8 +5,8 @@
  * @license GPL-3.0
  */
 
-require('dotenv').config({path: 'src/storage/.env'});
-const config = require('./storage/config');
+require('dotenv').config();
+const config = require('../config');
 
 const Logger = require('leekslazylogger');
 const log = new Logger({
