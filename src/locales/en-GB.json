@@ -35,5 +35,17 @@
 	"none": "none",
 	"Enabled": "Enabled",
 	"Mention": "Mention",
-	"Nothing changed.": "Nothing changed."
+	"Nothing changed.": "Nothing changed.",
+	"Configure the bot's server settings": "Configure the bot's server settings",
+	"Locales": "Locales",
+	"Valid locales": "Valid locales",
+	"Don't see your language?": "Don't see your language?",
+	"Click [here](%s).": "Click [here](%s).",
+	"Set the server language": "Set the server language",
+	"Set your personal language": "Set your personal language",
+	"Timezones": "Timezones",
+	"Valid timezones": "Valid timezones",
+	"Set the server timezone": "Set the server timezone",
+	"Set your personal timezone": "Set your personal timezone",
+	"The list is too long to send! Click [here](%s) to visit the docs.": "The list is too long to send! Click [here](%s) to visit the docs."
 }

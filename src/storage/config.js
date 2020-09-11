@@ -15,7 +15,9 @@ module.exports = {
 	},
 	docs: {
 		commands: 'https://docs.christmascountdown.live/discord/commands',
+		locales: 'https://docs.christmascountdown.live/discord/locales',
 		settings: 'https://docs.christmascountdown.live/discord/settings',
+		timezones: 'https://docs.christmascountdown.live/discord/timezones',
 	},
 	support: 'https://go.eartharoid.me/discord',
 	presence: {
@@ -23,7 +25,7 @@ module.exports = {
 		types: ['WATCHING', 'PLAYING', 'WATCHING']
 	}, 
 	cooldown: 5,
-	respawn: true, // respawn dead shards? // ENABLE IN PROD
+	respawn: true, // respawn dead shards?
 	debug: false,
 };
   
