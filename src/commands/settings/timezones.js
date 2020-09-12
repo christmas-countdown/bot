@@ -14,7 +14,7 @@ const i18n = new I18n(require('../../bot').i18n);
 class ListTimezonesCommand extends Command {
 	constructor() {
 		super('timezones', {
-			aliases: ['timezones', 'list-timezones', 'zones'],
+			aliases: ['timezones', 'zones'],
 			description: 'List all valid timezones',
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
 		});

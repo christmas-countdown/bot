@@ -53,5 +53,9 @@
 	"Invalid channel mention.": "Invalid channel mention.",
 	"Enable the countdown? (yes/no)": "Enable the countdown? (yes/no)",
 	"Invalid input.": "Invalid input.",
-	"Which timezone do you want the bot to use?": "Which timezone do you want the bot to use?"
+	"Which timezone do you want the bot to use?": "Which timezone do you want the bot to use?",
+	"You must have following permissions to use the `%s` command: \n`%s`.": "You must have following permissions to use the `%s` command: \n`%s`.",
+	"Configure the bot's server settings using the setup prompt": "Configure the bot's server settings using the setup prompt",
+	"`%s` or \"%s\"": "`%s` or \"%s\"",
+	"Support server": "Support server"
 }

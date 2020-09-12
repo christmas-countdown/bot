@@ -14,7 +14,7 @@ const i18n = new I18n(require('../../bot').i18n);
 class ListLocalesCommand extends Command {
 	constructor() {
 		super('locales', {
-			aliases: ['locales', 'list-locales', 'languages'],
+			aliases: ['locales', 'languages'],
 			description: 'List all valid locales',
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
 		});
