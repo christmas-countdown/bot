@@ -183,7 +183,7 @@ class Client extends AkairoClient {
 			defaultCooldown: 5,
 			directory: 'src/commands/',
 			handleEdits: true,
-			prefix: async message => (await message.guild.settings()).prefix || config.prefix,
+			prefix: async message => (await message.guild?.settings()).prefix || config.prefix, // ?. used to prevent DMs causing error
 		});
 
 		this.commandHandler.resolver.addType('boolean', (message, phrase) => {
