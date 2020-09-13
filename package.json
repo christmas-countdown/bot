@@ -38,13 +38,13 @@
     "zlib-sync": "^0.1.7"
   },
   "devDependencies": {
-    "eslint": "^7.8.1",
+    "eslint": "^7.9.0",
     "nodemon": "^2.0.4"
   },
   "engines": {
     "node": ">=12.0.0"
   },
   "__store": {
-	"timezones.json": "^1.5.2"
+    "timezones.json": "^1.5.2"
   }
 }
