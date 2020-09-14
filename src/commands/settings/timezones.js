@@ -24,9 +24,9 @@ class ListTimezonesCommand extends Command {
 	async exec(message) {
 
 		let uSettings = await message.author.settings(),
-			gSettings = await message.guild.settings();
+			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings.locale || 'en-GB');
+		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		let prefix = gSettings.prefix || this.client.config.prefix,
 			docs = this.client.config.docs.commands;

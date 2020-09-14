@@ -23,9 +23,9 @@ class PingCommand extends Command {
 	async exec(message) {
 		const { client } = message;
 		let uSettings = await message.author.settings(),
-			gSettings = await message.guild.settings();
+			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings.locale || 'en-GB');
+		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		let embed = new Embed()
 			.setTitle(i18n.__('Pong!'))

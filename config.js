@@ -15,9 +15,9 @@ module.exports = {
 	},
 	docs: {
 		commands: 'https://docs.christmascountdown.live/discord/commands',
-		locales: 'https://docs.christmascountdown.live/discord/locales',
+		locales: 'https://docs.christmascountdown.live/locales',
 		settings: 'https://docs.christmascountdown.live/discord/settings',
-		timezones: 'https://docs.christmascountdown.live/discord/timezones',
+		timezones: 'https://docs.christmascountdown.live/timezones',
 	},
 	support: 'https://go.eartharoid.me/discord',
 	presence: {

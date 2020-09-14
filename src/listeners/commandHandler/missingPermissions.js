@@ -25,9 +25,9 @@ class OnMissingPermissionsListener extends Listener {
 			return;
 
 		let uSettings = await message.author.settings(),
-			gSettings = await message.guild.settings();
+			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings.locale || 'en-GB');
+		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
 		
 		let cmd = command.id; // this.client.config.prefix + 
 

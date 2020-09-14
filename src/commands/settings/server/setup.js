@@ -14,12 +14,6 @@ const config = require('../../../../config');
 const { I18n } = require('i18n');
 const i18n = new I18n(require('../../../bot').i18n);
 
-
-const setLocale = async (msg) => {
-	let uSettings = await msg.author.settings(),
-		gSettings = await msg.guild.settings();
-	i18n.setLocale(uSettings?.locale || gSettings.locale || 'en-GB');
-};
 class ServerSetupCommand extends Command {
 	constructor() {
 		super('server-setup', {
@@ -29,100 +23,70 @@ class ServerSetupCommand extends Command {
 			userPermissions: ['MANAGE_GUILD'], // only server admins
 			ignorePermissions: process.env.OWNERS.split(',').map(str => str.trim()), // bot owners are exempt 
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
-			args: [
-				{
-					id: 'prefix',
-					match: 'option',
-					flag: 'prefix:',
-				// type: Argument.validate('string', (m, p, str) => str.length < 20),
-				},
-				{
-					id: 'locale',
-					match: 'option',
-					flag: 'locale:',
-					type: 'locale', // custom
-				// type: 'lowercase'
-				},
-				{
-					id: 'timezone',
-					match: 'option',
-					flag: 'timezone:',
-					type: 'timezone', // custom
-					// type: 'lowercase'
-					prompt: {
-						start: async m => {
-							await setLocale(m); // first one needs to set the locale
-							return new MessageEmbed()
-								.setColor(config.colour)
-								.setDescription(i18n.__('Which timezone do you want the bot to use? ([List of timezones](%s), `UTC` recommended.)',
-									config.docs.timezones
-								));
-						},
-						retry: () => new MessageEmbed()
-							.setColor(config.colour)
-							.setDescription(i18n.__('Invalid timezone. See the [docs](%s).', config.docs.timezones)),
-						optional: true,
-					}
-				},
-				{
-					id: 'channel',
-					match: 'option',
-					flag: 'channel:',
-					type: 'channelMention', // textChannel
+		});
+	}
+
+	async *args(message) {
+		let uSettings = await message.author.settings(),
+			gSettings = await message.guild?.settings();
+		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+
+		const timezone = yield { 
+			type: 'timezone',
+			prompt: {
+				start: () =>new MessageEmbed()
+					.setColor(config.colour)
+					.setDescription(i18n.__('**Which timezone do you want the bot to use?**\n\n[Click here for a list of timezones](%s).\nIf you don\'t know, choose `UTC` now, __you can change this later__.',
+						config.docs.timezones
+					)),
+				retry: () => new MessageEmbed()
+					.setColor(config.colour)
+					.setDescription(i18n.__('Invalid timezone. See the [docs](%s). Exited prompt.', config.docs.timezones)),
+				// optional: true,
+			}
+		};
+
+		const enabled = yield { 
+			type: 'boolean',
+			prompt: {
+				start: () => new MessageEmbed()
+					.setColor(config.colour)
+					.setDescription(i18n.__('**Enable the countdown?** (`yes`/`no`)\n__You can change this later__.')),
+				retry: () => new MessageEmbed()
+					.setColor(config.colour)
+					.setDescription(i18n.__('Invalid input. Exited prompt.')),
+				// optional: true,
+			}
+		};
+
+		const channel = yield (
+			enabled[0]
+				? { 
+					type: 'channelMention',
 					prompt: {
 						start: () => new MessageEmbed()
 							.setColor(config.colour)
 							.setDescription(i18n.__('Mention the text channel you want the countdown to use.')),
 						retry: () => new MessageEmbed()
 							.setColor(config.colour)
-							.setDescription(i18n.__('Invalid channel mention.')),
-						optional: true,
+							.setDescription(i18n.__('Invalid channel mention. Exited prompt.')),
+						// optional: true,
 					}
-				},
-				{
-					id: 'role',
-					match: 'option',
-					flag: 'role:',
-					type: 'roleMention', // role
-				},
-				{
-					id: 'auto',
-					match: 'option',
-					flag: 'auto:',
-					type: 'boolean',
-				},
-				{
-					id: 'enabled',
-					match: 'option',
-					flag: 'enabled:',
-					type: 'boolean',
-					prompt: {
-						start: () => new MessageEmbed()
-							.setColor(config.colour)
-							.setDescription(i18n.__('Enable the countdown? (yes/no)')),
-						retry: () => new MessageEmbed()
-							.setColor(config.colour)
-							.setDescription(i18n.__('Invalid input.')),
-						optional: true,
-					}
-				},
-				{
-					id: 'mention',
-					match: 'option',
-					flag: 'mention:',
-					type: 'boolean',
-
 				}
-			],
-		});
+				:
+				{
+					type: 'none'
+				}
+		);
+		return { timezone, enabled, channel };
 	}
 
 
 	async exec(message, args) {
 		let uSettings = await message.author.settings(),
-			gSettings = await message.guild.settings();
+			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings.locale || 'en-GB');
+		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		let invalid = [],
 			counter = 0;

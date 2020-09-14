@@ -30,9 +30,9 @@ class EvalCommand extends Command {
 	async exec(message, args) {
 
 		let uSettings = await message.author.settings(),
-			gSettings = await message.guild.settings();
+			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings.locale || 'en-GB');
+		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		const clean = text => {
 			if (typeof (text) === 'string')

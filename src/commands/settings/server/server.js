@@ -37,11 +37,11 @@ class ServerSettingsCommand extends Command {
 			otherwise: async () => { 
 
 				let uSettings = await message.author.settings(),
-					gSettings = await message.guild.settings();
+					gSettings = await message.guild?.settings();
 		
-				i18n.setLocale(uSettings?.locale || gSettings.locale || 'en-GB');
+				i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
 		
-				const prefix = gSettings.prefix || this.client.config.prefix;
+				const prefix = gSettings?.prefix || this.client.config.prefix;
 
 				let docs = this.client.config.docs.commands,
 					moreInfo = 'Click subcommand for more information';

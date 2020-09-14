@@ -11,7 +11,7 @@ const { Embed } = require('../../../bot');
 const { I18n } = require('i18n');
 const i18n = new I18n(require('../../../bot').i18n);
 
-class ServerSetSettingsCommand extends Command {
+class ServerResetSettingsCommand extends Command {
 	constructor() {
 		super('server-reset', {
 			aliases: ['server-reset'],
@@ -27,9 +27,9 @@ class ServerSetSettingsCommand extends Command {
 	async exec(message) {
 
 		let uSettings = await message.author.settings(),
-			gSettings = await message.guild.settings();
+			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings.locale || 'en-GB');
+		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 
 		// settings.destroy(); // delete
@@ -54,4 +54,4 @@ class ServerSetSettingsCommand extends Command {
 	}
 }
 
-module.exports = ServerSetSettingsCommand;
+module.exports = ServerResetSettingsCommand;

@@ -48,14 +48,19 @@
 	"Set the server timezone": "Set the server timezone",
 	"Set your personal timezone": "Set your personal timezone",
 	"The list is too long to send! Click [here](%s) to visit the docs.": "The list is too long to send! Click [here](%s) to visit the docs.",
-	"Invalid timezone. See the [docs](%s).": "Invalid timezone. See the [docs](%s).",
 	"Mention the text channel you want the countdown to use.": "Mention the text channel you want the countdown to use.",
 	"Invalid channel mention.": "Invalid channel mention.",
-	"Enable the countdown? (yes/no)": "Enable the countdown? (yes/no)",
 	"Invalid input.": "Invalid input.",
-	"Which timezone do you want the bot to use?": "Which timezone do you want the bot to use?",
 	"You must have following permissions to use the `%s` command: \n`%s`.": "You must have following permissions to use the `%s` command: \n`%s`.",
 	"Configure the bot's server settings using the setup prompt": "Configure the bot's server settings using the setup prompt",
+	"**Which timezone do you want the bot to use?**\n\n([Click here for a list of timezones](%s)).\nIf you don't know, choose `UTC` now, __you can change this later__.": "**Which timezone do you want the bot to use?**\n\n([Click here for a list of timezones](%s)).\nIf you don't know, choose `UTC` now, __you can change this later__.",
+	"**Enable the countdown?** (yes/no)": "**Enable the countdown?** (yes/no)",
+	"You can further modify your settings with [`%sserver set`](%s).": "You can further modify your settings with [`%sserver set`](%s).",
+	"**Which timezone do you want the bot to use?**\n\n[Click here for a list of timezones](%s).\nIf you don't know, choose `UTC` now, __you can change this later__.": "**Which timezone do you want the bot to use?**\n\n[Click here for a list of timezones](%s).\nIf you don't know, choose `UTC` now, __you can change this later__.",
+	"Invalid timezone. See the [docs](%s). Exited prompt.": "Invalid timezone. See the [docs](%s). Exited prompt.",
+	"": "",
 	"`%s` or \"%s\"": "`%s` or \"%s\"",
-	"Support server": "Support server"
+	"Support server": "Support server",
+	"User settings": "User settings",
+	":white_check_mark: User settings updated": ":white_check_mark: User settings updated"
 }
