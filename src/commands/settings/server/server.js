@@ -9,11 +9,11 @@ const {
 	Command,
 	Flag
 } = require('discord-akairo');
-const { Embed } = require('../../../bot');
+const { Embed, i18n: i18nOptions } = require('../../../bot');
 
 const { stripIndents } = require('common-tags');
 const { I18n } = require('i18n');
-const i18n = new I18n(require('../../../bot').i18n);
+const i18n = new I18n(i18nOptions);
 
 class ServerSettingsCommand extends Command {
 	constructor() {
