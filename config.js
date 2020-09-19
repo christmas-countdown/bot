@@ -34,6 +34,16 @@ module.exports = {
 			type: 'PLAYING'
 		},
 	],
+	args_errors: {
+		prefix: 'Invalid prefix. Too long perhaps?',
+		locale: 'Invalid locale name.',
+		timezone: 'Invalid timezone name.',
+		channel: 'Invalid channel mention.',
+		role: 'Invalid role mention.',
+		auto: 'Invalid boolean.',
+		enabled: 'Invalid boolean.',
+		mention: 'Invalid boolean.'
+	},
 	cooldown: 5,
 	respawn: true, // respawn dead shards?
 	debug: false,

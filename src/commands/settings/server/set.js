@@ -102,7 +102,7 @@ class ServerSetSettingsCommand extends Command {
 		for (let arg in args) {
 			if (!args[arg]) {
 				if (message.content.includes(arg + ':'))
-					invalid.push([arg, 'Invalid input (see docs)']);
+					invalid.push([arg, this.client.config.args_errors[arg] || 'Invalid input (see docs)']);
 				continue;
 			}
 
@@ -179,10 +179,10 @@ class ServerSetSettingsCommand extends Command {
 			for (let i in invalid)
 				list += `❯ [\`${invalid[i][0]}\`](${docs}/server#${invalid[i][0]}) » ${i18n.__(invalid[i][1])}\n`;
 
-			message.util.send(
+			return message.util.send(
 				new Embed()
 					.setTitle(':x: Server settings')
-					.setDescription(i18n.__('There were some issues with the provided options:\n%s\nClick on the blue setting name to see the documentation.',
+					.setDescription(i18n.__('There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**',
 						list
 					))
 			);
@@ -191,7 +191,7 @@ class ServerSetSettingsCommand extends Command {
 		const capitalise = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 		let embed = new Embed();
 
-		if (counter === 0 && invalid.length === 0)
+		if (counter === 0)
 			embed
 				.setTitle(i18n.__('Server settings'))
 				.setDescription(i18n.__('Nothing changed.'));
@@ -203,7 +203,7 @@ class ServerSetSettingsCommand extends Command {
 			if (arg === 'channel')
 				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `<#${gSettings.get(arg)}>` : i18n.__('none'), true);
 			else if (arg === 'role')
-				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `<@!${gSettings.get(arg)}>` : i18n.__('none'), true);
+				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `<@&${gSettings.get(arg)}>` : i18n.__('none'), true);
 			else 
 				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `\`${gSettings.get(arg)}\`` : i18n.__('none'), true);
 

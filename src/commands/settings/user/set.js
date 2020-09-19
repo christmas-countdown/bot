@@ -64,7 +64,7 @@ class UserSetSettingsCommand extends Command {
 		for (let arg in args) {
 			if (!args[arg]) {
 				if (message.content.includes(arg + ':'))
-					invalid.push([arg, 'Invalid input (see docs)']);
+					invalid.push([arg, this.client.config.args_errors[arg] || 'Invalid input (see docs)']);
 				continue;
 			}
 
@@ -82,10 +82,10 @@ class UserSetSettingsCommand extends Command {
 			for (let i in invalid)
 				list += `❯ [\`${invalid[i][0]}\`](${docs}/user#${invalid[i][0]}) » ${i18n.__(invalid[i][1])}\n`;
 
-			message.util.send(
+			return message.util.send(
 				new Embed()
 					.setTitle(':x: User settings')
-					.setDescription(i18n.__('There were some issues with the provided options:\n%s\nClick on the blue setting name to see the documentation.',
+					.setDescription(i18n.__('There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**',
 						list
 					))
 			);
@@ -94,7 +94,7 @@ class UserSetSettingsCommand extends Command {
 		const capitalise = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 		let embed = new Embed();
 
-		if (counter === 0 && invalid.length === 0)
+		if (counter === 0)
 			embed
 				.setTitle(i18n.__('User settings'))
 				.setDescription(i18n.__('Nothing changed.'));

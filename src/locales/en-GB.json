@@ -22,7 +22,7 @@
 	":star: Premium": ":star: Premium",
 	"%s is a [premium](%s) option.\nUse %s to enable premium on this server": "%s is a [premium](%s) option.\nUse %s to enable premium on this server",
 	"Invalid input": "Invalid input",
-	"There were some issues with the provided options:\n%s\nClick on the blue setting name to see the documentation.": "There were some issues with the provided options:\n%s\nClick on the blue setting name to see the documentation.",
+	"There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**": "There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**",
 	"Invalid input (see docs)": "Invalid input (see docs)",
 	":white_check_mark: Server settings updated": ":white_check_mark: Server settings updated",
 	"Your new settings:": "Your new settings:",
@@ -63,5 +63,9 @@
 	"Support server": "Support server",
 	"User settings": "User settings",
 	":white_check_mark: User settings updated": ":white_check_mark: User settings updated",
-	"**Enable the countdown?** (`yes`/`no`)\n__You can change this later__.": "**Enable the countdown?** (`yes`/`no`)\n__You can change this later__."
+	"**Enable the countdown?** (`yes`/`no`)\n__You can change this later__.": "**Enable the countdown?** (`yes`/`no`)\n__You can change this later__.",
+	"Invalid locale name.": "Invalid locale name.",
+	"Invalid role mention.": "Invalid role mention.",
+	":star: This is a premium option": ":star: This is a premium option",
+	"Invalid timezone name.": "Invalid timezone name."
 }

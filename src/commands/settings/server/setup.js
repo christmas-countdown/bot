@@ -94,70 +94,11 @@ class ServerSetupCommand extends Command {
 		for (let arg in args) {
 			if (!args[arg]) {
 				if (message.content.includes(arg + ':'))
-					invalid.push([arg, 'Invalid input (see docs)']);
+					invalid.push([arg, this.client.config.args_errors[arg] || 'Invalid input (see docs)']);
 				continue;
 			}
-
-			switch (arg) {
-			case 'prefix':
-				if (args[arg].length > 20) {
-					invalid.push([arg, 'Prefix is too long']);
-					continue;
-				}
-				
-				gSettings.set(arg, args[arg]);
-				break;
-
-			case 'locale': {
-				gSettings.set(arg, args[arg]);
-				break;
-			}
-
-			case 'timezone': {
-				gSettings.set(arg, args[arg]);
-				break;
-			}
-
-			case 'channel':
-				gSettings.set(arg, args[arg].id);
-				break;
-
-			case 'role':
-				if (!gSettings.get('premium')) {
-					invalid.push([arg, ':star: This is a premium option']);
-					continue;
-				}
-				gSettings.set(arg, args[arg].id);
-				break;
-
-			case 'auto':
-				if (!gSettings.get('premium')) {
-					invalid.push([arg, ':star: This is a premium option']);
-					continue;
-				}
-				gSettings.set(arg[0], args[arg]);
-				break;
-
-			case 'enabled':
-				if (!gSettings.get('channel')) {
-					invalid.push([arg, 'Cannot enable countdown before channel is set']);
-					continue;
-				}
-				gSettings.set(arg[0], args[arg]);
-				break;
-
-			case 'mention':
-				if (!gSettings.get('premium')) {
-					invalid.push([arg, ':star: This is a premium option']);
-					continue;
-				}
-				if (!gSettings.get('role')) {
-					invalid.push([arg, 'Cannot enable mentioning before role is set']);
-					continue;
-				}
-				gSettings.set(arg[0], args[arg]);
-				break;
-			}
+	
+			gSettings.set(arg, args[arg]);
 
 			counter++;
 		}
@@ -171,10 +112,10 @@ class ServerSetupCommand extends Command {
 			for (let i in invalid)
 				list += `❯ [\`${invalid[i][0]}\`](${docs}/server#${invalid[i][0]}) » ${i18n.__(invalid[i][1])}\n`;
 
-			message.util.send(
+			return message.util.send(
 				new Embed()
 					.setTitle(':x: Server settings')
-					.setDescription(i18n.__('There were some issues with the provided options:\n%s\nClick on the blue setting name to see the documentation.',
+					.setDescription(i18n.__('There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**',
 						list
 					))
 			);
@@ -183,7 +124,7 @@ class ServerSetupCommand extends Command {
 		const capitalise = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 		let embed = new Embed();
 
-		if (counter === 0 && invalid.length === 0)
+		if (counter === 0)
 			embed
 				.setTitle(i18n.__('Server settings'))
 				.setDescription(i18n.__('Nothing changed.'));
@@ -199,7 +140,7 @@ class ServerSetupCommand extends Command {
 			if (arg === 'channel')
 				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `<#${gSettings.get(arg)}>` : i18n.__('none'), true);
 			else if (arg === 'role')
-				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `<@!${gSettings.get(arg)}>` : i18n.__('none'), true);
+				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `<@&${gSettings.get(arg)}>` : i18n.__('none'), true);
 			else 
 				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `\`${gSettings.get(arg)}\`` : i18n.__('none'), true);
 
