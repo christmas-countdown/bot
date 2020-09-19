@@ -19,7 +19,15 @@ class ServerSettingsCommand extends Command {
 	constructor() {
 		super('server', {
 			aliases: ['server'],
-			description: 'Modify server settings',
+			category: 'settings',
+			description: {
+				content: 'Modify server settings',
+				usage: '<command> [args]',
+				examples: [
+					'server set timezone: America/New_York',
+					'server reset'
+				]
+			},
 			channel: 'guild', // guilds only
 			userPermissions: ['MANAGE_GUILD'], // only server admins
 			ignorePermissions: process.env.OWNERS.split(',').map(str => str.trim()), // bot owners are exempt 

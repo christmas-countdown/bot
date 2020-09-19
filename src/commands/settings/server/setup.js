@@ -18,7 +18,10 @@ class ServerSetupCommand extends Command {
 	constructor() {
 		super('server-setup', {
 			aliases: ['server-setup'],
-			description: 'Configure the bot\'s server settings using the setup prompt',
+			category: 'hidden',
+			description: {
+				content: 'Configure the bot\'s server settings using the setup prompt',
+			},
 			channel: 'guild', // guilds only
 			userPermissions: ['MANAGE_GUILD'], // only server admins
 			ignorePermissions: process.env.OWNERS.split(',').map(str => str.trim()), // bot owners are exempt 

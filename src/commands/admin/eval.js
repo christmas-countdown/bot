@@ -15,6 +15,10 @@ class EvalCommand extends Command {
 	constructor() {
 		super('eval', {
 			aliases: ['eval'],
+			description: {
+				content: 'Evaluate JS code',
+				usage: '<string>',
+			},
 			ownerOnly: true,
 			prefix: 'x!admin.',
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],

@@ -15,7 +15,10 @@ class ServerResetSettingsCommand extends Command {
 	constructor() {
 		super('server-reset', {
 			aliases: ['server-reset'],
-			description: 'Reset server settings',
+			category: 'hidden',
+			description: {
+				content: 'Reset server settings',
+			},
 			channel: 'guild', // guilds only
 			userPermissions: ['MANAGE_GUILD'], // only server admins
 			ignorePermissions: process.env.OWNERS.split(',').map(str => str.trim()), // bot owners are exempt

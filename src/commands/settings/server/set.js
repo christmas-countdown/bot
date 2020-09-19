@@ -19,7 +19,15 @@ class ServerSetSettingsCommand extends Command {
 	constructor() {
 		super('server-set', {
 			aliases: ['server-set'],
-			description: 'Set server settings',
+			category: 'hidden',
+			description: {
+				content: 'set server settings',
+				usage: '[settings]',
+				examples: [
+					'server set channel: #countdown enabled: true',
+					'server set timezone: America/New_York'
+				]
+			},
 			channel: 'guild', // guilds only
 			userPermissions: ['MANAGE_GUILD'], // only server admins
 			ignorePermissions: process.env.OWNERS.split(',').map(str => str.trim()), // bot owners are exempt 
@@ -78,11 +86,6 @@ class ServerSetSettingsCommand extends Command {
 				}
 			],
 		});
-
-		this.examples = [
-			'server set channel: #countdown enabled: true',
-			'server set timezone: America/New_York'
-		];
 	}
 
 

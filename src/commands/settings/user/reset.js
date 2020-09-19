@@ -15,7 +15,10 @@ class UserResetSettingsCommand extends Command {
 	constructor() {
 		super('user-reset', {
 			aliases: ['user-reset'],
-			description: 'Reset user settings',
+			category: 'hidden',
+			description: {
+				content: 'Reset server settings',
+			},
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
 		});
 	}

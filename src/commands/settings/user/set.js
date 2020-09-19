@@ -19,7 +19,14 @@ class UserSetSettingsCommand extends Command {
 	constructor() {
 		super('user-set', {
 			aliases: ['user-set'],
-			description: 'Set user settings',
+			category: 'hidden',
+			description: {
+				content: 'Set user settings',
+				usage: '[settings]',
+				examples: [
+					'user set timezone: America/New_York'
+				]
+			},
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
 			args: [
 				{
@@ -38,10 +45,6 @@ class UserSetSettingsCommand extends Command {
 				},
 			],
 		});
-
-		this.examples = [
-			'user set timezone: America/New_York'
-		];
 	}
 
 

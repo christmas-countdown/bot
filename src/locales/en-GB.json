@@ -67,5 +67,11 @@
 	"Invalid locale name.": "Invalid locale name.",
 	"Invalid role mention.": "Invalid role mention.",
 	":star: This is a premium option": ":star: This is a premium option",
-	"Invalid timezone name.": "Invalid timezone name."
+	"Invalid timezone name.": "Invalid timezone name.",
+	"Commands": "Commands",
+	"For more information about a specific command, use `%shelp <command>` or click on its name .": "For more information about a specific command, use `%shelp <command>` or click on its name .",
+	"❯ Description": "❯ Description",
+	"[click here](%s)": "[click here](%s)",
+	"❯ Documentation": "❯ Documentation",
+	"❯ Aliases": "❯ Aliases"
 }

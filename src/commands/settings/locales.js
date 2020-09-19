@@ -15,7 +15,9 @@ class ListLocalesCommand extends Command {
 	constructor() {
 		super('locales', {
 			aliases: ['locales', 'languages'],
-			description: 'List all valid locales',
+			description: {
+				content: 'List all valid locales',
+			},
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
 		});
 	}

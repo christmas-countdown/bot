@@ -19,7 +19,15 @@ class UserSettingsCommand extends Command {
 	constructor() {
 		super('user', {
 			aliases: ['user'],
-			description: 'Modify user settings',
+			category: 'settings',
+			description: {
+				content: 'Modify user settings',
+				usage: '<command> [args]',
+				examples: [
+					'user set timezone: America/New_York',
+					'user reset'
+				]
+			},
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
 		});
 	}

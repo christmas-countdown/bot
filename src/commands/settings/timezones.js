@@ -15,7 +15,9 @@ class ListTimezonesCommand extends Command {
 	constructor() {
 		super('timezones', {
 			aliases: ['timezones', 'zones'],
-			description: 'List all valid timezones',
+			description: {
+				content: 'List all valid timezones',
+			},
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
 		});
 	}

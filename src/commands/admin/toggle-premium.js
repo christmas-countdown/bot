@@ -15,6 +15,9 @@ class TogglePremiumCommand extends Command {
 	constructor() {
 		super('toggle-premium', {
 			aliases: ['toggle-premium', 'premium'],
+			description: {
+				content: 'Enable/disable premium on for server',
+			},
 			ownerOnly: true,
 			prefix: 'x!admin.',
 			category: 'admin',
