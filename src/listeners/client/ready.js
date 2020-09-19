@@ -26,17 +26,17 @@ class OnReadyListener extends Listener {
 		
 
 		const updatePresence = () => {
-			let num = Math.floor(Math.random() * config.presence.activities.length);
+			let presence = config.presences[Math.floor(Math.random() * config.presences.length)];
 			client.user.setPresence({
 				activity: {
-					name: config.presence.activities[num] + `  |  ${config.prefix}help`,
-					type: config.presence.types[num]
+					name: presence.activity + `  |  ${config.prefix}help`,
+					type: presence.type
 				}
 			}).catch(this.client.log.error);
-			this.client.log.debug(`Updated presence: ${config.presence.types[num]} ${config.presence.activities[num]}`);
+			this.client.log.debug(`Updated presence: ${presence.activity} ${presence.type}`);
 		};
-		updatePresence();
-		setInterval(updatePresence, 30000);
+
+		setInterval(updatePresence, 60000);
 
 		this.client.log.info('Checking database for guilds');
 		client.guilds.cache.each(async guild => {

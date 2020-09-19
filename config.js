@@ -20,10 +20,20 @@ module.exports = {
 		timezones: 'https://docs.christmascountdown.live/timezones',
 	},
 	support: 'https://go.eartharoid.me/discord',
-	presence: {
-		activities: ['the countdown to Christmas', 'in the snow', 'christmascountdown.live'],
-		types: ['WATCHING', 'PLAYING', 'WATCHING']
-	}, 
+	presences: [
+		{
+			activity: '',
+			type: 'WATCHING'
+		},
+		{
+			activity: 'in the snow',
+			type: 'PLAYING'
+		},
+		{
+			activity: 'the countdown to Christmas',
+			type: 'PLAYING'
+		},
+	],
 	cooldown: 5,
 	respawn: true, // respawn dead shards?
 	debug: false,

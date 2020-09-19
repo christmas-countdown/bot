@@ -62,5 +62,6 @@
 	"`%s` or \"%s\"": "`%s` or \"%s\"",
 	"Support server": "Support server",
 	"User settings": "User settings",
-	":white_check_mark: User settings updated": ":white_check_mark: User settings updated"
+	":white_check_mark: User settings updated": ":white_check_mark: User settings updated",
+	"**Enable the countdown?** (`yes`/`no`)\n__You can change this later__.": "**Enable the countdown?** (`yes`/`no`)\n__You can change this later__."
 }

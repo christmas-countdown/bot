@@ -148,7 +148,7 @@ const {
 
 class Client extends AkairoClient {
 	constructor() {
-		let num = Math.floor(Math.random() * config.presence.activities.length);
+		let presence = config.presences[Math.floor(Math.random() * config.presences.length)];
 		super({
 			ownerID: process.env.OWNERS.split(',').map(str => str.trim())
 		}, {
@@ -157,8 +157,10 @@ class Client extends AkairoClient {
 				intents: Intents.NON_PRIVILEGED,
 			},
 			presence: {
-				name: config.presence.activities[num] + `  |  ${config.prefix}help`,
-				type: config.presence.types[num]
+				activity: {
+					name: presence.activity + `  |  ${config.prefix}help`,
+					type: presence.type
+				}
 			},
 			// cache options are only if discord.js is replaced with discord.js-light
 			cacheGuilds: true,
