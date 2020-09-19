@@ -62,9 +62,11 @@ class HelpCommand extends Command {
 
 			return message.util.send(embed);
 		}
-
+		let desc = command.description.usage ?
+			' ' + command.description.usage
+			: '';
 		const embed = new Embed()
-			.setTitle(`\`${command.aliases[0]}${command.description.usage || ''}\``)
+			.setTitle(`\`${command.aliases[0]}${desc}\``)
 			.setURL(`${this.client.config.docs.commands}#${command.id}`)
 			.addField(i18n.__('❯ Documentation'), i18n.__('[click here](%s)', `${this.client.config.docs.commands}#${command.id}`))
 			.addField(i18n.__('❯ Description'), command.description.content || '\u200b');
