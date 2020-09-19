@@ -27,7 +27,7 @@
     "i18n": "^0.13.2",
     "leekslazylogger": "^2.0.3",
     "moment-timezone": "^0.5.31",
-    "mysql2": "^2.1.0",
+    "mysql2": "^2.2.1",
     "node-fetch": "^2.6.1",
     "sequelize": "^6.3.5"
   },
