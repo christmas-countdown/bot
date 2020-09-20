@@ -58,9 +58,6 @@ class HelpCommand extends Command {
 						.join(', ')}`,
 				);
 			}
-				
-
-
 			return message.util.send(embed);
 		}
 		let desc = command.description.usage ?
