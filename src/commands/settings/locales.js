@@ -35,7 +35,7 @@ class ListLocalesCommand extends Command {
 
 		// ❯ return a promise
 		return message.util.send(
-			new Embed()
+			new Embed(uSettings, gSettings)
 				.setTitle(i18n.__('Locales'))
 				.addField(i18n.__('Valid locales'), i18n.getLocales().map(locale => `\`${locale}\``).join(', ')) // turn array into cool string
 				.addField(i18n.__('Don\'t see your language?'), i18n.__('Click [here](%s).', this.client.config.docs.locales))

@@ -97,7 +97,7 @@ class ServerSetupCommand extends Command {
 		for (let arg in args) {
 			if (!args[arg]) {
 				if (message.content.includes(arg + ':'))
-					invalid.push([arg, this.client.config.args_errors[arg] || 'Invalid input (see docs)']);
+					invalid.push([arg, this.client.config.options[arg]?.error || 'Invalid input (see docs)']);
 				continue;
 			}
 	
@@ -116,7 +116,7 @@ class ServerSetupCommand extends Command {
 				list += `❯ [\`${invalid[i][0]}\`](${docs}/server#${invalid[i][0]}) » ${i18n.__(invalid[i][1])}\n`;
 
 			return message.util.send(
-				new Embed()
+				new Embed(uSettings, gSettings)
 					.setTitle(':x: Server settings')
 					.setDescription(i18n.__('There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**',
 						list
@@ -125,7 +125,7 @@ class ServerSetupCommand extends Command {
 		}
 
 		const capitalise = (str) => str.charAt(0).toUpperCase() + str.slice(1);
-		let embed = new Embed();
+		let embed = new Embed(uSettings, gSettings);
 
 		if (counter === 0)
 			embed

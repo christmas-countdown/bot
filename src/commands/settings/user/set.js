@@ -24,7 +24,7 @@ class UserSetSettingsCommand extends Command {
 				content: 'Set user settings',
 				usage: '[settings]',
 				examples: [
-					'user set timezone: America/New_York'
+					'set timezone: America/New_York'
 				]
 			},
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
@@ -63,7 +63,7 @@ class UserSetSettingsCommand extends Command {
 		for (let arg in args) {
 			if (!args[arg]) {
 				if (message.content.includes(arg + ':'))
-					invalid.push([arg, this.client.config.args_errors[arg] || 'Invalid input (see docs)']);
+					invalid.push([arg, this.client.config.options[arg]?.error || 'Invalid input (see docs)']);
 				continue;
 			}
 
@@ -82,7 +82,7 @@ class UserSetSettingsCommand extends Command {
 				list += `❯ [\`${invalid[i][0]}\`](${docs}/user#${invalid[i][0]}) » ${i18n.__(invalid[i][1])}\n`;
 
 			return message.util.send(
-				new Embed()
+				new Embed(uSettings, gSettings)
 					.setTitle(':x: User settings')
 					.setDescription(i18n.__('There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**',
 						list
@@ -91,7 +91,7 @@ class UserSetSettingsCommand extends Command {
 		}
 
 		const capitalise = (str) => str.charAt(0).toUpperCase() + str.slice(1);
-		let embed = new Embed();
+		let embed = new Embed(uSettings, gSettings);
 
 		if (counter === 0)
 			embed

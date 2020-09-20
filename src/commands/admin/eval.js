@@ -60,7 +60,7 @@ class EvalCommand extends Command {
 			let out_title = `:desktop: Output ${promise?'(resolved Promise)':''} ${clean(res).length > 990?'(cut)':''}`;
 			// ❯ return a promise
 			return message.util.send(
-				new Embed()
+				new Embed(uSettings, gSettings)
 					.setTitle('Evaluation')
 					.setAuthor(message.author.username, message.author.displayAvatarURL())
 					.addField(':keyboard: Input', `\`\`\`js\n${clean(code).substring(0, 990)}\`\`\``)
@@ -72,7 +72,7 @@ class EvalCommand extends Command {
 			let out_title = `:desktop: Output ${promise?'(resolved Promise)':''} ${clean(res).length > 990?'(cut)':''}`;
 			// ❯ return a promise
 			return message.util.send(
-				new Embed()
+				new Embed(uSettings, gSettings)
 					.setColor('RED')
 					.setTitle('Evaluation error')
 					.setAuthor(message.author.username, message.author.displayAvatarURL())

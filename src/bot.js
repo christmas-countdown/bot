@@ -115,17 +115,25 @@ const {
 } = require('discord.js');
 	
 class Embed extends MessageEmbed {
-	constructor(footer) {
+	constructor(uSettings, gSettings) {
 		super();
 	
 		this.color = client.config.colour;
-	
-		if (footer !== false)
-			this.footer = {
-				text: footer ? client.config.footer + ' | ' + footer : client.config.footer,
-				iconURL: client.user.displayAvatarURL(),
-			};
+
+		let locale = uSettings?.locale || gSettings?.locale;
+
+		if (locale === 'en-GB') locale = null;
+
+		locale = locale ? ` | (${uSettings?.locale ? 'user' : 'server'}: ${locale})` : '';
+
+		this.footer = {
+			text: client.config.footer + locale,
+			iconURL: client.user.displayAvatarURL(),
+		};
+			
+
 	}
+
 }
 /** exports */
 module.exports = {

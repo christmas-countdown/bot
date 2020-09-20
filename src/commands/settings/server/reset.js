@@ -45,13 +45,14 @@ class ServerResetSettingsCommand extends Command {
 		});
 
 
-		let prefix = this.client.config.prefix;
+		let prefix = this.client.config.prefix,
+			docs = this.client.config.docs.commands;
 
 		// ❯ return a promise
 		return message.util.send(
-			new Embed()
+			new Embed(uSettings, gSettings)
 				.setTitle(i18n.__(':white_check_mark: Server settings reset'))
-				.setDescription(i18n.__('This server\'s settings have been reset to the defaults. Use `%s` to re-configure.', prefix + 'server set'))
+				.setDescription(i18n.__('This server\'s settings have been reset to the defaults. Use %s to re-configure.', `[\`${prefix}server set\`](${docs}#server-set)`))
 		);
 
 	}

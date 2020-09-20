@@ -39,7 +39,7 @@ class OnMissingPermissionsListener extends Listener {
 
 			if(message.guild.me.permissionsIn(message.channel).has('EMBED_LINKS')) 
 				return message.util.send(
-					new Embed()
+					new Embed(uSettings, gSettings)
 						.setTitle(i18n.__('Missing permissions'))
 						.setDescription(text)
 				);
@@ -52,7 +52,7 @@ class OnMissingPermissionsListener extends Listener {
 
 			if(message.guild.me.permissionsIn(message.channel).has('EMBED_LINKS')) 
 				return message.util.send(
-					new Embed()
+					new Embed(uSettings, gSettings)
 						.setTitle(i18n.__('Missing permissions'))
 						.setDescription(text)
 				);

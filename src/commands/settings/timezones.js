@@ -35,7 +35,7 @@ class ListTimezonesCommand extends Command {
 
 		// ❯ return a promise
 		return message.util.send(
-			new Embed()
+			new Embed(uSettings, gSettings)
 				.setTitle(i18n.__('Timezones'))
 				.addField(i18n.__('Valid timezones'), i18n.__('The list is too long to send! Click [here](%s) to visit the docs.', this.client.config.docs.timezones))
 				.addField(i18n.__('Set the server timezone'), `[\`${prefix}server set timezone: <timezone>\`](${docs}#server-set)`)

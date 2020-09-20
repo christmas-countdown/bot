@@ -22,6 +22,8 @@ module.exports.defaults = (guild) => {
 		prefix: guild.client.config.prefix,
 		locale: 'en-GB',
 		timezone: 'UTC',
+		channel: null,
+		role: null, // could be omitted except reset doesn't delete and it will not be overwritten
 		auto: false,
 		enabled: false,
 		mention: false,

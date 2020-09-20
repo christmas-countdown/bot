@@ -73,5 +73,8 @@
 	"❯ Description": "❯ Description",
 	"[click here](%s)": "[click here](%s)",
 	"❯ Documentation": "❯ Documentation",
-	"❯ Aliases": "❯ Aliases"
+	"❯ Aliases": "❯ Aliases",
+	"set server settings": "set server settings",
+	"Set user settings": "Set user settings",
+	"This server's settings have been reset to the defaults. Use %s to re-configure.": "This server's settings have been reset to the defaults. Use %s to re-configure."
 }

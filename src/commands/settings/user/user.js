@@ -24,8 +24,8 @@ class UserSettingsCommand extends Command {
 				content: 'Modify user settings',
 				usage: '<command> [args]',
 				examples: [
-					'user set timezone: America/New_York',
-					'user reset'
+					'set timezone: America/New_York',
+					'reset'
 				]
 			},
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
@@ -50,14 +50,14 @@ class UserSettingsCommand extends Command {
 				let docs = this.client.config.docs.commands,
 					moreInfo = 'Click subcommand for more information';
 
-				return new Embed()
+				return new Embed(uSettings, gSettings)
 					.setTitle(i18n.__('User settings'))
 					.setDescription(i18n.__(
 						'The %s command has the following subcommands:\n\n%s',
 
 						`[\`${this.id}\`](${docs}#user)`,
-						stripIndents`❯ [\`set\`](${docs}#user-set "user set") » ${i18n.__(this.handler.findCommand('user-set').description || moreInfo)}
-							❯ [\`reset\`](${docs}#user-reset "user reset") » ${i18n.__(this.handler.findCommand('user-reset').description || moreInfo)}`,
+						stripIndents`❯ [\`set\`](${docs}#user-set "user set") » ${i18n.__(this.handler.findCommand('user-set').description.content || moreInfo)}
+							❯ [\`reset\`](${docs}#user-reset "user reset") » ${i18n.__(this.handler.findCommand('user-reset').description.content || moreInfo)}`,
 					))					
 					.addField(i18n.__('Usage'), `\`${prefix}user set <args>\``)
 					.addField(i18n.__('Help'), `\`${prefix}help user\``);

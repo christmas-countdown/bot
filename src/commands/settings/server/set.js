@@ -24,8 +24,8 @@ class ServerSetSettingsCommand extends Command {
 				content: 'set server settings',
 				usage: '[settings]',
 				examples: [
-					'server set channel: #countdown enabled: true',
-					'server set timezone: America/New_York'
+					'set channel: #countdown enabled: true',
+					'set timezone: America/New_York'
 				]
 			},
 			channel: 'guild', // guilds only
@@ -101,7 +101,12 @@ class ServerSetSettingsCommand extends Command {
 		for (let arg in args) {
 			if (!args[arg]) {
 				if (message.content.includes(arg + ':'))
-					invalid.push([arg, this.client.config.args_errors[arg] || 'Invalid input (see docs)']);
+					invalid.push([arg, this.client.config.options[arg]?.error || 'Invalid input (see docs)']);
+				continue;
+			}
+
+			if (this.client.config.options[arg].premim && !gSettings.get('premium')) {
+				invalid.push([arg, ':star: This is a premium option']);
 				continue;
 			}
 
@@ -110,39 +115,16 @@ class ServerSetSettingsCommand extends Command {
 				if (args[arg].length > 20) {
 					invalid.push([arg, 'Prefix is too long']);
 					continue;
-				}
-				
+				}	
 				gSettings.set(arg, args[arg]);
 				break;
-
-			case 'locale': {
-				gSettings.set(arg, args[arg]);
-				break;
-			}
-
-			case 'timezone': {
-				gSettings.set(arg, args[arg]);
-				break;
-			}
 
 			case 'channel':
 				gSettings.set(arg, args[arg].id);
 				break;
 
 			case 'role':
-				if (!gSettings.get('premium')) {
-					invalid.push([arg, ':star: This is a premium option']);
-					continue;
-				}
 				gSettings.set(arg, args[arg].id);
-				break;
-
-			case 'auto':
-				if (!gSettings.get('premium')) {
-					invalid.push([arg, ':star: This is a premium option']);
-					continue;
-				}
-				gSettings.set(arg[0], args[arg]);
 				break;
 
 			case 'enabled':
@@ -154,16 +136,15 @@ class ServerSetSettingsCommand extends Command {
 				break;
 
 			case 'mention':
-				if (!gSettings.get('premium')) {
-					invalid.push([arg, ':star: This is a premium option']);
-					continue;
-				}
 				if (!gSettings.get('role')) {
 					invalid.push([arg, 'Cannot enable mentioning before role is set']);
 					continue;
 				}
 				gSettings.set(arg[0], args[arg]);
 				break;
+
+			default:
+				gSettings.set(arg[0], args[arg]);
 			}
 
 			counter++;
@@ -179,7 +160,7 @@ class ServerSetSettingsCommand extends Command {
 				list += `❯ [\`${invalid[i][0]}\`](${docs}/server#${invalid[i][0]}) » ${i18n.__(invalid[i][1])}\n`;
 
 			return message.util.send(
-				new Embed()
+				new Embed(uSettings, gSettings)
 					.setTitle(':x: Server settings')
 					.setDescription(i18n.__('There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**',
 						list
@@ -188,7 +169,7 @@ class ServerSetSettingsCommand extends Command {
 		}
 
 		const capitalise = (str) => str.charAt(0).toUpperCase() + str.slice(1);
-		let embed = new Embed();
+		let embed = new Embed(uSettings, gSettings);
 
 		if (counter === 0)
 			embed

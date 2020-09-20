@@ -24,8 +24,8 @@ class ServerSettingsCommand extends Command {
 				content: 'Modify server settings',
 				usage: '<command> [args]',
 				examples: [
-					'server set timezone: America/New_York',
-					'server reset'
+					'set timezone: America/New_York',
+					'reset'
 				]
 			},
 			channel: 'guild', // guilds only
@@ -54,15 +54,15 @@ class ServerSettingsCommand extends Command {
 				let docs = this.client.config.docs.commands,
 					moreInfo = 'Click subcommand for more information';
 
-				return new Embed()
+				return new Embed(uSettings, gSettings)
 					.setTitle(i18n.__('Server settings'))
 					.setDescription(i18n.__(
 						'The %s command has the following subcommands:\n\n%s',
 
 						`[\`${this.id}\`](${docs}#server)`,
-						stripIndents`❯ [\`setup\`](${docs}#server-setup "server setup") » ${i18n.__(this.handler.findCommand('server-setup').description || moreInfo)}
-							❯ [\`set\`](${docs}#server-set "server set") » ${i18n.__(this.handler.findCommand('server-set').description || moreInfo)}
-							❯ [\`reset\`](${docs}#server-reset "server reset") » ${i18n.__(this.handler.findCommand('server-reset').description || moreInfo)}`,
+						stripIndents`❯ [\`setup\`](${docs}#server-setup "server setup") » ${i18n.__(this.handler.findCommand('server-setup').description.content || moreInfo)}
+							❯ [\`set\`](${docs}#server-set "server set") » ${i18n.__(this.handler.findCommand('server-set').description.content || moreInfo)}
+							❯ [\`reset\`](${docs}#server-reset "server reset") » ${i18n.__(this.handler.findCommand('server-reset').description.content || moreInfo)}`,
 					))					
 					.addField(i18n.__('Usage'), `\`${prefix}server set <args>\``)
 					.addField(i18n.__('Help'), `\`${prefix}help server\``);
