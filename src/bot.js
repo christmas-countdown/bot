@@ -8,6 +8,7 @@
 global.prefix = 'SHARD ' + process.env.SHARDS;
 const path = require('path');
 const fs = require('fs');
+const moment = require('moment-timezone');
 const config = require('../config');
 
 const Logger = require('leekslazylogger');
@@ -213,6 +214,13 @@ class Client extends AkairoClient {
 			phrase = phrase.trim().toLowerCase();
 			let tz = timezones.find(zone => zone.toLowerCase() === phrase);
 			return tz || null;
+		});
+
+		this.commandHandler.resolver.addType('countryCode', (message, phrase) => {
+			if (!phrase) return null;
+			phrase = phrase.trim().toLowerCase();
+			let country = moment.tz.countries().find(code => code.toLowerCase() === phrase);
+			return country || null;
 		});
 
 		this.commandHandler.resolver.addType('locale', (message, phrase) => {

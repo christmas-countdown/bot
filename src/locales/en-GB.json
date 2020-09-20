@@ -76,5 +76,8 @@
 	"❯ Aliases": "❯ Aliases",
 	"set server settings": "set server settings",
 	"Set user settings": "Set user settings",
-	"This server's settings have been reset to the defaults. Use %s to re-configure.": "This server's settings have been reset to the defaults. Use %s to re-configure."
+	"This server's settings have been reset to the defaults. Use %s to re-configure.": "This server's settings have been reset to the defaults. Use %s to re-configure.",
+	"Timezones of %s": "Timezones of %s",
+	"The list is too long to send! Click [here](%s) to visit the docs, or use %s to list zones by country.": "The list is too long to send! Click [here](%s) to visit the docs, or use %s to list zones by country.",
+	"Use %s to list timezones by country, where `<country>` is a country code (examples: `US`, `GB`,`DE`, `FR`, or `RU`)": "Use %s to list timezones by country, where `<country>` is a country code (examples: `US`, `GB`,`DE`, `FR`, or `RU`)"
 }
