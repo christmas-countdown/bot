@@ -11,13 +11,13 @@ Structures.extend('Guild', Guild => {
 					id: this.id
 				}
 			});
-
-			// disabled as ready and guildCreate event already cover this
-			/* if (!this.settings()) {
-				client.db.Guild.create(require('../models/guild').defaults(this));
-				client.log.console(client.log.f(`Added '&7${this.name}&f' to the database`));
-			} */
-
+			
+			this.settings().then(settings => {
+				if (!settings) {
+					client.db.Guild.create(require('../models/guild').defaults(this));
+					client.log.console(client.log.f(`Added '&7${this.name}&f' to the database`));
+				}
+			});
 
 		}
 	}

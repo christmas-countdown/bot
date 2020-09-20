@@ -56,6 +56,11 @@ class OnReadyListener extends Listener {
 			this.client.shard.fetchClientValues('guilds.cache.size').then(total => {
 				total = total.reduce((acc, count) => acc + count, 0);
 
+				/** FAKE SERVER COUNT FOR DEV ONLY */
+				total = 871;
+				this.client.log.notice('WARNING: SENDING FAKE SERVER COUNT');
+				/** FAKE SERVER COUNT FOR DEV ONLY */
+
 				// top.gg
 				dbl.postStats(total, this.client.shard.ids[0], this.client.shard.count);
 
