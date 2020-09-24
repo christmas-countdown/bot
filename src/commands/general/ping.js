@@ -29,7 +29,7 @@ class PingCommand extends Command {
 		
 		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
 
-		let embed = new Embed(uSettings, gSettings)
+		let embed = new Embed()
 			.setTitle(i18n.__('Pong!'))
 			.addField(i18n.__('Shard number'), client.shard.ids, false)
 			.addField(i18n.__('Avg. ping'), client.ws.ping + 'ms', true)

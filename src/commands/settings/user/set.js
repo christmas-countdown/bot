@@ -82,7 +82,7 @@ class UserSetSettingsCommand extends Command {
 				list += `❯ [\`${invalid[i][0]}\`](${docs}/user#${invalid[i][0]}) » ${i18n.__(invalid[i][1])}\n`;
 
 			return message.util.send(
-				new Embed(uSettings, gSettings)
+				new Embed()
 					.setTitle(':x: User settings')
 					.setDescription(i18n.__('There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**',
 						list
@@ -91,7 +91,7 @@ class UserSetSettingsCommand extends Command {
 		}
 
 		const capitalise = (str) => str.charAt(0).toUpperCase() + str.slice(1);
-		let embed = new Embed(uSettings, gSettings);
+		let embed = new Embed();
 
 		if (counter === 0)
 			embed

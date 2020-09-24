@@ -54,7 +54,7 @@ class ServerSettingsCommand extends Command {
 				let docs = this.client.config.docs.commands,
 					moreInfo = 'Click subcommand for more information';
 
-				return new Embed(uSettings, gSettings)
+				return new Embed()
 					.setTitle(i18n.__('Server settings'))
 					.setDescription(i18n.__(
 						'The %s command has the following subcommands:\n\n%s',

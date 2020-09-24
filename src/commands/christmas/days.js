@@ -6,23 +6,24 @@
  */
 
 const { Command } = require('discord-akairo');
-const { Embed, i18n: i18nOptions } = require('../../../bot');
+const { Embed, i18n: i18nOptions } = require('../../bot');
 
 const { I18n } = require('i18n');
 const i18n = new I18n(i18nOptions);
 
-class UserResetSettingsCommand extends Command {
+const Christmas = require('../../modules/christmas');
+
+class PingCommand extends Command {
 	constructor() {
-		super('user-reset', {
-			aliases: ['user-reset'],
-			category: 'hidden',
+		super('days', {
+			aliases: ['days', 'daysLeft'],
 			description: {
-				content: 'Reset server settings',
+				content: 'Show days left until Christmas',
+				premium: false
 			},
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
 		});
 	}
-
 
 	async exec(message) {
 
@@ -31,20 +32,15 @@ class UserResetSettingsCommand extends Command {
 		
 		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
 
-
-		uSettings.destroy(); // delete
-
-
-		let prefix = this.client.config.prefix;
-
+		let xmas = new Christmas(uSettings?.timezone || gSettings?.timezone);
+		console.log(xmas.live);
 		// ❯ return a promise
 		return message.util.send(
-			new Embed()
-				.setTitle(i18n.__(':white_check_mark: User settings reset'))
-				.setDescription(i18n.__('Your settings have been reset to the defaults. Use `%s` to re-configure.', prefix + 'user set'))
+			new Embed(uSettings, gSettings)
+				.setDescription(xmas.days.number)
 		);
-
+		// m.edit
 	}
 }
 
-module.exports = UserResetSettingsCommand;
+module.exports = PingCommand;

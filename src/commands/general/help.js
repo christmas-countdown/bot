@@ -43,7 +43,7 @@ class HelpCommand extends Command {
 		const prefix = gSettings?.prefix || this.client.config.prefix;
 
 		if (!command) {
-			const embed = new Embed(uSettings, gSettings)
+			const embed = new Embed()
 				.setTitle(i18n.__('Commands'))
 				.setURL(this.client.config.docs.commands)
 				.setDescription(i18n.__('For more information about a specific command, use `%shelp <command>` or click on its name .', prefix));
@@ -63,7 +63,7 @@ class HelpCommand extends Command {
 		let desc = command.description.usage ?
 			' ' + command.description.usage
 			: '';
-		const embed = new Embed(uSettings, gSettings)
+		const embed = new Embed()
 			.setTitle(`\`${command.description.premium ? '⭐' : ''}${command.aliases[0]}${desc}\``)
 			.setURL(`${this.client.config.docs.commands}#${command.id}`)
 			.addField(i18n.__('❯ Documentation'), i18n.__('[click here](%s)', `${this.client.config.docs.commands}#${command.id}`))

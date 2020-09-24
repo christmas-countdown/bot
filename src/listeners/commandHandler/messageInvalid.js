@@ -32,7 +32,7 @@ class OnMessageInvalidListener extends Listener {
 
 		const prefix = gSettings?.prefix || this.client.config.prefix;
 	
-		let embed = new Embed(uSettings, gSettings)
+		let embed = new Embed()
 		// .setAuthor(message.author.username, message.author.displayAvatarURL())
 			.setTitle(i18n.__('Hello!'))
 			.setDescription(i18n.__(''))

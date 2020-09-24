@@ -71,6 +71,50 @@ const i18n = new I18n(i18nOptions);
 
 /**
  * 
+ * Structures
+ * 
+ */
+
+const structures = fs.readdirSync('src/structures').filter(file => file.endsWith('.js'));
+for (const structure of structures)
+	require(`./structures/${structure}`);
+
+/** MessageEmbed can't be extended like User and Guild */
+const {
+	MessageEmbed,
+	Intents
+} = require('discord.js');
+	
+class Embed extends MessageEmbed {
+	constructor(uSettings, gSettings) {
+		super();
+	
+		this.color = client.config.colour;
+
+		if(!uSettings && !gSettings)
+			return;
+
+		let timezone = uSettings?.timezone || gSettings?.timezone;
+		timezone = ` | (${uSettings?.timezone ? 'user' : 'server'}) timezone: ${timezone}`;
+
+		this.footer = {
+			text: client.config.footer + timezone,
+			iconURL: client.user.displayAvatarURL(),
+		};
+			
+
+	}
+
+}
+/** exports */
+module.exports = {
+	i18n: i18nOptions,
+	Embed
+};
+
+
+/**
+ * 
  * Database connection & models
  * 
  */
@@ -100,47 +144,6 @@ Guild.init(require('./models/guild').model, {
 User.sync();
 Guild.sync();
 
-/**
- * 
- * Structures
- * 
- */
-
-const structures = fs.readdirSync('src/structures').filter(file => file.endsWith('.js'));
-for (const structure of structures)
-	require(`./structures/${structure}`);
-
-/** MessageEmbed can't be extended like User and Guild */
-const {
-	MessageEmbed, Intents
-} = require('discord.js');
-	
-class Embed extends MessageEmbed {
-	constructor(uSettings, gSettings) {
-		super();
-	
-		this.color = client.config.colour;
-
-		let locale = uSettings?.locale || gSettings?.locale;
-
-		if (locale === 'en-GB') locale = null;
-
-		locale = locale ? ` | (${uSettings?.locale ? 'user' : 'server'}: ${locale})` : '';
-
-		this.footer = {
-			text: client.config.footer + locale,
-			iconURL: client.user.displayAvatarURL(),
-		};
-			
-
-	}
-
-}
-/** exports */
-module.exports = {
-	i18n: i18nOptions,
-	Embed
-};
 
 /**
  * 

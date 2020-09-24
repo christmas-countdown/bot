@@ -47,7 +47,7 @@ class ListTimezonesCommand extends Command {
 			docs = this.client.config.docs.commands,
 			list;
 
-		let embed = new Embed(uSettings, gSettings)
+		let embed = new Embed()
 			.setTitle(i18n.__('Timezones'))
 			.addField(i18n.__('Set the server timezone'), `[\`${prefix}server set timezone: <timezone>\`](${docs}#server-set)`)
 			.addField(i18n.__('Set your personal timezone'), `[\`${prefix}user set timezone: <timezone>\`](${docs}#user-set)`);
