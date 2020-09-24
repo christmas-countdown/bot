@@ -22,7 +22,7 @@
     "countly-sdk-nodejs": "^20.4.0",
     "dblapi.js": "^2.4.1",
     "discord-akairo": "^8.1.0",
-    "discord.js-light": "^3.2.10",
+    "discord.js-light": "^3.2.11",
     "dotenv": "^8.2.0",
     "i18n": "^0.13.2",
     "leekslazylogger": "^2.0.3",
