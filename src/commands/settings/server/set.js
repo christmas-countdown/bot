@@ -144,7 +144,7 @@ class ServerSetSettingsCommand extends Command {
 				break;
 
 			default:
-				gSettings.set(arg[0], args[arg]);
+				gSettings.set(arg, args[arg]);
 			}
 
 			counter++;

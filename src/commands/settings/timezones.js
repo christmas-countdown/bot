@@ -11,8 +11,6 @@ const { Embed, i18n: i18nOptions } = require('../../bot');
 const { I18n } = require('i18n');
 const i18n = new I18n(i18nOptions);
 
-const moment = require('moment-timezone');
-
 class ListTimezonesCommand extends Command {
 	constructor() {
 		super('timezones', {
@@ -54,7 +52,7 @@ class ListTimezonesCommand extends Command {
 			
 
 		if (country) {
-			list = moment.tz.zonesForCountry(country).map(z => `\`${z}\``).join(', ');
+			list = require('../../storage/timezones.json').byCountry[country].map(z => `\`${z}\``).join(', ');
 			embed.setTitle(i18n.__('Timezones of %s', country));
 
 			if (list.length > 1024)

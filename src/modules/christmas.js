@@ -12,8 +12,6 @@ const lengths = [
 	['minutes', 60, 60],
 	['hours', 60, 3600],
 	['days', 24, 86400],
-	['weeks', 7, 604800],
-	['months', 30, 2592000]
 ];
 
 module.exports = class ChristmasCountdown {
@@ -63,8 +61,12 @@ module.exports = class ChristmasCountdown {
 		// let diff = this.christmas.unix() - this.now.unix();
 	
 		for (let i = 0; i < lengths.length; i++)
-			// live[lengths[i][0]] = Math.floor(diff / lengths[i][2]) % (i === lengths.length - 1 ? 12 : lengths[i + 1][1]);
-			live[lengths[i][0]] = this[lengths[i][0]] % (i === lengths.length - 1 ? 12 : lengths[i + 1][1]);
+			// live[lengths[i][0]] = Math.floor(diff / lengths[i][2]) % (i === lengths.length - 1 ? 7 : lengths[i + 1][1]);
+			if (i === lengths.length - 1)
+				live[lengths[i][0]] = this[lengths[i][0]];
+			else
+				live[lengths[i][0]] = this[lengths[i][0]] - (this[lengths[i + 1][0]] * lengths[i + 1][1]);
+
 		return live;
 	}
 

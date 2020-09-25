@@ -37,7 +37,7 @@ class PingCommand extends Command {
 		// ❯ return a promise
 		return message.util.send(
 			new Embed(uSettings, gSettings)
-				.setDescription(xmas.days.number)
+				.setDescription(xmas.days)
 		);
 		// m.edit
 	}
