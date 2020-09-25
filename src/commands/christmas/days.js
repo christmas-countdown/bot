@@ -13,10 +13,10 @@ const i18n = new I18n(i18nOptions);
 
 const Christmas = require('../../modules/christmas');
 
-class PingCommand extends Command {
+class DaysCommand extends Command {
 	constructor() {
 		super('days', {
-			aliases: ['days', 'daysLeft'],
+			aliases: ['days', 'total-days', 'daysLeft'],
 			description: {
 				content: 'Show days left until Christmas',
 				premium: false
@@ -33,14 +33,32 @@ class PingCommand extends Command {
 		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		let xmas = new Christmas(uSettings?.timezone || gSettings?.timezone);
-		console.log(xmas.live);
+		let days = xmas.days;
+
+		let embed = new Embed(uSettings, gSettings)
+			.setTimestamp();
+		let text = i18n.__n('There is **%d** day left until Christmas!', 'There are **%d** days left until Christmas!', days),
+			// footer = i18n.__(``);
+			footer ='THIS ISNT FINNISHED';
+
+		if (days === 365)
+			embed
+				.setTitle(i18n.__('It\'s Christmas day! :tada:'))
+				.setDescription(text + `\n\n${i18n.__('Merry Christmas!')}` + footer);
+		
+		else if (days === 0)
+			embed
+				.setTitle(i18n.__('It\'s Christmas eve!'))
+				.setDescription(text + footer);
+		
+		else
+			embed
+				.setTitle(i18n.__n('%d day left', '%d days left', days))
+				.setDescription(text + footer);
 		// ❯ return a promise
-		return message.util.send(
-			new Embed(uSettings, gSettings)
-				.setDescription(xmas.days)
-		);
-		// m.edit
+		return message.util.send(embed);
+
 	}
 }
 
-module.exports = PingCommand;
+module.exports = DaysCommand;

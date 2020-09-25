@@ -58,15 +58,15 @@ module.exports = class ChristmasCountdown {
 
 	get live() {
 		let live = {
-			month_based: this.christmas.since(this.now).diff,
-			day_based: {},
+			months_based: this.christmas.since(this.now).diff,
+			days_based: {},
 		};
 
 		for (let i = 0; i < lengths.length; i++)
 			if (i === lengths.length - 1)
-				live.day_based[lengths[i][0]] = this[lengths[i][0]];
+				live.days_based[lengths[i][0]] = this[lengths[i][0]];
 			else
-				live.day_based[lengths[i][0]] = this[lengths[i][0]] - (this[lengths[i + 1][0]] * lengths[i + 1][1]);
+				live.days_based[lengths[i][0]] = this[lengths[i][0]] - (this[lengths[i + 1][0]] * lengths[i + 1][1]);
 
 		return live;
 	}

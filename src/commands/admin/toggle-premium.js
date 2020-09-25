@@ -14,7 +14,7 @@ const i18n = new I18n(i18nOptions);
 class TogglePremiumCommand extends Command {
 	constructor() {
 		super('toggle-premium', {
-			aliases: ['toggle-premium', 'premium'],
+			aliases: ['toggle-premium'],
 			description: {
 				content: 'Enable/disable premium on for server',
 			},

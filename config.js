@@ -10,16 +10,22 @@ module.exports = {
 	colour: '#D5002C',
 	footer: 'Christmas Countdown by eartharoid',
 	website: {
-		pretty: 'www.christmascountdown.live',
+		pretty: 'christmascountdown.live',
 		url: 'https://www.christmascountdown.live/'
 	},
 	docs: {
+		pretty: 'docs.christmascountdown.live/discord',
+		main: 'https://docs.christmascountdown.live/discord/',
 		commands: 'https://docs.christmascountdown.live/discord/commands',
 		locales: 'https://docs.christmascountdown.live/locales',
 		settings: 'https://docs.christmascountdown.live/discord/settings',
 		timezones: 'https://docs.christmascountdown.live/timezones',
 	},
-	support: 'https://go.eartharoid.me/discord',
+	support: {
+		invite: 'discord.gg/pXc9vyC',
+		url: 'https://go.eartharoid.me/discord',
+	},
+	premium: 'https://www.christmascountdown.live/donate',
 	presences: [
 		{
 			activity: '',

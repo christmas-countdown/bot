@@ -45,9 +45,7 @@ const log = new Logger({
 });
 
 /**
- * 
  * Localisation
- * 
  */
 
 let i18nOptions = {
@@ -69,9 +67,19 @@ const { I18n } = require('i18n');
 const i18n = new I18n(i18nOptions);
 
 /**
- * 
+ * Analytics
+ */
+const Countly = require('countly-sdk-nodejs');
+Countly.init({
+	app_key: process.env.COUNTLY_KEY,
+	url: process.env.COUNTLY_HOST,
+	debug: false
+});
+Countly.begin_session();
+// Countly.track_errors();
+
+/**
  * Structures
- * 
  */
 
 const structures = fs.readdirSync('src/structures').filter(file => file.endsWith('.js'));
@@ -90,17 +98,21 @@ class Embed extends MessageEmbed {
 	
 		this.color = client.config.colour;
 
-		if(!uSettings && !gSettings)
-			return;
+		if(!uSettings && !gSettings) {
+			this.footer = {
+				text: client.config.footer,
+				iconURL: client.user.displayAvatarURL(),
+			};
 
-		let timezone = uSettings?.timezone || gSettings?.timezone;
-		timezone = ` | (${uSettings?.timezone ? 'user' : 'server'}) timezone: ${timezone}`;
+		} else {
+			let timezone = uSettings?.timezone || gSettings?.timezone;
+			timezone = `(${uSettings?.timezone ? 'user' : 'server'}) timezone: ${timezone}`;
 
-		this.footer = {
-			text: client.config.footer + timezone,
-			iconURL: client.user.displayAvatarURL(),
-		};
-			
+			this.footer = {
+				text: timezone,
+				iconURL: client.user.displayAvatarURL(),
+			};
+		}
 
 	}
 
@@ -245,12 +257,13 @@ class Client extends AkairoClient {
 		this.commandHandler.loadAll();
 
 		// config and database etc
-		this.log = log;
 		this.config = config;
+		this.Countly = Countly;
 		this.db = {
 			User,
 			Guild
 		};
+		this.log = log;
 
 	}
 }

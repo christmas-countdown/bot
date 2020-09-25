@@ -79,5 +79,30 @@
 	"This server's settings have been reset to the defaults. Use %s to re-configure.": "This server's settings have been reset to the defaults. Use %s to re-configure.",
 	"Timezones of %s": "Timezones of %s",
 	"The list is too long to send! Click [here](%s) to visit the docs, or use %s to list zones by country.": "The list is too long to send! Click [here](%s) to visit the docs, or use %s to list zones by country.",
-	"Use %s to list timezones by country, where `<country>` is a country code (examples: `US`, `GB`,`DE`, `FR`, or `RU`)": "Use %s to list timezones by country, where `<country>` is a country code (examples: `US`, `GB`,`DE`, `FR`, or `RU`)"
+	"Use %s to list timezones by country, where `<country>` is a country code (examples: `US`, `GB`,`DE`, `FR`, or `RU`)": "Use %s to list timezones by country, where `<country>` is a country code (examples: `US`, `GB`,`DE`, `FR`, or `RU`)",
+	"disabled": "disabled",
+	":white_check_mark: Countdown %s": ":white_check_mark: Countdown %s",
+	"enabled": "enabled",
+	"Cannot enable countdown before channel is set": "Cannot enable countdown before channel is set",
+	"Use %s to set the channel.": "Use %s to set the channel.",
+	":x: Cannot enable countdown before channel is set": ":x: Cannot enable countdown before channel is set",
+	"Information": "Information",
+	"A Discord bot made by %s.": "A Discord bot made by %s.",
+	"Website": "Website",
+	"Documentation": "Documentation",
+	"Guilds": "Guilds",
+	":star: Premium guilds": ":star: Premium guilds",
+	"Enabled guilds": "Enabled guilds",
+	":white_check_mark: User settings reset": ":white_check_mark: User settings reset",
+	"Your settings have been reset to the defaults. Use `%s` to re-configure.": "Your settings have been reset to the defaults. Use `%s` to re-configure.",
+	"%d day left": {
+		"one": "%d day left",
+		"other": "%d days left"
+	},
+	"There is **%d** day left until Christmas!": {
+		"one": "There is **%d** day left until Christmas!",
+		"other": "There are **%d** days left until Christmas!"
+	},
+	":star: Get premium": ":star: Get premium",
+	"Donate [here](%s) to unlock additional features.": "Donate [here](%s) to unlock additional features."
 }
