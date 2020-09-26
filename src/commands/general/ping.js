@@ -16,7 +16,7 @@ class PingCommand extends Command {
 		super('ping', {
 			aliases: ['ping'],
 			description: {
-				content: 'Show bot ping',
+				content: 'Show bot ping and shard info.',
 			},
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
 		});

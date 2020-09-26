@@ -104,5 +104,16 @@
 		"other": "There are **%d** days left until Christmas!"
 	},
 	":star: Get premium": ":star: Get premium",
-	"Donate [here](%s) to unlock additional features.": "Donate [here](%s) to unlock additional features."
+	"Donate [here](%s) to unlock additional features.": "Donate [here](%s) to unlock additional features.",
+	"View the live countdown at [%s](%s).": "View the live countdown at [%s](%s).",
+	"For more information about a specific command, use `%s` or click on its name. For distinction between days and sleeps, click [here](%s).\n": "For more information about a specific command, use `%s` or click on its name. For distinction between days and sleeps, click [here](%s).\n",
+	"Invalid channel mention. Exited prompt.": "Invalid channel mention. Exited prompt.",
+	"There is **%d** sleep left until Christmas!": {
+		"one": "There is **%d** sleep left until Christmas!",
+		"other": "There are **%d** sleeps left until Christmas!"
+	},
+	"%d sleep left": {
+		"one": "%d sleep left",
+		"other": "%d sleeps left"
+	}
 }

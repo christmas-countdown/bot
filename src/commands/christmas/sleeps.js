@@ -13,12 +13,12 @@ const i18n = new I18n(i18nOptions);
 
 const Christmas = require('../../modules/christmas');
 
-class DaysCommand extends Command {
+class SleepsCommand extends Command {
 	constructor() {
-		super('days', {
-			aliases: ['days', 'total-days', 'days-left'],
+		super('sleeps', {
+			aliases: ['sleeps', 'total-sleeps', 'sleeps-left'],
 			description: {
-				content: 'Show days left until Christmas, in the user\'s or server\'s timezone.',
+				content: 'Show sleeps left until Christmas, in the user\'s or server\'s timezone.',
 				premium: false
 			},
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
@@ -33,14 +33,14 @@ class DaysCommand extends Command {
 		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		let xmas = new Christmas(uSettings?.timezone || gSettings?.timezone),
-			days = xmas.days;
+			sleeps = xmas.sleeps;
 
-		let text = i18n.__n('There is **%d** day left until Christmas!', 'There are **%d** days left until Christmas!', days),
+		let text = i18n.__n('There is **%d** sleep left until Christmas!', 'There are **%d** sleeps left until Christmas!', sleeps),
 			footer = i18n.__('View the live countdown at [%s](%s).', this.client.config.website.pretty, this.client.config.website.url);
 
 		let embed = new Embed(uSettings, gSettings)
 			.setAuthor(message.author.username, message.author.displayAvatarURL())
-			.setURL(this.client.config.website.url + '/total#days')
+			.setURL(this.client.config.website.url + '/total#sleeps')
 			.setDescription(text + '\n\n' + footer)
 			.setTimestamp();
 
@@ -53,7 +53,7 @@ class DaysCommand extends Command {
 				.setTitle(i18n.__('It\'s Christmas Eve!'));		
 		else
 			embed
-				.setTitle(i18n.__n('%d day left', '%d days left', days));
+				.setTitle(i18n.__n('%d sleep left', '%d sleeps left', sleeps));
 
 		// ❯ return a promise
 		return message.util.send(embed);
@@ -61,4 +61,4 @@ class DaysCommand extends Command {
 	}
 }
 
-module.exports = DaysCommand;
+module.exports = SleepsCommand;

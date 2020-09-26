@@ -41,7 +41,7 @@ class OnMessageInvalidListener extends Listener {
 		if (message.guild)
 			embed.addField(i18n.__('Server prefix'), `\`${prefix}\` ${prefix === this.client.config.prefix ? '(default)': ''}`);
 		
-		embed.addField(i18n.__('Support server'), this.client.config.support);
+		embed.addField(i18n.__('Support server'), `[${this.client.config.support.invite}](${this.client.config.support.url})`);
 
 		message.util.send(message.author,
 			embed

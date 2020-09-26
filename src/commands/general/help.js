@@ -46,15 +46,16 @@ class HelpCommand extends Command {
 			const embed = new Embed()
 				.setTitle(i18n.__('Commands'))
 				.setURL(this.client.config.docs.commands)
-				.setDescription(i18n.__('For more information about a specific command, use `%shelp <command>` or click on its name .', prefix));
+				.setDescription(i18n.__('For more information about a specific command, use `%s` or click on its name. For distinction between days and sleeps, click [here](%s).\n',
+					`${prefix}help <command>`, this.client.config.docs.days_sleeps));
 
 			for (const category of this.handler.categories.values()) {
 				if (['admin', 'hidden', 'sub'].includes(category.id)) continue;
 				embed.addField(
 					`❯ ${category.id.replace(/(\b\w)/gi, (lc) => lc.toUpperCase())}`,
 					`${category
-						.filter((cmd) => cmd.aliases.length > 0)
-						.map((cmd) => `[\`${cmd.description.premium ? '⭐' : ''}${cmd.id}\`](${this.client.config.docs.commands}#${cmd.id})`)
+						.filter(cmd => cmd.aliases.length > 0)
+						.map(cmd => `[\`${cmd.description.premium ? '⭐' : ''}${cmd.aliases[0]}\`](${this.client.config.docs.commands}#${cmd.id})`)
 						.join(', ')}`,
 				);
 			}
@@ -64,12 +65,12 @@ class HelpCommand extends Command {
 			' ' + command.description.usage
 			: '';
 		const embed = new Embed()
-			.setTitle(`\`${command.description.premium ? '⭐' : ''}${command.aliases[0]}${desc}\``)
+			.setTitle(`\`${command.description.premium ? '⭐' : ''}${command.id}${desc}\``)
 			.setURL(`${this.client.config.docs.commands}#${command.id}`)
 			.addField(i18n.__('❯ Documentation'), i18n.__('[click here](%s)', `${this.client.config.docs.commands}#${command.id}`))
 			.addField(i18n.__('❯ Description'), command.description.content || '\u200b');
 
-		if (command.aliases.length > 1) embed.addField(i18n.__('❯ Aliases'), `\`${command.aliases.join('` `')}\``, false);
+		if (command.aliases.length > 1) embed.addField(i18n.__('❯ Aliases'), `\`${command.aliases.join('` `')}\`\nHyphens (-) can be omitted.`, false);
 		
 		if (command.description.examples?.length)
 			embed.addField(
