@@ -115,5 +115,30 @@
 	"%d sleep left": {
 		"one": "%d sleep left",
 		"other": "%d sleeps left"
-	}
+	},
+	"It's Christmas Eve!": "It's Christmas Eve!",
+	"It's Christmas Day! :tada:": "It's Christmas Day! :tada:",
+	"Merry Christmas!": "Merry Christmas!",
+	"is": {
+		"one": "is",
+		"other": "are"
+	},
+	"**%d** day": {
+		"one": "**%d** day",
+		"other": "**%d** days"
+	},
+	"**%d** hour": {
+		"one": "**%d** hour",
+		"other": "**%d** hours"
+	},
+	"**%d** minute": {
+		"one": "**%d** minute",
+		"other": "**%d** minutes"
+	},
+	"**%d** second": {
+		"one": "**%d** second",
+		"other": "**%d** seconds"
+	},
+	"There %s %s, %s, %s, and %s left until Christmas!": "There %s %s, %s, %s, and %s left until Christmas!",
+	"%s %s, %s, %s, %s left": "%s %s, %s, %s, %s left"
 }

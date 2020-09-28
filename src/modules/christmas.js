@@ -20,16 +20,21 @@ module.exports = class ChristmasCountdown {
 
 		this.now = spacetime.now(timezone);
 
+		///////////////////////////////// FOR TESTING //
+		// this.now = spacetime('December 24, 2020'); // , timezone //  FOR TESTING
+		/////////////////////////////////			  //
+
 		let year = this.now.year();
 
 		if (this.now.month() === 11 && this.now.date() > 24)
 			year++; // if it's already Christmas, set date to next Christmas
 		
-		this.christmas = spacetime(`December 25, ${year} 0:00:00`, this.timezone); // midnight on Christmas day
-	}
 
-	get months() {
-		return this.now.diff(this.christmas, 'months');
+		///////////////////////////////// FOR TESTING //
+		// this.christmas = spacetime(`December 25, ${year} 0:00:00`); // midnight on Christmas day
+		/////////////////////////////////			  //
+
+		this.christmas = spacetime(`December 25, ${year} 0:00:00`, this.timezone); // midnight on Christmas day
 	}
 
 	get weeks() {
@@ -48,15 +53,7 @@ module.exports = class ChristmasCountdown {
 		return this.now.diff(this.christmas, 'hours');
 	}
 
-	get minutes() {
-		return this.now.diff(this.christmas, 'minutes');
-	}
-
-	get seconds() {
-		return this.now.diff(this.christmas, 'seconds');
-	}
-
-	get live() {
+	get total() {
 		let live = {
 			months_based: this.christmas.since(this.now).diff,
 			days_based: {},

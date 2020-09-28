@@ -21,7 +21,7 @@ class ServerSetSettingsCommand extends Command {
 			aliases: ['server-set'],
 			category: 'hidden',
 			description: {
-				content: 'set server settings',
+				content: 'Set server settings',
 				usage: '[settings]',
 				examples: [
 					'set channel: #countdown enabled: true',
