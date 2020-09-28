@@ -59,7 +59,7 @@ class TotalCommand extends Command {
 				.setTitle(i18n.__('It\'s Christmas Eve!'));		
 		else
 			embed
-				.setTitle(i18n.__('%s %s, %s, %s, %s left', verb, days, hours, minutes, seconds));
+				.setTitle(i18n.__('%s, %s, %s, %s left', days, hours, minutes, seconds));
 
 		// ❯ return a promise
 		return message.util.send(embed);

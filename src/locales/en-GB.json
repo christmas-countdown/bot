@@ -140,5 +140,5 @@
 		"other": "**%d** seconds"
 	},
 	"There %s %s, %s, %s, and %s left until Christmas!": "There %s %s, %s, %s, and %s left until Christmas!",
-	"%s %s, %s, %s, %s left": "%s %s, %s, %s, %s left"
+	"%s, %s, %s, %s left": "%s, %s, %s, %s left"
 }
