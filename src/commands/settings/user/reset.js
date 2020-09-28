@@ -31,8 +31,8 @@ class UserResetSettingsCommand extends Command {
 		
 		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
 
-
-		uSettings.destroy(); // delete
+		if (uSettings)
+			uSettings.destroy(); // delete
 
 
 		let prefix = this.client.config.prefix;

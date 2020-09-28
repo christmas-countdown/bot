@@ -27,18 +27,19 @@ class OnCommandStartedListener extends Listener {
 
 		this.client.Countly.add_event({
 			key: 'discord_command_used',
-			command: command.id,
-
-			guild: message.guild ? {
-				premium: gSettings?.premium,
-				enabled: gSettings?.enabled,
-				timezone: gSettings?.timezone,
-				locale: gSettings?.locale,
-			} : null,
-			user: {
-				timezone: uSettings?.timezone,
-				locale: uSettings?.locale,
-			}
+			count: 1,
+			segmentation: {
+				command: command.id,
+				guild_id: message.guild?.id,
+				guild_premium: gSettings?.premium,
+				guild_custom_prefix: gSettings?.prefix !== this.client.config.prefix,
+				guild_enabled: gSettings?.enabled,
+				guild_timezone: gSettings?.timezone,
+				guild_locale: gSettings?.locale,
+				user_id: message.author.id,
+				user_timezone: uSettings?.timezone,
+				user_locale: uSettings?.locale,
+			},
 		});
 		
 	}

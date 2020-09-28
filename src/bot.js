@@ -76,7 +76,7 @@ Countly.init({
 	debug: false
 });
 Countly.begin_session();
-// Countly.track_errors();
+Countly.track_errors();
 
 /**
  * Structures
