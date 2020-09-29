@@ -33,14 +33,14 @@ class OnCommandStartedListener extends Listener {
 
 				shard: this.client.shard.ids[0],
 
-				guild_id: message.guild?.id,
+				// guild_id: message.guild?.id,
 				guild_premium: gSettings?.premium,
 				guild_custom_prefix: gSettings?.prefix !== this.client.config.prefix,
 				guild_enabled: gSettings?.enabled,
 				guild_timezone: gSettings?.timezone,
 				guild_locale: gSettings?.locale,
-				
-				user_id: message.author.id,
+
+				// user_id: message.author.id,
 				user_timezone: uSettings?.timezone,
 				user_locale: uSettings?.locale,
 			},

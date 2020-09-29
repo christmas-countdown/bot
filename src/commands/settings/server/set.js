@@ -105,7 +105,7 @@ class ServerSetSettingsCommand extends Command {
 				continue;
 			}
 
-			if (this.client.config.options[arg].premim && !gSettings.get('premium')) {
+			if (this.client.config.options[arg].premium && !gSettings.get('premium')) {
 				invalid.push([arg, ':star: This is a premium option']);
 				continue;
 			}
@@ -132,7 +132,7 @@ class ServerSetSettingsCommand extends Command {
 					invalid.push([arg, 'Cannot enable countdown before channel is set']);
 					continue;
 				}
-				gSettings.set(arg[0], args[arg]);
+				gSettings.set(arg, args[arg])[0];
 				break;
 
 			case 'mention':
@@ -140,7 +140,7 @@ class ServerSetSettingsCommand extends Command {
 					invalid.push([arg, 'Cannot enable mentioning before role is set']);
 					continue;
 				}
-				gSettings.set(arg[0], args[arg]);
+				gSettings.set(arg, args[arg][0]);
 				break;
 
 			default:

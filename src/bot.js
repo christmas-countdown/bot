@@ -98,6 +98,8 @@ class Embed extends MessageEmbed {
 	
 		this.color = client.config.colour;
 
+		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+
 		if(!uSettings && !gSettings) {
 			this.footer = {
 				text: client.config.footer,
@@ -106,7 +108,7 @@ class Embed extends MessageEmbed {
 
 		} else {
 			let timezone = uSettings?.timezone || gSettings?.timezone;
-			timezone = `(${uSettings?.timezone ? 'user' : 'server'}) timezone: ${timezone}`;
+			timezone = i18n.__(`${uSettings?.timezone ? 'user' : 'server'} timezone: %s`, timezone);
 
 			this.footer = {
 				text: timezone,

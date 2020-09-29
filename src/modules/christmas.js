@@ -12,7 +12,7 @@ const lengths = [
 	['minutes', 60, 60],
 	['hours', 60, 3600],
 	['days', 24, 86400],
-]; // the order of these is actually important 
+]; 
 
 module.exports = class ChristmasCountdown {
 	constructor(timezone) {
@@ -21,18 +21,13 @@ module.exports = class ChristmasCountdown {
 		this.now = spacetime.now(timezone);
 
 		///////////////////////////////// FOR TESTING //
-		// this.now = spacetime('December 24, 2020'); // , timezone //  FOR TESTING
+		// this.now = spacetime('December 24, 2020', this.timezone); //  FOR TESTING
 		/////////////////////////////////			  //
 
 		let year = this.now.year();
 
 		if (this.now.month() === 11 && this.now.date() > 24)
 			year++; // if it's already Christmas, set date to next Christmas
-		
-
-		///////////////////////////////// FOR TESTING //
-		// this.christmas = spacetime(`December 25, ${year} 0:00:00`); // midnight on Christmas day
-		/////////////////////////////////			  //
 
 		this.christmas = spacetime(`December 25, ${year} 0:00:00`, this.timezone); // midnight on Christmas day
 	}
