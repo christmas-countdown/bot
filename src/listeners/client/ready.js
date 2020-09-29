@@ -42,11 +42,6 @@ class OnReadyListener extends Listener {
 				this.client.db.Guild.create(require('../../models/guild').defaults(guild));
 				this.client.log.console(this.client.log.f(`Added '&7${guild.name}&f' to the database`));
 			}
-
-			let settings = await guild.settings();
-			if (settings.get('auto')) {
-				countdown.auto(guild, settings.timezone || 'UTC');
-			}
 		});
 
 
