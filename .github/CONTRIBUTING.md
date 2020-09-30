@@ -20,6 +20,6 @@ To contribute code to this project, create a new [pull request](https://github.c
 
 When contributing, you should follow the same code style already used throughout, to ensure code is consistent.
 
-### Localisation
+## Localisation
 
 If you are translating, **do not** modify the left side of each line, only translate the right side.
