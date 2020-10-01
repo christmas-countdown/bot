@@ -19,3 +19,7 @@ For issues not related to feature requests or bugs, you can [create a blank issu
 To contribute code to this project, create a new [pull request](https://github.com/eartharoid/ChristmasCountdownBot/pulls). For anything other than patches (bug fixes, documentation or minor code changes that have no affect on usage), such as a new feature, please create a  [new issue](https://github.com/eartharoid/ChristmasCountdownBot/issues/new/choose) first, describing what you intend to change and why. Please ensure you update the documentation if needed.
 
 When contributing, you should follow the same code style already used throughout, to ensure code is consistent.
+
+## Localisation
+
+If you are translating, **do not** modify the left side of each line, only translate the right side.
