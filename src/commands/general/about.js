@@ -45,11 +45,11 @@ class InfoCommand extends Command {
 						premium: true
 					}
 				}), true)
-				.addField(i18n.__('Enabled guilds'), await this.client.db.Guild.count({
+				.addField(i18n.__('Counting down in'), i18n.__('%d servers', await this.client.db.Guild.count({
 					where: {
 						enabled: true
 					}
-				}), true)
+				})), true)
 		);
 	}
 }

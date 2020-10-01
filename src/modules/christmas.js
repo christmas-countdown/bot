@@ -1,5 +1,5 @@
 /**
- * @package @eartharoid/christmas
+ * @name christmascountdownbot
  * @author eartharoid <contact@eartharoid.me>
  * @copyright 2020 Isaac Saunders (eartharoid)
  * @license MIT

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/eartharoid/ChristmasCountdownBot#readme",
   "dependencies": {
+    "@discordjs/opus": "^0.3.2",
     "common-tags": "^1.8.0",
     "countly-sdk-nodejs": "^20.4.0",
     "dblapi.js": "^2.4.1",
