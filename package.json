@@ -39,7 +39,7 @@
     "zlib-sync": "^0.1.7"
   },
   "devDependencies": {
-    "eslint": "^7.10.0",
+    "eslint": "^7.11.0",
     "nodemon": "^2.0.4"
   },
   "engines": {
