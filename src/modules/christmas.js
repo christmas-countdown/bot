@@ -7,13 +7,6 @@
 
 const spacetime = require('spacetime');
 
-const lengths = [
-	['seconds', 1000, 1],
-	['minutes', 60, 60],
-	['hours', 60, 3600],
-	['days', 24, 86400],
-]; 
-
 module.exports = class ChristmasCountdown {
 	constructor(timezone) {
 		this.timezone = timezone || 'UTC';
@@ -70,7 +63,6 @@ module.exports = class ChristmasCountdown {
 	}
 
 	get total() {
-		
 
 		let n = this.now.diff(this.christmas, 'seconds');
 		let days = n / (24 * 3600) ;
@@ -88,12 +80,6 @@ module.exports = class ChristmasCountdown {
 			months_based: this.christmas.since(this.now).diff,
 			days_based: { days, hours, minutes, seconds },
 		};
-
-		// for (let i = 0; i < lengths.length; i++)
-		// 	if (i === lengths.length - 1)
-		// 		live.days_based[lengths[i][0]] = this[lengths[i][0]];
-		// 	else
-		// 		live.days_based[lengths[i][0]] = this[lengths[i][0]] - (this[lengths[i + 1][0]] * lengths[i + 1][1]);
 
 		return live;
 	}
