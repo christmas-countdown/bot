@@ -70,12 +70,9 @@ module.exports = class ChristmasCountdown {
 	}
 
 	get total() {
-		let live = {
-			months_based: this.christmas.since(this.now).diff,
-			days_based: {},
-		};
+		
+
 		let n = this.now.diff(this.christmas, 'seconds');
-		console.log(n);
 		let days = n / (24 * 3600) ;
 
 		n = n % (24 * 3600);
@@ -87,8 +84,9 @@ module.exports = class ChristmasCountdown {
 		n %= 60;
 		let seconds = n;
 
-		live.days_based = {
-			days, hours, minutes, seconds
+		let live = {
+			months_based: this.christmas.since(this.now).diff,
+			days_based: { days, hours, minutes, seconds },
 		};
 
 		// for (let i = 0; i < lengths.length; i++)
