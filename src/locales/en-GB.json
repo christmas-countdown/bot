@@ -144,5 +144,21 @@
 	"server timezone: %s": "server timezone: %s",
 	"user timezone: %s": "user timezone: %s",
 	"Counting down in": "Counting down in",
-	"%d servers": "%d servers"
+	"%d servers": "%d servers",
+	"There is **%d** hour left until Christmas!": {
+		"one": "There is **%d** hour left until Christmas!",
+		"other": "There are **%d** hours left until Christmas!"
+	},
+	"%d hour left": {
+		"one": "%d hour left",
+		"other": "%d hours left"
+	},
+	"There is **%d** week left until Christmas!": {
+		"one": "There is **%d** week left until Christmas!",
+		"other": "There are **%d** weeks left until Christmas!"
+	},
+	"%d week left": {
+		"one": "%d week left",
+		"other": "%d weeks left"
+	}
 }

@@ -25,7 +25,8 @@ class OnGuildDeleteListener extends Listener {
 		
 		let row = await guild.settings();
 
-		row.destroy(); // delete row
+		if (!row.premium)
+			row.destroy(); // delete row if not premium guild
 
 	}
 }

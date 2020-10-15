@@ -91,6 +91,8 @@ class UserSetSettingsCommand extends Command {
 		}
 
 		const capitalise = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+		// const capitalise = (str) => str.replace(/^\w/, first => first.toUpperCase());
+
 		let embed = new Embed();
 
 		if (counter === 0)

@@ -19,7 +19,7 @@ module.exports = class ChristmasCountdown {
 
 		let year = this.now.year();
 
-		if (this.now.month() === 11 && this.now.date() > 24)
+		if (this.now.month() === 11 && this.now.date() > 24) // months are 0 based, because why not?
 			year++; // if it's already Christmas, set date to next Christmas
 
 		this.christmas = spacetime(`December 25, ${year} 0:00:00`, this.timezone); // midnight on Christmas day
@@ -46,6 +46,10 @@ module.exports = class ChristmasCountdown {
 		// 	);
 	}
 
+	get months() {
+		return this.now.diff(this.christmas, 'months');
+	}
+
 	get weeks() {
 		return this.now.diff(this.christmas, 'weeks');
 	}
@@ -60,6 +64,14 @@ module.exports = class ChristmasCountdown {
 
 	get hours() {
 		return this.now.diff(this.christmas, 'hours');
+	}
+
+	get minutes() {
+		return this.now.diff(this.christmas, 'minutes');
+	}
+
+	get seconds() {
+		return this.now.diff(this.christmas, 'seconds');
 	}
 
 	get total() {
