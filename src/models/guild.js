@@ -14,6 +14,7 @@ module.exports.model = {
 	enabled: DataTypes.BOOLEAN,
 	mention: DataTypes.BOOLEAN,
 	premium: DataTypes.BOOLEAN,
+	last: DataTypes.STRING,
 };
 
 module.exports.defaults = (guild) => {
@@ -27,6 +28,7 @@ module.exports.defaults = (guild) => {
 		auto: false,
 		enabled: false,
 		mention: false,
-		premium: false
+		premium: false,
+		last: null
 	};
 };

@@ -16,7 +16,7 @@ const Christmas = require('../../modules/christmas');
 class SecondsCommand extends Command {
 	constructor() {
 		super('seconds', {
-			aliases: ['seconds', 'total-seconds', 'seconds-left'],
+			aliases: ['seconds', 'total-seconds', 'seconds-left', 'secs'],
 			description: {
 				content: 'Show seconds left until Christmas, in the user\'s or server\'s timezone.',
 				premium: false

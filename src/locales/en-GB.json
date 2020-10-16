@@ -160,5 +160,21 @@
 	"%d week left": {
 		"one": "%d week left",
 		"other": "%d weeks left"
+	},
+	"There is **%d** second left until Christmas!": {
+		"one": "There is **%d** second left until Christmas!",
+		"other": "There are **%d** seconds left until Christmas!"
+	},
+	"%d second left": {
+		"one": "%d second left",
+		"other": "%d seconds left"
+	},
+	"There is **%d** minute left until Christmas!": {
+		"one": "There is **%d** minute left until Christmas!",
+		"other": "There are **%d** minutes left until Christmas!"
+	},
+	"%d minute left": {
+		"one": "%d minute left",
+		"other": "%d minutes left"
 	}
 }

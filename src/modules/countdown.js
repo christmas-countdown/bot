@@ -1,5 +1,5 @@
 /**
- * @package @eartharoid/christmas
+ * @name christmascountdownbot
  * @author eartharoid <contact@eartharoid.me>
  * @copyright 2020 Isaac Saunders (eartharoid)
  * @license MIT
@@ -8,10 +8,10 @@
 const spacetime = require('spacetime');
 
 module.exports = {
-	auto: (guild, timezone) => {	
+	auto: async (guild, timezone) => {	
 		let now = spacetime.now(timezone);
 		if (now.month() === 11 && now.date() === 1) { // 1st Dec
-			guild.client.db.Guild.update({
+			await guild.client.db.Guild.update({
 				enabled: true // enable
 			}, {
 				where: {
@@ -19,7 +19,7 @@ module.exports = {
 				}
 			});
 		} else if (now.month() === 11 && now.date() === 26) { // 26th Dec
-			guild.client.db.Guild.update({
+			await guild.client.db.Guild.update({
 				enabled: false // disable
 			}, {
 				where: {
@@ -28,11 +28,43 @@ module.exports = {
 			});
 		}	
 	},
-	run: (client) => {
-		// rows = where enabled OR ***AUTO***, rows.forEach:
-		// if client has guild:
-		// 	if auto: auto(guild, timezone)
-		// 	if .settings().enabled:
-		//		if now is midnight ish countdown!
+	run: async (client) => {
+		client.log.info('Running countdown task');
+		
+		client.guilds.cache.forEach(async guild => {
+			if (!guild.available) return client.log.warn(`Guild ${guild.id} not available`);
+			let settings = await guild.settings();
+
+			if (settings.auto) {
+				await this.auto(guild);
+				settings = await guild.settings(); // previous line may update settings
+			}
+
+			if (!settings.enabled) return; // stop here if the guild isn't enabled
+
+			// check the time
+			let now = spacetime.now(settings.timezone || 'UTC');
+		});
 	}
+	/* run: async (client) => {
+		let guilds = await client.db.Guild.findAll({
+			where: {
+				[or]: [
+					{ enabled: true },
+					{ auto: true }
+				]
+			}
+		});
+		for (let row in guilds.rows) {
+			row = guilds.rows[row];
+			let guild = await client.guilds.fetch(row.id);
+			if (!guild) continue; // the guild could be on another shard
+			if (row.auto) {
+				await this.auto(guild);
+				row = await guild.settings(); // equivalent to findOne by id
+			}
+			if (!row.enabled) continue; // if was auto and its not Advent
+			// check the time
+		}
+	} */
 };

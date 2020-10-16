@@ -183,7 +183,7 @@ class Client extends AkairoClient {
 			},
 			presence: {
 				activity: {
-					name: presence.activity + `  |  ${config.prefix}help`,
+					name: `${presence.activity}  |  ${config.prefix}help`,
 					type: presence.type
 				}
 			},

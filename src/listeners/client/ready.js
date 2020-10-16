@@ -21,31 +21,23 @@ class OnReadyListener extends Listener {
 	exec() {
 
 		this.client.log.success('Ready');
+
+		setInterval(() => {
+			countdown.run(this.client);
+		}, 600000); // once per hour
 		
 		const updatePresence = () => {
 			let presence = this.client.config.presences[Math.floor(Math.random() * this.client.config.presences.length)];
 			this.client.user.setPresence({
 				activity: {
-					name: presence.activity + `  |  ${this.client.config.prefix}help`,
+					name: `${presence.activity}  |  ${this.client.config.prefix}help`,
 					type: presence.type
 				}
 			}).catch(this.client.log.error);
 			this.client.log.debug(`Updated presence: ${presence.activity} ${presence.type}`);
 		};
 
-		setInterval(updatePresence, 60000);
-
-		// this is now handled more efficiently in structures/Guild.js
-
-		/* this.client.log.info('Checking database for guilds');
-		this.client.guilds.cache.each(async guild => {
-			if (!await guild.settings()) {
-				this.client.db.Guild.create(require('../../models/guild').defaults(guild));
-				this.client.log.console(this.client.log.f(`Added '&7${guild.name}&f' to the database`));
-			}
-		}); */
-
-
+		setInterval(updatePresence, 60000); // every minute
 		
 		// stop here if not primary shard
 		if (!this.client.shard.ids.includes(0)) return; 

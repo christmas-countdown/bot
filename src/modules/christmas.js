@@ -11,7 +11,7 @@ module.exports = class ChristmasCountdown {
 	constructor(timezone) {
 		this.timezone = timezone || 'UTC';
 
-		this.now = spacetime.now(timezone);
+		this.now = spacetime.now(this.timezone);
 
 		///////////////////////////////// FOR TESTING //
 		// this.now = spacetime('December 24, 2020', this.timezone); //  FOR TESTING
@@ -38,7 +38,7 @@ module.exports = class ChristmasCountdown {
 		// 		spacetime(`November ${i}, 2020 0:00:00`, this.timezone).diff(this.christmas, 'days')
 		// 	);
 
-		// for (let i = 1; i <= 25; i++)
+		// for (let i = 1; i <= 31; i++)
 		// 	console.log(
 		// 		'December',
 		// 		i,
@@ -75,7 +75,6 @@ module.exports = class ChristmasCountdown {
 	}
 
 	get total() {
-
 		let n = this.now.diff(this.christmas, 'seconds');
 		let days = n / (24 * 3600) ;
 
