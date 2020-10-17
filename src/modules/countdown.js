@@ -44,6 +44,14 @@ module.exports = {
 
 			// check the time
 			let now = spacetime.now(settings.timezone || 'UTC');
+		
+			if (settings.last) {
+				let last = spacetime(settings.last, settings.timezone || 'UTC'),
+					diff = now.diff(last, 'hours');
+				if (now.hour() !== 0 && diff < 24) return;
+			} else if (now.hour() !== 0) return;
+			
+			// no channel: disable
 		});
 	}
 	/* run: async (client) => {

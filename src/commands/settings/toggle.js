@@ -33,13 +33,6 @@ class ToggleCommand extends Command {
 		
 		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
 
-		// gSettings = await this.client.db.Guild.update({
-		// 	enabled: !gSettings.enabled
-		// }, {
-		// 	where: {
-		// 		id: message.guild.id
-		// 	}
-		// });
 		const prefix = gSettings?.prefix || this.client.config.prefix;
 
 		if (!gSettings.channel)

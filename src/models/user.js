@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize');
 
 module.exports.model = {
 	id: {
-		type: DataTypes.STRING,
+		type: DataTypes.CHAR(18),
 		primaryKey: true
 	},
 	locale: DataTypes.STRING,

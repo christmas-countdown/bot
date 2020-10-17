@@ -38,7 +38,7 @@ class ServerResetSettingsCommand extends Command {
 		// settings.destroy(); // delete
 		// settings = await this.client.db.Guild.create();
 		
-		gSettings = await this.client.db.Guild.update(require('../../../models/guild').defaults(message.guild), {
+		await this.client.db.Guild.update(require('../../../models/guild').defaults(message.guild), {
 			where: {
 				id: message.guild.id
 			}

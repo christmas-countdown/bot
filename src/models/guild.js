@@ -2,19 +2,20 @@ const { DataTypes } = require('sequelize');
 
 module.exports.model = {
 	id: {
-		type: DataTypes.STRING,
+		type: DataTypes.CHAR(18),
 		primaryKey: true
 	},
 	prefix: DataTypes.STRING,
 	locale: DataTypes.STRING,
 	timezone: DataTypes.STRING,
-	channel: DataTypes.STRING,
+	channel: DataTypes.CHAR(18),
 	role: DataTypes.STRING,
 	auto: DataTypes.BOOLEAN,
 	enabled: DataTypes.BOOLEAN,
 	mention: DataTypes.BOOLEAN,
 	premium: DataTypes.BOOLEAN,
-	last: DataTypes.STRING,
+	// last: DataTypes.INTEGER,
+	last: DataTypes.DATE,
 };
 
 module.exports.defaults = (guild) => {
@@ -24,7 +25,7 @@ module.exports.defaults = (guild) => {
 		locale: 'en-GB',
 		timezone: 'UTC',
 		channel: null,
-		role: null, // could be omitted except reset doesn't delete and it will not be overwritten
+		role: null, // these could be omitted except reset doesn't delete, these overwrite
 		auto: false,
 		enabled: false,
 		mention: false,

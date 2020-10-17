@@ -41,7 +41,7 @@ class ListTimezonesCommand extends Command {
 		
 		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
 
-		let prefix = gSettings.prefix || this.client.config.prefix,
+		let prefix = gSettings?.prefix || this.client.config.prefix,
 			docs = this.client.config.docs.commands,
 			list;
 

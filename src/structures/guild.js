@@ -12,12 +12,13 @@ Structures.extend('Guild', Guild => {
 				}
 			});
 			
-			this.settings().then(settings => {
+			// this is a bit inefficient and can be done onReady and onGuildCreate instead
+			/* this.settings().then(settings => {
 				if (!settings) {
 					client.db.Guild.create(require('../models/guild').defaults(this));
 					client.log.console(client.log.f(`Added '&7${this.name}&f' to the database`));
 				}
-			});
+			}); */
 
 		}
 	}
