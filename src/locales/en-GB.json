@@ -176,5 +176,7 @@
 	"%d minute left": {
 		"one": "%d minute left",
 		"other": "%d minutes left"
-	}
+	},
+	"Invite": "Invite",
+	"Add the Christmas Countdown bot to your own server: [invite](%s)": "Add the Christmas Countdown bot to your own server: [invite](%s)"
 }

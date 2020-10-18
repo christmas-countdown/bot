@@ -132,7 +132,7 @@ class ServerSetSettingsCommand extends Command {
 					invalid.push([arg, 'Cannot enable countdown before channel is set']);
 					continue;
 				}
-				gSettings.set(arg, args[arg])[0];
+				gSettings.set(arg, args[arg][0]);
 				break;
 
 			case 'mention':

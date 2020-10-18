@@ -18,7 +18,8 @@ class UnhandledRejectionListener extends Listener {
 
 	exec(error) {
 		this.client.log.warn('An error was not caught');
-		this.client.log.warn(`Uncaught ${error.name}: ${error.message}`);
+		if (error instanceof Error)
+			this.client.log.warn(`Uncaught ${error.name}: ${error.message}`);
 		this.client.log.error(error);
 	}
 }

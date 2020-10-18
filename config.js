@@ -13,6 +13,7 @@ module.exports = {
 		pretty: 'christmascountdown.live',
 		url: 'https://www.christmascountdown.live'
 	},
+	invite: 'https://www.christmascountdown.live/discord/invite',
 	docs: {
 		pretty: 'docs.christmascountdown.live/discord',
 		main: 'https://docs.christmascountdown.live/discord',
