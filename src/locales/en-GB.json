@@ -178,5 +178,7 @@
 		"other": "%d minutes left"
 	},
 	"Invite": "Invite",
-	"Add the Christmas Countdown bot to your own server: [invite](%s)": "Add the Christmas Countdown bot to your own server: [invite](%s)"
+	"Add the Christmas Countdown bot to your own server: [invite](%s)": "Add the Christmas Countdown bot to your own server: [invite](%s)",
+	"Invalid prefix. Too long perhaps?": "Invalid prefix. Too long perhaps?",
+	"Invalid boolean.": "Invalid boolean."
 }
