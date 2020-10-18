@@ -9,8 +9,8 @@ const spacetime = require('spacetime');
 
 module.exports = {
 	auto: async (guild, timezone) => {	
-		let now = spacetime.now(timezone);
-		if (now.month() === 11 && now.date() === 1) { // 1st Dec
+		let now = spacetime.now(timezone); // now in the timezone
+		if (now.month() === 11 && now.date() === 1) { // 1st Dec (months are 0-11)
 			await guild.client.db.Guild.update({
 				enabled: true // enable
 			}, {
@@ -59,8 +59,8 @@ module.exports = {
 			// let channel = await guild.channels.cache.get(settings.channel);
 			let channel = await client.channels.fetch(settings.channel);
 			
-			if (!channel)
-				return await guild.client.db.Guild.update({
+			if (!channel) {
+				await guild.client.db.Guild.update({
 					channel: null,
 					enabled: false // disable
 				}, {
@@ -68,6 +68,21 @@ module.exports = {
 						id: guild.id
 					}
 				});
+				return client.log.console('Disabled guild with missing channel');
+			}
+
+			if (!guild.me.permissionsIn(channel)) {
+				await guild.client.db.Guild.update({
+					channel: null,
+					enabled: false // disable
+				}, {
+					where: {
+						id: guild.id
+					}
+				});
+				return client.log.console('Disabled guild with invalid permissions in channel');
+			}
+				
 
 		});
 	}
