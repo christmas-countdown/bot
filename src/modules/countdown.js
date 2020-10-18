@@ -33,7 +33,8 @@ module.exports = {
 		
 		client.guilds.cache.forEach(async guild => {
 			if (!guild.available) return client.log.warn(`Guild ${guild.id} not available`);
-			let settings = await guild.settings();
+			let settings = await guild.settings(),
+				tz = settings.timezone || 'UTC';
 
 			if (settings.auto) {
 				await this.auto(guild);
@@ -43,15 +44,31 @@ module.exports = {
 			if (!settings.enabled) return; // stop here if the guild isn't enabled
 
 			// check the time
-			let now = spacetime.now(settings.timezone || 'UTC');
+			let now = spacetime.now(tz);
+			if (now.hour() !== 0) { // 00:00 - 00:59 in the guild timezone
+				if (settings.last) {
+					let last = spacetime(settings.last, tz),
+						diff = now.diff(last, 'hours');
+					if (diff < 24) return; // return if last was less than 24h ago
+				} else return; // return if no last
+			}
 		
-			if (settings.last) {
-				let last = spacetime(settings.last, settings.timezone || 'UTC'),
-					diff = now.diff(last, 'hours');
-				if (now.hour() !== 0 && diff < 24) return;
-			} else if (now.hour() !== 0) return;
+			// either it is 00:00 - 00:59, or the last was sent over 24 hours ago
+			// (meaning it's probably the morning and the bot was offline when it was meant to send)
 			
-			// no channel: disable
+			// let channel = await guild.channels.cache.get(settings.channel);
+			let channel = await client.channels.fetch(settings.channel);
+			
+			if (!channel)
+				return await guild.client.db.Guild.update({
+					channel: null,
+					enabled: false // disable
+				}, {
+					where: {
+						id: guild.id
+					}
+				});
+
 		});
 	}
 	/* run: async (client) => {
