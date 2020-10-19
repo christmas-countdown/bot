@@ -6,8 +6,23 @@
  */
 
 const spacetime = require('spacetime');
+const Christmas = require('./christmas');
+const { Embed, i18n: i18nOptions } = require('../bot');
+
+const { I18n } = require('i18n');
+const i18n = new I18n(i18nOptions);
 
 module.exports = {
+	disable: async guild => {
+		return await guild.client.db.Guild.update({
+			channel: null,
+			enabled: false // disable
+		}, {
+			where: {
+				id: guild.id
+			}
+		});
+	},
 	auto: async (guild, timezone) => {	
 		let now = spacetime.now(timezone); // now in the timezone
 		if (now.month() === 11 && now.date() === 1) { // 1st Dec (months are 0-11)
@@ -60,29 +75,44 @@ module.exports = {
 			let channel = await client.channels.fetch(settings.channel);
 			
 			if (!channel) {
-				await guild.client.db.Guild.update({
-					channel: null,
-					enabled: false // disable
-				}, {
-					where: {
-						id: guild.id
-					}
-				});
+				this.disable(guild);
 				return client.log.console('Disabled guild with missing channel');
 			}
 
 			if (!guild.me.permissionsIn(channel).has(['SEND_MESSAGES', 'EMBED_LINKS'])) {
-				await guild.client.db.Guild.update({
-					channel: null,
-					enabled: false // disable
-				}, {
-					where: {
-						id: guild.id
-					}
-				});
+				this.disable(guild);
 				return client.log.console('Disabled guild with invalid permissions in channel');
 			}
-				
+			
+			i18n.setLocale(settings.locale || 'en-GB');
+
+			let xmas = new Christmas(false || settings.timezone),
+				sleeps = xmas.sleeps;
+
+			let text = i18n.__n('There is **%d** sleep left until Christmas!', 'There are **%d** sleeps left until Christmas!', sleeps),
+				footer = i18n.__('View the live countdown at [%s](%s).', guild.client.config.website.pretty, guild.client.config.website.url);
+
+			let embed = new Embed(false, settings)
+				.setURL(guild.client.config.website.url + '/total#sleeps')
+				.setDescription(text + '\n\n' + footer)
+				.setTimestamp();
+
+			if (xmas.isToday)
+				embed
+					.setTitle(i18n.__('It\'s Christmas Day! :tada:'))
+					.setDescription(text + `\n\n${i18n.__('Merry Christmas!')}` + `\n\n${footer}`);
+			else if (xmas.isTomorrow)
+				embed
+					.setTitle(i18n.__('It\'s Christmas Eve!'));
+			else
+				embed
+					.setTitle(i18n.__n('%d sleep left', '%d sleeps left', sleeps));
+
+			try {
+				channel.send(embed);
+			} catch (e) {
+				guild.client.log.error(e);
+			}
 
 		});
 	}

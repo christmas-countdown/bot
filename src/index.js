@@ -15,14 +15,13 @@ const log = new Logger({
 	logToFile: false, // enabling here won't enable it for actual bot shards
 	keepSilent: true,
 });
-log.multi(log);
 
 log.info('Christmas Countdown Bot is starting', ['magenta']);
 
 const { ShardingManager } = require('discord.js');
 const manager = new ShardingManager('src/bot.js', { respawn: config.respawn });
 
-log.console('[MANAGER] Shard manager started');
+log.info('[MANAGER] Shard manager started');
 
 manager.on('shardCreate', shard => log.info(`[MANAGER] Launched shard ${shard.id}`));
 
