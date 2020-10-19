@@ -45,7 +45,7 @@ module.exports = {
 	},
 	run: async (client) => {
 		client.log.info('Running countdown task');
-		
+		let number = 0;
 		client.guilds.cache.forEach(async guild => {
 			if (!guild.available) return client.log.warn(`Guild ${guild.id} not available`);
 			let settings = await guild.settings(),
@@ -117,10 +117,13 @@ module.exports = {
 						id: guild.id
 					}
 				});
+				client.log.console(`Sent countdown to guild ${guild.id}`);
 			} catch (e) {
+				client.log.error(`Failed to send countdown to guild ${guild.id}`);
 				client.log.error(e);
 			}
 
 		});
+		client.log.success(`Sent countdown to ${number} guilds`);
 	}
 };
