@@ -71,7 +71,7 @@ module.exports = {
 				return client.log.console('Disabled guild with missing channel');
 			}
 
-			if (!guild.me.permissionsIn(channel)) {
+			if (!guild.me.permissionsIn(channel).has(['SEND_MESSAGES', 'EMBED_LINKS'])) {
 				await guild.client.db.Guild.update({
 					channel: null,
 					enabled: false // disable
