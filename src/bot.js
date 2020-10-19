@@ -12,9 +12,10 @@ const config = require('../config');
 
 const Logger = require('leekslazylogger');
 const log = new Logger({
-	name: 'Christmas Countdown Bot',
+	name: `Christmas Countdown Bot [${global.prefix}]`,
+	directory: `./logs/shard-${process.env.SHARDS}/`,
 	debug: config.debug,
-	logToFile: false,
+	logToFile: true,
 	keepSilent: true,
 	custom: {
 		basic: {
