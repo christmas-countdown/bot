@@ -63,7 +63,7 @@ module.exports = {
 			if (now.hour() !== 0) { // 00:00 - 00:59 in the guild timezone
 				if (settings.last) {
 					let last = spacetime(settings.last, tz),
-						diff = now.diff(last, 'hours');
+						diff = last.diff(now, 'hours');
 					if (diff < 24) return; // return if last was less than 24h ago
 				} else return; // return if no last
 			}
@@ -75,12 +75,12 @@ module.exports = {
 			let channel = await client.channels.fetch(settings.channel);
 			
 			if (!channel) {
-				this.disable(guild);
+				this.disable(guild, tz);
 				return client.log.console('Disabled guild with missing channel');
 			}
 
 			if (!guild.me.permissionsIn(channel).has(['SEND_MESSAGES', 'EMBED_LINKS'])) {
-				this.disable(guild);
+				this.disable(guild, tz);
 				return client.log.console('Disabled guild with invalid permissions in channel');
 			}
 			
@@ -90,10 +90,10 @@ module.exports = {
 				sleeps = xmas.sleeps;
 
 			let text = i18n.__n('There is **%d** sleep left until Christmas!', 'There are **%d** sleeps left until Christmas!', sleeps),
-				footer = i18n.__('View the live countdown at [%s](%s).', guild.client.config.website.pretty, guild.client.config.website.url);
+				footer = i18n.__('View the live countdown at [%s](%s).', client.config.website.pretty, client.config.website.url);
 
 			let embed = new Embed(false, settings)
-				.setURL(guild.client.config.website.url + '/total#sleeps')
+				.setURL(client.config.website.url + '/total#sleeps')
 				.setDescription(text + '\n\n' + footer)
 				.setTimestamp();
 
@@ -110,31 +110,17 @@ module.exports = {
 
 			try {
 				channel.send(embed);
+				client.db.Guild.update({
+					last: new Date(now.format('iso'))
+				}, {
+					where: {
+						id: guild.id
+					}
+				});
 			} catch (e) {
-				guild.client.log.error(e);
+				client.log.error(e);
 			}
 
 		});
 	}
-	/* run: async (client) => {
-		let guilds = await client.db.Guild.findAll({
-			where: {
-				[or]: [
-					{ enabled: true },
-					{ auto: true }
-				]
-			}
-		});
-		for (let row in guilds.rows) {
-			row = guilds.rows[row];
-			let guild = await client.guilds.fetch(row.id);
-			if (!guild) continue; // the guild could be on another shard
-			if (row.auto) {
-				await this.auto(guild);
-				row = await guild.settings(); // equivalent to findOne by id
-			}
-			if (!row.enabled) continue; // if was auto and its not Advent
-			// check the time
-		}
-	} */
 };
