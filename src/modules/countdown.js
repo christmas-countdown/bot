@@ -6,6 +6,7 @@
  */
 
 const spacetime = require('spacetime');
+const utils = require('./utils');
 const Christmas = require('./christmas');
 const { Embed, i18n: i18nOptions } = require('../bot');
 
@@ -118,6 +119,7 @@ module.exports = {
 					}
 				});
 				client.log.console(`Sent countdown to guild ${guild.id}`);
+				await utils.wait(200);
 			} catch (e) {
 				client.log.error(`Failed to send countdown to guild ${guild.id}`);
 				client.log.error(e);

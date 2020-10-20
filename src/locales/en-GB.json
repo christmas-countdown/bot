@@ -141,8 +141,8 @@
 	},
 	"There %s %s, %s, %s, and %s left until Christmas!": "There %s %s, %s, %s, and %s left until Christmas!",
 	"%s, %s, %s, %s left": "%s, %s, %s, %s left",
-	"server timezone: %s": "server timezone: %s",
-	"user timezone: %s": "user timezone: %s",
+	"Server timezone: %s": "Server timezone: %s",
+	"User timezone: %s": "User timezone: %s",
 	"Counting down in": "Counting down in",
 	"%d servers": "%d servers",
 	"There is **%d** hour left until Christmas!": {

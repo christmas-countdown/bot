@@ -53,15 +53,9 @@ let i18nOptions = {
 	directory: path.join(__dirname, 'locales'),
 	defaultLocale: 'en-GB',
 	retryInDefaultLocale: true,
-	logDebugFn: str => {
-		log.debug(str);
-	},
-	logWarnFn: str => {
-		log.warn(str);
-	},
-	logErrorFn: str => {
-		log.error(str);
-	},
+	logDebugFn: log.debug,
+	logWarnFn: log.warn,
+	logErrorFn: log.error,
 };
 
 const { I18n } = require('i18n');
@@ -109,7 +103,7 @@ class Embed extends MessageEmbed {
 
 		} else {
 			let timezone = uSettings?.timezone || gSettings?.timezone;
-			timezone = i18n.__(`${uSettings?.timezone ? 'user' : 'server'} timezone: %s`, timezone);
+			timezone = i18n.__(`${uSettings?.timezone ? 'User' : 'Server'} timezone: %s`, timezone);
 
 			this.footer = {
 				text: timezone,
