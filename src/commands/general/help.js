@@ -68,9 +68,9 @@ class HelpCommand extends Command {
 			.setTitle(`\`${command.description.premium ? '⭐' : ''}${command.id}${desc}\``)
 			.setURL(`${this.client.config.docs.commands}#${command.id}`)
 			.addField(i18n.__('❯ Documentation'), i18n.__('[click here](%s)', `${this.client.config.docs.commands}#${command.id}`))
-			.addField(i18n.__('❯ Description'), command.description.content || '\u200b');
+			.addField(i18n.__('❯ Description'), i18n.__(command.description.content) || '\u200b');
 
-		if (command.aliases.length > 1) embed.addField(i18n.__('❯ Aliases'), `\`${command.aliases.join('` `')}\`\nHyphens (-) can be omitted.`, false);
+		if (command.aliases.length > 1) embed.addField(i18n.__('❯ Aliases'), `\`${command.aliases.join('` `')}\`\n${i18n.__('Hyphens (-) can be omitted.')}`, false);
 		
 		if (command.description.examples?.length)
 			embed.addField(
