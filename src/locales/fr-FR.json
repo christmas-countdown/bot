@@ -139,46 +139,63 @@
 		"one": "**%d** seconde",
 		"other": "**%d** secondes"
 	},
-	"There %s %s, %s, %s, and %s left until Christmas!": "Il reste %s %s, %s, %s, et %s avant Noël!",
+	"There %s %s, %s, %s, and %s left until Christmas!": "Il reste %s %s, %s, %s, et %s avant Noël !",
 	"%s, %s, %s, %s left": "%s, %s, %s, %s restant",
 	"Server timezone: %s": "fuseau horaire du serveur: %s",
 	"User timezone: %s": "fuseau horaire de l'utilisateur: %s",
-	"Counting down in": "Counting down in",
-	"%d servers": "%d servers",
+	"Counting down in": "Compte à rebours dans",
+	"%d servers": "%d serveurs",
 	"There is **%d** hour left until Christmas!": {
-		"one": "There is **%d** hour left until Christmas!",
-		"other": "There are **%d** hours left until Christmas!"
+		"one": "Il reste **%d** heure avant Noël !",
+		"other": "Il reste **%d** heures avant Noël !"
 	},
 	"%d hour left": {
-		"one": "%d hour left",
-		"other": "%d hours left"
+		"one": "%d heure restante",
+		"other": "%d heures restantes"
 	},
 	"There is **%d** week left until Christmas!": {
-		"one": "There is **%d** week left until Christmas!",
-		"other": "There are **%d** weeks left until Christmas!"
+		"one": "Il reste **%d** semaine avant Noël !",
+		"other": "Il reste **%d** semaines avant Noël !"
 	},
 	"%d week left": {
-		"one": "%d week left",
-		"other": "%d weeks left"
+		"one": "%d semaine restante",
+		"other": "%d semaines restantes"
 	},
 	"There is **%d** second left until Christmas!": {
-		"one": "There is **%d** second left until Christmas!",
-		"other": "There are **%d** seconds left until Christmas!"
+		"one": "Il reste **%d** seconde avant Noël !",
+		"other": "Il reste **%d** secondes avant Noël !"
 	},
 	"%d second left": {
-		"one": "%d second left",
-		"other": "%d seconds left"
+		"one": "%d seconde restante",
+		"other": "%d secondes restantes"
 	},
 	"There is **%d** minute left until Christmas!": {
-		"one": "There is **%d** minute left until Christmas!",
-		"other": "There are **%d** minutes left until Christmas!"
+		"one": "Il reste **%d** minute avant Noël !",
+		"other": "Il reste **%d** minutes avant Noël!"
 	},
 	"%d minute left": {
-		"one": "%d minute left",
-		"other": "%d minutes left"
+		"one": "%d minute restante",
+		"other": "%d minutes restantes"
 	},
-	"Invite": "Invite",
-	"Add the Christmas Countdown bot to your own server: [invite](%s)": "Add the Christmas Countdown bot to your own server: [invite](%s)",
-	"Invalid prefix. Too long perhaps?": "Invalid prefix. Too long perhaps?",
-	"Invalid boolean.": "Invalid boolean."
+	"Invite": "Inviter",
+	"Add the Christmas Countdown bot to your own server: [invite](%s)": "Ajoutez le bot Christmas Countdown à votre propre serveur: [invite](%s)",
+	"Invalid prefix. Too long perhaps?": "Préfixe invalide. Trop long peut-être ?",
+	"Invalid boolean.": "Booléen invalide.",
+	"Show days left until Christmas, in the user's or server's timezone.": "Afficher les jours restants jusqu'à Noël, dans le fuseau horaire de l'utilisateur ou du serveur.",
+	"Hyphens (-) can be omitted.": "Les traits d'union (-) peuvent être omis.",
+	"Show hours left until Christmas, in the user's or server's timezone.": "Afficher les heures restantes jusqu'à Noël, dans le fuseau horaire de l'utilisateur ou du serveur.",
+	"Show minutes left until Christmas, in the user's or server's timezone.": "Afficher les minutes restantes jusqu'à Noël, dans le fuseau horaire de l'utilisateur ou du serveur.",
+	"Show seconds left until Christmas, in the user's or server's timezone.": "Afficher les secondes restantes jusqu'à Noël, dans le fuseau horaire de l'utilisateur ou du serveur.",
+	"Show sleeps left until Christmas, in the user's or server's timezone.": "Afficher le nombre de sommeil jusqu'à Noël, dans le fuseau horaire de l'utilisateur ou du serveur.",
+	"Show weeks left until Christmas, in the user's or server's timezone.": "Afficher les semaines restantes jusqu'à Noël, dans le fuseau horaire de l'utilisateur ou du serveur.",
+	"Show information about the bot": "Afficher des informations sur le bot",
+	"Show bot ping": "Afficher la latence du bot",
+	"Add the bot your own server": "Ajoutez le bot à votre propre serveur",
+	"Show bot ping and shard info.": "Afficher le ping du bot et les informations.",
+	"Get premium by donating": "Obtenez le premium en faisant un don",
+	"List all valid locales": "Lister tous les paramètres régionaux valides",
+	"Modify server settings": "Modifier les paramètres du serveur",
+	"List all valid timezones": "Lister tous les fuseaux horaires valides",
+	"Toggle the countdown": "Basculer le compte à rebours",
+	"Modify user settings": "Modifier les paramètres utilisateur"
 }
