@@ -6,10 +6,9 @@
  */
 
 const { Command } = require('discord-akairo');
-const { Embed, i18n: i18nOptions } = require('../../bot');
+const { Embed } = require('../../bot');
 
-const { I18n } = require('i18n');
-const i18n = new I18n(i18nOptions);
+const I18n = require('../../locales');
 
 class ListLocalesCommand extends Command {
 	constructor() {
@@ -28,7 +27,7 @@ class ListLocalesCommand extends Command {
 		let uSettings = await message.author.settings(),
 			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		let prefix = gSettings?.prefix || this.client.config.prefix,
 			docs = this.client.config.docs.commands;

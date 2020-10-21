@@ -1,200 +1,94 @@
 {
-	"Pong!": "Pong!",
-	"Shard number": "Shard number",
-	"Avg. ping": "Avg. ping",
-	"Shard ping": "Shard ping",
-	"Christmas Countdown by eartharoid": "Christmas Countdown by eartharoid",
-	"Overall latency": "Overall latency",
-	"Server settings": "Server settings",
-	"Hello!": "Hello!",
-	"Usage": "Usage",
-	"Help": "Help",
-	"Server prefix": "Server prefix",
-	"Missing permissions": "Missing permissions",
-	"Required permissions": "Required permissions",
-	"The %s command has the following subcommands:\n\n%s": "The %s command has the following subcommands:\n\n%s",
-	"Click subcommand for more information": "Click subcommand for more information",
-	"Set server settings": "Set server settings",
-	"Reset server settings": "Reset server settings",
-	"The bot is missing the following permissions: \n`%s`": "The bot is missing the following permissions: \n`%s`",
-	":white_check_mark: Server settings reset": ":white_check_mark: Server settings reset",
-	"This server's settings have been reset to the defaults. Use `%s` to re-configure.": "This server's settings have been reset to the defaults. Use `%s` to re-configure.",
-	":star: Premium": ":star: Premium",
-	"%s is a [premium](%s) option.\nUse %s to enable premium on this server": "%s is a [premium](%s) option.\nUse %s to enable premium on this server",
-	"Invalid input": "Invalid input",
-	"There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**": "There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**",
-	"Invalid input (see docs)": "Invalid input (see docs)",
-	":white_check_mark: Server settings updated": ":white_check_mark: Server settings updated",
-	"Your new settings:": "Your new settings:",
-	"Prefix": "Prefix",
-	"Locale": "Locale",
-	"Timezone": "Timezone",
-	"Channel": "Channel",
-	"Role": "Role",
-	"Auto": "Auto",
-	"none": "none",
-	"Enabled": "Enabled",
-	"Mention": "Mention",
-	"Nothing changed.": "Nothing changed.",
-	"Configure the bot's server settings": "Configure the bot's server settings",
-	"Locales": "Locales",
-	"Valid locales": "Valid locales",
-	"Don't see your language?": "Don't see your language?",
-	"Click [here](%s).": "Click [here](%s).",
-	"Set the server language": "Set the server language",
-	"Set your personal language": "Set your personal language",
-	"Timezones": "Timezones",
-	"Valid timezones": "Valid timezones",
-	"Set the server timezone": "Set the server timezone",
-	"Set your personal timezone": "Set your personal timezone",
-	"The list is too long to send! Click [here](%s) to visit the docs.": "The list is too long to send! Click [here](%s) to visit the docs.",
-	"Mention the text channel you want the countdown to use.": "Mention the text channel you want the countdown to use.",
-	"Invalid channel mention.": "Invalid channel mention.",
-	"Invalid input.": "Invalid input.",
-	"You must have following permissions to use the `%s` command: \n`%s`.": "You must have following permissions to use the `%s` command: \n`%s`.",
-	"Configure the bot's server settings using the setup prompt": "Configure the bot's server settings using the setup prompt",
-	"**Which timezone do you want the bot to use?**\n\n([Click here for a list of timezones](%s)).\nIf you don't know, choose `UTC` now, __you can change this later__.": "**Which timezone do you want the bot to use?**\n\n([Click here for a list of timezones](%s)).\nIf you don't know, choose `UTC` now, __you can change this later__.",
-	"**Enable the countdown?** (yes/no)": "**Enable the countdown?** (yes/no)",
-	"You can further modify your settings with [`%sserver set`](%s).": "You can further modify your settings with [`%sserver set`](%s).",
-	"**Which timezone do you want the bot to use?**\n\n[Click here for a list of timezones](%s).\nIf you don't know, choose `UTC` now, __you can change this later__.": "**Which timezone do you want the bot to use?**\n\n[Click here for a list of timezones](%s).\nIf you don't know, choose `UTC` now, __you can change this later__.",
-	"Invalid timezone. See the [docs](%s). Exited prompt.": "Invalid timezone. See the [docs](%s). Exited prompt.",
-	"": "",
-	"`%s` or \"%s\"": "`%s` or \"%s\"",
-	"Support server": "Support server",
-	"User settings": "User settings",
-	":white_check_mark: User settings updated": ":white_check_mark: User settings updated",
-	"**Enable the countdown?** (`yes`/`no`)\n__You can change this later__.": "**Enable the countdown?** (`yes`/`no`)\n__You can change this later__.",
-	"Invalid locale name.": "Invalid locale name.",
-	"Invalid role mention.": "Invalid role mention.",
-	":star: This is a premium option": ":star: This is a premium option",
-	"Invalid timezone name.": "Invalid timezone name.",
-	"Commands": "Commands",
-	"For more information about a specific command, use `%shelp <command>` or click on its name .": "For more information about a specific command, use `%shelp <command>` or click on its name .",
-	"❯ Description": "❯ Description",
-	"[click here](%s)": "[click here](%s)",
-	"❯ Documentation": "❯ Documentation",
-	"❯ Aliases": "❯ Aliases",
-	"Set user settings": "Set user settings",
-	"This server's settings have been reset to the defaults. Use %s to re-configure.": "This server's settings have been reset to the defaults. Use %s to re-configure.",
-	"Timezones of %s": "Timezones of %s",
-	"The list is too long to send! Click [here](%s) to visit the docs, or use %s to list zones by country.": "The list is too long to send! Click [here](%s) to visit the docs, or use %s to list zones by country.",
-	"Use %s to list timezones by country, where `<country>` is a country code (examples: `US`, `GB`,`DE`, `FR`, or `RU`)": "Use %s to list timezones by country, where `<country>` is a country code (examples: `US`, `GB`,`DE`, `FR`, or `RU`)",
-	"disabled": "disabled",
-	":white_check_mark: Countdown %s": ":white_check_mark: Countdown %s",
-	"enabled": "enabled",
-	"Cannot enable countdown before channel is set": "Cannot enable countdown before channel is set",
-	"Use %s to set the channel.": "Use %s to set the channel.",
-	":x: Cannot enable countdown before channel is set": ":x: Cannot enable countdown before channel is set",
-	"Information": "Information",
-	"A Discord bot made by %s.": "A Discord bot made by %s.",
-	"Website": "Website",
-	"Documentation": "Documentation",
-	"Guilds": "Guilds",
-	":star: Premium guilds": ":star: Premium guilds",
-	"Enabled guilds": "Enabled guilds",
-	":white_check_mark: User settings reset": ":white_check_mark: User settings reset",
-	"Your settings have been reset to the defaults. Use `%s` to re-configure.": "Your settings have been reset to the defaults. Use `%s` to re-configure.",
-	"%d day left": {
-		"one": "%d day left",
-		"other": "%d days left"
+	"christmas": {
+		"days": {
+			"title": [
+				"%d day left",
+				"%d days left"
+			],
+			"text": [
+				"There is **%d** day left until Christmas!",
+				"There are **%d** days left until Christmas!"
+			]
+		},
+		"hours": {
+			"title": [
+				"%d hour left",
+				"%d hours left"
+			],
+			"text": [
+				"There is **%d** hour left until Christmas!",
+				"There are **%d** hours left until Christmas!"
+			]
+		},
+		"minutes": {
+			"title": [
+				"%d minute left",
+				"%d minutes left"
+			],
+			"text": [
+				"There is **%d** minute left until Christmas!",
+				"There are **%d** minutes left until Christmas!"
+			]
+		},
+		"seconds": {
+			"title": [
+				"%d second left",
+				"%d seconds left"
+			],
+			"text": [
+				"There is **%d** second left until Christmas!",
+				"There are **%d** seconds left until Christmas!"
+			]
+		},
+		"sleeps": {
+			"title": [
+				"%d sleep left",
+				"%d sleeps left"
+			],
+			"text": [
+				"There is **%d** sleep left until Christmas!",
+				"There are **%d** sleeps left until Christmas!"
+			]
+		},
+		"total": {
+			"title": "%s, %s, %s, %s left",
+			"text": "There %s %s, %s, %s, and %s left until Christmas!",
+			"days": [
+				"**%d** day",
+				"**%d** days"
+			],
+			"hours": [
+				"**%d** hour",
+				"**%d** hours"
+			],
+			"minutes": [
+				"**%d** minute",
+				"**%d** minutes"
+			],
+			"seconds": [
+				"**%d** second",
+				"**%d** seconds"
+			]
+		},
+		"weeks": {
+			"title": [
+				"%d week left",
+				"%d weeks left"
+			],
+			"text": [
+				"There is **%d** week left until Christmas!",
+				"There are **%d** weeks left until Christmas!"
+			]
+		},
+		"xmas_day": "It's Christmas Day! :tada:",
+		"xmas_eve": "It's Christmas Eve!",
+		"merry_xmas": "Merry Christmas! :christmas_tree:",
+		"footer": "View the live countdown at [%s](%s)."
 	},
-	"There is **%d** day left until Christmas!": {
-		"one": "There is **%d** day left until Christmas!",
-		"other": "There are **%d** days left until Christmas!"
-	},
-	":star: Get premium": ":star: Get premium",
-	"Donate [here](%s) to unlock additional features.": "Donate [here](%s) to unlock additional features.",
-	"View the live countdown at [%s](%s).": "View the live countdown at [%s](%s).",
-	"For more information about a specific command, use `%s` or click on its name. For distinction between days and sleeps, click [here](%s).\n": "For more information about a specific command, use `%s` or click on its name. For distinction between days and sleeps, click [here](%s).\n",
-	"Invalid channel mention. Exited prompt.": "Invalid channel mention. Exited prompt.",
-	"There is **%d** sleep left until Christmas!": {
-		"one": "There is **%d** sleep left until Christmas!",
-		"other": "There are **%d** sleeps left until Christmas!"
-	},
-	"%d sleep left": {
-		"one": "%d sleep left",
-		"other": "%d sleeps left"
-	},
-	"It's Christmas Eve!": "It's Christmas Eve!",
-	"It's Christmas Day! :tada:": "It's Christmas Day! :tada:",
-	"Merry Christmas!": "Merry Christmas!",
-	"is": {
-		"one": "is",
-		"other": "are"
-	},
-	"**%d** day": {
-		"one": "**%d** day",
-		"other": "**%d** days"
-	},
-	"**%d** hour": {
-		"one": "**%d** hour",
-		"other": "**%d** hours"
-	},
-	"**%d** minute": {
-		"one": "**%d** minute",
-		"other": "**%d** minutes"
-	},
-	"**%d** second": {
-		"one": "**%d** second",
-		"other": "**%d** seconds"
-	},
-	"There %s %s, %s, %s, and %s left until Christmas!": "There %s %s, %s, %s, and %s left until Christmas!",
-	"%s, %s, %s, %s left": "%s, %s, %s, %s left",
-	"Server timezone: %s": "Server timezone: %s",
-	"User timezone: %s": "User timezone: %s",
-	"Counting down in": "Counting down in",
-	"%d servers": "%d servers",
-	"There is **%d** hour left until Christmas!": {
-		"one": "There is **%d** hour left until Christmas!",
-		"other": "There are **%d** hours left until Christmas!"
-	},
-	"%d hour left": {
-		"one": "%d hour left",
-		"other": "%d hours left"
-	},
-	"There is **%d** week left until Christmas!": {
-		"one": "There is **%d** week left until Christmas!",
-		"other": "There are **%d** weeks left until Christmas!"
-	},
-	"%d week left": {
-		"one": "%d week left",
-		"other": "%d weeks left"
-	},
-	"There is **%d** second left until Christmas!": {
-		"one": "There is **%d** second left until Christmas!",
-		"other": "There are **%d** seconds left until Christmas!"
-	},
-	"%d second left": {
-		"one": "%d second left",
-		"other": "%d seconds left"
-	},
-	"There is **%d** minute left until Christmas!": {
-		"one": "There is **%d** minute left until Christmas!",
-		"other": "There are **%d** minutes left until Christmas!"
-	},
-	"%d minute left": {
-		"one": "%d minute left",
-		"other": "%d minutes left"
-	},
-	"Invite": "Invite",
-	"Add the Christmas Countdown bot to your own server: [invite](%s)": "Add the Christmas Countdown bot to your own server: [invite](%s)",
-	"Invalid prefix. Too long perhaps?": "Invalid prefix. Too long perhaps?",
-	"Invalid boolean.": "Invalid boolean.",
-	"Show days left until Christmas, in the user's or server's timezone.": "Show days left until Christmas, in the user's or server's timezone.",
-	"Hyphens (-) can be omitted.": "Hyphens (-) can be omitted.",
-	"Show hours left until Christmas, in the user's or server's timezone.": "Show hours left until Christmas, in the user's or server's timezone.",
-	"Show minutes left until Christmas, in the user's or server's timezone.": "Show minutes left until Christmas, in the user's or server's timezone.",
-	"Show seconds left until Christmas, in the user's or server's timezone.": "Show seconds left until Christmas, in the user's or server's timezone.",
-	"Show sleeps left until Christmas, in the user's or server's timezone.": "Show sleeps left until Christmas, in the user's or server's timezone.",
-	"Show weeks left until Christmas, in the user's or server's timezone.": "Show weeks left until Christmas, in the user's or server's timezone.",
-	"Show information about the bot": "Show information about the bot",
-	"Show bot ping": "Show bot ping",
-	"Add the bot your own server": "Add the bot your own server",
-	"Show bot ping and shard info.": "Show bot ping and shard info.",
-	"Get premium by donating": "Get premium by donating",
-	"List all valid locales": "List all valid locales",
-	"Modify server settings": "Modify server settings",
-	"List all valid timezones": "List all valid timezones",
-	"Toggle the countdown": "Toggle the countdown",
-	"Modify user settings": "Modify user settings"
+	"is-are": [
+		"is",
+		"are"
+	],
+	"user_timezone": "User timezone: %s",
+	"sever_timezone": "Server timezone: %s"
 }

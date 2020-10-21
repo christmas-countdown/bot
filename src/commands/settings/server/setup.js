@@ -6,13 +6,12 @@
  */
 
 const { Command } = require('discord-akairo');
-const { Embed, i18n: i18nOptions } = require('../../../bot');
+const { Embed } = require('../../../bot');
 const { MessageEmbed } = require('discord.js');
 
 const config = require('../../../../config');
 
-const { I18n } = require('i18n');
-const i18n = new I18n(i18nOptions);
+const I18n = require('../../../locales');
 
 class ServerSetupCommand extends Command {
 	constructor() {
@@ -32,12 +31,13 @@ class ServerSetupCommand extends Command {
 	async *args(message) {
 		let uSettings = await message.author.settings(),
 			gSettings = await message.guild?.settings();
-		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+		
+		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		const timezone = yield { 
 			type: 'timezone',
 			prompt: {
-				start: () =>new MessageEmbed()
+				start: () => new MessageEmbed()
 					.setColor(config.colour)
 					.setDescription(i18n.__('**Which timezone do you want the bot to use?**\n\n[Click here for a list of timezones](%s).\nIf you don\'t know, choose `UTC` now, __you can change this later__.',
 						config.docs.timezones
@@ -89,7 +89,7 @@ class ServerSetupCommand extends Command {
 		let uSettings = await message.author.settings(),
 			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		let invalid = [],
 			counter = 0;
