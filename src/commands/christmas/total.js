@@ -34,11 +34,11 @@ class TotalCommand extends Command {
 		let xmas = new Christmas(uSettings?.timezone || gSettings?.timezone),
 			total = xmas.total.days_based;
 
-		let verb = i18n.__n('is-are', total.days),
-			days = i18n.__n('christmas.total.days', total.days),
-			hours = i18n.__n('christmas.total.hours', total.hours),
-			minutes = i18n.__n('christmas.total.minutes', total.minutes),
-			seconds = i18n.__n('christmas.total.seconds', total.seconds);
+		let verb = i18n.__('is-are', total.days),
+			days = i18n.__('christmas.total.days', total.days),
+			hours = i18n.__('christmas.total.hours', total.hours),
+			minutes = i18n.__('christmas.total.minutes', total.minutes),
+			seconds = i18n.__('christmas.total.seconds', total.seconds);
 
 		let text = i18n.__('christmas.total.text', verb, days, hours, minutes, seconds),
 			footer = i18n.__('christmas.footer', this.client.config.website.pretty, this.client.config.website.url);

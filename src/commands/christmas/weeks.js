@@ -34,7 +34,7 @@ class WeeksCommand extends Command {
 		let xmas = new Christmas(uSettings?.timezone || gSettings?.timezone),
 			weeks = xmas.weeks;
 
-		let text = i18n.__n('christmas.weeks.text', weeks),
+		let text = i18n.__('christmas.weeks.text', weeks),
 			footer = i18n.__('christmas.footer', this.client.config.website.pretty, this.client.config.website.url);
 
 		let embed = new Embed(uSettings, gSettings)
@@ -52,7 +52,7 @@ class WeeksCommand extends Command {
 				.setTitle(i18n.__('christmas.xmas_eve'));
 		else
 			embed
-				.setTitle(i18n.__n('christmas.weeks.title', weeks));
+				.setTitle(i18n.__('christmas.weeks.title', weeks));
 
 
 		// ❯ return a promise

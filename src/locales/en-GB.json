@@ -85,6 +85,9 @@
 		"merry_xmas": "Merry Christmas! :christmas_tree:",
 		"footer": "View the live countdown at [%s](%s)."
 	},
+	"general": {
+		
+	},
 	"is-are": [
 		"is",
 		"are"

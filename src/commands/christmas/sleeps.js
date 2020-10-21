@@ -34,7 +34,7 @@ class SleepsCommand extends Command {
 		let xmas = new Christmas(uSettings?.timezone || gSettings?.timezone),
 			sleeps = xmas.sleeps;
 
-		let text = i18n.__n('christmas.sleeps.text', sleeps),
+		let text = i18n.__('christmas.sleeps.text', sleeps),
 			footer = i18n.__('christmas.footer', this.client.config.website.pretty, this.client.config.website.url);
 
 		let embed = new Embed(uSettings, gSettings)
@@ -52,7 +52,7 @@ class SleepsCommand extends Command {
 				.setTitle(i18n.__('christmas.xmas_eve'));		
 		else
 			embed
-				.setTitle(i18n.__n('christmas.sleeps.title', sleeps));
+				.setTitle(i18n.__('christmas.sleeps.title', sleeps));
 
 		// ❯ return a promise
 		return message.util.send(embed);
