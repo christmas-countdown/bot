@@ -7,34 +7,34 @@
 
 const { join } = require('path');
 const fs = require('fs');
-const { format } = require('util');
 
-const get = (obj, path) => (
-	path.split('.').reduce((acc, part) => acc && acc[part], obj)
-);
+const get = (obj, path) => path.split('.').reduce((acc, part) => acc && acc[part], obj);
 
 module.exports = class I18n {
-	constructor (locale) {
+	constructor(locale) {
 		this.locale = locale;
 
 		if (!fs.existsSync(join(__dirname, this.locale + '.json')))
 			this.locale = 'en-GB';
-		
+
 		this.messages = require(`./${this.locale}.json`);
 		// console.log(I18n.locales);
 	}
 
-	__ (msg, ...args) {
-		let message = get(this.messages, msg);
+	__(msg, ...args) {
+		let message = get(this.messages, msg),
+			i = 0;
 		if (!message) return undefined;
-		return format(message, ...args);
+		// return format(message, ...args); // below is like util.format but doesn't add args if there's no placeholder
+		return message.replace(/%(d|s)/g, () => args[i++]);
 	}
 
-	__n (msg, num, ...args) {
-		let message = get(this.messages, msg);
+	__n(msg, ...args) { // args = [num, ...args];
+		let message = get(this.messages, msg),
+			i = 0;
 		if (!Array.isArray(message)) return null;
-		if (num === 1) return format(message[0], num, ...args);
-		else return format(message[1], num, ...args);
+
+		return (args[0] === 1 ? message[0] : message[1]).replace(/%(d|s)/g, () => args[i++]);
 	}
 
 	static get locales() {

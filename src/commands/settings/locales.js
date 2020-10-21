@@ -36,7 +36,7 @@ class ListLocalesCommand extends Command {
 		return message.util.send(
 			new Embed()
 				.setTitle(i18n.__('Locales'))
-				.addField(i18n.__('Valid locales'), i18n.getLocales().map(locale => `\`${locale}\``).join(', ')) // turn array into cool string
+				.addField(i18n.__('Valid locales'), I18n.locales.map(locale => `\`${locale}\``).join(', ')) // turn array into cool string
 				.addField(i18n.__('Don\'t see your language?'), i18n.__('Click [here](%s).', this.client.config.docs.locales))
 				.addField(i18n.__('Set the server language'), `[\`${prefix}server set locale: <locale>\`](${docs}#server-set)`)
 				.addField(i18n.__('Set your personal language'), `[\`${prefix}user set locale: <locale>\`](${docs}#user-set)`)
