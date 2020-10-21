@@ -141,6 +141,18 @@
 			"description": "Donate [here](%s) to unlock additional features."
 		}
 	},
+	"settings": {
+		"server": {
+			"reset": {
+				"title": ":white_check_mark: Server settings reset",
+				"description": "This server's settings have been reset to the defaults. Use %s to re-configure."
+			},
+			"server": "Server settings"
+		},
+		"sub_cmds": "The %s command has the following subcommands:\n\n%s",
+		"usage": "Usage",
+		"help": "Help"
+	},
 	"is-are": [
 		"is",
 		"are"

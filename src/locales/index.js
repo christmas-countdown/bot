@@ -18,16 +18,16 @@ module.exports = class I18n {
 		if (!fs.existsSync(join(__dirname, this.locale + '.json')))
 			this.locale = this.default_locale;
 
-		this.defaults = require(`./${this.default_locale}.json`);
+		this.defaults = require(`./${this.default_locale}.json`); // in case a file is missing messages 
 		this.messages = require(`./${this.locale}.json`);
 	}
 
 	__(msg, ...args) {
 		let message = get(this.messages, msg) || get(this.defaults, msg),
 			i = 0;
-		if (!message) return undefined;
-		if (message instanceof Array) // instanceof looks nicer than Array.isArray
-			message = args[0] === 1 ? message[0] : message[1];
+		if (!message) return undefined; // msg not found
+		if (message instanceof Array) message = args[0] === 1 ? message[0] : message[1]; // message is array, make it a string
+		else if (typeof message === 'object') throw new Error(`${msg} is an invalid message key, it is an object, not an array or string.`); // message is an object and not an array
 		return message.replace(/%(d|s)/g, () => args[i++]);
 	}
 

@@ -50,8 +50,8 @@ class ServerResetSettingsCommand extends Command {
 		// ❯ return a promise
 		return message.util.send(
 			new Embed()
-				.setTitle(i18n.__(':white_check_mark: Server settings reset'))
-				.setDescription(i18n.__('This server\'s settings have been reset to the defaults. Use %s to re-configure.', `[\`${prefix}server set\`](${docs}#server-set)`))
+				.setTitle(i18n.__('settings.server.reset.title'))
+				.setDescription(i18n.__('settings.server.reset.description', `[\`${prefix}server set\`](${docs}#server-set)`))
 		);
 
 	}
