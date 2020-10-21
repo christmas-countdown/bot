@@ -86,7 +86,60 @@
 		"footer": "View the live countdown at [%s](%s)."
 	},
 	"general": {
-		
+		"about": {
+			"title": "Information",
+			"description": "A Discord bot made by [eartharoid](%s).",
+			"fields": {
+				"prefix": {
+					"title": "Server prefix",
+					"default": "(default)"
+				},
+				"website": "Website",
+				"docs": "Documentation",
+				"support": "Support server",
+				"guilds": "Guilds",
+				"premium_guilds": ":star: Premium guilds",
+				"enabled_guilds": {
+					"title": "Counting down in",
+					"servers": [
+						"%d server",
+						"%d servers"
+					]
+				}
+			}
+		},
+		"help": {
+			"title": "Commands",
+			"description": "For more information about a specific command, use `%s` or click on its name. For distinction between days and sleeps, click [here](%s).\n",
+			"fields": {
+				"docs": {
+					"title": "❯ Documentation",
+					"click_here": "[click here](%s)"
+				},
+				"description": "❯ Description",
+				"aliases": {
+					"title": "❯ Aliases",
+					"extra": "Hyphens (-) can be omitted."
+				}
+			}
+		},
+		"invite": {
+			"title": "Invite",
+			"description": "Add the Christmas Countdown bot to your own server: [invite](%s)"
+		},
+		"ping": {
+			"title": "Pong!",
+			"fields": {
+				"shard_num": "Shard number",
+				"avg_ping": "Avg. ping",
+				"shard_ping": "Shard ping",
+				"latency": "Overall latency"
+			}
+		},
+		"premium": {
+			"title": ":star: Get premium",
+			"description": "Donate [here](%s) to unlock additional features."
+		}
 	},
 	"is-are": [
 		"is",

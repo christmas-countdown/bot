@@ -29,8 +29,8 @@ class PremiumCommand extends Command {
 
 		message.util.send(
 			new Embed()
-				.setTitle(i18n.__(':star: Get premium'))
-				.setDescription(i18n.__('Donate [here](%s) to unlock additional features.', this.client.config.premium))
+				.setTitle(i18n.__('general.premium.title'))
+				.setDescription(i18n.__('general.premium.description', this.client.config.premium))
 		);
 	
 	}

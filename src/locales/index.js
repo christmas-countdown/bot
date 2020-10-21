@@ -26,7 +26,7 @@ module.exports = class I18n {
 		let message = get(this.messages, msg) || get(this.defaults, msg),
 			i = 0;
 		if (!message) return undefined;
-		if (Array.isArray(message))
+		if (message instanceof Array) // instanceof looks nicer than Array.isArray
 			message = args[0] === 1 ? message[0] : message[1];
 		return message.replace(/%(d|s)/g, () => args[i++]);
 	}

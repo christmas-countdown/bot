@@ -30,8 +30,8 @@ class InviteCommand extends Command {
 
 		return message.util.send(
 			new Embed()
-				.setTitle(i18n.__('Invite'))
-				.setDescription(i18n.__('Add the Christmas Countdown bot to your own server: [invite](%s)', this.client.config.invite))
+				.setTitle(i18n.__('general.invite.title'))
+				.setDescription(i18n.__('general.invite.description', this.client.config.invite))
 		);
 	}
 }
