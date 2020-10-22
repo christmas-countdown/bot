@@ -139,7 +139,7 @@ Guild.sync();
 const {
 	AkairoClient,
 	CommandHandler,
-	InhibitorHandler,
+	// InhibitorHandler,
 	ListenerHandler,
 } = require('discord-akairo');
 
@@ -171,9 +171,9 @@ class Client extends AkairoClient {
 		this.listenerHandler = new ListenerHandler(this, {
 			directory: 'src/listeners/'
 		});
-		this.inhibitorHandler = new InhibitorHandler(this, {
-			directory: 'src/inhibitors/'
-		});
+		// this.inhibitorHandler = new InhibitorHandler(this, {
+		// 	directory: 'src/inhibitors/'
+		// });
 		this.commandHandler = new CommandHandler(this, {
 			automateCategories: true,
 			allowMention: true,
@@ -231,7 +231,7 @@ class Client extends AkairoClient {
 		});
 
 		this.commandHandler.useListenerHandler(this.listenerHandler);
-		this.commandHandler.useInhibitorHandler(this.inhibitorHandler);
+		// this.commandHandler.useInhibitorHandler(this.inhibitorHandler);
 
 		this.listenerHandler.setEmitters({
 			process: process,
@@ -239,7 +239,7 @@ class Client extends AkairoClient {
 		});
 
 		this.listenerHandler.loadAll();
-		this.inhibitorHandler.loadAll();
+		// this.inhibitorHandler.loadAll();
 		this.commandHandler.loadAll();
 
 		// config and database etc
