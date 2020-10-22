@@ -114,7 +114,7 @@
 			"fields": {
 				"docs": {
 					"title": "❯ Documentation",
-					"click_here": "[click here](%s)"
+					"click_here": "[Click here](%s)"
 				},
 				"description": "❯ Description",
 				"aliases": {
@@ -191,7 +191,7 @@
 				}
 			},
 			"user": "User settings",
-			"invalid": ":x: User settings" 
+			"invalid": ":x: User settings"
 		},
 		"sub_cmds": "The %s command has the following subcommands:\n\n%s",
 		"usage": "Usage",
@@ -236,6 +236,40 @@
 		"invalid": {
 			"description": "There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**",
 			"option": "Invalid input (see docs)"
+		},
+		"locales": {
+			"title": "Locales",
+			"fields": {
+				"valid_locales": "Valid locales",
+				"missing": {
+					"title": "Don't see your language?",
+					"click_here": "[Click here](%s)"
+				},
+				"set_server": "Set the server language",
+				"set_user": "Set your personal language"
+			}
+		},
+		"timezones": {
+			"title": "Timezones",
+			"title_by_country": "Timezones of %s",
+			"description": "Use %s to list timezones by country, where `<country>` is a country code (examples: `US`, `GB`,`DE`, `FR`, or `RU`)",
+			"fields": {
+				"set_server": "Set the server timezone",
+				"set_user": "Set your personal timezone",
+				"list": {
+					"title": "Valid timezones",
+					"too_long": "The list is too long to send! Click [here](%s) to visit the docs."
+				}
+			}
+		},
+		"toggle": {
+			"no_channel": {
+				"title": ":x: Cannot enable countdown before channel is set",
+				"description": "Use %s to set the channel."
+			},
+			"toggled": ":white_check_mark: Countdown %s",
+			"enabled": "enabled",
+			"disabled": "disabled"
 		}
 	},
 	"is-are": [
