@@ -147,16 +147,68 @@
 				"title": ":white_check_mark: Server settings reset",
 				"description": "This server's settings have been reset to the defaults. Use %s to re-configure."
 			},
-			"server": "Server settings"
+			"server": "Server settings",
+			"set": {
+				"invalid": {
+					"title": ":x: Server settings",
+					"description": "There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**"
+				},
+				"no_change": {
+					"title": "Server settings",
+					"description": "Nothing changed."
+				},
+				"success": {
+					"title": ":white_check_mark: Server settings updated"
+				}
+			}
 		},
 		"sub_cmds": "The %s command has the following subcommands:\n\n%s",
 		"usage": "Usage",
-		"help": "Help"
+		"help": "Help",
+		"options": {
+			"prefix": {
+				"title": "Prefix",
+				"error": "Invalid prefix. Too long perhaps?"
+			},
+			"locale": {
+				"title": "Locale",
+				"error": "Invalid locale name."
+			},
+			"timezone": {
+				"title": "Timezone",
+				"error": "Invalid timezone name."
+			},
+			"channel": {
+				"title": "Channel",
+				"error": "Invalid channel mention."
+			},
+			"role": {
+				"title": "Role",
+				"error": "Invalid role mention."
+			},
+			"auto": {
+				"title": "Auto",
+				"error": "Invalid boolean."
+			},
+			"enabled": {
+				"title": "Enabled",
+				"error": "Invalid boolean.",
+				"channel_not_set": "Cannot enable countdown before channel is set"
+			},
+			"mention": {
+				"title": "Mention",
+				"error": "Invalid boolean.",
+				"role_not_set": "Cannot enable mentioning before role is set"
+			}
+		},
+		"invalid": "Invalid input (see docs)",
+		"premium": ":star: This is a premium option"
 	},
 	"is-are": [
 		"is",
 		"are"
 	],
 	"user_timezone": "User timezone: %s",
-	"sever_timezone": "Server timezone: %s"
+	"sever_timezone": "Server timezone: %s",
+	"none": "none"
 }

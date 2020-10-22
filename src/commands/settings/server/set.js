@@ -100,19 +100,19 @@ class ServerSetSettingsCommand extends Command {
 		for (let arg in args) {
 			if (!args[arg]) {
 				if (message.content.includes(arg + ':'))
-					invalid.push([arg, this.client.config.options[arg]?.error || 'Invalid input (see docs)']);
+					invalid.push([arg, i18n.__(`settings.options.${arg}.error`) || i18n.__('settings.invalid')]);
 				continue;
 			}
 
-			if (this.client.config.options[arg].premium && !gSettings.get('premium')) {
-				invalid.push([arg, ':star: This is a premium option']);
+			if (this.client.config.premium_options.includes(arg) && !gSettings.premium) {
+				invalid.push([arg, i18n.__('settings.premium')]);
 				continue;
 			}
 
 			switch (arg) {
 			case 'prefix':
 				if (args[arg].length > 20) {
-					invalid.push([arg, 'Prefix is too long']);
+					invalid.push([arg, i18n.__('settings.options.prefix.error')]);
 					continue;
 				}	
 				gSettings.set(arg, args[arg]);
@@ -126,17 +126,21 @@ class ServerSetSettingsCommand extends Command {
 				gSettings.set(arg, args[arg].id);
 				break;
 
+			case 'auto':
+				gSettings.set(arg, args[arg][0]);
+				break;
+
 			case 'enabled':
-				if (!gSettings.get('channel')) {
-					invalid.push([arg, 'Cannot enable countdown before channel is set']);
+				if (!gSettings.channel) {
+					invalid.push([arg, i18n.__('settings.options.enabled.channel_not_set')]);
 					continue;
 				}
 				gSettings.set(arg, args[arg][0]);
 				break;
 
 			case 'mention':
-				if (!gSettings.get('role')) {
-					invalid.push([arg, 'Cannot enable mentioning before role is set']);
+				if (!gSettings.role) {
+					invalid.push([arg, i18n.__('settings.options.mention.role_not_set')]);
 					continue;
 				}
 				gSettings.set(arg, args[arg][0]);
@@ -156,37 +160,38 @@ class ServerSetSettingsCommand extends Command {
 			let list = '';
 
 			for (let i in invalid)
-				list += `❯ [\`${invalid[i][0]}\`](${docs}/server#${invalid[i][0]}) » ${i18n.__(invalid[i][1])}\n`;
+				list += `❯ [\`${invalid[i][0]}\`](${docs}/server#${invalid[i][0]}) » ${invalid[i][1]}\n`;
 
 			return message.util.send(
 				new Embed()
-					.setTitle(':x: Server settings')
-					.setDescription(i18n.__('There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**',
-						list
-					))
+					.setTitle(i18n.__('settings.server.set.invalid.title'))
+					.setDescription(i18n.__('settings.server.set.invalid.description', list))
 			);
 		}
 
-		const capitalise = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+		// const capitalise = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 		// const capitalise = (str) => str.replace(/^\w/, first => first.toUpperCase());
 
 		let embed = new Embed();
 
 		if (counter === 0)
 			embed
-				.setTitle(i18n.__('Server settings'))
-				.setDescription(i18n.__('Nothing changed.'));
+				.setTitle(i18n.__('settings.server.set.no_change.title'))
+				.setDescription(i18n.__('settings.server.set.no_change.description'));
 		else
 			embed
-				.setTitle(i18n.__(':white_check_mark: Server settings updated'));
+				.setTitle(i18n.__('settings.server.set.success.title'));
 		
-		for (let arg in args)
+		for (let arg in args) {
+			let title = i18n.__(`settings.options.${arg}.title`);
 			if (arg === 'channel')
-				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `<#${gSettings.get(arg)}>` : i18n.__('none'), true);
+				embed.addField(title, gSettings.get(arg) !== null ? `<#${gSettings.get(arg)}>` : i18n.__('none'), true);
 			else if (arg === 'role')
-				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `<@&${gSettings.get(arg)}>` : i18n.__('none'), true);
-			else 
-				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `\`${gSettings.get(arg)}\`` : i18n.__('none'), true);
+				embed.addField(title, gSettings.get(arg) !== null ? `<@&${gSettings.get(arg)}>` : i18n.__('none'), true);
+			else
+				embed.addField(title, gSettings.get(arg) !== null ? `\`${gSettings.get(arg)}\`` : i18n.__('none'), true);
+		}
+			
 
 		return message.util.send(embed);
 
