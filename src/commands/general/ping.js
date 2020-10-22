@@ -6,10 +6,9 @@
  */
 
 const { Command } = require('discord-akairo');
-const { Embed, i18n: i18nOptions } = require('../../bot');
+const { Embed } = require('../../bot');
 
-const { I18n } = require('i18n');
-const i18n = new I18n(i18nOptions);
+const I18n = require('../../locales');
 
 class PingCommand extends Command {
 	constructor() {
@@ -27,17 +26,17 @@ class PingCommand extends Command {
 		let uSettings = await message.author.settings(),
 			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		let embed = new Embed()
-			.setTitle(i18n.__('Pong!'))
-			.addField(i18n.__('Shard number'), client.shard.ids, false)
-			.addField(i18n.__('Avg. ping'), client.ws.ping + 'ms', true)
-			.addField(i18n.__('Shard ping'), client.ws.shards.get(client.shard.ids[0]).ping + 'ms', true)
+			.setTitle(i18n.__('general.ping.title'))
+			.addField(i18n.__('general.ping.fields.shard_num'), client.shard.ids, false)
+			.addField(i18n.__('general.ping.fields.avg_ping'), client.ws.ping + 'ms', true)
+			.addField(i18n.__('general.ping.fields.shard_ping'), client.ws.shards.get(client.shard.ids[0]).ping + 'ms', true);
 		let m = await message.util.send(embed);
 
 		// ❯ return a promise
-		return message.util.edit(embed.addField(i18n.__('Overall latency'), m.createdTimestamp - message.createdTimestamp  + 'ms', true));
+		return message.util.edit(embed.addField(i18n.__('general.ping.fields.latency'), m.createdTimestamp - message.createdTimestamp  + 'ms', true));
 		// m.edit
 	}
 }

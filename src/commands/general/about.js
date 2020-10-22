@@ -6,10 +6,9 @@
  */
 
 const { Command } = require('discord-akairo');
-const { Embed, i18n: i18nOptions } = require('../../bot');
+const { Embed } = require('../../bot');
 
-const { I18n } = require('i18n');
-const i18n = new I18n(i18nOptions);
+const I18n = require('../../locales');
 
 class InfoCommand extends Command {
 	constructor() {
@@ -27,25 +26,26 @@ class InfoCommand extends Command {
 		let uSettings = await message.author.settings(),
 			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		const prefix = gSettings?.prefix || this.client.config.prefix;
+		let isDefault = prefix === this.client.config.prefix ? ` ${i18n.__('general.about.fields.prefix.default')}` : '';
 		
 		return message.util.send(
 			new Embed()
-				.setTitle(i18n.__('Information'))
-				.setDescription(i18n.__('A Discord bot made by %s.', '[eartharoid](https://eartharoid.me)'))
-				.addField(i18n.__('Server prefix'), `\`${prefix}\` ${prefix === this.client.config.prefix ? '(default)': ''}`, true)
-				.addField(i18n.__('Website'), `[${this.client.config.website.pretty}](${this.client.config.website.url})`, false)
-				.addField(i18n.__('Documentation'), `[${this.client.config.docs.pretty}](${this.client.config.docs.main})`, false)
-				.addField(i18n.__('Support server'), `[${this.client.config.support.invite}](${this.client.config.support.url})`, false)
-				.addField(i18n.__('Guilds'), await this.client.db.Guild.count(), true)
-				.addField(i18n.__(':star: Premium guilds'), await this.client.db.Guild.count({
+				.setTitle(i18n.__('general.about.title'))
+				.setDescription(i18n.__('general.about.description', 'https://eartharoid.me'))
+				.addField(i18n.__('general.about.fields.prefix.title'), `\`${prefix}\`${isDefault}`, true)
+				.addField(i18n.__('general.about.fields.website'), `[${this.client.config.website.pretty}](${this.client.config.website.url})`, false)
+				.addField(i18n.__('general.about.fields.docs'), `[${this.client.config.docs.pretty}](${this.client.config.docs.main})`, false)
+				.addField(i18n.__('general.about.fields.support'), `[${this.client.config.support.invite}](${this.client.config.support.url})`, false)
+				.addField(i18n.__('general.about.fields.guilds'), await this.client.db.Guild.count(), true)
+				.addField(i18n.__('general.about.fields.premium_guilds'), await this.client.db.Guild.count({
 					where: {
 						premium: true
 					}
 				}), true)
-				.addField(i18n.__('Counting down in'), i18n.__('%d servers', await this.client.db.Guild.count({
+				.addField(i18n.__('general.about.fields.enabled_guilds.title'), i18n.__('general.about.fields.enabled_guilds.servers', await this.client.db.Guild.count({
 					where: {
 						enabled: true
 					}

@@ -6,10 +6,9 @@
  */
 
 const { Command } = require('discord-akairo');
-const { Embed, i18n: i18nOptions } = require('../../bot');
+const { Embed } = require('../../bot');
 
-const { I18n } = require('i18n');
-const i18n = new I18n(i18nOptions);
+const I18n = require('../../locales');
 
 class PremiumCommand extends Command {
 	constructor() {
@@ -26,12 +25,12 @@ class PremiumCommand extends Command {
 		let uSettings = await message.author.settings(),
 			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		message.util.send(
 			new Embed()
-				.setTitle(i18n.__(':star: Get premium'))
-				.setDescription(i18n.__('Donate [here](%s) to unlock additional features.', this.client.config.premium))
+				.setTitle(i18n.__('general.premium.title'))
+				.setDescription(i18n.__('general.premium.description', this.client.config.premium))
 		);
 	
 	}

@@ -6,10 +6,9 @@
  */
 
 const { Command } = require('discord-akairo');
-const { Embed, i18n: i18nOptions } = require('../../../bot');
+const { Embed } = require('../../../bot');
 
-const { I18n } = require('i18n');
-const i18n = new I18n(i18nOptions);
+const I18n = require('../../../locales');
 
 class UserResetSettingsCommand extends Command {
 	constructor() {
@@ -29,7 +28,7 @@ class UserResetSettingsCommand extends Command {
 		let uSettings = await message.author.settings(),
 			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		if (uSettings)
 			uSettings.destroy(); // delete
@@ -40,8 +39,8 @@ class UserResetSettingsCommand extends Command {
 		// ❯ return a promise
 		return message.util.send(
 			new Embed()
-				.setTitle(i18n.__(':white_check_mark: User settings reset'))
-				.setDescription(i18n.__('Your settings have been reset to the defaults. Use `%s` to re-configure.', prefix + 'user set'))
+				.setTitle(i18n.__('settings.user.reset.title'))
+				.setDescription(i18n.__('settings.user.reset.description', prefix + 'user set'))
 		);
 
 	}

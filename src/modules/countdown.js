@@ -8,10 +8,9 @@
 const spacetime = require('spacetime');
 const utils = require('./utils');
 const Christmas = require('./christmas');
-const { Embed, i18n: i18nOptions } = require('../bot');
+const { Embed } = require('../bot');
 
-const { I18n } = require('i18n');
-const i18n = new I18n(i18nOptions);
+const I18n = require('../locales');
 
 module.exports = {
 	disable: async guild => {
@@ -85,15 +84,15 @@ module.exports = {
 				return client.log.console('Disabled guild with invalid permissions in channel');
 			}
 			
-			i18n.setLocale(settings.locale || 'en-GB');
+			const i18n = new I18n(settings.locale || 'en-GB');
 
-			let xmas = new Christmas(false || settings.timezone),
+			let xmas = new Christmas(settings.timezone),
 				sleeps = xmas.sleeps;
 
-			let text = i18n.__n('There is **%d** sleep left until Christmas!', 'There are **%d** sleeps left until Christmas!', sleeps),
+			let text = i18n.__('There is **%d** sleep left until Christmas!', 'There are **%d** sleeps left until Christmas!', sleeps),
 				footer = i18n.__('View the live countdown at [%s](%s).', client.config.website.pretty, client.config.website.url);
 
-			let embed = new Embed(false, settings)
+			let embed = new Embed(null, settings)
 				.setURL(client.config.website.url + '/total#sleeps')
 				.setDescription(text + '\n\n' + footer)
 				.setTimestamp();
@@ -107,7 +106,7 @@ module.exports = {
 					.setTitle(i18n.__('It\'s Christmas Eve!'));
 			else
 				embed
-					.setTitle(i18n.__n('%d sleep left', '%d sleeps left', sleeps));
+					.setTitle(i18n.__('%d sleep left', '%d sleeps left', sleeps));
 
 			try {
 				channel.send(embed);

@@ -42,40 +42,7 @@ module.exports = {
 			type: 'WATCHING'
 		},
 	],
-	options: {
-		prefix: {
-			error: 'Invalid prefix. Too long perhaps?',
-			premium: false
-		},
-		locale: {
-			error: 'Invalid locale name.',
-			premium: false
-		},
-		timezone: {
-			error: 'Invalid timezone name.',
-			premium: false
-		},
-		channel: {
-			error: 'Invalid channel mention.',
-			premium: false
-		},
-		role: {
-			error: 'Invalid role mention.',
-			premium: true
-		},
-		auto: {
-			error: 'Invalid boolean.',
-			premium: true
-		},
-		enabled: {
-			error: 'Invalid boolean.',
-			premium: false
-		},
-		mention: {
-			error: 'Invalid boolean.',
-			premium: true
-		},
-	},
+	premium_options: ['role', 'auto', 'mention'],
 	cooldown: 5,
 	respawn: true, // respawn dead shards?
 	debug: false,

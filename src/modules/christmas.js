@@ -76,16 +76,16 @@ module.exports = class ChristmasCountdown {
 
 	get total() {
 		let n = this.now.diff(this.christmas, 'seconds');
-		let days = n / (24 * 3600) ;
+		let days = Math.floor(n / (24 * 3600));
 
 		n = n % (24 * 3600);
-		let hours = n / 3600;
+		let hours = Math.floor(n / 3600);
 
 		n %= 3600;
-		let minutes = n / 60;
+		let minutes = Math.floor(n / 60);
 
 		n %= 60;
-		let seconds = n;
+		let seconds = Math.floor(n);
 
 		let live = {
 			months_based: this.christmas.since(this.now).diff,

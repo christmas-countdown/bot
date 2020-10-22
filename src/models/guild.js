@@ -25,11 +25,11 @@ module.exports.defaults = (guild) => {
 		locale: 'en-GB',
 		timezone: 'UTC',
 		channel: null,
-		role: null, // these could be omitted except reset doesn't delete, these overwrite
+		role: null,
 		auto: false,
 		enabled: false,
 		mention: false,
-		premium: false,
+		// premium: false, // don't overwrite the premium option
 		last: null
 	};
 };

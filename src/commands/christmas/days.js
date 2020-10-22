@@ -6,10 +6,9 @@
  */
 
 const { Command } = require('discord-akairo');
-const { Embed, i18n: i18nOptions } = require('../../bot');
+const { Embed } = require('../../bot');
 
-const { I18n } = require('i18n');
-const i18n = new I18n(i18nOptions);
+const I18n = require('../../locales');
 
 const Christmas = require('../../modules/christmas');
 
@@ -30,13 +29,13 @@ class DaysCommand extends Command {
 		let uSettings = await message.author.settings(),
 			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		let xmas = new Christmas(uSettings?.timezone || gSettings?.timezone),
 			days = xmas.days;
 
-		let text = i18n.__n('There is **%d** day left until Christmas!', 'There are **%d** days left until Christmas!', days),
-			footer = i18n.__('View the live countdown at [%s](%s).', this.client.config.website.pretty, this.client.config.website.url);
+		let text = i18n.__('christmas.days.text', days),
+			footer = i18n.__('christmas.footer', this.client.config.website.pretty, this.client.config.website.url);
 
 		let embed = new Embed(uSettings, gSettings)
 			.setAuthor(message.author.username, message.author.displayAvatarURL())
@@ -46,14 +45,15 @@ class DaysCommand extends Command {
 
 		if (xmas.isToday)
 			embed
-				.setTitle(i18n.__('It\'s Christmas Day! :tada:'))
-				.setDescription(text + `\n\n${i18n.__('Merry Christmas!')}` + `\n\n${footer}`);
+				.setTitle(i18n.__('christmas.xmas_day'))
+				.setDescription(`${text}\n\n${i18n.__('christmas.merry_xmas')}\n\n${footer}`);
 		else if (xmas.isTomorrow)
 			embed
-				.setTitle(i18n.__('It\'s Christmas Eve!'));		
+				.setTitle(i18n.__('christmas.xmas_eve'));
 		else
 			embed
-				.setTitle(i18n.__n('%d day left', '%d days left', days));
+				.setTitle(i18n.__('christmas.days.title', days));
+
 
 		// ❯ return a promise
 		return message.util.send(embed);

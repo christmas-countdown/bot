@@ -6,10 +6,9 @@
  */
 
 const { Command } = require('discord-akairo');
-const { Embed, i18n: i18nOptions } = require('../../bot');
+const { Embed } = require('../../bot');
 
-const { I18n } = require('i18n');
-const i18n = new I18n(i18nOptions);
+const I18n = require('../../locales');
 
 class InviteCommand extends Command {
 	constructor() {
@@ -27,12 +26,12 @@ class InviteCommand extends Command {
 		let uSettings = await message.author.settings(),
 			gSettings = await message.guild?.settings();
 
-		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		return message.util.send(
 			new Embed()
-				.setTitle(i18n.__('Invite'))
-				.setDescription(i18n.__('Add the Christmas Countdown bot to your own server: [invite](%s)', this.client.config.invite))
+				.setTitle(i18n.__('general.invite.title'))
+				.setDescription(i18n.__('general.invite.description', this.client.config.invite))
 		);
 	}
 }

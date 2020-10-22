@@ -6,9 +6,9 @@
  */
 
 global.prefix = 'SHARD ' + process.env.SHARDS;
-const path = require('path');
 const fs = require('fs');
 const config = require('../config');
+const I18n = require('./locales');
 
 const Logger = require('leekslazylogger');
 const log = new Logger({
@@ -46,22 +46,6 @@ const log = new Logger({
 });
 
 /**
- * Localisation
- */
-
-let i18nOptions = {
-	directory: path.join(__dirname, 'locales'),
-	defaultLocale: 'en-GB',
-	retryInDefaultLocale: true,
-	logDebugFn: log.debug,
-	logWarnFn: log.warn,
-	logErrorFn: log.error,
-};
-
-const { I18n } = require('i18n');
-const i18n = new I18n(i18nOptions);
-
-/**
  * Analytics
  */
 const Countly = require('countly-sdk-nodejs');
@@ -73,17 +57,17 @@ Countly.init({
 Countly.begin_session();
 Countly.track_errors();
 
+
 /**
  * Structures
  */
-
 const structures = fs.readdirSync('src/structures').filter(file => file.endsWith('.js'));
 for (const structure of structures)
 	require(`./structures/${structure}`);
 
-/** MessageEmbed can't be extended like User and Guild */
 const {
 	MessageEmbed,
+	// MessageMentions,
 	Intents
 } = require('discord.js');
 	
@@ -93,7 +77,7 @@ class Embed extends MessageEmbed {
 	
 		this.color = client.config.colour;
 
-		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		if(!uSettings && !gSettings) {
 			this.footer = {
@@ -103,7 +87,7 @@ class Embed extends MessageEmbed {
 
 		} else {
 			let timezone = uSettings?.timezone || gSettings?.timezone;
-			timezone = i18n.__(`${uSettings?.timezone ? 'User' : 'Server'} timezone: %s`, timezone);
+			timezone = i18n.__(`${uSettings?.timezone ? 'user' : 'server'}_timezone`, timezone);
 
 			this.footer = {
 				text: timezone,
@@ -116,17 +100,13 @@ class Embed extends MessageEmbed {
 }
 /** exports */
 module.exports = {
-	i18n: i18nOptions,
 	Embed
 };
 
 
 /**
- * 
  * Database connection & models
- * 
  */
-
 const {
 	Sequelize,
 	Model
@@ -154,11 +134,8 @@ Guild.sync();
 
 
 /**
- * 
  * Discord client
- * 
  */
-
 const {
 	AkairoClient,
 	CommandHandler,
@@ -220,13 +197,13 @@ class Client extends AkairoClient {
 		});
 
 		const timezones = require('./storage/timezones.json'); // generated with moment-timezone (moment.tz.names())
-
 		this.commandHandler.resolver.addType('timezone', (message, phrase) => {
 			if (!phrase) return null;
 			phrase = phrase.trim().toLowerCase();
 			let tz = timezones.all.find(zone => zone.toLowerCase() === phrase);
 			return tz || null;
 		});
+
 		this.commandHandler.resolver.addType('countryCode', (message, phrase) => {
 			if (!phrase) return null;
 			phrase = phrase.trim().toUpperCase();
@@ -237,8 +214,20 @@ class Client extends AkairoClient {
 		this.commandHandler.resolver.addType('locale', (message, phrase) => {
 			if (!phrase) return null;
 			phrase = phrase.trim().toLowerCase().replace('_', '-');
-			let locale = i18n.getLocales().find(l => l.toLowerCase() === phrase);
+			let locale = I18n.locales.find(l => l.toLowerCase() === phrase);
 			return locale || null;
+		});
+
+		this.commandHandler.resolver.addType('_channel', (message, phrase) => {
+			if (!phrase) return null;
+			return this.util.resolveChannel(phrase, message.guild.channels.cache);
+		});
+
+		this.commandHandler.resolver.addType('_role', (message, phrase) => {
+			if (!phrase) return null;
+			// let match = MessageMentions.ROLES_PATTERN.exec(phrase);
+			// return this.util.resolveRole(match ? match[1] : phrase, message.guild.roles.cache);
+			return this.util.resolveRole(phrase, message.guild.roles.cache);
 		});
 
 		this.commandHandler.useListenerHandler(this.listenerHandler);

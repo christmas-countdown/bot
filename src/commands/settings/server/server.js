@@ -9,11 +9,11 @@ const {
 	Command,
 	Flag
 } = require('discord-akairo');
-const { Embed, i18n: i18nOptions } = require('../../../bot');
+const { Embed } = require('../../../bot');
 
 const { stripIndents } = require('common-tags');
-const { I18n } = require('i18n');
-const i18n = new I18n(i18nOptions);
+
+const I18n = require('../../../locales');
 
 class ServerSettingsCommand extends Command {
 	constructor() {
@@ -47,7 +47,7 @@ class ServerSettingsCommand extends Command {
 				let uSettings = await message.author.settings(),
 					gSettings = await message.guild?.settings();
 		
-				i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+				const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 		
 				const prefix = gSettings?.prefix || this.client.config.prefix;
 
@@ -55,17 +55,15 @@ class ServerSettingsCommand extends Command {
 					moreInfo = 'Click subcommand for more information';
 
 				return new Embed()
-					.setTitle(i18n.__('Server settings'))
-					.setDescription(i18n.__(
-						'The %s command has the following subcommands:\n\n%s',
-
+					.setTitle(i18n.__('settings.server.server'))
+					.setDescription(i18n.__('settings.sub_cmds',
 						`[\`${this.id}\`](${docs}#server)`,
-						stripIndents`❯ [\`setup\`](${docs}#server-setup "server setup") » ${i18n.__(this.handler.findCommand('server-setup').description.content || moreInfo)}
-							❯ [\`set\`](${docs}#server-set "server set") » ${i18n.__(this.handler.findCommand('server-set').description.content || moreInfo)}
-							❯ [\`reset\`](${docs}#server-reset "server reset") » ${i18n.__(this.handler.findCommand('server-reset').description.content || moreInfo)}`,
+						stripIndents`❯ [\`setup\`](${docs}#server-setup "server setup") » ${this.handler.findCommand('server-setup').description.content || moreInfo}
+							❯ [\`set\`](${docs}#server-set "server set") » ${this.handler.findCommand('server-set').description.content || moreInfo}
+							❯ [\`reset\`](${docs}#server-reset "server reset") » ${this.handler.findCommand('server-reset').description.content || moreInfo}`,
 					))					
-					.addField(i18n.__('Usage'), `\`${prefix}server set <args>\``)
-					.addField(i18n.__('Help'), `\`${prefix}help server\``);
+					.addField(i18n.__('settings.usage'), `\`${prefix}server set <args>\``)
+					.addField(i18n.__('settings.help'), `\`${prefix}help server\``);
 			},
 		};
 

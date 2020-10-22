@@ -6,10 +6,7 @@
  */
 
 const { Command } = require('discord-akairo');
-const { Embed, i18n: i18nOptions } = require('../../bot');
-
-const { I18n } = require('i18n');
-const i18n = new I18n(i18nOptions);
+const { Embed } = require('../../bot');
 
 class TogglePremiumCommand extends Command {
 	constructor() {

@@ -6,13 +6,12 @@
  */
 
 const { Command } = require('discord-akairo');
-const { Embed, i18n: i18nOptions } = require('../../../bot');
+const { Embed } = require('../../../bot');
 const { MessageEmbed } = require('discord.js');
 
 const config = require('../../../../config');
 
-const { I18n } = require('i18n');
-const i18n = new I18n(i18nOptions);
+const I18n = require('../../../locales');
 
 class ServerSetupCommand extends Command {
 	constructor() {
@@ -32,19 +31,18 @@ class ServerSetupCommand extends Command {
 	async *args(message) {
 		let uSettings = await message.author.settings(),
 			gSettings = await message.guild?.settings();
-		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+		
+		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		const timezone = yield { 
 			type: 'timezone',
 			prompt: {
-				start: () =>new MessageEmbed()
+				start: () => new MessageEmbed()
 					.setColor(config.colour)
-					.setDescription(i18n.__('**Which timezone do you want the bot to use?**\n\n[Click here for a list of timezones](%s).\nIf you don\'t know, choose `UTC` now, __you can change this later__.',
-						config.docs.timezones
-					)),
+					.setDescription(i18n.__('settings.server.setup.prompts.timezone.prompt', config.docs.timezones)),
 				retry: () => new MessageEmbed()
 					.setColor(config.colour)
-					.setDescription(i18n.__('Invalid timezone. See the [docs](%s). Exited prompt.', config.docs.timezones)),
+					.setDescription(i18n.__('settings.server.setup.prompts.timezone.error', config.docs.timezones)),
 				// optional: true,
 			}
 		};
@@ -54,10 +52,10 @@ class ServerSetupCommand extends Command {
 			prompt: {
 				start: () => new MessageEmbed()
 					.setColor(config.colour)
-					.setDescription(i18n.__('**Enable the countdown?** (`yes`/`no`)\n__You can change this later__.')),
+					.setDescription(i18n.__('settings.server.setup.prompts.enabled.prompt')),
 				retry: () => new MessageEmbed()
 					.setColor(config.colour)
-					.setDescription(i18n.__('Invalid input. Exited prompt.')),
+					.setDescription(i18n.__('settings.server.setup.prompts.enabled.error')),
 				// optional: true,
 			}
 		};
@@ -65,14 +63,14 @@ class ServerSetupCommand extends Command {
 		const channel = yield (
 			enabled[0]
 				? { 
-					type: 'channelMention',
+					type: '_channel',
 					prompt: {
 						start: () => new MessageEmbed()
 							.setColor(config.colour)
-							.setDescription(i18n.__('Mention the text channel you want the countdown to use.')),
+							.setDescription(i18n.__('settings.server.setup.prompts.channel.prompt')),
 						retry: () => new MessageEmbed()
 							.setColor(config.colour)
-							.setDescription(i18n.__('Invalid channel mention. Exited prompt.')),
+							.setDescription(i18n.__('settings.server.setup.prompts.channel.error')),
 						// optional: true,
 					}
 				}
@@ -89,7 +87,7 @@ class ServerSetupCommand extends Command {
 		let uSettings = await message.author.settings(),
 			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		let invalid = [],
 			counter = 0;
@@ -97,11 +95,22 @@ class ServerSetupCommand extends Command {
 		for (let arg in args) {
 			if (!args[arg]) {
 				if (message.content.includes(arg + ':'))
-					invalid.push([arg, this.client.config.options[arg]?.error || 'Invalid input (see docs)']);
+					invalid.push([arg, i18n.__(`settings.options.${arg}.error`) || i18n.__('settings.invalid.option')]);
 				continue;
 			}
+
+			switch (arg) {
+			case 'channel':
+				gSettings.set(arg, args[arg].id);
+				break;
+			case 'enabled':
+				gSettings.set(arg, args[arg][0]);
+				break;
+			default:
+				gSettings.set(arg, args[arg]);
+			}
 	
-			gSettings.set(arg, args[arg]);
+			
 
 			counter++;
 		}
@@ -113,39 +122,38 @@ class ServerSetupCommand extends Command {
 			let list = '';
 
 			for (let i in invalid)
-				list += `❯ [\`${invalid[i][0]}\`](${docs}/server#${invalid[i][0]}) » ${i18n.__(invalid[i][1])}\n`;
+				list += `❯ [\`${invalid[i][0]}\`](${docs}/server#${invalid[i][0]}) » ${invalid[i][1]}\n`;
 
 			return message.util.send(
 				new Embed()
-					.setTitle(':x: Server settings')
-					.setDescription(i18n.__('There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**',
-						list
-					))
+					.setTitle(i18n.__('settings.server.invalid'))
+					.setDescription(i18n.__('settings.invalid.description', list))
 			);
 		}
 
-		const capitalise = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 		let embed = new Embed();
 
 		if (counter === 0)
 			embed
-				.setTitle(i18n.__('Server settings'))
-				.setDescription(i18n.__('Nothing changed.'));
+				.setTitle(i18n.__('settings.server.set.no_change.title'))
+				.setDescription(i18n.__('settings.server.set.no_change.description'));
 		else
 			embed
-				.setTitle(i18n.__(':white_check_mark: Server settings updated'))
-				.setDescription(i18n.__('You can further modify your settings with [`%sserver set`](%s).',
+				.setTitle(i18n.__('settings.server.set.success.title'))
+				.setDescription(i18n.__('settings.server.setup.success',
 					gSettings.prefix || this.client.config.prefix,
 					this.client.config.docs.commands + '#server-set'
 				));
 		
-		for (let arg in args)
+		for (let arg in args) {
+			let title = i18n.__(`settings.options.${arg}.title`);
 			if (arg === 'channel')
-				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `<#${gSettings.get(arg)}>` : i18n.__('none'), true);
+				embed.addField(title, gSettings.get(arg) !== null ? `<#${gSettings.get(arg)}>` : i18n.__('none'), true);
 			else if (arg === 'role')
-				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `<@&${gSettings.get(arg)}>` : i18n.__('none'), true);
-			else 
-				embed.addField(i18n.__(capitalise(arg)), gSettings.get(arg) !== null ? `\`${gSettings.get(arg)}\`` : i18n.__('none'), true);
+				embed.addField(title, gSettings.get(arg) !== null ? `<@&${gSettings.get(arg)}>` : i18n.__('none'), true);
+			else
+				embed.addField(title, gSettings.get(arg) !== null ? `\`${gSettings.get(arg)}\`` : i18n.__('none'), true);
+		}
 
 		return message.util.send(embed);
 

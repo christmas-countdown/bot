@@ -6,10 +6,9 @@
  */
 
 const { Command } = require('discord-akairo');
-const { Embed, i18n: i18nOptions } = require('../../bot');
+const { Embed } = require('../../bot');
 
-const { I18n } = require('i18n');
-const i18n = new I18n(i18nOptions);
+const I18n = require('../../locales');
 
 class ToggleCommand extends Command {
 	constructor() {
@@ -31,15 +30,15 @@ class ToggleCommand extends Command {
 		let uSettings = await message.author.settings(),
 			gSettings = await message.guild?.settings();
 		
-		i18n.setLocale(uSettings?.locale || gSettings?.locale || 'en-GB');
+		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
 		const prefix = gSettings?.prefix || this.client.config.prefix;
 
 		if (!gSettings.channel)
 			return message.util.send(
 				new Embed()
-					.setTitle(i18n.__(':x: Cannot enable countdown before channel is set'))
-					.setDescription(i18n.__('Use %s to set the channel.', `[\`${prefix}server set\`](${this.client.config.docs.commands}#server-set)`))
+					.setTitle(i18n.__('settings.toggle.no_channel.title'))
+					.setDescription(i18n.__('settings.toggle.no_channel.description', `[\`${prefix}server set\`](${this.client.config.docs.commands}#server-set)`))
 			);
 
 		gSettings.set('enabled', !gSettings.enabled);
@@ -48,7 +47,7 @@ class ToggleCommand extends Command {
 		// ❯ return a promise
 		return message.util.send(
 			new Embed()
-				.setTitle(i18n.__(':white_check_mark: Countdown %s', i18n.__(!gSettings.enabled ? 'disabled' : 'enabled')))
+				.setTitle(i18n.__('settings.toggle.toggled', i18n.__(!gSettings.enabled ? 'settings.toggle.disabled' : 'settings.toggle.enabled')))
 		);
 
 	}
