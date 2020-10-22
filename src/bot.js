@@ -67,6 +67,7 @@ for (const structure of structures)
 
 const {
 	MessageEmbed,
+	// MessageMentions,
 	Intents
 } = require('discord.js');
 	
@@ -196,13 +197,13 @@ class Client extends AkairoClient {
 		});
 
 		const timezones = require('./storage/timezones.json'); // generated with moment-timezone (moment.tz.names())
-
 		this.commandHandler.resolver.addType('timezone', (message, phrase) => {
 			if (!phrase) return null;
 			phrase = phrase.trim().toLowerCase();
 			let tz = timezones.all.find(zone => zone.toLowerCase() === phrase);
 			return tz || null;
 		});
+
 		this.commandHandler.resolver.addType('countryCode', (message, phrase) => {
 			if (!phrase) return null;
 			phrase = phrase.trim().toUpperCase();
@@ -215,6 +216,18 @@ class Client extends AkairoClient {
 			phrase = phrase.trim().toLowerCase().replace('_', '-');
 			let locale = I18n.locales.find(l => l.toLowerCase() === phrase);
 			return locale || null;
+		});
+
+		this.commandHandler.resolver.addType('_channel', (message, phrase) => {
+			if (!phrase) return null;
+			return this.util.resolveChannel(phrase, message.guild.channels.cache);
+		});
+
+		this.commandHandler.resolver.addType('_role', (message, phrase) => {
+			if (!phrase) return null;
+			// let match = MessageMentions.ROLES_PATTERN.exec(phrase);
+			// return this.util.resolveRole(match ? match[1] : phrase, message.guild.roles.cache);
+			return this.util.resolveRole(phrase, message.guild.roles.cache);
 		});
 
 		this.commandHandler.useListenerHandler(this.listenerHandler);

@@ -56,13 +56,13 @@ class ServerSetSettingsCommand extends Command {
 					id: 'channel',
 					match: 'option',
 					flag: 'channel:',
-					type: 'channelMention', // textChannel
+					type: '_channel', // channelMention, textChannel
 				},
 				{
 					id: 'role',
 					match: 'option',
 					flag: 'role:',
-					type: 'roleMention', // role
+					type: '_role', // roleMention, role
 				},
 				{
 					id: 'auto',
@@ -100,7 +100,7 @@ class ServerSetSettingsCommand extends Command {
 		for (let arg in args) {
 			if (!args[arg]) {
 				if (message.content.includes(arg + ':'))
-					invalid.push([arg, i18n.__(`settings.options.${arg}.error`) || i18n.__('settings.invalid')]);
+					invalid.push([arg, i18n.__(`settings.options.${arg}.error`) || i18n.__('settings.invalid.option')]);
 				continue;
 			}
 
@@ -164,8 +164,8 @@ class ServerSetSettingsCommand extends Command {
 
 			return message.util.send(
 				new Embed()
-					.setTitle(i18n.__('settings.server.set.invalid.title'))
-					.setDescription(i18n.__('settings.server.set.invalid.description', list))
+					.setTitle(i18n.__('settings.invalid.title'))
+					.setDescription(i18n.__('settings.invalid.description', list))
 			);
 		}
 

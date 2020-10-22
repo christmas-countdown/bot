@@ -149,16 +149,29 @@
 			},
 			"server": "Server settings",
 			"set": {
-				"invalid": {
-					"title": ":x: Server settings",
-					"description": "There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**"
-				},
 				"no_change": {
 					"title": "Server settings",
 					"description": "Nothing changed."
 				},
 				"success": {
 					"title": ":white_check_mark: Server settings updated"
+				}
+			},
+			"setup": {
+				"success": "You can further modify your settings with [`%sserver set`](%s).",
+				"prompts": {
+					"timezone": {
+						"prompt": "**Which timezone do you want the bot to use?**\n\n[Click here for a list of timezones](%s).\nIf you don't know, choose `UTC` now, __you can change this later__.",
+						"error": "Invalid timezone. See the [docs](%s). Exited setup prompt."
+					},
+					"enabled": {
+						"prompt": "**Enable the countdown?** (`yes`/`no`)\n__You can change this later__.",
+						"error": "Invalid input. Exited setup prompt."
+					},
+					"channel": {
+						"prompt": "Mention the text channel you want the countdown to use.",
+						"error": "Invalid channel mention. Exited setup prompt."
+					}
 				}
 			}
 		},
@@ -201,8 +214,12 @@
 				"role_not_set": "Cannot enable mentioning before role is set"
 			}
 		},
-		"invalid": "Invalid input (see docs)",
-		"premium": ":star: This is a premium option"
+		"premium": ":star: This is a premium option",
+		"invalid": {
+			"title": ":x: Server settings",
+			"description": "There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**",
+			"option": "Invalid input (see docs)"
+		}
 	},
 	"is-are": [
 		"is",
