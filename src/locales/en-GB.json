@@ -173,7 +173,25 @@
 						"error": "Invalid channel mention. Exited setup prompt."
 					}
 				}
-			}
+			},
+			"invalid": ":x: Server settings"
+		},
+		"user": {
+			"reset": {
+				"title": ":white_check_mark: User settings reset",
+				"description": "Your settings have been reset to the defaults. Use `%s` to re-configure."
+			},
+			"set": {
+				"no_change": {
+					"title": "User settings",
+					"description": "Nothing changed."
+				},
+				"success": {
+					"title": ":white_check_mark: User settings updated"
+				}
+			},
+			"user": "User settings",
+			"invalid": ":x: User settings" 
 		},
 		"sub_cmds": "The %s command has the following subcommands:\n\n%s",
 		"usage": "Usage",
@@ -216,7 +234,6 @@
 		},
 		"premium": ":star: This is a premium option",
 		"invalid": {
-			"title": ":x: Server settings",
 			"description": "There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**",
 			"option": "Invalid input (see docs)"
 		}

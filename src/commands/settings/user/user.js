@@ -51,16 +51,14 @@ class UserSettingsCommand extends Command {
 					moreInfo = 'Click subcommand for more information';
 
 				return new Embed()
-					.setTitle(i18n.__('User settings'))
-					.setDescription(i18n.__(
-						'The %s command has the following subcommands:\n\n%s',
-
+					.setTitle(i18n.__('settings.user.user'))
+					.setDescription(i18n.__('settings.sub_cmds',
 						`[\`${this.id}\`](${docs}#user)`,
-						stripIndents`❯ [\`set\`](${docs}#user-set "user set") » ${i18n.__(this.handler.findCommand('user-set').description.content || moreInfo)}
-							❯ [\`reset\`](${docs}#user-reset "user reset") » ${i18n.__(this.handler.findCommand('user-reset').description.content || moreInfo)}`,
+						stripIndents`❯ [\`set\`](${docs}#user-set "user set") » ${this.handler.findCommand('user-set').description.content || moreInfo}
+							❯ [\`reset\`](${docs}#user-reset "user reset") » ${this.handler.findCommand('user-reset').description.content || moreInfo}`,
 					))					
-					.addField(i18n.__('Usage'), `\`${prefix}user set <args>\``)
-					.addField(i18n.__('Help'), `\`${prefix}help user\``);
+					.addField(i18n.__('settings.usage'), `\`${prefix}user set <args>\``)
+					.addField(i18n.__('settings.help'), `\`${prefix}help user\``);
 			},
 		};
 

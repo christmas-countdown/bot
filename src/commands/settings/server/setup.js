@@ -126,7 +126,7 @@ class ServerSetupCommand extends Command {
 
 			return message.util.send(
 				new Embed()
-					.setTitle(i18n.__('settings.invalid.title'))
+					.setTitle(i18n.__('settings.server.invalid'))
 					.setDescription(i18n.__('settings.invalid.description', list))
 			);
 		}

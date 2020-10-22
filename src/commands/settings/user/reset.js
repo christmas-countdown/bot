@@ -39,8 +39,8 @@ class UserResetSettingsCommand extends Command {
 		// ❯ return a promise
 		return message.util.send(
 			new Embed()
-				.setTitle(i18n.__(':white_check_mark: User settings reset'))
-				.setDescription(i18n.__('Your settings have been reset to the defaults. Use `%s` to re-configure.', prefix + 'user set'))
+				.setTitle(i18n.__('settings.user.reset.title'))
+				.setDescription(i18n.__('settings.user.reset.description', prefix + 'user set'))
 		);
 
 	}
