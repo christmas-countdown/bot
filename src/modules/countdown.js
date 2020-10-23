@@ -76,12 +76,12 @@ module.exports = {
 			
 			if (!channel) {
 				this.disable(guild, tz);
-				return client.log.console('Disabled guild with missing channel');
+				return client.log.console(`Disabled guild ${guild.id} - missing channel`);
 			}
 
 			if (!guild.me.permissionsIn(channel).has(['SEND_MESSAGES', 'EMBED_LINKS'])) {
 				this.disable(guild, tz);
-				return client.log.console('Disabled guild with invalid permissions in channel');
+				return client.log.console(`Disabled guild ${guild.id} - invalid permissions in channel`);
 			}
 			
 			const i18n = new I18n(settings.locale || 'en-GB');
@@ -89,8 +89,8 @@ module.exports = {
 			let xmas = new Christmas(settings.timezone),
 				sleeps = xmas.sleeps;
 
-			let text = i18n.__('There is **%d** sleep left until Christmas!', 'There are **%d** sleeps left until Christmas!', sleeps),
-				footer = i18n.__('View the live countdown at [%s](%s).', client.config.website.pretty, client.config.website.url);
+			let text = i18n.__('christmas.sleeps.text', sleeps),
+				footer = i18n.__('christmas.footer', client.config.website.pretty, client.config.website.url);
 
 			let embed = new Embed(null, settings)
 				.setURL(client.config.website.url + '/total#sleeps')
@@ -99,14 +99,14 @@ module.exports = {
 
 			if (xmas.isToday)
 				embed
-					.setTitle(i18n.__('It\'s Christmas Day! :tada:'))
-					.setDescription(text + `\n\n${i18n.__('Merry Christmas!')}` + `\n\n${footer}`);
+					.setTitle(i18n.__('christmas.xmas_day'))
+					.setDescription(`${text}\n\n${i18n.__('christmas.merry_xmas')}\n\n${footer}`);
 			else if (xmas.isTomorrow)
 				embed
-					.setTitle(i18n.__('It\'s Christmas Eve!'));
+					.setTitle(i18n.__('christmas.xmas_eve'));
 			else
 				embed
-					.setTitle(i18n.__('%d sleep left', '%d sleeps left', sleeps));
+					.setTitle(i18n.__('christmas.sleeps.title', sleeps));
 
 			try {
 				channel.send(embed);
@@ -120,7 +120,7 @@ module.exports = {
 				client.log.console(`Sent countdown to guild ${guild.id}`);
 				await utils.wait(200);
 			} catch (e) {
-				client.log.error(`Failed to send countdown to guild ${guild.id}`);
+				client.log.warn(`Failed to send countdown to guild ${guild.id}`);
 				client.log.error(e);
 			}
 
