@@ -52,7 +52,7 @@ module.exports = {
 				tz = settings.timezone || 'UTC';
 
 			if (settings.auto) {
-				await this.auto(guild);
+				await this.auto(guild, tz);
 				settings = await guild.settings(); // previous line may update settings
 			}
 
@@ -75,12 +75,12 @@ module.exports = {
 			let channel = await client.channels.fetch(settings.channel);
 			
 			if (!channel) {
-				this.disable(guild, tz);
+				this.disable(guild);
 				return client.log.console(`Disabled guild ${guild.id} - missing channel`);
 			}
 
 			if (!guild.me.permissionsIn(channel).has(['SEND_MESSAGES', 'EMBED_LINKS'])) {
-				this.disable(guild, tz);
+				this.disable(guild);
 				return client.log.console(`Disabled guild ${guild.id} - invalid permissions in channel`);
 			}
 			
@@ -109,11 +109,10 @@ module.exports = {
 					.setTitle(i18n.__('christmas.sleeps.title', sleeps));
 
 			try {
-				if (settings.premium && settings.mention && settings.role) {
+				if (settings.premium && settings.mention && settings.role)
 					channel.send(`<@&${settings.role}>`, embed);
-				} else {
+				else
 					channel.send(embed);
-				}
 
 				// update last sent timestamp in database
 				client.db.Guild.update({

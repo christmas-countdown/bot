@@ -34,12 +34,12 @@ class OnMissingPermissionsListener extends Listener {
 
 		if (type === 'client') {
 			// BOT
-			let text = i18n.__('The bot is missing the following permissions: \n`%s`', missing.map(perm => `\`${perm}\``).join(', '));	
+			let text = i18n.__('missing_permissions.client.description', missing.map(perm => `\`${perm}\``).join(', '));	
 
 			if(message.guild.me.permissionsIn(message.channel).has('EMBED_LINKS')) 
 				return message.util.send(
 					new Embed()
-						.setTitle(i18n.__('Missing permissions'))
+						.setTitle(i18n.__('missing_permissions.client.title'))
 						.setDescription(text)
 				);
 			else
@@ -47,12 +47,12 @@ class OnMissingPermissionsListener extends Listener {
 
 		} else {
 			// MEMBER
-			let text = i18n.__('You must have following permissions to use the `%s` command: \n`%s`.', cmd, command.userPermissions.map(perm => `\`${perm}\``).join(', '));	
+			let text = i18n.__('missing_permissions.member.description', cmd, command.userPermissions.map(perm => `\`${perm}\``).join(', '));	
 
 			if(message.guild.me.permissionsIn(message.channel).has('EMBED_LINKS')) 
 				return message.util.send(
 					new Embed()
-						.setTitle(i18n.__('Missing permissions'))
+						.setTitle(i18n.__('missing_permissions.member.title'))
 						.setDescription(text)
 				);
 			else

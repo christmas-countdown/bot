@@ -27,7 +27,7 @@ class PremiumCommand extends Command {
 		
 		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
-		message.util.send(
+		return message.util.send(
 			new Embed()
 				.setTitle(i18n.__('general.premium.title'))
 				.setDescription(i18n.__('general.premium.description', this.client.config.premium))

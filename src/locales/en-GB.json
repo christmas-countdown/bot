@@ -272,6 +272,30 @@
 			"disabled": "disabled"
 		}
 	},
+	"missing_permissions": {
+		"client": {
+			"title": "Missing permissions",
+			"description": "The bot is missing the following permissions: \n%s."
+		},
+		"member": {
+			"title": "Missing permissions",
+			"description": "You must have following permissions to use the `%s` command: \n%s."
+		}
+	},
+	"message_invalid": {
+		"title": "Hello!",
+		"fields": {
+			"help": {
+				"title": "Help",
+				"text": "`%s` or \"%s\""
+			},
+			"prefix": {
+					"title": "Server prefix",
+					"default": "(default)"
+			},
+			"support": "Support server"
+		}
+	},
 	"is-are": [
 		"is",
 		"are"

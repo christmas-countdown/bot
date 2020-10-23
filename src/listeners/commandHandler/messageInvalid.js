@@ -33,14 +33,13 @@ class OnMessageInvalidListener extends Listener {
 	
 		let embed = new Embed()
 		// .setAuthor(message.author.username, message.author.displayAvatarURL())
-			.setTitle(i18n.__('Hello!'))
-			.setDescription(i18n.__(''))
-			.addField(i18n.__('Help'), i18n.__('`%s` or "%s"', `${prefix}help`, `${this.client.user.toString()} help`));
+			.setTitle(i18n.__('message_invalid.title'))
+			.addField(i18n.__('message_invalid.fields.help.title'), i18n.__('message_invalid.fields.help.text', `${prefix}help`, `${this.client.user.toString()} help`));
 		
 		if (message.guild)
-			embed.addField(i18n.__('Server prefix'), `\`${prefix}\` ${prefix === this.client.config.prefix ? '(default)': ''}`);
+			embed.addField(i18n.__('message_invalid.fields.prefix.title'), `\`${prefix}\` ${prefix === this.client.config.prefix ? i18n.__('message_invalid.fields.prefix.default') : ''}`);
 		
-		embed.addField(i18n.__('Support server'), `[${this.client.config.support.invite}](${this.client.config.support.url})`);
+		embed.addField(i18n.__('message_invalid.fields.support'), `[${this.client.config.support.invite}](${this.client.config.support.url})`);
 
 		message.util.send(message.author,
 			embed

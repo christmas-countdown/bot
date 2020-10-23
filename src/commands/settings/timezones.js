@@ -63,13 +63,8 @@ class ListTimezonesCommand extends Command {
 				.setDescription(i18n.__('settings.timezones.description', `[\`${prefix}timezones <country>\`](${docs}#timezones)`));
 		}
 
+		return message.util.send(embed);
 		
-
-		return message.util.send(
-			embed
-		);
-		
-
 	}
 }
 

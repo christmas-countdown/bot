@@ -78,7 +78,7 @@ class HelpCommand extends Command {
 				false,
 			);
 
-		return message.util?.send(embed);
+		return message.util.send(embed);
 	}
 }
 
