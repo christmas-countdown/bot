@@ -58,14 +58,9 @@ class OnReadyListener extends Listener {
 		const dbl = new TopGG(process.env.TOPGG_KEY, this.client);
 
 		const postCount = () => {
+			if (process.env.DEVELOPMENT) return; 
 			this.client.shard.fetchClientValues('guilds.cache.size').then(total => {
 				total = total.reduce((acc, count) => acc + count, 0);
-
-				/** FAKE SERVER COUNT FOR DEV ONLY */
-				if (total < 100) {
-					total = 871;	
-					this.client.log.notice('WARNING: SENDING FAKE SERVER COUNT');
-				}
 
 				// top.gg
 				dbl.postStats(total, this.client.shard.ids[0], this.client.shard.count);
