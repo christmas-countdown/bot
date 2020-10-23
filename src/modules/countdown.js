@@ -109,7 +109,13 @@ module.exports = {
 					.setTitle(i18n.__('christmas.sleeps.title', sleeps));
 
 			try {
-				channel.send(embed);
+				if (settings.premium && settings.mention && settings.role) {
+					channel.send(`<@&${settings.role}>`, embed);
+				} else {
+					channel.send(embed);
+				}
+
+				// update last sent timestamp in database
 				client.db.Guild.update({
 					last: new Date(now.format('iso'))
 				}, {
