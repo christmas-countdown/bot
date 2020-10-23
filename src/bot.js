@@ -218,17 +218,6 @@ class Client extends AkairoClient {
 			return locale || null;
 		});
 
-		this.commandHandler.resolver.addType('guildID', (message, phrase) => {
-			if (!phrase) return null;
-			let id = /\d{17,19}/.match(phrase);
-			let guild = Guild.findOne({
-				where: {
-					id: id
-				}
-			});
-			return guild ? id : null;
-		});
-
 		this.commandHandler.resolver.addType('_channel', (message, phrase) => {
 			if (!phrase) return null;
 			return this.util.resolveChannel(phrase, message.guild.channels.cache);

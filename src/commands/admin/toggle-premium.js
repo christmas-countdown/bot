@@ -13,19 +13,51 @@ class TogglePremiumCommand extends Command {
 		super('toggle-premium', {
 			aliases: ['toggle-premium'],
 			description: {
-				content: 'Enable/disable premium on for server',
+				content: 'Enable/disable premium for a server',
 			},
-			ownerOnly: true,
+			ownerOnly: true, // process.env.OWNERS split into an array
 			prefix: 'x!admin.',
 			category: 'admin',
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
+			args: [
+				{
+					id: 'id',
+					type: (message, phrase) => {
+						if (!phrase) return null;
+						let match = phrase.match(/\d{17,19}/);
+						return match ? match[0] : null;
+					},
+					default: message => message.guild.id
+				}
+			],
 		});
 	}
 
-	async exec(message) {
+	async exec(message, args) {
+
+		let row = await this.client.db.Guild.findOne({
+			where: {
+				id: args.id
+			}
+		});
+
+		if (!row)
+			return message.util.send(
+				new Embed()
+					.setColor('RED')
+					.setTitle(':x: Unknown server')
+					.setDescription('Couldn\'t find a server with that ID.')
+			);
+
+		row.set('premium', !row.premium);
+		row.save(); // like Guild.update(where)
 
 		// ❯ return a promise
-		return message.reply('ok');
+		return message.util.send(
+			new Embed()
+				.setTitle(`:white_check_mark: Premium ${row.premium ? 'granted' : 'revoked'}`)
+				.setDescription(`${row.premium ? 'Enabled' : 'Disabled'} premium for guild \`${args.id}\``)
+		);
 		
 	}
 }

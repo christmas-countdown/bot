@@ -41,9 +41,7 @@ class OnMessageInvalidListener extends Listener {
 		
 		embed.addField(i18n.__('message_invalid.fields.support'), `[${this.client.config.support.invite}](${this.client.config.support.url})`);
 
-		message.util.send(message.author,
-			embed
-		);
+		return message.util.send(message.author, embed);
 		
 	}
 }
