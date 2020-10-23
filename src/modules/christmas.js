@@ -2,7 +2,7 @@
  * @name christmascountdownbot
  * @author eartharoid <contact@eartharoid.me>
  * @copyright 2020 Isaac Saunders (eartharoid)
- * @license MIT
+ * @license GPL-3.0
  */
 
 const spacetime = require('spacetime');
