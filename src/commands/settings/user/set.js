@@ -91,14 +91,14 @@ class UserSetSettingsCommand extends Command {
 
 		if (counter === 0)
 			embed
-				.setTitle(i18n.__('settings.server.set.no_change.title'))
-				.setDescription(i18n.__('settings.server.set.no_change.description'));
+				.setTitle(i18n.__('settings.user.set.no_change.title'))
+				.setDescription(i18n.__('settings.user.set.no_change.description'));
 		else
 			embed
-				.setTitle(i18n.__('settings.server.set.success.title'));
+				.setTitle(i18n.__('settings.user.set.success.title'));
 		
 		for (let arg in args)
-			embed.addField(i18n.__(i18n.__(`settings.options.${arg}.title`)), uSettings.get(arg) !== null ? `\`${uSettings.get(arg)}\`` : i18n.__('none'), true);
+			embed.addField(i18n.__(`settings.options.${arg}.title`), uSettings.get(arg) !== null ? `\`${uSettings.get(arg)}\`` : i18n.__('none'), true);
 
 		return message.util.send(embed);
 
