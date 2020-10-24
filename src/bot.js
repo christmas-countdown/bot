@@ -111,9 +111,14 @@ const {
 	Sequelize,
 	Model
 } = require('sequelize');
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
+/* const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
 	dialect: 'mysql',
 	host: process.env.DB_HOST,
+	logging: log.debug
+}); */
+const sequelize = new Sequelize({
+	dialect: 'sqlite',
+	storage: './database.sqlite',
 	logging: log.debug
 });
 

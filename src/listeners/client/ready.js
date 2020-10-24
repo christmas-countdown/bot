@@ -9,6 +9,7 @@ const { Listener } = require('discord-akairo');
 
 const fetch = require('node-fetch');
 const Countdown = require('../../modules/countdown');
+const utils = require('../../modules/utils');
 class OnReadyListener extends Listener {
 	constructor() {
 		super('ready', {
@@ -18,18 +19,19 @@ class OnReadyListener extends Listener {
 		});
 	}
 
-	exec() {
+	async exec() {
 
 		this.client.log.success('Ready');
 
 		this.client.log.info('Checking database for guilds');
-		this.client.guilds.cache.each(async guild => {
+		this.client.guilds.cache.forEach(async guild => {
 			if (!await guild.settings()) {
 				this.client.db.Guild.create(require('../../models/guild').defaults(guild));
 				this.client.log.console(this.client.log.f(`Added '&7${guild.name}&f' to the database`));
 			}
 		});
 
+		await utils.wait(1000); // wait a seconds to ensure all guilds are in the database first
 		Countdown.run(this.client);
 		setInterval(() => {
 			Countdown.run(this.client);
