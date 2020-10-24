@@ -8,7 +8,7 @@
 const { Listener } = require('discord-akairo');
 
 const fetch = require('node-fetch');
-const countdown = require('../../modules/countdown');
+const Countdown = require('../../modules/countdown');
 class OnReadyListener extends Listener {
 	constructor() {
 		super('ready', {
@@ -30,9 +30,9 @@ class OnReadyListener extends Listener {
 			}
 		});
 
-		countdown.run(this.client);
+		Countdown.run(this.client);
 		setInterval(() => {
-			countdown.run(this.client);
+			Countdown.run(this.client);
 		}, 60 * 60000); // once per hour
 		
 		setInterval(() => {

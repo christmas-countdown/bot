@@ -301,6 +301,6 @@
 		"are"
 	],
 	"user_timezone": "User timezone: %s",
-	"sever_timezone": "Server timezone: %s",
+	"server_timezone": "Server timezone: %s",
 	"none": "none"
 }
