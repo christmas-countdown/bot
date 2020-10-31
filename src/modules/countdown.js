@@ -94,9 +94,9 @@ module.exports = class Countdown {
 				continue;
 			}
 
-			if (!guild.me.permissionsIn(channel).has(['SEND_MESSAGES', 'EMBED_LINKS'])) {
+			if (!guild.me.permissionsIn(channel).has(['VIEW_CHANNEL', 'SEND_MESSAGES', 'EMBED_LINKS'])) {
 				this.disable(guild);
-				client.log.console(`Disabled guild ${guild.id} - invalid permissions in channel`);
+				client.log.console(`Disabled guild ${guild.id} - insufficient permissions in channel`);
 				continue;
 			}
 
