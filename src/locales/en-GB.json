@@ -97,8 +97,8 @@
 				"website": "Website",
 				"docs": "Documentation",
 				"support": "Support server",
-				"guilds": "Guilds",
-				"premium_guilds": ":star: Premium guilds",
+				"guilds": "Servers",
+				"premium_guilds": ":star: Premium servers",
 				"enabled_guilds": {
 					"title": "Counting down in",
 					"servers": [
