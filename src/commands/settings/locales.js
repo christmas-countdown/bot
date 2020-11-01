@@ -38,7 +38,7 @@ class ListLocalesCommand extends Command {
 				.setTitle(i18n.__('settings.locales.title'))
 				.addField(i18n.__('settings.locales.fields.valid_locales'), I18n.locales.map(locale => `\`${locale}\``).join(', ')) // turn array into cool string
 				.addField(i18n.__('settings.locales.fields.missing.title'), i18n.__('settings.locales.fields.missing.click_here', this.client.config.docs.locales))
-				.addField(i18n.__('settings.locales.fields.set_serve'), `[\`${prefix}server set locale: <locale>\`](${docs}#server-set)`)
+				.addField(i18n.__('settings.locales.fields.set_server'), `[\`${prefix}server set locale: <locale>\`](${docs}#server-set)`)
 				.addField(i18n.__('settings.locales.fields.set_user'), `[\`${prefix}user set locale: <locale>\`](${docs}#user-set)`)
 		);
 
