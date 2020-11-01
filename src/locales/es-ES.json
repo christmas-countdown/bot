@@ -1,0 +1,306 @@
+{
+	"christmas": {
+		"days": {
+			"title": [
+				"%d día restante",
+				"%d días restantes"
+			],
+			"text": [
+				"¡Queda **%d** día restante para Navidad!",
+				"¡Quedan **%d** días restantes para Navidad!"
+			]
+		},
+		"hours": {
+			"title": [
+				"%d hora restante",
+				"%d horas restantes"
+			],
+			"text": [
+				"¡Queda **%d** hora restante para Navidad!",
+				"¡Quedan **%d** horas restantes para Navidad!"
+			]
+		},
+		"minutes": {
+			"title": [
+				"%d minuto restante",
+				"%d minutos restantes"
+			],
+			"text": [
+				"¡Queda **%d** minuto restante para Navidad!",
+				"¡Quedan **%d** minutos restantes para Navidad!"
+			]
+		},
+		"seconds": {
+			"title": [
+				"%d segundo restante",
+				"%d segundos restantes"
+			],
+			"text": [
+				"¡Queda **%d** segundo restante para Navidad!",
+				"¡Quedan **%d** segundos restantes para Navidad!"
+			]
+		},
+		"sleeps": {
+			"title": [
+				"%d noche restante",
+				"%d noches restantes"
+			],
+			"text": [
+				"¡Queda **%d** noche restantes para Navidad!",
+				"¡Quedan **%d** noches restantes para Navidad!"
+			]
+		},
+		"total": {
+			"title": "%s, %s, %s, %s left",
+			"text": "¡Quedan %s %s, %s, %s, y %s restantes para Navidad!",
+			"days": [
+				"**%d** día",
+				"**%d** días"
+			],
+			"hours": [
+				"**%d** hora",
+				"**%d** horas"
+			],
+			"minutes": [
+				"**%d** minuto",
+				"**%d** minutos"
+			],
+			"seconds": [
+				"**%d** segundo",
+				"**%d** segundos"
+			]
+		},
+		"weeks": {
+			"title": [
+				"%d semana restante",
+				"%d semanas restantes"
+			],
+			"text": [
+				"¡Queda **%d** semana restante para Navidad!",
+				"¡Quedan **%d** semanas restantes para Navidad!"
+			]
+		},
+		"xmas_day": "Es el Día de Navidad! :tada:",
+		"xmas_eve": "¡Es Nochebuena!",
+		"merry_xmas": "Feliz Navidad! :christmas_tree:",
+		"footer": "Mira la cuenta regresiva en vivo en [%s](%s)."
+	},
+	"general": {
+		"about": {
+			"title": "Información",
+			"description": "Un BOT de Discord hecho por [eartharoid](%s).",
+			"fields": {
+				"prefix": {
+					"title": "Prefijo del servidor",
+					"default": "(por defecto)"
+				},
+				"website": "Página web",
+				"docs": "Documentación",
+				"support": "Servidor de soporte",
+				"guilds": "Servidores",
+				"premium_guilds": ":star: Servidores Premium",
+				"enabled_guilds": {
+					"title": "Haciendo la cuenta regresiva en",
+					"servers": [
+						"%d servidor",
+						"%d servidores"
+					]
+				}
+			}
+		},
+		"help": {
+			"title": "Comandos",
+			"description": "Para más información sobre un comando en específico, usa `%s` o haz click en su nombre. Para una distinción entre días y noches, haz click [aquí](%s).\n",
+			"fields": {
+				"docs": {
+					"title": "❯ Documentación",
+					"click_here": "[Clickea aquí](%s)"
+				},
+				"description": "❯ Descripción",
+				"aliases": {
+					"title": "❯ Alias",
+					"extra": "Los guiones (-) pueden ser omitidos."
+				}
+			}
+		},
+		"invite": {
+			"title": "Invitar",
+			"description": "Añade al BOT a tu servidor: [invite](%s)"
+		},
+		"ping": {
+			"title": "Pong!",
+			"fields": {
+				"shard_num": "Número de Shard",
+				"avg_ping": "Promedio de ping",
+				"shard_ping": "Ping de la Shard",
+				"latency": "Latencia general"
+			}
+		},
+		"premium": {
+			"title": ":star: Obtén premium",
+			"description": "Dona [aquí](%s) para desbloquear características adicionales."
+		}
+	},
+	"settings": {
+		"server": {
+			"reset": {
+				"title": ":white_check_mark: Ajustes del servidor reiniciados",
+				"description": "Los ajustes de este servidor fueron establecidos a los valores por defecto. Usa %s para reconfigurarlos."
+			},
+			"server": "Ajustes del servidor",
+			"set": {
+				"no_change": {
+					"title": "Ajustes del servidor",
+					"description": "Nada cambiado."
+				},
+				"success": {
+					"title": ":white_check_mark: Ajustes del servidor actualizados"
+				}
+			},
+			"setup": {
+				"success": "Puedes modificar aún más la configuración con [`%sserver set`](%s).",
+				"prompts": {
+					"timezone": {
+						"prompt": "**¿Qué zona horaria quieres que el BOT use?**\n\n[Clickea aquí para una lista de zonas horarias](%s).\nSi no sabes, elige `UTC` ahora, __podrás cambiar esto después__.",
+						"error": "Zona horaria inválida. Mira la [documentación](%s). Configuración cancelada."
+					},
+					"enabled": {
+						"prompt": "**¿Activar la cuenta regresiva?** (`yes`/`no`)\n__Podrás cambiar esto después__.",
+						"error": "Respuesta inválida. Configuración cancelada."
+					},
+					"channel": {
+						"prompt": "Menciona el canal que quieres usar para la cuenta regresiva",
+						"error": "Mención al canal inválida. Configuración cancelada."
+					}
+				}
+			},
+			"invalid": ":x: Ajustes del servidor"
+		},
+		"user": {
+			"reset": {
+				"title": ":white_check_mark: Ajustes del usuario reiniciados",
+				"description": "Tus ajustes fueron establecidos a los valores por defecto. Usa `%s` para reconfigurarlos."
+			},
+			"set": {
+				"no_change": {
+					"title": "Ajustes del usuario",
+					"description": "Nada cambiado."
+				},
+				"success": {
+					"title": ":white_check_mark: Ajustes del usuario actualizados"
+				}
+			},
+			"user": "Ajustes del usuario",
+			"invalid": ":x: Ajustes del usuario"
+		},
+		"sub_cmds": "El comando %s tiene los siguientes subcomandos:\n\n%s",
+		"usage": "Uso",
+		"help": "Ayuda",
+		"options": {
+			"prefix": {
+				"title": "Prefijo",
+				"error": "Prefijo inválido. ¿Demasiado largo, tal vez?"
+			},
+			"locale": {
+				"title": "Lenguaje",
+				"error": "Nombre de lenguaje inválido."
+			},
+			"timezone": {
+				"title": "Zona horaria",
+				"error": "Nombre de zona horaria inválido."
+			},
+			"channel": {
+				"title": "Canal",
+				"error": "Mención al canal inválida."
+			},
+			"role": {
+				"title": "Rol",
+				"error": "Mención al rol inválida."
+			},
+			"auto": {
+				"title": "Auto",
+				"error": "Booleano inválido."
+			},
+			"enabled": {
+				"title": "Activado",
+				"error": "Booleano inválido.",
+				"channel_not_set": "No se puede establecer una cuenta regresiva antes de configurar el canal"
+			},
+			"mention": {
+				"title": "Mención",
+				"error": "Booleano inválido.",
+				"role_not_set": "No se puede activar la mención antes de configurar el rol"
+			}
+		},
+		"premium": ":star: Esto es una opción premium",
+		"invalid": {
+			"description": "Hubo algunos problemas con las opciones proporcionadas:\n%s\n**Haz click en el nombre azul de la configuración para ver la documentación. **",
+			"option": "Lo que ingresaste es inválido (revisa la documentación)"
+		},
+		"locales": {
+			"title": "Locales",
+			"fields": {
+				"valid_locales": "Lenguajes válidos",
+				"missing": {
+					"title": "¿No encuentras tu lenguaje?",
+					"click_here": "[Clickea aquí](%s)"
+				},
+				"set_server": "Establecer el lenguaje del servidor",
+				"set_user": "Establecer tu lenguaje personal"
+			}
+		},
+		"timezones": {
+			"title": "Zonas horarias",
+			"title_by_country": "Zonas horarias de %s",
+			"description": "Usa %s para listar zonas horarias por localidad, donde `<country>` es el código de una localidad (ejemplos: `US`, `GB`,`DE`, `FR`, o `RU`)",
+			"fields": {
+				"set_server": "Establece la zona horaria del servidor",
+				"set_user": "Establece tu zona horaria",
+				"list": {
+					"title": "Zonas horarias válidas",
+					"too_long": "¡La lista es muy larga para enviarla! Clickea [here](%s) para visitar la documentación."
+				}
+			}
+		},
+		"toggle": {
+			"no_channel": {
+				"title": ":x: No se puede establecer la cuenta regresiva antes de configurar el canal",
+				"description": "Usa %s para establecer el canal."
+			},
+			"toggled": ":white_check_mark: Cuenta regresiva %s",
+			"enabled": "activado",
+			"disabled": "desactivado"
+		}
+	},
+	"missing_permissions": {
+		"client": {
+			"title": "Permisos insuficientes",
+			"description": "Necesito los siguientes permisos:\n%s."
+		},
+		"member": {
+			"title": "Permisos insuficientes",
+			"description": "No tienes los permisos suficientes para ejecutar el comando `%s`. Necesitas los siguientes permisos:\n%s."
+		}
+	},
+	"message_invalid": {
+		"title": "Hola!",
+		"fields": {
+			"help": {
+				"title": "Ayuda",
+				"text": "`%s` o \"%s\""
+			},
+			"prefix": {
+					"title": "Prefijo del servidor",
+					"default": "(por defecto)"
+			},
+			"support": "Servidor de soporte"
+		}
+	},
+	"is-are": [
+		"es",
+		"son"
+	],
+	"user_timezone": "Zona horaria del usuario: %s",
+	"server_timezone": "Zona horaria del servidor: %s",
+	"none": "ninguno"
+}
