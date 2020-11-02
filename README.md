@@ -1,9 +1,18 @@
 # ChristmasCountdownBot
 A Christmas Countdown bot for Discord
 
-[![Discord Bots](https://discordbots.org/api/widget/status/509851616216875019.svg)](https://discordbots.org/bot/509851616216875019)
-[![Discord Bots](https://discordbots.org/api/widget/servers/509851616216875019.svg)](https://discordbots.org/bot/509851616216875019)
-[![Dependancies](https://img.shields.io/david/eartharoid/ChristmasCountdownBot?style=flat)](https://github.com/eartharoid/ChristmasCountdownBot/)
-[![Discord](https://img.shields.io/discord/451745464480432129?color=%237289DA&label=Discord&logo=discord&logoColor=white)](https://discord.gg/pXc9vyC)
+[![top.gg](https://top.gg/api/widget/status/509851616216875019.svg)](https://top.gg/bot/509851616216875019)
+[![top.gg](https://top.gg/api/widget/servers/509851616216875019.svg)](https://top.gg/bot/509851616216875019)
+[![Discord support server](https://discordapp.com/api/guilds/451745464480432129/embed.png?style=shield)](https://discord.gg/pXc9vyC)
 
-Note: do not translate commands etc in locale files. left side should remain english, right side should be translated.
+[![Discord Boats](https://discord.boats/api/widget/509851616216875019)](https://discord.boats/bot/christmascountdown)
+
+## Information
+[christmascountdown.live/](https://christmascountdown.live/#/discord/)
+
+## Documentation
+[docs.christmascountdown.live/discord/](https://docs.christmascountdown.live/discord/)
+
+## Contributing
+
+Read the contributing file first. Join the Discord server if you want to help translate the bot and don;t know where to start.
