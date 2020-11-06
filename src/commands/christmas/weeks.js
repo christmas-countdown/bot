@@ -39,7 +39,7 @@ class WeeksCommand extends Command {
 
 		let embed = new Embed(uSettings, gSettings)
 			.setAuthor(message.author.username, message.author.displayAvatarURL())
-			.setURL(this.client.config.website.url + '/total#weeks')
+			.setURL(this.client.config.website.url + '/#/total#weeks')
 			.setDescription(text + '\n\n' + footer)
 			.setTimestamp();
 

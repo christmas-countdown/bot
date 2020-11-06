@@ -39,7 +39,7 @@ class MinutesCommand extends Command {
 
 		let embed = new Embed(uSettings, gSettings)
 			.setAuthor(message.author.username, message.author.displayAvatarURL())
-			.setURL(this.client.config.website.url + '/total#minutes')
+			.setURL(this.client.config.website.url + '/#/total#minutes')
 			.setDescription(text + '\n\n' + footer)
 			.setTimestamp();
 

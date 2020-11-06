@@ -45,7 +45,7 @@ class TotalCommand extends Command {
 
 		let embed = new Embed(uSettings, gSettings)
 			.setAuthor(message.author.username, message.author.displayAvatarURL())
-			.setURL(this.client.config.website.url + '/live')
+			.setURL(this.client.config.website.url + '/#/live')
 			.setDescription(text + '\n\n' + footer)
 			.setTimestamp();
 

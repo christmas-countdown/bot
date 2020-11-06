@@ -11,9 +11,10 @@ module.exports = {
 	footer: 'Christmas Countdown by eartharoid',
 	website: {
 		pretty: 'christmascountdown.live',
-		url: 'https://www.christmascountdown.live'
+		url: 'https://christmascountdown.live'
 	},
-	invite: 'https://www.christmascountdown.live/#/discord',
+	// invite: 'https://christmascountdown.live/invite',
+	invite: 'https://christmascountdown.live/#/discord',
 	docs: {
 		pretty: 'docs.christmascountdown.live/discord',
 		main: 'https://docs.christmascountdown.live/discord',
@@ -27,7 +28,7 @@ module.exports = {
 		invite: 'discord.gg/pXc9vyC',
 		url: 'https://go.eartharoid.me/discord',
 	},
-	premium: 'https://www.christmascountdown.live/#/donate',
+	premium: 'https://christmascountdown.live/#/donate',
 	presences: [
 		{
 			activity: 'the countdown to Christmas',

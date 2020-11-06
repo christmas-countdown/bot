@@ -39,7 +39,7 @@ class SecondsCommand extends Command {
 
 		let embed = new Embed(uSettings, gSettings)
 			.setAuthor(message.author.username, message.author.displayAvatarURL())
-			.setURL(this.client.config.website.url + '/total#seconds')
+			.setURL(this.client.config.website.url + '/#/total#seconds')
 			.setDescription(text + '\n\n' + footer)
 			.setTimestamp();
 

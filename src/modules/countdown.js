@@ -109,7 +109,7 @@ module.exports = class Countdown {
 				footer = i18n.__('christmas.footer', client.config.website.pretty, client.config.website.url);
 
 			let embed = new Embed(null, settings)
-				.setURL(client.config.website.url + '/total#sleeps')
+				.setURL(client.config.website.url + '/#/total#sleeps')
 				.setDescription(text + '\n\n' + footer)
 				.setTimestamp();
 

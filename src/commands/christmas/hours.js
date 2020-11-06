@@ -39,7 +39,7 @@ class HoursCommand extends Command {
 
 		let embed = new Embed(uSettings, gSettings)
 			.setAuthor(message.author.username, message.author.displayAvatarURL())
-			.setURL(this.client.config.website.url + '/total#hours')
+			.setURL(this.client.config.website.url + '/#/total#hours')
 			.setDescription(text + '\n\n' + footer)
 			.setTimestamp();
 
