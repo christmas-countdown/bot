@@ -86,7 +86,14 @@ module.exports = class Countdown {
 			// either it is 00:00 - 00:59, or the last was sent over 24 hours ago
 
 			// let channel = await guild.channels.cache.get(settings.channel);
-			let channel = await client.channels.fetch(settings.channel);
+			let channel;
+			try {
+				channel = await client.channels.fetch(settings.channel);
+			} catch {
+				this.disable(guild);
+				client.log.console(`Disabled guild ${guild.id} - missing channel`);
+				continue;
+			}
 
 			if (!channel) {
 				this.disable(guild);
