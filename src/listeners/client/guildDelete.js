@@ -20,6 +20,7 @@ class OnGuildDeleteListener extends Listener {
 		const { client } = this;
 
 		client.shard.fetchClientValues('guilds.cache.size').then(total => {
+			total = total.reduce((acc, count) => acc + count, 0);
 			this.client.log.info(`Removed from '${guild.name}' (${client.guilds.cache.size}/${total})`);
 		});
 		

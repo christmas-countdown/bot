@@ -20,6 +20,7 @@ class OnGuildCreateListener extends Listener {
 		const { client } = this;
 
 		client.shard.fetchClientValues('guilds.cache.size').then(total => {
+			total = total.reduce((acc, count) => acc + count, 0);
 			this.client.log.success(`Added to '${guild.name}' (${client.guilds.cache.size}/${total})`);
 		});
 		
