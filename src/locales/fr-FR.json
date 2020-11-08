@@ -1,201 +1,309 @@
 {
-	"Pong!": "Pong!",
-	"Shard number": "Numéro de fragment",
-	"Avg. ping": "Ping moyen",
-	"Shard ping": "Ping le plus haut",
-	"Christmas Countdown by eartharoid": "Compte à rebours de Noël par eartharoid",
-	"Overall latency": "Latence globale",
-	"Server settings": "Paramètres du serveur",
-	"Hello!": "Bonjour!",
-	"Usage": "Usage",
-	"Help": "Aide",
-	"Server prefix": "Préfixe du serveur",
-	"Missing permissions": "Permissions manquantes",
-	"Required permissions": "Autorisations requises",
-	"The %s command has the following subcommands:\n\n%s": "La commande %s a les sous-commandes suivantes:\n\n%s",
-	"Click subcommand for more information": "Cliquez sur la sous-commande pour plus d'informations",
-	"Set server settings": "Définir les paramètres du serveur",
-	"Reset server settings": "Réinitialiser les paramètres du serveur",
-	"The bot is missing the following permissions: \n`%s`": "Le bot n'a pas les autorisations suivantes: \n`%s`",
-	":white_check_mark: Server settings reset": ":white_check_mark: Réinitialisation des paramètres du serveur",
-	"This server's settings have been reset to the defaults. Use `%s` to re-configure.": "Les paramètres de ce serveur ont été réinitialisés aux valeurs par défaut. Utilisez `%s` pour reconfigurer.",
-	":star: Premium": ":star: Premium",
-	"%s is a [premium](%s) option.\nUse %s to enable premium on this server": "%s est un [premium](%s) option.\nUtilisez %s pour activer premium sur ce serveur",
-	"Invalid input": "Entrée invalide",
-	"There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**": "Il y a eu des problèmes avec les options fournies:\n%s\n**Cliquez sur le nom du paramètre pour voir la documentation.**",
-	"Invalid input (see docs)": "Entrée non valide (voir la documentation)",
-	":white_check_mark: Server settings updated": ":white_check_mark: Paramètres du serveur mis à jour",
-	"Your new settings:": "Vos nouveaux paramètres:",
-	"Prefix": "Préfixe",
-	"Locale": "Lieu",
-	"Timezone": "Fuseau horaire",
-	"Channel": "Canal",
-	"Role": "Rôle",
-	"Auto": "Auto",
-	"none": "aucun(e)",
-	"Enabled": "Activé(e)",
-	"Mention": "Mention",
-	"Nothing changed.": "Rien n'a changé.",
-	"Configure the bot's server settings": "Configurer les paramètres du serveur du bot",
-	"Locales": "langues",
-	"Valid locales": "langues valides",
-	"Don't see your language?": "Je ne vois pas ta langue ?",
-	"Click [here](%s).": "Cliquez [ici](%s).",
-	"Set the server language": "Définir la langue du serveur",
-	"Set your personal language": "Définissez votre langue personnelle",
-	"Timezones": "Fuseaux horaires",
-	"Valid timezones": "Fuseaux horaires valides",
-	"Set the server timezone": "Définir le fuseau horaire du serveur",
-	"Set your personal timezone": "Définissez votre fuseau horaire personnel",
-	"The list is too long to send! Click [here](%s) to visit the docs.": "La liste est trop longue à envoyer! Clique [ici](%s) pour visiter la documentation.",
-	"Mention the text channel you want the countdown to use.": "Mentionnez le canal où vous souhaitez utiliser le compte à rebours.",
-	"Invalid channel mention.": "Mention: Canal invalide.",
-	"Invalid input.": "Entrée invalide.",
-	"You must have following permissions to use the `%s` command: \n`%s`.": "Vous devez disposer des autorisations suivantes pour utiliser la commande: `%s \n`%s`.",
-	"Configure the bot's server settings using the setup prompt": "Configurez les paramètres du serveur du bot à l'aide de l'invite de configuration",
-	"**Which timezone do you want the bot to use?**\n\n([Click here for a list of timezones](%s)).\nIf you don't know, choose `UTC` now, __you can change this later__.": "**Quel fuseau horaire voulez-vous que le bot utilise ?**\n\n([Cliquez ici pour une liste des fuseaux horaires](%s)).\nSi vous ne savez pas, choisissez `UTC` maintenant, __vous pouvez changer cela plus tard__.",
-	"**Enable the countdown?** (yes/no)": "**Activer le compte à rebours ?** (oui/non)",
-	"You can further modify your settings with [`%sserver set`](%s).": "Vous pouvez modifier davantage vos paramètres avec [`%ssparamètre de serveur`](%s).",
-	"**Which timezone do you want the bot to use?**\n\n[Click here for a list of timezones](%s).\nIf you don't know, choose `UTC` now, __you can change this later__.": "**Quel fuseau horaire voulez-vous que le bot utilise ?**\n\n[Cliquez ici pour une liste des fuseaux horaires](%s).\nSi vous ne savez pas, choisissez `UTC` maintenant, __vous pouvez changer cela plus tard__.",
-	"Invalid timezone. See the [docs](%s). Exited prompt.": "Fuseau horaire incorrect. Voir la [documentation](%s). Fermeture de l'invité de commande.",
-	"": "",
-	"`%s` or \"%s\"": "`%s` ou \"%s\"",
-	"Support server": "Serveur d'assistance",
-	"User settings": "Paramètres utilisateur",
-	":white_check_mark: User settings updated": ":white_check_mark: Paramètres utilisateur mis à jour",
-	"**Enable the countdown?** (`yes`/`no`)\n__You can change this later__.": "**Activer le compte à rebours ?** (`oui`/`non`)\n__Vous pouvez changer cela plus tard__.",
-	"Invalid locale name.": "Nom de paramètre régional non valide.",
-	"Invalid role mention.": "Rôle non valide.",
-	":star: This is a premium option": ":star: Ceci est une option premium",
-	"Invalid timezone name.": "Nom de fuseau horaire incorrect.",
-	"Commands": "Commandes",
-	"For more information about a specific command, use `%shelp <command>` or click on its name .": "Pour plus d'informations sur une commande spécifique, utilisez `%saide <commande>` ou cliquez sur son nom.",
-	"❯ Description": "❯ Description",
-	"[click here](%s)": "[cliquez ici](%s)",
-	"❯ Documentation": "❯ Documentation",
-	"❯ Aliases": "❯ Alias",
-	"set server settings": "définir les paramètres du serveur",
-	"Set user settings": "Définir les paramètres utilisateur",
-	"This server's settings have been reset to the defaults. Use %s to re-configure.": "Les paramètres de ce serveur ont été réinitialisés aux valeurs par défaut. Utilisez %s pour reconfigurer.",
-	"Timezones of %s": "Fuseaux horaires de %s",
-	"The list is too long to send! Click [here](%s) to visit the docs, or use %s to list zones by country.": "La liste est trop longue à envoyer! Clique [ici](%s) pour visiter la documentation, ou utilisez %s pour lister les zones par pays.",
-	"Use %s to list timezones by country, where `<country>` is a country code (examples: `US`, `GB`,`DE`, `FR`, or `RU`)": "Utilisez %s pour lister les fuseaux horaires par pays, où `<pays>` est un code de pays (exemples: `US`, `GB`,`DE`, `FR`, ou `RU`)",
-	"disabled": "désactivé(e)",
-	":white_check_mark: Countdown %s": ":white_check_mark: Compte à rebours %s",
-	"enabled": "activé(e)",
-	"Cannot enable countdown before channel is set": "Impossible d'activer le compte à rebours avant que le canal ne soit défini",
-	"Use %s to set the channel.": "Utilisez %s pour régler le canal.",
-	":x: Cannot enable countdown before channel is set": ":x: Impossible d'activer le compte à rebours avant que le canal ne soit défini",
-	"Information": "Information",
-	"A Discord bot made by %s.": "Ce bot discord a été créé par %s.",
-	"Website": "Site Internet",
-	"Documentation": "Documentation",
-	"Guilds": "Communauté",
-	":star: Premium guilds": ":star: Communauté prémium",
-	"Enabled guilds": "Activer les communautés",
-	":white_check_mark: User settings reset": ":white_check_mark: Réinitialisation des paramètres utilisateur",
-	"Your settings have been reset to the defaults. Use `%s` to re-configure.": "Vos paramètres ont été réinitialisés aux valeurs par défaut. Utilisez `%s` pour reconfigurer.",
-	"%d day left": {
-		"one": "%d jour restant",
-		"other": "%d jours restants"
+	"christmas": {
+		"days": {
+			"title": [
+				"%d jour restant",
+				"%d jours restants"
+			],
+			"text": [
+				"Il y a **%d** jour restant jusqu'à Noël!",
+				"Il y a **%d** jours restants jusqu'à Noël!"
+			]
+		},
+		"hours": {
+			"title": [
+				"%d heure restante",
+				"%d heures restantes"
+			],
+			"text": [
+				"Il reste **%d** heure avant Noël!",
+				"Il reste **%d** heures avant Noël!"
+			]
+		},
+		"minutes": {
+			"title": [
+				"%d minute restante",
+				"%d minutes restantes"
+			],
+			"text": [
+				"Il reste **%d** minute avant Noël!",
+				"Il reste **%d** minutes avant Noël!"
+			]
+		},
+		"seconds": {
+			"title": [
+				"%d seconde restante",
+				"%d secondes restantes"
+			],
+			"text": [
+				"Il reste **%d** seconde avant Noël!",
+				"Il reste **%d** secondes avant Noël!"
+			]
+		},
+		"sleeps": {
+			"title": [
+				"%d dodo restant",
+				"%d dodos restants"
+			],
+			"text": [
+				"TIl y a **%d** dodo jusqu'à Noël!",
+				"Il y a **%d** dodos jusqu'à Noël!"
+			]
+		},
+		"total": {
+			"title": "%s, %s, %s, %s restant",
+			"text": "Il %s %s, %s, %s, et %s avant Noël!",
+			"days": [
+				"**%d** jour",
+				"**%d** jours"
+			],
+			"hours": [
+				"**%d** heure",
+				"**%d** heures"
+			],
+			"minutes": [
+				"**%d** minute",
+				"**%d** minutes"
+			],
+			"seconds": [
+				"**%d** seconde",
+				"**%d** secondes"
+			]
+		},
+		"weeks": {
+			"title": [
+				"%d semaine restante",
+				"%d semaines restantes"
+			],
+			"text": [
+				"Il reste **%d** semaine avant Noël!",
+				"Il reste **%d** semaines avant Noël!"
+			]
+		},
+		"xmas_day": "C'est le jour de Noël! :tada:",
+		"xmas_eve": "C'est la veille de Noël!",
+		"merry_xmas": "Joyeux Noël! :christmas_tree:",
+		"footer": "Consultez le compte à rebours en direct sur [%s](%s)."
 	},
-	"There is **%d** day left until Christmas!": {
-		"one": "Il y a **%d** jour restant jusqu'à Noël!",
-		"other": "Il y a **%d** jours restants jusqu'à Noël!"
+	"general": {
+		"about": {
+			"title": "Information",
+			"description": "Ce bot discord a été créé par [eartharoid](%s).",
+			"fields": {
+				"prefix": {
+					"title": "Server prefix",
+					"default": "(default)"
+				},
+				"website": "Site Internet",
+				"docs": "Documentation",
+				"support": "Support server",
+				"guilds": "Communauté",
+				"premium_guilds": ":star: Communauté prémium",
+				"enabled_guilds": {
+					"title": "Activer les communautés",
+					"servers": [
+						"%d communauté",
+						"%d communautés"
+					]
+				}
+			}
+		},
+		"help": {
+			"title": "Commandes",
+			"description": "For more information about a specific command, use `%s` or click on its name. For distinction between days and sleeps, click [here](%s).\n",
+			"fields": {
+				"docs": {
+					"title": "❯ Documentation",
+					"click_here": "[cliquez ici](%s)"
+				},
+				"description": "❯ Description",
+				"aliases": {
+					"title": "❯ Alias",
+					"extra": "Hyphens (-) can be omitted."
+				}
+			}
+		},
+		"invite": {
+			"title": "Inviter",
+			"description": "Ajoutez le bot Christmas Countdown à votre propre serveur: [invite](%s)"
+		},
+		"ping": {
+			"title": "Pong!",
+			"fields": {
+				"shard_num": {
+					"title": "Numéro de fragment",
+					"text": "%d sur %d"
+				},
+				"avg_ping": "Ping moyen",
+				"shard_ping": "Ping le plus haut",
+				"latency": "Latence globale"
+			}
+		},
+		"premium": {
+			"title": ":star: Obtenez le premium",
+			"description": "Faire un don [ici](%s) pour débloquer des fonctionnalités supplémentaires."
+		}
 	},
-	":star: Get premium": ":star: Obtenez le premium",
-	"Donate [here](%s) to unlock additional features.": "Faire un don [ici](%s) pour débloquer des fonctionnalités supplémentaires.",
-	"View the live countdown at [%s](%s).": "Consultez le compte à rebours en direct sur [%s](%s).",
-	"For more information about a specific command, use `%s` or click on its name. For distinction between days and sleeps, click [here](%s).\n": "Pour plus d'informations sur une commande spécifique, utilisez `%s` ou cliquez sur son nom. Pour faire la distinction entre les jours et les nuits, cliquez [ici](%s).\n",
-	"Invalid channel mention. Exited prompt.": "Mention: Channel invalide. Fermeture de l'invité de commande.",
-	"There is **%d** sleep left until Christmas!": {
-		"one": "Il y a **%d** dodo jusqu'à Noël!",
-		"other": "Il y a **%d** dodos jusqu'à Noël!"
+	"settings": {
+		"server": {
+			"reset": {
+				"title": ":white_check_mark: Réinitialisation du paramètres serveur",
+				"description": "Les paramètres de ce serveur ont été réinitialisés aux valeurs par défaut. Utilisez `%s` pour reconfigurer."
+			},
+			"server": "Paramètres du serveur",
+			"set": {
+				"no_change": {
+					"title": "Paramètres du serveur",
+					"description": "Rien n'a changé."
+				},
+				"success": {
+					"title": ":white_check_mark: Paramètres du serveur mis à jour"
+				}
+			},
+			"setup": {
+				"success": "Vous pouvez modifier davantage vos paramètres avec [`%ssparamètre de serveur`](%s).",
+				"prompts": {
+					"timezone": {
+						"prompt": "**Quel fuseau horaire voulez-vous que le bot utilise ?**\n\n([Cliquez ici pour une liste des fuseaux horaires](%s)).\nSi vous ne savez pas, choisissez `UTC` maintenant, __vous pouvez changer cela plus tard__.",
+						"error": "Fuseau horaire incorrect. Voir la [documentation](%s). Fermeture de l'invité de commande."
+					},
+					"enabled": {
+						"prompt": "**Activer le compte à rebours?** (`yes`/`no`)\n__You can change this later__.",
+						"error": "Entrée invalide. Fermeture de l'invité de commande."
+					},
+					"channel": {
+						"prompt": "Mentionnez le canal où vous souhaitez utiliser le compte à rebours.",
+						"error": "Mention: Canal invalide. Fermeture de l'invité de commande."
+					}
+				}
+			},
+			"invalid": ":x: Paramètres du serveur"
+		},
+		"user": {
+			"reset": {
+				"title": ":white_check_mark: Réinitialisation des paramètres utilisateur",
+				"description": "Vos paramètres ont été réinitialisés aux valeurs par défaut. Utilisez `%s` pour reconfigurer."
+			},
+			"set": {
+				"no_change": {
+					"title": "User settings",
+					"description": "Nothing changed."
+				},
+				"success": {
+					"title": ":white_check_mark: User settings updated"
+				}
+			},
+			"user": "Paramètres utilisateur",
+			"invalid": ":x: Paramètres utilisateur"
+		},
+		"sub_cmds": "La commande %s a les sous-commandes suivantes:\n\n%s",
+		"usage": "Usage",
+		"help": "Aide",
+		"options": {
+			"prefix": {
+				"title": "Prefix",
+				"error": "Invalid prefix. Too long perhaps?"
+			},
+			"locale": {
+				"title": "Locale",
+				"error": "Invalid locale name."
+			},
+			"timezone": {
+				"title": "Timezone",
+				"error": "Invalid timezone name."
+			},
+			"channel": {
+				"title": "Channel",
+				"error": "Invalid channel mention."
+			},
+			"role": {
+				"title": "Role",
+				"error": "Invalid role mention."
+			},
+			"auto": {
+				"title": "Auto",
+				"error": "Invalid boolean."
+			},
+			"enabled": {
+				"title": "Enabled",
+				"error": "Invalid boolean.",
+				"channel_not_set": "Cannot enable countdown before channel is set"
+			},
+			"mention": {
+				"title": "Mention",
+				"error": "Invalid boolean.",
+				"role_not_set": "Cannot enable mentioning before role is set"
+			}
+		},
+		"premium": ":star: This is a premium option",
+		"invalid": {
+			"description": "There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**",
+			"option": "Entrée non valide (voir la documentation)"
+		},
+		"locales": {
+			"title": "langues",
+			"fields": {
+				"valid_locales": "langues valides",
+				"missing": {
+					"title": "Je ne vois pas ta langue?",
+					"click_here": "Cliquez [ici](%s)"
+				},
+				"set_server": "Définir la langue du serveur",
+				"set_user": "Définissez votre langue personnelle"
+			}
+		},
+		"timezones": {
+			"title": "Fuseaux horaires",
+			"title_by_country": "Fuseaux horaires de %s",
+			"description": "Utilisez %s pour lister les fuseaux horaires par pays, où `<pays>` est un code de pays (exemples: `US`, `GB`,`DE`, `FR`, ou `RU`)",
+			"fields": {
+				"set_server": "Set the server timezone",
+				"set_user": "Set your personal timezone",
+				"list": {
+					"title": "Fuseaux horaires valides",
+					"too_long": "La liste est trop longue à envoyer! Clique [ici](%s) pour visiter la documentation."
+				}
+			}
+		},
+		"toggle": {
+			"no_channel": {
+				"title": ":x: Impossible d'activer le compte à rebours avant que le canal ne soit défini",
+				"description": "Utilisez %s pour régler le canal."
+			},
+			"toggled": ":white_check_mark: Compte à rebours %s",
+			"enabled": "activé(e)",
+			"disabled": "désactivé(e)"
+		}
 	},
-	"%d sleep left": {
-		"one": "%d dodo restant",
-		"other": "%d dodos restants"
+	"missing_permissions": {
+		"client": {
+			"title": "Permissions manquantes",
+			"description": "Le bot n'a pas les autorisations suivantes: \n%s."
+		},
+		"member": {
+			"title": "Permissions manquantes",
+			"description": "Vous devez disposer des autorisations suivantes pour utiliser la commande: `%s \n`%s`."
+		}
 	},
-	"It's Christmas Eve!": "C'est la veille de Noël!",
-	"It's Christmas Day! :tada:": "C'est le jour de Noël! :tada:",
-	"Merry Christmas!": "Joyeux Noël!",
-	"is": {
-		"one": "est",
-		"other": "sont"
+	"message_invalid": {
+		"title": "Bonjour!",
+		"fields": {
+			"help": {
+				"title": "Aide",
+				"text": "`%s` ou \"%s\""
+			},
+			"prefix": {
+					"title": "Préfixe du serveur",
+					"default": "(default)"
+			},
+			"support": "Serveur d'assistance"
+		}
 	},
-	"**%d** day": {
-		"one": "**%d** jour",
-		"other": "**%d** jours"
-	},
-	"**%d** hour": {
-		"one": "**%d** heure",
-		"other": "**%d** heures"
-	},
-	"**%d** minute": {
-		"one": "**%d** minute",
-		"other": "**%d** minutes"
-	},
-	"**%d** second": {
-		"one": "**%d** seconde",
-		"other": "**%d** secondes"
-	},
-	"There %s %s, %s, %s, and %s left until Christmas!": "Il reste %s %s, %s, %s, et %s avant Noël !",
-	"%s, %s, %s, %s left": "%s, %s, %s, %s restant",
-	"Server timezone: %s": "fuseau horaire du serveur: %s",
-	"User timezone: %s": "fuseau horaire de l'utilisateur: %s",
-	"Counting down in": "Compte à rebours dans",
-	"%d servers": "%d serveurs",
-	"There is **%d** hour left until Christmas!": {
-		"one": "Il reste **%d** heure avant Noël !",
-		"other": "Il reste **%d** heures avant Noël !"
-	},
-	"%d hour left": {
-		"one": "%d heure restante",
-		"other": "%d heures restantes"
-	},
-	"There is **%d** week left until Christmas!": {
-		"one": "Il reste **%d** semaine avant Noël !",
-		"other": "Il reste **%d** semaines avant Noël !"
-	},
-	"%d week left": {
-		"one": "%d semaine restante",
-		"other": "%d semaines restantes"
-	},
-	"There is **%d** second left until Christmas!": {
-		"one": "Il reste **%d** seconde avant Noël !",
-		"other": "Il reste **%d** secondes avant Noël !"
-	},
-	"%d second left": {
-		"one": "%d seconde restante",
-		"other": "%d secondes restantes"
-	},
-	"There is **%d** minute left until Christmas!": {
-		"one": "Il reste **%d** minute avant Noël !",
-		"other": "Il reste **%d** minutes avant Noël!"
-	},
-	"%d minute left": {
-		"one": "%d minute restante",
-		"other": "%d minutes restantes"
-	},
-	"Invite": "Inviter",
-	"Add the Christmas Countdown bot to your own server: [invite](%s)": "Ajoutez le bot Christmas Countdown à votre propre serveur: [invite](%s)",
-	"Invalid prefix. Too long perhaps?": "Préfixe invalide. Trop long peut-être ?",
-	"Invalid boolean.": "Booléen invalide.",
-	"Show days left until Christmas, in the user's or server's timezone.": "Afficher les jours restants jusqu'à Noël, dans le fuseau horaire de l'utilisateur ou du serveur.",
-	"Hyphens (-) can be omitted.": "Les traits d'union (-) peuvent être omis.",
-	"Show hours left until Christmas, in the user's or server's timezone.": "Afficher les heures restantes jusqu'à Noël, dans le fuseau horaire de l'utilisateur ou du serveur.",
-	"Show minutes left until Christmas, in the user's or server's timezone.": "Afficher les minutes restantes jusqu'à Noël, dans le fuseau horaire de l'utilisateur ou du serveur.",
-	"Show seconds left until Christmas, in the user's or server's timezone.": "Afficher les secondes restantes jusqu'à Noël, dans le fuseau horaire de l'utilisateur ou du serveur.",
-	"Show sleeps left until Christmas, in the user's or server's timezone.": "Afficher le nombre de sommeil jusqu'à Noël, dans le fuseau horaire de l'utilisateur ou du serveur.",
-	"Show weeks left until Christmas, in the user's or server's timezone.": "Afficher les semaines restantes jusqu'à Noël, dans le fuseau horaire de l'utilisateur ou du serveur.",
-	"Show information about the bot": "Afficher des informations sur le bot",
-	"Show bot ping": "Afficher la latence du bot",
-	"Add the bot your own server": "Ajoutez le bot à votre propre serveur",
-	"Show bot ping and shard info.": "Afficher le ping du bot et les informations.",
-	"Get premium by donating": "Obtenez le premium en faisant un don",
-	"List all valid locales": "Lister tous les paramètres régionaux valides",
-	"Modify server settings": "Modifier les paramètres du serveur",
-	"List all valid timezones": "Lister tous les fuseaux horaires valides",
-	"Toggle the countdown": "Basculer le compte à rebours",
-	"Modify user settings": "Modifier les paramètres utilisateur"
+	"is-are": [
+		"y a",
+		"ya"
+	],
+	"user_timezone": "User timezone: %s",
+	"server_timezone": "Server timezone: %s",
+	"none": "none"
 }

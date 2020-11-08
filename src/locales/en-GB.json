@@ -130,7 +130,10 @@
 		"ping": {
 			"title": "Pong!",
 			"fields": {
-				"shard_num": "Shard number",
+				"shard_num": {
+					"title": "Shard number",
+					"text": "%d of %d"
+				},
 				"avg_ping": "Avg. ping",
 				"shard_ping": "Shard ping",
 				"latency": "Overall latency"

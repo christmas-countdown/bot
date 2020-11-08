@@ -55,7 +55,7 @@ Countly.init({
 	debug: false
 });
 Countly.begin_session();
-Countly.track_errors();
+// Countly.track_errors();
 
 
 /**
@@ -246,6 +246,9 @@ class Client extends AkairoClient {
 		this.listenerHandler.loadAll();
 		// this.inhibitorHandler.loadAll();
 		this.commandHandler.loadAll();
+
+		// voice stuff
+		this.broadcast = this.voice.createBroadcast();
 
 		// config and database etc
 		this.config = config;

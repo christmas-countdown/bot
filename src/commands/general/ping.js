@@ -30,7 +30,7 @@ class PingCommand extends Command {
 
 		let embed = new Embed()
 			.setTitle(i18n.__('general.ping.title'))
-			.addField(i18n.__('general.ping.fields.shard_num'), client.shard.ids, false)
+			.addField(i18n.__('general.ping.fields.shard_num.title'), i18n.__('general.ping.fields.shard_num.text', client.shard.ids, client.ws.shards.size), false)
 			.addField(i18n.__('general.ping.fields.avg_ping'), client.ws.ping + 'ms', true)
 			.addField(i18n.__('general.ping.fields.shard_ping'), client.ws.shards.get(client.shard.ids[0]).ping + 'ms', true);
 		let m = await message.util.send(embed);

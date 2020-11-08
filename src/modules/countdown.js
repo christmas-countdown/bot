@@ -75,13 +75,20 @@ module.exports = class Countdown {
 
 			// check the time
 			let now = spacetime.now(tz);
-			if (now.hour() !== 0) { // not 00:00 - 00:59 in the guild timezone
+			/* if (now.hour() !== 0) { // not 00:00 - 00:59 in the guild timezone
 				if (settings.last) {
 					let last = spacetime(settings.last, tz),
 						diff = last.diff(now, 'hours');
 					if (diff < 24) continue; // continue if last was less than 24h ago
 				} else continue; // continue if no last
-			}
+			} */
+
+			if (settings.last) {
+				let last = spacetime(settings.last, tz),
+					diff = last.diff(now, 'hours');
+				if (diff <= 1) continue; // to prevent sending more than once if the bot is restarted 
+				if (now.hour() !== 0 && diff < 24) continue;
+			} else if (now.hour() !== 0) continue;
 
 			// either it is 00:00 - 00:59, or the last was sent over 24 hours ago
 
