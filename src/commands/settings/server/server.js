@@ -62,7 +62,7 @@ class ServerSettingsCommand extends Command {
 							❯ [\`set\`](${docs}#server-set "server set") » ${this.handler.findCommand('server-set').description.content || moreInfo}
 							❯ [\`reset\`](${docs}#server-reset "server reset") » ${this.handler.findCommand('server-reset').description.content || moreInfo}`,
 					))					
-					.addField(i18n.__('settings.usage'), `\`${prefix}server set <args>\``)
+					.addField(i18n.__('settings.usage'), `\`${prefix}server <command> [args]\``)
 					.addField(i18n.__('settings.help'), `\`${prefix}help server\``);
 			},
 		};

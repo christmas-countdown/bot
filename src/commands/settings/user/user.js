@@ -57,7 +57,7 @@ class UserSettingsCommand extends Command {
 						stripIndents`❯ [\`set\`](${docs}#user-set "user set") » ${this.handler.findCommand('user-set').description.content || moreInfo}
 							❯ [\`reset\`](${docs}#user-reset "user reset") » ${this.handler.findCommand('user-reset').description.content || moreInfo}`,
 					))					
-					.addField(i18n.__('settings.usage'), `\`${prefix}user set <args>\``)
+					.addField(i18n.__('settings.usage'), `\`${prefix}user <command> [args]\``)
 					.addField(i18n.__('settings.help'), `\`${prefix}help user\``);
 			},
 		};

@@ -32,7 +32,8 @@ module.exports = class I18n {
 	}
 
 	static get locales() {
-		let locales = fs.readdirSync(__dirname).filter(file => file.endsWith('.json'));
-		return locales.map(l => l.slice(0, l.length - 5)); // remove .json from the end so it's just an array of file names without extension
+		return fs.readdirSync(__dirname)
+			.filter(file => file.endsWith('.json')) // don't include index.js 
+			.map(name => name.slice(0, name.length - 5)); // remove .json from the end so it's just an array of file names without extension
 	}
 };

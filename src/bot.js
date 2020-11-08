@@ -193,7 +193,7 @@ class Client extends AkairoClient {
 		this.commandHandler.resolver.addType('boolean', (message, phrase) => {
 			if (!phrase) return null;
 			phrase = phrase.trim().toLowerCase();
-			if(['true', 'yes', 'on', '1'].includes(phrase))
+			if (['true', 'yes', 'on', '1'].includes(phrase))
 				return [true];
 			else if (['false', 'no', 'off', '0'].includes(phrase))
 				return [false];

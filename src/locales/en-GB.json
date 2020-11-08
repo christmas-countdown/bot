@@ -144,6 +144,11 @@
 			"description": "Donate [here](%s) to unlock additional features."
 		}
 	},
+	"music": {
+		"music": {
+			"title": "Christmas music radio"
+		}
+	},
 	"settings": {
 		"server": {
 			"reset": {
