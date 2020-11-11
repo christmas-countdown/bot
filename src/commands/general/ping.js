@@ -7,6 +7,7 @@
 
 const { Command } = require('discord-akairo');
 const { Embed } = require('../../bot');
+const utils = require('../../modules/utils');
 
 const I18n = require('../../locales');
 
@@ -28,9 +29,11 @@ class PingCommand extends Command {
 		
 		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
+		let shard = client.shard.ids[0];
+
 		let embed = new Embed()
 			.setTitle(i18n.__('general.ping.title'))
-			.addField(i18n.__('general.ping.fields.shard_num.title'), i18n.__('general.ping.fields.shard_num.text', client.shard.ids, client.ws.shards.size), false)
+			.addField(i18n.__('general.ping.fields.shard_num.title'), i18n.__('general.ping.fields.shard_num.text', shard, utils.nth(shard + 1), client.shard.count), false)
 			.addField(i18n.__('general.ping.fields.avg_ping'), client.ws.ping + 'ms', true)
 			.addField(i18n.__('general.ping.fields.shard_ping'), client.ws.shards.get(client.shard.ids[0]).ping + 'ms', true);
 		let m = await message.util.send(embed);
