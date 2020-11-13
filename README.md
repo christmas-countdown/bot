@@ -15,4 +15,4 @@ A Christmas Countdown bot for Discord
 
 ## Contributing
 
-Read the contributing file first. Join the Discord server if you want to help translate the bot and don;t know where to start.
+Read the contributing file first. Join the Discord server if you want to help translate the bot and don't know where to start.
