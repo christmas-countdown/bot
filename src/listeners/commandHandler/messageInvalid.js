@@ -20,8 +20,9 @@ class OnMessageInvalidListener extends Listener {
 	}
 
 	async exec(message) {
-		
-		if (!message.mentions.has(this.client.user))
+
+		// !message.mentions.has(this.client.user)
+		if (!new RegExp(`<@!?${this.client.user.id}>`).test(message.content))
 			return;
 
 		let uSettings = await message.author.settings(),
