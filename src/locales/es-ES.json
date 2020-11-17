@@ -301,7 +301,7 @@
 	},
 	"is-are": [
 		"es",
-		"son"
+		"solo"
 	],
 	"user_timezone": "Zona horaria del usuario: %s",
 	"server_timezone": "Zona horaria del servidor: %s",
