@@ -81,7 +81,7 @@ class OnReadyListener extends Listener {
 			});
 		};
 
-		postCount();
+		setTimeout(postCount, 60000); // wait a minute to let all shards spawn
 		setInterval(postCount, 30 * 60000); // every 30 minutes
 	}
 }
