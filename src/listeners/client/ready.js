@@ -7,7 +7,7 @@
 
 const { Listener } = require('discord-akairo');
 
-const fetch = require('node-fetch');
+const botlists = require('blapi');
 const Countdown = require('../../modules/countdown');
 const utils = require('../../modules/utils');
 class OnReadyListener extends Listener {
@@ -48,42 +48,41 @@ class OnReadyListener extends Listener {
 			this.client.log.debug(`Updated presence: ${presence.activity} ${presence.type}`);
 		}, 60000); // every minute
 		
-		
-		/**
-		 * 
-		 * stop here if not primary shard
-		 * 
-		 */
-		if (!this.client.shard.ids.includes(0)) return; 
 
-		const TopGG = require('dblapi.js');
-		const dbl = new TopGG(process.env.TOPGG_KEY, this.client);
+		if (process.env.DEVELOPMENT || !this.client.shard.ids.includes(0)) return;
+		botlists.setLogging(false);
 
 		const postCount = () => {
-			if (process.env.DEVELOPMENT) return; 
-			this.client.shard.fetchClientValues('guilds.cache.size').then(total => {
-				total = total.reduce((acc, count) => acc + count, 0);
+			this.client.shard.fetchClientValues('guilds.cache.size').then(arr => {
+				if (arr.length !== this.client.shard.count) return;
+				let total = arr.reduce((acc, num) => acc + num, 0);
 
-				// top.gg
-				dbl.postStats(total, this.client.shard.ids[0], this.client.shard.count);
-
-				// discord.boats (boats.js sucks)
-				fetch('https://discord.boats/api/bot/' + this.client.user.id, {
-					method: 'POST',
-					body: JSON.stringify({
-						server_count: total
-					}),
-					headers: {
-						'Content-Type': 'application/json',
-						'Authorization': process.env.BOATS_KEY
+				botlists.manualPost(
+					total, // server_count
+					this.client.user.id, // bot_id
+					{
+						'top.gg': process.env.BL_TOPGG,
+						'discord.boats': process.env.BL_BOATS,
+						'botsfordiscord.com': process.env.BL_BFD,
+						'botlist.space': process.env.BL_SPACE,
+						'discord.bots.gg': process.env.BL_DBGG,
+						'discordapps.dev': process.env.BL_DADEV,
+						'discordbotlist.com': process.env.BL_DBL,
 					},
+					this.client.shard.ids[0], // shard_id
+					this.client.shard.count, // shard_count
+					arr // shards
+				).then(() => {
+					this.client.log.info(`Posted server count (${total} over ${this.client.shard.count} shards)`);
+				}).catch(e => {
+					this.client.log.warn(`Error posting server count: \n${e}`);
 				});
-
-				this.client.log.info('Posted server count');
+				
 			});
 		};
+
 		postCount();
-		setInterval(postCount, 15 * 60000); // every 15 minutes
+		setInterval(postCount, 30 * 60000); // every 30 minutes
 	}
 }
 
