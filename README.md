@@ -18,6 +18,6 @@ The original Christmas Countdown bot for Discord.
 
 Read the contributing file first. Join the Discord server if you want to help translate the bot and don't know where to start.
 
-
 [![Discord Boats](https://discord.boats/api/widget/509851616216875019)](https://discord.boats/bot/christmascountdown)
-[![BFD](https://botsfordiscord.com/api/bot/509851616216875019/widget)](https://botsfordiscord.com/bot/509851616216875019)
+[![Top.GG](https://top.gg/api/widget/509851616216875019.svg?usernamecolor=FFFFFF&topcolor=D5002C)](https://top.gg/bot/509851616216875019)
+[![BFD](https://botsfordiscord.com/api/bot/509851616216875019/widget?theme=dark)](https://botsfordiscord.com/bot/509851616216875019)
