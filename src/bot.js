@@ -201,7 +201,7 @@ class Client extends AkairoClient {
 				return null;
 		});
 
-		const timezones = require('./storage/timezones.json'); // generated with moment-timezone (moment.tz.names())
+		const timezones = require('./storage/timezones.json');
 		this.commandHandler.resolver.addType('timezone', (message, phrase) => {
 			if (!phrase) return null;
 			phrase = phrase.trim().toLowerCase();

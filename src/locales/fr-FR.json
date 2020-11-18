@@ -132,7 +132,7 @@
 			"fields": {
 				"shard_num": {
 					"title": "Numéro de fragment",
-					"text": "%d sur %d"
+					"text": "**%d** (%s) sur %d"
 				},
 				"avg_ping": "Ping moyen",
 				"shard_ping": "Ping le plus haut",

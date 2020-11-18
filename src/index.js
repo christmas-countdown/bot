@@ -6,6 +6,7 @@
  */
 
 require('dotenv').config();
+const { join } = require('path');
 const config = require('../config');
 
 const Logger = require('leekslazylogger');
@@ -19,7 +20,7 @@ const log = new Logger({
 log.info('Christmas Countdown Bot is starting', ['magenta']);
 
 const { ShardingManager } = require('discord.js');
-const manager = new ShardingManager('src/bot.js', { respawn: config.respawn });
+const manager = new ShardingManager(join(__dirname, '/bot.js')/* , { respawn: config.respawn } */);
 
 log.info('[MANAGER] Shard manager started');
 

@@ -132,7 +132,7 @@
 			"fields": {
 				"shard_num": {
 					"title": "Shard number",
-					"text": "%d of %d"
+					"text": "**%d** (%s) of %d"
 				},
 				"avg_ping": "Avg. ping",
 				"shard_ping": "Shard ping",
