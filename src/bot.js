@@ -79,7 +79,7 @@ class Embed extends MessageEmbed {
 
 		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
-		if(!uSettings && !gSettings) {
+		if (!uSettings && !gSettings) {
 			this.footer = {
 				text: client.config.footer,
 				iconURL: client.user.displayAvatarURL(),
@@ -134,8 +134,15 @@ Guild.init(require('./models/guild').model, {
 	modelName: 'guild'
 });
 
+class Music extends Model { }
+Music.init(require('./models/music').model, {
+	sequelize,
+	modelName: 'music'
+});
+
 User.sync();
 Guild.sync();
+Music.sync();
 
 
 /**
