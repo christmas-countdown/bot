@@ -147,6 +147,23 @@
 	"music": {
 		"music": {
 			"title": "Christmas music radio"
+		},
+		"suggest": {
+			"log": {
+				"description": "Suggested by %s"
+			},
+			"embed": {
+				"title": ":white_check_mark: Submitted",
+				"description": "Your suggestion to add \"**%s**\" to the radio playlist has been submitted."
+			},
+			"nourl": {
+				"title": ":x: Invalid URL",
+				"description": "Please provide a valid link to a YouTube video. Only submit Christmas music."
+			},
+			"error": {
+				"title": ":x: An error occurred",
+				"description": "Is it a valid YouTube video URL?"
+			}
 		}
 	},
 	"settings": {
@@ -298,8 +315,8 @@
 				"text": "`%s` or \"%s\""
 			},
 			"prefix": {
-					"title": "Server prefix",
-					"default": "(default)"
+				"title": "Server prefix",
+				"default": "(default)"
 			},
 			"support": "Support server"
 		}

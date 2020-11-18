@@ -27,6 +27,7 @@
     "discord.js": "^12.4.1",
     "dotenv": "^8.2.0",
     "erlpack": "github:discord/erlpack",
+    "ffmpeg-static": "^4.2.7",
     "leekslazylogger": "^2.0.7",
     "mysql2": "^2.2.5",
     "node-fetch": "^2.6.1",
@@ -34,6 +35,7 @@
     "spacetime": "^6.10.0",
     "sqlite3": "^5.0.0",
     "utf-8-validate": "^5.0.3",
+    "ytdl-core": "^4.0.5",
     "zlib-sync": "^0.1.7"
   },
   "optionalDependencies": {

@@ -262,7 +262,8 @@ class Client extends AkairoClient {
 		this.Countly = Countly;
 		this.db = {
 			User,
-			Guild
+			Guild,
+			Music
 		};
 		this.log = log;
 

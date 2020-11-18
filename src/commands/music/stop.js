@@ -10,7 +10,7 @@ const { Embed } = require('../../bot');
 
 const I18n = require('../../locales');
 
-class MusicStop extends Command {
+class MusicStopCommand extends Command {
 	constructor() {
 		super('music-stop', {
 			aliases: ['music-stop', 'music-pause'],
@@ -42,4 +42,4 @@ class MusicStop extends Command {
 	}
 }
 
-module.exports = MusicStop;
+module.exports = MusicStopCommand;

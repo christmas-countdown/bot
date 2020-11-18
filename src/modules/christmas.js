@@ -24,26 +24,6 @@ module.exports = class ChristmasCountdown {
 
 		this.christmas = spacetime(`December 25, ${year} 0:00:00`, this.timezone); // midnight on Christmas day
 
-		// for (let i = 1; i <= 31; i++)
-		// 	console.log(
-		// 		'October',
-		// 		i,
-		// 		spacetime(`October ${i}, 2020 0:00:00`, this.timezone).diff(this.christmas, 'days')
-		// 	);
-
-		// for (let i = 1; i <= 30; i++)
-		// 	console.log(
-		// 		'November',
-		// 		i,
-		// 		spacetime(`November ${i}, 2020 0:00:00`, this.timezone).diff(this.christmas, 'days')
-		// 	);
-
-		// for (let i = 1; i <= 31; i++)
-		// 	console.log(
-		// 		'December',
-		// 		i,
-		// 		spacetime(`December ${i}, 2020 0:00:00`, this.timezone).diff(this.christmas, 'days')
-		// 	);
 	}
 
 	get months() {

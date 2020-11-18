@@ -7,24 +7,20 @@
 
 const { Command } = require('discord-akairo');
 const { Embed } = require('../../bot');
+const utils = require('../../modules/utils');
 
 const I18n = require('../../locales');
 
-class MusicStartCommand extends Command {
+class NowPlayingCommand extends Command {
 	constructor() {
-		super('music-start', {
-			aliases: ['music-start', 'music-play'],
-			category: 'hidden',
+		super('playing', {
+			aliases: ['nowplaying', 'np'],
 			description: {
-				content: 'Start the Christmas radio',
+				content: 'Show what song is currently playing on the radio.',
 			},
-			channel: 'guild', // guilds only
-			userPermissions: ['MANAGE_GUILD'], // only server admins
-			ignorePermissions: process.env.OWNERS.split(',').map(str => str.trim()), // bot owners are exempt
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
 		});
 	}
-
 
 	async exec(message) {
 
@@ -36,10 +32,9 @@ class MusicStartCommand extends Command {
 		// ❯ return a promise
 		return message.util.send(
 			new Embed()
-				.setTitle('ok')
+				.setTitle('music.np.title')
 		);
-
 	}
 }
 
-module.exports = MusicStartCommand;
+module.exports = NowPlayingCommand;
