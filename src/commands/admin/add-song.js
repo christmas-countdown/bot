@@ -8,6 +8,10 @@
 const { Command } = require('discord-akairo');
 const { Embed } = require('../../bot');
 
+const child = require('child_process');
+const ytdl = require('ytdl-core');
+const ffmpeg = require('ffmpeg-static');
+
 class AddSongCommand extends Command {
 	constructor() {
 		super('add-song', {
@@ -24,7 +28,13 @@ class AddSongCommand extends Command {
 					id: 'id',
 					match: 'option',
 					flag: '--id',
-					type: /[a-zA-Z0-9-]{11}/gm,
+					type: (message, phrase) => {
+						try {
+							return ytdl.getVideoID(phrase.trim());
+						} catch {
+							return null;
+						}
+					},
 					otherwise: async () => {
 						return new Embed()
 							.setTitle(':x: Invalid youtube ID')
@@ -59,10 +69,14 @@ class AddSongCommand extends Command {
 
 		let id = args.id.match[0];
 
-		this.client.db.Music.create({
+		await this.client.db.Music.create({
 			id,
 			name: args.name,
 			by: args.by,
+		});
+
+		ytdl.chooseFormat('opus', {
+
 		});
 
 		return message.util.send(
