@@ -147,7 +147,7 @@
 	"settings": {
 		"server": {
 			"reset": {
-				"title": ":white_check_mark: Réinitialisation du paramètres serveur",
+				"title": "✅ Réinitialisation du paramètres serveur",
 				"description": "Les paramètres de ce serveur ont été réinitialisés aux valeurs par défaut. Utilisez `%s` pour reconfigurer."
 			},
 			"server": "Paramètres du serveur",
@@ -157,7 +157,7 @@
 					"description": "Rien n'a changé."
 				},
 				"success": {
-					"title": ":white_check_mark: Paramètres du serveur mis à jour"
+					"title": "✅ Paramètres du serveur mis à jour"
 				}
 			},
 			"setup": {
@@ -177,11 +177,11 @@
 					}
 				}
 			},
-			"invalid": ":x: Paramètres du serveur"
+			"invalid": "❌ Paramètres du serveur"
 		},
 		"user": {
 			"reset": {
-				"title": ":white_check_mark: Réinitialisation des paramètres utilisateur",
+				"title": "✅ Réinitialisation des paramètres utilisateur",
 				"description": "Vos paramètres ont été réinitialisés aux valeurs par défaut. Utilisez `%s` pour reconfigurer."
 			},
 			"set": {
@@ -190,11 +190,11 @@
 					"description": "Nothing changed."
 				},
 				"success": {
-					"title": ":white_check_mark: User settings updated"
+					"title": "✅ User settings updated"
 				}
 			},
 			"user": "Paramètres utilisateur",
-			"invalid": ":x: Paramètres utilisateur"
+			"invalid": "❌ Paramètres utilisateur"
 		},
 		"sub_cmds": "La commande %s a les sous-commandes suivantes:\n\n%s",
 		"usage": "Usage",
@@ -267,10 +267,10 @@
 		},
 		"toggle": {
 			"no_channel": {
-				"title": ":x: Impossible d'activer le compte à rebours avant que le canal ne soit défini",
+				"title": "❌ Impossible d'activer le compte à rebours avant que le canal ne soit défini",
 				"description": "Utilisez %s pour régler le canal."
 			},
-			"toggled": ":white_check_mark: Compte à rebours %s",
+			"toggled": "✅ Compte à rebours %s",
 			"enabled": "activé(e)",
 			"disabled": "désactivé(e)"
 		}

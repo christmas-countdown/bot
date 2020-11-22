@@ -8,6 +8,8 @@
 const { Command } = require('discord-akairo');
 const { Embed } = require('../../bot');
 
+const fs = require('fs');
+const { join } = require('path');
 const ytdl = require('ytdl-core');
 const YouTube = require('../../modules/youtube');
 
@@ -36,7 +38,7 @@ class AddSongCommand extends Command {
 					},
 					otherwise: async () => {
 						return new Embed()
-							.setTitle(':x: Invalid YouTube ID')
+							.setTitle('❌ Invalid YouTube ID')
 							.setDescription('Please provide a YouTube video ID');
 					}
 				},
@@ -46,7 +48,7 @@ class AddSongCommand extends Command {
 					flag: '--name',
 					otherwise: async () => {
 						return new Embed()
-							.setTitle(':x: The name of the song is required')
+							.setTitle('❌ The name of the song is required')
 							.setDescription('`name: <title>`');
 					}
 				},
@@ -56,7 +58,7 @@ class AddSongCommand extends Command {
 					flag: '--by',
 					otherwise: async () => {
 						return new Embed()
-							.setTitle(':x: The artist\'s name is required')
+							.setTitle('❌ The artist\'s name is required')
 							.setDescription('`by: <artist>`');
 					}
 				}
@@ -66,7 +68,44 @@ class AddSongCommand extends Command {
 
 	async exec(message, args) {
 
-		YouTube.download(args.id);
+		
+
+		message.util.send(
+			new Embed()
+				.setTitle('Downloading...')
+		);
+
+		YouTube.download(args.id)
+			.then(format => {
+				let embed = new Embed()
+					.setTitle('✅ Added');
+
+				let description = `"**${args.name}**" by **${args.by}** has been added to the radio playlist. (${args.id})`;
+
+				if (format !== 'opus')
+					description += '\n⚠️The song was not available in OPUS format so has been downloaded as an MP3 instead. **Please manually convert it.**';
+				
+				embed.setDescription(description);
+
+				let path = join(__dirname, '../../../music/tracks.json'),
+					tracks = JSON.parse(fs.readFileSync(path));
+	
+				tracks[args.id] = {
+					...args
+				};
+
+				fs.writeFileSync(path, JSON.stringify(tracks));
+
+				return message.util.edit(embed);
+			})
+			.catch(err => {
+				return message.util.edit(
+					new Embed()
+						.setTitle('❌ Error')
+						.setDescription(err)
+				);
+			});
+
 
 		/* await this.client.db.Music.create({
 			id,
@@ -74,11 +113,6 @@ class AddSongCommand extends Command {
 			by: args.by,
 		}); */
 
-		return message.util.send(
-			new Embed()
-				.setTitle(':white_check_mark: Added')
-				.setDescription(`"**${args.name}**" by **${args.by}** has been added to the radio playlist. (${args.id})`)
-		);
 
 	}
 }

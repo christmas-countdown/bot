@@ -147,7 +147,7 @@
 	"settings": {
 		"server": {
 			"reset": {
-				"title": ":white_check_mark: Ajustes del servidor reiniciados",
+				"title": "✅ Ajustes del servidor reiniciados",
 				"description": "Los ajustes de este servidor fueron establecidos a los valores por defecto. Usa %s para reconfigurarlos."
 			},
 			"server": "Ajustes del servidor",
@@ -157,7 +157,7 @@
 					"description": "Nada cambiado."
 				},
 				"success": {
-					"title": ":white_check_mark: Ajustes del servidor actualizados"
+					"title": "✅ Ajustes del servidor actualizados"
 				}
 			},
 			"setup": {
@@ -177,11 +177,11 @@
 					}
 				}
 			},
-			"invalid": ":x: Ajustes del servidor"
+			"invalid": "❌ Ajustes del servidor"
 		},
 		"user": {
 			"reset": {
-				"title": ":white_check_mark: Ajustes del usuario reiniciados",
+				"title": "✅ Ajustes del usuario reiniciados",
 				"description": "Tus ajustes fueron establecidos a los valores por defecto. Usa `%s` para reconfigurarlos."
 			},
 			"set": {
@@ -190,11 +190,11 @@
 					"description": "Nada cambiado."
 				},
 				"success": {
-					"title": ":white_check_mark: Ajustes del usuario actualizados"
+					"title": "✅ Ajustes del usuario actualizados"
 				}
 			},
 			"user": "Ajustes del usuario",
-			"invalid": ":x: Ajustes del usuario"
+			"invalid": "❌ Ajustes del usuario"
 		},
 		"sub_cmds": "El comando %s tiene los siguientes subcomandos:\n\n%s",
 		"usage": "Uso",
@@ -267,10 +267,10 @@
 		},
 		"toggle": {
 			"no_channel": {
-				"title": ":x: No se puede establecer la cuenta regresiva antes de configurar el canal",
+				"title": "❌ No se puede establecer la cuenta regresiva antes de configurar el canal",
 				"description": "Usa %s para establecer el canal."
 			},
-			"toggled": ":white_check_mark: Cuenta regresiva %s",
+			"toggled": "✅ Cuenta regresiva %s",
 			"enabled": "activado",
 			"disabled": "desactivado"
 		}

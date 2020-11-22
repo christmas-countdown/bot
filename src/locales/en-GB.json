@@ -153,15 +153,15 @@
 				"description": "Suggested by %s"
 			},
 			"embed": {
-				"title": ":white_check_mark: Submitted",
+				"title": "✅ Submitted",
 				"description": "Your suggestion to add \"**%s**\" to the radio playlist has been submitted."
 			},
 			"nourl": {
-				"title": ":x: Invalid URL",
+				"title": "❌ Invalid URL",
 				"description": "Please provide a valid link to a YouTube video. Only submit Christmas music."
 			},
 			"error": {
-				"title": ":x: An error occurred",
+				"title": "❌ An error occurred",
 				"description": "Is it a valid YouTube video URL?"
 			}
 		}
@@ -169,7 +169,7 @@
 	"settings": {
 		"server": {
 			"reset": {
-				"title": ":white_check_mark: Server settings reset",
+				"title": "✅ Server settings reset",
 				"description": "This server's settings have been reset to the defaults. Use %s to re-configure."
 			},
 			"server": "Server settings",
@@ -179,7 +179,7 @@
 					"description": "Nothing changed."
 				},
 				"success": {
-					"title": ":white_check_mark: Server settings updated"
+					"title": "✅ Server settings updated"
 				}
 			},
 			"setup": {
@@ -199,11 +199,11 @@
 					}
 				}
 			},
-			"invalid": ":x: Server settings"
+			"invalid": "❌ Server settings"
 		},
 		"user": {
 			"reset": {
-				"title": ":white_check_mark: User settings reset",
+				"title": "✅ User settings reset",
 				"description": "Your settings have been reset to the defaults. Use `%s` to re-configure."
 			},
 			"set": {
@@ -212,11 +212,11 @@
 					"description": "Nothing changed."
 				},
 				"success": {
-					"title": ":white_check_mark: User settings updated"
+					"title": "✅ User settings updated"
 				}
 			},
 			"user": "User settings",
-			"invalid": ":x: User settings"
+			"invalid": "❌ User settings"
 		},
 		"sub_cmds": "The %s command has the following subcommands:\n\n%s",
 		"usage": "Usage",
@@ -289,10 +289,10 @@
 		},
 		"toggle": {
 			"no_channel": {
-				"title": ":x: Cannot enable countdown before channel is set",
+				"title": "❌ Cannot enable countdown before channel is set",
 				"description": "Use %s to set the channel."
 			},
-			"toggled": ":white_check_mark: Countdown %s",
+			"toggled": "✅ Countdown %s",
 			"enabled": "enabled",
 			"disabled": "disabled"
 		}
