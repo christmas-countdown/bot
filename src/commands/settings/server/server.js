@@ -30,7 +30,7 @@ class ServerSettingsCommand extends Command {
 			},
 			channel: 'guild', // guilds only
 			userPermissions: ['MANAGE_GUILD'], // only server admins
-			ignorePermissions: process.env.OWNERS.split(',').map(str => str.trim()), // bot owners are exempt 
+			ignorePermissions: process.env.OWNERS.replace(' ', '').split(','), // bot owners are exempt 
 			clientPermissions: ['EMBED_LINKS', 'SEND_MESSAGES'],
 		});
 	}

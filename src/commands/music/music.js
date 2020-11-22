@@ -56,7 +56,7 @@ class MusicCommand extends Command {
 
 				return new Embed()
 					.setTitle(i18n.__('music.music.title'))
-					.setDescription(i18n.__('music.sub_cmds',
+					.setDescription(i18n.__('settings.sub_cmds',
 						`[\`${this.id}\`](${docs}#music)`,
 						stripIndents`❯ [\`start\`](${docs}#music-start "music start") » ${this.handler.findCommand('music-start').description.content || moreInfo}
 							❯ [\`stop\`](${docs}#music-stop "music stop") » ${this.handler.findCommand('music-stop').description.content || moreInfo}

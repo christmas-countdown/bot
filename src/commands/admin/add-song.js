@@ -8,9 +8,8 @@
 const { Command } = require('discord-akairo');
 const { Embed } = require('../../bot');
 
-const child = require('child_process');
 const ytdl = require('ytdl-core');
-const ffmpeg = require('ffmpeg-static');
+const YouTube = require('../../modules/youtube');
 
 class AddSongCommand extends Command {
 	constructor() {
@@ -37,8 +36,8 @@ class AddSongCommand extends Command {
 					},
 					otherwise: async () => {
 						return new Embed()
-							.setTitle(':x: Invalid youtube ID')
-							.setDescription('Please provide a youtube video ID');
+							.setTitle(':x: Invalid YouTube ID')
+							.setDescription('Please provide a YouTube video ID');
 					}
 				},
 				{
@@ -67,22 +66,18 @@ class AddSongCommand extends Command {
 
 	async exec(message, args) {
 
-		let id = args.id.match[0];
+		YouTube.download(args.id);
 
-		await this.client.db.Music.create({
+		/* await this.client.db.Music.create({
 			id,
 			name: args.name,
 			by: args.by,
-		});
-
-		ytdl.chooseFormat('opus', {
-
-		});
+		}); */
 
 		return message.util.send(
 			new Embed()
 				.setTitle(':white_check_mark: Added')
-				.setDescription(`"**${args.name}**" by **${args.by}** has been added to the radio playlist. (${id})`)
+				.setDescription(`"**${args.name}**" by **${args.by}** has been added to the radio playlist. (${args.id})`)
 		);
 
 	}

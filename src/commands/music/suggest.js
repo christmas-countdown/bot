@@ -5,13 +5,13 @@
  * @license GPL-3.0
  */
 
-const fetch = require('node-fetch');
 const { Command } = require('discord-akairo');
 const { Embed } = require('../../bot');
 
 const I18n = require('../../locales');
 
 const ytdl = require('ytdl-core');
+const YouTube = require('../../modules/youtube');
 
 class MusicSuggestCommand extends Command {
 	constructor() {
@@ -64,18 +64,8 @@ class MusicSuggestCommand extends Command {
 		let channel = await this.client.channels.fetch(process.env.MUSIC),
 			id = args.youtube/*.matches[0][4]*/;
 		
-		fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&key=${process.env.YOUTUBE_KEY}`, {
-			headers: {
-				'Authorization': process.env.YOUTUBE_KEY,
-				'Accept': 'application/json' ,
-				'Content-Type': 'application/json' 
-			}
-		})
-			.then(res => res.json())
-			.then(json => {
-				let video = json.items[0],
-					title = video.snippet.title;
-
+		YouTube.getName(id)
+			.then(title => {
 				try {
 					channel.send(
 						new Embed()

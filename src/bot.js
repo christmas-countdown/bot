@@ -134,16 +134,9 @@ Guild.init(require('./models/guild').model, {
 	modelName: 'guild'
 });
 
-class Music extends Model { }
-Music.init(require('./models/music').model, {
-	sequelize,
-	modelName: 'music'
-});
 
 User.sync();
 Guild.sync();
-Music.sync();
-
 
 /**
  * Discord client
@@ -159,7 +152,8 @@ class Client extends AkairoClient {
 	constructor() {
 		let presence = config.presences[Math.floor(Math.random() * config.presences.length)];
 		super({
-			ownerID: process.env.OWNERS.split(',').map(str => str.trim())
+			// ownerID: process.env.OWNERS.split(',').map(str => str.trim())
+			ownerID: process.env.OWNERS.replace(' ', '').split(',')
 		}, {
 			autoReconnect: true,
 			ws: {
@@ -263,7 +257,6 @@ class Client extends AkairoClient {
 		this.db = {
 			User,
 			Guild,
-			Music
 		};
 		this.log = log;
 

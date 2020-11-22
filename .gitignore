@@ -2,3 +2,5 @@ node_modules/
 logs/*/*.log
 .env
 database.sqlite
+music/*.ogg
+music/*.mp3
