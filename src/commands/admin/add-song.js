@@ -87,7 +87,7 @@ class AddSongCommand extends Command {
 				
 				embed.setDescription(description);
 
-				let path = join(__dirname, '../../../music/tracks.json'),
+				let path = join(__dirname, '../../../music/playlist.json'),
 					tracks = JSON.parse(fs.readFileSync(path));
 	
 				tracks[args.id] = {
