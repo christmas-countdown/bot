@@ -46,8 +46,8 @@
 				"%d dodos restants"
 			],
 			"text": [
-				"TIl y a **%d** dodo jusqu'à Noël!",
-				"Il y a **%d** dodos jusqu'à Noël!"
+				"Il reste **%d** dodo jusqu'à Noël!",
+				"Il reste **%d** dodos jusqu'à Noël!"
 			]
 		},
 		"total": {
