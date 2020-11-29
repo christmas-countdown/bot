@@ -77,7 +77,6 @@ class EvalCommand extends Command {
 					.setAuthor(message.author.username, message.author.displayAvatarURL())
 					.addField(':keyboard: Input', `\`\`\`js\n${clean(code).substring(0, 990)}\`\`\``)
 					.addField(out_title, `\`\`\`js\n${clean(err).substring(0, 990)}\`\`\``)
-
 					.setTimestamp()
 			);
 

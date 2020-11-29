@@ -79,7 +79,7 @@ class Embed extends MessageEmbed {
 
 		const i18n = new I18n(uSettings?.locale || gSettings?.locale || 'en-GB');
 
-		if(!uSettings && !gSettings) {
+		if (!uSettings && !gSettings) {
 			this.footer = {
 				text: client.config.footer,
 				iconURL: client.user.displayAvatarURL(),
@@ -152,7 +152,8 @@ class Client extends AkairoClient {
 	constructor() {
 		let presence = config.presences[Math.floor(Math.random() * config.presences.length)];
 		super({
-			ownerID: process.env.OWNERS.split(',').map(str => str.trim())
+			// ownerID: process.env.OWNERS.split(',').map(str => str.trim())
+			ownerID: process.env.OWNERS.replace(' ', '').split(',')
 		}, {
 			autoReconnect: true,
 			ws: {
