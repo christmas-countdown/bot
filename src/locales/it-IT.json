@@ -80,7 +80,7 @@
 				"Mancano **%d** settimane a Natale!"
 			]
 		},
-		"xmas_day": "È Natale! :tada:",
+		"xmas_day": "È Natale! 🎉",
 		"xmas_eve": "È la vigilia di Natale!",
 		"merry_xmas": "Buon Natale! :christmas_tree:",
 		"footer": "Puoi guardare il conto alla rovescia in diretta su [%s](%s)."
@@ -98,7 +98,7 @@
 				"docs": "Documentazione",
 				"support": "Server di supporto",
 				"guilds": "Server",
-				"premium_guilds": ":star: Server Premium",
+				"premium_guilds": "⭐ Server Premium",
 				"enabled_guilds": {
 					"title": "Contando alla rovescia in",
 					"servers": [
@@ -140,7 +140,7 @@
 			}
 		},
 		"premium": {
-			"title": ":star: Ottieni premium",
+			"title": "⭐ Ottieni premium",
 			"description": "Dona [qui](%s) per sbloccare funzionalità addizionali."
 		}
 	},
@@ -152,7 +152,7 @@
 	"settings": {
 		"server": {
 			"reset": {
-				"title": ":white_check_mark: Impostazioni del server ripristinate",
+				"title": "✅ Impostazioni del server ripristinate",
 				"description": "Le impostazioni di questo server sono state ripristinate a quelle di default. Usa %s per ri-configurarla."
 			},
 			"server": "Impostazioni del server",
@@ -162,7 +162,7 @@
 					"description": "Non è cambiato nulla."
 				},
 				"success": {
-					"title": ":white_check_mark: Impostazioni del server cambiate"
+					"title": "✅ Impostazioni del server cambiate"
 				}
 			},
 			"setup": {
@@ -182,11 +182,11 @@
 					}
 				}
 			},
-			"invalid": ":x: Impostazioni del server"
+			"invalid": "❌ Impostazioni del server"
 		},
 		"user": {
 			"reset": {
-				"title": ":white_check_mark: Impostazioni utente ripristinate",
+				"title": "✅ Impostazioni utente ripristinate",
 				"description": "Le tue impostazioni sono state resettate a quelle di default. Usa `%s` per ri-configurarle."
 			},
 			"set": {
@@ -195,11 +195,11 @@
 					"description": "Non è cambiato nulla."
 				},
 				"success": {
-					"title": ":white_check_mark: Impostazioni utente aggiornate"
+					"title": "✅ Impostazioni utente aggiornate"
 				}
 			},
 			"user": "Impostazioni utente",
-			"invalid": ":x: Impostazioni utente"
+			"invalid": "❌ Impostazioni utente"
 		},
 		"sub_cmds": "Il comando %s ha i seguenti sottocomandi:\n\n%s",
 		"usage": "Utilizzo",
@@ -240,7 +240,7 @@
 				"role_not_set": "Impossibile abilitare le menzioni prima che il ruolo sia impostato"
 			}
 		},
-		"premium": ":star: Questa è una funzione premium",
+		"premium": "⭐ Questa è una funzione premium",
 		"invalid": {
 			"description": "Ci sono stati alcuni problemi con le opzioni fornite:\n%s\n**Clicca sulla parola blu di impostazione per poter leggere la documentazione.**",
 			"option": "Imput non valido (leggi la documentazione)"
@@ -272,10 +272,10 @@
 		},
 		"toggle": {
 			"no_channel": {
-				"title": ":x: Impossibile abilitare il conto alla rovescia senza che il canale sia impostato",
+				"title": "❌ Impossibile abilitare il conto alla rovescia senza che il canale sia impostato",
 				"description": "Usa %s per impostare il canale."
 			},
-			"toggled": ":white_check_mark: Conto alla rovescia %s",
+			"toggled": "✅ Conto alla rovescia %s",
 			"enabled": "abilitato",
 			"disabled": "disabilitato"
 		}

@@ -80,7 +80,7 @@
 				"There are **%d** weeks left until Christmas!"
 			]
 		},
-		"xmas_day": "It's Christmas Day! :tada:",
+		"xmas_day": "It's Christmas Day! 🎉",
 		"xmas_eve": "It's Christmas Eve!",
 		"merry_xmas": "Merry Christmas! :christmas_tree:",
 		"footer": "View the live countdown at [%s](%s)."
@@ -98,7 +98,7 @@
 				"docs": "Documentation",
 				"support": "Support server",
 				"guilds": "Servers",
-				"premium_guilds": ":star: Premium servers",
+				"premium_guilds": "⭐ Premium servers",
 				"enabled_guilds": {
 					"title": "Counting down in",
 					"servers": [
@@ -140,7 +140,7 @@
 			}
 		},
 		"premium": {
-			"title": ":star: Get premium",
+			"title": "⭐ Get premium",
 			"description": "Donate [here](%s) to unlock additional features."
 		}
 	},
@@ -152,7 +152,7 @@
 	"settings": {
 		"server": {
 			"reset": {
-				"title": ":white_check_mark: Server settings reset",
+				"title": "✅ Server settings reset",
 				"description": "This server's settings have been reset to the defaults. Use %s to re-configure."
 			},
 			"server": "Server settings",
@@ -162,7 +162,7 @@
 					"description": "Nothing changed."
 				},
 				"success": {
-					"title": ":white_check_mark: Server settings updated"
+					"title": "✅ Server settings updated"
 				}
 			},
 			"setup": {
@@ -182,11 +182,11 @@
 					}
 				}
 			},
-			"invalid": ":x: Server settings"
+			"invalid": "❌ Server settings"
 		},
 		"user": {
 			"reset": {
-				"title": ":white_check_mark: User settings reset",
+				"title": "✅ User settings reset",
 				"description": "Your settings have been reset to the defaults. Use `%s` to re-configure."
 			},
 			"set": {
@@ -195,11 +195,11 @@
 					"description": "Nothing changed."
 				},
 				"success": {
-					"title": ":white_check_mark: User settings updated"
+					"title": "✅ User settings updated"
 				}
 			},
 			"user": "User settings",
-			"invalid": ":x: User settings"
+			"invalid": "❌ User settings"
 		},
 		"sub_cmds": "The %s command has the following subcommands:\n\n%s",
 		"usage": "Usage",
@@ -240,7 +240,7 @@
 				"role_not_set": "Cannot enable mentioning before role is set"
 			}
 		},
-		"premium": ":star: This is a premium option",
+		"premium": "⭐ This is a premium option",
 		"invalid": {
 			"description": "There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**",
 			"option": "Invalid input (see docs)"
@@ -272,10 +272,10 @@
 		},
 		"toggle": {
 			"no_channel": {
-				"title": ":x: Cannot enable countdown before channel is set",
+				"title": "❌ Cannot enable countdown before channel is set",
 				"description": "Use %s to set the channel."
 			},
-			"toggled": ":white_check_mark: Countdown %s",
+			"toggled": "✅ Countdown %s",
 			"enabled": "enabled",
 			"disabled": "disabled"
 		}

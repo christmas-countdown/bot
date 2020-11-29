@@ -80,7 +80,7 @@
 				"¡Quedan **%d** semanas restantes para Navidad!"
 			]
 		},
-		"xmas_day": "Es el Día de Navidad! :tada:",
+		"xmas_day": "Es el Día de Navidad! 🎉",
 		"xmas_eve": "¡Es Nochebuena!",
 		"merry_xmas": "Feliz Navidad! :christmas_tree:",
 		"footer": "Mira la cuenta regresiva en vivo en [%s](%s)."
@@ -98,7 +98,7 @@
 				"docs": "Documentación",
 				"support": "Servidor de soporte",
 				"guilds": "Servidores",
-				"premium_guilds": ":star: Servidores Premium",
+				"premium_guilds": "⭐ Servidores Premium",
 				"enabled_guilds": {
 					"title": "Haciendo la cuenta regresiva en",
 					"servers": [
@@ -140,14 +140,14 @@
 			}
 		},
 		"premium": {
-			"title": ":star: Obtén premium",
+			"title": "⭐ Obtén premium",
 			"description": "Dona [aquí](%s) para desbloquear características adicionales."
 		}
 	},
 	"settings": {
 		"server": {
 			"reset": {
-				"title": ":white_check_mark: Ajustes del servidor reiniciados",
+				"title": "✅ Ajustes del servidor reiniciados",
 				"description": "Los ajustes de este servidor fueron establecidos a los valores por defecto. Usa %s para reconfigurarlos."
 			},
 			"server": "Ajustes del servidor",
@@ -157,7 +157,7 @@
 					"description": "Nada cambiado."
 				},
 				"success": {
-					"title": ":white_check_mark: Ajustes del servidor actualizados"
+					"title": "✅ Ajustes del servidor actualizados"
 				}
 			},
 			"setup": {
@@ -177,11 +177,11 @@
 					}
 				}
 			},
-			"invalid": ":x: Ajustes del servidor"
+			"invalid": "❌ Ajustes del servidor"
 		},
 		"user": {
 			"reset": {
-				"title": ":white_check_mark: Ajustes del usuario reiniciados",
+				"title": "✅ Ajustes del usuario reiniciados",
 				"description": "Tus ajustes fueron establecidos a los valores por defecto. Usa `%s` para reconfigurarlos."
 			},
 			"set": {
@@ -190,11 +190,11 @@
 					"description": "Nada cambiado."
 				},
 				"success": {
-					"title": ":white_check_mark: Ajustes del usuario actualizados"
+					"title": "✅ Ajustes del usuario actualizados"
 				}
 			},
 			"user": "Ajustes del usuario",
-			"invalid": ":x: Ajustes del usuario"
+			"invalid": "❌ Ajustes del usuario"
 		},
 		"sub_cmds": "El comando %s tiene los siguientes subcomandos:\n\n%s",
 		"usage": "Uso",
@@ -235,7 +235,7 @@
 				"role_not_set": "No se puede activar la mención antes de configurar el rol"
 			}
 		},
-		"premium": ":star: Esto es una opción premium",
+		"premium": "⭐ Esto es una opción premium",
 		"invalid": {
 			"description": "Hubo algunos problemas con las opciones proporcionadas:\n%s\n**Haz click en el nombre azul de la configuración para ver la documentación. **",
 			"option": "Lo que ingresaste es inválido (revisa la documentación)"
@@ -267,10 +267,10 @@
 		},
 		"toggle": {
 			"no_channel": {
-				"title": ":x: No se puede establecer la cuenta regresiva antes de configurar el canal",
+				"title": "❌ No se puede establecer la cuenta regresiva antes de configurar el canal",
 				"description": "Usa %s para establecer el canal."
 			},
-			"toggled": ":white_check_mark: Cuenta regresiva %s",
+			"toggled": "✅ Cuenta regresiva %s",
 			"enabled": "activado",
 			"disabled": "desactivado"
 		}

@@ -45,7 +45,7 @@ class TogglePremiumCommand extends Command {
 			return message.util.send(
 				new Embed()
 					.setColor('RED')
-					.setTitle(':x: Unknown server')
+					.setTitle('❌ Unknown server')
 					.setDescription('Couldn\'t find a server with that ID.')
 			);
 
@@ -55,7 +55,7 @@ class TogglePremiumCommand extends Command {
 		// ❯ return a promise
 		return message.util.send(
 			new Embed()
-				.setTitle(`:white_check_mark: Premium ${row.premium ? 'granted' : 'revoked'}`)
+				.setTitle(`✅ Premium ${row.premium ? 'granted' : 'revoked'}`)
 				.setDescription(`${row.premium ? 'Enabled' : 'Disabled'} premium for guild \`${args.id}\``)
 		);
 		
