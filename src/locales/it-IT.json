@@ -125,7 +125,7 @@
 		},
 		"invite": {
 			"title": "Invita",
-			"description": "Aggiungi il bot ChristmasCountdown al tuo server: [invito](%s)"
+			"description": "Aggiungi il bot Christmas Countdown al tuo server: [invito](%s)"
 		},
 		"ping": {
 			"title": "Pong!",
