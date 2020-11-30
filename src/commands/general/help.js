@@ -46,7 +46,7 @@ class HelpCommand extends Command {
 				.setTitle(i18n.__('general.help.title'))
 				.setURL(this.client.config.docs.commands)
 				.setDescription(i18n.__('general.help.description',
-					`${prefix}help <command>`, this.client.config.docs.days_sleeps));
+					`${prefix}help <command>`, this.client.config.docs.days_sleeps, prefix));
 
 			for (const category of this.handler.categories.values()) {
 				if (['admin', 'hidden', 'sub'].includes(category.id)) continue;

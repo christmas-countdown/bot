@@ -151,6 +151,13 @@ module.exports = class Countdown {
 						id: guild.id
 					}
 				}); // update last sent timestamp in database
+
+				if (xmas.isToday)
+					channel.send(
+						new Embed()
+							.setTitle(i18n.__('christmas.disable.title'))
+							.setTitle(i18n.__('christmas.disable.description', settings?.prefix || client.config.prefix,`https://top.gg/bot/${client.user.id}#reviews`))
+					);
 				
 				client.log.console(`Sent countdown to guild ${guild.id}`);
 				await utils.wait(200); // add 200ms delay to limit 5 messages per second to avoid being rate limited

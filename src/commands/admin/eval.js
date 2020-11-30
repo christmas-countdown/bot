@@ -39,7 +39,9 @@ class EvalCommand extends Command {
 
 		const clean = text => {
 			if (typeof (text) === 'string')
-				return text.replace(/`/g, '`' + String.fromCharCode(8203)).replace(/@/g, '@' + String.fromCharCode(8203));
+				return text.replace(/`/g, '`' + String.fromCharCode(8203))
+					.replace(/@/g, '@' + String.fromCharCode(8203))
+					.replace(this.client.token, '[CLIENT TOKEN REDACTED]');
 			else
 				return String(text);
 		};

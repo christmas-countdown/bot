@@ -81,9 +81,13 @@
 			]
 		},
 		"xmas_day": "È Natale! 🎉",
-		"xmas_eve": "È la vigilia di Natale!",
-		"merry_xmas": "Buon Natale! :christmas_tree:",
-		"footer": "Puoi guardare il conto alla rovescia in diretta su [%s](%s)."
+		"xmas_eve": "È la vigilia di Natale! 🎅",
+		"merry_xmas": "Buon Natale! 🎄",
+		"footer": "Puoi guardare il conto alla rovescia in diretta su [%s](%s).",
+		"disable": {
+			"title": "🎄 Buon Natale",
+			"description": "**Server administrators:** if you want to stop the countdown, use the `​%stoggle`​ command to disable it.\n\nPlease consider reviewing the bot [here](%s). Thank you for using the Christmas Countdown bot for Discord, enjoy your Christmas! 🙂"
+		}
 	},
 	"general": {
 		"about": {
@@ -110,7 +114,7 @@
 		},
 		"help": {
 			"title": "Comandi",
-			"description": "Per più informazioni su un comando specifico, usa `%s` o clicca sul suo nome. Per distinzioni tra giorni e notti, clicca [qui](%s).\n",
+			"description": "Per più informazioni su un comando specifico, usa `%s` o clicca sul suo nome. Per distinzioni tra giorni e notti, clicca [qui](%s).\n**Configurazione rapida:** `%sserver setup`.\n",
 			"fields": {
 				"docs": {
 					"title": "❯ Documentazione",

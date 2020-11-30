@@ -81,9 +81,13 @@
 			]
 		},
 		"xmas_day": "C'est le jour de Noël! 🎉",
-		"xmas_eve": "C'est la veille de Noël!",
-		"merry_xmas": "Joyeux Noël! :christmas_tree:",
-		"footer": "Consultez le compte à rebours en direct sur [%s](%s)."
+		"xmas_eve": "C'est la veille de Noël! 🎅",
+		"merry_xmas": "Joyeux Noël! 🎄",
+		"footer": "Consultez le compte à rebours en direct sur [%s](%s).",
+		"disable": {
+			"title": "🎄 Joyeux Noël",
+			"description": "**Administrateurs du serveur:** Si vous souhaitez arrêter le compte à rebours, utilisez la commande `​%stoggle` pour le désactiver. \n\nVeuillez envisager de consulter le bot [here](%s). Merci d'utiliser le bot Christmas Countdown pour Discord, profitez bien de votre Noël!  🙂"
+		}
 	},
 	"general": {
 		"about": {
@@ -110,7 +114,7 @@
 		},
 		"help": {
 			"title": "Commandes",
-			"description": "For more information about a specific command, use `%s` or click on its name. For distinction between days and sleeps, click [here](%s).\n",
+			"description": "For more information about a specific command, use `%s` or click on its name. For distinction between days and sleeps, click [here](%s).\n**Installation rapide:** `%sserver setup`.\n",
 			"fields": {
 				"docs": {
 					"title": "❯ Documentation",

@@ -81,9 +81,13 @@
 			]
 		},
 		"xmas_day": "Es el Día de Navidad! 🎉",
-		"xmas_eve": "¡Es Nochebuena!",
-		"merry_xmas": "Feliz Navidad! :christmas_tree:",
-		"footer": "Mira la cuenta regresiva en vivo en [%s](%s)."
+		"xmas_eve": "¡Es Nochebuena! 🎅",
+		"merry_xmas": "Feliz Navidad! 🎄",
+		"footer": "Mira la cuenta regresiva en vivo en [%s](%s).",
+		"disable": {
+			"title": "🎄 Feliz Navidad",
+			"description": "**Administradores del servidor:** Si desean desactivar la cuenta regresiva, pueden usar el comando `%stoggle` para desactivarla.\n\nSe les agradecería si pueden dar su opinión sobre el bot [aquí](%s). Además, gracias por usar el bot Christmas Countdown para su servidor! No olviden disfrutar de la Navidad! 🙂"
+		}
 	},
 	"general": {
 		"about": {
@@ -110,7 +114,7 @@
 		},
 		"help": {
 			"title": "Comandos",
-			"description": "Para más información sobre un comando en específico, usa `%s` o haz click en su nombre. Para una distinción entre días y noches, haz click [aquí](%s).\n",
+			"description": "Para más información sobre un comando en específico, usa `%s` o haz click en su nombre. Para una distinción entre días y noches, haz click [aquí](%s).\n**Configuración rápida:** `%sserver setup`.\n",
 			"fields": {
 				"docs": {
 					"title": "❯ Documentación",
