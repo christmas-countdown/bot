@@ -1,4 +1,4 @@
-
+{
 	"christmas": {
 		"days": {
 			"title": [
@@ -37,7 +37,7 @@
 			],
 			"text": [
 				"Mai este **%d** secunda ramasa pana la Craciun!",
-				"Mai sunt **%d** secunde ramase pana la Craciun!""
+				"Mai sunt **%d** secunde ramase pana la Craciun!"
 			]
 		},
 		"sleeps": {
@@ -128,7 +128,7 @@
 			}
 		},
 		"invite": {
-			"title": "Invitatie,
+			"title": "Invitatie",
 			"description": "Adauga Christmas Countdown bot serverului tau: [invite](%s)"
 		},
 		"ping": {
@@ -202,7 +202,7 @@
 					"title": "✅ Setarile utilizatorului au fost actualizate."
 				}
 			},
-			"user": "Setari Utilizator,
+			"user": "Setari Utilizator",
 			"invalid": "❌ Setari Utilizator"
 		},
 		"sub_cmds": "Comanda %s are urmatoarele subcomenzi:\n\n%s",
@@ -286,7 +286,7 @@
 	},
 	"missing_permissions": {
 		"client": {
-			"title": "Lipsesc permisiuni,
+			"title": "Lipsesc permisiuni",
 			"description": "Botului ii lipsesc urmatoarele permisiuni: \n%s."
 		},
 		"member": {
@@ -315,3 +315,4 @@
 	"user_timezone": "Fusul orar al utilizatorului: %s",
 	"server_timezone": "Fusul orar al utilizatorului: %s",
 	"none": "none"
+}
