@@ -52,7 +52,7 @@
 		},
 		"total": {
 			"title": "%s, %s, %s, %s ramase",
-			"text": "Mai sunt %s %s, %s, %s si %s ramase pana la Craciun!",
+			"text": "Mai sunt %s, %s, %s si %s ramase pana la Craciun!",
 			"days": [
 				"**%d** zi",
 				"**%d** zile"
@@ -91,7 +91,7 @@
 	},
 	"general": {
 		"about": {
-			"title": "Informatie",
+			"title": "Informatii",
 			"description": "A Discord bot made by [eartharoid](%s).",
 			"fields": {
 				"prefix": {
