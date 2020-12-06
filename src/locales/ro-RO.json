@@ -91,7 +91,7 @@
 	},
 	"general": {
 		"about": {
-			"title": "Informatie",
+			"title": "Informatii",
 			"description": "A Discord bot made by [eartharoid](%s).",
 			"fields": {
 				"prefix": {
@@ -104,7 +104,7 @@
 				"guilds": "Servers",
 				"premium_guilds": "⭐ Premium servers",
 				"enabled_guilds": {
-					"title": "Numaratoare are loc in ",
+					"title": "Numaratoarea are loc in ",
 					"servers": [
 						"%d server",
 						"%d servere"
@@ -309,8 +309,8 @@
 		}
 	},
 	"is-are": [
-		"is",
-		"are"
+		"este",
+		"sunt"
 	],
 	"user_timezone": "Fusul orar al utilizatorului: %s",
 	"server_timezone": "Fusul orar al utilizatorului: %s",
