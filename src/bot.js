@@ -134,8 +134,12 @@ Guild.init(require('./models/guild').model, {
 	modelName: 'guild'
 });
 
-User.sync();
-Guild.sync();
+User.sync({
+	alter: false
+});
+Guild.sync({
+	alter: false
+});
 
 
 /**

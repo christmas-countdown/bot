@@ -65,9 +65,9 @@ class ServerSetSettingsCommand extends Command {
 					type: '_role', // roleMention, role
 				},
 				{
-					id: 'auto',
+					id: 'autotoggle',
 					match: 'option',
-					flag: 'auto:',
+					flag: 'autotoggle:',
 					type: 'boolean',
 				},
 				{
@@ -126,7 +126,7 @@ class ServerSetSettingsCommand extends Command {
 				gSettings.set(arg, args[arg].id);
 				break;
 
-			case 'auto':
+			case 'autotoggle':
 				gSettings.set(arg, args[arg][0]);
 				break;
 

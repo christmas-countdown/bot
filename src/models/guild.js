@@ -10,7 +10,7 @@ module.exports.model = {
 	timezone: DataTypes.STRING,
 	channel: DataTypes.CHAR(18),
 	role: DataTypes.STRING,
-	auto: DataTypes.BOOLEAN,
+	autotoggle: DataTypes.BOOLEAN,
 	enabled: DataTypes.BOOLEAN,
 	mention: DataTypes.BOOLEAN,
 	premium: DataTypes.BOOLEAN,
@@ -26,7 +26,7 @@ module.exports.defaults = (guild) => {
 		timezone: 'UTC',
 		channel: null,
 		role: null,
-		auto: false,
+		autotoggle: false,
 		enabled: false,
 		mention: false,
 		// premium: false, // don't overwrite the premium option

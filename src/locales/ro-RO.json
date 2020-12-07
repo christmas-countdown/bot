@@ -229,8 +229,8 @@
 				"title": "Role",
 				"error": "Numele rolului este invalid."
 			},
-			"auto": {
-				"title": "Auto",
+			"autotoggle": {
+				"title": "AutoToggle",
 				"error": "Invalid boolean."
 			},
 			"enabled": {

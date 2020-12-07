@@ -224,8 +224,8 @@
 				"title": "Role",
 				"error": "Invalid role mention."
 			},
-			"auto": {
-				"title": "Auto",
+			"autotoggle": {
+				"title": "AutoToggle",
 				"error": "Invalid boolean."
 			},
 			"enabled": {
@@ -282,11 +282,11 @@
 	"missing_permissions": {
 		"client": {
 			"title": "Permissions manquantes",
-			"description": "Le bot n'a pas les autorisations suivantes: \n%s."
+			"description": "Le bot n'a pas les autotogglerisations suivantes: \n%s."
 		},
 		"member": {
 			"title": "Permissions manquantes",
-			"description": "Vous devez disposer des autorisations suivantes pour utiliser la commande: `%s \n`%s`."
+			"description": "Vous devez disposer des autotogglerisations suivantes pour utiliser la commande: `%s \n`%s`."
 		}
 	},
 	"message_invalid": {

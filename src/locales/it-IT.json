@@ -229,8 +229,8 @@
 				"title": "Ruolo",
 				"error": "Menzione al ruolo non valida."
 			},
-			"auto": {
-				"title": "Auto",
+			"autotoggle": {
+				"title": "AutoToggle",
 				"error": "Valore non valido."
 			},
 			"enabled": {

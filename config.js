@@ -43,7 +43,7 @@ module.exports = {
 			type: 'WATCHING'
 		},
 	],
-	premium_options: ['role', 'auto', 'mention'],
+	premium_options: ['role', 'autotoggle', 'mention'],
 	cooldown: 5,
 	respawn: true, // respawn dead shards?
 	debug: false,

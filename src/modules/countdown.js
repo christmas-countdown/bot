@@ -16,7 +16,7 @@ module.exports = class Countdown {
 		throw new Error('Countdown methods must be called statically.');
 	}
 
-	static async auto(guild, timezone) {
+	static async autotoggle(guild, timezone) {
 		let now = spacetime.now(timezone); // now in the timezone
 		let settings = await guild.settings();
 		if (!settings.channel) return;
@@ -67,8 +67,8 @@ module.exports = class Countdown {
 			let settings = await guild.settings(),
 				tz = settings.timezone || 'UTC';
 
-			if (settings.auto) {
-				await this.auto(guild, tz);
+			if (settings.autotoggle) {
+				await this.autotoggle(guild, tz);
 				settings = await guild.settings(); // previous line may update settings
 			}
 			if (!settings.enabled) continue; // continue if the guild isn't enabled
