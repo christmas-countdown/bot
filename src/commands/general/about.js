@@ -31,6 +31,10 @@ class InfoCommand extends Command {
 		const prefix = gSettings?.prefix || this.client.config.prefix;
 		let isDefault = prefix === this.client.config.prefix ? ` ${i18n.__('general.about.fields.prefix.default')}` : '';
 		
+		let arr = await this.client.shard.fetchClientValues('guilds.cache.size');
+		if (arr.length !== this.client.shard.count) return;
+		let server_count = arr.reduce((acc, num) => acc + num, 0);
+		
 		return message.util.send(
 			new Embed()
 				.setTitle(i18n.__('general.about.title'))
@@ -39,7 +43,8 @@ class InfoCommand extends Command {
 				.addField(i18n.__('general.about.fields.website'), `[${this.client.config.website.pretty}](${this.client.config.website.url})`, false)
 				.addField(i18n.__('general.about.fields.docs'), `[${this.client.config.docs.pretty}](${this.client.config.docs.main})`, false)
 				.addField(i18n.__('general.about.fields.support'), `[${this.client.config.support.invite}](${this.client.config.support.url})`, false)
-				.addField(i18n.__('general.about.fields.guilds'), await this.client.db.Guild.count(), true)
+				// .addField(i18n.__('general.about.fields.guilds'), await this.client.db.Guild.count(), true)
+				.addField(i18n.__('general.about.fields.guilds'), server_count, true)
 				.addField(i18n.__('general.about.fields.premium_guilds'), await this.client.db.Guild.count({
 					where: {
 						premium: true

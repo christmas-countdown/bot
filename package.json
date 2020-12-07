@@ -4,7 +4,8 @@
   "description": "A Christmas countdown Discord bot and API",
   "main": "src/",
   "scripts": {
-    "start": "node src/",
+	"start": "node src/",
+	"generate-images": "node bin/generate-images",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
