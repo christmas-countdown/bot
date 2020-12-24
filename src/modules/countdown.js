@@ -156,7 +156,7 @@ module.exports = class Countdown {
 					channel.send(
 						new Embed()
 							.setTitle(i18n.__('christmas.disable.title'))
-							.setTitle(i18n.__('christmas.disable.description', settings?.prefix || client.config.prefix,`https://top.gg/bot/${client.user.id}#reviews`))
+							.setDescription(i18n.__('christmas.disable.description', settings?.prefix || client.config.prefix,`https://top.gg/bot/${client.user.id}#reviews`))
 					);
 				
 				client.log.console(`Sent countdown to guild ${guild.id}`);
