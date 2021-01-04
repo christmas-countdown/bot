@@ -1,282 +1,315 @@
 {
-  "christmas": {
-    "days": {
-      "title": ["%d Tag verbleibend", "%d Tage verbleibend"],
-      "text": [
-        "Es ist noch **%d** Tag verbleibend bis Weihnachten!",
-        "Es sind noch **%d** Tage verbleibend bis Weihnachten!"
-      ]
-    },
-    "hours": {
-      "title": ["%d Stunde verbleibend", "%d Stunden verbleibend"],
-      "text": [
-        "Es ist noch **%d** Stunde verbleibend bis Weihnachten!",
-        "Es sind noch **%d** Stunden verbleibend bis Weihnachten!"
-      ]
-    },
-    "minutes": {
-      "title": ["%d Minute verbleibend", "%d Minuten verbleibend"],
-      "text": [
-        "Es ist noch **%d** Minute verbleibend bis Weihnachten!",
-        "Es sind noch **%d** Minuten verbleibend bis Weihnachten!"
-      ]
-    },
-    "seconds": {
-      "title": ["%d Sekunde verbleibend", "%d Sekunden verbleibend"],
-      "text": [
-        "Es ist noch **%d** Sekunde verbleibend bis Weihnachten!",
-        "Es sind noch **%d** Minuten verbleibend bis Weihnachten!"
-      ]
-    },
-    "sleeps": {
-      "title": ["%d Nacht verbleibend", "%d Nächte verbleibend"],
-      "text": [
-        "Es ist noch **%d** Nacht verbleibend bis Weihnachten!",
-        "Es sind noch **%d** Nächte verbleibend bis Weihnachten!"
-      ]
-    },
-    "total": {
-      "title": "%s, %s, %s, %s verbleibend",
-      "text": "There %s %s, %s, %s, und %s verbleibend bis Weihnachten!",
-      "days": ["**%d** Tag", "**%d** Tage"],
-      "hours": ["**%d** Stunde", "**%d** Stunden"],
-      "minutes": ["**%d** Minute", "**%d** Minuten"],
-      "seconds": ["**%d** Sekunde", "**%d** Sekunden"]
-    },
-    "weeks": {
-      "title": ["%d Woche verbleibend", "%d Wochen verbleibend"],
-      "text": [
-        "Es ist noch **%d** Woche verbleibend bis Weihnachten!",
-        "Es sind noch **%d** Wochen verbleibend bis Weihnachten!"
-      ]
-    },
-    "xmas_day": "Es ist Weihnachten! 🎉",
-    "xmas_eve": "Es ist heilig Abend! 🎅",
-    "merry_xmas": "Frohe Weihnachten! 🎄",
-    "footer": "Schaue dir den Live-Countdown auf [%s](%s) an.",
-    "disable": {
-      "title": "🎄 Frohe Weihnachten",
-      "description": "**Server Administration:** falls ihr den Countdown stoppen wollt benutzt den Command `​%stoggle`​ um ihn zu stoppen/pausieren.\n\nBitte denken sie darüber nach den Bot [hier](%s) zu bewerten. Vielen Dank dass sie den Christmas Countdown Bot für Discord benutzen, genießen sie Weihnachten. 🙂"
-    }
-  },
-  "general": {
-    "about": {
-      "title": "Information",
-      "description": "Ein Discord Bot erstellt von [eartharoid](%s).",
-      "fields": {
-        "prefix": {
-          "title": "Server Präfix",
-          "default": "(default)"
-        },
-        "website": "Webseite",
-        "docs": "Dokumentation",
-        "support": "Support Server",
-        "guilds": "Server",
-        "premium_guilds": "⭐ Premium Server",
-        "enabled_guilds": {
-          "title": "Zähle runter in",
-          "servers": ["%d Server", "%d Server"]
-        }
-      }
-    },
-    "help": {
-      "title": "Commands",
-      "description": "Für mehr Informationen über einen einzelnen Command, benutze `%s` oder klicke auf seinen Namen. Für die Unterscheidung zwischen Tagen und Nächten, [klicke hier](%s).\n**Schnell-Einrichtung:** `%sServer Einrichtung`.\n",
-      "fields": {
-        "docs": {
-          "title": "❯ Dokumentation",
-          "click_here": "[Klick hier](%s)"
-        },
-        "description": "❯ Beschreibung",
-        "aliases": {
-          "title": "❯ Aliase",
-          "extra": "Bindestriche (-) können weggelassen werden."
-        }
-      }
-    },
-    "invite": {
-      "title": "Einladen",
-      "description": "Füge den Christmas Bot [hier](%s) zu deinem eigenen Server hinzu"
-    },
-    "ping": {
-      "title": "Pong!",
-      "fields": {
-        "shard_num": {
-          "title": "Shard Anzahl",
-          "text": "**%d** (%s) von %d"
-        },
-        "avg_ping": "Durchschn. Ping",
-        "shard_ping": "Shard Ping",
-        "latency": "Allgemeine Verzögerung"
-      }
-    },
-    "premium": {
-      "title": "⭐ Erhalte Premium",
-      "description": "Spende [hier](%s) um weitere Funktionen zu erhalten."
-    }
-  },
-  "music": {
-    "music": {
-      "title": "Weihnachts Musik Radio"
-    }
-  },
-  "settings": {
-    "server": {
-      "reset": {
-        "title": "✅ Server Einstellungen zurücksetzen",
-        "description": "Die Einstellungen dieses Servers wurden zum Standard zurückgesetzt, benutze %s um sie zu neu konifgurieren."
-      },
-      "server": "Server Einstellungen",
-      "set": {
-        "no_change": {
-          "title": "Server Einstellungen",
-          "description": "Nichts hat sich verändert."
-        },
-        "success": {
-          "title": "✅ Server Einstellungen aktualisierst"
-        }
-      },
-      "setup": {
-        "success": "Du kannst die Einstellungen des Severs weiterhin mit [`%sserver set`](%s) bearbeiten.",
-        "prompts": {
-          "timezone": {
-            "prompt": "**Welche Zeitzone soll der Bot benutzen?**\n\n[Klicke hier für eine Liste der Zeitzonen](%s).\nWenn du dir nicht sicher bisst wähle jetzt `UTC`, __du kannst dies später bearbeiten__.",
-            "error": "Ungültige Zeitzone. Schaue bei der [Dokumentation](%s). Das Setup wurde beendet."
-          },
-          "enabled": {
-            "prompt": "**Aktiviere den Countdown?** (`Ja`/`Nein`)\n__Du kannst dies später verändern__.",
-            "error": "Ungültige Eingabe. Das Setup wurde beendet."
-          },
-          "channel": {
-            "prompt": "Markiere den Text Kanal indem der Countdown verwendet werden soll.",
-            "error": "Ungültige Kanal Erwähnung. Das Setup wurde beendet."
-          }
-        }
-      },
-      "invalid": "❌ Server Einstellungen"
-    },
-    "user": {
-      "reset": {
-        "title": "✅ Benutzer Einstellungen zurückgesetzt",
-        "description": "Deine Einstellungen wurden zum Standard zurückgesetzt, benutze %s um sie zu neu konifgurieren."
-      },
-      "set": {
-        "no_change": {
-          "title": "Benutzer Einstellungen",
-          "description": "Nichts hat sich verändert."
-        },
-        "success": {
-          "title": "✅ Benutzer Einstellungen aktualisierst"
-        }
-      },
-      "user": "Benutzer Einstellungen",
-      "invalid": "❌ Benutzer Einstellungen"
-    },
-    "sub_cmds": "Der %s Command hat folgende Untercommands:\n\n%s",
-    "usage": "Benutzung",
-    "help": "Hilfe",
-    "options": {
-      "prefix": {
-        "title": "Präfix",
-        "error": "Ungültiger Präfix. Zu lang vielleicht?"
-      },
-      "locale": {
-        "title": "Sprache",
-        "error": "Ungültiger Sprachen Name."
-      },
-      "timezone": {
-        "title": "Zeitzone",
-        "error": "Ungültiger Zeitzonen Name."
-      },
-      "channel": {
-        "title": "Kanal",
-        "error": "Ungültige Kanal Erwähnung."
-      },
-      "role": {
-        "title": "Rolle",
-        "error": "Ungültige Erwähnung."
-      },
-      "autotoggle": {
-        "title": "Auto-Umschaltung",
-        "error": "Ungültige Antwort."
-      },
-      "enabled": {
-        "title": "Aktiviert",
-        "error": "Ungültige Antwort.",
-        "channel_not_set": "Der Countdown kann nicht bevor der Kanal für den Countdown konfiguriert wurde aktiviert werden."
-      },
-      "mention": {
-        "title": "Erwähnung",
-        "error": "Ungültige Antwort.",
-        "role_not_set": "Die Rollen-Erwähnung kann nicht bevor die Rolle konfiguriert wurde aktiviert werden."
-      }
-    },
-    "premium": "⭐ Das ist eine Premium Funktion",
-    "invalid": {
-      "description": "Es gab ein paar Probleme mit diesen Optionen:\n%s\n**Klicke auf den blauen Optionen Name um die Dokumentation/en zu sehen.**",
-      "option": "Ungültige Eingabe (schaue Dokumentation)"
-    },
-    "locales": {
-      "title": "Sprachen",
-      "fields": {
-        "valid_locales": "Gültige Sprachen",
-        "missing": {
-          "title": "Du kannst deine Sprache nicht finden?",
-          "click_here": "[Klicke hier](%s)"
-        },
-        "set_server": "Setze die Server Sprache",
-        "set_user": "Setze deine persönliche Sprache"
-      }
-    },
-    "timezones": {
-      "title": "Zeitzonen",
-      "title_by_country": "Zeitzonen von %s",
-      "description": "Benutze %s um die Zeitzonen des Landes aufzulisten, wo `<Land>` ein Landes Code ist (Beispiele: `US`, `GB`,`DE`, `FR`, oder `RU`)",
-      "fields": {
-        "set_server": "Setze die Server Sprachee",
-        "set_user": "Setze deine persönliche Zeizone",
-        "list": {
-          "title": "Gültige Zeitzonen",
-          "too_long": "Die Liste ist zu lang um sie zu senden! [Klicke hier](%s) um die Dokumentation anzuschauen."
-        }
-      }
-    },
-    "toggle": {
-      "no_channel": {
-        "title": "❌ Der Countdown kann nicht gesetzt werden bevor der Channel gesetzt wurde.",
-        "description": "Benutze %s um den Channel zu setzen."
-      },
-      "toggled": "✅ Countdown %s",
-      "enabled": "aktiviert",
-      "disabled": "deaktiviert"
-    }
-  },
-  "missing_permissions": {
-    "client": {
-      "title": "Fehlende Berechtigungen",
-      "description": "Dem Bot fehlen folgende Berechtigungen: \n%s."
-    },
-    "member": {
-      "title": "Fehlende Berechtigungen",
-      "description": "Du musst folgende Berechtigungen haben um den `%s` Command zu benutzen: \n%s."
-    }
-  },
-  "message_invalid": {
-    "title": "Hallo!",
-    "fields": {
-      "help": {
-        "title": "Hilfe",
-        "text": "`%s` oder \"%s\""
-      },
-      "prefix": {
-        "title": "Server Präfix",
-        "default": "(Standard)"
-      },
-      "support": "Support Server"
-    }
-  },
-  "is-are": ["ist", "sind"],
-  "user_timezone": "Benutzer Zeitzone: %s",
-  "server_timezone": "Server Zeitzone: %s",
-  "none": "Nichts"
+	"christmas": {
+		"days": {
+			"title": [
+				"%d Tag verbleibend",
+				"%d Tage verbleibend"
+			],
+			"text": [
+				"Es ist noch **%d** Tag verbleibend bis Weihnachten!",
+				"Es sind noch **%d** Tage verbleibend bis Weihnachten!"
+			]
+		},
+		"hours": {
+			"title": [
+				"%d Stunde verbleibend",
+				"%d Stunden verbleibend"
+			],
+			"text": [
+				"Es ist noch **%d** Stunde verbleibend bis Weihnachten!",
+				"Es sind noch **%d** Stunden verbleibend bis Weihnachten!"
+			]
+		},
+		"minutes": {
+			"title": [
+				"%d Minute verbleibend",
+				"%d Minuten verbleibend"
+			],
+			"text": [
+				"Es ist noch **%d** Minute verbleibend bis Weihnachten!",
+				"Es sind noch **%d** Minuten verbleibend bis Weihnachten!"
+			]
+		},
+		"seconds": {
+			"title": ["%d Sekunde verbleibend", "%d Sekunden verbleibend"],
+			"text": [
+				"Es ist noch **%d** Sekunde verbleibend bis Weihnachten!",
+				"Es sind noch **%d** Minuten verbleibend bis Weihnachten!"
+			]
+		},
+		"sleeps": {
+			"title": [
+				"%d Nacht verbleibend",
+				"%d Nächte verbleibend"
+			],
+			"text": [
+				"Es ist noch **%d** Nacht verbleibend bis Weihnachten!",
+				"Es sind noch **%d** Nächte verbleibend bis Weihnachten!"
+			]
+		},
+		"total": {
+			"title": "%s, %s, %s, %s verbleibend",
+			"text": "There %s %s, %s, %s, und %s verbleibend bis Weihnachten!",
+			"days": [
+				"**%d** Tag",
+				"**%d** Tage"
+			],
+			"hours": [
+				"**%d** Stunde",
+				"**%d** Stunden"
+			],
+			"minutes": [
+				"**%d** Minute",
+				"**%d** Minuten"
+			],
+			"seconds": [
+				"**%d** Sekunde",
+				"**%d** Sekunden"
+			]
+		},
+		"weeks": {
+			"title": [
+				"%d Woche verbleibend",
+				"%d Wochen verbleibend"
+			],
+			"text": [
+				"Es ist noch **%d** Woche verbleibend bis Weihnachten!",
+				"Es sind noch **%d** Wochen verbleibend bis Weihnachten!"
+			]
+		},
+		"xmas_day": "Es ist Weihnachten! 🎉",
+		"xmas_eve": "Es ist heilig Abend! 🎅",
+		"merry_xmas": "Frohe Weihnachten! 🎄",
+		"footer": "Schaue dir den Live-Countdown auf [%s](%s) an.",
+		"disable": {
+			"title": "🎄 Frohe Weihnachten",
+			"description": "**Server Administration:** falls ihr den Countdown stoppen wollt benutzt den Command `​%stoggle`​ um ihn zu stoppen/pausieren.\n\nBitte denken sie darüber nach den Bot [hier](%s) zu bewerten. Vielen Dank dass sie den Christmas Countdown Bot für Discord benutzen, genießen sie Weihnachten. 🙂"
+		}
+	},
+	"general": {
+		"about": {
+			"title": "Information",
+			"description": "Ein Discord Bot erstellt von [eartharoid](%s).",
+			"fields": {
+				"prefix": {
+					"title": "Server Präfix",
+					"default": "(default)"
+				},
+				"website": "Webseite",
+				"docs": "Dokumentation",
+				"support": "Support Server",
+				"guilds": "Server",
+				"premium_guilds": "⭐ Premium Server",
+				"enabled_guilds": {
+					"title": "Zähle runter in",
+					"servers": [
+						"%d Server",
+						"%d Server"
+					]
+				}
+			}
+		},
+		"help": {
+			"title": "Commands",
+			"description": "Für mehr Informationen über einen einzelnen Command, benutze `%s` oder klicke auf seinen Namen. Für die Unterscheidung zwischen Tagen und Nächten, [klicke hier](%s).\n**Schnell-Einrichtung:** `%sServer Einrichtung`.\n",
+			"fields": {
+				"docs": {
+					"title": "❯ Dokumentation",
+					"click_here": "[Klick hier](%s)"
+				},
+				"description": "❯ Beschreibung",
+				"aliases": {
+					"title": "❯ Aliase",
+					"extra": "Bindestriche (-) können weggelassen werden."
+				}
+			}
+		},
+		"invite": {
+			"title": "Einladen",
+			"description": "Füge den Christmas Bot [hier](%s) zu deinem eigenen Server hinzu"
+		},
+		"ping": {
+			"title": "Pong!",
+			"fields": {
+				"shard_num": {
+					"title": "Shard Anzahl",
+					"text": "**%d** (%s) von %d"
+				},
+				"avg_ping": "Durchschn. Ping",
+				"shard_ping": "Shard Ping",
+				"latency": "Allgemeine Verzögerung"
+			}
+		},
+		"premium": {
+			"title": "⭐ Erhalte Premium",
+			"description": "Spende [hier](%s) um weitere Funktionen zu erhalten."
+		}
+	},
+	"music": {
+		"music": {
+			"title": "Weihnachts Musik Radio"
+		}
+	},
+	"settings": {
+		"server": {
+			"reset": {
+				"title": "✅ Server Einstellungen zurücksetzen",
+				"description": "Die Einstellungen dieses Servers wurden zum Standard zurückgesetzt, benutze %s um sie zu neu konifgurieren."
+			},
+			"server": "Server Einstellungen",
+			"set": {
+				"no_change": {
+					"title": "Server Einstellungen",
+					"description": "Nichts hat sich verändert."
+				},
+				"success": {
+					"title": "✅ Server Einstellungen aktualisierst"
+				}
+			},
+			"setup": {
+				"success": "Du kannst die Einstellungen des Severs weiterhin mit [`%sserver set`](%s) bearbeiten.",
+				"prompts": {
+					"timezone": {
+						"prompt": "**Welche Zeitzone soll der Bot benutzen?**\n\n[Klicke hier für eine Liste der Zeitzonen](%s).\nWenn du dir nicht sicher bisst wähle jetzt `UTC`, __du kannst dies später bearbeiten__.",
+						"error": "Ungültige Zeitzone. Schaue bei der [Dokumentation](%s). Das Setup wurde beendet."
+					},
+					"enabled": {
+						"prompt": "**Aktiviere den Countdown?** (`Ja`/`Nein`)\n__Du kannst dies später verändern__.",
+						"error": "Ungültige Eingabe. Das Setup wurde beendet."
+					},
+					"channel": {
+						"prompt": "Markiere den Text Kanal indem der Countdown verwendet werden soll.",
+						"error": "Ungültige Kanal Erwähnung. Das Setup wurde beendet."
+					}
+				}
+			},
+			"invalid": "❌ Server Einstellungen"
+		},
+		"user": {
+			"reset": {
+				"title": "✅ Benutzer Einstellungen zurückgesetzt",
+				"description": "Deine Einstellungen wurden zum Standard zurückgesetzt, benutze %s um sie zu neu konifgurieren."
+			},
+			"set": {
+				"no_change": {
+					"title": "Benutzer Einstellungen",
+					"description": "Nichts hat sich verändert."
+				},
+				"success": {
+					"title": "✅ Benutzer Einstellungen aktualisierst"
+				}
+			},
+			"user": "Benutzer Einstellungen",
+			"invalid": "❌ Benutzer Einstellungen"
+		},
+		"sub_cmds": "Der %s Command hat folgende Untercommands:\n\n%s",
+		"usage": "Benutzung",
+		"help": "Hilfe",
+		"options": {
+			"prefix": {
+				"title": "Präfix",
+				"error": "Ungültiger Präfix. Zu lang vielleicht?"
+			},
+			"locale": {
+				"title": "Sprache",
+				"error": "Ungültiger Sprachen Name."
+			},
+			"timezone": {
+				"title": "Zeitzone",
+				"error": "Ungültiger Zeitzonen Name."
+			},
+			"channel": {
+				"title": "Kanal",
+				"error": "Ungültige Kanal Erwähnung."
+			},
+			"role": {
+				"title": "Rolle",
+				"error": "Ungültige Erwähnung."
+			},
+			"autotoggle": {
+				"title": "Auto-Umschaltung",
+				"error": "Ungültige Antwort."
+			},
+			"enabled": {
+				"title": "Aktiviert",
+				"error": "Ungültige Antwort.",
+				"channel_not_set": "Der Countdown kann nicht bevor der Kanal für den Countdown konfiguriert wurde aktiviert werden."
+			},
+			"mention": {
+				"title": "Erwähnung",
+				"error": "Ungültige Antwort.",
+				"role_not_set": "Die Rollen-Erwähnung kann nicht bevor die Rolle konfiguriert wurde aktiviert werden."
+			}
+		},
+		"premium": "⭐ Das ist eine Premium Funktion",
+		"invalid": {
+			"description": "Es gab ein paar Probleme mit diesen Optionen:\n%s\n**Klicke auf den blauen Optionen Name um die Dokumentation/en zu sehen.**",
+			"option": "Ungültige Eingabe (schaue Dokumentation)"
+		},
+		"locales": {
+			"title": "Sprachen",
+			"fields": {
+				"valid_locales": "Gültige Sprachen",
+				"missing": {
+					"title": "Du kannst deine Sprache nicht finden?",
+					"click_here": "[Klicke hier](%s)"
+				},
+				"set_server": "Setze die Server Sprache",
+				"set_user": "Setze deine persönliche Sprache"
+			}
+		},
+		"timezones": {
+			"title": "Zeitzonen",
+			"title_by_country": "Zeitzonen von %s",
+			"description": "Benutze %s um die Zeitzonen des Landes aufzulisten, wo `<Land>` ein Landes Code ist (Beispiele: `US`, `GB`,`DE`, `FR`, oder `RU`)",
+			"fields": {
+				"set_server": "Setze die Server Sprachee",
+				"set_user": "Setze deine persönliche Zeizone",
+				"list": {
+					"title": "Gültige Zeitzonen",
+					"too_long": "Die Liste ist zu lang um sie zu senden! [Klicke hier](%s) um die Dokumentation anzuschauen."
+				}
+			}
+		},
+		"toggle": {
+			"no_channel": {
+				"title": "❌ Der Countdown kann nicht gesetzt werden bevor der Channel gesetzt wurde.",
+				"description": "Benutze %s um den Channel zu setzen."
+			},
+			"toggled": "✅ Countdown %s",
+			"enabled": "aktiviert",
+			"disabled": "deaktiviert"
+		}
+	},
+	"missing_permissions": {
+		"client": {
+			"title": "Fehlende Berechtigungen",
+			"description": "Dem Bot fehlen folgende Berechtigungen: \n%s."
+		},
+		"member": {
+			"title": "Fehlende Berechtigungen",
+			"description": "Du musst folgende Berechtigungen haben um den `%s` Command zu benutzen: \n%s."
+		}
+	},
+	"message_invalid": {
+		"title": "Hallo!",
+		"fields": {
+			"help": {
+				"title": "Hilfe",
+				"text": "`%s` oder \"%s\""
+			},
+			"prefix": {
+				"title": "Server Präfix",
+				"default": "(Standard)"
+			},
+			"support": "Support Server"
+		}
+	},
+	"is-are": [
+		"ist",
+		"sind"
+	],
+	"user_timezone": "Benutzer Zeitzone: %s",
+	"server_timezone": "Server Zeitzone: %s",
+	"none": "Nichts"
 }
