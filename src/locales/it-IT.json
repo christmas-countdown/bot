@@ -2,141 +2,141 @@
 	"christmas": {
 		"days": {
 			"title": [
-				"%d day left",
-				"%d days left"
+				"%d giorni rimasti",
+				"%d giorni rimasti"
 			],
 			"text": [
-				"There is **%d** day left until Christmas!",
-				"There are **%d** days left until Christmas!"
+				"Manca **%d** giorno a Natale!",
+				"Mancano **%d** giorni a Natale!"
 			]
 		},
 		"hours": {
 			"title": [
-				"%d hour left",
-				"%d hours left"
+				"%d ora rimanente",
+				"%d ore rimanenti"
 			],
 			"text": [
-				"There is **%d** hour left until Christmas!",
-				"There are **%d** hours left until Christmas!"
+				"Manca **%d** ora a Natale!",
+				"Mancano **%d** ore a Natale!"
 			]
 		},
 		"minutes": {
 			"title": [
-				"%d minute left",
-				"%d minutes left"
+				"%d minuto rimasto",
+				"%d minuti rimasti"
 			],
 			"text": [
-				"There is **%d** minute left until Christmas!",
-				"There are **%d** minutes left until Christmas!"
+				"Manca **%d** minuto a Natale!",
+				"Mancano **%d** minuti a Natale!"
 			]
 		},
 		"seconds": {
 			"title": [
-				"%d second left",
-				"%d seconds left"
+				"%d secondo rimasto",
+				"%d secondi rimasti"
 			],
 			"text": [
-				"There is **%d** second left until Christmas!",
-				"There are **%d** seconds left until Christmas!"
+				"Manca **%d** secondo a Natale!",
+				"Mancano **%d** secondi a Natale!"
 			]
 		},
 		"sleeps": {
 			"title": [
-				"%d sleep left",
-				"%d sleeps left"
+				"%d notte rimasta",
+				"%d notti rimaste"
 			],
 			"text": [
-				"There is **%d** sleep left until Christmas!",
-				"There are **%d** sleeps left until Christmas!"
+				"Manca **%d** notte a Natale!",
+				"Mancano **%d** notti a Natale!"
 			]
 		},
 		"total": {
-			"title": "%s, %s, %s, %s left",
-			"text": "There %s %s, %s, %s, and %s left until Christmas!",
+			"title": "%s, %s, %s, %s rimasti",
+			"text": "Mancano %s %s, %s, %s, e %s a Natale!",
 			"days": [
-				"**%d** day",
-				"**%d** days"
+				"**%d** giorno",
+				"**%d** giorni"
 			],
 			"hours": [
-				"**%d** hour",
-				"**%d** hours"
+				"**%d** ora",
+				"**%d** ore"
 			],
 			"minutes": [
-				"**%d** minute",
-				"**%d** minutes"
+				"**%d** minuto",
+				"**%d** minuti"
 			],
 			"seconds": [
-				"**%d** second",
-				"**%d** seconds"
+				"**%d** secondo",
+				"**%d** secondi"
 			]
 		},
 		"weeks": {
 			"title": [
-				"%d week left",
-				"%d weeks left"
+				"%d settimana rimasta",
+				"%d settimane rimaste"
 			],
 			"text": [
-				"There is **%d** week left until Christmas!",
-				"There are **%d** weeks left until Christmas!"
+				"Manca **%d** settimana a Natale!",
+				"Mancano **%d** settimane a Natale!"
 			]
 		},
-		"xmas_day": "It's Christmas Day! 🎉",
-		"xmas_eve": "It's Christmas Eve! 🎅",
-		"merry_xmas": "Merry Christmas! 🎄",
-		"footer": "View the live countdown at [%s](%s).",
+		"xmas_day": "È Natale! 🎉",
+		"xmas_eve": "È la vigilia di Natale! 🎅",
+		"merry_xmas": "Buon Natale! 🎄",
+		"footer": "Puoi guardare il conto alla rovescia in diretta su [%s](%s).",
 		"disable": {
-			"title": "🎄 Merry Christmas",
+			"title": "🎄 Buon Natale",
 			"description": "**Server administrators:** if you want to stop the countdown, use the `​%stoggle`​ command to disable it.\n\nPlease consider reviewing the bot [here](%s). Thank you for using the Christmas Countdown bot for Discord, enjoy your Christmas! 🙂"
 		}
 	},
 	"general": {
 		"about": {
-			"title": "Information",
-			"description": "A Discord bot made by [eartharoid](%s).",
+			"title": "Descrizione",
+			"description": "Un bot creato da [eartharoid](%s).",
 			"fields": {
 				"prefix": {
-					"title": "Server prefix",
+					"title": "Prefisso del server",
 					"default": "(default)"
 				},
-				"website": "Website",
-				"docs": "Documentation",
-				"support": "Support server",
-				"guilds": "Servers",
-				"premium_guilds": "⭐ Premium servers",
+				"website": "Sito",
+				"docs": "Documentazione",
+				"support": "Server di supporto",
+				"guilds": "Server",
+				"premium_guilds": "⭐ Server Premium",
 				"enabled_guilds": {
-					"title": "Counting down in",
+					"title": "Contando alla rovescia in",
 					"servers": [
 						"%d server",
-						"%d servers"
+						"%d server"
 					]
 				}
 			}
 		},
 		"help": {
-			"title": "Commands",
-			"description": "For more information about a specific command, use `%s` or click on its name. For distinction between days and sleeps, click [here](%s).\n**Quick setup:** `%sserver setup`.\n",
+			"title": "Comandi",
+			"description": "Per più informazioni su un comando specifico, usa `%s` o clicca sul suo nome. Per distinzioni tra giorni e notti, clicca [qui](%s).\n**Configurazione rapida:** `%sserver setup`.\n",
 			"fields": {
 				"docs": {
-					"title": "❯ Documentation",
-					"click_here": "[Click here](%s)"
+					"title": "❯ Documentazione",
+					"click_here": "[Clicca qui](%s)"
 				},
-				"description": "❯ Description",
+				"description": "❯ Descrizione",
 				"aliases": {
-					"title": "❯ Aliases",
-					"extra": "Hyphens (-) can be omitted."
+					"title": "❯ Alias",
+					"extra": "Hyphens (-) può essere omesso."
 				}
 			}
 		},
 		"invite": {
-			"title": "Invite",
-			"description": "Add the Christmas Countdown bot to your own server: [invite](%s)"
+			"title": "Invita",
+			"description": "Aggiungi il bot Christmas Countdown al tuo server: [invito](%s)"
 		},
 		"ping": {
 			"title": "Pong!",
 			"fields": {
 				"shard_num": {
 					"title": "Shard number",
-					"text": "**%d** (%s) of %d"
+					"text": "**%d** (%s) di %d"
 				},
 				"avg_ping": "Avg. ping",
 				"shard_ping": "Shard ping",
@@ -144,175 +144,175 @@
 			}
 		},
 		"premium": {
-			"title": "⭐ Get premium",
-			"description": "Donate [here](%s) to unlock additional features."
+			"title": "⭐ Ottieni premium",
+			"description": "Dona [qui](%s) per sbloccare funzionalità addizionali."
 		}
 	},
 	"music": {
 		"music": {
-			"title": "Christmas music radio"
+			"title": "Radio di musica natalizia"
 		}
 	},
 	"settings": {
 		"server": {
 			"reset": {
-				"title": "✅ Server settings reset",
-				"description": "This server's settings have been reset to the defaults. Use %s to re-configure."
+				"title": "✅ Impostazioni del server ripristinate",
+				"description": "Le impostazioni di questo server sono state ripristinate a quelle di default. Usa %s per ri-configurarla."
 			},
-			"server": "Server settings",
+			"server": "Impostazioni del server",
 			"set": {
 				"no_change": {
-					"title": "Server settings",
-					"description": "Nothing changed."
+					"title": "Impostazioni del server",
+					"description": "Non è cambiato nulla."
 				},
 				"success": {
-					"title": "✅ Server settings updated"
+					"title": "✅ Impostazioni del server cambiate"
 				}
 			},
 			"setup": {
-				"success": "You can further modify your settings with [`%sserver set`](%s).",
+				"success": "Puoi modificare ulteriormente le impostazioni con [`%sserver set`](%s).",
 				"prompts": {
 					"timezone": {
-						"prompt": "**Which timezone do you want the bot to use?**\n\n[Click here for a list of timezones](%s).\nIf you don't know, choose `UTC` now, __you can change this later__.",
-						"error": "Invalid timezone. See the [docs](%s). Exited setup prompt."
+						"prompt": "*Quale fuso orario vorresti usare?**\n\n[Clicca qui per una lista di fusi orari](%s).\nSe non sai, scegli `UTC` ora, __potrai cambiarlo dopo__.",
+						"error": "Fuso orario inesistente. Leggi la [docs](%s). Exited setup prompt."
 					},
 					"enabled": {
-						"prompt": "**Enable the countdown?** (`yes`/`no`)\n__You can change this later__.",
-						"error": "Invalid input. Exited setup prompt."
+						"prompt": "**Abilitare il countdown?** (`sì`/`no`)\n__Potrai cambiarlo dopo__.",
+						"error": "Imput non valido. Uscito dal prompt di installazione."
 					},
 					"channel": {
-						"prompt": "Mention the text channel you want the countdown to use.",
-						"error": "Invalid channel mention. Exited setup prompt."
+						"prompt": "Menziona il canale testuale che vuoi usare per il conto alla rovescia.",
+						"error": "Menzione al canale non valida. Uscito dal prompt di installazione."
 					}
 				}
 			},
-			"invalid": "❌ Server settings"
+			"invalid": "❌ Impostazioni del server"
 		},
 		"user": {
 			"reset": {
-				"title": "✅ User settings reset",
-				"description": "Your settings have been reset to the defaults. Use `%s` to re-configure."
+				"title": "✅ Impostazioni utente ripristinate",
+				"description": "Le tue impostazioni sono state resettate a quelle di default. Usa `%s` per ri-configurarle."
 			},
 			"set": {
 				"no_change": {
-					"title": "User settings",
-					"description": "Nothing changed."
+					"title": "Impostazioni utente",
+					"description": "Non è cambiato nulla."
 				},
 				"success": {
-					"title": "✅ User settings updated"
+					"title": "✅ Impostazioni utente aggiornate"
 				}
 			},
-			"user": "User settings",
-			"invalid": "❌ User settings"
+			"user": "Impostazioni utente",
+			"invalid": "❌ Impostazioni utente"
 		},
-		"sub_cmds": "The %s command has the following subcommands:\n\n%s",
-		"usage": "Usage",
-		"help": "Help",
+		"sub_cmds": "Il comando %s ha i seguenti sottocomandi:\n\n%s",
+		"usage": "Utilizzo",
+		"help": "Aiuto",
 		"options": {
 			"prefix": {
-				"title": "Prefix",
-				"error": "Invalid prefix. Too long perhaps?"
+				"title": "Prefisso",
+				"error": "prefisso non valido. Troppo lungo forse?"
 			},
 			"locale": {
 				"title": "Locale",
 				"error": "Invalid locale name."
 			},
 			"timezone": {
-				"title": "Timezone",
-				"error": "Invalid timezone name."
+				"title": "Fuso Orario",
+				"error": "Fuso orario non valido."
 			},
 			"channel": {
-				"title": "Channel",
-				"error": "Invalid channel mention."
+				"title": "Canale",
+				"error": "Menzione al canale non valida."
 			},
 			"role": {
-				"title": "Role",
-				"error": "Invalid role mention."
+				"title": "Ruolo",
+				"error": "Menzione al ruolo non valida."
 			},
 			"autotoggle": {
 				"title": "AutoToggle",
-				"error": "Invalid boolean."
+				"error": "Valore non valido."
 			},
 			"enabled": {
-				"title": "Enabled",
-				"error": "Invalid boolean.",
-				"channel_not_set": "Cannot enable countdown before channel is set"
+				"title": "Abilitato",
+				"error": "Valore non valido.",
+				"channel_not_set": "Impossibile abilitare il conto alla rovescia senza che il canale sia impostato"
 			},
 			"mention": {
-				"title": "Mention",
-				"error": "Invalid boolean.",
-				"role_not_set": "Cannot enable mentioning before role is set"
+				"title": "Menzione",
+				"error": "Valore non valido.",
+				"role_not_set": "Impossibile abilitare le menzioni prima che il ruolo sia impostato"
 			}
 		},
-		"premium": "⭐ This is a premium option",
+		"premium": "⭐ Questa è una funzione premium",
 		"invalid": {
-			"description": "There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**",
-			"option": "Invalid input (see docs)"
+			"description": "Ci sono stati alcuni problemi con le opzioni fornite:\n%s\n**Clicca sulla parola blu di impostazione per poter leggere la documentazione.**",
+			"option": "Imput non valido (leggi la documentazione)"
 		},
 		"locales": {
-			"title": "Locales",
+			"title": "Lingue",
 			"fields": {
-				"valid_locales": "Valid locales",
+				"valid_locales": "Lingue valide",
 				"missing": {
-					"title": "Don't see your language?",
-					"click_here": "[Click here](%s)"
+					"title": "Non trovi la tua lingua?",
+					"click_here": "[Clicca qui](%s)"
 				},
-				"set_server": "Set the server language",
-				"set_user": "Set your personal language"
+				"set_server": "Imposta la lingua del server",
+				"set_user": "Imposta la tua lingua"
 			}
 		},
 		"timezones": {
-			"title": "Timezones",
-			"title_by_country": "Timezones of %s",
-			"description": "Use %s to list timezones by country, where `<country>` is a country code (examples: `US`, `GB`,`DE`, `FR`, or `RU`)",
+			"title": "Fusi Orari",
+			"title_by_country": "Fuso orario di %s",
+			"description": "Usa %s per la lista dei fusi orari delle nazioni, dove `<nazione>` è un codice nazione (esempi: `US`, `GB`,`DE`, `FR`, or `RU`)",
 			"fields": {
-				"set_server": "Set the server timezone",
-				"set_user": "Set your personal timezone",
+				"set_server": "Imposta il fuso orario del server",
+				"set_user": "Imposta il tuo fuso orario",
 				"list": {
-					"title": "Valid timezones",
-					"too_long": "The list is too long to send! Click [here](%s) to visit the docs."
+					"title": "Fusi orari validi",
+					"too_long": "La lista è troppo lunga! Clicca [qui](%s) per leggere la documentazione."
 				}
 			}
 		},
 		"toggle": {
 			"no_channel": {
-				"title": "❌ Cannot enable countdown before channel is set",
-				"description": "Use %s to set the channel."
+				"title": "❌ Impossibile abilitare il conto alla rovescia senza che il canale sia impostato",
+				"description": "Usa %s per impostare il canale."
 			},
-			"toggled": "✅ Countdown %s",
-			"enabled": "enabled",
-			"disabled": "disabled"
+			"toggled": "✅ Conto alla rovescia %s",
+			"enabled": "abilitato",
+			"disabled": "disabilitato"
 		}
 	},
 	"missing_permissions": {
 		"client": {
-			"title": "Missing permissions",
-			"description": "The bot is missing the following permissions: \n%s."
+			"title": "Permessi mancanti",
+			"description": "Il bot non ha i permessi adeguati: \n%s."
 		},
 		"member": {
-			"title": "Missing permissions",
-			"description": "You must have following permissions to use the `%s` command: \n%s."
+			"title": "Permessi mancanti",
+			"description": "Dovresti avere i permessi seguenti per usare il comando `%s` : \n%s."
 		}
 	},
 	"message_invalid": {
-		"title": "Hello!",
+		"title": "Ciao!",
 		"fields": {
 			"help": {
-				"title": "Help",
-				"text": "`%s` or \"%s\""
+				"title": "Aiuto",
+				"text": "`%s` o \"%s\""
 			},
 			"prefix": {
-				"title": "Server prefix",
+				"title": "Prefisso del server",
 				"default": "(default)"
 			},
-			"support": "Support server"
+			"support": "Server di supporto"
 		}
 	},
 	"is-are": [
-		"is",
-		"are"
+		"è",
+		"sono"
 	],
-	"user_timezone": "User timezone: %s",
-	"server_timezone": "Server timezone: %s",
-	"none": "none"
+	"user_timezone": "Fuso orario dell'utente: %s",
+	"server_timezone": "Fuso orario del server: %s",
+	"none": "nessuna"
 }
