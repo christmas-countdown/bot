@@ -2,134 +2,134 @@
 	"christmas": {
 		"days": {
 			"title": [
-				"%d day left",
-				"%d days left"
+				"%d zi ramasa",
+				"%d zile ramase"
 			],
 			"text": [
-				"There is **%d** day left until Christmas!",
-				"There are **%d** days left until Christmas!"
+				"Mai este **%d** zi ramasa pana la Craciun!",
+				"Mai sunt **%d** zile ramase pana la Craciun!"
 			]
 		},
 		"hours": {
 			"title": [
-				"%d hour left",
-				"%d hours left"
+				"%d ora ramasa",
+				"%d ore ramase"
 			],
 			"text": [
-				"There is **%d** hour left until Christmas!",
-				"There are **%d** hours left until Christmas!"
+				"Mai este **%d** ora ramasa pana la Craciun!",
+				"Mai sunt **%d** ore ramase pana la Craciun!"
 			]
 		},
 		"minutes": {
 			"title": [
-				"%d minute left",
-				"%d minutes left"
+				"%d minut ramas",
+				"%d minute ramase"
 			],
 			"text": [
-				"There is **%d** minute left until Christmas!",
-				"There are **%d** minutes left until Christmas!"
+				"Mai este **%d** minut ramas pana la Craciun!",
+				"Mai sunt **%d** minute ramase pana la Craciun!"
 			]
 		},
 		"seconds": {
 			"title": [
-				"%d second left",
-				"%d seconds left"
+				"%d seconda ramasa",
+				"%d seconde ramase"
 			],
 			"text": [
-				"There is **%d** second left until Christmas!",
-				"There are **%d** seconds left until Christmas!"
+				"Mai este **%d** secunda ramasa pana la Craciun!",
+				"Mai sunt **%d** secunde ramase pana la Craciun!"
 			]
 		},
 		"sleeps": {
 			"title": [
-				"%d sleep left",
-				"%d sleeps left"
+				"%d noapte ramasa",
+				"%d nopti ramase"
 			],
 			"text": [
-				"There is **%d** sleep left until Christmas!",
-				"There are **%d** sleeps left until Christmas!"
+				"Mai este **%d** noapte ramasa pana la Craciun!",
+				"Mai sunt **%d** nopti ramase pana la Craciun!"
 			]
 		},
 		"total": {
-			"title": "%s, %s, %s, %s left",
-			"text": "There %s %s, %s, %s, and %s left until Christmas!",
+			"title": "%s, %s, %s, %s ramase",
+			"text": "Mai %s %s, %s, %s si %s ramase pana la Craciun!",
 			"days": [
-				"**%d** day",
-				"**%d** days"
+				"**%d** zi",
+				"**%d** zile"
 			],
 			"hours": [
-				"**%d** hour",
-				"**%d** hours"
+				"**%d** ora",
+				"**%d** ore"
 			],
 			"minutes": [
-				"**%d** minute",
-				"**%d** minutes"
+				"**%d** minut",
+				"**%d** minute"
 			],
 			"seconds": [
-				"**%d** second",
-				"**%d** seconds"
+				"**%d** seconda",
+				"**%d** seconde"
 			]
 		},
 		"weeks": {
 			"title": [
-				"%d week left",
-				"%d weeks left"
+				"%d saptamana ramasa",
+				"%d saptamani ramase"
 			],
 			"text": [
-				"There is **%d** week left until Christmas!",
-				"There are **%d** weeks left until Christmas!"
+				"Mai este **%d** saptamana ramasa pana la Craciun!",
+				"Mai sunt **%d** saptamani ramase pana la Craciun!"
 			]
 		},
-		"xmas_day": "It's Christmas Day! 🎉",
-		"xmas_eve": "It's Christmas Eve! 🎅",
-		"merry_xmas": "Merry Christmas! 🎄",
-		"footer": "View the live countdown at [%s](%s).",
+		"xmas_day": "Este ziua de Craciun! 🎉",
+		"xmas_eve": "Este Ajunul Craciunului! 🎅",
+		"merry_xmas": "Craciun fericit si binecuvantat! 🎄",
+		"footer": "Vezi numaratoarea live pe [%s](%s).",
 		"disable": {
-			"title": "🎄 Merry Christmas",
-			"description": "**Server administrators:** if you want to stop the countdown, use the `​%stoggle`​ command to disable it.\n\nPlease consider reviewing the bot [here](%s). Thank you for using the Christmas Countdown bot for Discord, enjoy your Christmas! 🙂"
+			"title": "🎄 Craciun fericit",
+			"description": "**Administratorii serverului:** Daca vreti sa opriti numaratoarea, folositi comanda `​%stoggle`​ pentru a o dezactiva.\n\n Va rog sa luati in considerare sa lasati un review pentru bot [aici](%s). Multumesc ca folositi Christmas Countdown bot pentru Discord, bucurati-va de Craciun! 🙂"
 		}
 	},
 	"general": {
 		"about": {
-			"title": "Information",
+			"title": "Informatii",
 			"description": "A Discord bot made by [eartharoid](%s).",
 			"fields": {
 				"prefix": {
-					"title": "Server prefix",
+					"title": "Prefixul serverului",
 					"default": "(default)"
 				},
 				"website": "Website",
-				"docs": "Documentation",
+				"docs": "Documentatie",
 				"support": "Support server",
 				"guilds": "Servers",
 				"premium_guilds": "⭐ Premium servers",
 				"enabled_guilds": {
-					"title": "Counting down in",
+					"title": "Numaratoarea are loc in ",
 					"servers": [
 						"%d server",
-						"%d servers"
+						"%d servere"
 					]
 				}
 			}
 		},
 		"help": {
-			"title": "Commands",
-			"description": "For more information about a specific command, use `%s` or click on its name. For distinction between days and sleeps, click [here](%s).\n**Quick setup:** `%sserver setup`.\n",
+			"title": "Comenzi",
+			"description": "Pentru mai multe informatii referitoare la o comanda anume, foloseste `%s`sau da click pe numele ei. Pentru o distinctie intre zile si nopti, click [aici](%s).\n**Quick setup:** `%sserver setup`.\n",
 			"fields": {
 				"docs": {
-					"title": "❯ Documentation",
-					"click_here": "[Click here](%s)"
+					"title": "❯ Documentatie",
+					"click_here": "[Click aici](%s)"
 				},
-				"description": "❯ Description",
+				"description": "❯ Descriere",
 				"aliases": {
 					"title": "❯ Aliases",
-					"extra": "Hyphens (-) can be omitted."
+					"extra": "Cratimele (-) pot fi omise."
 				}
 			}
 		},
 		"invite": {
-			"title": "Invite",
-			"description": "Add the Christmas Countdown bot to your own server: [invite](%s)"
+			"title": "Invitatie",
+			"description": "Adauga Christmas Countdown bot serverului tau: [invite](%s)"
 		},
 		"ping": {
 			"title": "Pong!",
@@ -144,90 +144,90 @@
 			}
 		},
 		"premium": {
-			"title": "⭐ Get premium",
-			"description": "Donate [here](%s) to unlock additional features."
+			"title": "⭐ Obtine premium",
+			"description": "Doneaza [aici](%s) pentru a adauga alte beneficii."
 		}
 	},
 	"music": {
 		"music": {
-			"title": "Christmas music radio"
+			"title": "radio cu muzica de Craciun"
 		}
 	},
 	"settings": {
 		"server": {
 			"reset": {
-				"title": "✅ Server settings reset",
-				"description": "This server's settings have been reset to the defaults. Use %s to re-configure."
+				"title": "✅ Reseteaza setarile serverului",
+				"description": "Setarile acestui server au fost resetate la defaults. Foloseste %s pentru reconfigurare."
 			},
-			"server": "Server settings",
+			"server": "Setari Server",
 			"set": {
 				"no_change": {
-					"title": "Server settings",
-					"description": "Nothing changed."
+					"title": "Setari Server",
+					"description": "Nu s-a schimbat nimic."
 				},
 				"success": {
-					"title": "✅ Server settings updated"
+					"title": "✅ Setarile serverului au fost actualizate."
 				}
 			},
 			"setup": {
-				"success": "You can further modify your settings with [`%sserver set`](%s).",
+				"success": "In continuare, poti modifica setarile serverului cu [`%sserver set`](%s).",
 				"prompts": {
 					"timezone": {
-						"prompt": "**Which timezone do you want the bot to use?**\n\n[Click here for a list of timezones](%s).\nIf you don't know, choose `UTC` now, __you can change this later__.",
-						"error": "Invalid timezone. See the [docs](%s). Exited setup prompt."
+						"prompt": "**In ce fus orar vrei sa folosesti botul?**\n\n[Click aici pentru a vedea o lista cu fusuri orare](%s).\nDaca nu stii, alege`UTC` acum, __poti sa il modifici mai tarziu__.",
+						"error": "Fus orar invalid. Vezi [documentatia](%s). S-a iesit din setup prompt."
 					},
 					"enabled": {
-						"prompt": "**Enable the countdown?** (`yes`/`no`)\n__You can change this later__.",
-						"error": "Invalid input. Exited setup prompt."
+						"prompt": "**Vrei sa pornesti numaratoarea?** (`da`/`nu`)\n__Poti schimba asta mai tarziu__.",
+						"error": "Input invalid. S-a iesit setup prompt."
 					},
 					"channel": {
-						"prompt": "Mention the text channel you want the countdown to use.",
-						"error": "Invalid channel mention. Exited setup prompt."
+						"prompt": "Mentioneaza canalul text pe care vrei sa il folosesti pentru numaratoare.",
+						"error": "Mentionarea canalului e invalida. S-a iesit din setup prompt."
 					}
 				}
 			},
-			"invalid": "❌ Server settings"
+			"invalid": "❌ Setari Server"
 		},
 		"user": {
 			"reset": {
-				"title": "✅ User settings reset",
-				"description": "Your settings have been reset to the defaults. Use `%s` to re-configure."
+				"title": "✅ Resetarea setarilor utilizatorului",
+				"description": "Setarile tale au fost resetate la defaults. Foloseste %s pentru reconfigurare."
 			},
 			"set": {
 				"no_change": {
-					"title": "User settings",
-					"description": "Nothing changed."
+					"title": "Setari Utilizator",
+					"description": "Nu s-a schimbat nimic."
 				},
 				"success": {
-					"title": "✅ User settings updated"
+					"title": "✅ Setarile utilizatorului au fost actualizate."
 				}
 			},
-			"user": "User settings",
-			"invalid": "❌ User settings"
+			"user": "Setari Utilizator",
+			"invalid": "❌ Setari Utilizator"
 		},
-		"sub_cmds": "The %s command has the following subcommands:\n\n%s",
+		"sub_cmds": "Comanda %s are urmatoarele subcomenzi:\n\n%s",
 		"usage": "Usage",
 		"help": "Help",
 		"options": {
 			"prefix": {
 				"title": "Prefix",
-				"error": "Invalid prefix. Too long perhaps?"
+				"error": "Prefix invalid. Poate este prea lung?"
 			},
 			"locale": {
 				"title": "Locale",
-				"error": "Invalid locale name."
+				"error": "Numele localizarii este invalid."
 			},
 			"timezone": {
 				"title": "Timezone",
-				"error": "Invalid timezone name."
+				"error": "Numele fusului orar este invalid."
 			},
 			"channel": {
 				"title": "Channel",
-				"error": "Invalid channel mention."
+				"error": "Numele canalului este invalid."
 			},
 			"role": {
 				"title": "Role",
-				"error": "Invalid role mention."
+				"error": "Numele rolului este invalid."
 			},
 			"autotoggle": {
 				"title": "AutoToggle",
@@ -236,83 +236,83 @@
 			"enabled": {
 				"title": "Enabled",
 				"error": "Invalid boolean.",
-				"channel_not_set": "Cannot enable countdown before channel is set"
+				"channel_not_set": "Nu poate porni numaratoarea inaintea setarii canalului."
 			},
 			"mention": {
 				"title": "Mention",
 				"error": "Invalid boolean.",
-				"role_not_set": "Cannot enable mentioning before role is set"
+				"role_not_set": "Nu se poate permite mentionarea inainte ca rolul sa fie setat."
 			}
 		},
-		"premium": "⭐ This is a premium option",
+		"premium": "⭐ Aceasta este o optiune premium",
 		"invalid": {
-			"description": "There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**",
-			"option": "Invalid input (see docs)"
+			"description": "Au fost cateva probleme cu optiunile furnizate:\n%s\n**Click pe numele albastru al setarii pentru a vedea documentatia.**",
+			"option": "Input invalid (vezi docs)"
 		},
 		"locales": {
-			"title": "Locales",
+			"title": "Localizari",
 			"fields": {
-				"valid_locales": "Valid locales",
+				"valid_locales": "Localizare valida.",
 				"missing": {
-					"title": "Don't see your language?",
-					"click_here": "[Click here](%s)"
+					"title": "Nu vezi limba folosita in tara ta?",
+					"click_here": "[Click aici](%s)"
 				},
-				"set_server": "Set the server language",
-				"set_user": "Set your personal language"
+				"set_server": "Seteaza limba serverului",
+				"set_user": "Seteaza limba folosita de tine."
 			}
 		},
 		"timezones": {
-			"title": "Timezones",
-			"title_by_country": "Timezones of %s",
-			"description": "Use %s to list timezones by country, where `<country>` is a country code (examples: `US`, `GB`,`DE`, `FR`, or `RU`)",
+			"title": "Fusuri orare",
+			"title_by_country": "Fusuri orare ale %s",
+			"description": "Foloseste %s pentru a vedea o lista de fusuri orare dupa tara, unde `<country>` este codul tarii (example: `US`, `GB`,`DE`, `FR`, or `RU`)",
 			"fields": {
-				"set_server": "Set the server timezone",
-				"set_user": "Set your personal timezone",
+				"set_server": "Seteaza fusul orar al serverului.",
+				"set_user": "Seteaza fusul orar personal.",
 				"list": {
-					"title": "Valid timezones",
-					"too_long": "The list is too long to send! Click [here](%s) to visit the docs."
+					"title": "Fusuri orare valide.",
+					"too_long": "Lista este prea lunga pentru a se trimite! Click [aici](%s) pentru a vizita docs."
 				}
 			}
 		},
 		"toggle": {
 			"no_channel": {
-				"title": "❌ Cannot enable countdown before channel is set",
-				"description": "Use %s to set the channel."
+				"title": "❌ Nu se poate permite pornirea numaratorii pana cand nu este setat canalul",
+				"description": "Foloseste %s pentru a seta canalul."
 			},
-			"toggled": "✅ Countdown %s",
-			"enabled": "enabled",
-			"disabled": "disabled"
+			"toggled": "✅ Numaratoare %s",
+			"enabled": "permisa",
+			"disabled": "nepermisa"
 		}
 	},
 	"missing_permissions": {
 		"client": {
-			"title": "Missing permissions",
-			"description": "The bot is missing the following permissions: \n%s."
+			"title": "Lipsesc permisiuni",
+			"description": "Botului ii lipsesc urmatoarele permisiuni: \n%s."
 		},
 		"member": {
-			"title": "Missing permissions",
-			"description": "You must have following permissions to use the `%s` command: \n%s."
+			"title": "Lipsesc permisiuni",
+			"description": "Trebuie sa ai urmatoarele permisiuni pentru a folosi comanda `%s`: \n%s."
 		}
 	},
 	"message_invalid": {
-		"title": "Hello!",
+		"title": "Buna!",
 		"fields": {
 			"help": {
 				"title": "Help",
 				"text": "`%s` or \"%s\""
 			},
 			"prefix": {
-				"title": "Server prefix",
+				"title": "Prefixul serverului",
 				"default": "(default)"
 			},
 			"support": "Support server"
 		}
 	},
 	"is-are": [
-		"is",
-		"are"
+		"este",
+		"sunt"
 	],
-	"user_timezone": "User timezone: %s",
-	"server_timezone": "Server timezone: %s",
+	"user_timezone": "Fusul orar al utilizatorului: %s",
+	"server_timezone": "Fusul orar al utilizatorului: %s",
 	"none": "none"
 }
