@@ -2,317 +2,317 @@
 	"christmas": {
 		"days": {
 			"title": [
-				"Zbývá %d den",
-				"Zbývá %d dnů"
+				"%d day left",
+				"%d days left"
 			],
 			"text": [
-				"Do Vánoc zbývá **%d** den!",
-				"Do Vánoc zbývá **%d** dnů!"
+				"There is **%d** day left until Christmas!",
+				"There are **%d** days left until Christmas!"
 			]
 		},
 		"hours": {
 			"title": [
-				"Zbývá %d hodina",
-				"Zbývá %d hodin"
+				"%d hour left",
+				"%d hours left"
 			],
 			"text": [
-				"Do Vánoc zbývá **%d** hodina!",
-				"Do Vánoc zbývá **%d** hodin!"
+				"There is **%d** hour left until Christmas!",
+				"There are **%d** hours left until Christmas!"
 			]
 		},
 		"minutes": {
 			"title": [
-				"Zbývá %d minuta",
-				"Zbývá %d minut"
+				"%d minute left",
+				"%d minutes left"
 			],
 			"text": [
-				"Do Vánoc zbývá **%d** minuta!",
-				"Do Vánoc zbývá **%d** minut!"
+				"There is **%d** minute left until Christmas!",
+				"There are **%d** minutes left until Christmas!"
 			]
 		},
 		"seconds": {
 			"title": [
-				"Zbývá %d vteřina",
-				"Zbývá %d vteřin"
+				"%d second left",
+				"%d seconds left"
 			],
 			"text": [
-				"Do Vánoc zbývá **%d** vteřina!",
-				"Do Vánoc zbývá **%d** vteřin!"
+				"There is **%d** second left until Christmas!",
+				"There are **%d** seconds left until Christmas!"
 			]
 		},
 		"sleeps": {
 			"title": [
-				"Zbývá %d spánek",
-				"Zbývá %d spánků"
+				"%d sleep left",
+				"%d sleeps left"
 			],
 			"text": [
-				"Do Vánoc zbývá **%d** spánek!",
-				"Do Vánoc zbývá **%d** spánků!"
+				"There is **%d** sleep left until Christmas!",
+				"There are **%d** sleeps left until Christmas!"
 			]
 		},
 		"total": {
-			"title": "Zbývá %s, %s, %s, %s",
-			"text": "Do Vánoc zbývá %s %s, %s, %s, a %s!",
+			"title": "%s, %s, %s, %s left",
+			"text": "There %s %s, %s, %s, and %s left until Christmas!",
 			"days": [
-				"**%d** den",
-				"**%d** dnů"
+				"**%d** day",
+				"**%d** days"
 			],
 			"hours": [
-				"**%d** hodina",
-				"**%d** hodin"
+				"**%d** hour",
+				"**%d** hours"
 			],
 			"minutes": [
-				"**%d** minuta",
-				"**%d** minut"
+				"**%d** minute",
+				"**%d** minutes"
 			],
 			"seconds": [
-				"**%d** vteřina",
-				"**%d** vteřin"
+				"**%d** second",
+				"**%d** seconds"
 			]
 		},
 		"weeks": {
 			"title": [
-				"Zbývá %d týden",
-				"Zbývá %d týdnů"
+				"%d week left",
+				"%d weeks left"
 			],
 			"text": [
-				"Do Vánoc zbývá **%d** týden!",
-				"Do Vánoc zbývá **%d** týdnů!"
+				"There is **%d** week left until Christmas!",
+				"There are **%d** weeks left until Christmas!"
 			]
 		},
-		"xmas_day": "Je Štědrý den! 🎉",
-		"xmas_eve": "Je Štědrý večer! 🎅",
-		"merry_xmas": "Veselé Vánoce! 🎄",
-		"footer": "Živý odpočet najdete na [%s](%s).",
+		"xmas_day": "It's Christmas Day! 🎉",
+		"xmas_eve": "It's Christmas Eve! 🎅",
+		"merry_xmas": "Merry Christmas! 🎄",
+		"footer": "View the live countdown at [%s](%s).",
 		"disable": {
-			"title": "🎄 Veselé Vánoce",
-			"description": "**Správci serveru:** pokud chcete zastavit odpočet, použijte příkaz `​%stoggle`​.\n\nZvažte prosím ohodnocení bota [zde](%s). Děkujeme za použití bota Christmas Countdown pro Discord, užijte si Vánoce! 🙂"
+			"title": "🎄 Merry Christmas",
+			"description": "**Server administrators:** if you want to stop the countdown, use the `​%stoggle`​ command to disable it.\n\nPlease consider reviewing the bot [here](%s). Thank you for using the Christmas Countdown bot for Discord, enjoy your Christmas! 🙂"
 		}
 	},
 	"general": {
 		"about": {
-			"title": "Informace",
-			"description": "Bota vytvořil [eartharoid](%s).",
+			"title": "Information",
+			"description": "A Discord bot made by [eartharoid](%s).",
 			"fields": {
 				"prefix": {
-					"title": "Prefix serveru",
-					"default": "(výchozí)"
+					"title": "Server prefix",
+					"default": "(default)"
 				},
-				"website": "Web",
-				"docs": "Dokumentace",
-				"support": "Podpora",
-				"guilds": "Servery",
-				"premium_guilds": "⭐ Premium servery",
+				"website": "Website",
+				"docs": "Documentation",
+				"support": "Support server",
+				"guilds": "Servers",
+				"premium_guilds": "⭐ Premium servers",
 				"enabled_guilds": {
-					"title": "Odpočítávám na",
+					"title": "Counting down in",
 					"servers": [
-						"%d serveru",
-						"%d serverech"
+						"%d server",
+						"%d servers"
 					]
 				}
 			}
 		},
 		"help": {
-			"title": "Příkazy",
-			"description": "Pro více informací o specifickém příkazu použijte `%s` nebo klikněte na jeho název. Pro přepnutí mezi dny a spánky klikněte [sem](%s).\n**Rychlé nastavení:** `%sserver setup`.\n",
+			"title": "Commands",
+			"description": "For more information about a specific command, use `%s` or click on its name. For distinction between days and sleeps, click [here](%s).\n**Quick setup:** `%sserver setup`.\n",
 			"fields": {
 				"docs": {
-					"title": "❯ Dokumentace",
-					"click_here": "[Klikněte sem](%s)"
+					"title": "❯ Documentation",
+					"click_here": "[Click here](%s)"
 				},
-				"description": "❯ Popis",
+				"description": "❯ Description",
 				"aliases": {
-					"title": "❯ Aliasy",
-					"extra": "Pomlčky (-) mohou být vynechány."
+					"title": "❯ Aliases",
+					"extra": "Hyphens (-) can be omitted."
 				}
 			}
 		},
 		"invite": {
-			"title": "Pozvánka",
-			"description": "Přidejte bota Christmas Countdown na váš vlastní server: [pozvánka](%s)"
+			"title": "Invite",
+			"description": "Add the Christmas Countdown bot to your own server: [invite](%s)"
 		},
 		"ping": {
 			"title": "Pong!",
 			"fields": {
 				"shard_num": {
-					"title": "Číslo shardu",
-					"text": "**%d** (%s) z %d"
+					"title": "Shard number",
+					"text": "**%d** (%s) of %d"
 				},
-				"avg_ping": "Prům. ping",
-				"shard_ping": "Ping shardu",
-				"latency": "Celkové zpoždění"
+				"avg_ping": "Avg. ping",
+				"shard_ping": "Shard ping",
+				"latency": "Overall latency"
 			}
 		},
 		"premium": {
-			"title": "⭐ Získat Premium",
-			"description": "Přispějte [zde](%s) pro odemknutí dalších funkcí."
+			"title": "⭐ Get premium",
+			"description": "Donate [here](%s) to unlock additional features."
 		}
 	},
 	"music": {
 		"music": {
-			"title": "Vánoční hudební rádio"
+			"title": "Christmas music radio"
 		}
 	},
 	"settings": {
 		"server": {
 			"reset": {
-				"title": "✅ Nastavení serveru obnovena",
-				"description": "Nastavení tohoto serveru byla obnovena na výchozí hodnoty. Použijte %s pro přenastavení."
+				"title": "✅ Server settings reset",
+				"description": "This server's settings have been reset to the defaults. Use %s to re-configure."
 			},
-			"server": "Nastavení serveru",
+			"server": "Server settings",
 			"set": {
 				"no_change": {
-					"title": "Nastavení serveru",
-					"description": "Nic nebylo změněno."
+					"title": "Server settings",
+					"description": "Nothing changed."
 				},
 				"success": {
-					"title": "✅ Nastavení serveru aktualizována"
+					"title": "✅ Server settings updated"
 				}
 			},
 			"setup": {
-				"success": "Nastavení můžete dále upravit pomocí [`%sserver set`](%s).",
+				"success": "You can further modify your settings with [`%sserver set`](%s).",
 				"prompts": {
 					"timezone": {
-						"prompt": "**Které časové pásmo má bot používat?**\n\n[Klikněte sem pro seznam pásem](%s).\nPokud si nejste jistí, vyberte `UTC`, __toto nastavení můžete později změnit__.",
-						"error": "Neplatné časové pásmo. Podívejte se na [dokumentaci](%s). Ukončeno nastavování."
+						"prompt": "**Which timezone do you want the bot to use?**\n\n[Click here for a list of timezones](%s).\nIf you don't know, choose `UTC` now, __you can change this later__.",
+						"error": "Invalid timezone. See the [docs](%s). Exited setup prompt."
 					},
 					"enabled": {
-						"prompt": "**Povolit odpočet?** (`yes`/`no`)\n__Toto můžete později změnit__.",
-						"error": "Neplatný vstup. Ukončeno nastavování."
+						"prompt": "**Enable the countdown?** (`yes`/`no`)\n__You can change this later__.",
+						"error": "Invalid input. Exited setup prompt."
 					},
 					"channel": {
-						"prompt": "Označte textový kanál, ve kterém má být použit odpočet.",
-						"error": "Neplatné označení kanálu. Ukončeno nastavování."
+						"prompt": "Mention the text channel you want the countdown to use.",
+						"error": "Invalid channel mention. Exited setup prompt."
 					}
 				}
 			},
-			"invalid": "❌ Nastavení serveru"
+			"invalid": "❌ Server settings"
 		},
 		"user": {
 			"reset": {
-				"title": "✅ Uživatelská nastavení obnovena",
-				"description": "Vaše nastavení byla obnovena na výchozí hodnoty. Použijte `%s` pro přenastavení."
+				"title": "✅ User settings reset",
+				"description": "Your settings have been reset to the defaults. Use `%s` to re-configure."
 			},
 			"set": {
 				"no_change": {
-					"title": "Uživatelská nastavení",
-					"description": "Nic nebylo změněno."
+					"title": "User settings",
+					"description": "Nothing changed."
 				},
 				"success": {
-					"title": "✅ Nastavení uživatele aktualizována"
+					"title": "✅ User settings updated"
 				}
 			},
-			"user": "Uživatelská nastavení",
-			"invalid": "❌ Uživatelská nastavení"
+			"user": "User settings",
+			"invalid": "❌ User settings"
 		},
-		"sub_cmds": "Příkaz %s má následující podpříkazy:\n\n%s",
-		"usage": "Použití",
-		"help": "Nápověda",
+		"sub_cmds": "The %s command has the following subcommands:\n\n%s",
+		"usage": "Usage",
+		"help": "Help",
 		"options": {
 			"prefix": {
 				"title": "Prefix",
-				"error": "Neplatný prefix. Není moc dlouhý?"
+				"error": "Invalid prefix. Too long perhaps?"
 			},
 			"locale": {
-				"title": "Jazyk",
-				"error": "Neplatný název jazyka."
+				"title": "Locale",
+				"error": "Invalid locale name."
 			},
 			"timezone": {
-				"title": "Časové pásmo",
-				"error": "Neplatný název časového pásma."
+				"title": "Timezone",
+				"error": "Invalid timezone name."
 			},
 			"channel": {
-				"title": "Kanál",
-				"error": "Neplatné označení kanálu."
+				"title": "Channel",
+				"error": "Invalid channel mention."
 			},
 			"role": {
 				"title": "Role",
-				"error": "Neplatné označení role."
+				"error": "Invalid role mention."
 			},
 			"autotoggle": {
-				"title": "Automatické přepnutí",
-				"error": "Neplatný boolean."
+				"title": "AutoToggle",
+				"error": "Invalid boolean."
 			},
 			"enabled": {
-				"title": "Povoleno",
-				"error": "Neplatný boolean.",
-				"channel_not_set": "Nelze zapnout odpočet před nastavením kanálu"
+				"title": "Enabled",
+				"error": "Invalid boolean.",
+				"channel_not_set": "Cannot enable countdown before channel is set"
 			},
 			"mention": {
-				"title": "Zmínka",
-				"error": "Neplatný boolean.",
-				"role_not_set": "Nelze zapnout zmiňování uživatelů před nastavením role"
+				"title": "Mention",
+				"error": "Invalid boolean.",
+				"role_not_set": "Cannot enable mentioning before role is set"
 			}
 		},
-		"premium": "⭐ Toto je prémiová možnost",
+		"premium": "⭐ This is a premium option",
 		"invalid": {
-			"description": "U zadaných hodnot se vyskytly problémy:\n%s\n**Klikněte na modrý název nastavení pro zobrazení dokumentace.**",
-			"option": "Neplatný vstup (viz dokumentace)"
+			"description": "There were some issues with the provided options:\n%s\n**Click on the blue setting name to see the documentation.**",
+			"option": "Invalid input (see docs)"
 		},
 		"locales": {
-			"title": "Jazyky",
+			"title": "Locales",
 			"fields": {
-				"valid_locales": "Platné jazyky",
+				"valid_locales": "Valid locales",
 				"missing": {
-					"title": "Nevidíte váš jazyk?",
-					"click_here": "[Klikněte sem](%s)"
+					"title": "Don't see your language?",
+					"click_here": "[Click here](%s)"
 				},
-				"set_server": "Nastavit jazyk serveru",
-				"set_user": "Nastavit vás osobní jazyk"
+				"set_server": "Set the server language",
+				"set_user": "Set your personal language"
 			}
 		},
 		"timezones": {
-			"title": "Časová pásma",
-			"title_by_country": "Časová pásma země %s",
-			"description": "Použijte %s pro zobrazení časových pásem dle země. `<country>` je kód země (například: `US`, `GB`,`DE`, `FR`, nebo `RU`)",
+			"title": "Timezones",
+			"title_by_country": "Timezones of %s",
+			"description": "Use %s to list timezones by country, where `<country>` is a country code (examples: `US`, `GB`,`DE`, `FR`, or `RU`)",
 			"fields": {
-				"set_server": "Nastavt časové pásmo serveru",
-				"set_user": "Nastavit osobní časové pásmo",
+				"set_server": "Set the server timezone",
+				"set_user": "Set your personal timezone",
 				"list": {
-					"title": "Platná časová pásma",
-					"too_long": "Seznam je moc dlouhý k odeslání! Klikněte [sem](%s) pro zobrazení dokumentace."
+					"title": "Valid timezones",
+					"too_long": "The list is too long to send! Click [here](%s) to visit the docs."
 				}
 			}
 		},
 		"toggle": {
 			"no_channel": {
-				"title": "❌ Nelze povolit odpočet před nastavením kanálu",
-				"description": "Použijte %s pro nastavení kanálu."
+				"title": "❌ Cannot enable countdown before channel is set",
+				"description": "Use %s to set the channel."
 			},
-			"toggled": "✅ Odpočet %s",
-			"enabled": "zapnut",
-			"disabled": "vypnut"
+			"toggled": "✅ Countdown %s",
+			"enabled": "enabled",
+			"disabled": "disabled"
 		}
 	},
 	"missing_permissions": {
 		"client": {
-			"title": "Chybějící oprávnění",
-			"description": "Botovi chybí následující oprávnění: \n%s."
+			"title": "Missing permissions",
+			"description": "The bot is missing the following permissions: \n%s."
 		},
 		"member": {
-			"title": "Chybějící oprávnění",
-			"description": "Musíte mít následující oprávnění pro použití příkazu `%s`: \n%s."
+			"title": "Missing permissions",
+			"description": "You must have following permissions to use the `%s` command: \n%s."
 		}
 	},
 	"message_invalid": {
-		"title": "Zdravím!",
+		"title": "Hello!",
 		"fields": {
 			"help": {
-				"title": "Nápověda",
-				"text": "`%s` nebo \"%s\""
+				"title": "Help",
+				"text": "`%s` or \"%s\""
 			},
 			"prefix": {
-					"title": "Prefix serveru",
-					"default": "(výchozí)"
+				"title": "Server prefix",
+				"default": "(default)"
 			},
-			"support": "Podpora"
+			"support": "Support server"
 		}
 	},
 	"is-are": [
-		"je",
-		"jsou"
+		"is",
+		"are"
 	],
-	"user_timezone": "Uživatelské časové pásmo: %s",
-	"server_timezone": "Serverové časové pásmo: %s",
-	"none": "žádné"
+	"user_timezone": "User timezone: %s",
+	"server_timezone": "Server timezone: %s",
+	"none": "none"
 }
