@@ -302,8 +302,8 @@
 				"text": "`%s` or \"%s\""
 			},
 			"prefix": {
-					"title": "Prefixul serverului",
-					"default": "(default)"
+				"title": "Prefixul serverului",
+				"default": "(default)"
 			},
 			"support": "Support server"
 		}

@@ -302,8 +302,8 @@
 				"text": "`%s` nebo \"%s\""
 			},
 			"prefix": {
-					"title": "Prefix serveru",
-					"default": "(výchozí)"
+				"title": "Prefix serveru",
+				"default": "(výchozí)"
 			},
 			"support": "Podpora"
 		}

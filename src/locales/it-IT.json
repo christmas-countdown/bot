@@ -302,8 +302,8 @@
 				"text": "`%s` o \"%s\""
 			},
 			"prefix": {
-					"title": "Prefisso del server",
-					"default": "(default)"
+				"title": "Prefisso del server",
+				"default": "(default)"
 			},
 			"support": "Server di supporto"
 		}

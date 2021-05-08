@@ -148,6 +148,11 @@
 			"description": "Dona [aquí](%s) para desbloquear características adicionales."
 		}
 	},
+	"music": {
+		"music": {
+			"title": "Christmas music radio"
+		}
+	},
 	"settings": {
 		"server": {
 			"reset": {
@@ -297,8 +302,8 @@
 				"text": "`%s` o \"%s\""
 			},
 			"prefix": {
-					"title": "Prefijo del servidor",
-					"default": "(por defecto)"
+				"title": "Prefijo del servidor",
+				"default": "(por defecto)"
 			},
 			"support": "Servidor de soporte"
 		}

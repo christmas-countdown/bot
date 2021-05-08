@@ -31,7 +31,10 @@
 			]
 		},
 		"seconds": {
-			"title": ["%d Sekunde verbleibend", "%d Sekunden verbleibend"],
+			"title": [
+				"%d Sekunde verbleibend",
+				"%d Sekunden verbleibend"
+			],
 			"text": [
 				"Es ist noch **%d** Sekunde verbleibend bis Weihnachten!",
 				"Es sind noch **%d** Minuten verbleibend bis Weihnachten!"

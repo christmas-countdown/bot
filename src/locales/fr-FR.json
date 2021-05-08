@@ -148,6 +148,11 @@
 			"description": "Faire un don [ici](%s) pour débloquer des fonctionnalités supplémentaires."
 		}
 	},
+	"music": {
+		"music": {
+			"title": "Christmas music radio"
+		}
+	},
 	"settings": {
 		"server": {
 			"reset": {
@@ -191,7 +196,7 @@
 			"set": {
 				"no_change": {
 					"title": "User settings",
-					"description": "Nothing changed."
+					"description": "Rien n'a changé."
 				},
 				"success": {
 					"title": "✅ User settings updated"
@@ -297,8 +302,8 @@
 				"text": "`%s` ou \"%s\""
 			},
 			"prefix": {
-					"title": "Préfixe du serveur",
-					"default": "(default)"
+				"title": "Préfixe du serveur",
+				"default": "(default)"
 			},
 			"support": "Serveur d'assistance"
 		}
