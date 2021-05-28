@@ -150,7 +150,7 @@
 	},
 	"music": {
 		"music": {
-			"title": "Christmas music radio"
+			"title": "Radio de música navideña"
 		}
 	},
 	"settings": {
@@ -230,7 +230,7 @@
 				"error": "Mención al rol inválida."
 			},
 			"autotoggle": {
-				"title": "AutoToggle",
+				"title": "Auto alternado",
 				"error": "Booleano inválido."
 			},
 			"enabled": {
