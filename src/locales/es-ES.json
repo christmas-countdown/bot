@@ -51,7 +51,7 @@
 			]
 		},
 		"total": {
-			"title": "%s, %s, %s, %s left",
+			"title": "%s, %s, %s, %s restante",
 			"text": "¡Quedan %s %s, %s, %s, y %s restantes para Navidad!",
 			"days": [
 				"**%d** día",
