@@ -250,7 +250,7 @@
 			"option": "Lo que ingresaste es inválido (revisa la documentación)"
 		},
 		"locales": {
-			"title": "Locales",
+			"title": "Lenguajes",
 			"fields": {
 				"valid_locales": "Lenguajes válidos",
 				"missing": {
