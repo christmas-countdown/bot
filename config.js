@@ -14,7 +14,7 @@ module.exports = {
 		url: 'https://christmascountdown.live'
 	},
 	// invite: 'https://christmascountdown.live/invite',
-	invite: 'https://christmascountdown.live/#/discord',
+	invite: 'https://christmascountdown.live/discord',
 	docs: {
 		pretty: 'docs.christmascountdown.live/discord',
 		main: 'https://docs.christmascountdown.live/discord',
@@ -28,7 +28,7 @@ module.exports = {
 		invite: 'discord.gg/pXc9vyC',
 		url: 'https://go.eartharoid.me/discord',
 	},
-	premium: 'https://christmascountdown.live/#/donate',
+	premium: 'https://christmascountdown.live/donate',
 	presences: [
 		{
 			activity: 'the countdown to Christmas',
