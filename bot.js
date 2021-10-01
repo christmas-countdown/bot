@@ -34,7 +34,7 @@ const client = new Client({
 });
 
 client.on('ready', () => {
-	log.success(`shard ${process.env.SHARDS} connected to discord`);
+	log.success(`shard ${process.env.SHARDS} connected to Discord`);
 	setInterval(() => {
 		client.user.setPresence({ activities: [presences[Math.floor(Math.random() * presences.length)]] });
 	}, 30000); // every minute
@@ -44,8 +44,8 @@ client.on('messageCreate', message => {
 	const regex = new RegExp(`^(x!)|(<@!?${client.user.id}>)`, 'i');
 	if (!regex.test(message.content) && message.channel.type !== 'DM') return;
 
-	log.info(`received message from ${message.author.tag}`);
-	// message.reply('The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite/.**');
+	log.info(`Received message from ${message.author.tag}`);
+	message.reply('The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite/.**');
 });
 
 client.login();

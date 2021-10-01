@@ -1,4 +1,3 @@
-node_modules/
-logs/*/*.log
+logs
+node_modules
 .env
-database.sqlite
