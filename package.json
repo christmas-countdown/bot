@@ -22,7 +22,7 @@
     "dotenv": "^10.0.0",
     "fastify": "^3.22.0",
     "leeks.js": "^0.2.4",
-    "leekslazylogger": "^4.1.1"
+    "leekslazylogger": "^4.1.2"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.4",

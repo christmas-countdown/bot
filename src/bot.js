@@ -1,4 +1,4 @@
-const log = require('./utils/logger');
+const log = require('./logger/child');
 
 const presences = [
 	{
@@ -29,13 +29,14 @@ const client = new Client({
 	makeCache: Options.cacheWithLimits({
 		MessageManager: 0,
 		PresenceManager: 0
-	})
-	// presence: { activities: [presences[Math.floor(Math.random() * presences.length)]] }
+	}),
+	presence: { activities: [presences[Math.floor(Math.random() * presences.length)]] }
 });
 
 client.on('ready', () => {
 	log.success(`shard ${process.env.SHARDS} connected to discord`);
 	setInterval(() => {
+		log.debug('updating bot user presence');
 		client.user.setPresence({ activities: [presences[Math.floor(Math.random() * presences.length)]] });
 	}, 30000); // every minute
 });

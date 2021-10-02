@@ -1,4 +1,5 @@
-const levels = ['console', 'info', 'success', 'debug', 'notice', 'warn', 'error'];
+const levels = ['critical', 'debug', 'error', 'info', 'notice', 'success', 'verbose', 'warn'];
+
 
 for (const level of levels) {
 	module.exports[level] = message => {

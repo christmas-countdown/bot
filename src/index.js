@@ -22,7 +22,8 @@ const logger_options = {
 				const timestamp = dtf.fill('DD/MM/YY HH:mm:ss', log.timestamp);
 				const format = formats[log.level.name];
 				return short(`&!7&f ${timestamp} &r ${format[1]} ${log.level.name} &r ${log.namespace ? `${format[2]}(${log.namespace})&r ` : ''}${format[0]} ${format[3] + log.content}`);
-			}
+			},
+			level: 'info'
 		}),
 		new Logger.transports.FileTransport({
 			format: function (log) {
@@ -39,11 +40,11 @@ const log = new Logger(logger_options);
 
 
 const { ShardingManager } = require('discord.js');
-const manager = new ShardingManager('bot.js');
+const manager = new ShardingManager('./src/bot.js');
 
 log.info.manager('shard manager is starting');
 
-manager.on('shardCreate', shard => log.info(`launched shard ${shard.id}`));
+manager.on('shardCreate', shard => log.info.manager(`launched shard ${shard.id}`));
 
 manager.spawn().then(shards => {
 	log.success.manager(`spawned ${shards.size} shards`);
@@ -76,15 +77,9 @@ fastify.addHook('onResponse', (req, res, done) => {
 		: response_time >= 5
 			? '&e'
 			: '&a') + response_time + 'ms';
-	log.info.http(short(`(${req.raw.httpVersion}) ${req.method} ${req.routerPath ?? '*'} &m-+>&r ${status}&b in ${response_time}`));
+	log.info.http(short(`(${req.raw.httpVersion}) ${req.ip} ${req.method} ${req.routerPath ?? '*'} &m-+>&r ${status}&b in ${response_time}`));
 	done();
 });
-/*
- * fastify.register(log.fastify({
- * 	format: req => `${req.raw.httpVersion} {method} {route} {path} => {status-colour}{status}`,
- * 	level: 'http'
- * }));
- */
 
 fastify.get('/', async (req, res) => {
 	const shards = await manager.fetchClientValues('guilds.cache.size');
