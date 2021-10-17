@@ -1,0 +1,12 @@
+{
+	"bot": {
+		"command_execution_error": {
+			"description": "An unexpected error occurred during command execution.",
+			"title": "Error"
+		},
+		"missing_permissions": {
+			"description": "You are missing the following permissions:\n{permissions}",
+			"title": "Error"
+		}
+	}
+}

@@ -1,0 +1,27 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+model Guild {
+    id          String    @id @unique
+    webhook     String?
+    premium     Boolean   @default(false)
+    last_sent   DateTime?
+    locale      String    @default("en-GB")
+    timezone    String    @default("UTC")
+    enabled     Boolean   @default(false)
+    auto_toggle Boolean   @default(false)
+    role        String?
+    mention     Boolean   @default(false)
+}
+
+model User {
+    id       String @id @unique
+    locale   String @default("en-GB")
+    timezone String @default("UTC")
+}

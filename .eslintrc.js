@@ -107,7 +107,7 @@ module.exports = {
 			'error'
 		],
 		'multiline-comment-style': [
-			'warn'
+			'off'
 		],
 		'no-console': [
 			'warn'
