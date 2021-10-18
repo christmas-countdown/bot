@@ -22,6 +22,6 @@ model Guild {
 
 model User {
     id       String @id @unique
-    locale   String @default("en-GB")
-    timezone String @default("UTC")
+    locale   String?
+    timezone String?
 }

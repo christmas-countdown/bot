@@ -4,9 +4,21 @@
 			"description": "An unexpected error occurred during command execution.",
 			"title": "Error"
 		},
+		"footer": "Christmas Countdown by eartharoid",
+		"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
 		"missing_permissions": {
-			"description": "You are missing the following permissions:\n{permissions}",
+			"description": "You need the following permissions to use this command:\n{permissions}",
 			"title": "Error"
+		}
+	},
+	"commands": {
+		"general": {
+			"help": {
+				"list": {
+					"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.",
+					"title": "Commands"
+				} 
+			}
 		}
 	}
 }
