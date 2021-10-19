@@ -47,6 +47,8 @@
 		"christmas_day": "🎉 It's Christmas Day!",
 		"christmas_eve": "🎅 It's Christmas Eve!",
 		"live": "View the live countdown at [{pretty}]({url}).",
-		"merry_christmas": "🎄 Merry Christmas!"
+		"merry_christmas": "🎄 Merry Christmas!",
+		"server_timezone": "Server timezone: {timezone}",
+		"user_timezone": "User timezone: {timezone}"
 	}
 }

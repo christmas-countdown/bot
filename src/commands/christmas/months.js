@@ -40,6 +40,8 @@ module.exports = class MonthsCommand extends Command {
 
 		if (christmas.isToday()) text.splice(1, 0, i18n('countdown.merry_christmas'));
 
+		const footer = i18n(`countdown.${u_settings?.timezone ? 'user' : 'server'}_timezone`, { timezone });
+
 		return await interaction.reply({
 			embeds: [
 				new MessageEmbed()
@@ -47,7 +49,7 @@ module.exports = class MonthsCommand extends Command {
 					.setTitle(title)
 					.setURL('https://christmascountdown.live/total')
 					.setDescription(text.join('\n\n'))
-					.setFooter(`${i18n('bot.footer')} (${timezone})`, this.client.user.avatarURL())
+					.setFooter(footer, this.client.user.avatarURL())
 					.setTimestamp()
 			]
 		});
