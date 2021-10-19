@@ -9,7 +9,6 @@ module.exports = class HelpCommand extends Command {
 	constructor(client) {
 		super(client, {
 			description: 'List the available commands (and links to documentation)',
-			internal: true,
 			name: 'help'
 		});
 	}
@@ -25,8 +24,8 @@ module.exports = class HelpCommand extends Command {
 
 		const embed = new MessageEmbed()
 			.setColor(colour)
-			.setTitle(i18n('commands.general.help.list.title'))
-			.setDescription(i18n('commands.general.help.list.description', { discord: 'https://go.eartharoid.me/discord' }))
+			.setTitle(i18n('commands.help.list.title'))
+			.setDescription(i18n('commands.help.list.description', { discord: 'https://go.eartharoid.me/discord' }))
 			.setFooter(i18n('bot.footer'), this.client.user.avatarURL());
 
 		const categories = this.manager.commands.reduce((list, command) => {

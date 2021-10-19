@@ -12,13 +12,41 @@
 		}
 	},
 	"commands": {
-		"general": {
-			"help": {
-				"list": {
-					"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.",
-					"title": "Commands"
-				} 
+		"help": {
+			"list": {
+				"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.",
+				"title": "Commands"
 			}
+		},
+		"months": {
+			"description": [
+				"There is **{months}** month left until Christmas!",
+				"There are **{months}** months left until Christmas!"
+			],
+			"title": [
+				"{months} month left",
+				"{months} months left"
+			]
+		},
+		"radio": {
+			"description": "[Add the Christmas Radio bot]({url}) to listen to Christmas music in your Discord server.",
+			"title": "📻 Christmas Radio"
+		},
+		"seconds": {
+			"description": [
+				"There is **{seconds}** second left until Christmas!",
+				"There are **{seconds}** seconds left until Christmas!"
+			],
+			"title": [
+				"{seconds} second left",
+				"{seconds} seconds left"
+			]
 		}
+	},
+	"countdown": {
+		"christmas_day": "🎉 It's Christmas Day!",
+		"christmas_eve": "🎅 It's Christmas Eve!",
+		"live": "View the live countdown at [{pretty}]({url}).",
+		"merry_christmas": "🎄 Merry Christmas!"
 	}
 }

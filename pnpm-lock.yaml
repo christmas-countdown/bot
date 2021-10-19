@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@eartharoid/christmas': ^1.0.0
   '@eartharoid/dtf': ^2.0.1
   '@eartharoid/i18n': ^1.0.1
   '@prisma/client': ^3.2.1
@@ -17,6 +18,7 @@ specifiers:
   zlib-sync: ^0.1.7
 
 dependencies:
+  '@eartharoid/christmas': 1.0.0
   '@eartharoid/dtf': 2.0.1
   '@eartharoid/i18n': 1.0.1
   '@prisma/client': 3.2.1_prisma@3.2.1
@@ -81,6 +83,12 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.33
+    dev: false
+
+  /@eartharoid/christmas/1.0.0:
+    resolution: {integrity: sha512-p3fnN5vTj6+5MAXnmxN7b0o2wZPgP3nbhKB/gTfA67boWj9dRih4SiHJy2sVLx1MsI8Bj4gf1ZeUcelBBHOUyQ==}
+    dependencies:
+      spacetime: 6.16.3
     dev: false
 
   /@eartharoid/deep-merge/0.0.2:
@@ -1103,6 +1111,10 @@ packages:
     dependencies:
       atomic-sleep: 1.0.0
       flatstr: 1.0.12
+    dev: false
+
+  /spacetime/6.16.3:
+    resolution: {integrity: sha512-JQEfj3VHT1gU1IMV5NvhgAP8P+2mDFd84ZCiHN//dp6hRKmuW0IizHissy62lO0nilfFjVhnoSaMC7te+Y5f4A==}
     dev: false
 
   /sprintf-js/1.0.3:
