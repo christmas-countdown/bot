@@ -9,11 +9,11 @@ const {
 	MessageEmbed
 } = require('discord.js');
 
-module.exports = class MonthsCommand extends Command {
+module.exports = class WeeksCommand extends Command {
 	constructor(client) {
 		super(client, {
-			description: 'Get the number of months left until Christmas',
-			name: 'months'
+			description: 'Get the number of weeks left until Christmas',
+			name: 'weeks'
 		});
 	}
 
@@ -27,14 +27,14 @@ module.exports = class MonthsCommand extends Command {
 		const locale = u_settings?.locale ?? g_settings?.locale ?? 'en-GB';
 		const timezone = u_settings?.timezone ?? g_settings?.timezone ?? 'UTC';
 		const i18n = this.client.i18n.getLocale(locale);
-		const months = christmas.getMonths(timezone);
+		const weeks = christmas.getWeeks(timezone);
 		const title = christmas.isToday()
 			? i18n('countdown.christmas_day')
 			: christmas.isTomorrow()
 				? i18n('countdown.christmas_eve')
-				: i18n('commands.months.title', months, { months });
+				: i18n('commands.weeks.title', weeks, { weeks });
 		const text = [
-			i18n('commands.months.description', months, { months }),
+			i18n('commands.weeks.description', weeks, { weeks }),
 			i18n('countdown.live', {
 				pretty: website.pretty,
 				url: website.url

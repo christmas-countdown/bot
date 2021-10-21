@@ -1,4 +1,7 @@
-const { colour } = require('../../../config');
+const {
+	colour,
+	website
+} = require('../../../config');
 const christmas = require('@eartharoid/christmas');
 const Command = require('../../modules/commands/command');
 const {
@@ -34,8 +37,8 @@ module.exports = class SecondsCommand extends Command {
 		const text = [
 			i18n('commands.seconds.description', seconds, { seconds: formatted }),
 			i18n('countdown.live', {
-				pretty: 'christmascountdown.live',
-				url: 'https://christmascountdown.live'
+				pretty: website.pretty,
+				url: website.url
 			})
 		];
 

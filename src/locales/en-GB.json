@@ -18,6 +18,41 @@
 				"title": "Commands"
 			}
 		},
+		"days": {
+			"days": [
+				"is **{days} day**",
+				"are **{days} days**"
+			],
+			"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+			"sleeps": [
+				"**{sleeps} sleep**",
+				"**{sleeps} sleeps**"
+			],
+			"title": [
+				"{days} day left",
+				"{days} days left"
+			]
+		},
+		"hours": {
+			"description": [
+				"There is **{hours}** hour left until Christmas!",
+				"There are **{hours}** hours left until Christmas!"
+			],
+			"title": [
+				"{hours} hour left",
+				"{hours} hours left"
+			]
+		},
+		"minutes": {
+			"description": [
+				"There is **{minutes}** minute left until Christmas!",
+				"There are **{minutes}** minutes left until Christmas!"
+			],
+			"title": [
+				"{minutes} minute left",
+				"{minutes} minutes left"
+			]
+		},
 		"months": {
 			"description": [
 				"There is **{months}** month left until Christmas!",
@@ -29,8 +64,8 @@
 			]
 		},
 		"radio": {
-			"description": "[Add the Christmas Radio bot]({url}) to listen to Christmas music in your Discord server.",
-			"title": "📻 Christmas Radio"
+			"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
+			"title": "Christmas Radio"
 		},
 		"seconds": {
 			"description": [
@@ -40,6 +75,31 @@
 			"title": [
 				"{seconds} second left",
 				"{seconds} seconds left"
+			]
+		},
+		"sleeps": {
+			"days": [
+				"**{days} day**",
+				"**{days} days**"
+			],
+			"description": "There {sleeps} or {days}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+			"sleeps": [
+				"is **{sleeps} sleep**",
+				"are **{sleeps} sleeps**"
+			],
+			"title": [
+				"{sleeps} sleep left",
+				"{sleeps} sleeps left"
+			]
+		},
+		"weeks": {
+			"description": [
+				"There is **{weeks}** week left until Christmas!",
+				"There are **{weeks}** weeks left until Christmas!"
+			],
+			"title": [
+				"{weeks} week left",
+				"{weeks} weeks left"
 			]
 		}
 	},

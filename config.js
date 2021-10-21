@@ -13,5 +13,9 @@ module.exports = {
 			name: 'christmascountdown.live  |  /help',
 			type: 'WATCHING'
 		}
-	]
+	],
+	website: {
+		pretty: 'christmascountdown.live',
+		url: 'https://christmascountdown.live'
+	}
 };

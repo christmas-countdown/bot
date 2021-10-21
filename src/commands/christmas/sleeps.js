@@ -9,11 +9,11 @@ const {
 	MessageEmbed
 } = require('discord.js');
 
-module.exports = class MonthsCommand extends Command {
+module.exports = class SleepsCommand extends Command {
 	constructor(client) {
 		super(client, {
-			description: 'Get the number of months left until Christmas',
-			name: 'months'
+			description: 'Get the number of sleeps left until Christmas',
+			name: 'sleeps'
 		});
 	}
 
@@ -27,14 +27,19 @@ module.exports = class MonthsCommand extends Command {
 		const locale = u_settings?.locale ?? g_settings?.locale ?? 'en-GB';
 		const timezone = u_settings?.timezone ?? g_settings?.timezone ?? 'UTC';
 		const i18n = this.client.i18n.getLocale(locale);
-		const months = christmas.getMonths(timezone);
+		const sleeps = christmas.getSleeps(timezone);
+		const days = christmas.getDays(timezone);
 		const title = christmas.isToday()
 			? i18n('countdown.christmas_day')
 			: christmas.isTomorrow()
 				? i18n('countdown.christmas_eve')
-				: i18n('commands.months.title', months, { months });
+				: i18n('commands.sleeps.title', sleeps, { sleeps });
 		const text = [
-			i18n('commands.months.description', months, { months }),
+			i18n('commands.sleeps.description', {
+				days: i18n('commands.sleeps.days', days, { days }),
+				sleeps: i18n('commands.sleeps.sleeps', sleeps, { sleeps }),
+				url: 'https://docs.christmascountdown.live/other/days-vs-sleeps'
+			}),
 			i18n('countdown.live', {
 				pretty: website.pretty,
 				url: website.url
