@@ -1,7 +1,7 @@
 {
 	"bot": {
 		"command_execution_error": {
-			"description": "An unexpected error occurred during command execution.",
+			"description": "An unexpected error occurred during command execution. Please ask for help in [the support server]({url}).",
 			"title": "Error"
 		},
 		"footer": "Christmas Countdown by eartharoid",
@@ -91,6 +91,29 @@
 				"{sleeps} sleep left",
 				"{sleeps} sleeps left"
 			]
+		},
+		"total": {
+			"days": [
+				"**{days} day**",
+				"**{days} days**"
+			],
+			"description": [
+				"There is {days}, {hours}, {minutes}, and {seconds} left until Christmas!",
+				"There are {days}, {hours}, {minutes}, and {seconds} left until Christmas!"
+			],
+			"hours": [
+				"**{hours} hour**",
+				"**{hours} hours**"
+			],
+			"minutes": [
+				"**{minutes} minute**",
+				"**{minutes} minutes**"
+			],
+			"seconds": [
+				"**{seconds} second**",
+				"**{seconds} seconds**"
+			],
+			"title": "{days}, {hours}, {minutes}, {seconds} left"
 		},
 		"weeks": {
 			"description": [
