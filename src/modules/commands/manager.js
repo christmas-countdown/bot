@@ -11,7 +11,7 @@ const Statcord = require('statcord.js');
 
 module.exports = class CommandManager {
 	/**
-	 * @param {import('../../bot').Client} client
+	 * @param {import('../../bot').Bot} client
 	 */
 	constructor(client) {
 		this.client = client;

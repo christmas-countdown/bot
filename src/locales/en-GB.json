@@ -71,6 +71,10 @@
 			},
 			"title": "Information"
 		},
+		"invite": {
+			"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
+			"title": "Invite"
+		},
 		"joke": {
 			"question": "Question",
 			"answer": "Answer"

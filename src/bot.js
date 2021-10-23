@@ -9,7 +9,7 @@ const {
 } = require('discord.js');
 const { presences } = require('../config');
 
-class Client extends DiscordClient {
+class Bot extends DiscordClient {
 	constructor(options) {
 		super(options);
 		this.log = require('./logger/child');
@@ -29,7 +29,7 @@ class Client extends DiscordClient {
 	}
 }
 
-new Client({
+new Bot({
 	intents: [
 		Intents.FLAGS.DIRECT_MESSAGES,
 		Intents.FLAGS.GUILD_MESSAGES,

@@ -15,6 +15,16 @@ module.exports = class MessageCreateEventListener extends EventListener {
 			const guild = message.content.split(' ')[1];
 			if (guild) this.client.commands.publish(guild);
 			else this.client.commands.publish();
+			message.reply('ok');
+		} else if (is_owner && message.content.startsWith('x!premium')) {
+			const guild = message.content.split(' ')[1] ?? message.guild.id;
+			const row = await this.client.prisma.guild.findUnique({ where: { id: guild } });
+			if (!row) return message.reply('no guild');
+			await this.client.prisma.guild.update({
+				data: { premium: !row.premium },
+				where: { id: guild }
+			});
+			message.reply(row.premium ? 'disabled' : 'enabled');
 		} else {
 			const regex = new RegExp(`^(x!)|(<@!?${this.client.user.id}>)`, 'i');
 			if (!regex.test(message.content) && message.channel.type !== 'DM') return;
