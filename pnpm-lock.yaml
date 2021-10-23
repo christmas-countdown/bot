@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@eartharoid/christmas': ^1.0.0
+  '@eartharoid/christmas': ^1.1.0
   '@eartharoid/dtf': ^2.0.1
   '@eartharoid/i18n': ^1.0.1
   '@prisma/client': ^3.3.0
@@ -19,7 +19,7 @@ specifiers:
   zlib-sync: ^0.1.7
 
 dependencies:
-  '@eartharoid/christmas': 1.0.0
+  '@eartharoid/christmas': 1.1.0
   '@eartharoid/dtf': 2.0.1
   '@eartharoid/i18n': 1.0.1
   '@prisma/client': 3.3.0_prisma@3.3.0
@@ -87,8 +87,8 @@ packages:
       mime-types: 2.1.33
     dev: false
 
-  /@eartharoid/christmas/1.0.0:
-    resolution: {integrity: sha512-p3fnN5vTj6+5MAXnmxN7b0o2wZPgP3nbhKB/gTfA67boWj9dRih4SiHJy2sVLx1MsI8Bj4gf1ZeUcelBBHOUyQ==}
+  /@eartharoid/christmas/1.1.0:
+    resolution: {integrity: sha512-LjzJ+VvfFvLENGRHVwnnx7SMQzlt1uGoJM8EPQ+tf6bPju3mpU0ednia/KWI6NfhihyYjND3Zowd1gwE1ciujg==}
     dependencies:
       spacetime: 6.16.3
     dev: false

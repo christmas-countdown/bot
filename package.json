@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx prisma generate && node ."
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/christmas-countdown/bot#readme",
   "dependencies": {
-    "@eartharoid/christmas": "^1.0.0",
+    "@eartharoid/christmas": "^1.1.0",
     "@eartharoid/dtf": "^2.0.1",
     "@eartharoid/i18n": "^1.0.1",
     "@prisma/client": "^3.3.0",
