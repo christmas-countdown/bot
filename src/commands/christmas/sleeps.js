@@ -50,7 +50,7 @@ module.exports = class SleepsCommand extends Command {
 
 		const footer = i18n(`countdown.${u_settings?.timezone ? 'user' : 'server'}_timezone`, { timezone });
 
-		return await interaction.reply({
+		return await interaction.editReply({
 			embeds: [
 				new MessageEmbed()
 					.setColor(colour)

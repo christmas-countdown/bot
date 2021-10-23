@@ -5,11 +5,11 @@ const {
 	MessageEmbed
 } = require('discord.js');
 
-module.exports = class RadioCommand extends Command {
+module.exports = class DonateCommand extends Command {
 	constructor(client) {
 		super(client, {
-			description: '24/7 Christmas music',
-			name: 'radio'
+			description: 'Donate and unlock premium features',
+			name: 'donate'
 		});
 	}
 
@@ -22,16 +22,15 @@ module.exports = class RadioCommand extends Command {
 		const g_settings = interaction.guild && await this.client.prisma.guild.findUnique({ where: { id: interaction.guild.id } });
 		const i18n = this.client.i18n.getLocale(u_settings?.locale ?? g_settings?.locale);
 
-		return await interaction.editReply(
-			{
-				embeds: [
-					new MessageEmbed()
-						.setColor(colour)
-						.setTitle(i18n('commands.radio.title'))
-						.setDescription(i18n('commands.radio.description', { url: 'https://top.gg/bot/648134637654114309' }))
-						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
-				]
-			}
-		);
+		return await interaction.editReply({
+			embeds: [
+				new MessageEmbed()
+					.setColor(colour)
+					.setTitle(i18n('commands.donate.title'))
+					.setURL('https://www.christmascountdown.live/donate')
+					.setDescription(i18n('commands.donate.description', { url: 'https://www.christmascountdown.live/donate' }))
+					.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
+			]
+		});
 	}
 };

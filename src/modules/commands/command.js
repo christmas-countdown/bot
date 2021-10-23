@@ -40,6 +40,8 @@ module.exports = class Command {
 		 */
 		this.description = data.description;
 
+		this.guild_only = data.guild_only ?? false;
+
 		/**
 		 * Array of permissions needed for a user to use this command
 		 * @type {string[]}

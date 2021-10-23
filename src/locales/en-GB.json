@@ -5,6 +5,10 @@
 			"title": "Error"
 		},
 		"footer": "Christmas Countdown by eartharoid",
+		"guild_only": {
+			"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
+			"title": "Error"
+		},
 		"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
 		"missing_permissions": {
 			"description": "You need the following permissions to use this command:\n{permissions}",
@@ -27,6 +31,10 @@
 				"{days} days left"
 			]
 		},
+		"donate": {
+			"description": "**[Donate]({url})** to unlock these features:\n\\⭐ `mention`/`role` server option\n\\⭐ `autotoggle` server option",
+			"title": "Get premium"
+		},
 		"help": {
 			"list": {
 				"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.",
@@ -42,6 +50,26 @@
 				"{hours} hour left",
 				"{hours} hours left"
 			]
+		},
+		"info": {
+			"description": "The Christmas Countdown bot for Discord by [eartharoid]({eartharoid}) has been running since November 2018. [Learn more.]({about})",
+			"fields": {
+				"commands": "Commands used",
+				"counting_in": {
+					"title": "Counting down in",
+					"value": [
+						"{servers} server",
+						"{servers} servers"
+					]
+				},
+				"more": {
+					"title": "More stats",
+					"value": "[Click here]({url})"
+				},
+				"premium_servers": "⭐ Premium servers",
+				"servers": "Servers"
+			},
+			"title": "Information"
 		},
 		"joke": {
 			"question": "Question",
@@ -70,6 +98,16 @@
 		"radio": {
 			"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
 			"title": "Christmas Radio"
+		},
+		"ping": {
+			"calculating": "Calculating...",
+			"fields": {
+				"average_ping": "Avg. ping",
+				"latency": "Overall latency",
+				"shard_number": "Shard number",
+				"shard_ping": "Shard ping"
+			},
+			"title": "🏓 Pong!"
 		},
 		"seconds": {
 			"description": [

@@ -1,5 +1,6 @@
 const EventListener = require('../modules/listeners/listener');
 const { presences } = require('../../config');
+const ms = require('ms');
 
 module.exports = class ReadyEventListener extends EventListener {
 	constructor(client) {
@@ -17,6 +18,6 @@ module.exports = class ReadyEventListener extends EventListener {
 		setInterval(() => {
 			this.client.log.debug('updating bot user presence');
 			this.client.user.setPresence({ activities: [presences[Math.floor(Math.random() * presences.length)]] });
-		}, 30000); // every minute
+		}, ms('30s'));
 	}
 };

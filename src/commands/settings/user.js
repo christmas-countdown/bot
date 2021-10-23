@@ -5,11 +5,12 @@ const {
 	MessageEmbed
 } = require('discord.js');
 
-module.exports = class RadioCommand extends Command {
+module.exports = class UserCommand extends Command {
 	constructor(client) {
 		super(client, {
-			description: '24/7 Christmas music',
-			name: 'radio'
+			description: 'Modify your personal settings',
+			guild_only: true,
+			name: 'user'
 		});
 	}
 
@@ -20,18 +21,7 @@ module.exports = class RadioCommand extends Command {
 	async execute(interaction) {
 		const u_settings = await this.client.prisma.user.findUnique({ where: { id: interaction.user.id } });
 		const g_settings = interaction.guild && await this.client.prisma.guild.findUnique({ where: { id: interaction.guild.id } });
-		const i18n = this.client.i18n.getLocale(u_settings?.locale ?? g_settings?.locale);
-
-		return await interaction.editReply(
-			{
-				embeds: [
-					new MessageEmbed()
-						.setColor(colour)
-						.setTitle(i18n('commands.radio.title'))
-						.setDescription(i18n('commands.radio.description', { url: 'https://top.gg/bot/648134637654114309' }))
-						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
-				]
-			}
-		);
+		const locale = u_settings?.locale ?? g_settings?.locale ?? 'en-GB';
+		const i18n = this.client.i18n.getLocale(locale);
 	}
 };

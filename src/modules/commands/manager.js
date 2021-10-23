@@ -7,6 +7,7 @@ const {
 	readdirSync,
 	statSync
 } = require('fs');
+const Statcord = require('statcord.js');
 
 module.exports = class CommandManager {
 	/**
@@ -73,28 +74,44 @@ module.exports = class CommandManager {
 		const command = this.commands.get(interaction.commandName);
 		if (!command) return;
 
-		const missing_permissions = command.permissions instanceof Array && !interaction.member.permissions.has(command.permissions);
-		if (missing_permissions) {
-			const permissions = command.permissions.map(p => `\`${p}\``).join(', ');
-			return await interaction.reply({
+		if (command.guild_only && !interaction.guild) {
+			return await interaction.editReply({
 				embeds: [
 					new MessageEmbed()
 						.setColor(colour)
-						.setTitle(i18n('bot.missing_permissions.title'))
-						.setDescription(i18n('bot.missing_permissions.description', { permissions }))
+						.addField(i18n('bot.guild_only.title'))
+						.addField(i18n('bot.guild_only.description', { invite: 'https://christmascountdown.live/invite' }))
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
-				],
-				ephemeral: true
+						.setTimestamp()
+				]
 			});
+		}
+
+		if (interaction.guild) {
+			const missing_permissions = command.permissions instanceof Array && !interaction.member.permissions.has(command.permissions);
+			if (missing_permissions && interaction.user.id !== process.env.OWNER) { // let me bypass permissions check ;)
+				const permissions = command.permissions.map(p => `\`${p}\``).join(', ');
+				return await interaction.editReply({
+					embeds: [
+						new MessageEmbed()
+							.setColor(colour)
+							.setTitle(i18n('bot.missing_permissions.title'))
+							.setDescription(i18n('bot.missing_permissions.description', { permissions }))
+							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
+					],
+					ephemeral: true
+				});
+			}
 		}
 
 		try {
 			this.client.log.info(`Executing "${command.name}" command (invoked by ${interaction.user.tag})`);
 			await command.execute(interaction);
+			Statcord.ShardingClient.postCommand(interaction.commandName, interaction.user.id, this.client);
 		} catch (error) {
 			this.client.log.warn(`An error occurred whilst executing the ${command.name} command`);
 			this.client.log.error(error);
-			await interaction.reply({
+			await interaction.editReply({
 				embeds: [
 					new MessageEmbed()
 						.setColor(colour)

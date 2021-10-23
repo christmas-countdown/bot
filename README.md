@@ -6,6 +6,19 @@
 [![server count](https://top.gg/api/widget/servers/509851616216875019.svg)](https://top.gg/bot/509851616216875019)
 [![Discord support server](https://discordapp.com/api/guilds/451745464480432129/embed.png?style=shield)](https://go.eartharoid.me/discord)
 
-## Information & invite
+**Find out more at [christmascountdown.live/discord](https://christmascountdown.live/discord?ref=github.com).**
 
-Go to [christmascountdown.live/discord](https://christmascountdown.live/discord?ref=github.com)
+[Information](https://christmascountdown.live/discord?ref=github.com) · [Invite](https://christmascountdown.live/invite) · [Documentation](https://docs.christmascountdown.live/discord/introduction) · [Support](https://go.eartharoid.me/discord)
+
+## Environment
+
+```
+BL_TOPGG=
+BL_BOATS=
+BL_BFD=
+DISCORD_TOKEN=
+DATABASE_URL=
+PORT=
+OWNER=
+STATCORD=
+```

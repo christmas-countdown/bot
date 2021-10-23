@@ -40,6 +40,6 @@ module.exports = class HelpCommand extends Command {
 			embed.addField(`❯ ${name}`, list.join(', '));
 		});
 
-		return await interaction.reply({ embeds: [embed] });
+		return await interaction.editReply({ embeds: [embed] });
 	}
 };

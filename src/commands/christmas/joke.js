@@ -30,7 +30,7 @@ module.exports = class JokeCommand extends Command {
 		const locale = u_settings?.locale ?? g_settings?.locale ?? 'en-GB';
 		const i18n = this.client.i18n.getLocale(locale);
 		const joke = this.jokes[Math.floor(Math.random() * this.jokes.length)];
-		return await interaction.reply({
+		return await interaction.editReply({
 			embeds: [
 				new MessageEmbed()
 					.setColor(colour)

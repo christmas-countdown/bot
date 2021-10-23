@@ -5,6 +5,7 @@ specifiers:
   '@eartharoid/dtf': ^2.0.1
   '@eartharoid/i18n': ^1.0.1
   '@prisma/client': ^3.3.0
+  blapi: ^2.2.1
   bufferutil: ^4.0.5
   discord.js: ^13.2.0
   dotenv: ^10.0.0
@@ -13,8 +14,10 @@ specifiers:
   fastify: ^3.22.1
   leeks.js: ^0.2.4
   leekslazylogger: ^4.1.3
+  ms: ^2.1.3
   node-fetch: ^2.6.5
   prisma: ^3.3.0
+  statcord.js: ^3.3.0
   utf-8-validate: ^5.0.7
   zlib-sync: ^0.1.7
 
@@ -23,12 +26,15 @@ dependencies:
   '@eartharoid/dtf': 2.0.1
   '@eartharoid/i18n': 1.0.1
   '@prisma/client': 3.3.0_prisma@3.3.0
+  blapi: 2.2.1
   discord.js: 13.2.0_5971b5a749a91823f5467a6d31a2f8b3
   dotenv: 10.0.0
   fastify: 3.22.1
   leeks.js: 0.2.4
   leekslazylogger: 4.1.3
+  ms: 2.1.3
   node-fetch: 2.6.5
+  statcord.js: 3.3.0
 
 optionalDependencies:
   bufferutil: 4.0.5
@@ -290,6 +296,12 @@ packages:
     dev: false
     optional: true
 
+  /blapi/2.2.1:
+    resolution: {integrity: sha512-oNz534/liTBB5eB8aMKpOrZb7AbOIZ3BaX7VvSohNbDH/luFSvgwGxetf9EzSp/AfnNw1EaGYsqubZDWgTB0bw==}
+    dependencies:
+      centra: 2.5.0
+    dev: false
+
   /brace-expansion/1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
     dependencies:
@@ -309,6 +321,10 @@ packages:
   /callsites/3.1.0:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
     engines: {node: '>=6'}
+
+  /centra/2.5.0:
+    resolution: {integrity: sha512-CnSF1HD8vOOgNbE4P2fZEhdhfAohvpcF3DSdSvEcSHDAZvr+Xfw73isT8SXJJc3VMBqSwjXhr29/ikHUgFcypg==}
+    dev: false
 
   /chalk/2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -893,6 +909,10 @@ packages:
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
 
+  /ms/2.1.3:
+    resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
+    dev: false
+
   /nan/2.15.0:
     resolution: {integrity: sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==}
     dev: false
@@ -1114,6 +1134,13 @@ packages:
     resolution: {integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=}
     dev: true
 
+  /statcord.js/3.3.0:
+    resolution: {integrity: sha512-WRSNld2tI8uWnIuFzlN+j8RtUGWD6epJxc0WxO9o3DR2MXZfkQh387sQypTPkaDabcUgl84tOfjyCNdotZG0pw==}
+    dependencies:
+      node-fetch: 2.6.5
+      systeminformation: 5.9.8
+    dev: false
+
   /string-similarity/4.0.4:
     resolution: {integrity: sha512-/q/8Q4Bl4ZKAPjj8WerIBJWALKkaPRfrvhfF8k/B23i4nzrlRj2/go1m90In7nG/3XDSbOo0+pu6RvCTM9RGMQ==}
     dev: false
@@ -1152,6 +1179,13 @@ packages:
     dependencies:
       has-flag: 4.0.0
     dev: true
+
+  /systeminformation/5.9.8:
+    resolution: {integrity: sha512-Dt54Vuu4Q5pGCsBtbVjIzD3Lahek7qIL+2vqAPqcPtPAlFRPf+ef4VKB4F5AL5UmdjYm7NFCTnwjoiu7qtxmQQ==}
+    engines: {node: '>=4.0.0'}
+    os: [darwin, linux, win32, freebsd, openbsd, netbsd, sunos]
+    hasBin: true
+    dev: false
 
   /table/6.7.2:
     resolution: {integrity: sha512-UFZK67uvyNivLeQbVtkiUs8Uuuxv24aSL4/Vil2PJVtMgU8Lx0CYkP12uCGa3kjyQzOSgV1+z9Wkb82fCGsO0g==}
