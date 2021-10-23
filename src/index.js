@@ -53,7 +53,7 @@ manager.spawn().then(shards => {
 					.then(() => log.success.manager(`Posted server count (${guilds} over ${shards.length} shards)`))
 					.catch(error => log.error.manager(error));
 			};
-			setInterval(post, ms('5m'));
+			setInterval(post, ms('15m'));
 		});
 	}
 });
