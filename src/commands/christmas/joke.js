@@ -9,7 +9,7 @@ const {
 module.exports = class JokeCommand extends Command {
 	constructor(client) {
 		super(client, {
-			description: 'Get a Christmas joke',
+			description: 'Get a Christmas joke (currently English-only)',
 			name: 'joke'
 		});
 	}
