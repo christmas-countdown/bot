@@ -24,7 +24,14 @@ manager.spawn().then(shards => {
 	});
 });
 
+const { PrismaClient } = require('@prisma/client');
+manager.prisma = new PrismaClient();
+
 require('./api')(manager, log);
+
+const dispatcher = require('./dispatcher');
+dispatcher.dispatch(manager, log);
+setInterval(() => dispatcher.dispatch(manager, log), 1000 * 60 * 60);
 
 process.on('unhandledRejection', error => {
 	log.warn('An error was not caught');

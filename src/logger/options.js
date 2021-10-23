@@ -17,7 +17,7 @@ const formats = {
 };
 
 module.exports = {
-	namespaces: ['http', 'manager'],
+	namespaces: ['dispatcher', 'http', 'manager'],
 	transports: [
 		new ConsoleTransport({
 			format: function (log) {
