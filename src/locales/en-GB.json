@@ -12,12 +12,6 @@
 		}
 	},
 	"commands": {
-		"help": {
-			"list": {
-				"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.",
-				"title": "Commands"
-			}
-		},
 		"days": {
 			"days": [
 				"is **{days} day**",
@@ -33,6 +27,12 @@
 				"{days} days left"
 			]
 		},
+		"help": {
+			"list": {
+				"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.",
+				"title": "Commands"
+			}
+		},
 		"hours": {
 			"description": [
 				"There is **{hours}** hour left until Christmas!",
@@ -42,6 +42,10 @@
 				"{hours} hour left",
 				"{hours} hours left"
 			]
+		},
+		"joke": {
+			"question": "Question",
+			"answer": "Answer"
 		},
 		"minutes": {
 			"description": [
