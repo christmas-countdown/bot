@@ -2,7 +2,8 @@ const { colour } = require('../../../config');
 const Command = require('../../modules/commands/command');
 const {
 	CommandInteraction, // eslint-disable-line no-unused-vars
-	MessageEmbed
+	MessageEmbed,
+	Permissions
 } = require('discord.js');
 
 module.exports = class ToggleCommand extends Command {
@@ -11,7 +12,7 @@ module.exports = class ToggleCommand extends Command {
 			description: 'Toggle the countdown on/off',
 			guild_only: true,
 			name: 'toggle',
-			permissions: ['MANAGE_GUILD']
+			permissions: [Permissions.FLAGS.MANAGE_GUILD]
 		});
 	}
 
