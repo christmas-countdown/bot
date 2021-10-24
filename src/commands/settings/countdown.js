@@ -3,7 +3,8 @@ const Command = require('../../modules/commands/command');
 const {
 	CommandInteraction, // eslint-disable-line no-unused-vars
 	MessageEmbed,
-	Permissions
+	Permissions,
+	TextChannel // eslint-disable-line no-unused-vars
 } = require('discord.js');
 
 module.exports = class CountdownCommand extends Command {
@@ -33,6 +34,7 @@ module.exports = class CountdownCommand extends Command {
 		const g_settings = interaction.guild && await this.client.prisma.guild.findUnique({ where: { id: interaction.guild.id } });
 		const i18n = this.client.i18n.getLocale(u_settings?.locale ?? g_settings?.locale);
 
+		/** @type {TextChannel} */
 		const channel = interaction.options.getChannel('channel') ?? interaction.channel;
 
 		if (channel.type !== 'GUILD_TEXT') {
