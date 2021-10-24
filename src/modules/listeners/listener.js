@@ -2,7 +2,7 @@ module.exports = class EventListener {
 
 	/**
 	 *
-	 * @param {import("../../bot").Client} client
+	 * @param {import("../../bot")} client
 	 * @param {*} data
 	 */
 	constructor(client, data) {

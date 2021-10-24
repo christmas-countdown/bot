@@ -3,7 +3,7 @@ const { readdirSync } = require('fs');
 module.exports = class ListenerLoader {
 	/**
 	 * Create a ListenerLoader instance
-	 * @param {import('../../bot').Bot} client
+	 * @param {import('../../bot')} client
 	 */
 	constructor(client) {
 		/** The Discord Client */

@@ -1,4 +1,4 @@
-const { Interaction } = require('discord.js'); // eslint-disable-line no-unused-vars
+const { CommandInteraction } = require('discord.js'); // eslint-disable-line no-unused-vars
 
 module.exports = class Command {
 	/**
@@ -13,7 +13,7 @@ module.exports = class Command {
 	 */
 	/**
 	 * Create a new Command
-	 * @param {import('../../bot').Bot} client - The Discord Client
+	 * @param {import('../../bot')} client - The Discord Client
 	 * @param {Object} data - Command data
 	 * @param {string} data.name - The name of the command (3-32)
 	 * @param {string} data.description - The description of the command (1-100)
@@ -58,7 +58,7 @@ module.exports = class Command {
 	/**
 	 * The code to be executed when a command is invoked
 	 * @abstract
-	 * @param {Interaction} interaction - The message that invoked this command
+	 * @param {CommandInteraction} interaction - The message that invoked this command
 	 */
 	async execute(interaction) { } // eslint-disable-line no-unused-vars
 

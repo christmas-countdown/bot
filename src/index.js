@@ -10,6 +10,10 @@ log.info.manager('Shard manager is starting');
 const { ShardingManager } = require('discord.js');
 const manager = new ShardingManager('./src/bot.js');
 
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
+manager.prisma = prisma;
+
 const Statcord = require('statcord.js');
 const statcord = new Statcord.ShardingClient({
 	key: process.env.STATCORD,
@@ -58,17 +62,17 @@ manager.spawn().then(shards => {
 	}
 });
 
+
+statcord.registerCustomFieldHandler(1, async () => String(await prisma.guild.count({ where: { enabled: true } })));
+
 statcord.on('autopost-start', () => {
 	log.info.manager('Automatic stats posting enabled');
 });
 
 statcord.on('post', error => {
 	if (error) log.error.manager(error);
-	else log.success.manager('Posted stats');
+	else log.verbose.manager('Posted stats');
 });
-
-const { PrismaClient } = require('@prisma/client');
-manager.prisma = new PrismaClient();
 
 require('./api')(manager, log);
 

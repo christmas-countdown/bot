@@ -1,7 +1,7 @@
 const { colour } = require('../../../config');
 const Command = require('../../modules/commands/command');
 const {
-	Interaction, // eslint-disable-line no-unused-vars
+	CommandInteraction, // eslint-disable-line no-unused-vars
 	MessageEmbed
 } = require('discord.js');
 
@@ -14,7 +14,7 @@ module.exports = class RadioCommand extends Command {
 	}
 
 	/**
-	 * @param {Interaction} interaction
+	 * @param {CommandInteraction} interaction
 	 * @returns {Promise<void|any>}
 	 */
 	async execute(interaction) {

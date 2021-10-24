@@ -123,6 +123,30 @@
 				"{seconds} seconds left"
 			]
 		},
+		"server": {
+			"reset": {
+				"title": "✅ Server settings reset"
+			},
+			"set": {
+				"cannot_enable": {
+					"description": "Create the countdown webhook with [`/countdown`]({url}).",
+					"title": "❌ Can't enable countdown"
+				},
+				"invalid_timezone": {
+					"description": "Try again or [ask for help]({url}).",
+					"title": "❌ Invalid timezone"
+				},
+				"premium": {
+					"description": "Donate with [`/donate`]({url}) to unlock these settings.",
+					"title": "⭐ This isn't a premium server"
+				},
+				"title": "✅ Server settings updated"
+			},
+			"view": {
+				"description": "Change your settings with `/server set`.",
+				"title": "Server settings"
+			}
+		},
 		"sleeps": {
 			"days": [
 				"**{days} day**",
@@ -137,6 +161,10 @@
 				"{sleeps} sleep left",
 				"{sleeps} sleeps left"
 			]
+		},
+		"toggle": {
+			"disabled": "✅ Countdown disabled",
+			"enabled": "✅ Countdown enabled"
 		},
 		"total": {
 			"days": [
@@ -161,6 +189,17 @@
 			],
 			"title": "{days}, {hours}, {minutes}, {seconds} left"
 		},
+		"user": {
+			"reset": {
+				"title": "✅ User settings reset"
+			},
+			"set": {
+				"title": "✅ User settings updated"
+			},
+			"view": {
+				"title": "User settings"
+			}
+		},
 		"weeks": {
 			"description": [
 				"There is **{weeks}** week left until Christmas!",
@@ -179,5 +218,6 @@
 		"merry_christmas": "🎄 Merry Christmas!",
 		"server_timezone": "Server timezone: {timezone}",
 		"user_timezone": "User timezone: {timezone}"
-	}
+	},
+	"disabled": "disabled"
 }

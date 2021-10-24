@@ -16,12 +16,11 @@ model Guild {
     timezone    String    @default("UTC")
     enabled     Boolean   @default(false)
     auto_toggle Boolean   @default(false)
-    role        String?
-    mention     Boolean   @default(false)
+    mention     String?
 }
 
 model User {
-    id       String @id @unique
+    id       String  @id @unique
     locale   String?
     timezone String?
 }

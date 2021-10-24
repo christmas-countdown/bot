@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const { colour } = require('../../../config');
 const Command = require('../../modules/commands/command');
 const {
-	Interaction, // eslint-disable-line no-unused-vars
+	CommandInteraction, // eslint-disable-line no-unused-vars
 	MessageEmbed
 } = require('discord.js');
 
@@ -15,7 +15,7 @@ module.exports = class AboutCommand extends Command {
 	}
 
 	/**
-	 * @param {Interaction} interaction
+	 * @param {CommandInteraction} interaction
 	 * @returns {Promise<void|any>}
 	 */
 	async execute(interaction) {
@@ -47,7 +47,7 @@ module.exports = class AboutCommand extends Command {
 					.addField(i18n('commands.info.fields.servers'), String(guilds), true)
 					.addField(i18n('commands.info.fields.premium_servers'), String(premium), true)
 					.addField(i18n('commands.info.fields.counting_in.title'), i18n('commands.info.fields.counting_in.value', enabled, { servers: enabled }), true)
-					.addField(i18n('commands.info.fields.more.title'), i18n('commands.info.fields.more.value', { url: `https://statcord.com/bot/${this.client.user.id}` }), true)
+					.addField(i18n('commands.info.fields.more.title'), i18n('commands.info.fields.more.value', { url: 'https://xmasbot.cf/stats' }), true)
 					.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 			]
 		});

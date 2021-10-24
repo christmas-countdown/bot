@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const { colour } = require('../../../config');
 const Command = require('../../modules/commands/command');
 const {
-	Interaction, // eslint-disable-line no-unused-vars
+	CommandInteraction, // eslint-disable-line no-unused-vars
 	MessageEmbed
 } = require('discord.js');
 
@@ -20,7 +20,7 @@ module.exports = class JokeCommand extends Command {
 	}
 
 	/**
-	 * @param {Interaction} interaction
+	 * @param {CommandInteraction} interaction
 	 * @returns {Promise<void|any>}
 	 */
 	async execute(interaction) {
@@ -37,7 +37,6 @@ module.exports = class JokeCommand extends Command {
 					.addField(i18n('commands.joke.question'), joke.question)
 					.addField(i18n('commands.joke.answer'), `||${joke.answer}||`)
 					.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
-					.setTimestamp()
 			]
 		});
 	}

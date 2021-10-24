@@ -11,7 +11,7 @@ const Statcord = require('statcord.js');
 
 module.exports = class CommandManager {
 	/**
-	 * @param {import('../../bot').Bot} client
+	 * @param {import('../../bot')} client
 	 */
 	constructor(client) {
 		this.client = client;
@@ -64,7 +64,7 @@ module.exports = class CommandManager {
 	}
 
 	/**
-	 * @param {Interaction} interaction
+	 * @param {CommandInteraction} interaction
 	 */
 	async handle(interaction) {
 		const u_settings = await this.client.prisma.user.findUnique({ where: { id: interaction.user.id } });
@@ -82,7 +82,6 @@ module.exports = class CommandManager {
 						.addField(i18n('bot.guild_only.title'))
 						.addField(i18n('bot.guild_only.description', { invite: 'https://christmascountdown.live/invite' }))
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
-						.setTimestamp()
 				]
 			});
 		}

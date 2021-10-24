@@ -7,7 +7,7 @@ module.exports = class InteractionCreateEventListener extends EventListener {
 	}
 
 	/**
-	 * @param {Interaction} interaction
+	 * @param {CommandInteraction} interaction
 	 */
 	async execute(interaction) {
 		await interaction.deferReply();

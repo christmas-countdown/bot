@@ -5,11 +5,13 @@ const {
 	MessageEmbed
 } = require('discord.js');
 
-module.exports = class InviteCommand extends Command {
+module.exports = class ToggleCommand extends Command {
 	constructor(client) {
 		super(client, {
-			description: 'Add the Christmas Countdown bot to your own Discord server',
-			name: 'invite'
+			description: 'Toggle the countdown on/off',
+			guild_only: true,
+			name: 'toggle',
+			permissions: ['MANAGE_GUILD']
 		});
 	}
 
@@ -22,13 +24,28 @@ module.exports = class InviteCommand extends Command {
 		const g_settings = interaction.guild && await this.client.prisma.guild.findUnique({ where: { id: interaction.guild.id } });
 		const i18n = this.client.i18n.getLocale(u_settings?.locale ?? g_settings?.locale);
 
+		if (!g_settings.webhook) {
+			return await interaction.editReply({
+				embeds: [
+					new MessageEmbed()
+						.setColor(colour)
+						.setTitle(i18n('commands.server.set.cannot_enable.title'))
+						.setDescription(i18n('commands.server.set.cannot_enable.description', { url: 'https://xmasbot.cf/commands#countdown' }))
+						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
+				]
+			});
+		}
+
+		await this.client.prisma.guild.update({
+			data: { enabled: !g_settings.enabled },
+			where: { id: interaction.guild.id }
+		});
+
 		return await interaction.editReply({
 			embeds: [
 				new MessageEmbed()
 					.setColor(colour)
-					.setTitle(i18n('commands.invite.title'))
-					.setURL('https://www.christmascountdown.live/invite')
-					.setDescription(i18n('commands.invite.description', { url: 'https://www.christmascountdown.live/invite' }))
+					.setTitle(i18n(`commands.toggle.${g_settings.enabled ? 'disabled' : 'enabled'}`))
 					.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 			]
 		});
