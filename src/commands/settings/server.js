@@ -150,7 +150,14 @@ module.exports = class ServerCommand extends Command {
 			});
 		}
 		case 'reset': {
+			const premium = g_settings.premium;
 			await this.client.prisma.guild.delete({ where: { id: interaction.guild.id } });
+			await this.client.prisma.guild.create({
+				data: {
+					id: interaction.guild.id,
+					premium
+				}
+			});
 			return await interaction.editReply({
 				embeds: [
 					new MessageEmbed()
