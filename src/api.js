@@ -1,6 +1,6 @@
 const { short } = require('leeks.js');
 
-module.exports = (manager, log) => {
+module.exports = (manager, prisma, log) => {
 	const fastify = require('fastify')({ ignoreTrailingSlash: true });
 	fastify.addHook('onResponse', (req, res, done) => {
 		done();

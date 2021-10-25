@@ -12,7 +12,6 @@ const manager = new ShardingManager('./src/bot.js');
 
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
-manager.prisma = prisma;
 
 const Statcord = require('statcord.js');
 const statcord = new Statcord.ShardingClient({
@@ -23,6 +22,7 @@ const statcord = new Statcord.ShardingClient({
 manager.on('shardCreate', shard => log.info.manager(`Launched shard ${shard.id}`));
 
 manager.spawn().then(shards => {
+	// logging
 	log.success.manager(`Spawned ${shards.size} shards`);
 	logger_options.namespaces = [...logger_options.namespaces, ...shards.map(shard => `shard${shard.id}`)];
 	log.options = logger_options;
@@ -34,6 +34,15 @@ manager.spawn().then(shards => {
 		});
 	});
 
+	// api
+	require('./api')(manager, prisma, log);
+
+	// countdown message dispatcher
+	const dispatcher = require('./dispatcher');
+	dispatcher.dispatch(manager, prisma, log);
+	setInterval(() => dispatcher.dispatch(manager, prisma, log), ms('1h'));
+
+	// server count posting
 	if (process.env.NODE_ENV === 'production') {
 		const botlists = require('blapi');
 		manager.fetchClientValues('user.id', 0).then(id => {
@@ -62,7 +71,6 @@ manager.spawn().then(shards => {
 	}
 });
 
-
 statcord.registerCustomFieldHandler(1, async () => String(await prisma.guild.count({ where: { enabled: true } })));
 
 statcord.on('autopost-start', () => {
@@ -74,13 +82,14 @@ statcord.on('post', error => {
 	else log.verbose.manager('Posted stats');
 });
 
-require('./api')(manager, log);
-
-const dispatcher = require('./dispatcher');
-dispatcher.dispatch(manager, log);
-setInterval(() => dispatcher.dispatch(manager, log), ms('1h'));
-
 process.on('unhandledRejection', error => {
 	log.warn('An error was not caught');
 	log.error(error);
 });
+
+/** FOR JSDOC TYPES, NOT FOR IMPORTING */
+module.exports = {
+	log,
+	manager,
+	prisma
+};
