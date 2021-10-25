@@ -25,7 +25,10 @@ module.exports = class HelpCommand extends Command {
 		const embed = new MessageEmbed()
 			.setColor(colour)
 			.setTitle(i18n('commands.help.list.title'))
-			.setDescription(i18n('commands.help.list.description', { discord: 'https://go.eartharoid.me/discord' }))
+			.setDescription(i18n('commands.help.list.description', {
+				discord: 'https://go.eartharoid.me/discord',
+				enable: 'https://xmasbot.cf/enable-the-countdown'
+			}))
 			.setFooter(i18n('bot.footer'), this.client.user.avatarURL());
 
 		const categories = this.manager.commands.reduce((list, command) => {

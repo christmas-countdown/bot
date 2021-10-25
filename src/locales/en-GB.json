@@ -51,7 +51,7 @@
 		},
 		"help": {
 			"list": {
-				"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.",
+				"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
 				"title": "Commands"
 			}
 		},
