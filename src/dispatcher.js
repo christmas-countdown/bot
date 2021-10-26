@@ -30,7 +30,7 @@ module.exports.dispatch = async (manager, prisma, log) => {
 	const guilds = await prisma.guild.findMany();
 
 	for (let guild of guilds) {
-		if (!guild.webhook) return guild; // skip guilds that can't be enabled
+		if (!guild.webhook) continue; // skip guilds that can't be enabled
 
 		const now = spacetime.now(guild.timezone);
 
