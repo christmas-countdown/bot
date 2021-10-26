@@ -79,7 +79,7 @@ statcord.registerCustomFieldHandler(1, async () => String(await prisma.guild.cou
 statcord.registerCustomFieldHandler(2, () => {
 	const count = String(sent);
 	sent = 0;
-	return String(count);
+	return count;
 });
 
 statcord.on('autopost-start', () => {
