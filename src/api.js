@@ -52,7 +52,7 @@ module.exports = (manager, prisma, log) => {
 		}
 	});
 
-	fastify.listen(process.env.PORT || 80, (error, address) => {
+	fastify.listen(process.env.PORT || 80, '0.0.0.0', (error, address) => {
 		if (error) log.error(error);
 		else log.success.http(`HTTP server listening at ${address}`);
 	});
