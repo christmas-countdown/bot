@@ -29,7 +29,7 @@ class Client extends DiscordClient {
 	}
 }
 
-new Client({
+const client = new Client({
 	intents: [
 		Intents.FLAGS.DIRECT_MESSAGES,
 		Intents.FLAGS.GUILD_MESSAGES,
@@ -41,6 +41,12 @@ new Client({
 		PresenceManager: 0
 	}),
 	presence: { activities: [presences[Math.floor(Math.random() * presences.length)]] }
+});
+
+
+process.on('unhandledRejection', error => {
+	client.log.warn('An error was not caught');
+	client.log.error(error);
 });
 
 module.exports = Client;

@@ -83,8 +83,8 @@ statcord.on('post', error => {
 });
 
 process.on('unhandledRejection', error => {
-	log.warn('An error was not caught');
-	log.error(error);
+	log.warn.manager('An error was not caught');
+	log.error.manager(error);
 });
 
 /** FOR JSDOC TYPES, NOT FOR IMPORTING */
