@@ -47,7 +47,7 @@ manager.spawn().then(shards => {
 		const botlists = require('blapi');
 		manager.fetchClientValues('user.id', 0).then(id => {
 			botlists.setLogging({
-				extended: true,
+				extended: false,
 				logger: log
 			});
 			const keys = {
