@@ -135,5 +135,6 @@ module.exports.dispatch = async (manager, prisma, log) => {
 	}
 
 	log.info.dispatcher(`Attempted to send countdown to ${tried} guilds, ${succeeded} succeeded and ${failed} failed`);
+	return succeeded;
 
 };

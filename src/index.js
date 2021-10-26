@@ -7,6 +7,8 @@ const log = new Logger(logger_options);
 
 log.info.manager('Shard manager is starting');
 
+let sent = 0;
+
 const { ShardingManager } = require('discord.js');
 const manager = new ShardingManager('./src/bot.js');
 
@@ -21,7 +23,7 @@ const statcord = new Statcord.ShardingClient({
 
 manager.on('shardCreate', shard => log.info.manager(`Launched shard ${shard.id}`));
 
-manager.spawn().then(shards => {
+manager.spawn().then(async shards => {
 	// logging
 	log.success.manager(`Spawned ${shards.size} shards`);
 	logger_options.namespaces = [...logger_options.namespaces, ...shards.map(shard => `shard${shard.id}`)];
@@ -39,8 +41,10 @@ manager.spawn().then(shards => {
 
 	// countdown message dispatcher
 	const dispatcher = require('./dispatcher');
-	dispatcher.dispatch(manager, prisma, log);
-	setInterval(() => dispatcher.dispatch(manager, prisma, log), ms('1h'));
+	sent += await dispatcher.dispatch(manager, prisma, log);
+	setInterval(async () => {
+		sent += await dispatcher.dispatch(manager, prisma, log);
+	}, ms('1h'));
 
 	// server count posting
 	if (process.env.NODE_ENV === 'production') {
@@ -72,6 +76,11 @@ manager.spawn().then(shards => {
 });
 
 statcord.registerCustomFieldHandler(1, async () => String(await prisma.guild.count({ where: { enabled: true } })));
+statcord.registerCustomFieldHandler(2, () => {
+	const count = String(sent);
+	sent = 0;
+	return String(count);
+});
 
 statcord.on('autopost-start', () => {
 	log.info.manager('Automatic stats posting enabled');
