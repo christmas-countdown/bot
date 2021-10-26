@@ -16,7 +16,7 @@ module.exports = class JokeCommand extends Command {
 
 	async downloadJokes() {
 		this.client.log.info('Downloading jokes from API');
-		return (await fetch('https://cdn.statically.io/gh/christmas-countdown/api/main/jokes/jokes.json')).json();
+		return (await fetch('https://cdn.statically.io/gh/christmas-countdown/api/main/jokes/en.json')).json();
 	}
 
 	/**
