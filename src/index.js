@@ -21,20 +21,20 @@ const statcord = new Statcord.ShardingClient({
 	manager
 });
 
-manager.on('shardCreate', shard => log.info.manager(`Launched shard ${shard.id}`));
+manager.on('shardCreate', shard => {
+	log.info.manager(`Launched shard ${shard.id}`);
+	shard.on('message', message => {
+		if (message.level && message.content) {
+			log[message.level]['shard' + shard.id](message.content);
+		}
+	});
+});
 
 manager.spawn().then(async shards => {
 	// logging
 	log.success.manager(`Spawned ${shards.size} shards`);
 	logger_options.namespaces = [...logger_options.namespaces, ...shards.map(shard => `shard${shard.id}`)];
 	log.options = logger_options;
-	shards.forEach(shard => {
-		shard.on('message', message => {
-			if (message.level && message.content) {
-				log[message.level]['shard' + shard.id](message.content);
-			}
-		});
-	});
 
 	// api
 	require('./api')(manager, prisma, log);
