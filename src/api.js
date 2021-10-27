@@ -32,28 +32,51 @@ module.exports = (manager, prisma, log) => {
 	});
 
 	fastify.get('/stats', async (req, res) => {
-		const guilds = await prisma.guild.findMany();
-		const guild_stats = guilds.reduce((stats, guild) => {
-			if (!stats.locales[guild.locale]) stats.locales[guild.locale] = 0;
-			stats.locales[guild.locale] += 1;
+		const reducer = (stats, value) => {
+			if (value.locale !== null) {
+				if (!stats.locales[value.locale]) stats.locales[value.locale] = 0;
+				stats.locales[value.locale] += 1;
+			}
 
-			if (!stats.timezones[guild.timezone]) stats.timezones[guild.timezone] = 0;
-			stats.timezones[guild.timezone] += 1;
+			if (value.timezone !== null) {
+				if (!stats.timezones[value.timezone]) stats.timezones[value.timezone] = 0;
+				stats.timezones[value.timezone] += 1;
+			}
 
 			return stats;
-		}, {
+		};
+
+		const guilds = await prisma.guild.findMany();
+		const guild_stats = guilds.reduce(reducer, {
 			locales: {},
 			timezones: {}
 		});
+
+		const users = await prisma.user.findMany();
+		const user_stats = users.reduce(reducer, {
+			locales: {},
+			timezones: {}
+		});
+
+		const sorter = (a, b) => b.count - a.count;
+
 		res.send({
 			guild_locales: Object.keys(guild_stats.locales).map(locale => ({
 				count: guild_stats.locales[locale],
 				name: locale
-			})),
+			})).sort(sorter),
 			guild_timezones: Object.keys(guild_stats.timezones).map(timezone => ({
 				count: guild_stats.timezones[timezone],
 				name: timezone
-			}))
+			})).sort(sorter),
+			user_locales: Object.keys(user_stats.locales).map(locale => ({
+				count: user_stats.locales[locale],
+				name: locale
+			})).sort(sorter),
+			user_timezones: Object.keys(user_stats.timezones).map(timezone => ({
+				count: user_stats.timezones[timezone],
+				name: timezone
+			})).sort(sorter)
 		});
 	});
 
