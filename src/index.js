@@ -52,7 +52,11 @@ manager.spawn().then(async shards => {
 		manager.fetchClientValues('user.id', 0).then(id => {
 			botlists.setLogging({
 				extended: false,
-				logger: log
+				logger: {
+					error: log.error.manager,
+					info: log.info.manager,
+					warn: log.warn.manager
+				}
 			});
 			const keys = {
 				'botlist.space': process.env.BL_SPACE,
