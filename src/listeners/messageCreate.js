@@ -35,11 +35,10 @@ module.exports = class MessageCreateEventListener extends EventListener {
 			const g_settings = message.guild && await this.client.prisma.guild.findUnique({ where: { id: message.guild.id } });
 			const i18n = this.client.i18n.getLocale(u_settings?.locale ?? g_settings?.locale);
 
-			try {
-				message.reply(i18n('bot.migrate'));
-			} catch (error) {
-				this.client.log.error(error);
-			}
+			message.reply(i18n('bot.migrate'))
+				.catch(() => message.channel.send(i18n('bot.migrate'))
+					.catch(error => this.client.log.error(error)));
+
 		}
 	}
 };
