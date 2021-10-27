@@ -54,8 +54,8 @@ module.exports = class CountdownCommand extends Command {
 				embeds: [
 					new MessageEmbed()
 						.setColor(colour)
-						.setTitle(i18n('bot.countdown.missing_permissions.title'))
-						.setDescription(i18n('bot.countdown.missing_permissions.description'))
+						.setTitle(i18n('bot.missing_permissions.title'))
+						.setDescription(i18n('bot.missing_permissions.description'))
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});
