@@ -36,18 +36,18 @@ module.exports.dispatch = async (manager, prisma, log) => {
 
 		// enable/disable guilds automatically
 		if (guild.auto_toggle) {
-			if (now.month() === 11 && now.date() === 1) { // 1st Dec (months are 0-11)
-				log.info.dispatcher(`Automatically enabled guild ${guild.id}`);
+			if (now.month() === 11 && now.date() === 1 && !guild.enabled) { // 1st Dec (months are 0-11)
 				guild = await prisma.guild.update({
 					data: { enabled: true }, // enable
 					where: { id: guild.id }
 				});
-			} else if (now.month() === 11 && now.date() === 26) { // 26th Dec
-				log.info.dispatcher(`Automatically disabled guild ${guild.id}`);
+				log.info.dispatcher(`Automatically enabled guild ${guild.id}`);
+			} else if (now.month() === 11 && now.date() === 26 && guild.enabled) { // 26th Dec
 				guild = await prisma.guild.update({
 					data: { enabled: false }, // disable
 					where: { id: guild.id }
 				});
+				log.info.dispatcher(`Automatically disabled guild ${guild.id}`);
 			}
 		}
 
@@ -56,7 +56,7 @@ module.exports.dispatch = async (manager, prisma, log) => {
 		// skip guild if the bot has restarted between 05:00-06:00,
 		// or it is not 05:00-06:00 and the last message was sent on time
 		if (guild.last_sent) {
-			const last = spacetime(guild.last, guild.timezone);
+			const last = spacetime(guild.last_sent, guild.timezone);
 			const diff = last.diff(now, 'hours');
 			if (diff <= 1 || (now.hour() !== 5 && diff < 24)) continue;
 		} else if (now.hour() !== 5) {
