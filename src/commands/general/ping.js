@@ -1,4 +1,4 @@
-const DTF = require('@eartharoid/dtf'); 
+const DTF = require('@eartharoid/dtf');
 const { colour } = require('../../../config');
 const Command = require('../../modules/commands/command');
 const {
@@ -27,7 +27,7 @@ module.exports = class PingCommand extends Command {
 
 		const shard_id = this.client.shard.ids[0];
 		const shards = await this.client.shard.fetchClientValues('ws.ping');
-		const average = shards.reduce((acc, count) => acc + count, 0) / shards.length;
+		const average = Math.round(shards.reduce((acc, count) => acc + count, 0) / shards.length);
 
 		const sent = await interaction.editReply({
 			embeds: [
