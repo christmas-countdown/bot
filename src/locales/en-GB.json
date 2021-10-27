@@ -10,8 +10,12 @@
 			"title": "Error"
 		},
 		"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
-		"missing_permissions": {
+		"member_missing_permissions": {
 			"description": "You need the following permissions to use this command:\n{permissions}",
+			"title": "Error"
+		},
+		"missing_permissions": {
+			"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
 			"title": "Error"
 		}
 	},

@@ -94,8 +94,8 @@ module.exports = class CommandManager {
 					embeds: [
 						new MessageEmbed()
 							.setColor(colour)
-							.setTitle(i18n('bot.missing_permissions.title'))
-							.setDescription(i18n('bot.missing_permissions.description', { permissions }))
+							.setTitle(i18n('bot.member_missing_permissions.title'))
+							.setDescription(i18n('bot.member_missing_permissions.description', { permissions }))
 							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 					],
 					ephemeral: true
