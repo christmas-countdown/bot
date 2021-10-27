@@ -121,8 +121,8 @@ module.exports = class UserCommand extends Command {
 					new MessageEmbed()
 						.setColor(colour)
 						.setTitle(i18n('commands.user.view.title'))
-						.addField('Locale', `\`${u_settings.locale}\``, true)
-						.addField('Timezone', `\`${u_settings.timezone}\``, true)
+						.addField('Locale', `\`${u_settings?.locale ?? 'null'}\``, true)
+						.addField('Timezone', `\`${u_settings?.timezone ?? 'null'}\``, true)
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});
