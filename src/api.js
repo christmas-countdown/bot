@@ -1,5 +1,10 @@
 const { short } = require('leeks.js');
 
+/**
+ * @param {import('./').manager} manager
+ * @param {import('./').prisma} prisma
+ * @param {import('./').log} log
+ */
 module.exports = (manager, prisma, log) => {
 	const fastify = require('fastify')({ ignoreTrailingSlash: true });
 	fastify.addHook('onResponse', (req, res, done) => {
@@ -24,6 +29,32 @@ module.exports = (manager, prisma, log) => {
 
 	fastify.get('/metrics', async (req, res) => {
 		res.send('soon');
+	});
+
+	fastify.get('/stats', async (req, res) => {
+		const guilds = await prisma.guild.findMany();
+		const guild_stats = guilds.reduce((stats, guild) => {
+			if (!stats.locales[guild.locale]) stats.locales[guild.locale] = 0;
+			stats.locales[guild.locale] += 1;
+
+			if (!stats.timezones[guild.timezone]) stats.timezones[guild.timezone] = 0;
+			stats.timezones[guild.timezone] += 1;
+
+			return stats;
+		}, {
+			locales: {},
+			timezones: {}
+		});
+		res.send({
+			guild_locales: Object.keys(guild_stats.locales).map(locale => ({
+				count: guild_stats.locales[locale],
+				name: locale
+			})),
+			guild_timezones: Object.keys(guild_stats.timezones).map(timezone => ({
+				count: guild_stats.timezones[timezone],
+				name: timezone
+			}))
+		});
 	});
 
 	fastify.get('/guilds', async (req, res) => {
