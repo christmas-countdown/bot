@@ -71,17 +71,18 @@ module.exports = class CountdownCommand extends Command {
 			where: { id: interaction.guild.id }
 		});
 
-		return await interaction.editReply({
-			embeds: [
-				new MessageEmbed()
-					.setColor(colour)
-					.setTitle(i18n('commands.countdown.created.title'))
-					.setDescription(i18n('commands.countdown.created.description', {
-						channel: channel.toString(),
-						url: 'https://xmasbot.cf/commands#toggle'
-					}))
-					.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
-			]
-		});
+		const embed = new MessageEmbed()
+			.setColor(colour)
+			.setTitle(i18n('commands.countdown.created.title'))
+			.setFooter(i18n('bot.footer'), this.client.user.avatarURL());
+
+		if (!g_settings.enabled) {
+			embed.setDescription(i18n('commands.countdown.created.description', {
+				channel: channel.toString(),
+				url: 'https://xmasbot.cf/commands#toggle'
+			}));
+		}
+
+		return await interaction.editReply({ embeds: [embed] });
 	}
 };
