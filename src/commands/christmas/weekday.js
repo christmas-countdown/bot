@@ -32,7 +32,7 @@ module.exports = class DayOfTheWeekCommand extends Command {
 			embeds: [
 				new MessageEmbed()
 					.setColor(colour)
-					.setTitle(i18n('commands.weekday.title', { day }))
+					.setTitle(i18n('commands.weekday.title'))
 					.setURL('https://christmascountdown.live')
 					.setDescription(i18n('commands.weekday.description', {
 						day,

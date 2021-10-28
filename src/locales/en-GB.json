@@ -220,7 +220,7 @@
 		},
 		"weekday": {
 			"description": "Christmas Day is on a **{day}** in {year}.",
-			"title": "Christmas is on {day}"
+			"title": "Christmas is on..."
 		},
 		"weeks": {
 			"description": [
