@@ -10,6 +10,8 @@ const EventListener = require('../modules/listeners/listener');
 const fetch = require('node-fetch');
 const { inspect } = require('util');
 
+const admin_prefix = process.env.NODE_ENV === 'production' ? 'x!' : 'xmas!';
+
 module.exports = class MessageCreateEventListener extends EventListener {
 	constructor(client) {
 		super(client, { event: 'messageCreate' });
@@ -23,12 +25,12 @@ module.exports = class MessageCreateEventListener extends EventListener {
 
 		const is_owner = message.author.id === process.env.OWNER;
 
-		if (is_owner && message.content.startsWith('x!sync')) {
+		if (is_owner && message.content.startsWith(`${admin_prefix}sync`)) {
 			const guild = message.content.split(' ')[1];
 			if (guild) this.client.commands.publish(guild);
 			else this.client.commands.publish();
 			message.reply('ok');
-		} else if (is_owner && message.content.startsWith('x!premium')) {
+		} else if (is_owner && message.content.startsWith(`${admin_prefix}premium`)) {
 			const guild = message.content.split(' ')[1] ?? message.guild.id;
 			const row = await this.client.prisma.guild.findUnique({ where: { id: guild } });
 			if (!row) return message.reply('no guild');
@@ -37,7 +39,7 @@ module.exports = class MessageCreateEventListener extends EventListener {
 				where: { id: guild }
 			});
 			message.reply(row.premium ? 'disabled' : 'enabled');
-		} else if (is_owner && message.content.startsWith('x!eval')) {
+		} else if (is_owner && message.content.startsWith(`${admin_prefix}eval`)) {
 			const tokens = message.content.split(' ');
 			tokens.shift();
 			const code = tokens.join(' ');
