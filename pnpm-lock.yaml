@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@eartharoid/christmas': ^1.1.0
+  '@eartharoid/christmas': ^1.2.0
   '@eartharoid/dtf': ^2.0.1
   '@eartharoid/i18n': ^1.0.1
   '@prisma/client': ^3.3.0
@@ -24,7 +24,7 @@ specifiers:
   zlib-sync: ^0.1.7
 
 dependencies:
-  '@eartharoid/christmas': 1.1.0
+  '@eartharoid/christmas': 1.2.0
   '@eartharoid/dtf': 2.0.1
   '@eartharoid/i18n': 1.0.1
   '@prisma/client': 3.3.0_prisma@3.3.0
@@ -83,9 +83,9 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /@discordjs/collection/0.2.1:
-    resolution: {integrity: sha512-vhxqzzM8gkomw0TYRF3tgx7SwElzUlXT/Aa41O7mOcyN6wIJfj5JmDWaO5XGKsGSsNx7F3i5oIlrucCCWV1Nog==}
-    engines: {node: '>=14.0.0'}
+  /@discordjs/collection/0.2.4:
+    resolution: {integrity: sha512-PVrEJH+V6Ob0OwfagYQ/57kwt/HNEJxt5jqY4P+S3st9y29t9iokdnGMQoJXG5VEMAQIPbzu9Snw1F6yE8PdLA==}
+    engines: {node: '>=16.0.0', npm: '>=7.0.0'}
     dev: false
 
   /@discordjs/form-data/3.0.1:
@@ -97,8 +97,8 @@ packages:
       mime-types: 2.1.33
     dev: false
 
-  /@eartharoid/christmas/1.1.0:
-    resolution: {integrity: sha512-LjzJ+VvfFvLENGRHVwnnx7SMQzlt1uGoJM8EPQ+tf6bPju3mpU0ednia/KWI6NfhihyYjND3Zowd1gwE1ciujg==}
+  /@eartharoid/christmas/1.2.0:
+    resolution: {integrity: sha512-7Py+pQqTfBIchTw7VySCliCciWNKo2G70W3l0kZJGIXYAoNklNw5+IUWSRcai0VZy8QcAZ+VZl+9x8BZy0aY7w==}
     dependencies:
       spacetime: 6.16.3
     dev: false
@@ -122,7 +122,7 @@ packages:
       ajv: 6.12.6
       debug: 4.3.2
       espree: 7.3.1
-      globals: 13.11.0
+      globals: 13.12.0
       ignore: 4.0.6
       import-fresh: 3.3.0
       js-yaml: 3.14.1
@@ -176,8 +176,8 @@ packages:
     requiresBuild: true
     dev: true
 
-  /@sapphire/async-queue/1.1.7:
-    resolution: {integrity: sha512-EBRERa9NqK/EV6DIPBVtjjdHBsu/DSdMuYAydmoIyIPONzp0UAxf2G6JGJ52WkiONtPRx6KNuqB5Q8dm14fwyw==}
+  /@sapphire/async-queue/1.1.8:
+    resolution: {integrity: sha512-Oi4EEi8vOne8RM1tCdQ3kYAtl/J6ztak3Th6wwGFqA2SVNJtedw196LjsLX0bK8Li8cwaljbFf08N+0zeqhkWQ==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
     dev: false
 
@@ -186,14 +186,14 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /@types/node/16.11.4:
-    resolution: {integrity: sha512-TMgXmy0v2xWyuCSCJM6NCna2snndD8yvQF67J29ipdzMcsPa9u+o0tjF5+EQNdhcuZplYuouYqpc4zcd5I6amQ==}
+  /@types/node/16.11.6:
+    resolution: {integrity: sha512-ua7PgUoeQFjmWPcoo9khiPum3Pd60k4/2ZGXt18sm2Slk0W0xZTqt5Y0Ny1NyBiN1EVQ/+FaF9NcY4Qe6rwk5w==}
     dev: false
 
   /@types/ws/8.2.0:
     resolution: {integrity: sha512-cyeefcUCgJlEk+hk2h3N+MqKKsPViQgF5boi9TTHSK+PoR9KWBb/C5ccPcDyAqgsbAYHTwulch725DV84+pSpg==}
     dependencies:
-      '@types/node': 16.11.4
+      '@types/node': 16.11.6
     dev: false
 
   /abstract-logging/2.0.1:
@@ -433,9 +433,9 @@ packages:
     engines: {node: '>=16.6.0', npm: '>=7.0.0'}
     dependencies:
       '@discordjs/builders': 0.6.0
-      '@discordjs/collection': 0.2.1
+      '@discordjs/collection': 0.2.4
       '@discordjs/form-data': 3.0.1
-      '@sapphire/async-queue': 1.1.7
+      '@sapphire/async-queue': 1.1.8
       '@types/ws': 8.2.0
       discord-api-types: 0.23.1
       node-fetch: 2.6.5
@@ -535,7 +535,7 @@ packages:
       file-entry-cache: 6.0.1
       functional-red-black-tree: 1.0.1
       glob-parent: 5.1.2
-      globals: 13.11.0
+      globals: 13.12.0
       ignore: 4.0.6
       import-fresh: 3.3.0
       imurmurhash: 0.1.4
@@ -578,14 +578,14 @@ packages:
     resolution: {integrity: sha512-cCDispWt5vHHtwMY2YrAQ4ibFkAL8RbH5YGBnZBc90MolvvfkkQcJro/aZiAQUlQ3qgrYS6D6v8Gc5G5CQsc9w==}
     engines: {node: '>=0.10'}
     dependencies:
-      estraverse: 5.2.0
+      estraverse: 5.3.0
     dev: true
 
   /esrecurse/4.3.0:
     resolution: {integrity: sha512-KmfKL3b6G+RXvP8N1vr3Tq1kL/oCFgn2NYXEtqP8/L3pKapUA4G8cFVaoF3SU323CD4XypR/ffioHmkti6/Tag==}
     engines: {node: '>=4.0'}
     dependencies:
-      estraverse: 5.2.0
+      estraverse: 5.3.0
     dev: true
 
   /estraverse/4.3.0:
@@ -593,8 +593,8 @@ packages:
     engines: {node: '>=4.0'}
     dev: true
 
-  /estraverse/5.2.0:
-    resolution: {integrity: sha512-BxbNGGNm0RyRYvUdHpIwv9IWzeM9XClbOxwoATuFdOE7ZE6wHL+HQ5T8hoPM+zHvmKzzsEqhgy0GrQ5X13afiQ==}
+  /estraverse/5.3.0:
+    resolution: {integrity: sha512-MMdARuVEQziNTeJD8DgMqmhwR11BRQ/cBP+pLtYdSTnf3MIO8fFeiINEbX36ZdNlfU/7A9f3gUw49B3oQsvwBA==}
     engines: {node: '>=4.0'}
     dev: true
 
@@ -741,8 +741,8 @@ packages:
       path-is-absolute: 1.0.1
     dev: true
 
-  /globals/13.11.0:
-    resolution: {integrity: sha512-08/xrJ7wQjK9kkkRoI3OFUBbLx4f+6x3SGwcPvQ0QH6goFDrOU2oyAWrmh3dJezu65buo+HBMzAMQy6rovVC3g==}
+  /globals/13.12.0:
+    resolution: {integrity: sha512-uS8X6lSKN2JumVoXrbUz+uG4BYG+eiawqm3qFcT7ammfbUHeCBoJMlHcec/S3krSk73/AE/f0szYFmgAA3kYZg==}
     engines: {node: '>=8'}
     dependencies:
       type-fest: 0.20.2
@@ -1142,7 +1142,7 @@ packages:
     resolution: {integrity: sha512-WRSNld2tI8uWnIuFzlN+j8RtUGWD6epJxc0WxO9o3DR2MXZfkQh387sQypTPkaDabcUgl84tOfjyCNdotZG0pw==}
     dependencies:
       node-fetch: 2.6.5
-      systeminformation: 5.9.8
+      systeminformation: 5.9.9
     dev: false
 
   /string-similarity/4.0.4:
@@ -1184,8 +1184,8 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /systeminformation/5.9.8:
-    resolution: {integrity: sha512-Dt54Vuu4Q5pGCsBtbVjIzD3Lahek7qIL+2vqAPqcPtPAlFRPf+ef4VKB4F5AL5UmdjYm7NFCTnwjoiu7qtxmQQ==}
+  /systeminformation/5.9.9:
+    resolution: {integrity: sha512-xciy6NKCLfs4dqMD1Tdlo7v1/g0NfdA1EKsIptUQjlcVvpwHyjifAbNOF7ppFezGSMXxYE8me+l2+RlFF4lyTg==}
     engines: {node: '>=4.0.0'}
     os: [darwin, linux, win32, freebsd, openbsd, netbsd, sunos]
     hasBin: true

@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/christmas-countdown/bot#readme",
   "dependencies": {
-    "@eartharoid/christmas": "^1.1.0",
+    "@eartharoid/christmas": "^1.2.0",
     "@eartharoid/dtf": "^2.0.1",
     "@eartharoid/i18n": "^1.0.1",
     "@prisma/client": "^3.3.0",
@@ -44,6 +44,6 @@
     "prisma": "^3.3.0"
   },
   "engines": {
-	  "node": ">=16"
+    "node": ">=16"
   }
 }
