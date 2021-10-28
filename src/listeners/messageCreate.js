@@ -10,7 +10,10 @@ module.exports = class MessageCreateEventListener extends EventListener {
 	 * @param {Message} message
 	 */
 	async execute(message) {
+		if (message.author.bot) return;
+
 		const is_owner = message.author.id === process.env.OWNER;
+
 		if (is_owner && message.content.startsWith('x!sync')) {
 			const guild = message.content.split(' ')[1];
 			if (guild) this.client.commands.publish(guild);
