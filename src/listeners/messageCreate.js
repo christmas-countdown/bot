@@ -32,7 +32,7 @@ module.exports = class MessageCreateEventListener extends EventListener {
 			message.reply('ok');
 		} else if (is_owner && message.content.startsWith(`${admin_prefix}unsync`)) {
 			const guild = message.content.split(' ')[1];
-			if (guild) return message.reply('no guild');
+			if (!guild) return message.reply('no guild');
 			this.client.application.commands.set([], guild);
 			message.reply('ok');
 		} else if (is_owner && message.content.startsWith(`${admin_prefix}premium`)) {
