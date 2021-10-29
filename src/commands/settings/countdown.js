@@ -49,13 +49,13 @@ module.exports = class CountdownCommand extends Command {
 			});
 		}
 
-		if (!interaction.guild.me?.permissions.has(Permissions.FLAGS.MANAGE_WEBHOOKS)) {
+		if (!interaction.guild.me.permissions.has(Permissions.FLAGS.MANAGE_WEBHOOKS)) {
 			return await interaction.editReply({
 				embeds: [
 					new MessageEmbed()
 						.setColor(colour)
-						.setTitle(i18n('bot.missing_permissions.title'))
-						.setDescription(i18n('bot.missing_permissions.description'), { permissions: '`MANAGE_WEBHOOKS`' })
+						.setTitle(i18n('commands.countdown.missing_permission.title'))
+						.setDescription(i18n('commands.countdown.missing_permission.description'))
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});

@@ -4,6 +4,7 @@ const ListenerLoader = require('./modules/listeners/loader');
 const CommandManager = require('./modules/commands/manager');
 const {
 	Client: DiscordClient,
+	LimitedCollection,
 	Options,
 	Intents
 } = require('discord.js');
@@ -40,7 +41,10 @@ const client = new Client({
 		GuildBanManager: 0,
 		GuildEmojiManager: 0,
 		GuildInviteManager: 0,
-		GuildMemberManager: 0,
+		GuildMemberManager: LimitedCollection.filterByLifetime({
+			excludeFromSweep: member => member.id === member.client.user.id,
+			lifetime: 360
+		}),
 		GuildStickerManager: 0,
 		MessageManager: 0,
 		PresenceManager: 0,
