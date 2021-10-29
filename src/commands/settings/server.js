@@ -51,6 +51,7 @@ module.exports = class ServerCommand extends Command {
 							type: Command.option_types.ROLE
 						},
 						{
+							autocomplete: true,
 							description: 'The timezone to use',
 							name: 'timezone',
 							required: false,

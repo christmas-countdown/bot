@@ -30,6 +30,11 @@ module.exports = class MessageCreateEventListener extends EventListener {
 			if (guild) this.client.commands.publish(guild);
 			else this.client.commands.publish();
 			message.reply('ok');
+		} else if (is_owner && message.content.startsWith(`${admin_prefix}unsync`)) {
+			const guild = message.content.split(' ')[1];
+			if (guild) return message.reply('no guild');
+			this.client.application.commands.set([], guild);
+			message.reply('ok');
 		} else if (is_owner && message.content.startsWith(`${admin_prefix}premium`)) {
 			const guild = message.content.split(' ')[1] ?? message.guild.id;
 			const row = await this.client.prisma.guild.findUnique({ where: { id: guild } });

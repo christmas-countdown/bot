@@ -2,6 +2,7 @@ const { PrismaClient } = require('@prisma/client');
 const I18n = require('@eartharoid/i18n');
 const ListenerLoader = require('./modules/listeners/loader');
 const CommandManager = require('./modules/commands/manager');
+const AutocompleteManager = require('./modules/autocomplete/manager');
 const {
 	Client: DiscordClient,
 	LimitedCollection,
@@ -26,6 +27,10 @@ class Client extends DiscordClient {
 
 		/** @type {CommandManager} */
 		this.commands = new CommandManager(this);
+
+		/** @type {AutocompleteManager} */
+		this.autocomplete = new AutocompleteManager(this);
+
 		this.login();
 	}
 }

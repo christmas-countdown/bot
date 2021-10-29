@@ -14,6 +14,7 @@ module.exports = class ReadyEventListener extends EventListener {
 		this.client.log.success(`Connected to Discord as "${this.client.user.tag}"`);
 
 		this.client.commands.load();
+		this.client.autocomplete.load();
 
 		setInterval(() => {
 			this.client.log.debug('updating bot user presence');

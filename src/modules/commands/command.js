@@ -10,6 +10,7 @@ module.exports = class Command {
 	 * @property {CommandOption[]} [options] - The option's options
 	 * @property {(string|number)[]} [choices] - The option's choices
 	 * @property {boolean} [required] - Is this arg required? Defaults to `false`
+	 * @property {boolean} [autocomplete] - Enable autocomplete?
 	 */
 	/**
 	 * Create a new Command

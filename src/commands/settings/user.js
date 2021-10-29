@@ -33,6 +33,7 @@ module.exports = class UserCommand extends Command {
 							type: Command.option_types.STRING
 						},
 						{
+							autocomplete: true,
 							description: 'The timezone to use',
 							name: 'timezone',
 							required: false,
