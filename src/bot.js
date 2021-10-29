@@ -40,7 +40,7 @@ const client = new Client({
 		GuildBanManager: 0,
 		GuildEmojiManager: 0,
 		GuildInviteManager: 0,
-		GuildMemberManager: 100,
+		GuildMemberManager: 0,
 		GuildStickerManager: 0,
 		MessageManager: 0,
 		PresenceManager: 0,
