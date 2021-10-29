@@ -21,7 +21,7 @@ module.exports = class CountdownCommand extends Command {
 					type: Command.option_types.CHANNEL
 				}
 			],
-			permissions: [Permissions.FLAGS.MANAGE_GUILD]
+			permissions: ['MANAGE_GUILD']
 		});
 	}
 

@@ -3,8 +3,7 @@ const { colour } = require('../../../config');
 const Command = require('../../modules/commands/command');
 const {
 	CommandInteraction, // eslint-disable-line no-unused-vars
-	MessageEmbed,
-	Permissions
+	MessageEmbed
 } = require('discord.js');
 
 module.exports = class ServerCommand extends Command {
@@ -67,7 +66,7 @@ module.exports = class ServerCommand extends Command {
 					type: Command.option_types.SUB_COMMAND
 				}
 			],
-			permissions: [Permissions.FLAGS.MANAGE_GUILD]
+			permissions: ['MANAGE_GUILD']
 		});
 	}
 
