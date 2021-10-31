@@ -12,7 +12,7 @@ module.exports = class TimezoneCompleter extends Autocompleter {
 	 * @param {string} value
 	 */
 	complete(interaction, value) {
-		const options = value ?  timezones.filter(tz => tz.match(new RegExp(value, 'i'))) : timezones;
+		const options = value ? timezones.filter(tz => tz.match(new RegExp(value, 'i'))) : timezones;
 		return interaction.respond(options.slice(0, 25).map(option => ({
 			name: option,
 			value: option
