@@ -65,6 +65,7 @@ manager.spawn().then(async shards => {
 				'discord.bots.gg': process.env.BL_DBGG,
 				'discordapps.dev': process.env.BL_DADEV,
 				'discordbotlist.com': process.env.BL_DBL,
+				'discordservices.net': process.env.BL_DS,
 				'top.gg': process.env.BL_TOPGG
 			};
 			const post = async () => {
