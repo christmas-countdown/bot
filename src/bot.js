@@ -48,7 +48,7 @@ const client = new Client({
 		GuildInviteManager: 0,
 		GuildMemberManager: LimitedCollection.filterByLifetime({
 			excludeFromSweep: member => member.id === member.client.user.id,
-			lifetime: 360
+			lifetime: 300
 		}),
 		GuildStickerManager: 0,
 		MessageManager: 0,

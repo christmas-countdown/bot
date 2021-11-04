@@ -180,6 +180,10 @@
 				"{sleeps} sleeps left"
 			]
 		},
+		"suggest": {
+			"description": "Thank you for your suggestion.",
+			"title": "✅ Submitted"
+		},
 		"toggle": {
 			"disabled": "✅ Countdown disabled",
 			"enabled": "✅ Countdown enabled"
