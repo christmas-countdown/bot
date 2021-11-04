@@ -128,6 +128,16 @@ module.exports.dispatch = async (manager, prisma, log) => {
 		} catch (error) {
 			log.warn.dispatcher(`Failed to send countdown message to ${guild.id}`);
 			log.error.dispatcher(error);
+			if (error.message?.match(/Unknown Webhook/)) {
+				guild = await prisma.guild.update({
+					data: {
+						enabled: false,
+						webhook: null
+					}, // disable
+					where: { id: guild.id }
+				});
+				log.info.dispatcher(`Removed dead webhook for guild ${guild.id}`);
+			}
 			failed++;
 		} finally {
 			tried++;
