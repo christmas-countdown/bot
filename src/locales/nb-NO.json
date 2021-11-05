@@ -6,7 +6,7 @@
 		},
 		"footer": "Julenedtelling av eartaroid",
 		"guild_only": {
-			"description": "Denne kommandoen kan kun brukes innen en tjenerkanal. [Legg til en håndtlanger på din tjener.]({invite}).",
+			"description": "Denne kommandoen kan kun brukes innen en tjenerkanal. [Legg til en håndtlanger på din tjener.]({invite})",
 			"title": "Feil"
 		},
 		"member_missing_permissions": {
@@ -39,7 +39,7 @@
 				"er **{days} dag**",
 				"er **{days} dager**"
 			],
-			"description": "Det er {days} eller {sleeps}[(?)]({url} \"Hva er forskjellen på dager og søvn?\") igjen til Julaften.",
+			"description": "Det er {days} eller {sleeps}[(?)]({url} \"Hva er forskjellen på dager og søvn?\") igjen til Julaften!",
 			"sleeps": [
 				"**{sleeps} søvn**",
 				"**{sleeps} søvn**"
@@ -61,8 +61,8 @@
 		},
 		"hours": {
 			"description": [
-				"Det er {hours} timer igjen til Julaften.",
-				"Det er {hours} timer igjen til Julaften."
+				"Det er **{hours}** timer igjen til Julaften!",
+				"Det er **{hours}** timer igjen til Julaften!"
 			],
 			"title": [
 				"{hours} time igjen",
@@ -70,7 +70,7 @@
 			]
 		},
 		"info": {
-			"description": "Julenedtellingshåndtlangeren for Discord av [eartharoid]({eartharoid})har kjørt siden November 2018. [Lær mer.]({about}).",
+			"description": "Julenedtellingshåndtlangeren for Discord av [eartharoid]({eartharoid})har kjørt siden November 2018. [Lær mer.]({about})",
 			"fields": {
 				"commands": "Kommandoer brukt",
 				"counting_in": {
@@ -99,8 +99,8 @@
 		},
 		"minutes": {
 			"description": [
-				"Det er {minutes} minutt igjen til Julaften.",
-				"Det er {minutes} minutter igjen til Julaften."
+				"Det er **{minutes}** minutt igjen til Julaften!",
+				"Det er **{minutes}** minutter igjen til Julaften!"
 			],
 			"title": [
 				"{minutes} minutt igjen",
@@ -109,8 +109,8 @@
 		},
 		"months": {
 			"description": [
-				"Det er {months} måned igjen til Julaften.",
-				"Det er {months} måneder igjen til Julaften."
+				"Det er **{months}** måned igjen til Julaften!",
+				"Det er **{months}** måneder igjen til Julaften!"
 			],
 			"title": [
 				"{months} måned igjen",
@@ -133,8 +133,8 @@
 		},
 		"seconds": {
 			"description": [
-				"Det er **{seconds}** igjen til Jul.",
-				"Det er **{seconds}** sekunder igjen til Julaften."
+				"Det er **{seconds}** igjen til Jul!",
+				"Det er **{seconds}** sekunder igjen til Julaften!"
 			],
 			"title": [
 				"{seconds} sekunder igjen",
@@ -170,7 +170,7 @@
 				"**{days} dag**",
 				"**{days} dager**"
 			],
-			"description": "Det er {sleeps} er {days}[(?)]({url} \"Hva er forskjellen på dager og søvn?\") igjen til Julaften.",
+			"description": "Det er {sleeps} er {days}[(?)]({url} \"Hva er forskjellen på dager og søvn?\") igjen til Julaften!",
 			"sleeps": [
 				"er **{sleeps} søvn**",
 				"er **{sleeps} søvn**"
@@ -194,8 +194,8 @@
 				"**{days} dager**"
 			],
 			"description": [
-				"Det er {days}, {hours}, {minutes}, og {seconds} igjen til Julaften.",
-				"Det er {days}, {hours}, {minutes}, og {seconds} igjen til Julaften."
+				"Det er {days}, {hours}, {minutes}, og {seconds} igjen til Julaften!",
+				"Det er {days}, {hours}, {minutes}, og {seconds} igjen til Julaften!"
 			],
 			"hours": [
 				"**{hours} time**",
@@ -228,8 +228,8 @@
 		},
 		"weeks": {
 			"description": [
-				"Det er {weeks} uke igjen til Julaften.",
-				"Det er {weeks} uker igjen til Julaften."
+				"Det er **{weeks}** uke igjen til Julaften!",
+				"Det er **{weeks}** uker igjen til Julaften!"
 			],
 			"title": [
 				"{weeks} uke igjen",
@@ -238,14 +238,14 @@
 		}
 	},
 	"countdown": {
-		"christmas_day": "🎉 Det er første juledag.",
-		"christmas_eve": "🎅 Det er julaften.",
+		"christmas_day": "🎉 Det er første juledag!",
+		"christmas_eve": "🎅 Det er julaften!",
 		"disable": {
 			"description": "**Tjeneradministratorer: Bruk [`/toggle`]({toggle}) for å skru av nedtellingen.**\nOvervei å vurdere og stemme opp håndtlangeren [her]({topgg}).\nTakk for at du bruker denne håndtlangeren, og God Jul! 🙂",
 			"title": "🎄 God Jul"
 		},
 		"live": "Vis sanntidsnedtelling på[{pretty}]({url}).",
-		"merry_christmas": "🎄 God Jul",
+		"merry_christmas": "🎄 God Jul!",
 		"server_timezone": "Tjenertidssone: {timezone}",
 		"user_timezone": "Brukertidssone: {timezone}"
 	},
