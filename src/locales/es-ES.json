@@ -1,37 +1,37 @@
 {
 	"bot": {
 		"command_execution_error": {
-			"description": "",
-			"title": ""
+			"description": "Ha ocurrido un error inesperado. Por favor pedir ayuda en el servidor de soporte",
+			"title": "Error"
 		},
-		"footer": "",
+		"footer": "cuenta regresiva navideña por eartharoid",
 		"guild_only": {
 			"description": "",
-			"title": ""
+			"title": "Error"
 		},
 		"member_missing_permissions": {
-			"description": "",
-			"title": ""
+			"description": "Necesitas del siguente permiso para utilizar este comando:\n{permissions}",
+			"title": "Error"
 		},
-		"migrate": "",
+		"migrate": "El bot Christmas Countdown ahora utiliza comandos con slash!\n**Por favor re añade al bot aquí: https://christmascountdown.live/invite.**",
 		"missing_permissions": {
-			"description": "",
-			"title": ""
+			"description": "El bot Christmas Countdown necesita de los siguentes permisos:\n{permissions}",
+			"title": "Error"
 		}
 	},
 	"commands": {
 		"countdown": {
 			"created": {
-				"description": "",
-				"title": ""
+				"description": "¡Tu cuenta regresiva aún no está activada! **Activala con [`/toggle`]({url}).**\n\nCuando esté activa, los mensajes de la cuenta regresiva serán enviados a {channel} todas las mañanas entre las 05:00 y 06:00",
+				"title": "✅ Webhook de la cuenta regresiva creado"
 			},
 			"invalid_channel": {
 				"description": "",
-				"title": ""
+				"title": "❌ Canal inválido"
 			},
 			"missing_permission": {
-				"description": "",
-				"title": ""
+				"description": "El bot no tiene permisos para administrar webhooks.",
+				"title": "❌ No es posible crear un webhook"
 			}
 		},
 		"days": {
@@ -39,19 +39,19 @@
 				"",
 				""
 			],
-			"description": "",
+			"description": "¡Quedan {days} o {sleeps}[(?)]({url} \" \"¿Cual es la diferencia entre días y noches ?\") Restantes para Navidad!",
 			"sleeps": [
 				"",
 				""
 			],
 			"title": [
-				"",
+				"{days} días restantes",
 				""
 			]
 		},
 		"donate": {
-			"description": "",
-			"title": ""
+			"description": "**[Dona]({url})** Para desbloquear estas funciones :\n\\⭐ `mention`/`role` como opcion en el servidor\n\\⭐ `autotoggle` como opcion en el servidor",
+			"title": "Hazte premium"
 		},
 		"help": {
 			"list": {
