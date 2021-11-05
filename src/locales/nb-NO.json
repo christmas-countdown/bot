@@ -1,253 +1,253 @@
 {
 	"bot": {
 		"command_execution_error": {
-			"description": "",
-			"title": ""
+			"description": "Uventet feil. Få hjelp hos [brukerstøtte]({url}).",
+			"title": "Feil"
 		},
-		"footer": "",
+		"footer": "Julenedtelling av eartaroid",
 		"guild_only": {
-			"description": "",
-			"title": ""
+			"description": "Denne kommandoen kan kun brukes innen en tjenerkanal. [Legg til en håndtlanger på din tjener.]({invite}).",
+			"title": "Feil"
 		},
 		"member_missing_permissions": {
-			"description": "",
-			"title": ""
+			"description": "Du trenger følgende tilganger for å bruke denne kommandoen:\n{permissions}",
+			"title": "Feil"
 		},
-		"migrate": "",
+		"migrate": "Julenedtelling bruker nå skråstrekskommandoer.\n**Legg til håndtlangeren igjen her: https://christmascountdown.live/invite.**",
 		"missing_permissions": {
-			"description": "",
-			"title": ""
+			"description": "Julenedtelling krever følgende tilganger:\n{permissions}",
+			"title": "Feil"
 		}
 	},
 	"commands": {
 		"countdown": {
 			"created": {
-				"description": "",
-				"title": ""
+				"description": "Nedtellingen din er ikke aktiv enda. **Skru den på med [`/toggle`]({url}).**\n\nNår den er på vil en nedtellingsmelding bli sendt til {channel} hver morgen mellom 05.00 og 06.00.",
+				"title": "✅ Nedtellingsvevkrok opprettet"
 			},
 			"invalid_channel": {
-				"description": "",
-				"title": ""
+				"description": "Velg en tekstkanal eller unngå dette kanalvalget for å bruke nåværende kanal.",
+				"title": "❌ Ugyldig kanal"
 			},
 			"missing_permission": {
-				"description": "",
-				"title": ""
+				"description": "Håndtlangeren har ikke tilgang til å opprette vevkroker.",
+				"title": "❌ Kan ikke opprette vevkrok"
 			}
 		},
 		"days": {
 			"days": [
-				"",
-				""
+				"er **{days} dag**",
+				"er **{days} dager**"
 			],
-			"description": "",
+			"description": "Det er {days} eller {sleeps}[(?)]({url} \"Hva er forskjellen på dager og søvn?\") igjen til Julaften.",
 			"sleeps": [
-				"",
-				""
+				"**{sleeps} søvn**",
+				"**{sleeps} søvn**"
 			],
 			"title": [
-				"",
-				""
+				"{days} dag igjen",
+				"{days} dager igjen"
 			]
 		},
 		"donate": {
-			"description": "",
-			"title": ""
+			"description": "**[Doner]({url})** for å låse opp disse funksjonene:\n\\⭐ `mention`/`role` tjenervalg\n\\⭐ `autotoggle` tjenervalg",
+			"title": "Få premiumsfunkasjoner"
 		},
 		"help": {
 			"list": {
-				"description": "",
-				"title": ""
+				"description": "Klikk på navnet for å få mer info om en gitt kommando. [Ta del i brukerstøttekanalen]]({discord}) hvis du trenger hjelp.\n**[Klikk her for å skru på nedtellingen.]({enable})**",
+				"title": "Kommandoer"
 			}
 		},
 		"hours": {
 			"description": [
-				"",
-				""
+				"Det er {hours} timer igjen til Julaften.",
+				"Det er {hours} timer igjen til Julaften."
 			],
 			"title": [
-				"",
-				""
+				"{hours} time igjen",
+				"{hours} timer igjen"
 			]
 		},
 		"info": {
-			"description": "",
+			"description": "Julenedtellingshåndtlangeren for Discord av [eartharoid]({eartharoid})har kjørt siden November 2018. [Lær mer.]({about}).",
 			"fields": {
-				"commands": "",
+				"commands": "Kommandoer brukt",
 				"counting_in": {
-					"title": "",
+					"title": "Nedteller om",
 					"value": [
-						"",
-						""
+						"{servers} tjener",
+						"{servers} tjenere"
 					]
 				},
 				"more": {
-					"title": "",
-					"value": ""
+					"title": "Mer statistikk",
+					"value": "[Klikk her]({url})"
 				},
-				"premium_servers": "",
-				"servers": ""
+				"premium_servers": "⭐ Premiumstjenere",
+				"servers": "Tjenere"
 			},
-			"title": ""
+			"title": "Informasjon"
 		},
 		"invite": {
-			"description": "",
-			"title": ""
+			"description": "[Klikk her]({url}) for å legge til Julenedtellingshåndtlangeren på din egen tjener.",
+			"title": "Invitasjon"
 		},
 		"joke": {
-			"answer": "",
-			"question": ""
+			"answer": "Svar",
+			"question": "Spørsmål"
 		},
 		"minutes": {
 			"description": [
-				"",
-				""
+				"Det er {minutes} minutt igjen til Julaften.",
+				"Det er {minutes} minutter igjen til Julaften."
 			],
 			"title": [
-				"",
-				""
+				"{minutes} minutt igjen",
+				"{minutes} minutter igjen"
 			]
 		},
 		"months": {
 			"description": [
-				"",
-				""
+				"Det er {months} måned igjen til Julaften.",
+				"Det er {months} måneder igjen til Julaften."
 			],
 			"title": [
-				"",
-				""
+				"{months} måned igjen",
+				"{months} måneder igjen"
 			]
 		},
 		"ping": {
-			"calculating": "",
+			"calculating": "Regner ut …",
 			"fields": {
-				"average_ping": "",
-				"latency": "",
-				"shard_number": "",
-				"shard_ping": ""
+				"average_ping": "Gjen. svartid",
+				"latency": "Gjen. latens",
+				"shard_number": "Shard-nummer",
+				"shard_ping": "Shard-svartid"
 			},
-			"title": ""
+			"title": "🏓 Pang!"
 		},
 		"radio": {
-			"description": "",
-			"title": ""
+			"description": "**[Legg til Juleradiohåndtlangeren]({url})** for å lytte til Julemusikk på din Discord-tjener.",
+			"title": "Juleradio"
 		},
 		"seconds": {
 			"description": [
-				"",
-				""
+				"Det er **{seconds}** igjen til Jul.",
+				"Det er **{seconds}** sekunder igjen til Julaften."
 			],
 			"title": [
-				"",
-				""
+				"{seconds} sekunder igjen",
+				"{seconds} sekunder igjen"
 			]
 		},
 		"server": {
 			"reset": {
-				"title": ""
+				"title": "Tjenerinnstillinger tilbakestilt"
 			},
 			"set": {
 				"cannot_enable": {
-					"description": "",
-					"title": ""
+					"description": "Opprett nedtellings-vevkrok med [`/countdown`]({url}).",
+					"title": "❌ Kan ikke skru på nedtelling"
 				},
 				"invalid_timezone": {
-					"description": "",
-					"title": ""
+					"description": "Prøv igjen eller [spør om hjelp]({url}).",
+					"title": "❌ Ugyldig tidssone"
 				},
 				"premium": {
-					"description": "",
-					"title": ""
+					"description": "Doner med [`/donate`]({url}) for å låse opp disse innstillingene.",
+					"title": "⭐ Dette er ikke en premiumstjener"
 				},
-				"title": ""
+				"title": "✅ Tjenerinnstillinger oppdatert"
 			},
 			"view": {
-				"description": "",
-				"title": ""
+				"description": "Endre innstillingene dine med `/server set`.",
+				"title": "Tjenerinnstillinger"
 			}
 		},
 		"sleeps": {
 			"days": [
-				"",
-				""
+				"**{days} dag**",
+				"**{days} dager**"
 			],
-			"description": "",
+			"description": "Det er {sleeps} er {days}[(?)]({url} \"Hva er forskjellen på dager og søvn?\") igjen til Julaften.",
 			"sleeps": [
-				"",
-				""
+				"er **{sleeps} søvn**",
+				"er **{sleeps} søvn**"
 			],
 			"title": [
-				"",
-				""
+				"{sleeps} søvn igjen",
+				"{sleeps} søvn igjen"
 			]
 		},
 		"suggest": {
-			"description": "",
-			"title": ""
+			"description": "Takk for forslaget ditt.",
+			"title": "✅ Innsendt"
 		},
 		"toggle": {
-			"disabled": "",
-			"enabled": ""
+			"disabled": "✅ Nedtelling avskrudd",
+			"enabled": "✅ Nedtelling påskrudd"
 		},
 		"total": {
 			"days": [
-				"",
-				""
+				"**{days} dag**",
+				"**{days} dager**"
 			],
 			"description": [
-				"",
-				""
+				"Det er {days}, {hours}, {minutes}, og {seconds} igjen til Julaften.",
+				"Det er {days}, {hours}, {minutes}, og {seconds} igjen til Julaften."
 			],
 			"hours": [
-				"",
-				""
+				"**{hours} time**",
+				"**{hours} timer**"
 			],
 			"minutes": [
-				"",
-				""
+				"**{minutes} minutt**",
+				"**{minutes} minutter**"
 			],
 			"seconds": [
-				"",
-				""
+				"**{seconds} sekund**",
+				"**{seconds} sekunder**"
 			],
-			"title": ""
+			"title": "{days}, {hours}, {minutes}, {seconds} igjen"
 		},
 		"user": {
 			"reset": {
-				"title": ""
+				"title": "✅ Brukerinnstillinger tilbakestilt"
 			},
 			"set": {
-				"title": ""
+				"title": "✅ Brukerinnstillinger oppdatert"
 			},
 			"view": {
-				"title": ""
+				"title": "Brukerinnstillinger"
 			}
 		},
 		"weekday": {
-			"description": "",
-			"title": ""
+			"description": "Første juledag er på **{day}** i {year}.",
+			"title": "Julen er her …"
 		},
 		"weeks": {
 			"description": [
-				"",
-				""
+				"Det er {weeks} uke igjen til Julaften.",
+				"Det er {weeks} uker igjen til Julaften."
 			],
 			"title": [
-				"",
-				""
+				"{weeks} uke igjen",
+				"{weeks} uker igjen"
 			]
 		}
 	},
 	"countdown": {
-		"christmas_day": "",
-		"christmas_eve": "",
+		"christmas_day": "🎉 Det er første juledag.",
+		"christmas_eve": "🎅 Det er julaften.",
 		"disable": {
-			"description": "",
-			"title": ""
+			"description": "**Tjeneradministratorer: Bruk [`/toggle`]({toggle}) for å skru av nedtellingen.**\nOvervei å vurdere og stemme opp håndtlangeren [her]({topgg}).\nTakk for at du bruker denne håndtlangeren, og God Jul! 🙂",
+			"title": "🎄 God Jul"
 		},
-		"live": "",
-		"merry_christmas": "",
-		"server_timezone": "",
-		"user_timezone": ""
+		"live": "Vis sanntidsnedtelling på[{pretty}]({url}).",
+		"merry_christmas": "🎄 God Jul",
+		"server_timezone": "Tjenertidssone: {timezone}",
+		"user_timezone": "Brukertidssone: {timezone}"
 	},
 	"disabled": ""
 }
