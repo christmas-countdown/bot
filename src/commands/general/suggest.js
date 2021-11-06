@@ -2,7 +2,8 @@ const { colour } = require('../../../config');
 const Command = require('../../modules/commands/command');
 const {
 	CommandInteraction, // eslint-disable-line no-unused-vars
-	MessageEmbed
+	MessageEmbed,
+	WebhookClient
 } = require('discord.js');
 
 module.exports = class SuggestCommand extends Command {
@@ -32,9 +33,9 @@ module.exports = class SuggestCommand extends Command {
 
 		const suggestion = interaction.options.getString('suggestion');
 
-		const channel = await this.client.channels.fetch(process.env.SUGGESTIONS_CHANNEL);
+		const webhook = new WebhookClient({ url: process.env.SUGGESTIONS_WEBHOOK });
 
-		await channel.send({
+		await webhook.send({
 			embeds: [
 				new MessageEmbed()
 					.setColor(colour)
