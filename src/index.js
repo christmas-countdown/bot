@@ -66,7 +66,8 @@ manager.spawn().then(async shards => {
 				'discordapps.dev': process.env.BL_DADEV,
 				'discordbotlist.com': process.env.BL_DBL,
 				'discordservices.net': process.env.BL_DS,
-				'top.gg': process.env.BL_TOPGG
+				'top.gg': process.env.BL_TOPGG,
+				'voidbots.net': process.env.BL_VOID
 			};
 			const post = async () => {
 				const shards = await manager.fetchClientValues('guilds.cache.size');
