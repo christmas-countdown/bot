@@ -23,10 +23,7 @@ module.exports = class UserCommand extends Command {
 					name: 'set',
 					options: [
 						{
-							choices: client.i18n.locales.map(locale => ({
-								name: locale,
-								value: locale
-							})),
+							autocomplete: true,
 							description: 'The locale (language) to use',
 							name: 'locale',
 							required: false,

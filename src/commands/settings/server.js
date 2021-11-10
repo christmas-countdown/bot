@@ -35,10 +35,7 @@ module.exports = class ServerCommand extends Command {
 							type: Command.option_types.BOOLEAN
 						},
 						{
-							choices: client.i18n.locales.map(locale => ({
-								name: locale,
-								value: locale
-							})),
+							autocomplete: true,
 							description: 'The locale (language) to use',
 							name: 'locale',
 							required: false,

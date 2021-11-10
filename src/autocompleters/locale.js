@@ -1,10 +1,9 @@
-const timezones = require('../../timezones.json');
 const { AutocompleteInteraction } = require('discord.js'); // eslint-disable-line no-unused-vars
 const Autocompleter = require('../modules/autocomplete/autocompleter');
 
-module.exports = class TimezoneCompleter extends Autocompleter {
+module.exports = class LocaleCompleter extends Autocompleter {
 	constructor(client) {
-		super(client, 'timezone');
+		super(client, 'locale');
 	}
 
 	/**
@@ -12,7 +11,7 @@ module.exports = class TimezoneCompleter extends Autocompleter {
 	 * @param {string} value
 	 */
 	complete(interaction, value) {
-		const options = value ? timezones.filter(tz => tz.match(new RegExp(value, 'i'))) : timezones;
+		const options = value ? this.client.i18n.locales.filter(locale => locale.match(new RegExp(value, 'i'))) : this.client.i18n.locales;
 		return interaction.respond(options.slice(0, 25).map(option => ({
 			name: option,
 			value: option
