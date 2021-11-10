@@ -63,6 +63,18 @@ module.exports = class UserCommand extends Command {
 
 		switch (subcommand) {
 		case 'set': {
+			if (interaction.options.getString('locale') && !this.client.i18n.locales.includes(interaction.options.getString('locale'))) {
+				return await interaction.editReply({
+					embeds: [
+						new MessageEmbed()
+							.setColor(colour)
+							.setTitle(i18n('commands.server.set.invalid_locale.title'))
+							.setDescription(i18n('commands.server.set.invalid_locale.description', { url: 'https://go.eartharoid.me/discord' }))
+							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
+					]
+				});
+			}
+
 			const timezone = interaction.options.getString('timezone')
 				? parseTZ(interaction.options.getString('timezone'))[0]?.iana
 				: undefined;

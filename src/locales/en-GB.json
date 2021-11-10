@@ -150,6 +150,10 @@
 					"description": "Create the countdown webhook with [`/countdown`]({url}).",
 					"title": "❌ Can't enable countdown"
 				},
+				"invalid_locale": {
+					"description": "Try again or [ask for help]({url}).",
+					"title": "❌ Invalid locale"
+				},
 				"invalid_timezone": {
 					"description": "Try again or [ask for help]({url}).",
 					"title": "❌ Invalid timezone"
