@@ -95,7 +95,7 @@ module.exports.dispatch = async (manager, prisma, log) => {
 					new MessageEmbed()
 						.setColor(colour)
 						.setTitle(title)
-						.setURL('https://christmascountdown.live/total')
+						.setURL('https://christmascountdown.live')
 						.setDescription(text.join('\n\n'))
 						.setFooter(footer, avatarURL)
 						.setTimestamp()
