@@ -38,7 +38,7 @@ module.exports = class SleepsCommand extends Command {
 			i18n('commands.sleeps.description', {
 				days: i18n('commands.sleeps.days', days, { days }),
 				sleeps: i18n('commands.sleeps.sleeps', sleeps, { sleeps }),
-				url: 'https://docs.christmascountdown.live/other/days-vs-sleeps'
+				url: 'https://christmascountdown.live/days-vs-sleeps'
 			}),
 			i18n('countdown.live', {
 				pretty: website.pretty,

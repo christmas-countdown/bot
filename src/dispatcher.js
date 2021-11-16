@@ -75,7 +75,7 @@ module.exports.dispatch = async (manager, prisma, log) => {
 			getMessage('commands.sleeps.description', {
 				days: getMessage('commands.sleeps.days', days, { days }),
 				sleeps: getMessage('commands.sleeps.sleeps', sleeps, { sleeps }),
-				url: 'https://docs.christmascountdown.live/other/days-vs-sleeps'
+				url: 'https://christmascountdown.live/days-vs-sleeps'
 			}),
 			getMessage('countdown.live', {
 				pretty: website.pretty,

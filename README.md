@@ -8,7 +8,7 @@
 
 **Find out more at [christmascountdown.live/discord](https://christmascountdown.live/discord?ref=github.com).**
 
-[Information](https://christmascountdown.live/discord?ref=github.com) · [Invite](https://christmascountdown.live/invite) · [Documentation](https://docs.christmascountdown.live/discord/introduction) · [Support](https://go.eartharoid.me/discord)
+[Information](https://christmascountdown.live/discord?ref=github.com) · [Invite](https://christmascountdown.live/invite) · [Support](https://go.eartharoid.me/discord)
 
 [![Weblate translations](https://i18n.capestar.net/widgets/christmas-countdown/-/bot/open-graph.png)](https://i18n.capestar.net/engage/christmas-countdown/)
 
