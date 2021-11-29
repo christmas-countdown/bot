@@ -3,6 +3,7 @@ const I18n = require('@eartharoid/i18n');
 const ListenerLoader = require('./modules/listeners/loader');
 const CommandManager = require('./modules/commands/manager');
 const AutocompleteManager = require('./modules/autocomplete/manager');
+const SecretSanta = require('./secret-santa');
 const {
 	Client: DiscordClient,
 	LimitedCollection,
@@ -31,6 +32,9 @@ class Client extends DiscordClient {
 		/** @type {AutocompleteManager} */
 		this.autocomplete = new AutocompleteManager(this);
 
+		/** @type {SecretSanta} */
+		this.secret_santa = new SecretSanta(this);
+
 		this.login();
 	}
 }
@@ -40,7 +44,8 @@ const client = new Client({
 		Intents.FLAGS.DIRECT_MESSAGES,
 		Intents.FLAGS.GUILD_MESSAGES,
 		Intents.FLAGS.GUILD_WEBHOOKS,
-		Intents.FLAGS.GUILDS
+		Intents.FLAGS.GUILDS,
+		1 << 16 // GUILD_SCHEDULED_EVENTS
 	],
 	makeCache: Options.cacheWithLimits({
 		GuildBanManager: 0,
