@@ -6,7 +6,6 @@ module.exports = class GuildScheduledEventCreateEventListener extends EventListe
 	}
 
 	async execute(data) {
-
-		if (data.entity_metadata?.location?.toLowerCase() !== 'christmas countdown') return;
+		this.client.secret_santa.handleEvent(data);
 	}
 };

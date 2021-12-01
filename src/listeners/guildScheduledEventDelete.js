@@ -1,8 +1,8 @@
 const EventListener = require('../modules/listeners/listener');
 
-module.exports = class GuildScheduledEventhandleEventListener extends EventListener {
+module.exports = class GuildScheduledEventDeleteEventListener extends EventListener {
 	constructor(client) {
-		super(client, { event: 'guildScheduledEventUpdate' });
+		super(client, { event: 'guildScheduledEventDelete' });
 	}
 
 	async execute(data) {

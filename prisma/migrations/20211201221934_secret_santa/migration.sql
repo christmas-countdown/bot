@@ -9,6 +9,7 @@
 */
 -- AlterTable
 ALTER TABLE `Guild` DROP PRIMARY KEY,
+    ADD COLUMN `secret_santa_blacklist` JSON NOT NULL,
     MODIFY `id` VARCHAR(19) NOT NULL,
     ADD PRIMARY KEY (`id`);
 
@@ -21,8 +22,8 @@ ALTER TABLE `User` DROP PRIMARY KEY,
 CREATE TABLE `SecretSanta` (
     `id` VARCHAR(19) NOT NULL,
     `guild_id` VARCHAR(19) NOT NULL,
-    `status` VARCHAR(191) NOT NULL,
-    `members` JSON NOT NULL,
+    `status` INTEGER NOT NULL,
+    `users` JSON NOT NULL,
 
     UNIQUE INDEX `SecretSanta_id_key`(`id`),
     PRIMARY KEY (`id`)

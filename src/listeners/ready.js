@@ -15,7 +15,7 @@ module.exports = class ReadyEventListener extends EventListener {
 
 		this.client.commands.load();
 		this.client.autocomplete.load();
-		this.client.secret_santa.autoCheck();
+		this.client.secret_santa.startAutoCheck();
 
 		setInterval(() => {
 			this.client.log.debug('updating bot user presence');

@@ -1,35 +1,36 @@
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-    provider = "mysql"
-    url      = env("DATABASE_URL")
+  provider = "mysql"
+  url      = env("DATABASE_URL")
 }
 
 model Guild {
-    id           String        @id @unique @db.VarChar(19)
-    webhook      String?
-    premium      Boolean       @default(false)
-    last_sent    DateTime?
-    locale       String        @default("en-GB")
-    timezone     String        @default("UTC")
-    enabled      Boolean       @default(false)
-    auto_toggle  Boolean       @default(false)
-    mention      String?
-    secret_santa SecretSanta[]
+  id                     String        @id @unique @db.VarChar(19)
+  webhook                String?
+  premium                Boolean       @default(false)
+  last_sent              DateTime?
+  locale                 String        @default("en-GB")
+  timezone               String        @default("UTC")
+  enabled                Boolean       @default(false)
+  auto_toggle            Boolean       @default(false)
+  mention                String?
+  secret_santa           SecretSanta[]
+  secret_santa_blacklist Json          @default("[]")
 }
 
 model User {
-    id       String  @id @unique @db.VarChar(19)
-    locale   String?
-    timezone String?
+  id       String  @id @unique @db.VarChar(19)
+  locale   String?
+  timezone String?
 }
 
 model SecretSanta {
-    id       String @id @unique @db.VarChar(19)
-    guild_id String @db.VarChar(19)
-    guild    Guild  @relation(fields: [guild_id], references: [id])
-    status   String
-    members  Json   @default("{}")
+  id       String @id @unique @db.VarChar(19)
+  guild_id String @db.VarChar(19)
+  guild    Guild  @relation(fields: [guild_id], references: [id])
+  status   Int
+  users    Json   @default("{}")
 }
