@@ -37,7 +37,7 @@ module.exports = class CountdownCommand extends Command {
 		/** @type {TextChannel} */
 		const channel = interaction.options.getChannel('channel') ?? interaction.channel;
 
-		if (channel.type !== 'GUILD_TEXT') {
+		if (channel?.type !== 'GUILD_TEXT') {
 			return await interaction.editReply({
 				embeds: [
 					new MessageEmbed()
@@ -49,13 +49,25 @@ module.exports = class CountdownCommand extends Command {
 			});
 		}
 
+		if (!interaction.guild.me.permissionsIn(channel).has(Permissions.FLAGS.VIEW_CHANNEL)) {
+			return await interaction.editReply({
+				embeds: [
+					new MessageEmbed()
+						.setColor(colour)
+						.setTitle(i18n('commands.countdown.missing_permission:view.title'))
+						.setDescription(i18n('commands.countdown.missing_permission:view.description'))
+						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
+				]
+			});
+		}
+
 		if (!interaction.guild.me.permissions.has(Permissions.FLAGS.MANAGE_WEBHOOKS)) {
 			return await interaction.editReply({
 				embeds: [
 					new MessageEmbed()
 						.setColor(colour)
-						.setTitle(i18n('commands.countdown.missing_permission.title'))
-						.setDescription(i18n('commands.countdown.missing_permission.description'))
+						.setTitle(i18n('commands.countdown.missing_permission:webhook.title'))
+						.setDescription(i18n('commands.countdown.missing_permission:webhook.description'))
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});

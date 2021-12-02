@@ -29,9 +29,13 @@
 				"description": "Please choose a text channel or omit the channel option to use the current channel.",
 				"title": "❌ Invalid channel"
 			},
-			"missing_permission": {
+			"missing_permission:webhook": {
 				"description": "The bot does not have permission to manage webhooks.",
 				"title":"❌ Can't create webhook"
+			},
+			"missing_permission:view": {
+				"description": "Please ensure the bot has permission to view the channel.",
+				"title": "❌ Can't create webhook"
 			}
 		},
 		"days": {
@@ -85,6 +89,8 @@
 					"value": "[Click here]({url})"
 				},
 				"premium_servers": "⭐ Premium servers",
+				"secret_santa_events": "Secret Santa events",
+				"secret_santa_users": "Secret Santa participants",
 				"servers": "Servers"
 			},
 			"title": "Information"
