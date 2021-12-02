@@ -18,6 +18,8 @@ module.exports = class Command {
 	 * @param {Object} data - Command data
 	 * @param {string} data.name - The name of the command (3-32)
 	 * @param {string} data.description - The description of the command (1-100)
+	 * @param {boolean} data.guild_only - Only allow the command to be used within a guild?
+	 * @param {boolean} data.ephemeral - Ephemeral reply? Default is false
 	 * @param {string[]} [data.permissions] - Array of permissions needed for a user to use this command
 	 * @param {CommandOption[]} [data.options] - The command's options
 	 */
@@ -42,6 +44,8 @@ module.exports = class Command {
 		this.description = data.description;
 
 		this.guild_only = data.guild_only ?? false;
+
+		this.ephemeral = data.ephemeral ?? false;
 
 		/**
 		 * Array of permissions needed for a user to use this command

@@ -15,6 +15,7 @@ module.exports = class SecretSantaCommand extends Command {
 	constructor(client) {
 		super(client, {
 			description: 'Manage or participate in a Secret Santa event',
+			ephemeral: true,
 			guild_only: true,
 			name: 'secret-santa',
 			options: [

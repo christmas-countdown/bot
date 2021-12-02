@@ -74,6 +74,8 @@ module.exports = class CommandManager {
 		const command = this.commands.get(interaction.commandName);
 		if (!command) return;
 
+		await interaction.deferReply({ ephemeral: command.ephemeral ?? false });
+
 		if (command.guild_only && !interaction.guild) {
 			return await interaction.editReply({
 				embeds: [
