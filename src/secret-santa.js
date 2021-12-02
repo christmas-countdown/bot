@@ -11,7 +11,7 @@ module.exports = class SecretSanta {
 	assignUsers(users) {
 		const shuffled = this.shuffle(users);
 		const assigned = {};
-		for (let i = 1; i <= shuffled.length - 1; i++) assigned[i] = i === shuffled.length - 1 ? shuffled[0] : shuffled[i + 1];
+		for (let i = 0; i <= shuffled.length - 1; i++) assigned[shuffled[i]] = i === shuffled.length - 1 ? shuffled[0] : shuffled[i + 1]; // shift
 		return assigned;
 	}
 
@@ -24,7 +24,6 @@ module.exports = class SecretSanta {
 	}
 
 	async handleEvent(event) {
-		console.log(event);
 		if (event.entity_metadata?.location?.toLowerCase() !== 'christmas countdown') return false; // ignore unrelated events
 
 		const guild_name = this.client.guilds.cache.get(event.guild_id)?.name;
@@ -35,6 +34,7 @@ module.exports = class SecretSanta {
 			this.client.log.info(`New Secret Santa event in "${guild_name}"`);
 			row = await this.client.prisma.secretSanta.create({
 				data: {
+					date: new Date(event.scheduled_start_time),
 					guild_id: event.guild_id,
 					id: event.id,
 					status: event.status
@@ -42,16 +42,18 @@ module.exports = class SecretSanta {
 			});
 		}
 
-		if (event.status === 2) { // ACTIVE
+		if (event.status === 2 && Object.keys(row.users).length === 0) { // ACTIVE and not already assigned
 			this.client.log.info(`Secret Santa event active in "${guild_name}"`);
 
 			// GET /guilds/{guild.id}/scheduled-events/{guild_scheduled_event.id}
-			const user_count = await this.client.api.guilds(event.guild_id)['scheduled-events'](event.id).get({ query: { with_user_count: true } });
+			event = await this.client.api.guilds(event.guild_id)['scheduled-events'](event.id).get({ query: { with_user_count: true } });
+
+			if (event.user_count < 3) return this.client.log.info(`Secret Santa event in "${guild_name}" does not have enough users`);
 
 			let interested = [];
 			let total = 0;
 
-			for (let i = 1; i <= Math.ceil(user_count / 100); i++) {
+			for (let i = 1; i <= Math.ceil(event.user_count / 100); i++) {
 				// GET /guilds/{guild.id}/scheduled-events/{guild_scheduled_event.id}/users
 				const part = await this.client.api.guilds(event.guild_id)['scheduled-events'](event.id).users.get({
 					query: {
@@ -63,17 +65,21 @@ module.exports = class SecretSanta {
 				total += 100;
 			}
 
-			interested = interested.map(i => i.user.id).filter(id => !g_settings.secret_santa_blacklist.includes(id)); // map user IDs and filter through blacklist
-
-			if (interested.length < 3) return this.client.log.info(`Secret Santa event in "${guild_name}" does not have enough users`);
+			// map user IDs and filter through blacklist
+			interested = interested
+				.map(i => i.user.id)
+				.filter(id => !g_settings.secret_santa_blacklist.includes(id));
 
 			const users = this.assignUsers(interested);
 
 			row = await this.client.prisma.secretSanta.update({
-				data: { users },
+				data: {
+					status: event.status,
+					users
+				},
 				where: { id: event.id }
 			});
-		} else if (event.status === 4) {
+		} else if (event.status !== 1) { // COMPLETE or CANCELLED
 			row = await this.client.prisma.secretSanta.update({
 				data: { status: event.status },
 				where: { id: event.id }

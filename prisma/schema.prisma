@@ -28,9 +28,10 @@ model User {
 }
 
 model SecretSanta {
-  id       String @id @unique @db.VarChar(19)
-  guild_id String @db.VarChar(19)
-  guild    Guild  @relation(fields: [guild_id], references: [id])
+  id       String   @id @unique @db.VarChar(19)
+  guild_id String   @db.VarChar(19)
+  guild    Guild    @relation(fields: [guild_id], references: [id])
   status   Int
-  users    Json   @default("{}")
+  date     DateTime
+  users    Json     @default("{}")
 }

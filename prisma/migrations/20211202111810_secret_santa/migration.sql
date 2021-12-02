@@ -23,6 +23,7 @@ CREATE TABLE `SecretSanta` (
     `id` VARCHAR(19) NOT NULL,
     `guild_id` VARCHAR(19) NOT NULL,
     `status` INTEGER NOT NULL,
+    `date` DATETIME(3) NOT NULL,
     `users` JSON NOT NULL,
 
     UNIQUE INDEX `SecretSanta_id_key`(`id`),
