@@ -26,9 +26,10 @@ module.exports = class AboutCommand extends Command {
 		const shards = await this.client.shard.fetchClientValues('guilds.cache.size');
 		const guilds = shards.reduce((acc, count) => acc + count, 0);
 
-		const premium = (await this.client.prisma.guild.findMany({ where: { premium: true } })).length;
-
-		const enabled = (await this.client.prisma.guild.findMany({ where: { enabled: true } })).length;
+		const premium = await this.client.prisma.guild.count({ where: { premium: true } });
+		const enabled = await this.client.prisma.guild.count({ where: { enabled: true } });
+		const ss_events = await this.client.prisma.secretSanta.findMany({ where: { status: 3 } }); // { where: { status: { lt: 4 } } }
+		const ss_users = ss_events.map(event => Object.keys(event.users).length).reduce((acc, users) => acc + users);
 
 		const response = await fetch(`https://api.statcord.com/v3/${this.client.user.id}/aggregate`);
 		const stats = response.ok ? await response.json() : null;
@@ -46,6 +47,8 @@ module.exports = class AboutCommand extends Command {
 					.addField(i18n('commands.info.fields.commands'), String(commands), true)
 					.addField(i18n('commands.info.fields.servers'), String(guilds), true)
 					.addField(i18n('commands.info.fields.premium_servers'), String(premium), true)
+					.addField(i18n('commands.info.fields.secret_santa_events'), String(ss_events.length), true)
+					.addField(i18n('commands.info.fields.secret_santa_users'), String(ss_users), true)
 					.addField(i18n('commands.info.fields.counting_in.title'), i18n('commands.info.fields.counting_in.value', enabled, { servers: enabled }), true)
 					.addField(i18n('commands.info.fields.more.title'), i18n('commands.info.fields.more.value', { url: 'https://xmasbot.cf/stats' }), true)
 					.setFooter(i18n('bot.footer'), this.client.user.avatarURL())

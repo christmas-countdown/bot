@@ -21,6 +21,7 @@
     "@eartharoid/dtf": "^2.0.1",
     "@eartharoid/i18n": "^1.0.2",
     "@prisma/client": "^3.4.1",
+    "ascii-table": "^0.0.9",
     "blapi": "^2.2.1",
     "discord.js": "^13.3.1",
     "dotenv": "^10.0.0",
