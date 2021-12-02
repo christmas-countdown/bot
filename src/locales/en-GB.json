@@ -29,9 +29,13 @@
 				"description": "Please choose a text channel or omit the channel option to use the current channel.",
 				"title": "❌ Invalid channel"
 			},
-			"missing_permission": {
+			"missing_permission:webhook": {
 				"description": "The bot does not have permission to manage webhooks.",
 				"title":"❌ Can't create webhook"
+			},
+			"missing_permission:view": {
+				"description": "Please ensure the bot has permission to view the channel.",
+				"title": "❌ Can't create webhook"
 			}
 		},
 		"days": {
@@ -85,6 +89,8 @@
 					"value": "[Click here]({url})"
 				},
 				"premium_servers": "⭐ Premium servers",
+				"secret_santa_events": "Secret Santa events",
+				"secret_santa_users": "Secret Santa participants",
 				"servers": "Servers"
 			},
 			"title": "Information"
@@ -140,6 +146,41 @@
 				"{seconds} second left",
 				"{seconds} seconds left"
 			]
+		},
+		"secret_santa": {
+			"blacklist": {
+				"add": {
+					"added": {
+						"description": "{member} has been added to the naughty list.",
+						"title": "✅ Added"
+					}
+				},
+				"remove": {
+					"removed": {
+						"description": "{member} has been removed from the naughty list.",
+						"title": "✅ Removed"
+					},
+					"cannot_remove": {
+						"description": "{member} is not on the naughty list.",
+						"title":"❌ Can't remove member"
+					}
+				},
+				"list": "The naughty list"
+			},
+			"no_event": {
+				"description": "There are no secret santa events.",
+				"title":"❌ Error"
+			},
+			"show": {
+				"none": {
+					"description": "You have not entered a Secret Santa event.",
+					"title": "❌ Not assigned"
+				},
+				"show": {
+					"description": "**You are {member}'s Santa.** Give them a gift, following the event guidelines set by the organiser.",
+					"title": "Secret Santa"
+				}
+			}
 		},
 		"server": {
 			"reset": {

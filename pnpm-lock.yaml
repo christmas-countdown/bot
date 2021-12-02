@@ -5,6 +5,7 @@ specifiers:
   '@eartharoid/dtf': ^2.0.1
   '@eartharoid/i18n': ^1.0.2
   '@prisma/client': ^3.4.1
+  ascii-table: ^0.0.9
   blapi: ^2.2.1
   bufferutil: ^4.0.5
   discord.js: ^13.3.1
@@ -28,6 +29,7 @@ dependencies:
   '@eartharoid/dtf': 2.0.1
   '@eartharoid/i18n': 1.0.2
   '@prisma/client': 3.4.1_prisma@3.4.1
+  ascii-table: 0.0.9
   blapi: 2.2.1
   discord.js: 13.3.1_5971b5a749a91823f5467a6d31a2f8b3
   dotenv: 10.0.0
@@ -270,6 +272,10 @@ packages:
     dependencies:
       sprintf-js: 1.0.3
     dev: true
+
+  /ascii-table/0.0.9:
+    resolution: {integrity: sha1-BqZgTWpV1L9BqaR9mHLXp42jHnM=}
+    dev: false
 
   /astral-regex/2.0.0:
     resolution: {integrity: sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==}
