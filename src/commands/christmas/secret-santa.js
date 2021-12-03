@@ -93,7 +93,7 @@ module.exports = class SecretSantaCommand extends Command {
 					new MessageEmbed()
 						.setColor(colour)
 						.setTitle(i18n('commands.secret_santa.no_event.title'))
-						.setDescription(i18n('commands.secret_santa.no_event.description'))
+						.setDescription(i18n('commands.secret_santa.no_event.description', { url: 'https://christmascountdown.live/discord/secret-santa' }))
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});

@@ -168,7 +168,7 @@
 				"list": "The naughty list"
 			},
 			"no_event": {
-				"description": "There are no secret santa events.",
+				"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
 				"title":"❌ Error"
 			},
 			"show": {
