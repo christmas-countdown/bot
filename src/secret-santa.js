@@ -15,12 +15,12 @@ module.exports = class SecretSanta {
 		return assigned;
 	}
 
-	check() {
-		this.client.guilds.cache.forEach(async guild => {
+	async check() {
+		for (const guild in this.client.guilds.cache) {
 			// GET /guilds/{guild.id}/scheduled-events
 			const events = await this.client.api.guilds(guild.id)['scheduled-events'].get();
 			events.forEach(async event => await this.handleEvent(event));
-		});
+		}
 	}
 
 	async handleEvent(event) {
