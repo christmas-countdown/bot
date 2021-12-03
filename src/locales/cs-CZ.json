@@ -1,80 +1,80 @@
 {
 	"bot": {
 		"command_execution_error": {
-			"description": "",
-			"title": ""
+			"description": "Vyskytla se neočekávaná chyba. Prosím požádejte o pomoc v [the support server]({url}).",
+			"title": "Error"
 		},
-		"footer": "",
+		"footer": "Christmas Countdown by eartharoid",
 		"guild_only": {
-			"description": "",
-			"title": ""
+			"description": "Tento příkaz lze použít pouze v rámci serveru. [Přidat bota na tvůj server.]({invite})",
+			"title": "Error"
 		},
 		"member_missing_permissions": {
-			"description": "",
-			"title": ""
+			"description": "Pro použití tohoto příkazu potřebuješ následující oprávnění:\n{permissions}",
+			"title": "Error"
 		},
-		"migrate": "",
+		"migrate": "Robot Christmas Countdown bot teď používá slash příkazy!\n**Pro správné fungování prosím pozvi robota znovu pomocí tohoto odkazu: https://christmascountdown.live/invite.**",
 		"missing_permissions": {
-			"description": "",
-			"title": ""
+			"description": "Robot Christmas Countdown pro správné fungování potřebuje následující oprávnění:\n{permissions}",
+			"title": "Error"
 		}
 	},
 	"commands": {
 		"countdown": {
 			"created": {
-				"description": "",
-				"title": ""
+				"description": "Odpočet nená aktivní! **Zapni ho pomocí prákazu [`/toggle`]({url}).**\n\nKdyž je aktivní, robot pošle do kanálu {channel} každé ráno mezi 05:00 a 06:00 zprávu.",
+				"title": "✅ Webhook na odpočítávání vytvořen"
 			},
 			"invalid_channel": {
-				"description": "",
-				"title": ""
+				"description": "Prosím zvolte již existující kanál, nebo tuto možnost vynechejte.",
+				"title": "❌ Neplatný kanál"
 			},
 			"missing_permission:view": {
-				"description": "",
-				"title": ""
+				"description": "Ujistěte se, že má robot oprávnění ke sledování kanálu.",
+				"title": "❌ Nemohl jsem vytvořit webhook"
 			},
 			"missing_permission:webhook": {
-				"description": "",
-				"title": ""
+				"description": "Bot nemá oprávnění na úpravu webhooků.",
+				"title": "❌ Nemohl jsem vytvořit webhook"
 			}
 		},
 		"days": {
 			"days": [
-				"",
-				""
+				"za **{days} den**",
+				"za **{days} dní**"
 			],
-			"description": "",
+			"description": "Zbývá {days} nebo {sleeps}[(?)]({url} \"Jak se liší dny od nocí?\") do vánoc!",
 			"sleeps": [
-				"",
-				""
+				"**{sleeps} noc**",
+				"**{sleeps} nocí**"
 			],
 			"title": [
-				"",
-				""
+				"{days} den zbývá",
+				"{days} dnů zbývá"
 			]
 		},
 		"donate": {
-			"description": "",
-			"title": ""
+			"description": "**[Přispěj]({url})** pro odemčení těchto funkcí:\n\\⭐ `mention`/`role` \n\\⭐ `autotoggle`",
+			"title": "Získat prémium"
 		},
 		"help": {
 			"list": {
-				"description": "",
-				"title": ""
+				"description": "Kliknutím na název příkazu získáte další informace o konkrétním příkazu.[Join the support server]({discord}) pokud potřebuješ pomoc.\n**[Click here to enable the countdown.]({enable})**",
+				"title": "Příkazy"
 			}
 		},
 		"hours": {
 			"description": [
-				"",
-				""
+				"Zbývá **{hours}** hodina do vánoc!",
+				"Zbývá **{hours}**hodin do vánoc!"
 			],
 			"title": [
-				"",
-				""
+				"{hours} hodina zbývá",
+				"{hours} hodin zbývá"
 			]
 		},
 		"info": {
-			"description": "",
+			"description": "Vánoční Odpočet pro discord. Vytvořeno [eartharoid]({eartharoid}) a běží od listopadu roku 2018. [Zjistit více.]({about})",
 			"fields": {
 				"commands": "",
 				"counting_in": {
