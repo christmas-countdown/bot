@@ -27,7 +27,6 @@ module.exports = class SecretSanta {
 		if (event.entity_metadata?.location?.toLowerCase() !== 'christmas countdown') return false; // ignore unrelated events
 
 		const guild_name = this.client.guilds.cache.get(event.guild_id)?.name;
-		const g_settings = await this.client.prisma.guild.findUnique({ where: { id: event.guild_id } });
 		let row = await this.client.prisma.secretSanta.findUnique({ where: { id: event.id } });
 
 		if (!row) {
@@ -68,7 +67,7 @@ module.exports = class SecretSanta {
 			// map user IDs and filter through blacklist
 			interested = interested
 				.map(i => i.user.id)
-				.filter(id => !g_settings.secret_santa_blacklist.includes(id));
+				.filter(id => !row.guild.secret_santa_blacklist.includes(id));
 
 			const users = this.assignUsers(interested);
 
