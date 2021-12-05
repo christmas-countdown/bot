@@ -37,7 +37,7 @@ module.exports = class CountdownCommand extends Command {
 		/** @type {TextChannel} */
 		const channel = interaction.options.getChannel('channel') ?? interaction.channel;
 
-		if (channel?.type !== 'GUILD_TEXT') {
+		if (!(['GUILD_NEWS', 'GUILD_TEXT'].includes(channel?.type))) {
 			return await interaction.editReply({
 				embeds: [
 					new MessageEmbed()
@@ -49,7 +49,7 @@ module.exports = class CountdownCommand extends Command {
 			});
 		}
 
-		if (!interaction.guild.me.permissionsIn(channel).has(Permissions.FLAGS.VIEW_CHANNEL)) {
+		if (!channel.viewable) {
 			return await interaction.editReply({
 				embeds: [
 					new MessageEmbed()
