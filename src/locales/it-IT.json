@@ -1,126 +1,126 @@
 {
 	"bot": {
 		"command_execution_error": {
-			"description": "",
-			"title": ""
+			"description": "Si è verificato un errore imprevisto. Chiedi aiuto qui: [the support server]({url}).",
+			"title": "Errore"
 		},
-		"footer": "",
+		"footer": "Christmas Countdown di eartharoid",
 		"guild_only": {
-			"description": "",
-			"title": ""
+			"description": "Questo comando può essere utilizzato solo all'interno di un canale del server. [Aggiungi il bot al tuo server.]({invite})",
+			"title": "Errore"
 		},
 		"member_missing_permissions": {
-			"description": "",
-			"title": ""
+			"description": "Hai bisogno dei seguenti permessi per utilizzare questo comando:\n{permissions}",
+			"title": "Errore"
 		},
-		"migrate": "",
+		"migrate": "Il bot per il Countdown Natalizio ora utilizza il comando con lo slash!\n**Per piacere invita di nuovo il bot da qua: https://christmascountdown.live/invite.**",
 		"missing_permissions": {
-			"description": "",
-			"title": ""
+			"description": "Il bot richiede i seguenti permessi:\n{permissions}",
+			"title": "Errore"
 		}
 	},
 	"commands": {
 		"countdown": {
 			"created": {
-				"description": "",
-				"title": ""
+				"description": "Il tuo countdown non è attivo! **Attivalo con [`/toggle`]({url}).**\n\nQuando attivo, il messaggio del countdown sarà mandato {channel} ogni mattina tra le 05:00 e le 06:00.",
+				"title": "✅ Countdown webhook creato"
 			},
 			"invalid_channel": {
-				"description": "",
-				"title": ""
+				"description": "Per piacere scegli un canale di testo oppure ometti il canale per utilizzare questo.",
+				"title": "❌ Canale invalido"
 			},
 			"missing_permission:view": {
-				"description": "",
-				"title": ""
+				"description": "Assicurati che il bot abbia le autorizzazione per vedere il canale.",
+				"title": "❌ Non posso creare webhook"
 			},
 			"missing_permission:webhook": {
-				"description": "",
-				"title": ""
+				"description": "Il bot non ha le autorizzazione per gestire i webhooks.",
+				"title": "❌ Non posso creare webhook"
 			}
 		},
 		"days": {
 			"days": [
-				"",
-				""
+				"è **{days} giorno**",
+				"sono **{days} giorni**"
 			],
-			"description": "",
+			"description": "Ci sono {days} o {sleeps}[(?)]({url} \"Qual è la differenza tra giorni e notti?\") rimanenti a Natale!",
 			"sleeps": [
-				"",
-				""
+				"**{sleeps} notte**",
+				"**{sleeps} notti**"
 			],
 			"title": [
-				"",
-				""
+				"{days} giorno restante",
+				"{days} giorni rimasti"
 			]
 		},
 		"donate": {
-			"description": "",
-			"title": ""
+			"description": "**[Dona]({url})** per sbloccare queste funzioni:\n\\⭐ `mention`/`role` opzione server\n\\⭐ `autotoggle` opzione server",
+			"title": "Diventa premium"
 		},
 		"help": {
 			"list": {
-				"description": "",
-				"title": ""
+				"description": "Clicca sul nome di un comando per avere maggiori informazioni. [Entra nel server per ricevere supporto]({discord}) se hai bisogno di aiuto.\n**[clicca qua per attivare il countdown.]({enable})**",
+				"title": "Comandi"
 			}
 		},
 		"hours": {
 			"description": [
-				"",
-				""
+				"C'è **{hours}** ora restante prima di Natale!",
+				"Ci sono **{hours}** ore restanti prima di Natale!"
 			],
 			"title": [
-				"",
-				""
+				"{hours} ora mancante",
+				"{hours} ore rimaste"
 			]
 		},
 		"info": {
-			"description": "",
+			"description": "Il Christmas Countdown bot per Discord creato da [eartharoid]({eartharoid}) è attivo da Novembre 2018. [Leggi di più.]({about})",
 			"fields": {
-				"commands": "",
+				"commands": "Comandi usati",
 				"counting_in": {
-					"title": "",
+					"title": "Conto alla rovescia in",
 					"value": [
-						"",
-						""
+						"{servers} server",
+						"{servers} servers"
 					]
 				},
 				"more": {
-					"title": "",
-					"value": ""
+					"title": "Altre statistiche",
+					"value": "[Clicca qui]({url})"
 				},
-				"premium_servers": "",
-				"secret_santa_events": "",
-				"secret_santa_users": "",
-				"servers": ""
+				"premium_servers": "⭐ Premium servers",
+				"secret_santa_events": "Eventi segreti di Babbo Natale",
+				"secret_santa_users": "Partecipanti di Babbo Natale segreti",
+				"servers": "Servers"
 			},
-			"title": ""
+			"title": "Informazione"
 		},
 		"invite": {
-			"description": "",
-			"title": ""
+			"description": "[Clicca qui]({url}) per aggiungere il bot Christmas Countdown al tuo server.",
+			"title": "Invita"
 		},
 		"joke": {
-			"answer": "",
-			"question": ""
+			"answer": "Risposta",
+			"question": "Domanda"
 		},
 		"minutes": {
 			"description": [
-				"",
-				""
+				"Mancano **{minutes}** minuti al Natale!",
+				"Mancano **{minutes}** minuti al Natale!"
 			],
 			"title": [
-				"",
-				""
+				"{minutes} minuto restante",
+				"{minutes} minuti restanti"
 			]
 		},
 		"months": {
 			"description": [
-				"",
-				""
+				"Manca **{months}** mese a Natale!",
+				"Mancano **{months}** mesi a Natale!"
 			],
 			"title": [
-				"",
-				""
+				"{months} mese rimasto",
+				"{months} mesi rimasti"
 			]
 		},
 		"ping": {
@@ -135,7 +135,7 @@
 		},
 		"radio": {
 			"description": "",
-			"title": ""
+			"title": "Christmas Radio"
 		},
 		"seconds": {
 			"description": [
