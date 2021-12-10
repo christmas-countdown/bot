@@ -1,0 +1,298 @@
+{
+	"bot": {
+		"command_execution_error": {
+			"description": "Si è verificato un errore imprevisto. Chiedi aiuto qui: [the support server]({url}).",
+			"title": "Errore"
+		},
+		"footer": "Christmas Countdown di eartharoid",
+		"guild_only": {
+			"description": "Questo comando può essere utilizzato solo all'interno di un canale del server. [Aggiungi il bot al tuo server.]({invite})",
+			"title": "Errore"
+		},
+		"member_missing_permissions": {
+			"description": "Hai bisogno dei seguenti permessi per utilizzare questo comando:\n{permissions}",
+			"title": "Errore"
+		},
+		"migrate": "Il bot per il Countdown Natalizio ora utilizza il comando con lo slash!\n**Per piacere invita di nuovo il bot da qua: https://christmascountdown.live/invite.**",
+		"missing_permissions": {
+			"description": "Il bot richiede i seguenti permessi:\n{permissions}",
+			"title": "Errore"
+		}
+	},
+	"commands": {
+		"countdown": {
+			"created": {
+				"description": "Il tuo countdown non è attivo! **Attivalo con [`/toggle`]({url}).**\n\nQuando attivo, il messaggio del countdown sarà mandato {channel} ogni mattina tra le 05:00 e le 06:00.",
+				"title": "✅ Countdown webhook creato"
+			},
+			"invalid_channel": {
+				"description": "Per piacere scegli un canale di testo oppure ometti il canale per utilizzare questo.",
+				"title": "❌ Canale invalido"
+			},
+			"missing_permission:view": {
+				"description": "Assicurati che il bot abbia le autorizzazione per vedere il canale.",
+				"title": "❌ Non posso creare webhook"
+			},
+			"missing_permission:webhook": {
+				"description": "Il bot non ha le autorizzazione per gestire i webhooks.",
+				"title": "❌ Non posso creare webhook"
+			}
+		},
+		"days": {
+			"days": [
+				"è **{days} giorno**",
+				"sono **{days} giorni**"
+			],
+			"description": "Ci sono {days} o {sleeps}[(?)]({url} \"Qual è la differenza tra giorni e notti?\") rimanenti a Natale!",
+			"sleeps": [
+				"**{sleeps} notte**",
+				"**{sleeps} notti**"
+			],
+			"title": [
+				"{days} giorno restante",
+				"{days} giorni rimasti"
+			]
+		},
+		"donate": {
+			"description": "**[Dona]({url})** per sbloccare queste funzioni:\n\\⭐ `mention`/`role` opzione server\n\\⭐ `autotoggle` opzione server",
+			"title": "Diventa premium"
+		},
+		"help": {
+			"list": {
+				"description": "Clicca sul nome di un comando per avere maggiori informazioni. [Entra nel server per ricevere supporto]({discord}) se hai bisogno di aiuto.\n**[clicca qua per attivare il countdown.]({enable})**",
+				"title": "Comandi"
+			}
+		},
+		"hours": {
+			"description": [
+				"C'è **{hours}** ora restante prima di Natale!",
+				"Ci sono **{hours}** ore restanti prima di Natale!"
+			],
+			"title": [
+				"{hours} ora mancante",
+				"{hours} ore rimaste"
+			]
+		},
+		"info": {
+			"description": "Il Christmas Countdown bot per Discord creato da [eartharoid]({eartharoid}) è attivo da Novembre 2018. [Leggi di più.]({about})",
+			"fields": {
+				"commands": "Comandi usati",
+				"counting_in": {
+					"title": "Conto alla rovescia in",
+					"value": [
+						"{servers} server",
+						"{servers} servers"
+					]
+				},
+				"more": {
+					"title": "Altre statistiche",
+					"value": "[Clicca qui]({url})"
+				},
+				"premium_servers": "⭐ Premium servers",
+				"secret_santa_events": "Eventi segreti di Babbo Natale",
+				"secret_santa_users": "Partecipanti di Babbo Natale segreti",
+				"servers": "Servers"
+			},
+			"title": "Informazione"
+		},
+		"invite": {
+			"description": "[Clicca qui]({url}) per aggiungere il bot Christmas Countdown al tuo server.",
+			"title": "Invita"
+		},
+		"joke": {
+			"answer": "Risposta",
+			"question": "Domanda"
+		},
+		"minutes": {
+			"description": [
+				"Mancano **{minutes}** minuti al Natale!",
+				"Mancano **{minutes}** minuti al Natale!"
+			],
+			"title": [
+				"{minutes} minuto restante",
+				"{minutes} minuti restanti"
+			]
+		},
+		"months": {
+			"description": [
+				"Manca **{months}** mese a Natale!",
+				"Mancano **{months}** mesi a Natale!"
+			],
+			"title": [
+				"{months} mese rimasto",
+				"{months} mesi rimasti"
+			]
+		},
+		"ping": {
+			"calculating": "",
+			"fields": {
+				"average_ping": "",
+				"latency": "",
+				"shard_number": "",
+				"shard_ping": ""
+			},
+			"title": ""
+		},
+		"radio": {
+			"description": "",
+			"title": "Christmas Radio"
+		},
+		"seconds": {
+			"description": [
+				"",
+				""
+			],
+			"title": [
+				"",
+				""
+			]
+		},
+		"secret_santa": {
+			"blacklist": {
+				"add": {
+					"added": {
+						"description": "",
+						"title": ""
+					}
+				},
+				"list": "",
+				"remove": {
+					"cannot_remove": {
+						"description": "",
+						"title": ""
+					},
+					"removed": {
+						"description": "",
+						"title": ""
+					}
+				}
+			},
+			"no_event": {
+				"description": "",
+				"title": ""
+			},
+			"show": {
+				"none": {
+					"description": "",
+					"title": ""
+				},
+				"show": {
+					"description": "",
+					"title": ""
+				}
+			}
+		},
+		"server": {
+			"reset": {
+				"title": ""
+			},
+			"set": {
+				"cannot_enable": {
+					"description": "",
+					"title": ""
+				},
+				"invalid_locale": {
+					"description": "",
+					"title": ""
+				},
+				"invalid_timezone": {
+					"description": "",
+					"title": ""
+				},
+				"premium": {
+					"description": "",
+					"title": ""
+				},
+				"title": ""
+			},
+			"view": {
+				"description": "",
+				"title": ""
+			}
+		},
+		"sleeps": {
+			"days": [
+				"",
+				""
+			],
+			"description": "",
+			"sleeps": [
+				"",
+				""
+			],
+			"title": [
+				"",
+				""
+			]
+		},
+		"suggest": {
+			"description": "",
+			"title": ""
+		},
+		"toggle": {
+			"disabled": "",
+			"enabled": ""
+		},
+		"total": {
+			"days": [
+				"",
+				""
+			],
+			"description": [
+				"",
+				""
+			],
+			"hours": [
+				"",
+				""
+			],
+			"minutes": [
+				"",
+				""
+			],
+			"seconds": [
+				"",
+				""
+			],
+			"title": ""
+		},
+		"user": {
+			"reset": {
+				"title": ""
+			},
+			"set": {
+				"title": ""
+			},
+			"view": {
+				"title": ""
+			}
+		},
+		"weekday": {
+			"description": "",
+			"title": ""
+		},
+		"weeks": {
+			"description": [
+				"",
+				""
+			],
+			"title": [
+				"",
+				""
+			]
+		}
+	},
+	"countdown": {
+		"christmas_day": "",
+		"christmas_eve": "",
+		"disable": {
+			"description": "",
+			"title": ""
+		},
+		"live": "",
+		"merry_christmas": "",
+		"server_timezone": "",
+		"user_timezone": ""
+	},
+	"disabled": ""
+}
