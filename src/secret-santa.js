@@ -27,7 +27,10 @@ module.exports = class SecretSanta {
 		if (event.entity_metadata?.location?.toLowerCase() !== 'christmas countdown') return false; // ignore unrelated events
 
 		const guild_name = this.client.guilds.cache.get(event.guild_id)?.name;
-		let row = await this.client.prisma.secretSanta.findUnique({ where: { id: event.id } });
+		let row = await this.client.prisma.secretSanta.findUnique({
+			include: { guild: true },
+			where: { id: event.id }
+		});
 
 		if (!row) {
 			this.client.log.info(`New Secret Santa event in "${guild_name}"`);
