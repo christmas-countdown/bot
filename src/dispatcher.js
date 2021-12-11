@@ -109,8 +109,8 @@ module.exports.dispatch = async (manager, prisma, log) => {
 							.setColor(colour)
 							.setTitle(getMessage('countdown.disable.title'))
 							.setDescription(getMessage('countdown.disable.description', {
-								toggle: 'https://xmasbot.cf/commands#toggle',
-								topgg: `https://top.gg/bot/${id}`
+								review: 'https://repcheck.io/Christmas-Countdown',
+								toggle: 'https://xmasbot.cf/commands#toggle'
 							}))
 							.setFooter(footer, avatarURL)
 							.setTimestamp()

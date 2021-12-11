@@ -286,7 +286,7 @@
 		"christmas_day": "🎉 It's Christmas Day!",
 		"christmas_eve": "🎅 It's Christmas Eve!",
 		"disable": {
-			"description": "**Server administrators: use [`/toggle`]({toggle}) to disable the countdown.**\nPlease consider reviewing and upvoting the bot [here]({topgg}).\nThank you for using this bot and enjoy your Christmas! 🙂",
+			"description": "**Server administrators: use [`/toggle`]({toggle}) to disable the countdown.**\nPlease consider reviewing the bot [here]({review}).\nThank you for using this bot and enjoy your Christmas! 🙂",
 			"title": "🎄 Merry Christmas"
 		},
 		"live": "View the live countdown at [{pretty}]({url}).",
