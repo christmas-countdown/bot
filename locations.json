@@ -1,0 +1,6722 @@
+[
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 10,
+			"minute": 0
+		},
+		"departure": {
+			"day": 24,
+			"hour": 10,
+			"minute": 0
+		},
+		"city": "Santa's Village",
+		"region": "North Pole",
+		"latitude": 84.6,
+		"longitude": 168
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 10,
+			"minute": 9
+		},
+		"departure": {
+			"day": 24,
+			"hour": 10,
+			"minute": 10
+		},
+		"city": "Provideniya",
+		"region": "Russia",
+		"latitude": 64.436249,
+		"longitude": -173.233337
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 10,
+			"minute": 15
+		},
+		"departure": {
+			"day": 24,
+			"hour": 10,
+			"minute": 16
+		},
+		"city": "Anadyr",
+		"region": "Russia",
+		"latitude": 64.736656,
+		"longitude": 177.477371
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 10,
+			"minute": 21
+		},
+		"departure": {
+			"day": 24,
+			"hour": 10,
+			"minute": 22
+		},
+		"city": "Petropavlovsk-Kamchatskiy",
+		"region": "Russia",
+		"latitude": 53.061562,
+		"longitude": 158.622482
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 10,
+			"minute": 27
+		},
+		"departure": {
+			"day": 24,
+			"hour": 10,
+			"minute": 28
+		},
+		"city": "Bikini Atoll",
+		"region": "Marshall Islands",
+		"latitude": 11.626074,
+		"longitude": 165.545318
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 10,
+			"minute": 32
+		},
+		"departure": {
+			"day": 24,
+			"hour": 10,
+			"minute": 33
+		},
+		"city": "Majuro Atoll",
+		"region": "Marshall Islands",
+		"latitude": 7.110464,
+		"longitude": 171.13456
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 10,
+			"minute": 34
+		},
+		"departure": {
+			"day": 24,
+			"hour": 10,
+			"minute": 35
+		},
+		"city": "Tarawa",
+		"region": "Kiribati",
+		"latitude": 1.4518171,
+		"longitude": 172.9716617
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 10,
+			"minute": 36
+		},
+		"departure": {
+			"day": 24,
+			"hour": 10,
+			"minute": 37
+		},
+		"city": "Funafuti",
+		"region": "Tuvalu",
+		"latitude": -8.5211471,
+		"longitude": 179.1961926
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 10,
+			"minute": 38
+		},
+		"departure": {
+			"day": 24,
+			"hour": 10,
+			"minute": 39
+		},
+		"city": "Atafu",
+		"region": "Tokelau",
+		"latitude": -8.55543,
+		"longitude": -172.47252
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 10,
+			"minute": 40
+		},
+		"departure": {
+			"day": 24,
+			"hour": 10,
+			"minute": 41
+		},
+		"city": "Apia",
+		"region": "Samoa",
+		"latitude": -13.834225,
+		"longitude": -171.767476
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 10,
+			"minute": 42
+		},
+		"departure": {
+			"day": 24,
+			"hour": 10,
+			"minute": 43
+		},
+		"city": "Suva",
+		"region": "Fiji",
+		"latitude": -18.08769,
+		"longitude": 178.3841
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 10,
+			"minute": 45
+		},
+		"departure": {
+			"day": 24,
+			"hour": 10,
+			"minute": 46
+		},
+		"city": "Nukuʻalofa",
+		"region": "Tonga",
+		"latitude": -21.1393418,
+		"longitude": -175.204947
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 10,
+			"minute": 48
+		},
+		"departure": {
+			"day": 24,
+			"hour": 10,
+			"minute": 49
+		},
+		"city": "Auckland",
+		"region": "New Zealand",
+		"latitude": -36.847385,
+		"longitude": 174.765735
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 10,
+			"minute": 54
+		},
+		"departure": {
+			"day": 24,
+			"hour": 10,
+			"minute": 55
+		},
+		"city": "Napier",
+		"region": "New Zealand",
+		"latitude": -39.502581,
+		"longitude": 176.89863
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 11,
+			"minute": 0
+		},
+		"departure": {
+			"day": 24,
+			"hour": 11,
+			"minute": 1
+		},
+		"city": "Wellington",
+		"region": "New Zealand",
+		"latitude": -41.28648,
+		"longitude": 174.776217
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 11,
+			"minute": 3
+		},
+		"departure": {
+			"day": 24,
+			"hour": 11,
+			"minute": 4
+		},
+		"city": "Christchurch",
+		"region": "New Zealand",
+		"latitude": -43.531637,
+		"longitude": 172.636645
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 11,
+			"minute": 13
+		},
+		"departure": {
+			"day": 24,
+			"hour": 11,
+			"minute": 14
+		},
+		"city": "McMurdo Station",
+		"region": "Antarctica",
+		"latitude": -77.8418779,
+		"longitude": 166.6863447
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 11,
+			"minute": 25
+		},
+		"departure": {
+			"day": 24,
+			"hour": 11,
+			"minute": 26
+		},
+		"city": "Queenstown",
+		"region": "New Zealand",
+		"latitude": -45.03052,
+		"longitude": 168.669199
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 11,
+			"minute": 28
+		},
+		"departure": {
+			"day": 24,
+			"hour": 11,
+			"minute": 29
+		},
+		"city": "Noumea",
+		"region": "New Caledonia",
+		"latitude": -22.270994,
+		"longitude": 166.443273
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 11,
+			"minute": 31
+		},
+		"departure": {
+			"day": 24,
+			"hour": 11,
+			"minute": 32
+		},
+		"city": "Luganville",
+		"region": "Vanuatu",
+		"latitude": -15.51268,
+		"longitude": 167.151993
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 11,
+			"minute": 39
+		},
+		"departure": {
+			"day": 24,
+			"hour": 11,
+			"minute": 40
+		},
+		"city": "Honiara",
+		"region": "Solomon Islands",
+		"latitude": -9.426761,
+		"longitude": 159.948735
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 11,
+			"minute": 45
+		},
+		"departure": {
+			"day": 24,
+			"hour": 11,
+			"minute": 46
+		},
+		"city": "Gizo",
+		"region": "Solomon Islands",
+		"latitude": -8.1,
+		"longitude": 156.85
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 11,
+			"minute": 48
+		},
+		"departure": {
+			"day": 24,
+			"hour": 11,
+			"minute": 49
+		},
+		"city": "Yaren",
+		"region": "Nauru",
+		"latitude": -0.5466857,
+		"longitude": 166.9210913
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 11,
+			"minute": 51
+		},
+		"departure": {
+			"day": 24,
+			"hour": 11,
+			"minute": 52
+		},
+		"city": "Kolonia",
+		"region": "Micronesia",
+		"latitude": 6.9608,
+		"longitude": 158.208795
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 11,
+			"minute": 57
+		},
+		"departure": {
+			"day": 24,
+			"hour": 11,
+			"minute": 58
+		},
+		"city": "Urup",
+		"region": "Kuril Islands",
+		"latitude": 45.89974,
+		"longitude": 149.982132
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 3
+		},
+		"departure": {
+			"day": 24,
+			"hour": 12,
+			"minute": 4
+		},
+		"city": "Onekotan",
+		"region": "Kuril Islands",
+		"latitude": 49.445231,
+		"longitude": 154.765861
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 10
+		},
+		"departure": {
+			"day": 24,
+			"hour": 12,
+			"minute": 11
+		},
+		"city": "Magadan",
+		"region": "Russia",
+		"latitude": 59.55632,
+		"longitude": 150.81308
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 17
+		},
+		"departure": {
+			"day": 24,
+			"hour": 12,
+			"minute": 18
+		},
+		"city": "Yuzhno-Sakhalinsk",
+		"region": "Sakhalin",
+		"latitude": 50.157665,
+		"longitude": 143.18821
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 21
+		},
+		"departure": {
+			"day": 24,
+			"hour": 12,
+			"minute": 22
+		},
+		"city": "Birobidzhan",
+		"region": "Russia",
+		"latitude": 48.783333,
+		"longitude": 132.933333
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 25
+		},
+		"departure": {
+			"day": 24,
+			"hour": 12,
+			"minute": 26
+		},
+		"city": "Vladivostok",
+		"region": "Russia",
+		"latitude": 43.13137,
+		"longitude": 131.923828
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 31
+		},
+		"departure": {
+			"day": 24,
+			"hour": 12,
+			"minute": 32
+		},
+		"city": "Chichijima Island",
+		"region": "Japan",
+		"latitude": 27.094,
+		"longitude": 142.192
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 35
+		},
+		"departure": {
+			"day": 24,
+			"hour": 12,
+			"minute": 36
+		},
+		"city": "Ioto",
+		"region": "Japan",
+		"latitude": 24.783305,
+		"longitude": 141.319448
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 40
+		},
+		"departure": {
+			"day": 24,
+			"hour": 12,
+			"minute": 41
+		},
+		"city": "Saipan",
+		"region": "Northern Mariana Islands",
+		"latitude": 15.208083,
+		"longitude": 145.75101
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 43
+		},
+		"departure": {
+			"day": 24,
+			"hour": 12,
+			"minute": 44
+		},
+		"city": "Hagåtña",
+		"region": "Guam",
+		"latitude": 13.46671,
+		"longitude": 144.746506
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 45
+		},
+		"departure": {
+			"day": 24,
+			"hour": 12,
+			"minute": 46
+		},
+		"city": "Yap",
+		"region": "Micronesia",
+		"latitude": 9.537352,
+		"longitude": 138.124779
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 48
+		},
+		"departure": {
+			"day": 24,
+			"hour": 12,
+			"minute": 49
+		},
+		"city": "Kavieng",
+		"region": "Papua New Guinea",
+		"latitude": -2.570388,
+		"longitude": 150.808103
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 51
+		},
+		"departure": {
+			"day": 24,
+			"hour": 12,
+			"minute": 52
+		},
+		"city": "Lae",
+		"region": "Papua New Guinea",
+		"latitude": -6.72367,
+		"longitude": 146.990906
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 54
+		},
+		"departure": {
+			"day": 24,
+			"hour": 12,
+			"minute": 55
+		},
+		"city": "Port Moresby",
+		"region": "Papua New Guinea",
+		"latitude": -9.481553,
+		"longitude": 147.190242
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 56
+		},
+		"departure": {
+			"day": 24,
+			"hour": 12,
+			"minute": 57
+		},
+		"city": "Cairns",
+		"region": "Australia",
+		"latitude": -16.923151,
+		"longitude": 145.773897
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 12,
+			"minute": 59
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 0
+		},
+		"city": "Townsville",
+		"region": "Australia",
+		"latitude": -19.258106,
+		"longitude": 146.818351
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 2
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 3
+		},
+		"city": "Mackay",
+		"region": "Australia",
+		"latitude": -21.14342,
+		"longitude": 149.186845
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 5
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 6
+		},
+		"city": "Brisbane",
+		"region": "Australia",
+		"latitude": -27.46758,
+		"longitude": 153.027892
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 8
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 9
+		},
+		"city": "Sydney",
+		"region": "Australia",
+		"latitude": -33.867139,
+		"longitude": 151.207114
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 10
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 11
+		},
+		"city": "Wollongong",
+		"region": "Australia",
+		"latitude": -34.424984,
+		"longitude": 150.8931239
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 12
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 13
+		},
+		"city": "Canberra",
+		"region": "Australia",
+		"latitude": -35.28204,
+		"longitude": 149.12858
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 14
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 15
+		},
+		"city": "Melbourne",
+		"region": "Australia",
+		"latitude": -37.814251,
+		"longitude": 144.963169
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 17
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 18
+		},
+		"city": "Hobart",
+		"region": "Tasmania, Australia",
+		"latitude": -42.882743,
+		"longitude": 147.330234
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 20
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 21
+		},
+		"city": "Adelaide",
+		"region": "Australia",
+		"latitude": -34.92577,
+		"longitude": 138.599732
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 23
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 24
+		},
+		"city": "Alice Springs",
+		"region": "Australia",
+		"latitude": -23.700358,
+		"longitude": 133.880889
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 26
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 27
+		},
+		"city": "Darwin",
+		"region": "Australia",
+		"latitude": -12.461334,
+		"longitude": 130.841904
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 28
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 29
+		},
+		"city": "Dili",
+		"region": "Timor-Leste",
+		"latitude": -8.5568557,
+		"longitude": 125.5603143
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 30
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 31
+		},
+		"city": "Ambon",
+		"region": "Indonesia",
+		"latitude": -3.692929,
+		"longitude": 128.181697
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 34
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 35
+		},
+		"city": "Koror",
+		"region": "Palau",
+		"latitude": 7.343782,
+		"longitude": 134.484604
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 38
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 39
+		},
+		"city": "Naha",
+		"region": "Okinawa Prefecture, Japan",
+		"latitude": 26.228759,
+		"longitude": 127.688942
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 42
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 43
+		},
+		"city": "Fukuoka",
+		"region": "Japan",
+		"latitude": 33.657471,
+		"longitude": 130.432725
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 46
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 47
+		},
+		"city": "Busan",
+		"region": "South Korea",
+		"latitude": 35.158148,
+		"longitude": 129.037455
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 49
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 50
+		},
+		"city": "Kyoto",
+		"region": "Japan",
+		"latitude": 35.011636,
+		"longitude": 135.768029
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 52
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 53
+		},
+		"city": "Mt. Fuji",
+		"region": "Japan",
+		"latitude": 35.36497,
+		"longitude": 138.731275
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 54
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 55
+		},
+		"city": "Yokohama",
+		"region": "Japan",
+		"latitude": 35.443708,
+		"longitude": 139.638026
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 13,
+			"minute": 57
+		},
+		"departure": {
+			"day": 24,
+			"hour": 13,
+			"minute": 58
+		},
+		"city": "Tokyo",
+		"region": "Japan",
+		"latitude": 35.678451,
+		"longitude": 139.682282
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 14,
+			"minute": 0
+		},
+		"departure": {
+			"day": 24,
+			"hour": 14,
+			"minute": 1
+		},
+		"city": "Niigata",
+		"region": "Japan",
+		"latitude": 37.912579,
+		"longitude": 139.060832
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 14,
+			"minute": 5
+		},
+		"departure": {
+			"day": 24,
+			"hour": 14,
+			"minute": 6
+		},
+		"city": "Hakodate",
+		"region": "Japan",
+		"latitude": 41.768274,
+		"longitude": 140.72972
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 14,
+			"minute": 11
+		},
+		"departure": {
+			"day": 24,
+			"hour": 14,
+			"minute": 12
+		},
+		"city": "Seoul",
+		"region": "South Korea",
+		"latitude": 37.566535,
+		"longitude": 126.977969
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 14,
+			"minute": 17
+		},
+		"departure": {
+			"day": 24,
+			"hour": 14,
+			"minute": 18
+		},
+		"city": "Pyongyang",
+		"region": "North Korea",
+		"latitude": 39.014916,
+		"longitude": 125.71106
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 14,
+			"minute": 24
+		},
+		"departure": {
+			"day": 24,
+			"hour": 14,
+			"minute": 25
+		},
+		"city": "Yakutsk",
+		"region": "Russia",
+		"latitude": 62.039261,
+		"longitude": 129.746399
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 14,
+			"minute": 31
+		},
+		"departure": {
+			"day": 24,
+			"hour": 14,
+			"minute": 32
+		},
+		"city": "Irkutsk",
+		"region": "Russia",
+		"latitude": 52.275261,
+		"longitude": 104.30864
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 14,
+			"minute": 38
+		},
+		"departure": {
+			"day": 24,
+			"hour": 14,
+			"minute": 39
+		},
+		"city": "Ulaanbaatar",
+		"region": "Mongolia",
+		"latitude": 47.919535,
+		"longitude": 106.917655
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 14,
+			"minute": 45
+		},
+		"departure": {
+			"day": 24,
+			"hour": 14,
+			"minute": 46
+		},
+		"city": "Hohhot",
+		"region": "China",
+		"latitude": 40.847236,
+		"longitude": 111.744899
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 14,
+			"minute": 49
+		},
+		"departure": {
+			"day": 24,
+			"hour": 14,
+			"minute": 50
+		},
+		"city": "Beijing",
+		"region": "China",
+		"latitude": 39.904214,
+		"longitude": 116.407413
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 14,
+			"minute": 53
+		},
+		"departure": {
+			"day": 24,
+			"hour": 14,
+			"minute": 54
+		},
+		"city": "Xi'an",
+		"region": "China",
+		"latitude": 34.25144,
+		"longitude": 108.946749
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 14,
+			"minute": 56
+		},
+		"departure": {
+			"day": 24,
+			"hour": 14,
+			"minute": 57
+		},
+		"city": "Chongqing",
+		"region": "China",
+		"latitude": 29.552778,
+		"longitude": 106.545833
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 14,
+			"minute": 59
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 0
+		},
+		"city": "Shanghai",
+		"region": "China",
+		"latitude": 31.222222,
+		"longitude": 121.475
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 3
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 4
+		},
+		"city": "Changsha",
+		"region": "China",
+		"latitude": 28.228296,
+		"longitude": 112.937529
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 7
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 8
+		},
+		"city": "Kowloon",
+		"region": "Hong Kong",
+		"latitude": 22.321423,
+		"longitude": 114.169003
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 11
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 12
+		},
+		"city": "Taipei",
+		"region": "Taiwan",
+		"latitude": 25.091818,
+		"longitude": 121.559601
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 13
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 14
+		},
+		"city": "Baguio",
+		"region": "Philippines",
+		"latitude": 16.403072,
+		"longitude": 120.597017
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 15
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 16
+		},
+		"city": "Manila",
+		"region": "Philippines",
+		"latitude": 14.583333,
+		"longitude": 120.966667
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 17
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 18
+		},
+		"city": "Cebu",
+		"region": "Philippines",
+		"latitude": 10.30978,
+		"longitude": 123.892273
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 19
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 20
+		},
+		"city": "Muara",
+		"region": "Brunei",
+		"latitude": 4.805784,
+		"longitude": 114.646698
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 21
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 22
+		},
+		"city": "Bintulu",
+		"region": "Malaysia",
+		"latitude": 3.193499,
+		"longitude": 113.467076
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 24
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 25
+		},
+		"city": "Denpasar",
+		"region": "Indonesia",
+		"latitude": -8.669407,
+		"longitude": 115.215809
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 28
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 29
+		},
+		"city": "Broome",
+		"region": "Australia",
+		"latitude": -17.955123,
+		"longitude": 122.241457
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 31
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 32
+		},
+		"city": "Albany",
+		"region": "Australia",
+		"latitude": -35.023873,
+		"longitude": 117.883543
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 34
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 35
+		},
+		"city": "Perth",
+		"region": "Australia",
+		"latitude": -31.9554,
+		"longitude": 115.85859
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 37
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 38
+		},
+		"city": "Flying Fish Cove",
+		"region": "Christmas Island",
+		"latitude": -10.428593,
+		"longitude": 105.680687
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 40
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 41
+		},
+		"city": "Jakarta",
+		"region": "Indonesia",
+		"latitude": -6.211544,
+		"longitude": 106.845172
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 43
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 44
+		},
+		"city": "Pelambang",
+		"region": "Indonesia",
+		"latitude": -2.988213,
+		"longitude": 104.76537
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 46
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 47
+		},
+		"city": "Singapore",
+		"region": "Singapore",
+		"latitude": 1.370414,
+		"longitude": 103.822861
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 49
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 50
+		},
+		"city": "Kuala Lumpur",
+		"region": "Malaysia",
+		"latitude": 3.140215,
+		"longitude": 101.69317
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 52
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 53
+		},
+		"city": "Port Blair",
+		"region": "Andaman and Nicobar Islands",
+		"latitude": 11.618338,
+		"longitude": 92.722088
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 15,
+			"minute": 57
+		},
+		"departure": {
+			"day": 24,
+			"hour": 15,
+			"minute": 58
+		},
+		"city": "Bangkok",
+		"region": "Thailand",
+		"latitude": 13.723419,
+		"longitude": 100.476232
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 16,
+			"minute": 3
+		},
+		"departure": {
+			"day": 24,
+			"hour": 16,
+			"minute": 4
+		},
+		"city": "Siem Reap",
+		"region": "Cambodia",
+		"latitude": 13.437159,
+		"longitude": 103.858892
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 16,
+			"minute": 9
+		},
+		"departure": {
+			"day": 24,
+			"hour": 16,
+			"minute": 10
+		},
+		"city": "Ho Chi Minh City",
+		"region": "Vietnam",
+		"latitude": 10.777152,
+		"longitude": 106.700174
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 16,
+			"minute": 13
+		},
+		"departure": {
+			"day": 24,
+			"hour": 16,
+			"minute": 14
+		},
+		"city": "Vientiane",
+		"region": "Laos",
+		"latitude": 17.962769,
+		"longitude": 102.614429
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 16,
+			"minute": 17
+		},
+		"departure": {
+			"day": 24,
+			"hour": 16,
+			"minute": 18
+		},
+		"city": "Hanoi",
+		"region": "Vietnam",
+		"latitude": 21.033333,
+		"longitude": 105.85
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 16,
+			"minute": 21
+		},
+		"departure": {
+			"day": 24,
+			"hour": 16,
+			"minute": 22
+		},
+		"city": "Kunming",
+		"region": "China",
+		"latitude": 24.878769,
+		"longitude": 102.829941
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 16,
+			"minute": 28
+		},
+		"departure": {
+			"day": 24,
+			"hour": 16,
+			"minute": 29
+		},
+		"city": "Lhasa",
+		"region": "China",
+		"latitude": 29.647222,
+		"longitude": 91.145833
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 16,
+			"minute": 35
+		},
+		"departure": {
+			"day": 24,
+			"hour": 16,
+			"minute": 36
+		},
+		"city": "Wulumuqi",
+		"region": "China",
+		"latitude": 43.825645,
+		"longitude": 87.616823
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 16,
+			"minute": 42
+		},
+		"departure": {
+			"day": 24,
+			"hour": 16,
+			"minute": 43
+		},
+		"city": "Krasnoyarsk",
+		"region": "Russia",
+		"latitude": 56.001251,
+		"longitude": 92.88559
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 16,
+			"minute": 48
+		},
+		"departure": {
+			"day": 24,
+			"hour": 16,
+			"minute": 49
+		},
+		"city": "Norilsk",
+		"region": "Russia",
+		"latitude": 69.330406,
+		"longitude": 88.220482
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 16,
+			"minute": 50
+		},
+		"departure": {
+			"day": 24,
+			"hour": 16,
+			"minute": 51
+		},
+		"city": "Dudinka",
+		"region": "Russia",
+		"latitude": 69.408341,
+		"longitude": 86.181664
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 16,
+			"minute": 52
+		},
+		"departure": {
+			"day": 24,
+			"hour": 16,
+			"minute": 53
+		},
+		"city": "Omsk",
+		"region": "Russia",
+		"latitude": 54.970902,
+		"longitude": 73.393753
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 16,
+			"minute": 54
+		},
+		"departure": {
+			"day": 24,
+			"hour": 16,
+			"minute": 55
+		},
+		"city": "Nur-Sultan",
+		"region": "Kazakhstan",
+		"latitude": 51.168841,
+		"longitude": 71.467147
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 16,
+			"minute": 56
+		},
+		"departure": {
+			"day": 24,
+			"hour": 16,
+			"minute": 57
+		},
+		"city": "Bishkek",
+		"region": "Kyrgyzstan",
+		"latitude": 42.880747,
+		"longitude": 74.576073
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 16,
+			"minute": 58
+		},
+		"departure": {
+			"day": 24,
+			"hour": 16,
+			"minute": 59
+		},
+		"city": "Dushanbe",
+		"region": "Tajikistan",
+		"latitude": 38.554718,
+		"longitude": 68.777447
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 0
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 1
+		},
+		"city": "Thimphu",
+		"region": "Bhutan",
+		"latitude": 27.4727924,
+		"longitude": 89.6392863
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 2
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 3
+		},
+		"city": "Mount Everest",
+		"region": "Nepal",
+		"latitude": 27.983333,
+		"longitude": 86.933333
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 4
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 5
+		},
+		"city": "Pokhara",
+		"region": "Nepal",
+		"latitude": 28.2025654,
+		"longitude": 83.985008
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 6
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 7
+		},
+		"city": "Kolkata",
+		"region": "India",
+		"latitude": 22.572646,
+		"longitude": 88.363895
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 8
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 9
+		},
+		"city": "Dhaka",
+		"region": "Bangladesh",
+		"latitude": 23.709921,
+		"longitude": 90.407143
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 10
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 11
+		},
+		"city": "Chiang Mai",
+		"region": "Thailand",
+		"latitude": 18.780217,
+		"longitude": 98.96759
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 12
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 13
+		},
+		"city": "Yangon",
+		"region": "Myanmar (Burma)",
+		"latitude": 16.849022,
+		"longitude": 96.187598
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 14
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 15
+		},
+		"city": "Diego Garcia",
+		"region": "British Indian Ocean Territory",
+		"latitude": -7.336367,
+		"longitude": 72.422489
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 16
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 17
+		},
+		"city": "Malé",
+		"region": "Maldives",
+		"latitude": 3.202778,
+		"longitude": 73.22068
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 19
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 20
+		},
+		"city": "Galle",
+		"region": "Sri Lanka",
+		"latitude": 6.029592,
+		"longitude": 80.217144
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 22
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 23
+		},
+		"city": "Panaji",
+		"region": "India",
+		"latitude": 15.491921,
+		"longitude": 73.820409
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 25
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 26
+		},
+		"city": "Mumbai",
+		"region": "India",
+		"latitude": 19.017656,
+		"longitude": 72.856178
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 28
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 29
+		},
+		"city": "Taj Mahal",
+		"region": "India",
+		"latitude": 27.174858,
+		"longitude": 78.042383
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 31
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 32
+		},
+		"city": "New Delhi",
+		"region": "India",
+		"latitude": 28.635308,
+		"longitude": 77.22496
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 33
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 34
+		},
+		"city": "Mussoorie",
+		"region": "India",
+		"latitude": 30.449895,
+		"longitude": 78.080006
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 36
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 37
+		},
+		"city": "Karachi",
+		"region": "Pakistan",
+		"latitude": 24.893379,
+		"longitude": 67.028061
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 41
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 42
+		},
+		"city": "Islamabad",
+		"region": "Pakistan",
+		"latitude": 33.718151,
+		"longitude": 73.060547
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 45
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 46
+		},
+		"city": "Kabul",
+		"region": "Afghanistan",
+		"latitude": 34.547392,
+		"longitude": 69.204575
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 48
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 49
+		},
+		"city": "Ashgabat",
+		"region": "Turkmenistan",
+		"latitude": 37.962404,
+		"longitude": 58.302483
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 51
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 52
+		},
+		"city": "Zarafshan",
+		"region": "Uzbekistan",
+		"latitude": 41.578861,
+		"longitude": 64.19313
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 54
+		},
+		"departure": {
+			"day": 24,
+			"hour": 17,
+			"minute": 55
+		},
+		"city": "Aktobe",
+		"region": "Kazakhstan",
+		"latitude": 50.270931,
+		"longitude": 57.23138
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 17,
+			"minute": 59
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 0
+		},
+		"city": "Kirov",
+		"region": "Russia",
+		"latitude": 58.596081,
+		"longitude": 49.662659
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 18,
+			"minute": 4
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 5
+		},
+		"city": "Samara",
+		"region": "Russia",
+		"latitude": 53.20216,
+		"longitude": 50.159618
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 18,
+			"minute": 9
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 10
+		},
+		"city": "Tbilisi",
+		"region": "Georgia",
+		"latitude": 41.725649,
+		"longitude": 44.829205
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 18,
+			"minute": 14
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 15
+		},
+		"city": "Baku",
+		"region": "Azerbaijan",
+		"latitude": 40.405388,
+		"longitude": 49.867367
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 18,
+			"minute": 19
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 20
+		},
+		"city": "Yerevan",
+		"region": "Armenia",
+		"latitude": 40.15959,
+		"longitude": 44.508999
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 18,
+			"minute": 24
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 25
+		},
+		"city": "Tehran",
+		"region": "Iran",
+		"latitude": 35.696111,
+		"longitude": 51.423056
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 18,
+			"minute": 27
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 28
+		},
+		"city": "Kuwait City",
+		"region": "Kuwait",
+		"latitude": 29.3697222,
+		"longitude": 47.9783333
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 18,
+			"minute": 29
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 30
+		},
+		"city": "Riffa",
+		"region": "Bahrain",
+		"latitude": 26.1226062,
+		"longitude": 50.534262
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 18,
+			"minute": 31
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 32
+		},
+		"city": "Doha",
+		"region": "Qatar",
+		"latitude": 25.2854473,
+		"longitude": 51.5310398
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 18,
+			"minute": 33
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 34
+		},
+		"city": "Abu Dhabi",
+		"region": "United Arab Emirates",
+		"latitude": 24.457818,
+		"longitude": 54.400728
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 18,
+			"minute": 39
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 40
+		},
+		"city": "Sur",
+		"region": "Oman",
+		"latitude": 22.568,
+		"longitude": 59.5269
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 18,
+			"minute": 46
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 47
+		},
+		"city": "Victoria",
+		"region": "Seychelles",
+		"latitude": -4.6309,
+		"longitude": 55.4466
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 18,
+			"minute": 51
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 52
+		},
+		"city": "Saint-Denis",
+		"region": "Réunion",
+		"latitude": -20.8906596,
+		"longitude": 55.4550536
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 18,
+			"minute": 53
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 54
+		},
+		"city": "Mahebourg",
+		"region": "Mauritius",
+		"latitude": -20.4069809,
+		"longitude": 57.70042
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 18,
+			"minute": 57
+		},
+		"departure": {
+			"day": 24,
+			"hour": 18,
+			"minute": 58
+		},
+		"city": "White Island",
+		"region": "Antarctica",
+		"latitude": -67.5,
+		"longitude": 53
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 0
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 1
+		},
+		"city": "Iles Crozet",
+		"region": "French Southern and Antarctic Lands",
+		"latitude": -46.413245,
+		"longitude": 51.800537
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 2
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 3
+		},
+		"city": "Prince Edward Islands",
+		"region": "South Africa",
+		"latitude": -46.642847,
+		"longitude": 37.93647
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 4
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 5
+		},
+		"city": "Taolagnaro",
+		"region": "Madagascar",
+		"latitude": -25.0245,
+		"longitude": 46.9886
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 6
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 7
+		},
+		"city": "Antananarivo",
+		"region": "Madagascar",
+		"latitude": -18.903084,
+		"longitude": 47.521305
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 8
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 9
+		},
+		"city": "Mamoudzou",
+		"region": "Mayotte",
+		"latitude": -12.7809488,
+		"longitude": 45.227872
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 10
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 11
+		},
+		"city": "Moroni",
+		"region": "Comoros",
+		"latitude": -11.7004,
+		"longitude": 43.2412
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 12
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 13
+		},
+		"city": "Zanzibar",
+		"region": "Tanzania",
+		"latitude": -6.097406,
+		"longitude": 39.3822
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 14
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 15
+		},
+		"city": "Mombasa",
+		"region": "Kenya",
+		"latitude": -4.053054,
+		"longitude": 39.672859
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 16
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 17
+		},
+		"city": "Merca",
+		"region": "Somalia",
+		"latitude": 1.7174656,
+		"longitude": 44.7686135
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 18
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 19
+		},
+		"city": "Kampala",
+		"region": "Uganda",
+		"latitude": 0.314482,
+		"longitude": 32.580986
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 20
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 21
+		},
+		"city": "Nairobi",
+		"region": "Kenya",
+		"latitude": -1.292197,
+		"longitude": 36.811676
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 22
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 23
+		},
+		"city": "Jimma",
+		"region": "Ethiopia",
+		"latitude": 7.916667,
+		"longitude": 40.033333
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 24
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 25
+		},
+		"city": "Tadjoura",
+		"region": "Djibouti",
+		"latitude": 11.7913106,
+		"longitude": 42.8796227
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 26
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 27
+		},
+		"city": "Taiz",
+		"region": "Yemen",
+		"latitude": 13.5775886,
+		"longitude": 44.0177989
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 28
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 29
+		},
+		"city": "Asmara",
+		"region": "Eritrea",
+		"latitude": 15.3228767,
+		"longitude": 38.9250517
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 30
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 31
+		},
+		"city": "Jazan",
+		"region": "Saudi Arabia",
+		"latitude": 16.884389,
+		"longitude": 42.567816
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 33
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 34
+		},
+		"city": "Baghdad",
+		"region": "Iraq",
+		"latitude": 33.3157,
+		"longitude": 44.3922
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 43
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 44
+		},
+		"city": "Rostov-on-Don",
+		"region": "Russia",
+		"latitude": 47.229309,
+		"longitude": 39.717074
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 50
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 51
+		},
+		"city": "Moscow",
+		"region": "Russia",
+		"latitude": 55.755786,
+		"longitude": 37.617633
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 57
+		},
+		"departure": {
+			"day": 24,
+			"hour": 19,
+			"minute": 58
+		},
+		"city": "Saint Petersburg",
+		"region": "Russia",
+		"latitude": 59.939039,
+		"longitude": 30.315785
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 19,
+			"minute": 59
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 0
+		},
+		"city": "Rovaniemi",
+		"region": "Finland",
+		"latitude": 66.543708,
+		"longitude": 25.847187
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 3
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 4
+		},
+		"city": "Helsinki",
+		"region": "Finland",
+		"latitude": 60.17294,
+		"longitude": 24.936218
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 11
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 12
+		},
+		"city": "Tartu",
+		"region": "Estonia",
+		"latitude": 58.370884,
+		"longitude": 26.714828
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 16
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 17
+		},
+		"city": "Riga",
+		"region": "Latvia",
+		"latitude": 56.948455,
+		"longitude": 24.097415
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 19
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 20
+		},
+		"city": "Kaunas",
+		"region": "Lithuania",
+		"latitude": 54.901215,
+		"longitude": 23.909478
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 21
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 22
+		},
+		"city": "Gomel",
+		"region": "Belarus",
+		"latitude": 52.434005,
+		"longitude": 30.999845
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 23
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 24
+		},
+		"city": "Odessa",
+		"region": "Ukraine",
+		"latitude": 46.490499,
+		"longitude": 30.741077
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 25
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 26
+		},
+		"city": "Chisinau",
+		"region": "Moldova",
+		"latitude": 47.016717,
+		"longitude": 28.849742
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 27
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 28
+		},
+		"city": "Cluj-Napoca",
+		"region": "Romania",
+		"latitude": 46.772348,
+		"longitude": 23.596055
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 29
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 30
+		},
+		"city": "Bucharest",
+		"region": "Romania",
+		"latitude": 44.430785,
+		"longitude": 26.098053
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 31
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 32
+		},
+		"city": "Sofia",
+		"region": "Bulgaria",
+		"latitude": 42.696777,
+		"longitude": 23.321888
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 33
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 34
+		},
+		"city": "Thessaloniki",
+		"region": "Greece",
+		"latitude": 40.635488,
+		"longitude": 22.937113
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 35
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 36
+		},
+		"city": "Çeşme",
+		"region": "Turkey",
+		"latitude": 38.3209,
+		"longitude": 26.3051
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 38
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 39
+		},
+		"city": "İstanbul",
+		"region": "Turkey",
+		"latitude": 41.012379,
+		"longitude": 28.975926
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 44
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 45
+		},
+		"city": "Myra",
+		"region": "Turkey",
+		"latitude": 36.258908,
+		"longitude": 29.984556
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 50
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 51
+		},
+		"city": "Nicosia",
+		"region": "Cyprus",
+		"latitude": 35.166932,
+		"longitude": 33.366508
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 52
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 53
+		},
+		"city": "Beirut",
+		"region": "Lebanon",
+		"latitude": 33.8937913,
+		"longitude": 35.5017767
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 54
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 55
+		},
+		"city": "Damascus",
+		"region": "Syria",
+		"latitude": 33.5138073,
+		"longitude": 36.2765279
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 56
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 57
+		},
+		"city": "Zarqa",
+		"region": "Jordan",
+		"latitude": 32.0608187,
+		"longitude": 36.0941795
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 20,
+			"minute": 58
+		},
+		"departure": {
+			"day": 24,
+			"hour": 20,
+			"minute": 59
+		},
+		"city": "Jerusalem",
+		"region": "Israel",
+		"latitude": 31.777577,
+		"longitude": 35.235772
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 3
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 4
+		},
+		"city": "Alexandria",
+		"region": "Egypt",
+		"latitude": 31.208137,
+		"longitude": 29.919844
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 9
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 10
+		},
+		"city": "Kosti",
+		"region": "Sudan",
+		"latitude": 13.159,
+		"longitude": 32.6594
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 15
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 16
+		},
+		"city": "Juba",
+		"region": "South Sudan",
+		"latitude": 4.848364,
+		"longitude": 31.609121
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 19
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 20
+		},
+		"city": "Kigali",
+		"region": "Rwanda",
+		"latitude": -1.9705786,
+		"longitude": 30.1044288
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 21
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 22
+		},
+		"city": "Bujumbura",
+		"region": "Burundi",
+		"latitude": -3.361378,
+		"longitude": 29.3598782
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 23
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 24
+		},
+		"city": "Kindu",
+		"region": "Democratic Republic of the Congo",
+		"latitude": -2.92075,
+		"longitude": 25.915138
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 27
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 28
+		},
+		"city": "Kabwe",
+		"region": "Zambia",
+		"latitude": -8.568496,
+		"longitude": 29.562201
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 29
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 30
+		},
+		"city": "Mzuzu",
+		"region": "Malawi",
+		"latitude": -11.4389649,
+		"longitude": 34.0084395
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 31
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 32
+		},
+		"city": "Victoria Falls",
+		"region": "Zimbabwe",
+		"latitude": -17.933113,
+		"longitude": 25.827452
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 34
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 35
+		},
+		"city": "Gaborone",
+		"region": "Botswana",
+		"latitude": -24.628545,
+		"longitude": 25.914042
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 37
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 38
+		},
+		"city": "Johannesburg",
+		"region": "South Africa",
+		"latitude": -26.201452,
+		"longitude": 28.045488
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 39
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 40
+		},
+		"city": "Mbabane",
+		"region": "Swaziland",
+		"latitude": -26.3054482,
+		"longitude": 31.1366715
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 41
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 42
+		},
+		"city": "Maputo",
+		"region": "Mozambique",
+		"latitude": -25.965453,
+		"longitude": 32.583733
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 43
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 44
+		},
+		"city": "Maseru",
+		"region": "Lesotho",
+		"latitude": -29.3150767,
+		"longitude": 27.4869229
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 45
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 46
+		},
+		"city": "Cape Town",
+		"region": "South Africa",
+		"latitude": -33.918292,
+		"longitude": 18.424072
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 47
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 48
+		},
+		"city": "Swakopmund",
+		"region": "Namibia",
+		"latitude": -22.647148,
+		"longitude": 14.578359
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 49
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 50
+		},
+		"city": "Luanda",
+		"region": "Angola",
+		"latitude": -8.815502,
+		"longitude": 13.227097
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 51
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 52
+		},
+		"city": "Pointe-Noire",
+		"region": "Congo (Republic)",
+		"latitude": -4.768636,
+		"longitude": 11.855747
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 53
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 54
+		},
+		"city": "Kango",
+		"region": "Gabon",
+		"latitude": 0.1578,
+		"longitude": 10.102
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 55
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 56
+		},
+		"city": "Bambari",
+		"region": "Central African Republic",
+		"latitude": 5.7566,
+		"longitude": 20.6665
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 57
+		},
+		"departure": {
+			"day": 24,
+			"hour": 21,
+			"minute": 58
+		},
+		"city": "Douala",
+		"region": "Cameroon",
+		"latitude": 4.0445,
+		"longitude": 9.6977
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 21,
+			"minute": 59
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 0
+		},
+		"city": "Malabo",
+		"region": "Equatorial Guinea",
+		"latitude": 3.753382,
+		"longitude": 8.777732
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 1
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 2
+		},
+		"city": "São Tomé",
+		"region": "São Tomé and Príncipe",
+		"latitude": 0.3301924,
+		"longitude": 6.733343
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 3
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 4
+		},
+		"city": "Lagos",
+		"region": "Nigeria",
+		"latitude": 6.453,
+		"longitude": 3.3958
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 5
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 6
+		},
+		"city": "Abuja",
+		"region": "Nigeria",
+		"latitude": 9.058533,
+		"longitude": 7.488899
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 7
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 8
+		},
+		"city": "N'Djamena",
+		"region": "Chad",
+		"latitude": 12.130897,
+		"longitude": 15.040981
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 9
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 10
+		},
+		"city": "Agadez",
+		"region": "Niger",
+		"latitude": 16.9893,
+		"longitude": 7.9886
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 11
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 12
+		},
+		"city": "Sabhā",
+		"region": "Libya",
+		"latitude": 27.0521,
+		"longitude": 14.4161
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 13
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 14
+		},
+		"city": "Bordj Bou Arreridj",
+		"region": "Algeria",
+		"latitude": 36.070905,
+		"longitude": 4.756993
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 15
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 16
+		},
+		"city": "Tunis",
+		"region": "Tunisia",
+		"latitude": 36.8064948,
+		"longitude": 10.1815316
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 17
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 18
+		},
+		"city": "Gozo",
+		"region": "Malta",
+		"latitude": 36.044907,
+		"longitude": 14.239278
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 19
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 20
+		},
+		"city": "Palermo",
+		"region": "Sicily, Italy",
+		"latitude": 38.115681,
+		"longitude": 13.361159
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 21
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 22
+		},
+		"city": "Sorrento",
+		"region": "Italy",
+		"latitude": 40.6262925,
+		"longitude": 14.3757985
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 23
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 24
+		},
+		"city": "Rome",
+		"region": "Italy",
+		"latitude": 41.895466,
+		"longitude": 12.482324
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 25
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 26
+		},
+		"city": "Vatican City",
+		"region": "Vatican City",
+		"latitude": 41.902916,
+		"longitude": 12.453389
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 27
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 28
+		},
+		"city": "Dogana",
+		"region": "San Marino",
+		"latitude": 43.9810089,
+		"longitude": 12.4896372
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 29
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 30
+		},
+		"city": "Venice",
+		"region": "Italy",
+		"latitude": 45.434961,
+		"longitude": 12.338505
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 31
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 32
+		},
+		"city": "Split",
+		"region": "Croatia",
+		"latitude": 43.515996,
+		"longitude": 16.446622
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 33
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 34
+		},
+		"city": "Podgorica",
+		"region": "Montenegro",
+		"latitude": 42.4304196,
+		"longitude": 19.2593642
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 35
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 36
+		},
+		"city": "Tirana",
+		"region": "Albania",
+		"latitude": 41.3275459,
+		"longitude": 19.8186982
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 37
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 38
+		},
+		"city": "Belgrade",
+		"region": "Serbia",
+		"latitude": 44.786568,
+		"longitude": 20.4489216
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 39
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 40
+		},
+		"city": "Banja Luka",
+		"region": "Bosnia and Herzegovina",
+		"latitude": 44.762885,
+		"longitude": 17.186565
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 41
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 42
+		},
+		"city": "Ljubljana",
+		"region": "Slovenia",
+		"latitude": 46.051426,
+		"longitude": 14.505965
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 43
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 44
+		},
+		"city": "Szekesfehervar",
+		"region": "Hungary",
+		"latitude": 47.185014,
+		"longitude": 18.423275
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 45
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 46
+		},
+		"city": "Bratislava",
+		"region": "Slovakia",
+		"latitude": 48.148376,
+		"longitude": 17.10731
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 47
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 48
+		},
+		"city": "Prague",
+		"region": "Czech Republic",
+		"latitude": 50.087811,
+		"longitude": 14.42046
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 49
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 50
+		},
+		"city": "Katowice",
+		"region": "Poland",
+		"latitude": 50.264003,
+		"longitude": 19.033466
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 52
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 53
+		},
+		"city": "Salzburg",
+		"region": "Austria",
+		"latitude": 47.81014,
+		"longitude": 13.052607
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 55
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 56
+		},
+		"city": "Vaduz",
+		"region": "Liechtenstein",
+		"latitude": 47.1410303,
+		"longitude": 9.5209277
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 22,
+			"minute": 58
+		},
+		"departure": {
+			"day": 24,
+			"hour": 22,
+			"minute": 59
+		},
+		"city": "Lucerne",
+		"region": "Switzerland",
+		"latitude": 47.051741,
+		"longitude": 8.308391
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 3
+		},
+		"departure": {
+			"day": 24,
+			"hour": 23,
+			"minute": 4
+		},
+		"city": "Nuremberg",
+		"region": "Germany",
+		"latitude": 49.451605,
+		"longitude": 11.078814
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 8
+		},
+		"departure": {
+			"day": 24,
+			"hour": 23,
+			"minute": 9
+		},
+		"city": "Berlin",
+		"region": "Germany",
+		"latitude": 52.52348,
+		"longitude": 13.411494
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 11
+		},
+		"departure": {
+			"day": 24,
+			"hour": 23,
+			"minute": 12
+		},
+		"city": "Hamburg",
+		"region": "Germany",
+		"latitude": 53.559073,
+		"longitude": 9.990692
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 14
+		},
+		"departure": {
+			"day": 24,
+			"hour": 23,
+			"minute": 15
+		},
+		"city": "Copenhagen",
+		"region": "Denmark",
+		"latitude": 55.677004,
+		"longitude": 12.568016
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 17
+		},
+		"departure": {
+			"day": 24,
+			"hour": 23,
+			"minute": 18
+		},
+		"city": "Stockholm",
+		"region": "Sweden",
+		"latitude": 59.33389,
+		"longitude": 18.06427
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 19
+		},
+		"departure": {
+			"day": 24,
+			"hour": 23,
+			"minute": 20
+		},
+		"city": "Östersund",
+		"region": "Sweden",
+		"latitude": 63.178579,
+		"longitude": 14.635339
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 21
+		},
+		"departure": {
+			"day": 24,
+			"hour": 23,
+			"minute": 22
+		},
+		"city": "Trondheim",
+		"region": "Norway",
+		"latitude": 63.43028,
+		"longitude": 10.396853
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 25
+		},
+		"departure": {
+			"day": 24,
+			"hour": 23,
+			"minute": 26
+		},
+		"city": "Amsterdam",
+		"region": "Netherlands",
+		"latitude": 52.373812,
+		"longitude": 4.890951
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 29
+		},
+		"departure": {
+			"day": 24,
+			"hour": 23,
+			"minute": 30
+		},
+		"city": "Antwerp",
+		"region": "Belgium",
+		"latitude": 51.219773,
+		"longitude": 4.394649
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 32
+		},
+		"departure": {
+			"day": 24,
+			"hour": 23,
+			"minute": 33
+		},
+		"city": "Paris",
+		"region": "France",
+		"latitude": 48.856667,
+		"longitude": 2.350987
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 37
+		},
+		"departure": {
+			"day": 24,
+			"hour": 23,
+			"minute": 38
+		},
+		"city": "Luxembourg City",
+		"region": "Luxembourg",
+		"latitude": 49.610004,
+		"longitude": 6.129596
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 42
+		},
+		"departure": {
+			"day": 24,
+			"hour": 23,
+			"minute": 43
+		},
+		"city": "Monte Carlo",
+		"region": "Monaco",
+		"latitude": 43.740439,
+		"longitude": 7.425577
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 48
+		},
+		"departure": {
+			"day": 24,
+			"hour": 23,
+			"minute": 49
+		},
+		"city": "Encamp",
+		"region": "Andorra",
+		"latitude": 42.536331,
+		"longitude": 1.58311
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 55
+		},
+		"departure": {
+			"day": 24,
+			"hour": 23,
+			"minute": 56
+		},
+		"city": "Barcelona",
+		"region": "Spain",
+		"latitude": 41.387917,
+		"longitude": 2.169919
+	},
+	{
+		"arrival": {
+			"day": 24,
+			"hour": 23,
+			"minute": 59
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 0
+		},
+		"city": "Madrid",
+		"region": "Spain",
+		"latitude": 40.416691,
+		"longitude": -3.700345
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 3
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 4
+		},
+		"city": "Seville",
+		"region": "Spain",
+		"latitude": 37.389022,
+		"longitude": -5.98454
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 7
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 8
+		},
+		"city": "Essaouira",
+		"region": "Morocco",
+		"latitude": 31.510357,
+		"longitude": -9.772413
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 11
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 12
+		},
+		"city": "Kiffa",
+		"region": "Mauritania",
+		"latitude": 16.617,
+		"longitude": -11.3987
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 15
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 16
+		},
+		"city": "Timbuktu",
+		"region": "Mali",
+		"latitude": 16.7688,
+		"longitude": -3.0073
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 17
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 18
+		},
+		"city": "Koudougou",
+		"region": "Burkina Faso",
+		"latitude": 12.2562183,
+		"longitude": -2.3517526
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 19
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 20
+		},
+		"city": "Djougou",
+		"region": "Benin",
+		"latitude": 9.7080916,
+		"longitude": 1.6663523
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 21
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 22
+		},
+		"city": "Lome",
+		"region": "Togo",
+		"latitude": 6.128357,
+		"longitude": 1.22745
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 23
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 24
+		},
+		"city": "Accra",
+		"region": "Ghana",
+		"latitude": 5.55824,
+		"longitude": -0.196724
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 26
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 27
+		},
+		"city": "Divo",
+		"region": "Côte d'Ivoire",
+		"latitude": 5.8478,
+		"longitude": -5.3628
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 29
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 30
+		},
+		"city": "Gbarnga",
+		"region": "Liberia",
+		"latitude": 7.0024321,
+		"longitude": -9.4728244
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 31
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 32
+		},
+		"city": "Bo",
+		"region": "Sierra Leone",
+		"latitude": 7.9551791,
+		"longitude": -11.7409946
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 34
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 35
+		},
+		"city": "Labé",
+		"region": "Guinea",
+		"latitude": 11.323278,
+		"longitude": -12.298036
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 37
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 38
+		},
+		"city": "Bissau",
+		"region": "Guinea-Bissau",
+		"latitude": 11.8632196,
+		"longitude": -15.5843227
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 40
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 41
+		},
+		"city": "Bignona",
+		"region": "Senegal",
+		"latitude": 12.8135,
+		"longitude": -16.2386
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 45
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 46
+		},
+		"city": "Serekunda",
+		"region": "Gambia",
+		"latitude": 13.4502991,
+		"longitude": -16.6880841
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 49
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 50
+		},
+		"city": "Dakar",
+		"region": "Senegal",
+		"latitude": 14.751311,
+		"longitude": -17.333336
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 0,
+			"minute": 58
+		},
+		"departure": {
+			"day": 25,
+			"hour": 0,
+			"minute": 59
+		},
+		"city": "Santa Cruz de Tenerife",
+		"region": "Canary Islands",
+		"latitude": 28.46981,
+		"longitude": -16.254856
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 1,
+			"minute": 6
+		},
+		"departure": {
+			"day": 25,
+			"hour": 1,
+			"minute": 7
+		},
+		"city": "Lisbon",
+		"region": "Portugal",
+		"latitude": 38.708286,
+		"longitude": -9.136162
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 1,
+			"minute": 13
+		},
+		"departure": {
+			"day": 25,
+			"hour": 1,
+			"minute": 14
+		},
+		"city": "Bilbao",
+		"region": "Spain",
+		"latitude": 43.2569629,
+		"longitude": -2.9234409
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 1,
+			"minute": 17
+		},
+		"departure": {
+			"day": 25,
+			"hour": 1,
+			"minute": 18
+		},
+		"city": "Toulouse",
+		"region": "France",
+		"latitude": 43.600443,
+		"longitude": 1.450444
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 1,
+			"minute": 21
+		},
+		"departure": {
+			"day": 25,
+			"hour": 1,
+			"minute": 22
+		},
+		"city": "Mont Saint-Michel",
+		"region": "France",
+		"latitude": 48.635899,
+		"longitude": -1.511551
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 1,
+			"minute": 25
+		},
+		"departure": {
+			"day": 25,
+			"hour": 1,
+			"minute": 26
+		},
+		"city": "London",
+		"region": "United Kingdom",
+		"latitude": 51.500152,
+		"longitude": -0.126236
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 1,
+			"minute": 30
+		},
+		"departure": {
+			"day": 25,
+			"hour": 1,
+			"minute": 31
+		},
+		"city": "Swansea",
+		"region": "Wales, United Kingdom",
+		"latitude": 51.620069,
+		"longitude": -3.943367
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 1,
+			"minute": 32
+		},
+		"departure": {
+			"day": 25,
+			"hour": 1,
+			"minute": 33
+		},
+		"city": "Liverpool",
+		"region": "England, United Kingdom",
+		"latitude": 53.406759,
+		"longitude": -2.993663
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 1,
+			"minute": 35
+		},
+		"departure": {
+			"day": 25,
+			"hour": 1,
+			"minute": 36
+		},
+		"city": "Edinburgh",
+		"region": "Scotland, UK",
+		"latitude": 55.950176,
+		"longitude": -3.187536
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 1,
+			"minute": 38
+		},
+		"departure": {
+			"day": 25,
+			"hour": 1,
+			"minute": 39
+		},
+		"city": "Douglas",
+		"region": "Isle of Man",
+		"latitude": 54.152981,
+		"longitude": -4.48579
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 1,
+			"minute": 40
+		},
+		"departure": {
+			"day": 25,
+			"hour": 1,
+			"minute": 41
+		},
+		"city": "Dublin",
+		"region": "Ireland",
+		"latitude": 53.343865,
+		"longitude": -6.254954
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 1,
+			"minute": 42
+		},
+		"departure": {
+			"day": 25,
+			"hour": 1,
+			"minute": 43
+		},
+		"city": "Belfast",
+		"region": "Northern Ireland, UK",
+		"latitude": 54.596471,
+		"longitude": -5.930117
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 1,
+			"minute": 44
+		},
+		"departure": {
+			"day": 25,
+			"hour": 1,
+			"minute": 45
+		},
+		"city": "Shannon",
+		"region": "Ireland",
+		"latitude": 52.710743,
+		"longitude": -8.878969
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 1,
+			"minute": 46
+		},
+		"departure": {
+			"day": 25,
+			"hour": 1,
+			"minute": 47
+		},
+		"city": "Akureyri",
+		"region": "Iceland",
+		"latitude": 65.681097,
+		"longitude": -18.090022
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 1,
+			"minute": 59
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 0
+		},
+		"city": "Lajes Do Pico",
+		"region": "Azores",
+		"latitude": 38.472124,
+		"longitude": -28.288376
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 2,
+			"minute": 4
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 5
+		},
+		"city": "Sao Filipe",
+		"region": "Cabo Verde",
+		"latitude": 14.895901,
+		"longitude": -24.500119
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 2,
+			"minute": 13
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 14
+		},
+		"city": "Grytviken",
+		"region": "South Georgia and the South Sandwich Islands",
+		"latitude": -54.274151,
+		"longitude": -36.511219
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 2,
+			"minute": 22
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 23
+		},
+		"city": "Goose Green",
+		"region": "Falkland Islands (Islas Malvinas)",
+		"latitude": -51.8311,
+		"longitude": -58.969021
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 2,
+			"minute": 28
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 29
+		},
+		"city": "Punta Arenas",
+		"region": "Chile",
+		"latitude": -53.160207,
+		"longitude": -70.90555
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 2,
+			"minute": 34
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 35
+		},
+		"city": "Buenos Aires",
+		"region": "Argentina",
+		"latitude": -34.608418,
+		"longitude": -58.373161
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 2,
+			"minute": 39
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 40
+		},
+		"city": "Montevideo",
+		"region": "Uruguay",
+		"latitude": -34.881988,
+		"longitude": -56.182022
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 2,
+			"minute": 41
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 42
+		},
+		"city": "Cordoba",
+		"region": "Argentina",
+		"latitude": -31.36628,
+		"longitude": -64.201534
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 2,
+			"minute": 43
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 44
+		},
+		"city": "São Paulo",
+		"region": "Brazil",
+		"latitude": -23.548943,
+		"longitude": -46.638818
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 2,
+			"minute": 46
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 47
+		},
+		"city": "Rio de Janeiro",
+		"region": "Brazil",
+		"latitude": -22.903539,
+		"longitude": -43.209587
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 2,
+			"minute": 49
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 50
+		},
+		"city": "Cayenne",
+		"region": "French Guiana",
+		"latitude": 4.92242,
+		"longitude": -52.3134531
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 2,
+			"minute": 51
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 52
+		},
+		"city": "Paramaribo",
+		"region": "Suriname",
+		"latitude": 5.8520355,
+		"longitude": -55.2038278
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 2,
+			"minute": 53
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 54
+		},
+		"city": "Georgetown",
+		"region": "Guyana",
+		"latitude": 6.804611,
+		"longitude": -58.154831
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 2,
+			"minute": 56
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 57
+		},
+		"city": "Rio Claro",
+		"region": "Trinidad and Tobago",
+		"latitude": 10.304254,
+		"longitude": -61.17115
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 2,
+			"minute": 58
+		},
+		"departure": {
+			"day": 25,
+			"hour": 2,
+			"minute": 59
+		},
+		"city": "Saint Georges",
+		"region": "Grenada",
+		"latitude": 12.053968,
+		"longitude": -61.748614
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 4
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 5
+		},
+		"city": "Kingstown",
+		"region": "Saint Vincent and the Grenadines",
+		"latitude": 13.155111,
+		"longitude": -61.228854
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 6
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 7
+		},
+		"city": "Castries",
+		"region": "Saint Lucia",
+		"latitude": 14.011044,
+		"longitude": -60.990031
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 8
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 9
+		},
+		"city": "Holetown",
+		"region": "Barbados",
+		"latitude": 13.192174,
+		"longitude": -59.636538
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 10
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 11
+		},
+		"city": "Le Vauclin",
+		"region": "Martinique",
+		"latitude": 14.5456332,
+		"longitude": -60.8391304
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 12
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 13
+		},
+		"city": "Roseau",
+		"region": "Dominica",
+		"latitude": 15.3091676,
+		"longitude": -61.3793554
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 14
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 15
+		},
+		"city": "Baie-Mahault",
+		"region": "Guadeloupe",
+		"latitude": 16.2444738,
+		"longitude": -61.571718
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 16
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 17
+		},
+		"city": "Cedar Grove",
+		"region": "Antigua and Barbuda",
+		"latitude": 17.1592525,
+		"longitude": -61.8262956
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 18
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 19
+		},
+		"city": "San Juan",
+		"region": "Puerto Rico",
+		"latitude": 18.46646,
+		"longitude": -66.118302
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 20
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 21
+		},
+		"city": "Nuuk",
+		"region": "Greenland",
+		"latitude": 64.18362,
+		"longitude": -51.721407
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 22
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 23
+		},
+		"city": "Grand Falls-Windsor",
+		"region": "Newfoundland and Labrador, Canada",
+		"latitude": 48.929001,
+		"longitude": -55.65049
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 27
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 28
+		},
+		"city": "Labrador City",
+		"region": "Newfoundland and Labrador, Canada",
+		"latitude": 52.945175,
+		"longitude": -66.909417
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 30
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 31
+		},
+		"city": "Charlottetown",
+		"region": "Prince Edward Island, Canada",
+		"latitude": 46.235419,
+		"longitude": -63.126521
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 32
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 33
+		},
+		"city": "Dartmouth",
+		"region": "Nova Scotia, Canada",
+		"latitude": 44.670089,
+		"longitude": -63.577491
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 34
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 35
+		},
+		"city": "Saint John",
+		"region": "New Brunswick, Canada",
+		"latitude": 45.272938,
+		"longitude": -66.063243
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 37
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 38
+		},
+		"city": "Caracas",
+		"region": "Venezuela",
+		"latitude": 10.503259,
+		"longitude": -66.918161
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 41
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 42
+		},
+		"city": "Manaus",
+		"region": "Brazil",
+		"latitude": -3.107192,
+		"longitude": -60.026127
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 44
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 45
+		},
+		"city": "Cuiabá",
+		"region": "Brazil",
+		"latitude": -15.600754,
+		"longitude": -56.096769
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 46
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 47
+		},
+		"city": "San Pedro",
+		"region": "Paraguay",
+		"latitude": -24.091369,
+		"longitude": -56.446724
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 49
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 50
+		},
+		"city": "Santa Cruz de la Sierra",
+		"region": "Bolivia",
+		"latitude": -17.783169,
+		"longitude": -63.182461
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 51
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 52
+		},
+		"city": "Iquique",
+		"region": "Chile",
+		"latitude": -20.210988,
+		"longitude": -70.151469
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 53
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 54
+		},
+		"city": "Machu Picchu",
+		"region": "Peru",
+		"latitude": -13.163737,
+		"longitude": -72.545777
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 55
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 56
+		},
+		"city": "Lima",
+		"region": "Peru",
+		"latitude": -12.043333,
+		"longitude": -77.028333
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 57
+		},
+		"departure": {
+			"day": 25,
+			"hour": 3,
+			"minute": 58
+		},
+		"city": "Guayaquil",
+		"region": "Ecuador",
+		"latitude": -2.171583,
+		"longitude": -79.926286
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 3,
+			"minute": 59
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 0
+		},
+		"city": "Bogota",
+		"region": "Colombia",
+		"latitude": 4.605172,
+		"longitude": -74.075317
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 1
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 2
+		},
+		"city": "Coco Solo",
+		"region": "Panama",
+		"latitude": 9.368985,
+		"longitude": -79.879913
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 3
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 4
+		},
+		"city": "Montego Bay",
+		"region": "Jamaica",
+		"latitude": 18.471293,
+		"longitude": -77.924042
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 5
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 6
+		},
+		"city": "Camaguey",
+		"region": "Cuba",
+		"latitude": 21.379674,
+		"longitude": -77.91529
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 7
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 8
+		},
+		"city": "Port-au-Prince",
+		"region": "Haiti",
+		"latitude": 18.549651,
+		"longitude": -72.339052
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 10
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 11
+		},
+		"city": "Matthew Town",
+		"region": "The Bahamas",
+		"latitude": 20.95027,
+		"longitude": -73.682953
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 12
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 13
+		},
+		"city": "Santo Domingo",
+		"region": "Dominican Republic",
+		"latitude": 18.4860575,
+		"longitude": -69.9312117
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 14
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 15
+		},
+		"city": "Orlando",
+		"region": "Florida, United States",
+		"latitude": 28.540384,
+		"longitude": -81.379227
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 19
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 20
+		},
+		"city": "Atlanta",
+		"region": "Georgia, USA",
+		"latitude": 33.754487,
+		"longitude": -84.389663
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 23
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 24
+		},
+		"city": "Charleston",
+		"region": "South Carolina, USA",
+		"latitude": 32.793053,
+		"longitude": -79.941294
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 25
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 26
+		},
+		"city": "Raleigh",
+		"region": "North Carolina, United States",
+		"latitude": 35.776246,
+		"longitude": -78.641057
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 27
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 28
+		},
+		"city": "Charleston",
+		"region": "West Virginia, USA",
+		"latitude": 38.353298,
+		"longitude": -81.635375
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 29
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 30
+		},
+		"city": "Newport News",
+		"region": "Virginia, United States",
+		"latitude": 37.088631,
+		"longitude": -76.487343
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 31
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 32
+		},
+		"city": "Washington",
+		"region": "District of Columbia, United States",
+		"latitude": 38.908412,
+		"longitude": -77.03172
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 33
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 34
+		},
+		"city": "Baltimore",
+		"region": "Maryland, USA",
+		"latitude": 39.294255,
+		"longitude": -76.614275
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 35
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 36
+		},
+		"city": "Wilmington",
+		"region": "Delaware, USA",
+		"latitude": 39.742961,
+		"longitude": -75.538493
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 37
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 38
+		},
+		"city": "Hershey",
+		"region": "Pennsylvania, United States",
+		"latitude": 40.285521,
+		"longitude": -76.651852
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 39
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 40
+		},
+		"city": "Asbury Park",
+		"region": "New Jersey, United States",
+		"latitude": 40.220598,
+		"longitude": -74.011741
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 41
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 42
+		},
+		"city": "New York",
+		"region": "New York, NY, USA",
+		"latitude": 40.75604,
+		"longitude": -73.986941
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 43
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 44
+		},
+		"city": "New Haven",
+		"region": "Connecticut, USA",
+		"latitude": 41.766059,
+		"longitude": -72.674078
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 45
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 46
+		},
+		"city": "Newport",
+		"region": "Rhode Island, United States",
+		"latitude": 41.489675,
+		"longitude": -71.316599
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 47
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 48
+		},
+		"city": "Boston",
+		"region": "Massachusetts, USA",
+		"latitude": 42.35888,
+		"longitude": -71.056896
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 49
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 50
+		},
+		"city": "Manchester",
+		"region": "New Hampshire, USA",
+		"latitude": 42.991007,
+		"longitude": -71.463082
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 51
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 52
+		},
+		"city": "Burlington",
+		"region": "Vermont, USA",
+		"latitude": 44.476188,
+		"longitude": -73.211815
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 54
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 55
+		},
+		"city": "Portland",
+		"region": "Maine, USA",
+		"latitude": 43.65467,
+		"longitude": -70.262434
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 4,
+			"minute": 58
+		},
+		"departure": {
+			"day": 25,
+			"hour": 4,
+			"minute": 59
+		},
+		"city": "Quebec City",
+		"region": "Quebec, Canada",
+		"latitude": 46.813919,
+		"longitude": -71.206137
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 0
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 1
+		},
+		"city": "Montreal",
+		"region": "Quebec, Canada",
+		"latitude": 45.545447,
+		"longitude": -73.639076
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 2
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 3
+		},
+		"city": "Ottawa",
+		"region": "Ontario, Canada",
+		"latitude": 45.422552,
+		"longitude": -75.697517
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 4
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 5
+		},
+		"city": "Iqaluit",
+		"region": "Nunavut, Canada",
+		"latitude": 63.74676,
+		"longitude": -68.517898
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 6
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 7
+		},
+		"city": "Kingston",
+		"region": "Ontario, Canada",
+		"latitude": 44.231173,
+		"longitude": -76.495647
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 8
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 9
+		},
+		"city": "Toronto",
+		"region": "Ontario, Canada",
+		"latitude": 43.670233,
+		"longitude": -79.386755
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 10
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 11
+		},
+		"city": "Sault Ste. Marie",
+		"region": "Ontario, Canada",
+		"latitude": 46.514413,
+		"longitude": -84.332533
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 12
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 13
+		},
+		"city": "Detroit",
+		"region": "Michigan, USA",
+		"latitude": 42.330165,
+		"longitude": -83.045913
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 14
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 15
+		},
+		"city": "Sandusky",
+		"region": "Ohio, United States",
+		"latitude": 41.458086,
+		"longitude": -82.711054
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 18
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 19
+		},
+		"city": "Columbus",
+		"region": "Ohio, USA",
+		"latitude": 39.962208,
+		"longitude": -83.000676
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 23
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 24
+		},
+		"city": "Indianapolis",
+		"region": "Indiana, USA",
+		"latitude": 39.767016,
+		"longitude": -86.156255
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 28
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 29
+		},
+		"city": "Santa Claus",
+		"region": "Indiana, USA",
+		"latitude": 38.120243,
+		"longitude": -86.914129
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 30
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 31
+		},
+		"city": "Louisville",
+		"region": "Kentucky, USA",
+		"latitude": 38.254552,
+		"longitude": -85.759486
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 33
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 34
+		},
+		"city": "Nashville",
+		"region": "Tennessee, United States",
+		"latitude": 36.165416,
+		"longitude": -86.783382
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 35
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 36
+		},
+		"city": "Saint Louis",
+		"region": "Missouri, USA",
+		"latitude": 38.627522,
+		"longitude": -90.19841
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 42
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 43
+		},
+		"city": "Montgomery",
+		"region": "Alabama, United States",
+		"latitude": 32.380246,
+		"longitude": -86.309184
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 47
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 48
+		},
+		"city": "Belize City",
+		"region": "Belize",
+		"latitude": 17.5045661,
+		"longitude": -88.1962133
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 51
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 52
+		},
+		"city": "San Pedro Sula",
+		"region": "Honduras",
+		"latitude": 15.511452,
+		"longitude": -88.025662
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 54
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 55
+		},
+		"city": "Matagalpa",
+		"region": "Nicaragua",
+		"latitude": 12.9290069,
+		"longitude": -85.9151211
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 5,
+			"minute": 58
+		},
+		"departure": {
+			"day": 25,
+			"hour": 5,
+			"minute": 59
+		},
+		"city": "San Jose",
+		"region": "Costa Rica",
+		"latitude": 9.927128,
+		"longitude": -84.082012
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 6,
+			"minute": 5
+		},
+		"departure": {
+			"day": 25,
+			"hour": 6,
+			"minute": 6
+		},
+		"city": "Fernandina Island",
+		"region": "Galapagos Islands",
+		"latitude": -0.378108,
+		"longitude": -91.518932
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 6,
+			"minute": 9
+		},
+		"departure": {
+			"day": 25,
+			"hour": 6,
+			"minute": 10
+		},
+		"city": "Santa Tecla",
+		"region": "El Salvador",
+		"latitude": 13.6757837,
+		"longitude": -89.2894733
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 6,
+			"minute": 13
+		},
+		"departure": {
+			"day": 25,
+			"hour": 6,
+			"minute": 14
+		},
+		"city": "Quetzaltenango",
+		"region": "Guatemala",
+		"latitude": 14.836156,
+		"longitude": -91.521959
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 6,
+			"minute": 20
+		},
+		"departure": {
+			"day": 25,
+			"hour": 6,
+			"minute": 21
+		},
+		"city": "New Orleans",
+		"region": "Louisiana, USA",
+		"latitude": 29.943073,
+		"longitude": -90.070381
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 6,
+			"minute": 26
+		},
+		"departure": {
+			"day": 25,
+			"hour": 6,
+			"minute": 27
+		},
+		"city": "Jackson",
+		"region": "Mississippi, USA",
+		"latitude": 32.312208,
+		"longitude": -90.177951
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 6,
+			"minute": 32
+		},
+		"departure": {
+			"day": 25,
+			"hour": 6,
+			"minute": 33
+		},
+		"city": "Fayetteville",
+		"region": "Arkansas, USA",
+		"latitude": 36.063829,
+		"longitude": -94.157254
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 6,
+			"minute": 38
+		},
+		"departure": {
+			"day": 25,
+			"hour": 6,
+			"minute": 39
+		},
+		"city": "Cedar Rapids",
+		"region": "Iowa, United States",
+		"latitude": 41.978766,
+		"longitude": -91.673638
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 6,
+			"minute": 44
+		},
+		"departure": {
+			"day": 25,
+			"hour": 6,
+			"minute": 45
+		},
+		"city": "Chicago",
+		"region": "Illinois, USA",
+		"latitude": 41.879535,
+		"longitude": -87.624333
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 6,
+			"minute": 50
+		},
+		"departure": {
+			"day": 25,
+			"hour": 6,
+			"minute": 51
+		},
+		"city": "Milwaukee",
+		"region": "Wisconsin, USA",
+		"latitude": 43.040658,
+		"longitude": -87.906131
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 6,
+			"minute": 56
+		},
+		"departure": {
+			"day": 25,
+			"hour": 6,
+			"minute": 57
+		},
+		"city": "Minneapolis",
+		"region": "Minnesota, USA",
+		"latitude": 44.977482,
+		"longitude": -93.264351
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 7,
+			"minute": 0
+		},
+		"departure": {
+			"day": 25,
+			"hour": 7,
+			"minute": 1
+		},
+		"city": "Winnipeg",
+		"region": "Manitoba, Canada",
+		"latitude": 49.895591,
+		"longitude": -97.138341
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 7,
+			"minute": 3
+		},
+		"departure": {
+			"day": 25,
+			"hour": 7,
+			"minute": 4
+		},
+		"city": "Fargo",
+		"region": "North Dakota, USA",
+		"latitude": 46.875,
+		"longitude": -96.798263
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 7,
+			"minute": 8
+		},
+		"departure": {
+			"day": 25,
+			"hour": 7,
+			"minute": 9
+		},
+		"city": "Sioux Falls",
+		"region": "South Dakota, USA",
+		"latitude": 43.54599,
+		"longitude": -96.731291
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 7,
+			"minute": 14
+		},
+		"departure": {
+			"day": 25,
+			"hour": 7,
+			"minute": 15
+		},
+		"city": "Lincoln",
+		"region": "Nebraska, USA",
+		"latitude": 40.813628,
+		"longitude": -96.70262
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 7,
+			"minute": 20
+		},
+		"departure": {
+			"day": 25,
+			"hour": 7,
+			"minute": 21
+		},
+		"city": "Lawrence",
+		"region": "Kansas, USA",
+		"latitude": 38.94261,
+		"longitude": -95.260632
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 7,
+			"minute": 28
+		},
+		"departure": {
+			"day": 25,
+			"hour": 7,
+			"minute": 29
+		},
+		"city": "Tulsa",
+		"region": "Oklahoma, USA",
+		"latitude": 36.133354,
+		"longitude": -95.975663
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 7,
+			"minute": 37
+		},
+		"departure": {
+			"day": 25,
+			"hour": 7,
+			"minute": 38
+		},
+		"city": "Dallas",
+		"region": "Texas, United States",
+		"latitude": 32.775146,
+		"longitude": -96.792098
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 7,
+			"minute": 44
+		},
+		"departure": {
+			"day": 25,
+			"hour": 7,
+			"minute": 45
+		},
+		"city": "Monterrey",
+		"region": "Mexico",
+		"latitude": 25.67464,
+		"longitude": -100.309639
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 7,
+			"minute": 48
+		},
+		"departure": {
+			"day": 25,
+			"hour": 7,
+			"minute": 49
+		},
+		"city": "Guadalajara",
+		"region": "Mexico",
+		"latitude": 20.659649,
+		"longitude": -103.349625
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 7,
+			"minute": 52
+		},
+		"departure": {
+			"day": 25,
+			"hour": 7,
+			"minute": 53
+		},
+		"city": "Mexico City",
+		"region": "Mexico",
+		"latitude": 19.42705,
+		"longitude": -99.127571
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 7,
+			"minute": 54
+		},
+		"departure": {
+			"day": 25,
+			"hour": 7,
+			"minute": 55
+		},
+		"city": "Easter Island",
+		"region": "Chile",
+		"latitude": -27.130829,
+		"longitude": -109.342495
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 7,
+			"minute": 56
+		},
+		"departure": {
+			"day": 25,
+			"hour": 7,
+			"minute": 57
+		},
+		"city": "Cabo San Lucas",
+		"region": "Mexico",
+		"latitude": 22.890533,
+		"longitude": -109.916737
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 7,
+			"minute": 58
+		},
+		"departure": {
+			"day": 25,
+			"hour": 7,
+			"minute": 59
+		},
+		"city": "Durango",
+		"region": "Mexico",
+		"latitude": 24.028313,
+		"longitude": -104.651842
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 8,
+			"minute": 0
+		},
+		"departure": {
+			"day": 25,
+			"hour": 8,
+			"minute": 1
+		},
+		"city": "El Paso",
+		"region": "Texas, United States",
+		"latitude": 31.76745,
+		"longitude": -106.483691
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 8,
+			"minute": 3
+		},
+		"departure": {
+			"day": 25,
+			"hour": 8,
+			"minute": 4
+		},
+		"city": "Roswell",
+		"region": "New Mexico, USA",
+		"latitude": 33.370915,
+		"longitude": -104.532024
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 8,
+			"minute": 9
+		},
+		"departure": {
+			"day": 25,
+			"hour": 8,
+			"minute": 10
+		},
+		"city": "Colorado Springs",
+		"region": "Colorado, USA",
+		"latitude": 38.838114,
+		"longitude": -104.82136
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 8,
+			"minute": 12
+		},
+		"departure": {
+			"day": 25,
+			"hour": 8,
+			"minute": 13
+		},
+		"city": "Boulder",
+		"region": "Colorado, USA",
+		"latitude": 40.018949,
+		"longitude": -105.275239
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 8,
+			"minute": 15
+		},
+		"departure": {
+			"day": 25,
+			"hour": 8,
+			"minute": 16
+		},
+		"city": "Laramie",
+		"region": "Wyoming, United States",
+		"latitude": 41.311255,
+		"longitude": -105.59514
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 8,
+			"minute": 18
+		},
+		"departure": {
+			"day": 25,
+			"hour": 8,
+			"minute": 19
+		},
+		"city": "Calgary",
+		"region": "Alberta, Canada",
+		"latitude": 51.053728,
+		"longitude": -114.062474
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 8,
+			"minute": 24
+		},
+		"departure": {
+			"day": 25,
+			"hour": 8,
+			"minute": 25
+		},
+		"city": "Edmonton",
+		"region": "Alberta, Canada",
+		"latitude": 53.544698,
+		"longitude": -113.492614
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 8,
+			"minute": 30
+		},
+		"departure": {
+			"day": 25,
+			"hour": 8,
+			"minute": 31
+		},
+		"city": "Saskatoon",
+		"region": "Saskatchewan, Canada",
+		"latitude": 52.129322,
+		"longitude": -106.670527
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 8,
+			"minute": 37
+		},
+		"departure": {
+			"day": 25,
+			"hour": 8,
+			"minute": 38
+		},
+		"city": "Echo Bay",
+		"region": "Northwest Territories, Canada",
+		"latitude": 66.092607,
+		"longitude": -118.026662
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 8,
+			"minute": 44
+		},
+		"departure": {
+			"day": 25,
+			"hour": 8,
+			"minute": 45
+		},
+		"city": "Forty Mile",
+		"region": "Yukon Territory, Canada",
+		"latitude": 64.45,
+		"longitude": -140.55
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 8,
+			"minute": 52
+		},
+		"departure": {
+			"day": 25,
+			"hour": 8,
+			"minute": 53
+		},
+		"city": "Missoula",
+		"region": "Montana, USA",
+		"latitude": 46.874495,
+		"longitude": -114.001853
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 8,
+			"minute": 59
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 0
+		},
+		"city": "Boise",
+		"region": "Idaho, USA",
+		"latitude": 43.602071,
+		"longitude": -116.212539
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 9,
+			"minute": 4
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 5
+		},
+		"city": "Elko",
+		"region": "Nevada, United States",
+		"latitude": 40.832862,
+		"longitude": -115.764251
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 9,
+			"minute": 10
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 11
+		},
+		"city": "Salt Lake City",
+		"region": "Utah, USA",
+		"latitude": 40.761949,
+		"longitude": -111.891219
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 9,
+			"minute": 16
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 17
+		},
+		"city": "Phoenix",
+		"region": "Arizona, USA",
+		"latitude": 33.453214,
+		"longitude": -112.07428
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 9,
+			"minute": 22
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 23
+		},
+		"city": "Tucson",
+		"region": "Arizona, USA",
+		"latitude": 32.227832,
+		"longitude": -110.943784
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 9,
+			"minute": 30
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 31
+		},
+		"city": "San Diego",
+		"region": "California, USA",
+		"latitude": 32.718834,
+		"longitude": -117.163841
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 9,
+			"minute": 36
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 37
+		},
+		"city": "Los Angeles",
+		"region": "California, USA",
+		"latitude": 34.052234,
+		"longitude": -118.243685
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 9,
+			"minute": 41
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 42
+		},
+		"city": "Las Vegas",
+		"region": "Nevada, USA",
+		"latitude": 36.117142,
+		"longitude": -115.173159
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 9,
+			"minute": 43
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 44
+		},
+		"city": "Yosemite",
+		"region": "California, United States",
+		"latitude": 37.743938,
+		"longitude": -119.595463
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 9,
+			"minute": 45
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 46
+		},
+		"city": "San Francisco",
+		"region": "California, USA",
+		"latitude": 37.775196,
+		"longitude": -122.419204
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 9,
+			"minute": 47
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 48
+		},
+		"city": "Redding",
+		"region": "California, USA",
+		"latitude": 40.572284,
+		"longitude": -122.374268
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 9,
+			"minute": 49
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 50
+		},
+		"city": "Eugene",
+		"region": "Oregon, USA",
+		"latitude": 44.0520691,
+		"longitude": -123.0867536
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 9,
+			"minute": 51
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 52
+		},
+		"city": "Portland",
+		"region": "Oregon, USA",
+		"latitude": 45.523927,
+		"longitude": -122.676101
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 9,
+			"minute": 53
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 54
+		},
+		"city": "Tacoma",
+		"region": "Washington, United States",
+		"latitude": 47.255124,
+		"longitude": -122.441014
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 9,
+			"minute": 56
+		},
+		"departure": {
+			"day": 25,
+			"hour": 9,
+			"minute": 57
+		},
+		"city": "Seattle",
+		"region": "Washington, USA",
+		"latitude": 47.620973,
+		"longitude": -122.347276
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 10,
+			"minute": 1
+		},
+		"departure": {
+			"day": 25,
+			"hour": 10,
+			"minute": 2
+		},
+		"city": "Vancouver",
+		"region": "British Columbia, Canada",
+		"latitude": 49.303188,
+		"longitude": -123.145065
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 10,
+			"minute": 6
+		},
+		"departure": {
+			"day": 25,
+			"hour": 10,
+			"minute": 7
+		},
+		"city": "Prince George",
+		"region": "British Columbia, Canada",
+		"latitude": 53.917306,
+		"longitude": -122.749806
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 10,
+			"minute": 17
+		},
+		"departure": {
+			"day": 25,
+			"hour": 10,
+			"minute": 18
+		},
+		"city": "Sitka",
+		"region": "Alaska, United States",
+		"latitude": 57.054969,
+		"longitude": -135.331327
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 10,
+			"minute": 21
+		},
+		"departure": {
+			"day": 25,
+			"hour": 10,
+			"minute": 22
+		},
+		"city": "Anchorage",
+		"region": "Alaska, USA",
+		"latitude": 61.215603,
+		"longitude": -149.897568
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 10,
+			"minute": 27
+		},
+		"departure": {
+			"day": 25,
+			"hour": 10,
+			"minute": 28
+		},
+		"city": "McGrath",
+		"region": "Alaska, USA",
+		"latitude": 62.947563,
+		"longitude": -155.555283
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 10,
+			"minute": 32
+		},
+		"departure": {
+			"day": 25,
+			"hour": 10,
+			"minute": 33
+		},
+		"city": "Nome",
+		"region": "Alaska, USA",
+		"latitude": 64.502118,
+		"longitude": -165.406729
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 10,
+			"minute": 41
+		},
+		"departure": {
+			"day": 25,
+			"hour": 10,
+			"minute": 42
+		},
+		"city": "Līhuʻe",
+		"region": "Hawaii, USA",
+		"latitude": 21.973295,
+		"longitude": -159.353758
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 10,
+			"minute": 45
+		},
+		"departure": {
+			"day": 25,
+			"hour": 10,
+			"minute": 46
+		},
+		"city": "Waipahu",
+		"region": "Hawaii, USA",
+		"latitude": 21.386441,
+		"longitude": -158.010761
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 10,
+			"minute": 47
+		},
+		"departure": {
+			"day": 25,
+			"hour": 10,
+			"minute": 48
+		},
+		"city": "Moloka‘i",
+		"region": "Hawaii, USA",
+		"latitude": 21.139263,
+		"longitude": -157.010468
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 10,
+			"minute": 49
+		},
+		"departure": {
+			"day": 25,
+			"hour": 10,
+			"minute": 50
+		},
+		"city": "Maui",
+		"region": "Hawaii, USA",
+		"latitude": 20.804858,
+		"longitude": -156.337974
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 10,
+			"minute": 51
+		},
+		"departure": {
+			"day": 25,
+			"hour": 10,
+			"minute": 52
+		},
+		"city": "Hilo",
+		"region": "Hawaii, USA",
+		"latitude": 19.693225,
+		"longitude": -155.090423
+	},
+	{
+		"arrival": {
+			"day": 25,
+			"hour": 11,
+			"minute": 0
+		},
+		"departure": {
+			"day": 23,
+			"hour": 10,
+			"minute": 0
+		},
+		"city": "Santa's Village",
+		"region": "North Pole",
+		"latitude": 84.6,
+		"longitude": 168
+	}
+]
