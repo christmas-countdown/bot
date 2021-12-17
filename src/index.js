@@ -46,6 +46,10 @@ manager.spawn().then(async shards => {
 		sent += await dispatcher.dispatch(manager, prisma, log);
 	}, ms('1h'));
 
+	// santa tracker
+	const tracker = require('./santa-tracker');
+	setInterval(() => tracker.track(manager, prisma, log), ms('2.5m'));
+
 	// server count posting
 	if (process.env.NODE_ENV === 'production') {
 		const botlists = require('blapi');

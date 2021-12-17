@@ -294,5 +294,9 @@
 		"server_timezone": "Server timezone: {timezone}",
 		"user_timezone": "User timezone: {timezone}"
 	},
-	"disabled": "disabled"
+	"disabled": "disabled",
+	"santa_tracker": {
+		"description": "Santa is currently over **[{city} ({region})]({map})**.",
+		"title": "Santa Tracker"
+	}
 }
