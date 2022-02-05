@@ -1,0 +1,302 @@
+{
+	"bot": {
+		"command_execution_error": {
+			"description": "",
+			"title": ""
+		},
+		"footer": "",
+		"guild_only": {
+			"description": "",
+			"title": ""
+		},
+		"member_missing_permissions": {
+			"description": "",
+			"title": ""
+		},
+		"migrate": "",
+		"missing_permissions": {
+			"description": "",
+			"title": ""
+		}
+	},
+	"commands": {
+		"countdown": {
+			"created": {
+				"description": "",
+				"title": ""
+			},
+			"invalid_channel": {
+				"description": "",
+				"title": ""
+			},
+			"missing_permission:view": {
+				"description": "",
+				"title": ""
+			},
+			"missing_permission:webhook": {
+				"description": "",
+				"title": ""
+			}
+		},
+		"days": {
+			"days": [
+				"",
+				""
+			],
+			"description": "",
+			"sleeps": [
+				"",
+				""
+			],
+			"title": [
+				"",
+				""
+			]
+		},
+		"donate": {
+			"description": "",
+			"title": ""
+		},
+		"help": {
+			"list": {
+				"description": "",
+				"title": ""
+			}
+		},
+		"hours": {
+			"description": [
+				"",
+				""
+			],
+			"title": [
+				"",
+				""
+			]
+		},
+		"info": {
+			"description": "",
+			"fields": {
+				"commands": "",
+				"counting_in": {
+					"title": "",
+					"value": [
+						"",
+						""
+					]
+				},
+				"more": {
+					"title": "",
+					"value": ""
+				},
+				"premium_servers": "",
+				"secret_santa_events": "",
+				"secret_santa_users": "",
+				"servers": ""
+			},
+			"title": ""
+		},
+		"invite": {
+			"description": "",
+			"title": ""
+		},
+		"joke": {
+			"answer": "",
+			"question": ""
+		},
+		"minutes": {
+			"description": [
+				"",
+				""
+			],
+			"title": [
+				"",
+				""
+			]
+		},
+		"months": {
+			"description": [
+				"",
+				""
+			],
+			"title": [
+				"",
+				""
+			]
+		},
+		"ping": {
+			"calculating": "",
+			"fields": {
+				"average_ping": "",
+				"latency": "",
+				"shard_number": "",
+				"shard_ping": ""
+			},
+			"title": ""
+		},
+		"radio": {
+			"description": "",
+			"title": ""
+		},
+		"seconds": {
+			"description": [
+				"",
+				""
+			],
+			"title": [
+				"",
+				""
+			]
+		},
+		"secret_santa": {
+			"blacklist": {
+				"add": {
+					"added": {
+						"description": "",
+						"title": ""
+					}
+				},
+				"list": "",
+				"remove": {
+					"cannot_remove": {
+						"description": "",
+						"title": ""
+					},
+					"removed": {
+						"description": "",
+						"title": ""
+					}
+				}
+			},
+			"no_event": {
+				"description": "",
+				"title": ""
+			},
+			"show": {
+				"none": {
+					"description": "",
+					"title": ""
+				},
+				"show": {
+					"description": "",
+					"title": ""
+				}
+			}
+		},
+		"server": {
+			"reset": {
+				"title": ""
+			},
+			"set": {
+				"cannot_enable": {
+					"description": "",
+					"title": ""
+				},
+				"invalid_locale": {
+					"description": "",
+					"title": ""
+				},
+				"invalid_timezone": {
+					"description": "",
+					"title": ""
+				},
+				"premium": {
+					"description": "",
+					"title": ""
+				},
+				"title": ""
+			},
+			"view": {
+				"description": "",
+				"title": ""
+			}
+		},
+		"sleeps": {
+			"days": [
+				"",
+				""
+			],
+			"description": "",
+			"sleeps": [
+				"",
+				""
+			],
+			"title": [
+				"",
+				""
+			]
+		},
+		"suggest": {
+			"description": "",
+			"title": ""
+		},
+		"toggle": {
+			"disabled": "",
+			"enabled": ""
+		},
+		"total": {
+			"days": [
+				"",
+				""
+			],
+			"description": [
+				"",
+				""
+			],
+			"hours": [
+				"",
+				""
+			],
+			"minutes": [
+				"",
+				""
+			],
+			"seconds": [
+				"",
+				""
+			],
+			"title": ""
+		},
+		"user": {
+			"reset": {
+				"title": ""
+			},
+			"set": {
+				"title": ""
+			},
+			"view": {
+				"title": ""
+			}
+		},
+		"weekday": {
+			"description": "",
+			"title": ""
+		},
+		"weeks": {
+			"description": [
+				"",
+				""
+			],
+			"title": [
+				"",
+				""
+			]
+		}
+	},
+	"countdown": {
+		"christmas_day": "",
+		"christmas_eve": "",
+		"disable": {
+			"description": "",
+			"title": ""
+		},
+		"live": "",
+		"merry_christmas": "",
+		"server_timezone": "",
+		"user_timezone": ""
+	},
+	"disabled": "",
+	"santa_tracker": {
+		"description": "",
+		"title": ""
+	}
+}
