@@ -16,7 +16,6 @@
 
 ```
 BL_TOPGG=
-BL_BOATS=
 BL_BFD=
 BL_SPACE=
 BL_DBGG=
