@@ -65,7 +65,6 @@ manager.spawn().then(async shards => {
 			const keys = {
 				'botlist.space': process.env.BL_SPACE,
 				'botsfordiscord.com': process.env.BL_BFD,
-				'discord.boats': process.env.BL_BOATS,
 				'discord.bots.gg': process.env.BL_DBGG,
 				'discordapps.dev': process.env.BL_DADEV,
 				'discordbotlist.com': process.env.BL_DBL,
