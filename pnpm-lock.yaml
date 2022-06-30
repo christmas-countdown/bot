@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@eartharoid/christmas': ^1.2.1
@@ -31,7 +31,7 @@ dependencies:
   '@prisma/client': 3.4.1_prisma@3.4.1
   ascii-table: 0.0.9
   blapi: 2.2.1
-  discord.js: 13.3.1_5971b5a749a91823f5467a6d31a2f8b3
+  discord.js: 13.3.1_lfy3lj2jvemch5kgpjwtdixywm
   dotenv: 10.0.0
   fastify: 3.23.0
   leeks.js: 0.2.4
@@ -44,7 +44,7 @@ dependencies:
 
 optionalDependencies:
   bufferutil: 4.0.5
-  erlpack: github.com/discord/erlpack/f7d730debe32c416d1b55b4217f8aef2ade05874
+  erlpack: github.com/discord/erlpack/3b793a333dd3f6a140b9168ea91e9fa9660753ce
   utf-8-validate: 5.0.7
   zlib-sync: 0.1.7
 
@@ -436,7 +436,7 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
-  /discord.js/13.3.1_5971b5a749a91823f5467a6d31a2f8b3:
+  /discord.js/13.3.1_lfy3lj2jvemch5kgpjwtdixywm:
     resolution: {integrity: sha512-zn4G8tL5+tMV00+0aSsVYNYcIfMSdT2g0nudKny+Ikd+XKv7m6bqI7n3Vji0GIRqXDr5ArPaw+iYFM2I1Iw3vg==}
     engines: {node: '>=16.6.0', npm: '>=7.0.0'}
     dependencies:
@@ -448,7 +448,7 @@ packages:
       '@types/ws': 8.2.0
       discord-api-types: 0.24.0
       node-fetch: 2.6.6
-      ws: 8.2.3_5971b5a749a91823f5467a6d31a2f8b3
+      ws: 8.2.3_lfy3lj2jvemch5kgpjwtdixywm
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -1309,7 +1309,7 @@ packages:
     resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=}
     dev: true
 
-  /ws/8.2.3_5971b5a749a91823f5467a6d31a2f8b3:
+  /ws/8.2.3_lfy3lj2jvemch5kgpjwtdixywm:
     resolution: {integrity: sha512-wBuoj1BDpC6ZQ1B7DWQBYVLphPWkm8i9Y0/3YdHjHKHiohOJ1ws+3OccDWtH+PoC9DZD5WOTrJvNbWvjS6JWaA==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
@@ -1336,8 +1336,8 @@ packages:
     dev: false
     optional: true
 
-  github.com/discord/erlpack/f7d730debe32c416d1b55b4217f8aef2ade05874:
-    resolution: {tarball: https://codeload.github.com/discord/erlpack/tar.gz/f7d730debe32c416d1b55b4217f8aef2ade05874}
+  github.com/discord/erlpack/3b793a333dd3f6a140b9168ea91e9fa9660753ce:
+    resolution: {tarball: https://codeload.github.com/discord/erlpack/tar.gz/3b793a333dd3f6a140b9168ea91e9fa9660753ce}
     name: erlpack
     version: 0.1.3
     requiresBuild: true
