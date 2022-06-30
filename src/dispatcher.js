@@ -110,7 +110,7 @@ module.exports.dispatch = async (manager, prisma, log) => {
 							.setTitle(getMessage('countdown.disable.title'))
 							.setDescription(getMessage('countdown.disable.description', {
 								review: 'https://repcheck.io/Christmas-Countdown',
-								toggle: 'https://xmasbot.cf/commands#toggle'
+								toggle: 'https://lnk.earth/xbc:toggle'
 							}))
 							.setFooter(footer, avatarURL)
 							.setTimestamp()

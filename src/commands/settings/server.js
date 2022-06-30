@@ -88,7 +88,7 @@ module.exports = class ServerCommand extends Command {
 						new MessageEmbed()
 							.setColor(colour)
 							.setTitle(i18n('commands.server.set.premium.title'))
-							.setDescription(i18n('commands.server.set.premium.description', { url: 'https://xmasbot.cf/commands#donate' }))
+							.setDescription(i18n('commands.server.set.premium.description', { url: 'https://lnk.earth/xbc:donate' }))
 							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 					]
 				});
@@ -100,7 +100,7 @@ module.exports = class ServerCommand extends Command {
 						new MessageEmbed()
 							.setColor(colour)
 							.setTitle(i18n('commands.server.set.cannot_enable.title'))
-							.setDescription(i18n('commands.server.set.cannot_enable.description', { url: 'https://xmasbot.cf/commands#countdown' }))
+							.setDescription(i18n('commands.server.set.cannot_enable.description', { url: 'https://lnk.earth/xbc:countdown' }))
 							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 					]
 				});
@@ -113,7 +113,7 @@ module.exports = class ServerCommand extends Command {
 						new MessageEmbed()
 							.setColor(colour)
 							.setTitle(i18n('commands.server.set.invalid_locale.title'))
-							.setDescription(i18n('commands.server.set.invalid_locale.description', { url: 'https://go.eartharoid.me/discord' }))
+							.setDescription(i18n('commands.server.set.invalid_locale.description', { url: 'https://lnk.earth/discord' }))
 							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 					]
 				});
@@ -129,7 +129,7 @@ module.exports = class ServerCommand extends Command {
 						new MessageEmbed()
 							.setColor(colour)
 							.setTitle(i18n('commands.server.set.invalid_timezone.title'))
-							.setDescription(i18n('commands.server.set.invalid_timezone.description', { url: 'https://go.eartharoid.me/discord' }))
+							.setDescription(i18n('commands.server.set.invalid_timezone.description', { url: 'https://lnk.earth/discord' }))
 							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 					]
 				});

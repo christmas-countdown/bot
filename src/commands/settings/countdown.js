@@ -91,7 +91,7 @@ module.exports = class CountdownCommand extends Command {
 		if (!g_settings.enabled) {
 			embed.setDescription(i18n('commands.countdown.created.description', {
 				channel: channel.toString(),
-				url: 'https://xmasbot.cf/commands#toggle'
+				url: 'https://lnk.earth/xbc:toggle'
 			}));
 		}
 

@@ -30,7 +30,7 @@ module.exports = class ToggleCommand extends Command {
 					new MessageEmbed()
 						.setColor(colour)
 						.setTitle(i18n('commands.server.set.cannot_enable.title'))
-						.setDescription(i18n('commands.server.set.cannot_enable.description', { url: 'https://xmasbot.cf/commands#countdown' }))
+						.setDescription(i18n('commands.server.set.cannot_enable.description', { url: 'https://lnk.earth/xbc:countdown' }))
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});

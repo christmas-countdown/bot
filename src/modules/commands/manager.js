@@ -117,7 +117,7 @@ module.exports = class CommandManager {
 					new MessageEmbed()
 						.setColor(colour)
 						.setTitle(i18n('bot.command_execution_error.title'))
-						.setDescription(i18n('bot.command_execution_error.description', { url: 'https://go.eartharoid.me/discord' }))
+						.setDescription(i18n('bot.command_execution_error.description', { url: 'https://lnk.earth/discord' }))
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				],
 				ephemeral: true

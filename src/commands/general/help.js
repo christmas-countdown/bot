@@ -26,8 +26,8 @@ module.exports = class HelpCommand extends Command {
 			.setColor(colour)
 			.setTitle(i18n('commands.help.list.title'))
 			.setDescription(i18n('commands.help.list.description', {
-				discord: 'https://go.eartharoid.me/discord',
-				enable: 'https://xmasbot.cf/enable-the-countdown'
+				discord: 'https://lnk.earth/discord',
+				enable: 'https://lnk.earth/xb-enable'
 			}))
 			.setFooter(i18n('bot.footer'), this.client.user.avatarURL());
 
@@ -39,7 +39,7 @@ module.exports = class HelpCommand extends Command {
 		categories.forEach(category => {
 			const name = category[0].toUpperCase() + category.slice(1);
 			const commands = this.manager.commands.filter(command => command.category === category);
-			const list = commands.map(command => `[\`${command.premium ? `⭐${command.name}` : command.name}\`](https://xmasbot.cf/commands#${command.name})`);
+			const list = commands.map(command => `[\`${command.premium ? `⭐${command.name}` : command.name}\`](https://lnk.earth/xbc:${command.name})`);
 			embed.addField(`❯ ${name}`, list.join(', '));
 		});
 

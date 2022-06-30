@@ -69,7 +69,7 @@ module.exports = class UserCommand extends Command {
 						new MessageEmbed()
 							.setColor(colour)
 							.setTitle(i18n('commands.server.set.invalid_locale.title'))
-							.setDescription(i18n('commands.server.set.invalid_locale.description', { url: 'https://go.eartharoid.me/discord' }))
+							.setDescription(i18n('commands.server.set.invalid_locale.description', { url: 'https://lnk.earth/discord' }))
 							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 					]
 				});
@@ -85,7 +85,7 @@ module.exports = class UserCommand extends Command {
 						new MessageEmbed()
 							.setColor(colour)
 							.setTitle(i18n('commands.server.set.invalid_timezone.title'))
-							.setDescription(i18n('commands.server.set.invalid_timezone.description', { url: 'https://go.eartharoid.me/discord' }))
+							.setDescription(i18n('commands.server.set.invalid_timezone.description', { url: 'https://lnk.earth/discord' }))
 							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 					]
 				});

@@ -50,7 +50,7 @@ module.exports = class AboutCommand extends Command {
 					.addField(i18n('commands.info.fields.secret_santa_events'), String(ss_events.length), true)
 					.addField(i18n('commands.info.fields.secret_santa_users'), String(ss_users), true)
 					.addField(i18n('commands.info.fields.counting_in.title'), i18n('commands.info.fields.counting_in.value', enabled, { servers: enabled }), true)
-					.addField(i18n('commands.info.fields.more.title'), i18n('commands.info.fields.more.value', { url: 'https://xmasbot.cf/stats' }), true)
+					.addField(i18n('commands.info.fields.more.title'), i18n('commands.info.fields.more.value', { url: 'https://lnk.earth/xb-stats' }), true)
 					.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 			]
 		});

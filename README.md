@@ -4,11 +4,11 @@
 
 [![status](https://top.gg/api/widget/status/509851616216875019.svg)](https://top.gg/bot/509851616216875019)
 [![server count](https://top.gg/api/widget/servers/509851616216875019.svg)](https://top.gg/bot/509851616216875019)
-[![Discord support server](https://discordapp.com/api/guilds/451745464480432129/embed.png?style=shield)](https://go.eartharoid.me/discord)
+[![Discord support server](https://discordapp.com/api/guilds/451745464480432129/embed.png?style=shield)](https://lnk.earth/discord)
 
 **Find out more at [christmascountdown.live/discord](https://christmascountdown.live/discord?ref=github.com).**
 
-[Information](https://christmascountdown.live/discord?ref=github.com) · [Invite](https://christmascountdown.live/invite) · [Support](https://go.eartharoid.me/discord)
+[Information](https://christmascountdown.live/discord?ref=github.com) · [Invite](https://christmascountdown.live/invite) · [Support](https://lnk.earth/discord)
 
 [![Weblate translations](https://i18n.capestar.net/widgets/christmas-countdown/-/bot/open-graph.png)](https://i18n.capestar.net/engage/christmas-countdown/)
 
