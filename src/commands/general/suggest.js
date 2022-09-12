@@ -9,11 +9,11 @@ const {
 module.exports = class SuggestCommand extends Command {
 	constructor(client) {
 		super(client, {
-			description: 'Submit a suggestion',
+			description: 'Submit a suggestion or general feedback for the Christmas Countdown bot',
 			name: 'suggest',
 			options: [
 				{
-					description: 'Your suggestion (please join the support server (/help) for general feedback)',
+					description: 'Your suggestion',
 					name: 'suggestion',
 					required: true,
 					type: Command.option_types.STRING
