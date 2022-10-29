@@ -30,12 +30,12 @@
 																"title": "❌ Ugyldig kanal"
 												},
 												"missing_permission:view": {
-																"description": "Please ensure the bot has permission to view the channel.",
-																"title": "❌ Can't create webhook"
+																"description": "Sørg for at botten har tilgang til å se kanalen.",
+																"title": "❌ Kan ikke opprette vev-krok"
 												},
 												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
-																"title": "❌ Can't create webhook"
+																"description": "Botten har ikke tilgang til å håndtere vev-kroker.",
+																"title": "❌ Kan ikke opprette vev-krok"
 												}
 								},
 								"days": {
@@ -89,8 +89,8 @@
 																				"value": "[Klikk her]({url})"
 																},
 																"premium_servers": "⭐ Premiumstjenere",
-																"secret_santa_events": "Secret Santa events",
-																"secret_santa_users": "Secret Santa participants",
+																"secret_santa_events": "Hemmelig julenisse-begivenheter",
+																"secret_santa_users": "Hemmelig julenisse-deltagere",
 																"servers": "Tjenere"
 												},
 												"title": "Informasjon"
@@ -151,34 +151,34 @@
 												"blacklist": {
 																"add": {
 																				"added": {
-																								"description": "{member} has been added to the naughty list.",
-																								"title": "✅ Added"
+																								"description": "{member} har blitt lagt til på svartelisten.",
+																								"title": "✅ Lagt til"
 																				}
 																},
-																"list": "The naughty list",
+																"list": "Svartelisten",
 																"remove": {
 																				"cannot_remove": {
-																								"description": "{member} is not on the naughty list.",
-																								"title": "❌ Can't remove member"
+																								"description": "{member} er ikke på svartelisten.",
+																								"title": "❌ Kan ikke fjerne medlemmet"
 																				},
 																				"removed": {
-																								"description": "{member} has been removed from the naughty list.",
-																								"title": "✅ Removed"
+																								"description": "{member} har blitt fjernet fra svartelisten.",
+																								"title": "✅ Fjernet"
 																				}
 																}
 												},
 												"no_event": {
-																"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
-																"title": "❌ Error"
+																"description": "Det er ingen hemmelig julenisse-begivenheter. Følg [the guide]({url}) for å opprette en.",
+																"title": "❌ Feil"
 												},
 												"show": {
 																"none": {
-																				"description": "You have not entered a Secret Santa event.",
-																				"title": "❌ Not assigned"
+																				"description": "Du har ikke tatt del i noen hemmelig julenisse-begivenhet.",
+																				"title": "❌ Ikke tildelt"
 																},
 																"show": {
-																				"description": "**You are {member}'s Santa.** Give them a gift, following the event guidelines set by the organiser.",
-																				"title": "Secret Santa"
+																				"description": "**Du er {member} sin hemmelige julenisse.** Gi vedkommende en gave som er innenfor retningslinjene.",
+																				"title": "Hemmelig julenisse"
 																}
 												}
 								},
@@ -192,8 +192,8 @@
 																				"title": "❌ Kan ikke skru på nedtelling"
 																},
 																"invalid_locale": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid locale"
+																				"description": "Prøv igjen eller [spør om hjelp]({url}).",
+																				"title": "❌ Ugyldig lokalitet"
 																},
 																"invalid_timezone": {
 																				"description": "Prøv igjen eller [spør om hjelp]({url}).",
@@ -294,9 +294,9 @@
 								"server_timezone": "Tjenertidssone: {timezone}",
 								"user_timezone": "Brukertidssone: {timezone}"
 				},
-				"disabled": "disabled",
+				"disabled": "avskrudd",
 				"santa_tracker": {
-								"description": "Santa is currently over **[{city} ({region})]({map})**.",
-								"title": "Santa Tracker"
+								"description": "Nissen er nå over **[{city} ({region})]({map})**.",
+								"title": "Nissesporer"
 				}
 }
