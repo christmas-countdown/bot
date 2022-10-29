@@ -1,253 +1,252 @@
 {
-	"bot": {
-		"command_execution_error": {
-			"description": "Ha ocurrido un error inesperado. Por favor pedir ayuda en el servidor de soporte",
-			"title": "Error"
-		},
-		"footer": "cuenta regresiva navideña por eartharoid",
-		"guild_only": {
-			"description": "",
-			"title": "Error"
-		},
-		"member_missing_permissions": {
-			"description": "Necesitas del siguente permiso para utilizar este comando:\n{permissions}",
-			"title": "Error"
-		},
-		"migrate": "El bot Christmas Countdown ahora utiliza comandos con slash!\n**Por favor re añade al bot aquí: https://christmascountdown.live/invite.**",
-		"missing_permissions": {
-			"description": "El bot Christmas Countdown necesita de los siguentes permisos:\n{permissions}",
-			"title": "Error"
-		}
-	},
-	"commands": {
-		"countdown": {
-			"created": {
-				"description": "¡Tu cuenta regresiva aún no está activada! **Activala con [`/toggle`]({url}).**\n\nCuando esté activa, los mensajes de la cuenta regresiva serán enviados a {channel} todas las mañanas entre las 05:00 y 06:00",
-				"title": "✅ Webhook de la cuenta regresiva creado"
-			},
-			"invalid_channel": {
-				"description": "",
-				"title": "❌ Canal inválido"
-			},
-			"missing_permission": {
-				"description": "El bot no tiene permisos para administrar webhooks.",
-				"title": "❌ No es posible crear un webhook"
-			}
-		},
-		"days": {
-			"days": [
-				"",
-				""
-			],
-			"description": "¡Quedan {days} o {sleeps}[(?)]({url} \" \"¿Cual es la diferencia entre días y noches ?\") Restantes para Navidad!",
-			"sleeps": [
-				"",
-				""
-			],
-			"title": [
-				"{days} días restantes",
-				""
-			]
-		},
-		"donate": {
-			"description": "**[Dona]({url})** Para desbloquear estas funciones :\n\\⭐ `mention`/`role` como opcion en el servidor\n\\⭐ `autotoggle` como opcion en el servidor",
-			"title": "Hazte premium"
-		},
-		"help": {
-			"list": {
-				"description": "",
-				"title": ""
-			}
-		},
-		"hours": {
-			"description": [
-				"",
-				""
-			],
-			"title": [
-				"",
-				""
-			]
-		},
-		"info": {
-			"description": "",
-			"fields": {
-				"commands": "",
-				"counting_in": {
-					"title": "",
-					"value": [
-						"",
-						""
-					]
+				"bot": {
+								"command_execution_error": {
+												"description": "Ha ocurrido un error inesperado. Por favor pedir ayuda en el servidor de soporte",
+												"title": "Error"
+								},
+								"footer": "cuenta regresiva navideña por eartharoid",
+								"guild_only": {
+												"description": "",
+												"title": "Error"
+								},
+								"member_missing_permissions": {
+												"description": "Necesitas del siguente permiso para utilizar este comando:\n{permissions}",
+												"title": "Error"
+								},
+								"migrate": "El bot Christmas Countdown ahora utiliza comandos con slash!\n**Por favor re añade al bot aquí: https://christmascountdown.live/invite.**",
+								"missing_permissions": {
+												"description": "El bot Christmas Countdown necesita de los siguentes permisos:\n{permissions}",
+												"title": "Error"
+								}
 				},
-				"more": {
-					"title": "",
-					"value": ""
+				"commands": {
+								"countdown": {
+												"created": {
+																"description": "¡Tu cuenta regresiva aún no está activada! **Activala con [`/toggle`]({url}).**\n\nCuando esté activa, los mensajes de la cuenta regresiva serán enviados a {channel} todas las mañanas entre las 05:00 y 06:00",
+																"title": "✅ Webhook de la cuenta regresiva creado"
+												},
+												"invalid_channel": {
+																"description": "",
+																"title": "❌ Canal inválido"
+												},
+												"missing_permission": {
+																"title": "❌ No es posible crear un webhook"
+												}
+								},
+								"days": {
+												"days": [
+																"",
+																""
+												],
+												"description": "¡Quedan {days} o {sleeps}[(?)]({url} \" \"¿Cual es la diferencia entre días y noches ?\") Restantes para Navidad!",
+												"sleeps": [
+																"",
+																""
+												],
+												"title": [
+																"{days} días restantes",
+																""
+												]
+								},
+								"donate": {
+												"description": "**[Dona]({url})** Para desbloquear estas funciones :\n\\⭐ `mention`/`role` como opcion en el servidor\n\\⭐ `autotoggle` como opcion en el servidor",
+												"title": "Hazte premium"
+								},
+								"help": {
+												"list": {
+																"description": "",
+																"title": ""
+												}
+								},
+								"hours": {
+												"description": [
+																"",
+																""
+												],
+												"title": [
+																"",
+																""
+												]
+								},
+								"info": {
+												"description": "",
+												"fields": {
+																"commands": "",
+																"counting_in": {
+																				"title": "",
+																				"value": [
+																								"",
+																								""
+																				]
+																},
+																"more": {
+																				"title": "",
+																				"value": ""
+																},
+																"premium_servers": "",
+																"servers": ""
+												},
+												"title": ""
+								},
+								"invite": {
+												"description": "",
+												"title": ""
+								},
+								"joke": {
+												"answer": "",
+												"question": ""
+								},
+								"minutes": {
+												"description": [
+																"",
+																""
+												],
+												"title": [
+																"",
+																""
+												]
+								},
+								"months": {
+												"description": [
+																"",
+																""
+												],
+												"title": [
+																"",
+																""
+												]
+								},
+								"ping": {
+												"calculating": "",
+												"fields": {
+																"average_ping": "",
+																"latency": "",
+																"shard_number": "",
+																"shard_ping": ""
+												},
+												"title": ""
+								},
+								"radio": {
+												"description": "",
+												"title": ""
+								},
+								"seconds": {
+												"description": [
+																"",
+																""
+												],
+												"title": [
+																"",
+																""
+												]
+								},
+								"server": {
+												"reset": {
+																"title": ""
+												},
+												"set": {
+																"cannot_enable": {
+																				"description": "",
+																				"title": ""
+																},
+																"invalid_timezone": {
+																				"description": "",
+																				"title": ""
+																},
+																"premium": {
+																				"description": "",
+																				"title": ""
+																},
+																"title": ""
+												},
+												"view": {
+																"description": "",
+																"title": ""
+												}
+								},
+								"sleeps": {
+												"days": [
+																"",
+																""
+												],
+												"description": "",
+												"sleeps": [
+																"",
+																""
+												],
+												"title": [
+																"",
+																""
+												]
+								},
+								"suggest": {
+												"description": "",
+												"title": ""
+								},
+								"toggle": {
+												"disabled": "",
+												"enabled": ""
+								},
+								"total": {
+												"days": [
+																"",
+																""
+												],
+												"description": [
+																"",
+																""
+												],
+												"hours": [
+																"",
+																""
+												],
+												"minutes": [
+																"",
+																""
+												],
+												"seconds": [
+																"",
+																""
+												],
+												"title": ""
+								},
+								"user": {
+												"reset": {
+																"title": ""
+												},
+												"set": {
+																"title": ""
+												},
+												"view": {
+																"title": ""
+												}
+								},
+								"weekday": {
+												"description": "",
+												"title": ""
+								},
+								"weeks": {
+												"description": [
+																"",
+																""
+												],
+												"title": [
+																"",
+																""
+												]
+								}
 				},
-				"premium_servers": "",
-				"servers": ""
-			},
-			"title": ""
-		},
-		"invite": {
-			"description": "",
-			"title": ""
-		},
-		"joke": {
-			"answer": "",
-			"question": ""
-		},
-		"minutes": {
-			"description": [
-				"",
-				""
-			],
-			"title": [
-				"",
-				""
-			]
-		},
-		"months": {
-			"description": [
-				"",
-				""
-			],
-			"title": [
-				"",
-				""
-			]
-		},
-		"ping": {
-			"calculating": "",
-			"fields": {
-				"average_ping": "",
-				"latency": "",
-				"shard_number": "",
-				"shard_ping": ""
-			},
-			"title": ""
-		},
-		"radio": {
-			"description": "",
-			"title": ""
-		},
-		"seconds": {
-			"description": [
-				"",
-				""
-			],
-			"title": [
-				"",
-				""
-			]
-		},
-		"server": {
-			"reset": {
-				"title": ""
-			},
-			"set": {
-				"cannot_enable": {
-					"description": "",
-					"title": ""
+				"countdown": {
+								"christmas_day": "",
+								"christmas_eve": "",
+								"disable": {
+												"description": "",
+												"title": ""
+								},
+								"live": "",
+								"merry_christmas": "",
+								"server_timezone": "",
+								"user_timezone": ""
 				},
-				"invalid_timezone": {
-					"description": "",
-					"title": ""
-				},
-				"premium": {
-					"description": "",
-					"title": ""
-				},
-				"title": ""
-			},
-			"view": {
-				"description": "",
-				"title": ""
-			}
-		},
-		"sleeps": {
-			"days": [
-				"",
-				""
-			],
-			"description": "",
-			"sleeps": [
-				"",
-				""
-			],
-			"title": [
-				"",
-				""
-			]
-		},
-		"suggest": {
-			"description": "",
-			"title": ""
-		},
-		"toggle": {
-			"disabled": "",
-			"enabled": ""
-		},
-		"total": {
-			"days": [
-				"",
-				""
-			],
-			"description": [
-				"",
-				""
-			],
-			"hours": [
-				"",
-				""
-			],
-			"minutes": [
-				"",
-				""
-			],
-			"seconds": [
-				"",
-				""
-			],
-			"title": ""
-		},
-		"user": {
-			"reset": {
-				"title": ""
-			},
-			"set": {
-				"title": ""
-			},
-			"view": {
-				"title": ""
-			}
-		},
-		"weekday": {
-			"description": "",
-			"title": ""
-		},
-		"weeks": {
-			"description": [
-				"",
-				""
-			],
-			"title": [
-				"",
-				""
-			]
-		}
-	},
-	"countdown": {
-		"christmas_day": "",
-		"christmas_eve": "",
-		"disable": {
-			"description": "",
-			"title": ""
-		},
-		"live": "",
-		"merry_christmas": "",
-		"server_timezone": "",
-		"user_timezone": ""
-	},
-	"disabled": ""
+				"disabled": ""
 }
