@@ -1,6 +1,6 @@
 module.exports = {
 	colour: '#D5002C',
-	haste_server: 'https://haste.eartharoid.me',
+	haste_server: 'https://haste.lnk.earth',
 	presences: [
 		{
 			name: 'the countdown to Christmas  |  /help',
