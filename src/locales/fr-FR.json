@@ -1,302 +1,302 @@
 {
-				"bot": {
-								"command_execution_error": {
-												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
-												"title": "Error"
-								},
-								"footer": "Christmas Countdown by eartharoid",
-								"guild_only": {
-												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
-												"title": "Error"
-								},
-								"member_missing_permissions": {
-												"description": "You need the following permissions to use this command:\n{permissions}",
-												"title": "Error"
-								},
-								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
-								"missing_permissions": {
-												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
-												"title": "Error"
-								}
+	"bot": {
+		"command_execution_error": {
+			"description": "Une erreur inattendue est apparue. Veuillez demander de l'aide sur [le serveur d'assistance]({url}).",
+			"title": "Erreur"
+		},
+		"footer": "Christmas Countdown by eartharoid",
+		"guild_only": {
+			"description": "Cette commande ne peut être utilisée que dans un canal serveur. [Ajoutez le bot à votre serveur.]({invite})",
+			"title": "Erreur"
+		},
+		"migrate": "Le bot Christmas Countdown utilise désormais des commandes slash !\n**Veuillez rajouter le bot ici: https://christmascountdown.live/invite.**",
+		"member_missing_permissions": {
+			"description": "Vous avez besoin des autorisations suivantes pour utiliser cette commande:\n{permissions}",
+			"title": "Erreur"
+		},
+		"missing_permissions": {
+			"description": "Le bot Christmas Countdown nécessite les autorisations suivantes:\n{permissions}",
+			"title": "Erreur"
+		}
+	},
+	"commands": {
+		"countdown": {
+			"created": {
+				"description": "Votre compte à rebours n'est pas encore actif ! **Activez le compte à rebours avec [`/toggle`]({url}).**\n\nLorsqu'il est activé, le message de compte à rebours sera envoyé sur {channel} tous les matins entre 05h00 et 06h00.",
+				"title": "✅ Webhook du compte à rebours créé"
+			},
+			"invalid_channel": {
+				"description": "Veuillez choisir un canal de texte ou omettre l'option de canal pour utiliser le canal actuel.",
+				"title": "❌ Canal invalide"
+			},
+			"missing_permission:webhook": {
+				"description": "Le bot n'est pas autorisé à gérer les webhooks.",
+				"title":"❌ Impossible de créer un webhook"
+			},
+			"missing_permission:view": {
+				"description": "Veuillez vous assurer que le bot est autorisé à visualiser ce canal.",
+				"title": "❌ Impossible de créer un webhook"
+			}
+		},
+		"days": {
+			"days": [
+				"is **{days} day**",
+				"are **{days} days**"
+			],
+			"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+			"sleeps": [
+				"**{sleeps} sleep**",
+				"**{sleeps} sleeps**"
+			],
+			"title": [
+				"{days} jour restant",
+				"{days} jours restants"
+			]
+		},
+		"donate": {
+			"description": "**[Faire un don]({url})** pour débloquer ces fonctionnalités:\n\\⭐ option serveur `mention`/`role`\n\\⭐ option serveur `autotoggle`",
+			"title": "Obtenez le premium"
+		},
+		"help": {
+			"list": {
+				"description": "Cliquez sur son nom pour obtenir plus d'informations sur une commande spécifique. [Rejoignez le serveur d'assistance]({discord}) si tu as besoin d'aide.\n**[Cliquez ici pour activer le compte à rebours.]({enable})**",
+				"title": "Commandes"
+			}
+		},
+		"hours": {
+			"description": [
+				"Il reste **{hours}** heure avant Noël !",
+				"Il reste **{hours}** heures avant Noël !"
+			],
+			"title": [
+				"{hours} heure restante",
+				"{hours} heures restantes"
+			]
+		},
+		"info": {
+			"description": "Le bot Christmas Countdown pour Discord par [eartharoid]({eartharoid}) fonctionne depuis novembre 2018. [En apprendre encore plus.]({about})",
+			"fields": {
+				"commands": "Commandes utilisées",
+				"counting_in": {
+					"title": "Le compte à rebours fonctionne sur",
+					"value": [
+						"{servers} serveur",
+						"{servers} serveurs"
+					]
 				},
-				"commands": {
-								"countdown": {
-												"created": {
-																"description": "Your countdown is not active yet! **Enable the countdown with [`/toggle`]({url}).**\n\nWhen enabled, the countdown message will be sent to {channel} every morning between 05:00 and 06:00.",
-																"title": "✅ Countdown webhook created"
-												},
-												"invalid_channel": {
-																"description": "Please choose a text channel or omit the channel option to use the current channel.",
-																"title": "❌ Invalid channel"
-												},
-												"missing_permission:view": {
-																"description": "Please ensure the bot has permission to view the channel.",
-																"title": "❌ Can't create webhook"
-												},
-												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
-																"title": "❌ Can't create webhook"
-												}
-								},
-								"days": {
-												"days": [
-																"is **{days} day**",
-																"are **{days} days**"
-												],
-												"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
-												"sleeps": [
-																"**{sleeps} sleep**",
-																"**{sleeps} sleeps**"
-												],
-												"title": [
-																"{days} day left",
-																"{days} days left"
-												]
-								},
-								"donate": {
-												"description": "**[Donate]({url})** to unlock these features:\n\\⭐ `mention`/`role` server option\n\\⭐ `autotoggle` server option",
-												"title": "Get premium"
-								},
-								"help": {
-												"list": {
-																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
-																"title": "Commands"
-												}
-								},
-								"hours": {
-												"description": [
-																"There is **{hours}** hour left until Christmas!",
-																"There are **{hours}** hours left until Christmas!"
-												],
-												"title": [
-																"{hours} hour left",
-																"{hours} hours left"
-												]
-								},
-								"info": {
-												"description": "The Christmas Countdown bot for Discord by [eartharoid]({eartharoid}) has been running since November 2018. [Learn more.]({about})",
-												"fields": {
-																"commands": "Commands used",
-																"counting_in": {
-																				"title": "Counting down in",
-																				"value": [
-																								"{servers} server",
-																								"{servers} servers"
-																				]
-																},
-																"more": {
-																				"title": "More stats",
-																				"value": "[Click here]({url})"
-																},
-																"premium_servers": "⭐ Premium servers",
-																"secret_santa_events": "Secret Santa events",
-																"secret_santa_users": "Secret Santa participants",
-																"servers": "Servers"
-												},
-												"title": "Information"
-								},
-								"invite": {
-												"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
-												"title": "Invite"
-								},
-								"joke": {
-												"answer": "Answer",
-												"question": "Question"
-								},
-								"minutes": {
-												"description": [
-																"There is **{minutes}** minute left until Christmas!",
-																"There are **{minutes}** minutes left until Christmas!"
-												],
-												"title": [
-																"{minutes} minute left",
-																"{minutes} minutes left"
-												]
-								},
-								"months": {
-												"description": [
-																"There is **{months}** month left until Christmas!",
-																"There are **{months}** months left until Christmas!"
-												],
-												"title": [
-																"{months} month left",
-																"{months} months left"
-												]
-								},
-								"ping": {
-												"calculating": "Calculating...",
-												"fields": {
-																"average_ping": "Avg. ping",
-																"latency": "Overall latency",
-																"shard_number": "Shard number",
-																"shard_ping": "Shard ping"
-												},
-												"title": "🏓 Pong!"
-								},
-								"radio": {
-												"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
-												"title": "Christmas Radio"
-								},
-								"seconds": {
-												"description": [
-																"There is **{seconds}** second left until Christmas!",
-																"There are **{seconds}** seconds left until Christmas!"
-												],
-												"title": [
-																"{seconds} second left",
-																"{seconds} seconds left"
-												]
-								},
-								"secret_santa": {
-												"blacklist": {
-																"add": {
-																				"added": {
-																								"description": "{member} has been added to the naughty list.",
-																								"title": "✅ Added"
-																				}
-																},
-																"list": "The naughty list",
-																"remove": {
-																				"cannot_remove": {
-																								"description": "{member} is not on the naughty list.",
-																								"title": "❌ Can't remove member"
-																				},
-																				"removed": {
-																								"description": "{member} has been removed from the naughty list.",
-																								"title": "✅ Removed"
-																				}
-																}
-												},
-												"no_event": {
-																"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
-																"title": "❌ Error"
-												},
-												"show": {
-																"none": {
-																				"description": "You have not entered a Secret Santa event.",
-																				"title": "❌ Not assigned"
-																},
-																"show": {
-																				"description": "**You are {member}'s Santa.** Give them a gift, following the event guidelines set by the organiser.",
-																				"title": "Secret Santa"
-																}
-												}
-								},
-								"server": {
-												"reset": {
-																"title": "✅ Server settings reset"
-												},
-												"set": {
-																"cannot_enable": {
-																				"description": "Create the countdown webhook with [`/countdown`]({url}).",
-																				"title": "❌ Can't enable countdown"
-																},
-																"invalid_locale": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid locale"
-																},
-																"invalid_timezone": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid timezone"
-																},
-																"premium": {
-																				"description": "Donate with [`/donate`]({url}) to unlock these settings.",
-																				"title": "⭐ This isn't a premium server"
-																},
-																"title": "✅ Server settings updated"
-												},
-												"view": {
-																"description": "Change your settings with `/server set`.",
-																"title": "Server settings"
-												}
-								},
-								"sleeps": {
-												"days": [
-																"**{days} day**",
-																"**{days} days**"
-												],
-												"description": "There {sleeps} or {days}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
-												"sleeps": [
-																"is **{sleeps} sleep**",
-																"are **{sleeps} sleeps**"
-												],
-												"title": [
-																"{sleeps} sleep left",
-																"{sleeps} sleeps left"
-												]
-								},
-								"suggest": {
-												"description": "Thank you for your suggestion.",
-												"title": "✅ Submitted"
-								},
-								"toggle": {
-												"disabled": "✅ Countdown disabled",
-												"enabled": "✅ Countdown enabled"
-								},
-								"total": {
-												"days": [
-																"**{days} day**",
-																"**{days} days**"
-												],
-												"description": [
-																"There is {days}, {hours}, {minutes}, and {seconds} left until Christmas!",
-																"There are {days}, {hours}, {minutes}, and {seconds} left until Christmas!"
-												],
-												"hours": [
-																"**{hours} hour**",
-																"**{hours} hours**"
-												],
-												"minutes": [
-																"**{minutes} minute**",
-																"**{minutes} minutes**"
-												],
-												"seconds": [
-																"**{seconds} second**",
-																"**{seconds} seconds**"
-												],
-												"title": "{days}, {hours}, {minutes}, {seconds} left"
-								},
-								"user": {
-												"reset": {
-																"title": "✅ User settings reset"
-												},
-												"set": {
-																"title": "✅ User settings updated"
-												},
-												"view": {
-																"title": "User settings"
-												}
-								},
-								"weekday": {
-												"description": "Christmas Day is on a **{day}** in {year}.",
-												"title": "Christmas is on..."
-								},
-								"weeks": {
-												"description": [
-																"There is **{weeks}** week left until Christmas!",
-																"There are **{weeks}** weeks left until Christmas!"
-												],
-												"title": [
-																"{weeks} week left",
-																"{weeks} weeks left"
-												]
-								}
+				"more": {
+					"title": "Plus de statistiques",
+					"value": "[Cliquez ici]({url})"
 				},
-				"countdown": {
-								"christmas_day": "🎉 It's Christmas Day!",
-								"christmas_eve": "🎅 It's Christmas Eve!",
-								"disable": {
-												"description": "**Server administrators: use [`/toggle`]({toggle}) to disable the countdown.**\nPlease consider reviewing the bot [here]({review}).\nThank you for using this bot and enjoy your Christmas! 🙂",
-												"title": "🎄 Merry Christmas"
-								},
-								"live": "View the live countdown at [{pretty}]({url}).",
-								"merry_christmas": "🎄 Merry Christmas!",
-								"server_timezone": "Server timezone: {timezone}",
-								"user_timezone": "User timezone: {timezone}"
+				"premium_servers": "⭐ Serveurs premium",
+				"secret_santa_events": "Événements secrets du Père Noël",
+				"secret_santa_users": "Participants au Père Noël secret",
+				"servers": "Serveurs"
+			},
+			"title": "Information"
+		},
+		"invite": {
+			"description": "[Cliquez ici]({url}) pour ajouter le bot Christmas Countdown à votre propre serveur.",
+			"title": "Invite"
+		},
+		"joke": {
+			"question": "Question",
+			"answer": "Réponse"
+		},
+		"minutes": {
+			"description": [
+				"Il reste **{minutes}** minute restante jusqu'à Noël !",
+				"Il reste **{minutes}** minutes restantes jusqu'à Noël !"
+			],
+			"title": [
+				"{minutes} minute restante",
+				"{minutes} minutes restantes"
+			]
+		},
+		"months": {
+			"description": [
+				"Il reste **{months}** mois restant jusqu'à Noël !",
+				"Il reste **{months}** mois restants jusqu'à Noël !"
+			],
+			"title": [
+				"{months} mois restant",
+				"{months} mois restants"
+			]
+		},
+		"radio": {
+			"description": "**[Ajouter le bot Christmas Radio]({url})** pour écouter de la musique de Noël sur votre serveur Discord.",
+			"title": "Radio de Noël"
+		},
+		"ping": {
+			"calculating": "Calcul en cours...",
+			"fields": {
+				"average_ping": "Ping moyen",
+				"latency": "Latence globale",
+				"shard_number": "Numéro de fragment",
+				"shard_ping": "Ping de partition"
+			},
+			"title": "🏓 Pong !"
+		},
+		"seconds": {
+			"description": [
+				"Il reste **{seconds}** seconde restante jusqu'à Noël !",
+				"Il reste **{seconds}** secondes restantes jusqu'à Noël !"
+			],
+			"title": [
+				"{seconds} seconde restante",
+				"{seconds} secondes restantes"
+			]
+		},
+		"secret_santa": {
+			"blacklist": {
+				"add": {
+					"added": {
+						"description": "{member} a été ajouté à la liste des vilains.",
+						"title": "✅ Ajouté"
+					}
 				},
-				"disabled": "disabled",
-				"santa_tracker": {
-								"description": "Santa is currently over **[{city} ({region})]({map})**.",
-								"title": "Santa Tracker"
+				"remove": {
+					"removed": {
+						"description": "{member} a été retiré de la liste des vilains.",
+						"title": "✅ Supprimé"
+					},
+					"cannot_remove": {
+						"description": "{member} n'est pas sur la liste des vilains.",
+						"title":"❌ Impossible de supprimer le membre"
+					}
+				},
+				"list": "La liste des vilains"
+			},
+			"no_event": {
+				"description": "Il n'y a pas d'événements secrets du père Noël. Regarder [le guide]({url}) pour en créer un.",
+				"title":"❌ Erreur"
+			},
+			"show": {
+				"none": {
+					"description": "Vous n'êtes pas entré dans un événement secret du père Noël.",
+					"title": "❌ Non attribué"
+				},
+				"show": {
+					"description": "**Vous êtes le Père Noël de {member}.** Offrez-lui un cadeau, en suivant les directives de l'événement définies par l'organisateur.",
+					"title": "Père Noël secret"
 				}
+			}
+		},
+		"server": {
+			"reset": {
+				"title": "✅ Réinitialisation des paramètres du serveur"
+			},
+			"set": {
+				"cannot_enable": {
+					"description": "Créez le webhook du compte à rebours avec [`/countdown`]({url}).",
+					"title": "❌ Impossible d'activer le compte à rebours"
+				},
+				"invalid_locale": {
+					"description": "Réessayez ou [demander de l'aide]({url}).",
+					"title": "❌ Paramètres régionaux non valides"
+				},
+				"invalid_timezone": {
+					"description": "Réessayez ou [demander de l'aide]({url}).",
+					"title": "❌ Fuseau horaire invalide"
+				},
+				"premium": {
+					"description": "Faites un don avec [`/donate`]({url}) pour déverrouiller ces paramètres.",
+					"title": "⭐ Ce n'est pas un serveur premium"
+				},
+				"title": "✅ Paramètres du serveur mis à jour"
+			},
+			"view": {
+				"description": "Modifiez vos paramètres avec `/server set`.",
+				"title": "Paramètres du serveur"
+			}
+		},
+		"sleeps": {
+			"days": [
+				"**{days} jour**",
+				"**{days} jours**"
+			],
+			"description": "There {sleeps} or {days}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+			"sleeps": [
+				"is **{sleeps} sleep**",
+				"are **{sleeps} sleeps**"
+			],
+			"title": [
+				"{sleeps} dodo restant",
+				"{sleeps} dodos restants"
+			]
+		},
+		"suggest": {
+			"description": "Merci pour votre suggestion.",
+			"title": "✅ Suggestion envoyé"
+		},
+		"toggle": {
+			"disabled": "✅ Compte à rebours désactivé",
+			"enabled": "✅ Compte à rebours activé"
+		},
+		"total": {
+			"days": [
+				"**{days} jour**",
+				"**{days} jours**"
+			],
+			"description": [
+				"Il reste {days}, {hours}, {minutes}, et {seconds} jusqu'à Noël !",
+				"Il reste {days}, {hours}, {minutes}, et {seconds} jusqu'à Noël !"
+			],
+			"hours": [
+				"**{hours} heure**",
+				"**{hours} heures**"
+			],
+			"minutes": [
+				"**{minutes} minute**",
+				"**{minutes} minutes**"
+			],
+			"seconds": [
+				"**{seconds} seconde**",
+				"**{seconds} secondes**"
+			],
+			"title": "{days}, {hours}, {minutes}, {seconds} restant"
+		},
+		"user": {
+			"reset": {
+				"title": "✅ Réinitialisation des paramètres utilisateur"
+			},
+			"set": {
+				"title": "✅ Paramètres utilisateur mis à jour"
+			},
+			"view": {
+				"title": "Paramètres utilisateur"
+			}
+		},
+		"weekday": {
+			"description": "Le jour de Noël est un **{day}** de {year}.",
+			"title": "Noël est activé..."
+		},
+		"weeks": {
+			"description": [
+				"Il reste **{weeks}** semaine restante jusqu'à Noël !",
+				"Il reste **{weeks}** semaines restantes jusqu'à Noël !"
+			],
+			"title": [
+				"{weeks} semaine restante",
+				"{weeks} semaines restantes"
+			]
+		}
+	},
+	"countdown": {
+		"christmas_day": "🎉 C'est le jour de Noël !",
+		"christmas_eve": "🎅 C'est le réveillon de Noël !",
+		"disable": {
+			"description": "**Administrateurs de serveur: utilise [`/toggle`]({toggle}) pour désactiver le compte à rebours.**\nVeuillez envisager de revoir le bot [ici]({review}).\nMerci d'utiliser ce bot et profitez de votre Noël ! 🙂",
+			"title": "🎄 Joyeux noël"
+		},
+		"live": "Voir le compte à rebours en direct sur [{pretty}]({url}).",
+		"merry_christmas": "🎄 Joyeux noël !",
+		"server_timezone": "Fuseau horaire du serveur: {timezone}",
+		"user_timezone": "Fuseau horaire de l'utilisateur: {timezone}"
+	},
+	"disabled": "désactivé",
+	"santa_tracker": {
+		"description": "Le Père Noël est actuellement à **[{city} ({region})]({map})**.",
+		"title": "Traqueur du Père Noël"
+	}
 }
