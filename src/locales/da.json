@@ -1,19 +1,19 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
-												"title": "Error"
+												"description": "En uventet fejl er frembudt. Spørg efter hjælp på [Support serveren]{url}.",
+												"title": "Fejl"
 								},
-								"footer": "Christmas Countdown by eartharoid",
+								"footer": "Jule Nedtælling af eartharoid",
 								"guild_only": {
-												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
-												"title": "Error"
+												"description": "Denne kommando kan kun bruges indeni en server kanal. [Tilføj bot til din server]({inviter})",
+												"title": "Fejl"
 								},
 								"member_missing_permissions": {
-												"description": "You need the following permissions to use this command:\n{permissions}",
-												"title": "Error"
+												"description": "Du behøver følgende tilladelser for at bruge kommandoen:\n{permissions}",
+												"title": "Fejl"
 								},
-								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
+								"migrate": "Jule Nedtællings bot bruger nu slash kommandoer!\n**Gentilføj venligst bot her: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
 												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
 												"title": "Error"
