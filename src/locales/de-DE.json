@@ -1,302 +1,302 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
-												"title": "Error"
+												"description": "Ein unerwarteter Fehler ist aufgetreten. Bitte auf [dem Support-Server]({url}) um Hilfe bitten.",
+												"title": "Fehler"
 								},
 								"footer": "Christmas Countdown by eartharoid",
 								"guild_only": {
-												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
-												"title": "Error"
+												"description": "Dieser Befehl kann nur in einem Server Channel benutzt werden. [Den Bot einem Server hinzufügen.]({invite})",
+												"title": "Fehler"
 								},
 								"member_missing_permissions": {
-												"description": "You need the following permissions to use this command:\n{permissions}",
-												"title": "Error"
+												"description": "Folgende Berechtigungen werden benötigt, um diesen Befehl auszuführen:\n{permissions}",
+												"title": "Fehler"
 								},
-								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
+								"migrate": "Der Christmas Countdown Bot verwendet nun Slash-Kommandos!\n**Bitte den Bot neu hinzufügen: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
-												"title": "Error"
+												"description": "Der Christmas Countdown Bot benötigt folgende Berechtigungen:\n{permissions}",
+												"title": "Fehler"
 								}
 				},
 				"commands": {
 								"countdown": {
 												"created": {
-																"description": "Your countdown is not active yet! **Enable the countdown with [`/toggle`]({url}).**\n\nWhen enabled, the countdown message will be sent to {channel} every morning between 05:00 and 06:00.",
-																"title": "✅ Countdown webhook created"
+																"description": "Der Countdown ist noch nicht aktiv! **Den Countdown mit [`/toggle`]({url}) aktivieren.**\n\nWenn aktiv, wird die Countdown-Nachricht jeden Morgen zwischen 05:00 und 6:00 nach {channel} gesendet.",
+																"title": "✅ Countdown-Webhook erstellt"
 												},
 												"invalid_channel": {
-																"description": "Please choose a text channel or omit the channel option to use the current channel.",
-																"title": "❌ Invalid channel"
+																"description": "Bitte einen Text-Channel auswählen, oder die Channel-Option entfernen um den aktuellen Channel zu verwenden.",
+																"title": "❌ Ungültiger Channel"
 												},
 												"missing_permission:view": {
-																"description": "Please ensure the bot has permission to view the channel.",
-																"title": "❌ Can't create webhook"
+																"description": "Bitte sicherstellen, dass der Bot die Berechtigung besitzt, den Channel zu sehen.",
+																"title": "❌ Webhook kann nicht erstellt werden"
 												},
 												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
-																"title": "❌ Can't create webhook"
+																"description": "Der Bot hat keine Berechtigung Webhooks zu verwalten.",
+																"title": "❌ Webhook kann nicht erstellt werden"
 												}
 								},
 								"days": {
 												"days": [
-																"is **{days} day**",
-																"are **{days} days**"
+																"**{days} Tag**",
+																"**{days} Tage**"
 												],
-												"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "Noch {days} oder {sleeps}[(?)]({url} \"Was ist der Unterschied zwischen Tage und Nächte?\") bis Weihnachten!",
 												"sleeps": [
-																"**{sleeps} sleep**",
-																"**{sleeps} sleeps**"
+																"**{sleeps} Nacht**",
+																"**{sleeps} Nächte**"
 												],
 												"title": [
-																"{days} day left",
-																"{days} days left"
+																"noch {days} Tag",
+																"noch {days} Tage"
 												]
 								},
 								"donate": {
-												"description": "**[Donate]({url})** to unlock these features:\n\\⭐ `mention`/`role` server option\n\\⭐ `autotoggle` server option",
-												"title": "Get premium"
+												"description": "**[Spende]({url})** um folgende Funktionen freizuschalten:\n\\⭐ `mention`/`role` Server-Option\n\\⭐ `autotoggle` Server-Option",
+												"title": "Premium holen"
 								},
 								"help": {
 												"list": {
-																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
-																"title": "Commands"
+																"description": "Auf den Namen klicken um weitere Informationen über ein bestimmtes Kommando zu erfahren. [Dem Support-Server beitreten]({discord}), um Hilfe zu erhalten.\n**[Hier klicken, um den Countdown zu aktivieren.]({enable})**",
+																"title": "Befehle"
 												}
 								},
 								"hours": {
 												"description": [
-																"There is **{hours}** hour left until Christmas!",
-																"There are **{hours}** hours left until Christmas!"
+																"Noch **{hours}** Stunde bis Weihnachten!",
+																"Noch **{hours}** Stunden bis Weihnachten!"
 												],
 												"title": [
-																"{hours} hour left",
-																"{hours} hours left"
+																"noch {hours} Stunde",
+																"noch {hours} Stunden"
 												]
 								},
 								"info": {
-												"description": "The Christmas Countdown bot for Discord by [eartharoid]({eartharoid}) has been running since November 2018. [Learn more.]({about})",
+												"description": "Der Christmas Countdown Bot für Discord von [eartharoid]({eartharoid}) läuft seit November 2018. [Mehr erfahren.]({about})",
 												"fields": {
-																"commands": "Commands used",
+																"commands": "Verwendete Befehle",
 																"counting_in": {
-																				"title": "Counting down in",
+																				"title": "Beginne Countdown in",
 																				"value": [
-																								"{servers} server",
-																								"{servers} servers"
+																								"{servers} Server",
+																								"{servers} Server"
 																				]
 																},
 																"more": {
-																				"title": "More stats",
-																				"value": "[Click here]({url})"
+																				"title": "Mehr Statistiken",
+																				"value": "[Hier Klicken]({url})"
 																},
-																"premium_servers": "⭐ Premium servers",
-																"secret_santa_events": "Secret Santa events",
-																"secret_santa_users": "Secret Santa participants",
-																"servers": "Servers"
+																"premium_servers": "⭐ Premium-Server",
+																"secret_santa_events": "Secret Santa-Events",
+																"secret_santa_users": "Secret Santa-Teilnehmer",
+																"servers": "Server"
 												},
 												"title": "Information"
 								},
 								"invite": {
-												"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
-												"title": "Invite"
+												"description": "[Hier Klicken]({url}), um den Christmas Countdown Bot dem eigenen Server hinzuzufügen.",
+												"title": "Einladen"
 								},
 								"joke": {
-												"answer": "Answer",
-												"question": "Question"
+												"answer": "Antwort",
+												"question": "Frage"
 								},
 								"minutes": {
 												"description": [
-																"There is **{minutes}** minute left until Christmas!",
-																"There are **{minutes}** minutes left until Christmas!"
+																"Noch **{minutes}** Minute bis Weihnachten!",
+																"Noch **{minutes}** Minuten bis Weihnachten!"
 												],
 												"title": [
-																"{minutes} minute left",
-																"{minutes} minutes left"
+																"Noch {minutes} Minute",
+																"Noch {minutes} Minuten"
 												]
 								},
 								"months": {
 												"description": [
-																"There is **{months}** month left until Christmas!",
-																"There are **{months}** months left until Christmas!"
+																"Noch **{months}** Monat bis Weihnachten!",
+																"Noch **{months}** Monate bis Weihnachten!"
 												],
 												"title": [
-																"{months} month left",
-																"{months} months left"
+																"Noch {months} Monat",
+																"Noch {months} Monate"
 												]
 								},
 								"ping": {
-												"calculating": "Calculating...",
+												"calculating": "Berechne...",
 												"fields": {
-																"average_ping": "Avg. ping",
-																"latency": "Overall latency",
-																"shard_number": "Shard number",
-																"shard_ping": "Shard ping"
+																"average_ping": "Durchschn. Ping",
+																"latency": "Durchschnittliche Latenz",
+																"shard_number": "Shard-Ziffer",
+																"shard_ping": "Shard Ping"
 												},
 												"title": "🏓 Pong!"
 								},
 								"radio": {
-												"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
+												"description": "**[Den Christmas Radio Bot hinzufügen]({url})** um im eigenen Discord Server Weihnachtsmusik zu hören.",
 												"title": "Christmas Radio"
 								},
 								"seconds": {
 												"description": [
-																"There is **{seconds}** second left until Christmas!",
-																"There are **{seconds}** seconds left until Christmas!"
+																"Noch **{seconds}** Sekunde bis Weihnachten!",
+																"Noch **{seconds}** Sekunden bis Weihnachten!"
 												],
 												"title": [
-																"{seconds} second left",
-																"{seconds} seconds left"
+																"Noch {seconds} Sekunde",
+																"Noch {seconds} Sekunden"
 												]
 								},
 								"secret_santa": {
 												"blacklist": {
 																"add": {
 																				"added": {
-																								"description": "{member} has been added to the naughty list.",
-																								"title": "✅ Added"
+																								"description": "{member} wurde der Ungezogenen-Liste hinzugefügt.",
+																								"title": "✅ Hinzugefügt"
 																				}
 																},
-																"list": "The naughty list",
+																"list": "Die Ungezogenen-Liste",
 																"remove": {
 																				"cannot_remove": {
-																								"description": "{member} is not on the naughty list.",
-																								"title": "❌ Can't remove member"
+																								"description": "{member} ist nicht auf der Ungezogenen-Liste.",
+																								"title": "❌ Mitglied kann nicht entfernt werden"
 																				},
 																				"removed": {
-																								"description": "{member} has been removed from the naughty list.",
-																								"title": "✅ Removed"
+																								"description": "{member} wurde von der Ungezogenen-Liste entfernt.",
+																								"title": "✅ Entfernt"
 																				}
 																}
 												},
 												"no_event": {
-																"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
-																"title": "❌ Error"
+																"description": "Es gibt keine Secret Santa-Events. [Der Anleitung]({url}) folgen, um einen zu erstellen.",
+																"title": "❌ Fehler"
 												},
 												"show": {
 																"none": {
-																				"description": "You have not entered a Secret Santa event.",
-																				"title": "❌ Not assigned"
+																				"description": "Keinem Secret Santa-Event beigetreten.",
+																				"title": "❌ Nicht zugewiesen"
 																},
 																"show": {
-																				"description": "**You are {member}'s Santa.** Give them a gift, following the event guidelines set by the organiser.",
+																				"description": "**Du bist {member}'s Santa.** Verschenke ein Präsent nach den Event-Guidelines des Organisators.",
 																				"title": "Secret Santa"
 																}
 												}
 								},
 								"server": {
 												"reset": {
-																"title": "✅ Server settings reset"
+																"title": "✅ Server-Einstellungen zurückgesetzt"
 												},
 												"set": {
 																"cannot_enable": {
-																				"description": "Create the countdown webhook with [`/countdown`]({url}).",
-																				"title": "❌ Can't enable countdown"
+																				"description": "Den Countdown-Webhook mit [`/countdown`]({url}) erstellen.",
+																				"title": "❌ Countdown konnte nicht aktiviert werden"
 																},
 																"invalid_locale": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid locale"
+																				"description": "Erneut versuchen oder [um Hilfe bitten]({url}).",
+																				"title": "❌ Ungültige Locale"
 																},
 																"invalid_timezone": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid timezone"
+																				"description": "Erneut versuchen oder [um Hilfe bitten]({url}).",
+																				"title": "❌ Ungültige Zeitzone"
 																},
 																"premium": {
-																				"description": "Donate with [`/donate`]({url}) to unlock these settings.",
-																				"title": "⭐ This isn't a premium server"
+																				"description": "Spende mit [`/donate`]({url}) um diese Option freizuschalten.",
+																				"title": "⭐ Dies ist kein Premium-Server"
 																},
-																"title": "✅ Server settings updated"
+																"title": "✅ Server-Einstellungen aktualisiert"
 												},
 												"view": {
-																"description": "Change your settings with `/server set`.",
-																"title": "Server settings"
+																"description": "Einstellungen ändern mit `/server set`.",
+																"title": "Server-Einstellungen"
 												}
 								},
 								"sleeps": {
 												"days": [
-																"**{days} day**",
-																"**{days} days**"
+																"**{days} Tag**",
+																"**{days} Tage**"
 												],
-												"description": "There {sleeps} or {days}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "Noch {days} oder {sleeps}[(?)]({url} \"Was ist der Unterschied zwischen Tage und Nächte?\") bis Weihnachten!",
 												"sleeps": [
-																"is **{sleeps} sleep**",
-																"are **{sleeps} sleeps**"
+																"ist **{sleeps} mal Schlafen**",
+																"sind **{sleeps} mal Schlafen**"
 												],
 												"title": [
-																"{sleeps} sleep left",
-																"{sleeps} sleeps left"
+																"noch {sleeps} mal Schlafen",
+																"noch {sleeps} mal Schlafen"
 												]
 								},
 								"suggest": {
-												"description": "Thank you for your suggestion.",
-												"title": "✅ Submitted"
+												"description": "Danke für den Vorschlag.",
+												"title": "✅ Übermittelt"
 								},
 								"toggle": {
-												"disabled": "✅ Countdown disabled",
-												"enabled": "✅ Countdown enabled"
+												"disabled": "✅ Countdown deaktiviert",
+												"enabled": "✅ Countdown aktiviert"
 								},
 								"total": {
 												"days": [
-																"**{days} day**",
-																"**{days} days**"
+																"**{days} Tag**",
+																"**{days} Tage**"
 												],
 												"description": [
-																"There is {days}, {hours}, {minutes}, and {seconds} left until Christmas!",
-																"There are {days}, {hours}, {minutes}, and {seconds} left until Christmas!"
+																"Noch {days}, {hours}, {minutes} und {seconds} bis Weihnachten!",
+																"Noch {days}, {hours}, {minutes} und {seconds} bis Weihnachten!"
 												],
 												"hours": [
-																"**{hours} hour**",
-																"**{hours} hours**"
+																"**{hours} Stunde**",
+																"**{hours} Stunden**"
 												],
 												"minutes": [
-																"**{minutes} minute**",
-																"**{minutes} minutes**"
+																"**{minutes} Minute**",
+																"**{minutes} Minuten**"
 												],
 												"seconds": [
-																"**{seconds} second**",
-																"**{seconds} seconds**"
+																"**{seconds} Sekunde**",
+																"**{seconds} Sekunden**"
 												],
-												"title": "{days}, {hours}, {minutes}, {seconds} left"
+												"title": "noch {days}, {hours}, {minutes}, {seconds}"
 								},
 								"user": {
 												"reset": {
-																"title": "✅ User settings reset"
+																"title": "✅ Nutzereinstellungen zurückgesetzt"
 												},
 												"set": {
-																"title": "✅ User settings updated"
+																"title": "✅ Nutzereinstellungen aktualisiert"
 												},
 												"view": {
-																"title": "User settings"
+																"title": "Nutzereinstellungen"
 												}
 								},
 								"weekday": {
-												"description": "Christmas Day is on a **{day}** in {year}.",
-												"title": "Christmas is on..."
+												"description": "Weihnachten ist {year} an einem **{day}**.",
+												"title": "Weihnachten ist am..."
 								},
 								"weeks": {
 												"description": [
-																"There is **{weeks}** week left until Christmas!",
-																"There are **{weeks}** weeks left until Christmas!"
+																"Noch **{weeks}** Woche bis Weihnachten!",
+																"Noch **{weeks}** Wochen bis Weihnachten!"
 												],
 												"title": [
-																"{weeks} week left",
-																"{weeks} weeks left"
+																"noch {weeks} Woche",
+																"noch {weeks} Wochen"
 												]
 								}
 				},
 				"countdown": {
-								"christmas_day": "🎉 It's Christmas Day!",
-								"christmas_eve": "🎅 It's Christmas Eve!",
+								"christmas_day": "🎉 Es ist Weihnachten!",
+								"christmas_eve": "🎅 Es ist Heilig Abend!",
 								"disable": {
-												"description": "**Server administrators: use [`/toggle`]({toggle}) to disable the countdown.**\nPlease consider reviewing the bot [here]({review}).\nThank you for using this bot and enjoy your Christmas! 🙂",
-												"title": "🎄 Merry Christmas"
+												"description": "**Serveradministratoren: mit [`/toggle`]({toggle}) den Countdown deaktivieren.**\nBitte den Bot [hier]({review}) bewerten.\nVielen Dank für das Nutzen dieses Bots und Frohe Weihnachten! 🙂",
+												"title": "🎄 Frohe Weihnachten"
 								},
-								"live": "View the live countdown at [{pretty}]({url}).",
-								"merry_christmas": "🎄 Merry Christmas!",
-								"server_timezone": "Server timezone: {timezone}",
-								"user_timezone": "User timezone: {timezone}"
+								"live": "Den Live-Countdown auf [{pretty}]({url}) sehen.",
+								"merry_christmas": "🎄 Frohe Weihnachten!",
+								"server_timezone": "Server-Zeitzone: {timezone}",
+								"user_timezone": "User-Zeitzone: {timezone}"
 				},
-				"disabled": "disabled",
+				"disabled": "deaktiviert",
 				"santa_tracker": {
-								"description": "Santa is currently over **[{city} ({region})]({map})**.",
+								"description": "Der Weihnachtsmann befindet sich aktuelle über **[{city} ({region})]({map})**.",
 								"title": "Santa Tracker"
 				}
 }
