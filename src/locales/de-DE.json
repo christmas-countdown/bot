@@ -1,19 +1,19 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "Ein unerwarteter Fehler ist aufgetreten. Bitte auf [dem Support-Server]({url}) um Hilfe bitten.",
+												"description": "Ein unerwarteter Fehler ist aufgetreten. Du kannst auf [dem Support-Server]({url}) um Hilfe fragen.",
 												"title": "Fehler"
 								},
-								"footer": "Christmas Countdown by eartharoid",
+								"footer": "Christmas Countdown von eartharoid",
 								"guild_only": {
-												"description": "Dieser Befehl kann nur in einem Server Channel benutzt werden. [Den Bot einem Server hinzufügen.]({invite})",
+												"description": "Dieser Befehl kann nur in einem Server Channel benutzt werden. [Lade den Bot auf deinen Server ein.]({invite})",
 												"title": "Fehler"
 								},
 								"member_missing_permissions": {
-												"description": "Folgende Berechtigungen werden benötigt, um diesen Befehl auszuführen:\n{permissions}",
+												"description": "Es werden die folgenden Berechtigungen werden benötigt, um diesen Befehl auszuführen:\n{permissions}",
 												"title": "Fehler"
 								},
-								"migrate": "Der Christmas Countdown Bot verwendet nun Slash-Kommandos!\n**Bitte den Bot neu hinzufügen: https://christmascountdown.live/invite.**",
+								"migrate": "Der Christmas Countdown Bot verwendet nun Slash-Befehle!\n**Bitte füge den Bot neu hinzu: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
 												"description": "Der Christmas Countdown Bot benötigt folgende Berechtigungen:\n{permissions}",
 												"title": "Fehler"
@@ -22,7 +22,7 @@
 				"commands": {
 								"countdown": {
 												"created": {
-																"description": "Der Countdown ist noch nicht aktiv! **Den Countdown mit [`/toggle`]({url}) aktivieren.**\n\nWenn aktiv, wird die Countdown-Nachricht jeden Morgen zwischen 05:00 und 6:00 nach {channel} gesendet.",
+																"description": "Der Countdown ist noch nicht aktiviert! **Du kannst den Countdown mit [`/toggle`]({url}) aktivieren.**\n\nSobald Countdown aktiviert ist, wird die Countdown-Nachricht jeden Morgen zwischen 05:00 und 6:00 Uhr in {channel} gesendet.",
 																"title": "✅ Countdown-Webhook erstellt"
 												},
 												"invalid_channel": {
@@ -59,7 +59,7 @@
 								},
 								"help": {
 												"list": {
-																"description": "Auf den Namen klicken um weitere Informationen über ein bestimmtes Kommando zu erfahren. [Dem Support-Server beitreten]({discord}), um Hilfe zu erhalten.\n**[Hier klicken, um den Countdown zu aktivieren.]({enable})**",
+																"description": "Klicke auf den Namen um weitere Informationen über ein bestimmten Befehl zu erfahren. [Trete dem Support-Server bei]({discord}), um Hilfe zu erhalten.\n**[Hier klicken, um den Countdown zu aktivieren.]({enable})**",
 																"title": "Befehle"
 												}
 								},
@@ -90,13 +90,13 @@
 																},
 																"premium_servers": "⭐ Premium-Server",
 																"secret_santa_events": "Secret Santa-Events",
-																"secret_santa_users": "Secret Santa-Teilnehmer",
+																"secret_santa_users": "Geheime Santa-Teilnehmer",
 																"servers": "Server"
 												},
-												"title": "Information"
+												"title": "Informationen"
 								},
 								"invite": {
-												"description": "[Hier Klicken]({url}), um den Christmas Countdown Bot dem eigenen Server hinzuzufügen.",
+												"description": "[Klicke hier]({url}), um den Christmas Countdown Bot auf deinem Server hinzuzufügen.",
 												"title": "Einladen"
 								},
 								"joke": {
@@ -128,7 +128,7 @@
 												"fields": {
 																"average_ping": "Durchschn. Ping",
 																"latency": "Durchschnittliche Latenz",
-																"shard_number": "Shard-Ziffer",
+																"shard_number": "Shard",
 																"shard_ping": "Shard Ping"
 												},
 												"title": "🏓 Pong!"
@@ -168,16 +168,16 @@
 																}
 												},
 												"no_event": {
-																"description": "Es gibt keine Secret Santa-Events. [Der Anleitung]({url}) folgen, um einen zu erstellen.",
+																"description": "Es gibt keine Geheimen Santa-Events. [Folge der Anleitung]({url}), um eins zu erstellen.",
 																"title": "❌ Fehler"
 												},
 												"show": {
 																"none": {
-																				"description": "Keinem Secret Santa-Event beigetreten.",
+																				"description": "Du bist keinem geheimen Santa-Event beigetreten.",
 																				"title": "❌ Nicht zugewiesen"
 																},
 																"show": {
-																				"description": "**Du bist {member}'s Santa.** Verschenke ein Präsent nach den Event-Guidelines des Organisators.",
+																				"description": "**Du bist {member}'s Santa.** Verschenke ein Geschenk nach den Event-Richtlinien des Organisators.",
 																				"title": "Secret Santa"
 																}
 												}
@@ -188,25 +188,25 @@
 												},
 												"set": {
 																"cannot_enable": {
-																				"description": "Den Countdown-Webhook mit [`/countdown`]({url}) erstellen.",
+																				"description": "Erstelle den Countdown-Webhook mit [`/countdown`]({url}).",
 																				"title": "❌ Countdown konnte nicht aktiviert werden"
 																},
 																"invalid_locale": {
-																				"description": "Erneut versuchen oder [um Hilfe bitten]({url}).",
+																				"description": "Versuche es erneut oder [frag nach Hilfe]({url}).",
 																				"title": "❌ Ungültige Locale"
 																},
 																"invalid_timezone": {
-																				"description": "Erneut versuchen oder [um Hilfe bitten]({url}).",
+																				"description": "Versuche es erneut oder [frag nach Hilfe]({url}).",
 																				"title": "❌ Ungültige Zeitzone"
 																},
 																"premium": {
-																				"description": "Spende mit [`/donate`]({url}) um diese Option freizuschalten.",
-																				"title": "⭐ Dies ist kein Premium-Server"
+																				"description": "Spende mit [`/donate`]({url}) um diese Einstellung freizuschalten.",
+																				"title": "⭐ Dieser Server ist kein Premium-Server"
 																},
 																"title": "✅ Server-Einstellungen aktualisiert"
 												},
 												"view": {
-																"description": "Einstellungen ändern mit `/server set`.",
+																"description": "Ändere deine Einstellungen mit `/server set`.",
 																"title": "Server-Einstellungen"
 												}
 								},
@@ -217,17 +217,17 @@
 												],
 												"description": "Noch {days} oder {sleeps}[(?)]({url} \"Was ist der Unterschied zwischen Tage und Nächte?\") bis Weihnachten!",
 												"sleeps": [
-																"ist **{sleeps} mal Schlafen**",
-																"sind **{sleeps} mal Schlafen**"
+																"**{sleeps} mal Schlafen**",
+																"**{sleeps} mal Schlafen**"
 												],
 												"title": [
-																"noch {sleeps} mal Schlafen",
-																"noch {sleeps} mal Schlafen"
+																"Noch {sleeps} mal Schlafen",
+																"Noch {sleeps} mal Schlafen"
 												]
 								},
 								"suggest": {
-												"description": "Danke für den Vorschlag.",
-												"title": "✅ Übermittelt"
+												"description": "Danke für deinen Vorschlag.",
+												"title": "✅ Eingereicht"
 								},
 								"toggle": {
 												"disabled": "✅ Countdown deaktiviert",
@@ -284,19 +284,19 @@
 				},
 				"countdown": {
 								"christmas_day": "🎉 Es ist Weihnachten!",
-								"christmas_eve": "🎅 Es ist Heilig Abend!",
+								"christmas_eve": "🎅 Es ist Heiligabend!",
 								"disable": {
-												"description": "**Serveradministratoren: mit [`/toggle`]({toggle}) den Countdown deaktivieren.**\nBitte den Bot [hier]({review}) bewerten.\nVielen Dank für das Nutzen dieses Bots und Frohe Weihnachten! 🙂",
+												"description": "**Serveradministratoren: Mit [`/toggle`]({toggle}) könnt ihr den Countdown deaktivieren.**\nBewertet [hier]({review}) gerne den Bot.\nVielen Dank für das Nutzen dieses Bots und Frohe Weihnachten! 🙂",
 												"title": "🎄 Frohe Weihnachten"
 								},
-								"live": "Den Live-Countdown auf [{pretty}]({url}) sehen.",
+								"live": "Auf [{pretty}]({url}) siehst du einen Live-Countdown.",
 								"merry_christmas": "🎄 Frohe Weihnachten!",
 								"server_timezone": "Server-Zeitzone: {timezone}",
-								"user_timezone": "User-Zeitzone: {timezone}"
+								"user_timezone": "Nutzer-Zeitzone: {timezone}"
 				},
 				"disabled": "deaktiviert",
 				"santa_tracker": {
-								"description": "Der Weihnachtsmann befindet sich aktuelle über **[{city} ({region})]({map})**.",
+								"description": "Der Weihnachtsmann befindet sich aktuell über **[{city} ({region})]({map})**.",
 								"title": "Santa Tracker"
 				}
 }
