@@ -8,9 +8,9 @@
 
 **Find out more at [christmascountdown.live/discord](https://christmascountdown.live/discord?ref=github.com).**
 
-[Information](https://christmascountdown.live/discord?ref=github.com) · [Invite](https://christmascountdown.live/invite) · [Support](https://lnk.earth/discord)
+[Information](https://christmascountdown.live/discord?ref=github.com) · [Add to Discord](https://christmascountdown.live/discord/add) · [Support](https://lnk.earth/discord)
 
-[![Weblate translations](https://i18n.capestar.net/widgets/christmas-countdown/-/bot/open-graph.png)](https://i18n.capestar.net/engage/christmas-countdown/)
+[![Weblate translations](https://hosted.weblate.org/widgets/christmas-countdown/-/discord-bot/open-graph.png)](https://hosted.weblate.org/engage/christmas-countdown/)
 
 ## Environment
 
