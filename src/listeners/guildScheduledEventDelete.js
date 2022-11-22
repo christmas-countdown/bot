@@ -5,7 +5,7 @@ module.exports = class GuildScheduledEventDeleteEventListener extends EventListe
 		super(client, { event: 'guildScheduledEventDelete' });
 	}
 
-	async execute(data) {
-		this.client.secret_santa.handleEvent(data);
+	async execute(event) {
+		this.client.secret_santa.handleEvent(event);
 	}
 };

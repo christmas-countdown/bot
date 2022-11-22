@@ -10,8 +10,6 @@ const EventListener = require('../modules/listeners/listener');
 const fetch = require('node-fetch');
 const { inspect } = require('util');
 
-const admin_prefix = process.env.NODE_ENV === 'production' ? 'x!' : 'xmas!';
-
 module.exports = class MessageCreateEventListener extends EventListener {
 	constructor(client) {
 		super(client, { event: 'messageCreate' });

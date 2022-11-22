@@ -5,7 +5,7 @@ module.exports = class GuildScheduledEventhandleEventListener extends EventListe
 		super(client, { event: 'guildScheduledEventUpdate' });
 	}
 
-	async execute(data) {
-		this.client.secret_santa.handleEvent(data);
+	async execute(_event, event) {
+		this.client.secret_santa.handleEvent(event);
 	}
 };

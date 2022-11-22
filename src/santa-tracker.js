@@ -1,6 +1,5 @@
 const locations = require('../locations.json');
 const spacetime = require('spacetime');
-const ms = require('ms');
 const {
 	MessageEmbed,
 	WebhookClient

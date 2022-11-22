@@ -5,12 +5,12 @@ generator client {
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
 model Guild {
   id                     String        @id @unique @db.VarChar(19)
   webhook                String?
-  premium                Boolean       @default(false)
   last_sent              DateTime?
   locale                 String        @default("en-GB")
   timezone               String        @default("UTC")
@@ -31,7 +31,14 @@ model SecretSanta {
   id       String   @id @unique @db.VarChar(19)
   guild_id String   @db.VarChar(19)
   guild    Guild    @relation(fields: [guild_id], references: [id])
-  status   Int
+  status   EventStatus
   date     DateTime
   users    Json     @default("{}")
+}
+
+enum EventStatus {
+  SCHEDULED
+  ACTIVE
+  COMPLETED
+  CANCELLED
 }
