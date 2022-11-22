@@ -113,12 +113,24 @@ module.exports = class CommandManager {
 		} catch (error) {
 			this.client.log.warn(`An error occurred whilst executing the ${command.name} command`);
 			this.client.log.error(error);
+			const isMissingPermissions = !!error?.message?.match(/Missing Permissions/);
 			await interaction[interaction.isRepliable() ? 'reply' : 'editReply']({
 				embeds: [
 					new MessageEmbed()
 						.setColor(colour)
-						.setTitle(i18n('bot.command_execution_error.title'))
-						.setDescription(i18n('bot.command_execution_error.description', { url: 'https://lnk.earth/discord' }))
+						.setTitle(
+							isMissingPermissions
+								? i18n('bot.permissions_error.title')
+								: i18n('bot.command_execution_error.title')
+						)
+						.setDescription(
+							isMissingPermissions
+								? i18n('bot.permissions_error.description', {
+									add: 'https://christmascountdown.live/discord/add',
+									support: 'https://lnk.earth/discord'
+								})
+								: i18n('bot.command_execution_error.description', { url: 'https://lnk.earth/discord' })
+						)
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				],
 				ephemeral: true
