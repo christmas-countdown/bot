@@ -17,9 +17,6 @@
 								"missing_permissions": {
 												"description": "Julenedtelling krever følgende tilganger:\n{permissions}",
 												"title": "Feil"
-								},
-								"permissions_error": {
-												"title": "Error"
 								}
 				},
 				"commands": {
@@ -39,6 +36,10 @@
 												"missing_permission:webhook": {
 																"description": "Botten har ikke tilgang til å håndtere vev-kroker.",
 																"title": "❌ Kan ikke opprette vev-krok"
+												},
+												"permissions_error": {
+																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
+																"title": "❌ Can't create webhook"
 												}
 								},
 								"days": {
