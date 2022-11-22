@@ -25,18 +25,18 @@ module.exports = class MessageCreateEventListener extends EventListener {
 
 		const is_owner = message.author.id === process.env.OWNER;
 
-		if (is_owner && message.content.startsWith(`${admin_prefix}sync`)) {
-			const guild = message.content.split(' ')[1];
+		if (is_owner && message.content.startsWith(`<@${this.client.user.id}> sync`)) {
+			const guild = message.content.split(' ')[2];
 			if (guild) this.client.commands.publish(guild);
 			else this.client.commands.publish();
 			message.reply('ok');
-		} else if (is_owner && message.content.startsWith(`${admin_prefix}unsync`)) {
-			const guild = message.content.split(' ')[1];
+		} else if (is_owner && message.content.startsWith(`<@${this.client.user.id}> unsync`)) {
+			const guild = message.content.split(' ')[2];
 			if (!guild) return message.reply('no guild');
 			this.client.application.commands.set([], guild);
 			message.reply('ok');
-		} else if (is_owner && message.content.startsWith(`${admin_prefix}premium`)) {
-			const guild = message.content.split(' ')[1] ?? message.guild.id;
+		} else if (is_owner && message.content.startsWith(`<@${this.client.user.id}> premium`)) {
+			const guild = message.content.split(' ')[2] ?? message.guild.id;
 			const row = await this.client.prisma.guild.findUnique({ where: { id: guild } });
 			if (!row) return message.reply('no guild');
 			await this.client.prisma.guild.update({
@@ -44,7 +44,7 @@ module.exports = class MessageCreateEventListener extends EventListener {
 				where: { id: guild }
 			});
 			message.reply(row.premium ? 'disabled' : 'enabled');
-		} else if (is_owner && message.content.startsWith(`${admin_prefix}eval`)) {
+		} else if (is_owner && message.content.startsWith(`<@${this.client.user.id}> eval`)) {
 			const tokens = message.content.split(' ');
 			tokens.shift();
 			const code = tokens.join(' ');
