@@ -33,15 +33,6 @@ module.exports = class MessageCreateEventListener extends EventListener {
 			if (!guild) return message.reply('no guild');
 			this.client.application.commands.set([], guild);
 			message.reply('ok');
-		} else if (is_owner && message.content.startsWith(`<@${this.client.user.id}> premium`)) {
-			const guild = message.content.split(' ')[2] ?? message.guild.id;
-			const row = await this.client.prisma.guild.findUnique({ where: { id: guild } });
-			if (!row) return message.reply('no guild');
-			await this.client.prisma.guild.update({
-				data: { premium: !row.premium },
-				where: { id: guild }
-			});
-			message.reply(row.premium ? 'disabled' : 'enabled');
 		} else if (is_owner && message.content.startsWith(`<@${this.client.user.id}> eval`)) {
 			const tokens = message.content.split(' ').slice(2);
 			const code = tokens.join(' ');

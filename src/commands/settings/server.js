@@ -81,19 +81,6 @@ module.exports = class ServerCommand extends Command {
 
 		switch (subcommand) {
 		case 'set': {
-			const requires_premium = interaction.options.getBoolean('auto_toggle') || interaction.options.getRole('mention');
-			if (requires_premium && !g_settings.premium) {
-				return await interaction.editReply({
-					embeds: [
-						new MessageEmbed()
-							.setColor(colour)
-							.setTitle(i18n('commands.server.set.premium.title'))
-							.setDescription(i18n('commands.server.set.premium.description', { url: 'https://lnk.earth/xbc:donate' }))
-							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
-					]
-				});
-			}
-
 			if (!g_settings.webhook && interaction.options.getBoolean('enabled') !== null) {
 				return await interaction.editReply({
 					embeds: [
@@ -150,23 +137,21 @@ module.exports = class ServerCommand extends Command {
 					new MessageEmbed()
 						.setColor(colour)
 						.setTitle(i18n('commands.server.set.title'))
-						.addField('⭐ Auto Toggle', `\`${g_settings.auto_toggle}\``, true)
+						.addField('Auto Toggle', `\`${g_settings.auto_toggle}\``, true)
 						.addField('Enabled', `\`${g_settings.enabled}\``, true)
 						.addField('Locale', `\`${g_settings.locale}\``, true)
-						.addField('⭐ Mention', g_settings.mention ? `<@&${g_settings.mention}>` : i18n('disabled'), true)
+						.addField('Mention', g_settings.mention ? `<@&${g_settings.mention}>` : i18n('disabled'), true)
 						.addField('Timezone', `\`${g_settings.timezone}\``, true)
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});
 		}
 		case 'reset': {
-			const premium = g_settings.premium;
 			await this.client.prisma.guild.delete({ where: { id: interaction.guild.id } });
 			await this.client.prisma.guild.create({
 				data: {
 					id: interaction.guild.id,
-					locale: this.client.i18n.locales.find(l => l === interaction.guild.preferredLocale || l.split('-')[0] === interaction.guild.preferredLocale) ?? 'en-GB',
-					premium
+					locale: this.client.i18n.locales.find(l => l === interaction.guild.preferredLocale || l.split('-')[0] === interaction.guild.preferredLocale) ?? 'en-GB'
 				}
 			});
 			return await interaction.editReply({
@@ -184,10 +169,10 @@ module.exports = class ServerCommand extends Command {
 					new MessageEmbed()
 						.setColor(colour)
 						.setTitle(i18n('commands.server.view.title'))
-						.addField('⭐ Auto Toggle', `\`${g_settings.auto_toggle}\``, true)
+						.addField('Auto Toggle', `\`${g_settings.auto_toggle}\``, true)
 						.addField('Enabled', `\`${g_settings.enabled}\``, true)
 						.addField('Locale', `\`${g_settings.locale}\``, true)
-						.addField('⭐ Mention', g_settings.mention ? `<@&${g_settings.mention}>` : i18n('disabled'), true)
+						.addField('Mention', g_settings.mention ? `<@&${g_settings.mention}>` : i18n('disabled'), true)
 						.addField('Timezone', `\`${g_settings.timezone}\``, true)
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]

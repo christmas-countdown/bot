@@ -58,8 +58,8 @@
 			]
 		},
 		"donate": {
-			"description": "**[Donate]({url})** to unlock these features:\n\\⭐ `mention`/`role` server option\n\\⭐ `autotoggle` server option",
-			"title": "Get premium"
+			"description": "**Donate at {url}**",
+			"title": "Donate"
 		},
 		"help": {
 			"list": {
@@ -92,7 +92,6 @@
 					"title": "More stats",
 					"value": "[Click here]({url})"
 				},
-				"premium_servers": "⭐ Premium servers",
 				"secret_santa_events": "Secret Santa events",
 				"secret_santa_users": "Secret Santa participants",
 				"servers": "Servers"
@@ -202,10 +201,6 @@
 				"invalid_timezone": {
 					"description": "Try again or [ask for help]({url}).",
 					"title": "❌ Invalid timezone"
-				},
-				"premium": {
-					"description": "Donate with [`/donate`]({url}) to unlock these settings.",
-					"title": "⭐ This isn't a premium server"
 				},
 				"title": "✅ Server settings updated"
 			},

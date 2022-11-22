@@ -8,7 +8,7 @@ const {
 module.exports = class DonateCommand extends Command {
 	constructor(client) {
 		super(client, {
-			description: 'Donate and unlock premium features',
+			description: 'Support Christmas Countdown',
 			name: 'donate'
 		});
 	}
@@ -27,8 +27,8 @@ module.exports = class DonateCommand extends Command {
 				new MessageEmbed()
 					.setColor(colour)
 					.setTitle(i18n('commands.donate.title'))
-					.setURL('https://www.christmascountdown.live/donate')
-					.setDescription(i18n('commands.donate.description', { url: 'https://www.christmascountdown.live/donate' }))
+					.setURL('https://lnk.earth/donate')
+					.setDescription(i18n('commands.donate.description', { url: 'https://lnk.earth/donate' }))
 					.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 			]
 		});
