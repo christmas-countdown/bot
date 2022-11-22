@@ -47,6 +47,8 @@ module.exports = class Command {
 
 		this.ephemeral = data.ephemeral ?? false;
 
+		this.defer = data.defer ?? true;
+
 		/**
 		 * Array of permissions needed for a user to use this command
 		 * @type {string[]}

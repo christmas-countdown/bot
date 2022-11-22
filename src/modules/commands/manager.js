@@ -1,5 +1,6 @@
 const { colour } = require('../../../config');
 const {
+	CommandInteraction,	// eslint-disable-line no-unused-vars
 	Collection,
 	MessageEmbed
 } = require('discord.js');
@@ -74,10 +75,10 @@ module.exports = class CommandManager {
 		const command = this.commands.get(interaction.commandName);
 		if (!command) return;
 
-		await interaction.deferReply({ ephemeral: command.ephemeral ?? false });
+		if (command.defer !== false) await interaction.deferReply({ ephemeral: command.ephemeral ?? false });
 
 		if (command.guild_only && !interaction.guild) {
-			return await interaction.editReply({
+			return await interaction[interaction.isRepliable() ? 'reply' : 'editReply']({
 				embeds: [
 					new MessageEmbed()
 						.setColor(colour)
@@ -92,7 +93,7 @@ module.exports = class CommandManager {
 			const missing_permissions = command.permissions instanceof Array && !interaction.member.permissions.has(command.permissions);
 			if (missing_permissions && interaction.user.id !== process.env.OWNER) { // let me bypass permissions check ;)
 				const permissions = command.permissions.map(p => `\`${p}\``).join(', ');
-				return await interaction.editReply({
+				return await interaction[interaction.isRepliable() ? 'reply' : 'editReply']({
 					embeds: [
 						new MessageEmbed()
 							.setColor(colour)
@@ -112,7 +113,7 @@ module.exports = class CommandManager {
 		} catch (error) {
 			this.client.log.warn(`An error occurred whilst executing the ${command.name} command`);
 			this.client.log.error(error);
-			await interaction.editReply({
+			await interaction[interaction.isRepliable() ? 'reply' : 'editReply']({
 				embeds: [
 					new MessageEmbed()
 						.setColor(colour)
