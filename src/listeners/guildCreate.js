@@ -8,7 +8,15 @@ module.exports = class GuildCreateEventListener extends EventListener {
 	async execute(guild) {
 		const shards = await this.client.shard.fetchClientValues('guilds.cache.size');
 		const guilds = shards.reduce((acc, count) => acc + count, 0);
+		const locale = this.client.i18n.locales.includes(guild.preferredLocale)
+			? guild.preferredLocale
+			: 'en-GB';
 		this.client.log.info(`Added to "${guild.name}" (${this.client.guilds.cache.size}/${guilds})`);
-		this.client.prisma.guild.create({ data: { id: guild.id } });
+		this.client.prisma.guild.create({
+			data: {
+				id: guild.id,
+				locale
+			}
+		});
 	}
 };
