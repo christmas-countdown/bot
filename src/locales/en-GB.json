@@ -17,16 +17,12 @@
 		"missing_permissions": {
 			"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
 			"title": "Error"
-		},
-		"permissions_error": {
-			"description": "The Christmas Countdown bot can't create the webhook.\n[Try adding the bot again]({add}), and make sure the bot can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
-			"title": "Error"
 		}
 	},
 	"commands": {
 		"countdown": {
 			"created": {
-				"description": "Your countdown is not active yet! **Enable the countdown with [`/toggle`]({url}).**\n\nWhen enabled, the countdown message will be sent to {channel} every morning between 05:00 and 06:00.",
+				"description": "**Your countdown is not active yet! Enable the countdown with {toggle}.**\n\nWhen enabled, the countdown message will be sent to {channel} every morning between 5AM and 6AM.",
 				"title": "✅ Countdown webhook created"
 			},
 			"invalid_channel": {
@@ -39,6 +35,10 @@
 			},
 			"missing_permission:view": {
 				"description": "Please ensure the bot has permission to view the channel.",
+				"title": "❌ Can't create webhook"
+			},
+			"permissions_error": {
+				"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
 				"title": "❌ Can't create webhook"
 			}
 		},
@@ -300,7 +300,7 @@
 	},
 	"disabled": "disabled",
 	"santa_tracker": {
-		"description": "Santa is currently over **[{city} ({region})]({map})**.",
+		"description": "Santa is currently over **[{city}, {region}]({map})**.",
 		"title": "Santa Tracker"
 	}
 }

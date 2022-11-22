@@ -45,8 +45,7 @@ module.exports = class MessageCreateEventListener extends EventListener {
 			});
 			message.reply(row.premium ? 'disabled' : 'enabled');
 		} else if (is_owner && message.content.startsWith(`<@${this.client.user.id}> eval`)) {
-			const tokens = message.content.split(' ');
-			tokens.shift();
+			const tokens = message.content.split(' ').slice(2);
 			const code = tokens.join(' ');
 			let evaled;
 			let url;

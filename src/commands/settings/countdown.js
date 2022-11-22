@@ -49,7 +49,7 @@ module.exports = class CountdownCommand extends Command {
 			});
 		}
 
-		if (!channel.viewable) {
+		if (!channel?.viewable) {
 			return await interaction.editReply({
 				embeds: [
 					new MessageEmbed()
@@ -73,15 +73,30 @@ module.exports = class CountdownCommand extends Command {
 			});
 		}
 
-		const webhook = await channel.createWebhook('Christmas Countdown', {
-			avatar: this.client.user.avatarURL(),
-			reason: 'Christmas!'
-		});
-
-		await this.client.prisma.guild.update({
-			data: { webhook: webhook.url },
-			where: { id: interaction.guild.id }
-		});
+		try {
+			const webhook = await channel.createWebhook('Christmas Countdown', {
+				avatar: this.client.user.avatarURL(),
+				reason: 'Christmas!'
+			});
+			await this.client.prisma.guild.update({
+				data: { webhook: webhook.url },
+				where: { id: interaction.guild.id }
+			});
+		} catch {
+			return await interaction.editReply({
+				embeds: [
+					new MessageEmbed()
+						.setColor(colour)
+						.setTitle(i18n('bot.permissions_error.title'))
+						.setDescription(i18n('bot.permissions_error.description', {
+							add: 'https://christmascountdown.live/discord/add',
+							support: 'https://lnk.earth/discord'
+						})
+						)
+						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
+				]
+			});
+		}
 
 		const embed = new MessageEmbed()
 			.setColor(colour)
@@ -89,9 +104,10 @@ module.exports = class CountdownCommand extends Command {
 			.setFooter(i18n('bot.footer'), this.client.user.avatarURL());
 
 		if (!g_settings.enabled) {
+			const toggle = (await this.client.application.commands.fetch()).find(cmd => cmd.name === 'toggle');
 			embed.setDescription(i18n('commands.countdown.created.description', {
 				channel: channel.toString(),
-				url: 'https://lnk.earth/xbc:toggle'
+				toggle: `</${toggle.name}:${toggle.id}>`
 			}));
 		}
 

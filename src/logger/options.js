@@ -23,7 +23,7 @@ module.exports = {
 			format: function (log) {
 				const timestamp = dtf.fill('DD/MM/YY HH:mm:ss', log.timestamp);
 				const format = formats[log.level.name];
-				return short(`&!7&f ${timestamp} &r ${format[1]} ${log.level.name} &r ${log.namespace ? `${format[2]}(${log.namespace})&r ` : ''}${format[0]} ${format[3] + log.content}`);
+				return short(`&!7&f ${timestamp} &r ${format[1]} ${log.level.name} &r ${log.namespace ? `${format[2]}(${log.namespace})&r ` : ''}${format[0]}  ${format[3] + log.content}`);
 			},
 			level: 'info'
 		}),
