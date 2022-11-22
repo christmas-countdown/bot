@@ -92,7 +92,6 @@
 																				"title": "Plus de statistiques",
 																				"value": "[Cliquez ici]({url})"
 																},
-																"premium_servers": "⭐ Serveurs premium",
 																"secret_santa_events": "Évènements secrets du Père Noël",
 																"secret_santa_users": "Participants au Père Noël secret",
 																"servers": "Serveurs"
@@ -204,7 +203,6 @@
 																				"title": "❌ Fuseau horaire invalide"
 																},
 																"premium": {
-																				"description": "Faites un don avec [`/donate`]({url}) pour déverrouiller ces paramètres.",
 																				"title": "⭐ Ce n'est pas un serveur premium"
 																},
 																"title": "✅ Paramètres du serveur mis à jour"
