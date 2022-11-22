@@ -17,9 +17,6 @@
 								"missing_permissions": {
 												"description": "Der Christmas Countdown Bot benötigt folgende Berechtigungen:\n{permissions}",
 												"title": "Fehler"
-								},
-								"permissions_error": {
-												"title": "Error"
 								}
 				},
 				"commands": {
@@ -39,6 +36,10 @@
 												"missing_permission:webhook": {
 																"description": "Der Bot hat keine Berechtigung Webhooks zu verwalten.",
 																"title": "❌ Webhook kann nicht erstellt werden"
+												},
+												"permissions_error": {
+																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
+																"title": "❌ Can't create webhook"
 												}
 								},
 								"days": {
