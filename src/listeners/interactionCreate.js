@@ -15,15 +15,22 @@ module.exports = class InteractionCreateEventListener extends EventListener {
 	 * @param {Interaction} interaction
 	 */
 	async execute(interaction) {
-		const locale = this.client.i18n.locales.includes(interaction.guild.preferredLocale)
-			? interaction.guild.preferredLocale
-			: 'en-GB';
 		let g_settings = await this.client.prisma.guild.findUnique({ where: { id: interaction.guild?.id } });
 		if (interaction.guild && !g_settings) {
 			g_settings = await this.client.prisma.guild.create({
 				data: {
 					id: interaction.guild.id,
-					locale
+					locale: this.client.i18n.locales.find(l => l === interaction.guild.preferredLocale || l.split('-')[0] === interaction.guild.preferredLocale) ?? 'en-GB'
+				}
+			});
+		}
+
+		let u_settings = await this.client.prisma.user.findUnique({ where: { id: interaction.user.id } });
+		if (!u_settings) {
+			u_settings = await this.client.prisma.user.create({
+				data: {
+					id: interaction.user.id,
+					locale: this.client.i18n.locales.find(l => l === interaction.locale || l.split('-')[0] === interaction.locale) ?? 'en-GB'
 				}
 			});
 		}

@@ -161,14 +161,11 @@ module.exports = class ServerCommand extends Command {
 		}
 		case 'reset': {
 			const premium = g_settings.premium;
-			const locale = this.client.i18n.locales.includes(interaction.guild.preferredLocale)
-				? interaction.guild.preferredLocale
-				: 'en-GB';
 			await this.client.prisma.guild.delete({ where: { id: interaction.guild.id } });
 			await this.client.prisma.guild.create({
 				data: {
 					id: interaction.guild.id,
-					locale,
+					locale: this.client.i18n.locales.find(l => l === interaction.guild.preferredLocale || l.split('-')[0] === interaction.guild.preferredLocale) ?? 'en-GB',
 					premium
 				}
 			});

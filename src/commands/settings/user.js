@@ -115,7 +115,7 @@ module.exports = class UserCommand extends Command {
 			});
 		}
 		case 'reset': {
-			await this.client.prisma.guild.delete({ where: { id: interaction.guild.id } });
+			await this.client.prisma.user.delete({ where: { id: interaction.user.id } });
 			return await interaction.editReply({
 				embeds: [
 					new MessageEmbed()
