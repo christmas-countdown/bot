@@ -17,9 +17,6 @@
 								"missing_permissions": {
 												"description": "Il bot richiede i seguenti permessi:\n{permissions}",
 												"title": "Errore"
-								},
-								"permissions_error": {
-												"title": "Error"
 								}
 				},
 				"commands": {
@@ -39,6 +36,10 @@
 												"missing_permission:webhook": {
 																"description": "Il bot non ha le autorizzazione per gestire i webhooks.",
 																"title": "❌ Non posso creare webhook"
+												},
+												"permissions_error": {
+																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
+																"title": "❌ Can't create webhook"
 												}
 								},
 								"days": {
