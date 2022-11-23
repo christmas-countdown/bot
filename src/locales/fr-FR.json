@@ -2,6 +2,7 @@
 				"bot": {
 								"command_execution_error": {
 												"description": "Une erreur inattendue est apparue. Veuillez demander de l'aide sur [le serveur d'assistance]({url}).",
+												"identifier": "Identifier",
 												"title": "Erreur"
 								},
 								"footer": "Christmas Countdown par eartharoid",
@@ -294,6 +295,26 @@
 								"user_timezone": "Fuseau horaire de l'utilisateur : {timezone}"
 				},
 				"disabled": "désactivé",
+				"modals": {
+								"add_joke": {
+												"answer": {
+																"label": "Answer",
+																"placeholder": "Santa Paws!"
+												},
+												"question": {
+																"label": "Question",
+																"placeholder": "Who delivers presents to cats?"
+												},
+												"title": "Add a joke"
+								},
+								"suggest": {
+												"suggestion": {
+																"label": "Suggestion for Christmas Countdown",
+																"placeholder": "A suggestion for the Christmas Countdown bot, preferably in English."
+												},
+												"title": "Suggestion"
+								}
+				},
 				"santa_tracker": {
 								"description": "Le Père Noël est actuellement à **[{city} ({region})]({map})**.",
 								"title": "Traqueur du Père Noël"
