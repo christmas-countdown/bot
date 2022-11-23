@@ -202,9 +202,6 @@
 																				"description": "Prøv igjen eller [spør om hjelp]({url}).",
 																				"title": "❌ Ugyldig tidssone"
 																},
-																"premium": {
-																				"title": "⭐ Dette er ikke en premiumstjener"
-																},
 																"title": "✅ Tjenerinnstillinger oppdatert"
 												},
 												"view": {
