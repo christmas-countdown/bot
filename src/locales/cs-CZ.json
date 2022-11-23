@@ -2,6 +2,7 @@
 				"bot": {
 								"command_execution_error": {
 												"description": "Vyskytla se neočekávaná chyba. Prosím požádejte o pomoc v [the support server]({url}).",
+												"identifier": "Identifier",
 												"title": "Error"
 								},
 								"footer": "Christmas Countdown by eartharoid",
@@ -294,6 +295,26 @@
 								"user_timezone": "User timezone: {timezone}"
 				},
 				"disabled": "disabled",
+				"modals": {
+								"add_joke": {
+												"answer": {
+																"label": "Answer",
+																"placeholder": "Santa Paws!"
+												},
+												"question": {
+																"label": "Question",
+																"placeholder": "Who delivers presents to cats?"
+												},
+												"title": "Add a joke"
+								},
+								"suggest": {
+												"suggestion": {
+																"label": "Suggestion for Christmas Countdown",
+																"placeholder": "A suggestion for the Christmas Countdown bot, preferably in English."
+												},
+												"title": "Suggestion"
+								}
+				},
 				"santa_tracker": {
 								"description": "Santa is currently over **[{city} ({region})]({map})**.",
 								"title": "Santa Tracker"
