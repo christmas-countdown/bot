@@ -202,9 +202,6 @@
 																				"description": "Réessayez ou [demander de l'aide]({url}).",
 																				"title": "❌ Fuseau horaire invalide"
 																},
-																"premium": {
-																				"title": "⭐ Ce n'est pas un serveur premium"
-																},
 																"title": "✅ Paramètres du serveur mis à jour"
 												},
 												"view": {

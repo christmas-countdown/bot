@@ -202,9 +202,6 @@
 																				"description": "Versuche es erneut oder [frag nach Hilfe]({url}).",
 																				"title": "❌ Ungültige Zeitzone"
 																},
-																"premium": {
-																				"title": "⭐ Dieser Server ist kein Premium-Server"
-																},
 																"title": "✅ Server-Einstellungen aktualisiert"
 												},
 												"view": {

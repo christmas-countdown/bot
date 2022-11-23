@@ -202,9 +202,6 @@
 																				"description": "Try again or [ask for help]({url}).",
 																				"title": "❌ Invalid timezone"
 																},
-																"premium": {
-																				"title": "⭐ This isn't a premium server"
-																},
 																"title": "✅ Server settings updated"
 												},
 												"view": {
