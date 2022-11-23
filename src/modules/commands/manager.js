@@ -9,6 +9,7 @@ const {
 	statSync
 } = require('fs');
 const Statcord = require('statcord.js');
+const { randomUUID } = require('crypto');
 
 module.exports = class CommandManager {
 	/**
@@ -111,7 +112,9 @@ module.exports = class CommandManager {
 			await command.execute(interaction);
 			Statcord.ShardingClient.postCommand(interaction.commandName, interaction.user.id, this.client);
 		} catch (error) {
+			const uuid = randomUUID();
 			this.client.log.warn(`An error occurred whilst executing the ${command.name} command`);
+			this.client.log.error(uuid);
 			this.client.log.error(error);
 			await interaction[command.defer ? 'editReply' : 'reply']({
 				embeds: [
@@ -119,6 +122,7 @@ module.exports = class CommandManager {
 						.setColor(colour)
 						.setTitle(i18n('bot.command_execution_error.title'))
 						.setDescription(i18n('bot.command_execution_error.description', { url: 'https://lnk.earth/discord' }))
+						.addField(i18n('bot.command_execution_error.identifier'), `\`\`\`\n${uuid}\n\`\`\``)
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				],
 				ephemeral: true

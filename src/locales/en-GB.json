@@ -2,7 +2,8 @@
 	"bot": {
 		"command_execution_error": {
 			"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
-			"title": "Error"
+			"title": "Error",
+			"identifier": "Identifier"
 		},
 		"footer": "Christmas Countdown by eartharoid",
 		"guild_only": {
