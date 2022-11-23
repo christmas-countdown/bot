@@ -87,8 +87,8 @@ module.exports = class CountdownCommand extends Command {
 				embeds: [
 					new MessageEmbed()
 						.setColor(colour)
-						.setTitle(i18n('bot.permissions_error.title'))
-						.setDescription(i18n('bot.permissions_error.description', {
+						.setTitle(i18n('commands.countdown.permissions_error.title'))
+						.setDescription(i18n('commands.countdown.permissions_error.description', {
 							add: 'https://christmascountdown.live/discord/add',
 							support: 'https://lnk.earth/discord'
 						})
