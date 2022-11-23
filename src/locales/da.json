@@ -2,6 +2,7 @@
 				"bot": {
 								"command_execution_error": {
 												"description": "En uventet fejl er frembudt. Spørg efter hjælp på [Support serveren]{url}.",
+												"identifier": "Identifier",
 												"title": "Fejl"
 								},
 								"footer": "Jule Nedtælling af eartharoid",
@@ -294,6 +295,26 @@
 								"user_timezone": "User timezone: {timezone}"
 				},
 				"disabled": "disabled",
+				"modals": {
+								"add_joke": {
+												"answer": {
+																"label": "Answer",
+																"placeholder": "Santa Paws!"
+												},
+												"question": {
+																"label": "Question",
+																"placeholder": "Who delivers presents to cats?"
+												},
+												"title": "Add a joke"
+								},
+								"suggest": {
+												"suggestion": {
+																"label": "Suggestion for Christmas Countdown",
+																"placeholder": "A suggestion for the Christmas Countdown bot, preferably in English."
+												},
+												"title": "Suggestion"
+								}
+				},
 				"santa_tracker": {
 								"description": "Santa is currently over **[{city} ({region})]({map})**.",
 								"title": "Santa Tracker"
