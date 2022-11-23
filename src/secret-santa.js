@@ -17,7 +17,7 @@ module.exports = class SecretSanta {
 
 	async check() {
 		this.client.log.info('Checking Secret Santa events');
-		for (const guild of this.client.guilds.cache) guild.scheduledEvents.cache.forEach(event => this.handleEvent(event));
+		for (const [, guild] of this.client.guilds.cache) guild.scheduledEvents.cache.forEach(event => this.handleEvent(event));
 	}
 
 	/**
