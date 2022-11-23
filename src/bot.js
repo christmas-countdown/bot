@@ -45,7 +45,7 @@ const client = new Client({
 		Intents.FLAGS.GUILD_MESSAGES,
 		Intents.FLAGS.GUILD_WEBHOOKS,
 		Intents.FLAGS.GUILDS,
-		1 << 16 // GUILD_SCHEDULED_EVENTS
+		Intents.FLAGS.GUILD_SCHEDULED_EVENTS
 	],
 	makeCache: Options.cacheWithLimits({
 		GuildBanManager: 0,

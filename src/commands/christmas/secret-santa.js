@@ -79,11 +79,11 @@ module.exports = class SecretSantaCommand extends Command {
 		const event = await this.client.prisma.secretSanta.findFirst({
 			orderBy: { id: 'desc' },
 			where: {
-				guild_id: interaction.guild.id,
-				status: {
-					gte: 2,
-					lt: 4
-				}
+				OR: [
+					{ status: 'SCHEDULED' },
+					{ status: 'ACTIVE' }
+				],
+				guild_id: interaction.guild.id
 			}
 		});
 
