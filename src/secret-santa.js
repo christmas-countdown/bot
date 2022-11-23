@@ -17,7 +17,7 @@ module.exports = class SecretSanta {
 
 	async check() {
 		this.client.log.info('Checking Secret Santa events');
-		this.client.guilds.cache.forEach(async guild => guild.scheduledEvents.cache.forEach(event => this.handleEvent(event)));
+		for (const guild of this.client.guilds.cache) guild.scheduledEvents.cache.forEach(event => this.handleEvent(event));
 	}
 
 	/**
@@ -25,7 +25,7 @@ module.exports = class SecretSanta {
 	 * @returns {Promise<void>}
 	 */
 	async handleEvent(event) {
-		if (event.entityMetadata.location?.toLowerCase() !== 'christmas countdown') return false; // ignore unrelated events
+		if (event.entityMetadata?.location?.toLowerCase() !== 'christmas countdown') return false; // ignore unrelated events
 
 		let row = await this.client.prisma.secretSanta.findUnique({
 			include: { guild: true },
