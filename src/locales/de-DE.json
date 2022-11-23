@@ -92,7 +92,6 @@
 																				"title": "Mehr Statistiken",
 																				"value": "[Hier Klicken]({url})"
 																},
-																"premium_servers": "⭐ Premium-Server",
 																"secret_santa_events": "Secret Santa-Events",
 																"secret_santa_users": "Geheime Santa-Teilnehmer",
 																"servers": "Server"
@@ -204,7 +203,6 @@
 																				"title": "❌ Ungültige Zeitzone"
 																},
 																"premium": {
-																				"description": "Spende mit [`/donate`]({url}) um diese Einstellung freizuschalten.",
 																				"title": "⭐ Dieser Server ist kein Premium-Server"
 																},
 																"title": "✅ Server-Einstellungen aktualisiert"

@@ -92,7 +92,6 @@
 																				"title": "Altre statistiche",
 																				"value": "[Clicca qui]({url})"
 																},
-																"premium_servers": "⭐ Premium servers",
 																"secret_santa_events": "Eventi segreti di Babbo Natale",
 																"secret_santa_users": "Partecipanti di Babbo Natale segreti",
 																"servers": "Servers"
@@ -204,7 +203,6 @@
 																				"title": "❌ Invalid timezone"
 																},
 																"premium": {
-																				"description": "Donate with [`/donate`]({url}) to unlock these settings.",
 																				"title": "⭐ This isn't a premium server"
 																},
 																"title": "✅ Server settings updated"

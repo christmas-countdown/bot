@@ -92,7 +92,6 @@
 																				"title": "Mer statistikk",
 																				"value": "[Klikk her]({url})"
 																},
-																"premium_servers": "⭐ Premiumstjenere",
 																"secret_santa_events": "Hemmelig julenisse-begivenheter",
 																"secret_santa_users": "Hemmelig julenisse-deltagere",
 																"servers": "Tjenere"
@@ -204,7 +203,6 @@
 																				"title": "❌ Ugyldig tidssone"
 																},
 																"premium": {
-																				"description": "Doner med [`/donate`]({url}) for å låse opp disse innstillingene.",
 																				"title": "⭐ Dette er ikke en premiumstjener"
 																},
 																"title": "✅ Tjenerinnstillinger oppdatert"
