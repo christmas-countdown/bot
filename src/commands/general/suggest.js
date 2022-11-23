@@ -21,10 +21,13 @@ module.exports = class SuggestCommand extends Command {
 	 * @returns {Promise<void|any>}
 	 */
 	async execute(interaction) {
+		const u_settings = await this.client.prisma.user.findUnique({ where: { id: interaction.user.id } });
+		const g_settings = interaction.guild && await this.client.prisma.guild.findUnique({ where: { id: interaction.guild.id } });
+		const i18n = this.client.i18n.getLocale(u_settings?.locale ?? g_settings?.locale);
 		return await interaction.showModal(
 			new Modal()
 				.setCustomId('suggestion')
-				.setTitle('Suggestion')
+				.setTitle(i18n('modals.suggest.title'))
 				.addComponents(
 					new MessageActionRow()
 						.addComponents(
@@ -32,8 +35,8 @@ module.exports = class SuggestCommand extends Command {
 								.setCustomId('suggestion')
 								.setRequired(true)
 								.setStyle('PARAGRAPH')
-								.setLabel('Suggestion for Christmas Countdown')
-								.setPlaceholder('A suggestion for the Christmas Countdown bot, preferably in English.')
+								.setLabel(i18n('modals.suggest.suggestion.label'))
+								.setPlaceholder(i18n('modals.suggest.suggestion.placeholder'))
 						)
 				)
 		);

@@ -298,5 +298,25 @@
 	"santa_tracker": {
 		"description": "Santa is currently over **[{city}, {region}]({map})**.",
 		"title": "Santa Tracker"
+	},
+	"modals": {
+		"add_joke": {
+			"title": "Add a joke",
+			"question": {
+				"label": "Question",
+				"placeholder": "Who delivers presents to cats?"
+			},
+			"answer": {
+				"label": "Answer",
+				"placeholder": "Santa Paws!"
+			}
+		},
+		"suggest": {
+			"title": "Suggestion",
+			"suggestion": {
+				"label": "Suggestion for Christmas Countdown",
+				"placeholder": "A suggestion for the Christmas Countdown bot, preferably in English."
+			}
+		}
 	}
 }
