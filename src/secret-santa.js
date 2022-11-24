@@ -27,10 +27,7 @@ module.exports = class SecretSanta {
 	async handleEvent(event) {
 		if (event.entityMetadata?.location?.toLowerCase() !== 'christmas countdown') return false; // ignore unrelated events
 
-		let row = await this.client.prisma.secretSanta.findUnique({
-			include: { guild: true },
-			where: { id: event.id }
-		});
+		let row = await this.client.prisma.secretSanta.findUnique({ where: { id: event.id } });
 
 		if (!row) {
 			this.client.log.info(`New Secret Santa event in "${event.guild.name}"`);
@@ -40,11 +37,18 @@ module.exports = class SecretSanta {
 					guild_id: event.guild.id,
 					id: event.id,
 					status: event.status
-				}
+				},
+				include: { guild: true }
+			});
+		} else {
+			row = await this.client.prisma.secretSanta.update({
+				data: { status: event.status },
+				include: { guild: true },
+				where: { id: event.id }
 			});
 		}
 
-		if ((event.isActive() || event.isCompleted()) && Object.keys(row.users).length === 0) { // ACTIVE or COMPLETED and not already assigned
+		if ((event.isActive() || event.isCompleted()) && Object.keys(row.users).length === 0) {
 			this.client.log.info(`Secret Santa event active in "${event.guild.name}"`);
 			const interested = (await event.fetchSubscribers())
 				.map(i => i.user.id)
@@ -56,11 +60,6 @@ module.exports = class SecretSanta {
 					status: event.status,
 					users
 				},
-				where: { id: event.id }
-			});
-		} else if (event.isScheduled()) {
-			row = await this.client.prisma.secretSanta.update({
-				data: { status: event.status },
 				where: { id: event.id }
 			});
 		}

@@ -80,8 +80,8 @@ module.exports = class SecretSantaCommand extends Command {
 			orderBy: { id: 'desc' },
 			where: {
 				OR: [
-					{ status: 'SCHEDULED' },
-					{ status: 'ACTIVE' }
+					{ status: 'ACTIVE' },
+					{ status: 'COMPLETED' }
 				],
 				guild_id: interaction.guild.id
 			}
@@ -94,6 +94,17 @@ module.exports = class SecretSantaCommand extends Command {
 						.setColor(colour)
 						.setTitle(i18n('commands.secret_santa.no_event.title'))
 						.setDescription(i18n('commands.secret_santa.no_event.description', { url: 'https://christmascountdown.live/discord/secret-santa' }))
+						.setImage('https://static.eartharoid.me/x/2022/11/john-travolta.gif')
+						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
+				]
+			});
+		} else if (subcommand !== 'blacklist' && Object.keys(event.users).length === 0) {
+			return await interaction.editReply({
+				embeds: [
+					new MessageEmbed()
+						.setColor(colour)
+						.setTitle(i18n('commands.secret_santa.not_enough_users.title'))
+						.setDescription(i18n('commands.secret_santa.not_enough_users.description'))
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});
