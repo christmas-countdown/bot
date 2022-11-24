@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
   shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
@@ -19,6 +19,7 @@ model Guild {
   mention                String?
   secret_santa           SecretSanta[]
   secret_santa_blacklist Json          @default("[]")
+  voice_channel          String?       @db.VarChar(19)
 }
 
 model User {
@@ -28,12 +29,12 @@ model User {
 }
 
 model SecretSanta {
-  id       String   @id @unique @db.VarChar(19)
-  guild_id String   @db.VarChar(19)
-  guild    Guild    @relation(fields: [guild_id], references: [id])
+  id       String      @id @unique @db.VarChar(19)
+  guild_id String      @db.VarChar(19)
+  guild    Guild       @relation(fields: [guild_id], references: [id])
   status   EventStatus
   date     DateTime
-  users    Json     @default("{}")
+  users    Json        @default("{}")
 }
 
 enum EventStatus {

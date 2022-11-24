@@ -101,7 +101,7 @@ statcord.on('post', error => {
 });
 
 process.on('unhandledRejection', error => {
-	log.warn.manager('An error was not caught');
+	log.notice.manager('An error was not caught');
 	log.error.manager(error);
 });
 

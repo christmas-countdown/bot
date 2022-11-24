@@ -66,9 +66,9 @@ module.exports.dispatch = async (manager, prisma, log) => {
 		const getMessage = i18n.getLocale(guild.locale ?? 'en-GB');
 		const sleeps = christmas.getSleeps(guild.timezone);
 		const days = christmas.getDays(guild.timezone);
-		const title = christmas.isToday()
+		const title = christmas.isToday(guild.timezone)
 			? getMessage('countdown.christmas_day')
-			: christmas.isTomorrow()
+			: christmas.isTomorrow(guild.timezone)
 				? getMessage('countdown.christmas_eve')
 				: getMessage('commands.sleeps.title', sleeps, { sleeps });
 		const text = [
@@ -83,7 +83,7 @@ module.exports.dispatch = async (manager, prisma, log) => {
 			})
 		];
 
-		if (christmas.isToday()) text.splice(1, 0, getMessage('countdown.merry_christmas'));
+		if (christmas.isToday(guild.timezone)) text.splice(1, 0, getMessage('countdown.merry_christmas'));
 
 		const footer = getMessage('countdown.server_timezone', { timezone: guild.timezone });
 
@@ -102,16 +102,15 @@ module.exports.dispatch = async (manager, prisma, log) => {
 				]
 			});
 
-			if (christmas.isToday() && !guild.auto_toggle) {
+			if (christmas.isToday(guild.timezone) && !guild.auto_toggle) {
+				if (this.client.application.commands.cache.size === 0) await this.client.application.commands.fetch();
+				const toggle = this.client.application.commands.cache.find(cmd => cmd.name === 'toggle');
 				await webhook.send({
 					embeds: [
 						new MessageEmbed()
 							.setColor(colour)
 							.setTitle(getMessage('countdown.disable.title'))
-							.setDescription(getMessage('countdown.disable.description', {
-								review: 'https://repcheck.io/Christmas-Countdown',
-								toggle: 'https://lnk.earth/xbc:toggle'
-							}))
+							.setDescription(getMessage('countdown.disable.description', { toggle: `</${toggle.name}:${toggle.id}>` }))
 							.setFooter(footer, avatarURL)
 							.setTimestamp()
 					]

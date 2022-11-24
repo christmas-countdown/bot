@@ -29,7 +29,7 @@ module.exports = class SecondsCommand extends Command {
 		const i18n = this.client.i18n.getLocale(locale);
 		const seconds = christmas.getSeconds(timezone);
 		const formatted = new Intl.NumberFormat(locale).format(seconds);
-		const title = christmas.isToday()
+		const title = christmas.isToday(timezone)
 			? i18n('countdown.christmas_day')
 			: christmas.isTomorrow()
 				? i18n('countdown.christmas_eve')
@@ -42,7 +42,7 @@ module.exports = class SecondsCommand extends Command {
 			})
 		];
 
-		if (christmas.isToday()) text.splice(1, 0, i18n('countdown.merry_christmas'));
+		if (christmas.isToday(timezone)) text.splice(1, 0, i18n('countdown.merry_christmas'));
 
 		const footer = i18n(`countdown.${u_settings?.timezone ? 'user' : 'server'}_timezone`, { timezone });
 
