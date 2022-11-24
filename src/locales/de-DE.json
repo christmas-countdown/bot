@@ -22,9 +22,6 @@
 				},
 				"commands": {
 								"countdown": {
-												"invalid_channel": {
-																"title": "❌ Ungültiger Channel"
-												},
 												"missing_permission:webhook": {
 																"title": "❌ Webhook kann nicht erstellt werden"
 												}

@@ -22,9 +22,6 @@
 				},
 				"commands": {
 								"countdown": {
-												"invalid_channel": {
-																"title": "❌ Ugyldig kanal"
-												},
 												"missing_permission:webhook": {
 																"title": "❌ Kan ikke opprette vev-krok"
 												}

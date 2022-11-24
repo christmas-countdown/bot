@@ -22,9 +22,6 @@
 				},
 				"commands": {
 								"countdown": {
-												"invalid_channel": {
-																"title": "❌ Canal inválido"
-												},
 												"missing_permission:webhook": {
 																"title": "❌ Can't create webhook"
 												}

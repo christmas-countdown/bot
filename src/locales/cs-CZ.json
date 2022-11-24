@@ -22,9 +22,6 @@
 				},
 				"commands": {
 								"countdown": {
-												"invalid_channel": {
-																"title": "❌ Neplatný kanál"
-												},
 												"missing_permission:webhook": {
 																"title": "❌ Nemohl jsem vytvořit webhook"
 												}
