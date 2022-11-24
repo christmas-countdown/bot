@@ -27,7 +27,7 @@ module.exports = class AboutCommand extends Command {
 		const guilds = shards.reduce((acc, count) => acc + count, 0);
 
 		const enabled = await this.client.prisma.guild.count({ where: { enabled: true } });
-		const ss_events = await this.client.prisma.secretSanta.findMany({ where: { status: 3 } }); // { where: { status: { lt: 4 } } }
+		const ss_events = await this.client.prisma.secretSanta.findMany({ where: { status: 'COMPLETED' } });
 		const ss_users = ss_events.map(event => Object.keys(event.users).length).reduce((acc, users) => acc + users);
 
 		const response = await fetch(`https://api.statcord.com/v3/${this.client.user.id}/aggregate`);
