@@ -21,11 +21,6 @@
 								}
 				},
 				"commands": {
-								"countdown": {
-												"missing_permission:webhook": {
-																"title": "❌ Impossible de créer un webhook"
-												}
-								},
 								"days": {
 												"days": [
 																"**{days} jour**",
@@ -157,6 +152,10 @@
 												"no_event": {
 																"description": "Il n'y a pas d'événements secrets du père Noël. Regarder [le guide]({url}) pour en créer un.",
 																"title": "❌ Erreur"
+												},
+												"not_enough_users": {
+																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
+																"title": "😦 Not enough participants"
 												},
 												"show": {
 																"none": {
