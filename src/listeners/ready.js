@@ -45,7 +45,7 @@ module.exports = class ReadyEventListener extends EventListener {
 				} catch (error) {
 					this.client.log.warn(`Failed to update widget for ${guild.id}`);
 					this.client.log.error(error);
-					if (error.message?.match(/Missing Access/)) {
+					if (error.message?.match(/(Missing Access)|(Unknown Channel)/)) {
 						guild = await this.client.prisma.guild.update({
 							data: { voice_channel: null },
 							where: { id: guild.id }
