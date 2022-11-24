@@ -44,7 +44,7 @@ module.exports = class SecretSanta {
 			});
 		}
 
-		if (event.isActive() && Object.keys(row.users).length === 0) { // ACTIVE and not already assigned
+		if ((event.isActive() || event.isCompleted()) && Object.keys(row.users).length === 0) { // ACTIVE or COMPLETED and not already assigned
 			this.client.log.info(`Secret Santa event active in "${event.guild.name}"`);
 			const interested = (await event.fetchSubscribers())
 				.map(i => i.user.id)
