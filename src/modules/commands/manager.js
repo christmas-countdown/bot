@@ -83,8 +83,8 @@ module.exports = class CommandManager {
 				embeds: [
 					new MessageEmbed()
 						.setColor(colour)
-						.addField(i18n('bot.guild_only.title'))
-						.addField(i18n('bot.guild_only.description', { invite: 'https://christmascountdown.live/discord/add' }))
+						.setTitle(i18n('bot.guild_only.title'))
+						.setDescription(i18n('bot.guild_only.description', { invite: 'https://christmascountdown.live/discord/add' }))
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});
