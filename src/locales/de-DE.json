@@ -23,23 +23,18 @@
 				"commands": {
 								"countdown": {
 												"created": {
-																"description": "Der Countdown ist noch nicht aktiviert! **Du kannst den Countdown mit [`/toggle`]({url}) aktivieren.**\n\nSobald Countdown aktiviert ist, wird die Countdown-Nachricht jeden Morgen zwischen 05:00 und 6:00 Uhr in {channel} gesendet.",
 																"title": "✅ Countdown-Webhook erstellt"
 												},
 												"invalid_channel": {
-																"description": "Bitte einen Text-Channel auswählen, oder die Channel-Option entfernen um den aktuellen Channel zu verwenden.",
 																"title": "❌ Ungültiger Channel"
 												},
 												"missing_permission:view": {
-																"description": "Bitte sicherstellen, dass der Bot die Berechtigung besitzt, den Channel zu sehen.",
 																"title": "❌ Webhook kann nicht erstellt werden"
 												},
 												"missing_permission:webhook": {
-																"description": "Der Bot hat keine Berechtigung Webhooks zu verwalten.",
 																"title": "❌ Webhook kann nicht erstellt werden"
 												},
 												"permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
 																"title": "❌ Can't create webhook"
 												}
 								},

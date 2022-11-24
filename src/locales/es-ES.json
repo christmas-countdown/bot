@@ -23,23 +23,18 @@
 				"commands": {
 								"countdown": {
 												"created": {
-																"description": "¡Tu cuenta regresiva aún no está activada! **Activala con [`/toggle`]({url}).**\n\nCuando esté activa, los mensajes de la cuenta regresiva serán enviados a {channel} todas las mañanas entre las 05:00 y 06:00",
 																"title": "✅ Webhook de la cuenta regresiva creado"
 												},
 												"invalid_channel": {
-																"description": "Please choose a text channel or omit the channel option to use the current channel.",
 																"title": "❌ Canal inválido"
 												},
 												"missing_permission:view": {
-																"description": "Please ensure the bot has permission to view the channel.",
 																"title": "❌ Can't create webhook"
 												},
 												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
 																"title": "❌ Can't create webhook"
 												},
 												"permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
 																"title": "❌ Can't create webhook"
 												}
 								},

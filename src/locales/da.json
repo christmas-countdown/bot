@@ -23,23 +23,18 @@
 				"commands": {
 								"countdown": {
 												"created": {
-																"description": "Your countdown is not active yet! **Enable the countdown with [`/toggle`]({url}).**\n\nWhen enabled, the countdown message will be sent to {channel} every morning between 05:00 and 06:00.",
 																"title": "✅ Countdown webhook created"
 												},
 												"invalid_channel": {
-																"description": "Please choose a text channel or omit the channel option to use the current channel.",
 																"title": "❌ Invalid channel"
 												},
 												"missing_permission:view": {
-																"description": "Please ensure the bot has permission to view the channel.",
 																"title": "❌ Can't create webhook"
 												},
 												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
 																"title": "❌ Can't create webhook"
 												},
 												"permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
 																"title": "❌ Can't create webhook"
 												}
 								},

@@ -23,23 +23,18 @@
 				"commands": {
 								"countdown": {
 												"created": {
-																"description": "Nedtellingen din er ikke aktiv enda. **Skru den på med [`/toggle`]({url}).**\n\nNår den er på vil en nedtellingsmelding bli sendt til {channel} hver morgen mellom 05.00 og 06.00.",
 																"title": "✅ Nedtellingsvevkrok opprettet"
 												},
 												"invalid_channel": {
-																"description": "Velg en tekstkanal eller unngå dette kanalvalget for å bruke nåværende kanal.",
 																"title": "❌ Ugyldig kanal"
 												},
 												"missing_permission:view": {
-																"description": "Sørg for at botten har tilgang til å se kanalen.",
 																"title": "❌ Kan ikke opprette vev-krok"
 												},
 												"missing_permission:webhook": {
-																"description": "Botten har ikke tilgang til å håndtere vev-kroker.",
 																"title": "❌ Kan ikke opprette vev-krok"
 												},
 												"permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
 																"title": "❌ Can't create webhook"
 												}
 								},

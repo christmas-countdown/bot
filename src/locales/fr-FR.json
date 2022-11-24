@@ -23,23 +23,18 @@
 				"commands": {
 								"countdown": {
 												"created": {
-																"description": "Votre compte à rebours n'est pas encore actif ! **Activez le compte à rebours avec [`/toggle`]({url}).**\n\nLorsqu'il est activé, le message de compte à rebours sera envoyé sur {channel} tous les matins entre 5 h et 6 h.",
 																"title": "✅ Webhook du compte à rebours créé"
 												},
 												"invalid_channel": {
-																"description": "Veuillez choisir un canal de texte ou omettre l'option de canal pour utiliser le canal actuel.",
 																"title": "❌ Canal invalide"
 												},
 												"missing_permission:view": {
-																"description": "Veuillez vous assurer que le bot est autorisé à visualiser ce canal.",
 																"title": "❌ Impossible de créer un webhook"
 												},
 												"missing_permission:webhook": {
-																"description": "Le bot n'est pas autorisé à gérer les webhooks.",
 																"title": "❌ Impossible de créer un webhook"
 												},
 												"permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
 																"title": "❌ Can't create webhook"
 												}
 								},

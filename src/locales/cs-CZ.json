@@ -23,23 +23,18 @@
 				"commands": {
 								"countdown": {
 												"created": {
-																"description": "Odpočet nená aktivní! **Zapni ho pomocí prákazu [`/toggle`]({url}).**\n\nKdyž je aktivní, robot pošle do kanálu {channel} každé ráno mezi 05:00 a 06:00 zprávu.",
 																"title": "✅ Webhook na odpočítávání vytvořen"
 												},
 												"invalid_channel": {
-																"description": "Prosím zvolte již existující kanál, nebo tuto možnost vynechejte.",
 																"title": "❌ Neplatný kanál"
 												},
 												"missing_permission:view": {
-																"description": "Ujistěte se, že má robot oprávnění ke sledování kanálu.",
 																"title": "❌ Nemohl jsem vytvořit webhook"
 												},
 												"missing_permission:webhook": {
-																"description": "Bot nemá oprávnění na úpravu webhooků.",
 																"title": "❌ Nemohl jsem vytvořit webhook"
 												},
 												"permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
 																"title": "❌ Can't create webhook"
 												}
 								},
