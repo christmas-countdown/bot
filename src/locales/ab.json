@@ -22,19 +22,10 @@
 				},
 				"commands": {
 								"countdown": {
-												"created": {
-																"title": "✅ Countdown webhook created"
-												},
 												"invalid_channel": {
 																"title": "❌ Invalid channel"
 												},
-												"missing_permission:view": {
-																"title": "❌ Can't create webhook"
-												},
 												"missing_permission:webhook": {
-																"title": "❌ Can't create webhook"
-												},
-												"permissions_error": {
 																"title": "❌ Can't create webhook"
 												}
 								},
@@ -205,6 +196,36 @@
 																"title": "Server settings"
 												}
 								},
+								"setup": {
+												"channel_created": {
+																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
+																"title": "✅ Countdown widget created"
+												},
+												"channel_permissions_error": {
+																"description": "An error occurred whilst creating the channel.\n[Try adding the bot again]({add}).\nIf it still doesn't work, [ask for help]({support}).",
+																"title": "❌ Can't create channel"
+												},
+												"missing_permission:channel": {
+																"description": "The bot does not have permission to manage channels.",
+																"title": "❌ Can't create channel"
+												},
+												"missing_permission:view": {
+																"description": "Please ensure the bot has permission to view the channel.",
+																"title": "❌ Can't create webhook"
+												},
+												"missing_permission:webhook": {
+																"description": "The bot does not have permission to manage webhooks.",
+																"title": "❌ Can't create webhook"
+												},
+												"webhook_created": {
+																"description": "**The countdown has been enabled**; a message will be sent to {channel} every morning between 5AM and 6AM.\n\nTo disable it, use {toggle}.",
+																"title": "✅ Countdown webhook created"
+												},
+												"webhook_permissions_error": {
+																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
+																"title": "❌ Can't create webhook"
+												}
+								},
 								"sleeps": {
 												"days": [
 																"**{days} day**",
@@ -313,5 +334,13 @@
 				"santa_tracker": {
 								"description": "Santa is currently over **[{city} ({region})]({map})**.",
 								"title": "Santa Tracker"
+				},
+				"widget": {
+								"christmas_day": "🎄 Merry Christmas!",
+								"christmas_eve": [
+												"🎅 {hours} hour left",
+												"🎅 {hours} hours left"
+								],
+								"normal": "🎅 {sleeps} sleeps left"
 				}
 }
