@@ -1,4 +1,5 @@
 const { PrismaClient } = require('@prisma/client');
+const { inspect } = require('util');
 const I18n = require('@eartharoid/i18n');
 const ListenerLoader = require('./modules/listeners/loader');
 const CommandManager = require('./modules/commands/manager');
@@ -18,7 +19,32 @@ class Client extends DiscordClient {
 		this.log = require('./logger/child');
 
 		/** @type {PrismaClient} */
-		this.prisma = new PrismaClient();
+		this.prisma = new PrismaClient({
+			errorFormat: 'pretty',
+			log: [
+				{
+					emit: 'event',
+					level: 'query'
+				},
+				{
+					emit: 'event',
+					level: 'info'
+				},
+				{
+					emit: 'event',
+					level: 'warn'
+				},
+				{
+					emit: 'event',
+					level: 'error'
+				}
+			]
+		});
+
+		this.prisma.$on('query', e => this.log.debug(e));
+		this.prisma.$on('info', e => this.log.verbose(e));
+		this.prisma.$on('warn', e => this.log.warn(e));
+		this.prisma.$on('error', e => this.log.critical(e));
 
 		/** @type {I18n} */
 		this.i18n = new I18n('en-GB', require('./locales')());
@@ -69,7 +95,9 @@ const client = new Client({
 
 
 process.on('unhandledRejection', error => {
-	client.log.warn('An error was not caught');
+	client.log.notice('An error was not caught');
+	const name = inspect(error)?.match(/PrismaClient(KnownRequest|Initialization)Error/)?.[0];
+	if (name) client.log.critical(name);
 	client.log.error(error);
 });
 

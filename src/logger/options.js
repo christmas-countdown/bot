@@ -33,7 +33,7 @@ module.exports = {
 				const format = formats[log.level.name];
 				return `${timestamp} ${log.level.name} ${log.namespace ? `(${log.namespace}) ` : ''}${`${log.file}:${log.line}:${log.column}`} ${format[0]} ${log.content}`;
 			},
-			level: 'info',
+			level: 'verbose',
 			name: 'Christmas Countdown Bot'
 		})
 	]
