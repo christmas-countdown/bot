@@ -98,7 +98,7 @@ module.exports = class SecretSantaCommand extends Command {
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});
-		} else if (subcommand !== 'blacklist' && Object.keys(event.users).length === 0) {
+		} else if (subcommand !== 'blacklist' && !event.users) {
 			return await interaction.editReply({
 				embeds: [
 					new MessageEmbed()

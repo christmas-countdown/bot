@@ -4,7 +4,7 @@ specifiers:
   '@eartharoid/christmas': ^1.2.1
   '@eartharoid/dtf': ^2.0.1
   '@eartharoid/i18n': ^1.2.1
-  '@prisma/client': ^3.15.2
+  '@prisma/client': ^4.6.1
   ascii-table: ^0.0.9
   blapi: ^2.2.4
   bufferutil: ^4.0.7
@@ -28,7 +28,7 @@ dependencies:
   '@eartharoid/christmas': 1.2.1
   '@eartharoid/dtf': 2.0.1
   '@eartharoid/i18n': 1.2.1
-  '@prisma/client': 3.15.2_prisma@3.15.2
+  '@prisma/client': 4.6.1_prisma@3.15.2
   ascii-table: 0.0.9
   blapi: 2.2.4
   discord.js: 13.12.0_3cxu5zja4e2r5wmvge7mdcljwq
@@ -152,9 +152,9 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@prisma/client/3.15.2_prisma@3.15.2:
-    resolution: {integrity: sha512-ErqtwhX12ubPhU4d++30uFY/rPcyvjk+mdifaZO5SeM21zS3t4jQrscy8+6IyB0GIYshl5ldTq6JSBo1d63i8w==}
-    engines: {node: '>=12.6'}
+  /@prisma/client/4.6.1_prisma@3.15.2:
+    resolution: {integrity: sha512-M1+NNrMzqaOIxT7PBGcTs3IZo7d1EW/+gVQd4C4gUgWBDGgD9AcIeZnUSidgWClmpMSgVUdnVORjsWWGUameYA==}
+    engines: {node: '>=14.17'}
     requiresBuild: true
     peerDependencies:
       prisma: '*'
@@ -162,12 +162,12 @@ packages:
       prisma:
         optional: true
     dependencies:
-      '@prisma/engines-version': 3.15.1-1.461d6a05159055555eb7dfb337c9fb271cbd4d7e
+      '@prisma/engines-version': 4.6.1-3.694eea289a8462c80264df36757e4fdc129b1b32
       prisma: 3.15.2
     dev: false
 
-  /@prisma/engines-version/3.15.1-1.461d6a05159055555eb7dfb337c9fb271cbd4d7e:
-    resolution: {integrity: sha512-e3k2Vd606efd1ZYy2NQKkT4C/pn31nehyLhVug6To/q8JT8FpiMrDy7zmm3KLF0L98NOQQcutaVtAPhzKhzn9w==}
+  /@prisma/engines-version/4.6.1-3.694eea289a8462c80264df36757e4fdc129b1b32:
+    resolution: {integrity: sha512-HUCmkXAU2jqp2O1RvNtbE+seLGLyJGEABZS/R38rZjSAafAy0WzBuHq+tbZMnD+b5OSCsTVtIPVcuvx1ySxcWQ==}
     dev: false
 
   /@prisma/engines/3.15.1-1.461d6a05159055555eb7dfb337c9fb271cbd4d7e:

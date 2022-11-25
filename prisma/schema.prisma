@@ -34,7 +34,7 @@ model SecretSanta {
   guild    Guild       @relation(fields: [guild_id], references: [id])
   status   EventStatus
   date     DateTime
-  users    Json        @default("{}")
+  users    Json?
 }
 
 enum EventStatus {
