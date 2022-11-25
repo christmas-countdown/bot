@@ -8,8 +8,6 @@ const log = new Logger(logger_options);
 
 log.info.manager('Shard manager is starting');
 
-let sent = 0;
-
 const { ShardingManager } = require('discord.js');
 const manager = new ShardingManager('./src/bot.js');
 
@@ -67,9 +65,9 @@ manager.spawn().then(async shards => {
 
 	// countdown message dispatcher
 	const dispatcher = require('./dispatcher');
-	sent += await dispatcher.dispatch(manager, prisma, log);
+	await dispatcher.dispatch(manager, prisma, log);
 	setInterval(async () => {
-		sent += await dispatcher.dispatch(manager, prisma, log);
+		await dispatcher.dispatch(manager, prisma, log);
 	}, ms('1h'));
 
 	// santa tracker
@@ -111,11 +109,7 @@ manager.spawn().then(async shards => {
 });
 
 statcord.registerCustomFieldHandler(1, async () => String(await prisma.guild.count({ where: { enabled: true } })));
-statcord.registerCustomFieldHandler(2, () => {
-	const count = String(sent);
-	sent = 0;
-	return count;
-});
+statcord.registerCustomFieldHandler(2, async () => String(await prisma.guild.count({ where: { voice_channel: { not: null } } })));
 
 statcord.on('autopost-start', () => {
 	log.info.manager('Automatic stats posting enabled');
