@@ -21,14 +21,6 @@
 								}
 				},
 				"commands": {
-								"countdown": {
-												"invalid_channel": {
-																"title": "❌ Ungültiger Channel"
-												},
-												"missing_permission:webhook": {
-																"title": "❌ Webhook kann nicht erstellt werden"
-												}
-								},
 								"days": {
 												"days": [
 																"**{days} Tag**",
@@ -160,6 +152,10 @@
 												"no_event": {
 																"description": "Es gibt keine Geheimen Santa-Events. [Folge der Anleitung]({url}), um eins zu erstellen.",
 																"title": "❌ Fehler"
+												},
+												"not_enough_users": {
+																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
+																"title": "😦 Not enough participants"
 												},
 												"show": {
 																"none": {

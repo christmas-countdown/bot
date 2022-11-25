@@ -21,14 +21,6 @@
 								}
 				},
 				"commands": {
-								"countdown": {
-												"invalid_channel": {
-																"title": "❌ Neplatný kanál"
-												},
-												"missing_permission:webhook": {
-																"title": "❌ Nemohl jsem vytvořit webhook"
-												}
-								},
 								"days": {
 												"days": [
 																"za **{days} den**",
@@ -160,6 +152,10 @@
 												"no_event": {
 																"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
 																"title": "❌ Error"
+												},
+												"not_enough_users": {
+																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
+																"title": "😦 Not enough participants"
 												},
 												"show": {
 																"none": {
