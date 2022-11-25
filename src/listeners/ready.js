@@ -24,6 +24,7 @@ module.exports = class ReadyEventListener extends EventListener {
 		}, ms('30s'));
 
 		const updateWidgets = async () => {
+			this.client.log.info('Updating widgets');
 			let tried = 0,
 				succeeded = 0,
 				failed = 0;
