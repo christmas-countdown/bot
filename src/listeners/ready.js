@@ -29,6 +29,7 @@ module.exports = class ReadyEventListener extends EventListener {
 				failed = 0;
 			const guilds = await this.client.prisma.guild.findMany({ where: { voice_channel: { not: null } } });
 			for (let guild of guilds) {
+				if (!this.client.guilds.cache.has(guild.id)) continue; // skip guilds on other shards
 				const i18n = this.client.i18n.getLocale(guild.locale ?? 'en-GB');
 				const sleeps = christmas.getSleeps(guild.timezone);
 				const hours = christmas.getHours(guild.timezone);
@@ -39,6 +40,7 @@ module.exports = class ReadyEventListener extends EventListener {
 						: i18n('widget.normal', { sleeps });
 				try {
 					const channel = this.client.channels.cache.get(guild.voice_channel) || await this.client.channels.fetch(guild.voice_channel);
+					if (!channel) throw new Error('Unknown Channel');
 					await channel.setName(name);
 					this.client.log.success(`Updated widget for ${guild.id}`);
 					succeeded++;
