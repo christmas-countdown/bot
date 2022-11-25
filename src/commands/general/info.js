@@ -22,6 +22,7 @@ module.exports = class AboutCommand extends Command {
 		const u_settings = await this.client.prisma.user.findUnique({ where: { id: interaction.user.id } });
 		const g_settings = interaction.guild && await this.client.prisma.guild.findUnique({ where: { id: interaction.guild.id } });
 		const i18n = this.client.i18n.getLocale(u_settings?.locale ?? g_settings?.locale);
+		const i18nNumbers = new Intl.NumberFormat(u_settings?.locale ?? g_settings?.locale);
 
 		const shards = await this.client.shard.fetchClientValues('guilds.cache.size');
 		const guilds = shards.reduce((acc, count) => acc + count, 0);
@@ -43,11 +44,11 @@ module.exports = class AboutCommand extends Command {
 						about: 'https://christmascountdown.live/about',
 						eartharoid: 'https://eartharoid.me'
 					}))
-					.addField(i18n('commands.info.fields.commands'), String(commands), true)
-					.addField(i18n('commands.info.fields.servers'), String(guilds), true)
-					.addField(i18n('commands.info.fields.secret_santa_events'), String(ss_events.length), true)
-					.addField(i18n('commands.info.fields.secret_santa_users'), String(ss_users), true)
-					.addField(i18n('commands.info.fields.counting_in.title'), i18n('commands.info.fields.counting_in.value', enabled, { servers: enabled }), true)
+					.addField(i18n('commands.info.fields.commands'), i18nNumbers.format(commands), true)
+					.addField(i18n('commands.info.fields.servers'), i18nNumbers.format(guilds), true)
+					.addField(i18n('commands.info.fields.secret_santa_events'), i18nNumbers.format(ss_events.length), true)
+					.addField(i18n('commands.info.fields.secret_santa_users'), i18nNumbers.format(ss_users), true)
+					.addField(i18n('commands.info.fields.counting_in.title'), i18n('commands.info.fields.counting_in.value', enabled, { servers: i18nNumbers.format(enabled) }), true)
 					.addField(i18n('commands.info.fields.more.title'), i18n('commands.info.fields.more.value', { url: 'https://lnk.earth/xb-stats' }), true)
 					.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 			]
