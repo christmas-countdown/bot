@@ -24,7 +24,7 @@ module.exports = (manager, prisma, log) => {
 			: response_time >= 5
 				? '&e'
 				: '&a') + response_time + 'ms';
-		log.verbose.http(short(`(${req.raw.httpVersion}) ${req.ip} ${req.method} ${req.routerPath ?? '*'} &m-+>&r ${status}&b in ${response_time}`));
+		log.debug.http(short(`(${req.raw.httpVersion}) ${req.ip} ${req.method} ${req.routerPath ?? '*'} &m-+>&r ${status}&b in ${response_time}`));
 	});
 
 	fastify.get('/metrics', async (req, res) => {
