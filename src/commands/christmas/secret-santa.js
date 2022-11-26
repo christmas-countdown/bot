@@ -105,7 +105,7 @@ module.exports = class SecretSantaCommand extends Command {
 						.setColor(colour)
 						.setTitle(i18n('commands.secret_santa.not_enough_users.title'))
 						.setDescription(i18n('commands.secret_santa.not_enough_users.description'))
-						.setThumbnail('https://static.eartharoid.me/x/2022/11/hand%20with%20a%20candy%20stick.png')
+						.setThumbnail('https://static.eartharoid.me/christmas-countdown/3d/candycane.png')
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});
@@ -207,8 +207,7 @@ module.exports = class SecretSantaCommand extends Command {
 							.setColor(colour)
 							.setTitle(i18n('commands.secret_santa.show.show.title'))
 							.setDescription(i18n('commands.secret_santa.show.show.description', { member: `<@${event.users[interaction.user.id]}>` }))
-							// https://img.eartharoid.me/insecure/rs:auto:256/plain/s3://eartharoid/x/2022/11/hand%20with%20gift_angle.png (discord doesn't like this?)
-							.setThumbnail('https://static.eartharoid.me/x/2022/11/hand%20with%20gift_angle.png')
+							.setThumbnail('https://static.eartharoid.me/christmas-countdown/3d/gift-in-hand.png')
 							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 					],
 					ephemeral: true // VERY IMPORTANT!
@@ -220,7 +219,7 @@ module.exports = class SecretSantaCommand extends Command {
 							.setColor(colour)
 							.setTitle(i18n('commands.secret_santa.show.none.title'))
 							.setDescription(i18n('commands.secret_santa.show.none.description'))
-							.setThumbnail('https://static.eartharoid.me/x/2022/11/snowman_angle.png')
+							.setThumbnail('https://static.eartharoid.me/christmas-countdown/3d/snowman.png')
 							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 					],
 					ephemeral: true

@@ -46,7 +46,7 @@ module.exports = class InteractionCreateEventListener extends EventListener {
 							.setColor(colour)
 							.addField(i18n('commands.joke.question'), joke.question)
 							.addField(i18n('commands.joke.answer'), `||${joke.answer}||`)
-							.setThumbnail('https://static.eartharoid.me/x/2022/11/ginger%20breadman_angle.png')
+							.setThumbnail('https://static.eartharoid.me/christmas-countdown/3d/gingerbread-man.png')
 							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 					]
 				});
