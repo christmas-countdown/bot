@@ -36,6 +36,7 @@ module.exports = class JokeCommand extends Command {
 					.setColor(colour)
 					.addField(i18n('commands.joke.question'), joke.question)
 					.addField(i18n('commands.joke.answer'), `||${joke.answer}||`)
+					.setThumbnail('https://static.eartharoid.me/x/2022/11/ginger%20breadman_angle.png')
 					.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 			]
 		});

@@ -110,6 +110,7 @@ module.exports = class SetupCommand extends Command {
 							channel: interaction.channel.toString(),
 							toggle: `</${toggle.name}:${toggle.id}>`
 						}))
+						.setThumbnail('https://static.eartharoid.me/x/2022/11/santa%20standing%20on%20sled.png')
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});
@@ -179,6 +180,7 @@ module.exports = class SetupCommand extends Command {
 						.setColor(colour)
 						.setTitle(i18n('commands.setup.channel_created.title'))
 						.setDescription(i18n('commands.setup.channel_created.description'))
+						.setThumbnail('https://static.eartharoid.me/x/2022/11/santa%20standing%20on%20sled.png')
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});

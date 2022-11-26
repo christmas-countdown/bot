@@ -58,7 +58,7 @@ module.exports = class SecretSantaCommand extends Command {
 	 */
 	async execute(interaction) {
 		const u_settings = await this.client.prisma.user.findUnique({ where: { id: interaction.user.id } });
-		let  g_settings = interaction.guild && await this.client.prisma.guild.findUnique({ where: { id: interaction.guild.id } });
+		let g_settings = interaction.guild && await this.client.prisma.guild.findUnique({ where: { id: interaction.guild.id } });
 		const locale = u_settings?.locale ?? g_settings?.locale ?? 'en-GB';
 		const i18n = this.client.i18n.getLocale(locale);
 
@@ -105,6 +105,7 @@ module.exports = class SecretSantaCommand extends Command {
 						.setColor(colour)
 						.setTitle(i18n('commands.secret_santa.not_enough_users.title'))
 						.setDescription(i18n('commands.secret_santa.not_enough_users.description'))
+						.setThumbnail('https://static.eartharoid.me/x/2022/11/hand%20with%20a%20candy%20stick.png')
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});
@@ -206,6 +207,8 @@ module.exports = class SecretSantaCommand extends Command {
 							.setColor(colour)
 							.setTitle(i18n('commands.secret_santa.show.show.title'))
 							.setDescription(i18n('commands.secret_santa.show.show.description', { member: `<@${event.users[interaction.user.id]}>` }))
+							// https://img.eartharoid.me/insecure/rs:auto:256/plain/s3://eartharoid/x/2022/11/hand%20with%20gift_angle.png (discord doesn't like this?)
+							.setThumbnail('https://static.eartharoid.me/x/2022/11/hand%20with%20gift_angle.png')
 							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 					],
 					ephemeral: true // VERY IMPORTANT!
@@ -217,6 +220,7 @@ module.exports = class SecretSantaCommand extends Command {
 							.setColor(colour)
 							.setTitle(i18n('commands.secret_santa.show.none.title'))
 							.setDescription(i18n('commands.secret_santa.show.none.description'))
+							.setThumbnail('https://static.eartharoid.me/x/2022/11/snowman_angle.png')
 							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 					],
 					ephemeral: true
