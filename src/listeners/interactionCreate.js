@@ -1,6 +1,8 @@
 const { colour } = require('../../config');
 const EventListener = require('../modules/listeners/listener');
 const {
+	MessageActionRow,
+	MessageButton,
 	MessageEmbed,
 	WebhookClient
 } = require('discord.js');
@@ -14,37 +16,45 @@ module.exports = class InteractionCreateEventListener extends EventListener {
 	 * @param {import('discord.js').ModalSubmitInteraction} interaction
 	 */
 	async execute(interaction) {
-		let g_settings;
-		if (interaction.inGuild()) {
-			g_settings = await this.client.prisma.guild.findUnique({ where: { id: interaction.guild?.id } });
-			if (!g_settings) {
-				g_settings = await this.client.prisma.guild.create({
-					data: {
-						id: interaction.guild.id,
-						locale: this.client.i18n.locales.find(l => l === interaction.guild.preferredLocale || l.split('-')[0] === interaction.guild.preferredLocale) ?? 'en-GB'
-					}
-				});
-			}
-		}
-
-
-		let u_settings = await this.client.prisma.user.findUnique({ where: { id: interaction.user.id } });
-		if (!u_settings) {
-			u_settings = await this.client.prisma.user.create({
-				data: {
-					id: interaction.user.id,
-					locale: this.client.i18n.locales.find(l => l === interaction.locale || l.split('-')[0] === interaction.locale) ?? 'en-GB'
-				}
-			});
-		}
-
 		if (interaction.isCommand()) {
 			this.client.commands.handle(interaction);
 		} else if (interaction.isAutocomplete()) {
 			this.client.autocomplete.complete(interaction);
+		} else if (interaction.isButton()) {
+			const id = interaction.customId.split(';');
+
+			if (id[0] === 'joke') {
+				await interaction.deferUpdate();
+				const u_settings = await this.client.prisma.user.findUnique({ where: { id: interaction.user.id } });
+				const g_settings = interaction.guild && await this.client.prisma.guild.findUnique({ where: { id: interaction.guild.id } });
+				const i18n = this.client.i18n.getLocale(u_settings?.locale ?? g_settings?.locale);
+				const jokes = this.client.commands.commands.get('joke').jokes;
+				const joke = jokes[Math.floor(Math.random() * jokes.length)];
+				return await interaction.editReply({
+					components: [
+						new MessageActionRow()
+							.setComponents(
+								new MessageButton()
+									.setCustomId('joke')
+									.setStyle('PRIMARY')
+									.setEmoji('🔄')
+									.setLabel(i18n('commands.joke.button'))
+							)
+					],
+					embeds: [
+						new MessageEmbed()
+							.setColor(colour)
+							.addField(i18n('commands.joke.question'), joke.question)
+							.addField(i18n('commands.joke.answer'), `||${joke.answer}||`)
+							.setThumbnail('https://static.eartharoid.me/x/2022/11/ginger%20breadman_angle.png')
+							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
+					]
+				});
+			}
 		} else if (interaction.isModalSubmit()) {
 			await interaction.deferReply();
 			const u_settings = await this.client.prisma.user.findUnique({ where: { id: interaction.user.id } });
+			const g_settings = interaction.guild && await this.client.prisma.guild.findUnique({ where: { id: interaction.guild.id } });
 			const i18n = this.client.i18n.getLocale(u_settings?.locale ?? g_settings?.locale);
 			const id = interaction.customId.split(';');
 

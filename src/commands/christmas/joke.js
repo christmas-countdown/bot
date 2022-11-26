@@ -3,6 +3,8 @@ const { colour } = require('../../../config');
 const Command = require('../../modules/commands/command');
 const {
 	CommandInteraction, // eslint-disable-line no-unused-vars
+	MessageActionRow,
+	MessageButton,
 	MessageEmbed
 } = require('discord.js');
 
@@ -31,6 +33,16 @@ module.exports = class JokeCommand extends Command {
 		const i18n = this.client.i18n.getLocale(locale);
 		const joke = this.jokes[Math.floor(Math.random() * this.jokes.length)];
 		return await interaction.editReply({
+			components: [
+				new MessageActionRow()
+					.setComponents(
+						new MessageButton()
+							.setCustomId('joke')
+							.setStyle('PRIMARY')
+							.setEmoji('🔄')
+							.setLabel(i18n('commands.joke.button'))
+					)
+			],
 			embeds: [
 				new MessageEmbed()
 					.setColor(colour)
