@@ -83,6 +83,7 @@
 								},
 								"joke": {
 												"answer": "Antwort",
+												"button": "Get another joke",
 												"question": "Frage"
 								},
 								"minutes": {
