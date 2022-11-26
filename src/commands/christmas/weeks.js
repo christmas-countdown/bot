@@ -27,7 +27,7 @@ module.exports = class WeeksCommand extends Command {
 		const locale = u_settings?.locale ?? g_settings?.locale ?? 'en-GB';
 		const timezone = u_settings?.timezone ?? g_settings?.timezone ?? 'UTC';
 		const i18n = this.client.i18n.getLocale(locale);
-		const weeks = christmas.getWeeks(timezone);
+		const weeks = Math.round(christmas.getWeeks(timezone) * 10) / 10;
 		const title = christmas.isToday(timezone)
 			? i18n('countdown.christmas_day')
 			: christmas.isTomorrow()

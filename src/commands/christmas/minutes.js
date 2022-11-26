@@ -27,7 +27,7 @@ module.exports = class MinutesCommand extends Command {
 		const locale = u_settings?.locale ?? g_settings?.locale ?? 'en-GB';
 		const timezone = u_settings?.timezone ?? g_settings?.timezone ?? 'UTC';
 		const i18n = this.client.i18n.getLocale(locale);
-		const minutes = christmas.getMinutes(timezone);
+		const minutes = Math.floor(christmas.getMinutes(timezone));
 		const formatted = new Intl.NumberFormat(locale).format(minutes);
 		const title = christmas.isToday(timezone)
 			? i18n('countdown.christmas_day')

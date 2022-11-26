@@ -65,7 +65,7 @@ module.exports.dispatch = async (manager, prisma, log) => {
 
 		const getMessage = i18n.getLocale(guild.locale ?? 'en-GB');
 		const sleeps = christmas.getSleeps(guild.timezone);
-		const days = christmas.getDays(guild.timezone);
+		const days = Math.floor(christmas.getDays(guild.timezone));
 		const title = christmas.isToday(guild.timezone)
 			? getMessage('countdown.christmas_day')
 			: christmas.isTomorrow(guild.timezone)

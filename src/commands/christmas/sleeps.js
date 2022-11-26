@@ -28,7 +28,7 @@ module.exports = class SleepsCommand extends Command {
 		const timezone = u_settings?.timezone ?? g_settings?.timezone ?? 'UTC';
 		const i18n = this.client.i18n.getLocale(locale);
 		const sleeps = christmas.getSleeps(timezone);
-		const days = christmas.getDays(timezone);
+		const days = Math.floor(christmas.getDays(timezone));
 		const title = christmas.isToday(timezone)
 			? i18n('countdown.christmas_day')
 			: christmas.isTomorrow()

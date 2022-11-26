@@ -27,7 +27,7 @@ module.exports = class DaysCommand extends Command {
 		const locale = u_settings?.locale ?? g_settings?.locale ?? 'en-GB';
 		const timezone = u_settings?.timezone ?? g_settings?.timezone ?? 'UTC';
 		const i18n = this.client.i18n.getLocale(locale);
-		const days = christmas.getDays(timezone);
+		const days = Math.floor(christmas.getDays(timezone));
 		const sleeps = christmas.getSleeps(timezone);
 		const title = christmas.isToday(timezone)
 			? i18n('countdown.christmas_day')

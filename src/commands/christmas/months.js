@@ -27,7 +27,7 @@ module.exports = class MonthsCommand extends Command {
 		const locale = u_settings?.locale ?? g_settings?.locale ?? 'en-GB';
 		const timezone = u_settings?.timezone ?? g_settings?.timezone ?? 'UTC';
 		const i18n = this.client.i18n.getLocale(locale);
-		const months = christmas.getMonths(timezone);
+		const months = Math.round(christmas.getMonths(timezone) * 10) / 10; // toFixed(1) caused x.0
 		const title = christmas.isToday(timezone)
 			? i18n('countdown.christmas_day')
 			: christmas.isTomorrow()

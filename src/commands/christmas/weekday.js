@@ -24,8 +24,7 @@ module.exports = class DayOfTheWeekCommand extends Command {
 		const locale = u_settings?.locale ?? g_settings?.locale ?? 'en-GB';
 		const timezone = u_settings?.timezone ?? g_settings?.timezone ?? 'UTC';
 		const i18n = this.client.i18n.getLocale(locale);
-		const date = christmas.date(timezone);
-		const day = new Intl.DateTimeFormat(locale, { weekday: 'long' }).format(date);
+		const day = christmas.getWeekday(timezone, locale);
 		const footer = i18n(`countdown.${u_settings?.timezone ? 'user' : 'server'}_timezone`, { timezone });
 
 		return await interaction.editReply({
@@ -36,7 +35,7 @@ module.exports = class DayOfTheWeekCommand extends Command {
 					.setURL('https://christmascountdown.live')
 					.setDescription(i18n('commands.weekday.description', {
 						day,
-						year: date.getFullYear()
+						year: christmas.date(timezone).getFullYear()
 					}))
 					.setFooter(footer, this.client.user.avatarURL())
 			]

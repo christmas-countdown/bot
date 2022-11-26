@@ -130,7 +130,7 @@ module.exports = class SetupCommand extends Command {
 			try {
 				const timezone = u_settings?.timezone ?? g_settings?.timezone ?? 'UTC';
 				const sleeps = christmas.getSleeps(timezone);
-				const hours = christmas.getHours(timezone);
+				const hours = Math.floor(christmas.getHours(timezone));
 				const name = christmas.isToday(timezone)
 					? i18n('widget.christmas_day')
 					: christmas.isTomorrow()
