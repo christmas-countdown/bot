@@ -1,20 +1,20 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "Ha ocurrido un error inesperado. Por favor pedir ayuda en el servidor de soporte",
-												"identifier": "Identifier",
+												"description": "Ha ocurrido un error inesperado. Por favor pedir ayuda en [el servidor de soporte]({url}).",
+												"identifier": "Identificador",
 												"title": "Error"
 								},
-								"footer": "cuenta regresiva navideña por eartharoid",
+								"footer": "Christmas Countdown por eartharoid",
 								"guild_only": {
-												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
+												"description": "Este comando solo puede ser usado dentro de un canal de servidor. [Agrega el bot a tu servidor.]({invite})",
 												"title": "Error"
 								},
 								"member_missing_permissions": {
 												"description": "Necesitas del siguente permiso para utilizar este comando:\n{permissions}",
 												"title": "Error"
 								},
-								"migrate": "El bot Christmas Countdown ahora utiliza comandos con slash!\n**Por favor re añade al bot aquí: https://christmascountdown.live/invite.**",
+								"migrate": "¡El bot Christmas Countdown ahora utiliza comandos con slash!\n**Por favor vuelve a añadir el bot aquí: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
 												"description": "El bot Christmas Countdown necesita de los siguentes permisos:\n{permissions}",
 												"title": "Error"
@@ -23,10 +23,10 @@
 				"commands": {
 								"days": {
 												"days": [
-																"is **{days} day**",
-																"are **{days} days**"
+																"es **{days} día**",
+																"son **{days} días**"
 												],
-												"description": "¡Quedan {days} o {sleeps}[(?)]({url} \" \"¿Cual es la diferencia entre días y noches ?\") Restantes para Navidad!",
+												"description": "¡Quedan {days} o {sleeps}[(?)]({url} \" \"¿Cual es la diferencia entre días y noches?\") faltantes para Navidad!",
 												"sleeps": [
 																"**{sleeps} sleep**",
 																"**{sleeps} sleeps**"
