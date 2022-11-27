@@ -2,10 +2,10 @@
 				"bot": {
 								"command_execution_error": {
 												"description": "Une erreur inattendue est apparue. Veuillez demander de l'aide sur [le serveur d'assistance]({url}).",
-												"identifier": "Identifier",
+												"identifier": "Identifiant",
 												"title": "Erreur"
 								},
-								"footer": "Christmas Countdown par eartharoid",
+								"footer": "Compte à rebours de Noël par eartharoid",
 								"guild_only": {
 												"description": "Cette commande ne peut être utilisée que dans un canal serveur. [Ajoutez le bot à votre serveur.]({invite})",
 												"title": "Erreur"
@@ -14,9 +14,9 @@
 												"description": "Vous avez besoin des autorisations suivantes pour utiliser cette commande:\n{permissions}",
 												"title": "Erreur"
 								},
-								"migrate": "Le bot Christmas Countdown utilise désormais des commandes slash !\n**Veuillez rajouter le bot ici: https://christmascountdown.live/invite.**",
+								"migrate": "Le bot Christmas Count-down utilise désormais des commandes slash !\n**Veuillez rajouter le bot ici: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "Le bot Christmas Countdown a besoin des autorisations suivantes :\n{permissions}",
+												"description": "Le bot Christmas Count-down a besoin des autorisations suivantes :\n{permissions}",
 												"title": "Erreur"
 								}
 				},
@@ -37,7 +37,7 @@
 												]
 								},
 								"donate": {
-												"description": "**[Faire un don]({url})** pour débloquer ces fonctionnalités:\n\\⭐ option serveur `mention`/`role`\n\\⭐ option serveur `autotoggle`",
+												"description": "**Donation à {url}**\n\\⭐ option serveur `mention`/`role`\n\\⭐ option serveur `autotoggle`",
 												"title": "Obtenez le premium"
 								},
 								"help": {
@@ -83,7 +83,7 @@
 								},
 								"joke": {
 												"answer": "Réponse",
-												"button": "Get another joke",
+												"button": "Obtenez une autre blague",
 												"question": "Question"
 								},
 								"minutes": {
@@ -155,8 +155,8 @@
 																"title": "❌ Erreur"
 												},
 												"not_enough_users": {
-																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
-																"title": "😦 Not enough participants"
+																"description": "Désolé, il n'y avait pas assez de participants. Au moins 3 membres doivent rejoindre l'événement pour que les Pères Noël secrets soient attribués.",
+																"title": "😦 Pas assez de participants"
 												},
 												"show": {
 																"none": {
@@ -195,32 +195,32 @@
 								},
 								"setup": {
 												"channel_created": {
-																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
-																"title": "✅ Countdown widget created"
+																"description": "**Le canal vocal du widget a été créé.** Pour désactiver le widget, supprimez la chaîne.",
+																"title": "✅ Widget de compte à rebours créé"
 												},
 												"channel_permissions_error": {
-																"description": "An error occurred whilst creating the channel.\n[Try adding the bot again]({add}).\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create channel"
+																"description": "Une erreur s'est produite lors de la création du canal.\n[Réessayez d'ajouter le bot]({add}).\nSi cela ne fonctionne toujours pas, [demander de l'aide]({support}).",
+																"title": "❌ Impossible de créer la chaîne"
 												},
 												"missing_permission:channel": {
-																"description": "The bot does not have permission to manage channels.",
-																"title": "❌ Can't create channel"
+																"description": "Le bot n'est pas autorisé à gérer les chaînes.",
+																"title": "❌ Impossible de créer la chaîne"
 												},
 												"missing_permission:view": {
-																"description": "Please ensure the bot has permission to view the channel.",
-																"title": "❌ Can't create webhook"
+																"description": "Veuillez vous assurer que le bot est autorisé à afficher la chaîne.",
+																"title": "❌ Impossible de créer un webhook"
 												},
 												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
-																"title": "❌ Can't create webhook"
+																"description": "Le bot n'est pas autorisé à gérer les webhooks.",
+																"title": "❌ Impossible de créer un webhook"
 												},
 												"webhook_created": {
-																"description": "**The countdown has been enabled**; a message will be sent to {channel} every morning between 5AM and 6AM.\n\nTo disable it, use {toggle}.",
-																"title": "✅ Countdown webhook created"
+																"description": "**Le compte à rebours a été activé**; un message sera envoyé à {channel} tous les matins entre 5h et 6h.\n\nPour le désactiver, utilisez {toggle}.",
+																"title": "✅ Webhook de compte à rebours créé"
 												},
 												"webhook_permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create webhook"
+																"description": "Une erreur s'est produite lors de la création du webhook.\n[Réessayez d'ajouter le bot]({add})et assurez-vous qu'il peut voir le canal de compte à rebours.\nSi cela ne fonctionne toujours pas, [demander de l'aide]({support}).",
+																"title": "❌ Impossible de créer un webhook"
 												}
 								},
 								"sleeps": {
@@ -311,21 +311,21 @@
 				"modals": {
 								"add_joke": {
 												"answer": {
-																"label": "Answer",
-																"placeholder": "Santa Paws!"
+																"label": "Réponse",
+																"placeholder": "Pattes de Père Noël !"
 												},
 												"question": {
-																"label": "Question",
-																"placeholder": "Who delivers presents to cats?"
+																"label": "Quéstion",
+																"placeholder": "Qui livre les cadeaux aux chats ?"
 												},
-												"title": "Add a joke"
+												"title": "Ajouter une blague"
 								},
 								"suggest": {
 												"suggestion": {
-																"label": "Suggestion for Christmas Countdown",
-																"placeholder": "A suggestion for the Christmas Countdown bot, preferably in English."
+																"label": "Suggestion pour le compte à rebours de Noël",
+																"placeholder": "Une suggestion pour le bot Christmas Countdown, de préférence en anglais."
 												},
-												"title": "Suggestion"
+												"title": "Suggéstion"
 								}
 				},
 				"santa_tracker": {
@@ -333,11 +333,11 @@
 								"title": "Traqueur du Père Noël"
 				},
 				"widget": {
-								"christmas_day": "🎄 Merry Christmas!",
+								"christmas_day": "🎄 Joyeux Noël!",
 								"christmas_eve": [
-												"🎅 {hours} hour left",
-												"🎅 {hours} hours left"
+												"🎅 {hours} heure restantes",
+												"🎅 {hours} heures qui reste"
 								],
-								"normal": "🎅 {sleeps} sleeps left"
+								"normal": "🎅 {sleeps} jours restants"
 				}
 }
