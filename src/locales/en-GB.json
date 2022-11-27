@@ -175,7 +175,7 @@
 			},
 			"set": {
 				"cannot_enable": {
-					"description": "Create the countdown webhook with [`/countdown`]({url}).",
+					"description": "Create the countdown webhook with [`/setup`]({url}).",
 					"title": "❌ Can't enable countdown"
 				},
 				"invalid_locale": {
