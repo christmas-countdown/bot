@@ -29,7 +29,7 @@ module.exports = class AboutCommand extends Command {
 
 		const enabled = await this.client.prisma.guild.count({ where: { enabled: true } });
 		const ss_events = await this.client.prisma.secretSanta.findMany({ where: { status: 'COMPLETED' } });
-		const ss_users = ss_events.map(event => Object.keys(event.users).length).reduce((acc, users) => acc + users);
+		const ss_users = ss_events.map(event => Object.keys(event.users || {}).length).reduce((acc, users) => acc + users);
 
 		const response = await fetch(`https://api.statcord.com/v3/${this.client.user.id}/aggregate`);
 		const stats = response.ok ? await response.json() : null;
