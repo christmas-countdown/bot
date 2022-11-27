@@ -117,7 +117,7 @@ statcord.on('autopost-start', () => {
 
 statcord.on('post', error => {
 	if (error) log.error.manager(error);
-	else log.verbose.manager('Posted stats');
+	else log.debug.manager('Posted stats');
 });
 
 process.on('unhandledRejection', error => {
