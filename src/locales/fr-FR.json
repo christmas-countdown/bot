@@ -11,7 +11,7 @@
 												"title": "Erreur"
 								},
 								"member_missing_permissions": {
-												"description": "Vous avez besoin des autorisations suivantes pour utiliser cette commande:\n{permissions}",
+												"description": "Vous avez besoin des autorisations suivantes pour utiliser cette commande :\n{permissions}",
 												"title": "Erreur"
 								},
 								"migrate": "Le bot Christmas Count-down utilise désormais des commandes slash !\n**Veuillez rajouter le bot ici: https://christmascountdown.live/invite.**",
