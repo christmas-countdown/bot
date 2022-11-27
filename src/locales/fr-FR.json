@@ -14,9 +14,9 @@
 												"description": "Vous avez besoin des autorisations suivantes pour utiliser cette commande :\n{permissions}",
 												"title": "Erreur"
 								},
-								"migrate": "Le bot Christmas Count-down utilise désormais des commandes slash !\n**Veuillez rajouter le bot ici: https://christmascountdown.live/invite.**",
+								"migrate": "Le bot Christmas Countdown utilise désormais des commandes slash !\n**Veuillez rajouter le bot ici : https ://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "Le bot Christmas Count-down a besoin des autorisations suivantes :\n{permissions}",
+												"description": "Le bot Christmas Countdown a besoin des autorisations suivantes :\n{permissions}",
 												"title": "Erreur"
 								}
 				},
@@ -37,7 +37,7 @@
 												]
 								},
 								"donate": {
-												"description": "**Donation à {url}**\n\\⭐ option serveur `mention`/`role`\n\\⭐ option serveur `autotoggle`",
+												"description": "**Donation à {url}**",
 												"title": "Obtenez le premium"
 								},
 								"help": {
@@ -215,7 +215,7 @@
 																"title": "❌ Impossible de créer un webhook"
 												},
 												"webhook_created": {
-																"description": "**Le compte à rebours a été activé**; un message sera envoyé à {channel} tous les matins entre 5h et 6h.\n\nPour le désactiver, utilisez {toggle}.",
+																"description": "**Le compte à rebours a été activé** ; un message sera envoyé à {channel} tous les matins entre 5h et 6h.\n\nPour le désactiver, utilisez {toggle}.",
 																"title": "✅ Webhook de compte à rebours créé"
 												},
 												"webhook_permissions_error": {
@@ -299,7 +299,7 @@
 								"christmas_day": "🎉 C'est le jour de Noël !",
 								"christmas_eve": "🎅 C'est le réveillon de Noël !",
 								"disable": {
-												"description": "**Administrateurs de serveur: utilise [`/toggle`]({toggle}) pour désactiver le compte à rebours.**\nVeuillez envisager de revoir le bot [ici]({review}).\nMerci d'utiliser ce bot et profitez de votre Noël ! 🙂",
+												"description": "**Administrateurs de serveur : utilise {toggle} pour désactiver le compte à rebours.**\nMerci d'utiliser ce bot et profitez de votre Noël ! 🙂",
 												"title": "🎄 Joyeux noël"
 								},
 								"live": "Voir le compte à rebours en direct sur [{pretty}]({url}).",
@@ -333,7 +333,7 @@
 								"title": "Traqueur du Père Noël"
 				},
 				"widget": {
-								"christmas_day": "🎄 Joyeux Noël!",
+								"christmas_day": "🎄 Joyeux Noël !",
 								"christmas_eve": [
 												"🎅 {hours} heure restantes",
 												"🎅 {hours} heures qui reste"
