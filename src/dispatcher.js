@@ -86,20 +86,22 @@ module.exports.dispatch = async (manager, prisma, log) => {
 		if (christmas.isToday(guild.timezone)) text.splice(1, 0, getMessage('countdown.merry_christmas'));
 
 		const footer = getMessage('countdown.server_timezone', { timezone: guild.timezone });
+		const embed = new MessageEmbed()
+			.setColor(colour)
+			.setTitle(title)
+			.setURL('https://christmascountdown.live')
+			.setDescription(text.join('\n\n'))
+			.setFooter(footer, avatarURL)
+			.setTimestamp();
+
+		const imageId = christmas.isToday(guild.timezone) ? 0 : sleeps <= 25 ? sleeps : null;
+		if (imageId !== null) embed.setImage(`https://static.eartharoid.me/christmas-countdown/sleeps-left/en/${imageId}@s.gif`);
 
 		try {
 			const webhook = new WebhookClient({ url: guild.webhook });
 			await webhook.send({
 				content: guild.mention ? `<@&${guild.mention}>` : undefined,
-				embeds: [
-					new MessageEmbed()
-						.setColor(colour)
-						.setTitle(title)
-						.setURL('https://christmascountdown.live')
-						.setDescription(text.join('\n\n'))
-						.setFooter(footer, avatarURL)
-						.setTimestamp()
-				]
+				embeds: [embed]
 			});
 
 			if (christmas.isToday(guild.timezone) && !guild.auto_toggle) {
