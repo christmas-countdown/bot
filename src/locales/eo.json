@@ -2,22 +2,22 @@
 				"bot": {
 								"command_execution_error": {
 												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
-												"identifier": "Identifier",
-												"title": "Error"
+												"identifier": "Identigilo",
+												"title": "Eraro"
 								},
 								"footer": "Christmas Countdown by eartharoid",
 								"guild_only": {
 												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
-												"title": "Error"
+												"title": "Eraro"
 								},
 								"member_missing_permissions": {
 												"description": "You need the following permissions to use this command:\n{permissions}",
-												"title": "Error"
+												"title": "Eraro"
 								},
 								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
 												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
-												"title": "Error"
+												"title": "Eraro"
 								}
 				},
 				"commands": {
@@ -28,8 +28,8 @@
 												],
 												"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
 												"sleeps": [
-																"**{sleeps} sleep**",
-																"**{sleeps} sleeps**"
+																"**{sleeps} dormo**",
+																"**{sleeps} dormoj**"
 												],
 												"title": [
 																"{days} day left",
@@ -38,12 +38,12 @@
 								},
 								"donate": {
 												"description": "**Donate at {url}**",
-												"title": "Donate"
+												"title": "Donaci"
 								},
 								"help": {
 												"list": {
 																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
-																"title": "Commands"
+																"title": "Komandoj"
 												}
 								},
 								"hours": {
@@ -63,8 +63,8 @@
 																"counting_in": {
 																				"title": "Counting down in",
 																				"value": [
-																								"{servers} server",
-																								"{servers} servers"
+																								"{servers} servilo",
+																								"{servers} serviloj"
 																				]
 																},
 																"more": {
@@ -73,18 +73,18 @@
 																},
 																"secret_santa_events": "Secret Santa events",
 																"secret_santa_users": "Secret Santa participants",
-																"servers": "Servers"
+																"servers": "Serviloj"
 												},
-												"title": "Information"
+												"title": "Informoj"
 								},
 								"invite": {
 												"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
-												"title": "Invite"
+												"title": "Inviti"
 								},
 								"joke": {
-												"answer": "Answer",
+												"answer": "Respondo",
 												"button": "Get another joke",
-												"question": "Question"
+												"question": "Demando"
 								},
 								"minutes": {
 												"description": [
@@ -118,7 +118,7 @@
 								},
 								"radio": {
 												"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
-												"title": "Christmas Radio"
+												"title": "Kristnaska radiostacio"
 								},
 								"seconds": {
 												"description": [
@@ -152,7 +152,7 @@
 												},
 												"no_event": {
 																"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
-																"title": "❌ Error"
+																"title": "❌ Eraro"
 												},
 												"not_enough_users": {
 																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
@@ -184,7 +184,7 @@
 																},
 																"invalid_timezone": {
 																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid timezone"
+																				"title": "❌ Nevalida horzono"
 																},
 																"title": "✅ Server settings updated"
 												},
@@ -225,8 +225,8 @@
 								},
 								"sleeps": {
 												"days": [
-																"**{days} day**",
-																"**{days} days**"
+																"**{days} tago**",
+																"**{days} tagoj**"
 												],
 												"description": "There {sleeps} or {days}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
 												"sleeps": [
@@ -248,24 +248,24 @@
 								},
 								"total": {
 												"days": [
-																"**{days} day**",
-																"**{days} days**"
+																"**{days} tago**",
+																"**{days} tagoj**"
 												],
 												"description": [
 																"There is {days}, {hours}, {minutes}, and {seconds} left until Christmas!",
 																"There are {days}, {hours}, {minutes}, and {seconds} left until Christmas!"
 												],
 												"hours": [
-																"**{hours} hour**",
-																"**{hours} hours**"
+																"**{hours} horo**",
+																"**{hours} horoj**"
 												],
 												"minutes": [
-																"**{minutes} minute**",
-																"**{minutes} minutes**"
+																"**{minutes} minuto**",
+																"**{minutes} minutoj**"
 												],
 												"seconds": [
-																"**{seconds} second**",
-																"**{seconds} seconds**"
+																"**{seconds} sekundo**",
+																"**{seconds} sekundoj**"
 												],
 												"title": "{days}, {hours}, {minutes}, {seconds} left"
 								},
@@ -277,11 +277,11 @@
 																"title": "✅ User settings updated"
 												},
 												"view": {
-																"title": "User settings"
+																"title": "Agordoj de uzanto"
 												}
 								},
 								"weekday": {
-												"description": "Christmas Day is on a **{day}** in {year}.",
+												"description": "Kristnasko estas **{day}** en {year}.",
 												"title": ""
 								},
 								"weeks": {
@@ -296,26 +296,26 @@
 								}
 				},
 				"countdown": {
-								"christmas_day": "🎉 It's Christmas Day!",
-								"christmas_eve": "🎅 It's Christmas Eve!",
+								"christmas_day": "🎉 Jen Kristnasko!",
+								"christmas_eve": "🎅 Jen Kristnaska vespero!",
 								"disable": {
 												"description": "**Server administrators: use {toggle} to disable the countdown.**\nThank you for using this bot and enjoy your Christmas! 🙂",
-												"title": "🎄 Merry Christmas"
+												"title": "🎄 Feliĉan Kristnaskon"
 								},
 								"live": "View the live countdown at [{pretty}]({url}).",
-								"merry_christmas": "🎄 Merry Christmas!",
-								"server_timezone": "Server timezone: {timezone}",
-								"user_timezone": "User timezone: {timezone}"
+								"merry_christmas": "🎄 Feliĉan Kristnaskon!",
+								"server_timezone": "Horzono de servilo: {timezone}",
+								"user_timezone": "Horzono de uzanto: {timezone}"
 				},
-				"disabled": "disabled",
+				"disabled": "malŝaltita",
 				"modals": {
 								"add_joke": {
 												"answer": {
-																"label": "Answer",
+																"label": "Respondo",
 																"placeholder": "Santa Paws!"
 												},
 												"question": {
-																"label": "Question",
+																"label": "Demando",
 																"placeholder": "Who delivers presents to cats?"
 												},
 												"title": "Add a Christmas joke"
@@ -325,7 +325,7 @@
 																"label": "Suggestion for Christmas Countdown",
 																"placeholder": "A suggestion for the Christmas Countdown bot, preferably in English."
 												},
-												"title": "Suggestion"
+												"title": "Sugesto"
 								}
 				},
 				"santa_tracker": {
@@ -333,7 +333,7 @@
 								"title": "Santa Tracker"
 				},
 				"widget": {
-								"christmas_day": "🎄 Merry Christmas!",
+								"christmas_day": "🎄 Feliĉan Kristnaskon!",
 								"christmas_eve": [
 												"🎅 {hours} hour left",
 												"🎅 {hours} hours left"
