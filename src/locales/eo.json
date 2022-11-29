@@ -1,0 +1,343 @@
+{
+				"bot": {
+								"command_execution_error": {
+												"description": "",
+												"identifier": "",
+												"title": ""
+								},
+								"footer": "",
+								"guild_only": {
+												"description": "",
+												"title": ""
+								},
+								"member_missing_permissions": {
+												"description": "",
+												"title": ""
+								},
+								"migrate": "",
+								"missing_permissions": {
+												"description": "",
+												"title": ""
+								}
+				},
+				"commands": {
+								"days": {
+												"days": [
+																"",
+																""
+												],
+												"description": "",
+												"sleeps": [
+																"",
+																""
+												],
+												"title": [
+																"",
+																""
+												]
+								},
+								"donate": {
+												"description": "",
+												"title": ""
+								},
+								"help": {
+												"list": {
+																"description": "",
+																"title": ""
+												}
+								},
+								"hours": {
+												"description": [
+																"",
+																""
+												],
+												"title": [
+																"",
+																""
+												]
+								},
+								"info": {
+												"description": "",
+												"fields": {
+																"commands": "",
+																"counting_in": {
+																				"title": "",
+																				"value": [
+																								"",
+																								""
+																				]
+																},
+																"more": {
+																				"title": "",
+																				"value": ""
+																},
+																"secret_santa_events": "",
+																"secret_santa_users": "",
+																"servers": ""
+												},
+												"title": ""
+								},
+								"invite": {
+												"description": "",
+												"title": ""
+								},
+								"joke": {
+												"answer": "",
+												"button": "",
+												"question": ""
+								},
+								"minutes": {
+												"description": [
+																"",
+																""
+												],
+												"title": [
+																"",
+																""
+												]
+								},
+								"months": {
+												"description": [
+																"",
+																""
+												],
+												"title": [
+																"",
+																""
+												]
+								},
+								"ping": {
+												"calculating": "",
+												"fields": {
+																"average_ping": "",
+																"latency": "",
+																"shard_number": "",
+																"shard_ping": ""
+												},
+												"title": ""
+								},
+								"radio": {
+												"description": "",
+												"title": ""
+								},
+								"seconds": {
+												"description": [
+																"",
+																""
+												],
+												"title": [
+																"",
+																""
+												]
+								},
+								"secret_santa": {
+												"blacklist": {
+																"add": {
+																				"added": {
+																								"description": "",
+																								"title": ""
+																				}
+																},
+																"list": "",
+																"remove": {
+																				"cannot_remove": {
+																								"description": "",
+																								"title": ""
+																				},
+																				"removed": {
+																								"description": "",
+																								"title": ""
+																				}
+																}
+												},
+												"no_event": {
+																"description": "",
+																"title": ""
+												},
+												"not_enough_users": {
+																"description": "",
+																"title": ""
+												},
+												"show": {
+																"none": {
+																				"description": "",
+																				"title": ""
+																},
+																"show": {
+																				"description": "",
+																				"title": ""
+																}
+												}
+								},
+								"server": {
+												"reset": {
+																"title": ""
+												},
+												"set": {
+																"cannot_enable": {
+																				"description": "",
+																				"title": ""
+																},
+																"invalid_locale": {
+																				"description": "",
+																				"title": ""
+																},
+																"invalid_timezone": {
+																				"description": "",
+																				"title": ""
+																},
+																"title": ""
+												},
+												"view": {
+																"description": "",
+																"title": ""
+												}
+								},
+								"setup": {
+												"channel_created": {
+																"description": "",
+																"title": ""
+												},
+												"channel_permissions_error": {
+																"description": "",
+																"title": ""
+												},
+												"missing_permission:channel": {
+																"description": "",
+																"title": ""
+												},
+												"missing_permission:view": {
+																"description": "",
+																"title": ""
+												},
+												"missing_permission:webhook": {
+																"description": "",
+																"title": ""
+												},
+												"webhook_created": {
+																"description": "",
+																"title": ""
+												},
+												"webhook_permissions_error": {
+																"description": "",
+																"title": ""
+												}
+								},
+								"sleeps": {
+												"days": [
+																"",
+																""
+												],
+												"description": "",
+												"sleeps": [
+																"",
+																""
+												],
+												"title": [
+																"",
+																""
+												]
+								},
+								"suggest": {
+												"description": "",
+												"title": ""
+								},
+								"toggle": {
+												"disabled": "",
+												"enabled": ""
+								},
+								"total": {
+												"days": [
+																"",
+																""
+												],
+												"description": [
+																"",
+																""
+												],
+												"hours": [
+																"",
+																""
+												],
+												"minutes": [
+																"",
+																""
+												],
+												"seconds": [
+																"",
+																""
+												],
+												"title": ""
+								},
+								"user": {
+												"reset": {
+																"title": ""
+												},
+												"set": {
+																"title": ""
+												},
+												"view": {
+																"title": ""
+												}
+								},
+								"weekday": {
+												"description": "",
+												"title": ""
+								},
+								"weeks": {
+												"description": [
+																"",
+																""
+												],
+												"title": [
+																"",
+																""
+												]
+								}
+				},
+				"countdown": {
+								"christmas_day": "",
+								"christmas_eve": "",
+								"disable": {
+												"description": "",
+												"title": ""
+								},
+								"live": "",
+								"merry_christmas": "",
+								"server_timezone": "",
+								"user_timezone": ""
+				},
+				"disabled": "",
+				"modals": {
+								"add_joke": {
+												"answer": {
+																"label": "",
+																"placeholder": ""
+												},
+												"question": {
+																"label": "",
+																"placeholder": ""
+												},
+												"title": ""
+								},
+								"suggest": {
+												"suggestion": {
+																"label": "",
+																"placeholder": ""
+												},
+												"title": ""
+								}
+				},
+				"santa_tracker": {
+								"description": "",
+								"title": ""
+				},
+				"widget": {
+								"christmas_day": "",
+								"christmas_eve": [
+												"",
+												""
+								],
+								"normal": ""
+				}
+}
