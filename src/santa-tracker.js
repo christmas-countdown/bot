@@ -36,7 +36,7 @@ module.exports.track = async (manager, prisma, log) => {
 		const location = remaining[index];
 		remaining.splice(0, index + 1);
 
-		const map = `https://www.google.com/maps/place/${location.city},+${location.region}/@${location.latitude},${location.longitude},14z`.replace(/\s/g, '+');
+		const map = `https://www.google.com/maps/place/${location.city},+${location.region}/@${location.latitude},${location.longitude},10z`.replace(/\s/g, '+');
 
 		const guilds = await prisma.guild.findMany({ where: { enabled: true } });
 		log.info(`Updating Santa's position in ${guilds.length} guilds... (${location.city}, ${location.region})`);
