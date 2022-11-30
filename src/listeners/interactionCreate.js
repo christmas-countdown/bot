@@ -28,8 +28,9 @@ module.exports = class InteractionCreateEventListener extends EventListener {
 				const u_settings = await this.client.prisma.user.findUnique({ where: { id: interaction.user.id } });
 				const g_settings = interaction.guild && await this.client.prisma.guild.findUnique({ where: { id: interaction.guild.id } });
 				const i18n = this.client.i18n.getLocale(u_settings?.locale ?? g_settings?.locale);
-				const jokes = this.client.commands.commands.get('joke').jokes;
-				const joke = jokes[Math.floor(Math.random() * jokes.length)];
+				const joke_command = this.client.commands.commands.get('joke');
+				if (!joke_command.jokes) joke_command.jokes = await joke_command.downloadJokes();
+				const joke = joke_command.jokes[Math.floor(Math.random() * joke_command.jokes.length)];
 				return await interaction.editReply({
 					components: [
 						new MessageActionRow()
