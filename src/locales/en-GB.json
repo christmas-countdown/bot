@@ -309,7 +309,7 @@
 	},
 	"disabled": "disabled",
 	"santa_tracker": {
-		"description": "Santa is currently over **[{city}, {region}]({map})**.",
+		"description": "Santa is currently delivering presents over **[{city}, {region}]({map})**.",
 		"title": "Santa Tracker"
 	},
 	"modals": {
