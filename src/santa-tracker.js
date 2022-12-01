@@ -55,6 +55,7 @@ module.exports.track = async (manager, prisma, log) => {
 					map,
 					region: location.region
 				}))
+				.setImage(`https://santatracker.eartharoid.workers.dev/map-tile/${location.latitude},${location.longitude}`)
 				.setFooter(getMessage('bot.footer'), avatarURL)
 				.setTimestamp();
 
