@@ -72,7 +72,7 @@ manager.spawn().then(async shards => {
 
 	// santa tracker
 	const tracker = require('./santa-tracker');
-	setInterval(() => tracker.track(manager, prisma, log), ms('2.5m'));
+	setInterval(() => tracker.track(manager, prisma, log), ms('1m'));
 
 	// server count posting
 	if (process.env.NODE_ENV === 'production') {

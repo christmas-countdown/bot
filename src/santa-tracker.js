@@ -11,12 +11,12 @@ const i18n = new I18n('en-GB', require('./locales')());
 let remaining = locations;
 let messages = new Map();
 
-let avatarURL = null;
+let id, avatarURL;
 
 module.exports.track = async (manager, prisma, log) => {
 
-	if (!avatarURL) {
-		const id = await manager.fetchClientValues('user.id', 0);
+	if (!id || !avatarURL) {
+		id = await manager.fetchClientValues('user.id', 0);
 		const avatar = await manager.fetchClientValues('user.avatar', 0);
 		avatarURL = `https://cdn.discordapp.com/avatars/${id}/${avatar}.webp?size=64`;
 	}
@@ -32,46 +32,64 @@ module.exports.track = async (manager, prisma, log) => {
 		return departure.isAfter(now);
 	});
 
-	if (index) {
-		const location = remaining[index];
-		remaining.splice(0, index + 1);
+	if (!index) return;
 
-		const map = `https://www.google.com/maps/place/${location.city},+${location.region}/@${location.latitude},${location.longitude},10z`.replace(/\s/g, '+');
+	const location = remaining[index];
+	remaining.splice(0, index + 1);
 
-		const guilds = await prisma.guild.findMany({ where: { enabled: true } });
-		log.info(`Updating Santa's position in ${guilds.length} guilds... (${location.city}, ${location.region})`);
+	const map = `https://www.google.com/maps/place/${location.city},+${location.region}/@${location.latitude},${location.longitude},10z`.replace(/\s/g, '+');
 
-		for (const guild of guilds) {
-			if (!guild.webhook) continue;
+	const guilds = await prisma.guild.findMany({ where: { enabled: true } });
+	log.info(`Updating Santa's position in ${guilds.length} guilds... (${location.city}, ${location.region})`);
 
-			const webhook = new WebhookClient({ url: guild.webhook });
-			const getMessage = i18n.getLocale(guild.locale ?? 'en-GB');
-			const embed = new MessageEmbed()
-				.setColor(colour)
-				.setTitle(getMessage('santa_tracker.title'))
-				.setURL('https://www.noradsanta.org')
+	for (const guild of guilds) {
+		if (!guild.webhook) continue;
+
+		const webhook = new WebhookClient({ url: guild.webhook });
+		const getMessage = i18n.getLocale(guild.locale ?? 'en-GB');
+		const embed = new MessageEmbed()
+			.setColor(colour)
+			.setTitle(getMessage('santa_tracker.title'))
+			.setURL('https://www.noradsanta.org')
+			.setFooter(getMessage('bot.footer'), avatarURL)
+			.setTimestamp();
+
+		if (remaining.length === 0) {
+			// first reset it (although the bot will likely be restarted before next Christmas anyway)
+			remaining = locations;
+			messages = new Map();
+			embed
+				.setDescription(getMessage('santa_tracker.ended', {
+					city: location.city,
+					map,
+					region: location.region,
+					vote: `https://top.gg/bot/${id}/vote`
+				}))
+				.setImage('https://static.eartharoid.me/christmas-countdown/3d/santa-lying-down.png');
+		} else if (remaining.length === locations.length - 1) {
+			embed
+				.setDescription(getMessage('santa_tracker.starting', {
+					city: location.city,
+					map,
+					region: location.region
+				}))
+				.setImage('https://static.eartharoid.me/christmas-countdown/3d/sleigh.png');
+		} else {
+			embed
 				.setDescription(getMessage('santa_tracker.description', {
 					city: location.city,
 					map,
 					region: location.region
 				}))
-				.setImage(`https://santatracker.eartharoid.workers.dev/map-tile/${location.latitude},${location.longitude}`)
-				.setFooter(getMessage('bot.footer'), avatarURL)
-				.setTimestamp();
-
-			try {
-				if (messages.has(guild.id)) await webhook.editMessage(messages.get(guild.id), { embeds: [embed] });
-				else messages.set(guild.id, (await webhook.send({ embeds: [embed] })).id);
-			} catch (error) {
-				log.warn(`Failed to update Santa's position in guild ${guild.id}`);
-				log.error(error);
-			}
+				.setImage(`https://santatracker.eartharoid.workers.dev/map-tile/${location.latitude},${location.longitude}`);
 		}
 
-	}
-
-	if (remaining.length === 0) {
-		remaining = locations;
-		messages = new Map();
+		try {
+			if (messages.has(guild.id)) await webhook.editMessage(messages.get(guild.id), { embeds: [embed] });
+			else messages.set(guild.id, (await webhook.send({ embeds: [embed] })).id);
+		} catch (error) {
+			log.warn(`Failed to update Santa's position in guild ${guild.id}`);
+			log.error(error);
+		}
 	}
 };

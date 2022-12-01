@@ -112,7 +112,10 @@ module.exports.dispatch = async (manager, prisma, log) => {
 						new MessageEmbed()
 							.setColor(colour)
 							.setTitle(getMessage('countdown.disable.title'))
-							.setDescription(getMessage('countdown.disable.description', { toggle: `</${toggle.name}:${toggle.id}>` }))
+							.setDescription(getMessage('countdown.disable.description', {
+								toggle: `</${toggle.name}:${toggle.id}>`,
+								vote: `https://top.gg/bot/${id}/vote`
+							}))
 							.setFooter(footer, avatarURL)
 							.setTimestamp()
 					]
