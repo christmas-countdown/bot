@@ -8,7 +8,7 @@ const { colour } = require('../config');
 const I18n = require('@eartharoid/i18n');
 const i18n = new I18n('en-GB', require('./locales')());
 
-let remaining = locations;
+let remaining = [...locations];
 let messages = new Map();
 
 let id, avatarURL;
@@ -32,10 +32,11 @@ module.exports.track = async (manager, prisma, log) => {
 		return departure.isAfter(now);
 	});
 
+
 	if (!index) return;
 
-	const location = remaining[index];
-	remaining.splice(0, index + 1);
+	const location = remaining[remaining.length === locations.length ? 0 : index];
+	remaining.splice(0, index);
 
 	const map = `https://www.google.com/maps/place/${location.city},+${location.region}/@${location.latitude},${location.longitude},10z`.replace(/\s/g, '+');
 
@@ -56,7 +57,7 @@ module.exports.track = async (manager, prisma, log) => {
 
 		if (remaining.length === 0) {
 			// first reset it (although the bot will likely be restarted before next Christmas anyway)
-			remaining = locations;
+			remaining = [...locations];
 			messages = new Map();
 			embed
 				.setDescription(getMessage('santa_tracker.ended', {
