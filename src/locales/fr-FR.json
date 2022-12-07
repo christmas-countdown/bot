@@ -5,7 +5,7 @@
 												"identifier": "Identifiant",
 												"title": "Erreur"
 								},
-								"footer": "Compte à rebours de Noël par eartharoid",
+								"footer": "Christmas Countdown par eartharoid",
 								"guild_only": {
 												"description": "Cette commande ne peut être utilisée que dans un canal serveur. [Ajoutez le bot à votre serveur.]({invite})",
 												"title": "Erreur"
@@ -14,7 +14,7 @@
 												"description": "Vous avez besoin des autorisations suivantes pour utiliser cette commande :\n{permissions}",
 												"title": "Erreur"
 								},
-								"migrate": "Le bot Christmas Countdown utilise désormais des commandes slash !\n**Veuillez rajouter le bot ici : https ://christmascountdown.live/invite.**",
+								"migrate": "Le bot Christmas Countdown utilise désormais des commandes slash !\n**Veuillez réajouter le bot ici : https ://christmascountdown.live/invite.**",
 								"missing_permissions": {
 												"description": "Le bot Christmas Countdown a besoin des autorisations suivantes :\n{permissions}",
 												"title": "Erreur"
@@ -38,7 +38,7 @@
 								},
 								"donate": {
 												"description": "**Donation à {url}**",
-												"title": "Obtenez le premium"
+												"title": "Faire un don"
 								},
 								"help": {
 												"list": {
@@ -57,11 +57,11 @@
 												]
 								},
 								"info": {
-												"description": "Le bot Christmas Countdown pour Discord par [eartharoid]({eartharoid}) fonctionne depuis novembre 2018. [En apprendre encore plus.]({about})",
+												"description": "Le bot Christmas Countdown pour Discord par [eartharoid]({eartharoid}) fonctionne depuis novembre 2018. [En savoir plus.]({about})",
 												"fields": {
 																"commands": "Commandes utilisées",
 																"counting_in": {
-																				"title": "Le compte à rebours fonctionne sur",
+																				"title": "Début du compte à rebours dans",
 																				"value": [
 																								"{servers} serveur",
 																								"{servers} serveurs"
@@ -88,8 +88,8 @@
 								},
 								"minutes": {
 												"description": [
-																"Il reste **{minutes}** minute restante jusqu'à Noël !",
-																"Il reste **{minutes}** minutes restantes jusqu'à Noël !"
+																"Il reste **{minutes}** minute avant Noël !",
+																"Il reste **{minutes}** minutes avant Noël !"
 												],
 												"title": [
 																"{minutes} minute restante",
@@ -98,8 +98,8 @@
 								},
 								"months": {
 												"description": [
-																"Il reste **{months}** mois restant jusqu'à Noël !",
-																"Il reste **{months}** mois restants jusqu'à Noël !"
+																"Il reste **{months}** mois avant Noël !",
+																"Il reste **{months}** mois avant Noël !"
 												],
 												"title": [
 																"{months} mois restant",
@@ -122,8 +122,8 @@
 								},
 								"seconds": {
 												"description": [
-																"Il reste **{seconds}** seconde restante jusqu'à Noël !",
-																"Il reste **{seconds}** secondes restantes jusqu'à Noël !"
+																"Il reste **{seconds}** seconde avant Noël !",
+																"Il reste **{seconds}** secondes avant Noël !"
 												],
 												"title": [
 																"{seconds} seconde restante",
@@ -160,12 +160,12 @@
 												},
 												"show": {
 																"none": {
-																				"description": "Vous n'êtes pas entré dans un événement secret du père Noël.",
+																				"description": "Vous n'êtes pas entré dans un tirage au sort de cadeaux de noël.",
 																				"title": "❌ Non attribué"
 																},
 																"show": {
 																				"description": "**Vous êtes le Père Noël de {member}.** Offrez-lui un cadeau, en suivant les directives de l'événement définies par l'organisateur.",
-																				"title": "Père Noël secret"
+																				"title": "Tirage au sort de cadeaux de noël"
 																}
 												}
 								},
@@ -195,7 +195,7 @@
 								},
 								"setup": {
 												"channel_created": {
-																"description": "**Le canal vocal du widget a été créé.** Pour désactiver le widget, supprimez la chaîne.",
+																"description": "**Le canal vocal du widget a été créé.** Pour désactiver le widget, supprimez le canal.",
 																"title": "✅ Widget de compte à rebours créé"
 												},
 												"channel_permissions_error": {
@@ -203,11 +203,11 @@
 																"title": "❌ Impossible de créer la chaîne"
 												},
 												"missing_permission:channel": {
-																"description": "Le bot n'est pas autorisé à gérer les chaînes.",
+																"description": "Le bot n'est pas autorisé à gérer les canaux.",
 																"title": "❌ Impossible de créer la chaîne"
 												},
 												"missing_permission:view": {
-																"description": "Veuillez vous assurer que le bot est autorisé à afficher la chaîne.",
+																"description": "Veuillez vous assurer que le bot a la permission de voir le canal.",
 																"title": "❌ Impossible de créer un webhook"
 												},
 												"missing_permission:webhook": {
@@ -219,7 +219,7 @@
 																"title": "✅ Webhook de compte à rebours créé"
 												},
 												"webhook_permissions_error": {
-																"description": "Une erreur s'est produite lors de la création du webhook.\n[Réessayez d'ajouter le bot]({add})et assurez-vous qu'il peut voir le canal de compte à rebours.\nSi cela ne fonctionne toujours pas, [demander de l'aide]({support}).",
+																"description": "Une erreur s'est produite lors de la création du webhook.\n[Réessayez d'ajouter le bot]({add}) et assurez-vous qu'il peut voir le canal de compte à rebours.\nSi cela ne fonctionne toujours pas, [demander de l'aide]({support}).",
 																"title": "❌ Impossible de créer un webhook"
 												}
 								},
@@ -286,8 +286,8 @@
 								},
 								"weeks": {
 												"description": [
-																"Il reste **{weeks}** semaine restante jusqu'à Noël !",
-																"Il reste **{weeks}** semaines restantes jusqu'à Noël !"
+																"Il reste **{weeks}** semaine avant Noël !",
+																"Il reste **{weeks}** semaines avant Noël !"
 												],
 												"title": [
 																"{weeks} semaine restante",
@@ -312,20 +312,20 @@
 								"add_joke": {
 												"answer": {
 																"label": "Réponse",
-																"placeholder": "Pattes de Père Noël !"
+																"placeholder": "Un chat-peint de Noël !"
 												},
 												"question": {
-																"label": "Quéstion",
+																"label": "Question",
 																"placeholder": "Qui livre les cadeaux aux chats ?"
 												},
-												"title": "Ajouter une blague"
+												"title": "Ajouter une blague de Noël"
 								},
 								"suggest": {
 												"suggestion": {
-																"label": "Suggestion pour le compte à rebours de Noël",
+																"label": "Suggestion pour Christmas Countdown",
 																"placeholder": "Une suggestion pour le bot Christmas Countdown, de préférence en anglais."
 												},
-												"title": "Suggéstion"
+												"title": "Suggestion"
 								}
 				},
 				"santa_tracker": {
@@ -338,7 +338,7 @@
 								"christmas_day": "🎄 Joyeux Noël !",
 								"christmas_eve": [
 												"🎅 {hours} heure restantes",
-												"🎅 {hours} heures qui reste"
+												"🎅 {hours} heures restantes"
 								],
 								"normal": "🎅 {sleeps} jours restants"
 				}
