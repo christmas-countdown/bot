@@ -42,7 +42,10 @@ module.exports = class ReadyEventListener extends EventListener {
 				try {
 					const channel = this.client.channels.cache.get(guild.voice_channel) || await this.client.channels.fetch(guild.voice_channel);
 					if (!channel) throw new Error('Unknown Channel');
-					if (channel.name === name) return this.client.log.verbose(`Widget in ${guild.id} does not need updating`);
+					if (channel.name === name) {
+						this.client.log.verbose(`Widget in ${guild.id} does not need updating`);
+						continue;
+					}
 					await channel.setName(name);
 					this.client.log.success(`Updated widget for ${guild.id}`);
 					succeeded++;
