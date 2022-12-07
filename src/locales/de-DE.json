@@ -2,7 +2,7 @@
 				"bot": {
 								"command_execution_error": {
 												"description": "Ein unerwarteter Fehler ist aufgetreten. Du kannst auf [dem Support-Server]({url}) um Hilfe fragen.",
-												"identifier": "Identifier",
+												"identifier": "Kennzeichnung",
 												"title": "Fehler"
 								},
 								"footer": "Christmas Countdown von eartharoid",
@@ -38,7 +38,7 @@
 								},
 								"donate": {
 												"description": "**[Spende]({url})** um folgende Funktionen freizuschalten:\n\\⭐ `mention`/`role` Server-Option\n\\⭐ `autotoggle` Server-Option",
-												"title": "Premium holen"
+												"title": "Spenden"
 								},
 								"help": {
 												"list": {
@@ -155,8 +155,8 @@
 																"title": "❌ Fehler"
 												},
 												"not_enough_users": {
-																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
-																"title": "😦 Not enough participants"
+																"description": "",
+																"title": "😦 Nicht genügend Teilnehmer"
 												},
 												"show": {
 																"none": {
@@ -195,8 +195,8 @@
 								},
 								"setup": {
 												"channel_created": {
-																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
-																"title": "✅ Countdown widget created"
+																"description": "",
+																"title": ""
 												},
 												"channel_permissions_error": {
 																"description": "An error occurred whilst creating the channel.\n[Try adding the bot again]({add}).\nIf it still doesn't work, [ask for help]({support}).",
@@ -215,8 +215,8 @@
 																"title": "❌ Can't create webhook"
 												},
 												"webhook_created": {
-																"description": "**The countdown has been enabled**; a message will be sent to {channel} every morning between 5AM and 6AM.\n\nTo disable it, use {toggle}.",
-																"title": "✅ Countdown webhook created"
+																"description": "",
+																"title": ""
 												},
 												"webhook_permissions_error": {
 																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
