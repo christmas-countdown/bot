@@ -216,7 +216,7 @@
 												},
 												"webhook_created": {
 																"description": "**The countdown has been enabled**; a message will be sent to {channel} every morning between 5AM and 6AM.\n\nTo disable it, use {toggle}.",
-																"title": ""
+																"title": "✅ Countdown webhook created"
 												},
 												"webhook_permissions_error": {
 																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
