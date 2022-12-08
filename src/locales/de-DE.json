@@ -195,7 +195,7 @@
 								},
 								"setup": {
 												"channel_created": {
-																"description": "",
+																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
 																"title": ""
 												},
 												"channel_permissions_error": {
