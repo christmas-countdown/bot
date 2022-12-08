@@ -196,7 +196,7 @@
 								"setup": {
 												"channel_created": {
 																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
-																"title": ""
+																"title": "✅ Countdown widget created"
 												},
 												"channel_permissions_error": {
 																"description": "An error occurred whilst creating the channel.\n[Try adding the bot again]({add}).\nIf it still doesn't work, [ask for help]({support}).",
