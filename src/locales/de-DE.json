@@ -215,7 +215,7 @@
 																"title": "❌ Can't create webhook"
 												},
 												"webhook_created": {
-																"description": "",
+																"description": "**The countdown has been enabled**; a message will be sent to {channel} every morning between 5AM and 6AM.\n\nTo disable it, use {toggle}.",
 																"title": ""
 												},
 												"webhook_permissions_error": {
