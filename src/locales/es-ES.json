@@ -33,33 +33,33 @@
 												],
 												"title": [
 																"{days} días restantes",
-																"{days} days left"
+																"{days} dias restantes"
 												]
 								},
 								"donate": {
-												"description": "**[Dona]({url})** Para desbloquear estas funciones :\n\\⭐ `mention`/`role` como opcion en el servidor\n\\⭐ `autotoggle` como opcion en el servidor",
-												"title": "Hazte premium"
+												"description": "**[Dona]({ en url})** Para desbloquear estas funciones :\n\\⭐ `mention`/`role` como opcion en el servidor\n\\⭐ `autotoggle` como opcion en el servidor",
+												"title": "Donar"
 								},
 								"help": {
 												"list": {
-																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
-																"title": "Commands"
+																"description": "Presiona en su nombre para tener mas información sobre un comando específico. [Unete al servidor de apoyo]({discord}) si necesitas ayuda.\n**[Presiona aquí para activar el contador.]({enable})**",
+																"title": "Comandos"
 												}
 								},
 								"hours": {
 												"description": [
-																"There is **{hours}** hour left until Christmas!",
+																"Hay **{hours}** horas restantes hasta Navidad!",
 																"There are **{hours}** hours left until Christmas!"
 												],
 												"title": [
-																"{hours} hour left",
-																"{hours} hours left"
+																"{hours} horas restantes",
+																"{hours} horas restantes"
 												]
 								},
 								"info": {
-												"description": "The Christmas Countdown bot for Discord by [eartharoid]({eartharoid}) has been running since November 2018. [Learn more.]({about})",
+												"description": "El bot cuenta atrás para Navidad para Discord por [eartharoid]({eartharoid}) ha estado corriendo desde Noviembre 2018. [Saber más.]({about})",
 												"fields": {
-																"commands": "Commands used",
+																"commands": "Comandos usados",
 																"counting_in": {
 																				"title": "Counting down in",
 																				"value": [
