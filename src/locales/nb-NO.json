@@ -2,10 +2,10 @@
 				"bot": {
 								"command_execution_error": {
 												"description": "Uventet feil. Få hjelp hos [brukerstøtte]({url}).",
-												"identifier": "Identifier",
+												"identifier": "Identifikator",
 												"title": "Feil"
 								},
-								"footer": "Julenedtelling av eartaroid",
+								"footer": "Julenedtelling av eartharoid",
 								"guild_only": {
 												"description": "Denne kommandoen kan kun brukes innen en tjenerkanal. [Legg til en håndtlanger på din tjener.]({invite})",
 												"title": "Feil"
@@ -37,8 +37,8 @@
 												]
 								},
 								"donate": {
-												"description": "**[Doner]({url})** for å låse opp disse funksjonene:\n\\⭐ `mention`/`role` tjenervalg\n\\⭐ `autotoggle` tjenervalg",
-												"title": "Få premiumsfunkasjoner"
+												"description": "**Doner på {url}**",
+												"title": "Doner"
 								},
 								"help": {
 												"list": {
@@ -83,7 +83,7 @@
 								},
 								"joke": {
 												"answer": "Svar",
-												"button": "Get another joke",
+												"button": "Hent ny vits",
 												"question": "Spørsmål"
 								},
 								"minutes": {
@@ -155,8 +155,8 @@
 																"title": "❌ Feil"
 												},
 												"not_enough_users": {
-																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
-																"title": "😦 Not enough participants"
+																"description": "Ikke nok deltagere. Minst tre medlemmer må ta del i begivenheten for at hemmelige julenisser skal oppføres.",
+																"title": "😦 Ikke nok deltagere"
 												},
 												"show": {
 																"none": {
@@ -175,7 +175,7 @@
 												},
 												"set": {
 																"cannot_enable": {
-																				"description": "Opprett nedtellings-vevkrok med [`/countdown`]({url}).",
+																				"description": "Opprett nedtellings-vevkrok med [`/setup`]({url}).",
 																				"title": "❌ Kan ikke skru på nedtelling"
 																},
 																"invalid_locale": {
@@ -195,32 +195,32 @@
 								},
 								"setup": {
 												"channel_created": {
-																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
-																"title": "✅ Countdown widget created"
+																"description": "**Miniprogramsstemmekanal opprettet.** Skru av miniprogrammet ved å slette kanalen.",
+																"title": "✅ Nedtellingsminiprogram opprettet"
 												},
 												"channel_permissions_error": {
-																"description": "An error occurred whilst creating the channel.\n[Try adding the bot again]({add}).\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create channel"
+																"description": "Feil under forsøk på å opprette kanalen.\n[Prøv å legge til håndtlangeren igjen]({add}).\n[Spør om hjelp]({support}) hvis dette ikke virker.",
+																"title": "❌ Kan ikke opprette kanal"
 												},
 												"missing_permission:channel": {
-																"description": "The bot does not have permission to manage channels.",
-																"title": "❌ Can't create channel"
+																"description": "Håndtlangeren mangler tilgang til håndtering av kanaler.",
+																"title": "❌ Kan ikke opprette kanal"
 												},
 												"missing_permission:view": {
-																"description": "Please ensure the bot has permission to view the channel.",
-																"title": "❌ Can't create webhook"
+																"description": "Sørg for at håndtlangeren har tilgang til å lese kanalen.",
+																"title": "❌ Kan ikke opprette vev-krok"
 												},
 												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
-																"title": "❌ Can't create webhook"
+																"description": "Håndtlangeren mangler tilganger til håndtering av vev-kroker.",
+																"title": "❌ Kan ikke opprette vev-krok"
 												},
 												"webhook_created": {
-																"description": "**The countdown has been enabled**; a message will be sent to {channel} every morning between 5AM and 6AM.\n\nTo disable it, use {toggle}.",
-																"title": "✅ Countdown webhook created"
+																"description": "**Nedtellingen har startet**; en melding vil bli sendt til {channel} hver morgen mellom kl. 5 og 6.\n\nSkru dette av ved å bruke {toggle}.",
+																"title": "✅ Nedtellingsminiprogram opprettet"
 												},
 												"webhook_permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create webhook"
+																"description": "Feil under forsøk på å opprette vev-kroken.\n[Prøv å legge til håndtlangeren igjen]({add}) og sørg for at den kan se nedtellingskanalen.\n[Spør om hjelp]({support}) hvis dette ikke virker.",
+																"title": "❌ Kan ikke opprette vev-krok"
 												}
 								},
 								"sleeps": {
@@ -299,7 +299,7 @@
 								"christmas_day": "🎉 Det er første juledag!",
 								"christmas_eve": "🎅 Det er julaften!",
 								"disable": {
-												"description": "**Tjeneradministratorer: Bruk [`/toggle`]({toggle}) for å skru av nedtellingen.**\nOvervei å vurdere og stemme opp håndtlangeren [her]({topgg}).\nTakk for at du bruker denne håndtlangeren, og God Jul! 🙂",
+												"description": "**Tjeneradministratorer: Bruk {toggle} for å skru av nedtellingen.**\nTakk for at du bruker denne håndtlangeren, og God Jul! 🙂",
 												"title": "🎄 God Jul"
 								},
 								"live": "Vis sanntidsnedtelling på[{pretty}]({url}).",
@@ -311,35 +311,35 @@
 				"modals": {
 								"add_joke": {
 												"answer": {
-																"label": "Answer",
-																"placeholder": "Santa Paws!"
+																"label": "Svar",
+																"placeholder": "Tante pote!"
 												},
 												"question": {
-																"label": "Question",
-																"placeholder": "Who delivers presents to cats?"
+																"label": "Spørsmål",
+																"placeholder": "Hvem gir gaver til katter?"
 												},
-												"title": "Add a joke"
+												"title": "Legg til en Jule-vits"
 								},
 								"suggest": {
 												"suggestion": {
-																"label": "Suggestion for Christmas Countdown",
-																"placeholder": "A suggestion for the Christmas Countdown bot, preferably in English."
+																"label": "Forslag for Julenedtelling",
+																"placeholder": "Et forslag for Julenedtellingshåndtlangeren, fortrinnsvis på engelsk."
 												},
-												"title": "Suggestion"
+												"title": "Forslag"
 								}
 				},
 				"santa_tracker": {
-								"description": "Nissen er nå over **[{city} ({region})]({map})**.",
-								"ended": "Santa has finished delivering presents and is back in **{city}, {region}** for a rest.\n\n[Please vote for the bot]({vote}) if you enjoyed this feature.",
-								"starting": "Santa is departing **{city}, {region}** to start delivering presents.",
+								"description": "Nissen leverer nå gaver over **[{city} ({region})]({map})**.",
+								"ended": "Nissen har fullørt levering av gaver og er tilbake i **{city}, {region}** for en rastepause.\n\n[Stem på håndtlangeren]({vote}) hvis du liker denne funksjonen.",
+								"starting": "Nissen forlater **{city}, {region}** for å begynne å levere gaver.",
 								"title": "Nissesporer"
 				},
 				"widget": {
-								"christmas_day": "🎄 Merry Christmas!",
+								"christmas_day": "🎄 God Jul.",
 								"christmas_eve": [
-												"🎅 {hours} hour left",
-												"🎅 {hours} hours left"
+												"🎅 {hours} timer igjen",
+												"🎅 {hours} timer igjen"
 								],
-								"normal": "🎅 {sleeps} sleeps left"
+								"normal": "🎅 {sleeps} søvnsykluser igjen"
 				}
 }
