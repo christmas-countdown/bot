@@ -175,7 +175,7 @@
 												},
 												"set": {
 																"cannot_enable": {
-																				"description": "Créez le webhook du compte à rebours avec [`/countdown`]({url}).",
+																				"description": "Créez le webhook du compte à rebours avec [`/setup`]({url}).",
 																				"title": "❌ Impossible d'activer le compte à rebours"
 																},
 																"invalid_locale": {
