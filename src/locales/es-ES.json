@@ -16,7 +16,7 @@
 								},
 								"migrate": "¡El bot Christmas Countdown ahora utiliza comandos con slash!\n**Por favor vuelve a añadir el bot aquí: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "El bot Christmas Countdown necesita de los siguentes permisos:\n{permissions}",
+												"description": "El bot Christmas Countdown necesita de los siguientes permisos:\n{permissions}",
 												"title": "Error"
 								}
 				},
@@ -68,23 +68,23 @@
 																				]
 																},
 																"more": {
-																				"title": "More stats",
+																				"title": "Mas estadísticas",
 																				"value": "[Click here]({url})"
 																},
-																"secret_santa_events": "Secret Santa events",
-																"secret_santa_users": "Secret Santa participants",
-																"servers": "Servers"
+																"secret_santa_events": "Eventos Santa Secreto",
+																"secret_santa_users": "Participantes Santa Secreto",
+																"servers": "Servidores"
 												},
-												"title": "Information"
+												"title": "Información"
 								},
 								"invite": {
-												"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
-												"title": "Invite"
+												"description": "[Click here]({url}) para agregar the Christmas Countdown bot a tu propio servidor.",
+												"title": "Invitar"
 								},
 								"joke": {
-												"answer": "Answer",
+												"answer": "Respuesta",
 												"button": "Get another joke",
-												"question": "Question"
+												"question": "Pregunta"
 								},
 								"minutes": {
 												"description": [
@@ -92,8 +92,8 @@
 																"There are **{minutes}** minutes left until Christmas!"
 												],
 												"title": [
-																"{minutes} minute left",
-																"{minutes} minutes left"
+																"{minutes} minuto queda",
+																"{minutes} minutos quedan"
 												]
 								},
 								"months": {
@@ -102,8 +102,8 @@
 																"There are **{months}** months left until Christmas!"
 												],
 												"title": [
-																"{months} month left",
-																"{months} months left"
+																"{months} mes queda",
+																"{months} meses quedan"
 												]
 								},
 								"ping": {
@@ -135,33 +135,33 @@
 																"add": {
 																				"added": {
 																								"description": "{member} has been added to the naughty list.",
-																								"title": "✅ Added"
+																								"title": "✅ Agregado"
 																				}
 																},
-																"list": "The naughty list",
+																"list": "Lista de los traviesos",
 																"remove": {
 																				"cannot_remove": {
-																								"description": "{member} is not on the naughty list.",
-																								"title": "❌ Can't remove member"
+																								"description": "{member} no está en la lista de los traviesos.",
+																								"title": "❌ No puedes remover al miembro"
 																				},
 																				"removed": {
-																								"description": "{member} has been removed from the naughty list.",
-																								"title": "✅ Removed"
+																								"description": "{member} ha sido removido de la lista de los traviesos.",
+																								"title": "✅ Removido"
 																				}
 																}
 												},
 												"no_event": {
-																"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
+																"description": "No hay eventos de Secret Santa. Sigue [la guia]({url}) para crear una.",
 																"title": "❌ Error"
 												},
 												"not_enough_users": {
-																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
-																"title": "😦 Not enough participants"
+																"description": "Perdón, no hay los suficientes participantes. Al menos 3 participantes necesitan entrar al evento de Secret Santa para ser asignados.",
+																"title": "😦 No suficientes participantes"
 												},
 												"show": {
 																"none": {
 																				"description": "You have not entered a Secret Santa event.",
-																				"title": "❌ Not assigned"
+																				"title": "❌ No asignado"
 																},
 																"show": {
 																				"description": "**You are {member}'s Santa.** Give them a gift, following the event guidelines set by the organiser.",
