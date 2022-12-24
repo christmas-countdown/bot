@@ -33,7 +33,7 @@ module.exports = class ReadyEventListener extends EventListener {
 				if (!this.client.guilds.cache.has(guild.id)) continue; // skip guilds on other shards
 				const i18n = this.client.i18n.getLocale(guild.locale ?? 'en-GB');
 				const sleeps = christmas.getSleeps(guild.timezone);
-				const hours = christmas.getHours(guild.timezone);
+				const hours = Math.floor(christmas.getHours(guild.timezone));
 				const name = christmas.isToday(guild.timezone)
 					? i18n('widget.christmas_day')
 					: christmas.isTomorrow()
