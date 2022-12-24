@@ -299,7 +299,7 @@
 		"christmas_day": "🎉 It's Christmas Day!",
 		"christmas_eve": "🎅 It's Christmas Eve!",
 		"disable": {
-			"description": "**Server administrators: use {toggle} to disable the countdown.**\n[Thank you for using this bot]({vote}) and enjoy your Christmas! 🙂",
+			"description": "**Server administrators: use {toggle} to disable the countdown.**\n[Thank you for using this bot]({review}) and enjoy your Christmas! 🙂",
 			"title": "🎄 Merry Christmas"
 		},
 		"live": "View the live countdown at [{pretty}]({url}).",
