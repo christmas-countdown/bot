@@ -330,6 +330,8 @@
 				},
 				"santa_tracker": {
 								"description": "Le Père Noël est actuellement à **[{city} ({region})]({map})**.",
+								"ended": "Santa has finished delivering presents and is back in **{city}, {region}** for a rest.\n\n[Please vote for the bot]({vote}) if you enjoyed this feature.",
+								"starting": "Santa is departing **{city}, {region}** to start delivering presents.",
 								"title": "Traqueur du Père Noël"
 				},
 				"widget": {
