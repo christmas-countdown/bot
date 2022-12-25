@@ -105,8 +105,12 @@ module.exports.dispatch = async (manager, prisma, log) => {
 			});
 
 			if (christmas.isToday(guild.timezone) && !guild.auto_toggle) {
-				if (this.client.application.commands.cache.size === 0) await this.client.application.commands.fetch();
-				const toggle = this.client.application.commands.cache.find(cmd => cmd.name === 'toggle');
+				const serverId = (await manager.broadcastEval(async client => {
+					if (client.shard.ids[0] !== 0) return;
+					if (client.application.commands.cache.size === 0) await client.application.commands.fetch();
+					return client.application.commands.cache.find(cmd => cmd.name === 'server').id;
+				}))[0];
+				const toggleId = (await manager.broadcastEval(client => client.shard.ids[0] === 0 && client.application.commands.cache.find(cmd => cmd.name === 'toggle').id))[0];
 				await webhook.send({
 					embeds: [
 						new MessageEmbed()
@@ -114,7 +118,8 @@ module.exports.dispatch = async (manager, prisma, log) => {
 							.setTitle(getMessage('countdown.disable.title'))
 							.setDescription(getMessage('countdown.disable.description', {
 								review: `https://top.gg/bot/${id}#reviews`,
-								toggle: `</${toggle.name}:${toggle.id}>`
+								server: `</server set:${serverId}>`,
+								toggle: `</toggle:${toggleId}>`
 							}))
 							.setFooter(footer, avatarURL)
 							.setTimestamp()
