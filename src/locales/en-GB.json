@@ -335,7 +335,7 @@
 								"title": "Santa Tracker"
 				},
 				"widget": {
-								"christmas_day": "🎄 Merry Yuletide.",
+								"christmas_day": "🎄 Merry Christmas!",
 								"christmas_eve": [
 												"🎅 {hours} hour left",
 												"🎅 {hours} hours left"
