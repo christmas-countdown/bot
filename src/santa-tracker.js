@@ -28,10 +28,11 @@ module.exports.track = async (manager, prisma, log) => {
 			minute
 		} = location.departure;
 		const now = spacetime.now('UTC');
-		const departure = spacetime(`December ${day}, ${now.year()} ${hour}:${minute}:00`, 'UTC');
+		let year = now.year();
+		if (now.month() === 11 && now.date() > 25) year++; // >25th, not 24th like the countdown
+		const departure = spacetime(`December ${day}, ${year} ${hour}:${minute}:00`, 'UTC');
 		return departure.isAfter(now);
 	});
-
 
 	if (!index) return;
 
@@ -55,7 +56,7 @@ module.exports.track = async (manager, prisma, log) => {
 			.setFooter(getMessage('bot.footer'), avatarURL)
 			.setTimestamp();
 
-		if (remaining.length === 0) {
+		if (remaining.length <= 1) {
 			// first reset it (although the bot will likely be restarted before next Christmas anyway)
 			remaining = [...locations];
 			messages = new Map();
@@ -91,6 +92,17 @@ module.exports.track = async (manager, prisma, log) => {
 		} catch (error) {
 			log.warn(`Failed to update Santa's position in guild ${guild.id}`);
 			log.error(error);
+			if (error.message?.match(/Unknown Webhook/)) {
+				await prisma.guild.update({
+					data: {
+						enabled: false,
+						webhook: null
+					}, // disable
+					where: { id: guild.id }
+				});
+				messages.delete(guild.id);
+				log.info(`Removed dead webhook for guild ${guild.id}`);
+			}
 		}
 	}
 };
