@@ -1,11 +1,11 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
-												"identifier": "Identifier",
-												"title": "Error"
+												"description": "Сталася несподівана помилка. Будь ласка, зверніться до [серверу підтримки]({url}.",
+												"identifier": "Ідентифікатор",
+												"title": "Помилка"
 								},
-								"footer": "Christmas Countdown by eartharoid",
+								"footer": "Лічильник до Різдва від eartharoid",
 								"guild_only": {
 												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
 												"title": "Error"
