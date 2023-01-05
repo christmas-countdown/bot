@@ -195,11 +195,11 @@
 								},
 								"setup": {
 												"channel_created": {
-																"description": "",
+																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
 																"title": "✅ Countdown-Widget erstellt"
 												},
 												"channel_permissions_error": {
-																"description": "",
+																"description": "An error occurred whilst creating the channel.\n[Try adding the bot again]({add}).\nIf it still doesn't work, [ask for help]({support}).",
 																"title": "❌ Kanal kann nicht erstellt werden"
 												},
 												"missing_permission:channel": {
