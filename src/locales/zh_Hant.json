@@ -1,345 +1,345 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
-												"identifier": "Identifier",
-												"title": "Error"
+												"description": "發生未知錯誤。請向[支援服務器]({url})查詢。",
+												"identifier": "標識碼",
+												"title": "錯誤"
 								},
-								"footer": "Christmas Countdown by eartharoid",
+								"footer": "聖誕倒數由eartharoid提供的",
 								"guild_only": {
-												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
-												"title": "Error"
+												"description": "這指令只可在服務器頻道內使用。[新增機器人你的服務器]({invite})",
+												"title": "錯誤"
 								},
 								"member_missing_permissions": {
-												"description": "You need the following permissions to use this command:\n{permissions}",
-												"title": "Error"
+												"description": "你需要以下權限以使用這指令：\n{permissions}",
+												"title": "錯誤"
 								},
-								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
+								"migrate": "聖誕倒數機器人現在使用斜槓命令！\n**請在此重新添加機器人：https://christmascountdown.live/invite。**",
 								"missing_permissions": {
-												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
-												"title": "Error"
+												"description": "這聖誕倒數機器人需要以下權限：\n{permissions}",
+												"title": "錯誤"
 								}
 				},
 				"commands": {
 								"days": {
 												"days": [
-																"is **{days} day**",
-																"are **{days} days**"
+																"是 **{days} 日**",
+																"是 **{days} 日**"
 												],
-												"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "在聖誕前還有 {days} 或 {sleeps}[(?)]({url} \"日和夜之間有什麼分別\") ！",
 												"sleeps": [
-																"**{sleeps} sleep**",
-																"**{sleeps} sleeps**"
+																"**{sleeps} 夜**",
+																"**{sleeps} 夜**"
 												],
 												"title": [
-																"{days} day left",
-																"{days} days left"
+																"還有{days} 日",
+																"還有{days} 日"
 												]
 								},
 								"donate": {
-												"description": "**Donate at {url}**",
-												"title": "Donate"
+												"description": "**在 {url} 捐獻**",
+												"title": "捐獻"
 								},
 								"help": {
 												"list": {
-																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
-																"title": "Commands"
+																"description": "點擊名稱以獲取有關特定指令的更多信息。如你需要幫忙請[加入支援服務器]({discord}) 。\n**[點擊此處以開啟倒數]({enable})**",
+																"title": "指令"
 												}
 								},
 								"hours": {
 												"description": [
-																"There is **{hours}** hour left until Christmas!",
-																"There are **{hours}** hours left until Christmas!"
+																"在聖誕前還有 **{hours}** 小時！",
+																"在聖誕前還有 **{hours}** 小時！"
 												],
 												"title": [
-																"{hours} hour left",
-																"{hours} hours left"
+																"剩下{hours} 小時",
+																"剩下{hours} 小時"
 												]
 								},
 								"info": {
-												"description": "The Christmas Countdown bot for Discord by [eartharoid]({eartharoid}) has been running since November 2018. [Learn more.]({about})",
+												"description": "這由[eartharoid]({eartharoid})提供的聖誕倒數機器人已由2018年11月運行至今。[了解更多]({about})",
 												"fields": {
-																"commands": "Commands used",
+																"commands": "已使用指令",
 																"counting_in": {
-																				"title": "Counting down in",
+																				"title": "倒數在",
 																				"value": [
-																								"{servers} server",
-																								"{servers} servers"
+																								"{servers} 服務器",
+																								"{servers} 服務器"
 																				]
 																},
 																"more": {
-																				"title": "More stats",
-																				"value": "[Click here]({url})"
+																				"title": "更多統計",
+																				"value": "[按此]({url})"
 																},
-																"secret_santa_events": "Secret Santa events",
-																"secret_santa_users": "Secret Santa participants",
-																"servers": "Servers"
+																"secret_santa_events": "神秘聖誕老人活動",
+																"secret_santa_users": "神秘聖誕老人參與者",
+																"servers": "服務器"
 												},
-												"title": "Information"
+												"title": "信息"
 								},
 								"invite": {
-												"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
-												"title": "Invite"
+												"description": "[按此]({url}) 加入聖誕倒數機器人到你自己的服務器。",
+												"title": "邀請"
 								},
 								"joke": {
-												"answer": "Answer",
-												"button": "Get another joke",
-												"question": "Question"
+												"answer": "答案",
+												"button": "再來一個笑話",
+												"question": "問題"
 								},
 								"minutes": {
 												"description": [
-																"There is **{minutes}** minute left until Christmas!",
-																"There are **{minutes}** minutes left until Christmas!"
+																"聖誕前還有 **{minutes}** 分鐘！",
+																"聖誕前還有 **{minutes}** 分鐘！"
 												],
 												"title": [
-																"{minutes} minute left",
-																"{minutes} minutes left"
+																"剩下{minutes} 分鐘",
+																"剩下{minutes} 分鐘"
 												]
 								},
 								"months": {
 												"description": [
-																"There is **{months}** month left until Christmas!",
-																"There are **{months}** months left until Christmas!"
+																"聖誕前還有**{months}**個月！",
+																"聖誕前還有**{months}**個月！"
 												],
 												"title": [
-																"{months} month left",
-																"{months} months left"
+																"剩下{months} 個月",
+																"剩下{months} 個月"
 												]
 								},
 								"ping": {
 												"calculating": "",
 												"fields": {
-																"average_ping": "Avg. ping",
-																"latency": "Overall latency",
-																"shard_number": "Shard number",
-																"shard_ping": "Shard ping"
+																"average_ping": "平均延遲",
+																"latency": "整體延遲",
+																"shard_number": "碎片數",
+																"shard_ping": "分片延遲"
 												},
-												"title": "🏓 Pong!"
+												"title": "🏓 乓!"
 								},
 								"radio": {
-												"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
-												"title": "Christmas Radio"
+												"description": "**[加入聖誕倒數機器人]({url})** 以在你的Discord服務器播放聖誕音樂。",
+												"title": "聖誕收音機"
 								},
 								"seconds": {
 												"description": [
-																"There is **{seconds}** second left until Christmas!",
-																"There are **{seconds}** seconds left until Christmas!"
+																"聖誕前還有**{seconds}**秒！",
+																"聖誕前還有**{seconds}**秒！"
 												],
 												"title": [
-																"{seconds} second left",
-																"{seconds} seconds left"
+																"剩下{seconds}秒",
+																"剩下{seconds}秒"
 												]
 								},
 								"secret_santa": {
 												"blacklist": {
 																"add": {
 																				"added": {
-																								"description": "{member} has been added to the naughty list.",
-																								"title": "✅ Added"
+																								"description": "已添加成員{member}到頑皮名單。",
+																								"title": "✅ 已加入"
 																				}
 																},
-																"list": "The naughty list",
+																"list": "頑皮名單",
 																"remove": {
 																				"cannot_remove": {
-																								"description": "{member} is not on the naughty list.",
-																								"title": "❌ Can't remove member"
+																								"description": "成員{member} 不在頑皮名單。",
+																								"title": "❌ 不能移除成員"
 																				},
 																				"removed": {
-																								"description": "{member} has been removed from the naughty list.",
-																								"title": "✅ Removed"
+																								"description": "已從頑皮名單移除成員{member}。",
+																								"title": "✅ 已移除"
 																				}
 																}
 												},
 												"no_event": {
-																"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
-																"title": "❌ Error"
+																"description": "還沒有神秘聖誕老人活動。按照[指南]({url}) 創建。",
+																"title": "❌ 錯誤"
 												},
 												"not_enough_users": {
-																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
-																"title": "😦 Not enough participants"
+																"description": "抱歉，還沒有足夠的參與者。至少需要3名成員加入活動才能分配神秘聖誕老人。",
+																"title": "😦 未有足夠參與者"
 												},
 												"show": {
 																"none": {
-																				"description": "You have not entered a Secret Santa event.",
-																				"title": "❌ Not assigned"
+																				"description": "您尚未參加神秘聖誕老人活動。",
+																				"title": "❌ 未分配"
 																},
 																"show": {
-																				"description": "**You are {member}'s Santa.** Give them a gift, following the event guidelines set by the organiser.",
-																				"title": "Secret Santa"
+																				"description": "**你是成員{member}的神秘聖誕老人。** 根據組織者設定的活動指南給他們禮物。",
+																				"title": "神秘聖誕老人"
 																}
 												}
 								},
 								"server": {
 												"reset": {
-																"title": "✅ Server settings reset"
+																"title": "✅ 重置服務器設定"
 												},
 												"set": {
 																"cannot_enable": {
-																				"description": "Create the countdown webhook with [`/setup`]({url}).",
-																				"title": "❌ Can't enable countdown"
+																				"description": "用`/setup`創建倒數Webhook ({url}).",
+																				"title": "❌ 無法啟用倒數"
 																},
 																"invalid_locale": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid locale"
+																				"description": "再試一次或[提出請求]({url}).",
+																				"title": "❌ 無效的地區設置"
 																},
 																"invalid_timezone": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid timezone"
+																				"description": "再試一次或[提出請求]({url}).",
+																				"title": "❌ 無效的時區設置"
 																},
-																"title": "✅ Server settings updated"
+																"title": "✅ 已更新服務器設定"
 												},
 												"view": {
-																"description": "Change your settings with `/server set`.",
-																"title": "Server settings"
+																"description": "用`/server set`更改你的設定。",
+																"title": "服務器設定"
 												}
 								},
 								"setup": {
 												"channel_created": {
-																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
-																"title": "✅ Countdown widget created"
+																"description": "**已創建部件語音頻道。** 如要禁用部件，請刪除該頻道。",
+																"title": "✅ 倒數部件已創建"
 												},
 												"channel_permissions_error": {
-																"description": "An error occurred whilst creating the channel.\n[Try adding the bot again]({add}).\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create channel"
+																"description": "創建頻道時發生錯誤。\n[再次添加機器人]（{add}）。\n如果仍然無法正常工作，請[提出要求]（{support}）。",
+																"title": "❌ 無法創建頻道"
 												},
 												"missing_permission:channel": {
-																"description": "The bot does not have permission to manage channels.",
-																"title": "❌ Can't create channel"
+																"description": "機器人沒有管理頻道的權限。",
+																"title": "❌ 無法創建頻道"
 												},
 												"missing_permission:view": {
-																"description": "Please ensure the bot has permission to view the channel.",
-																"title": "❌ Can't create webhook"
+																"description": "請確保機器人有權查看頻道。",
+																"title": "❌ 無法創建Webhook"
 												},
 												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
-																"title": "❌ Can't create webhook"
+																"description": "機器人沒有管理Webhook的權限。",
+																"title": "❌ 無法創建Webhook"
 												},
 												"webhook_created": {
-																"description": "**The countdown has been enabled**; a message will be sent to {channel} every morning between 5AM and 6AM.\n\nTo disable it, use {toggle}.",
-																"title": "✅ Countdown webhook created"
+																"description": "**倒計時已啟用**；每天早上5-6點之間將在{channel}發送消息。\n\n要禁用它，請使用{toggle}。",
+																"title": "✅ 已創建倒數Webhook"
 												},
 												"webhook_permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create webhook"
+																"description": "創建Webhook時發生錯誤。\n[再次添加機器人]（{add}）。\n如果仍然無法正常工作，請[提出要求]（{support}）。",
+																"title": "❌ 無法創建Webhook"
 												}
 								},
 								"sleeps": {
 												"days": [
-																"**{days} day**",
-																"**{days} days**"
+																"**{days}日**",
+																"**{days}日**"
 												],
-												"description": "There {sleeps} or {days}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "聖誕前還有 {sleeps} 或 {days}[(?)]({url} \"日和夜有什麼分別?\")！",
 												"sleeps": [
-																"is **{sleeps} sleep**",
-																"are **{sleeps} sleeps**"
+																"是 **{sleeps}夜**",
+																"是**{sleeps}夜**"
 												],
 												"title": [
-																"{sleeps} sleep left",
-																"{sleeps} sleeps left"
+																"剩下{sleeps}夜",
+																"剩下{sleeps}夜"
 												]
 								},
 								"suggest": {
-												"description": "Thank you for your suggestion.",
-												"title": "✅ Submitted"
+												"description": "感謝您的建議。",
+												"title": "✅ 已提交"
 								},
 								"toggle": {
-												"disabled": "✅ Countdown disabled",
-												"enabled": "✅ Countdown enabled"
+												"disabled": "✅ 已禁用倒數",
+												"enabled": "✅ 已啟用倒數"
 								},
 								"total": {
 												"days": [
-																"**{days} day**",
-																"**{days} days**"
+																"**{days}日**",
+																"**{days}日**"
 												],
 												"description": [
-																"There is {days}, {hours}, {minutes}, and {seconds} left until Christmas!",
-																"There are {days}, {hours}, {minutes}, and {seconds} left until Christmas!"
+																"聖誕前還有{days}, {hours}, {minutes}, 及 {seconds} ！",
+																"聖誕前還有{days}, {hours}, {minutes}, 及 {seconds} ！"
 												],
 												"hours": [
-																"**{hours} hour**",
-																"**{hours} hours**"
+																"**{hours}小時**",
+																"**{hours}小時**"
 												],
 												"minutes": [
-																"**{minutes} minute**",
-																"**{minutes} minutes**"
+																"**{minutes}分鐘**",
+																"**{minutes}分鐘**"
 												],
 												"seconds": [
-																"**{seconds} second**",
-																"**{seconds} seconds**"
+																"**{seconds}秒**",
+																"**{seconds}秒**"
 												],
-												"title": "{days}, {hours}, {minutes}, {seconds} left"
+												"title": "剩下{days}, {hours}, {minutes}, {seconds}"
 								},
 								"user": {
 												"reset": {
-																"title": "✅ User settings reset"
+																"title": "✅ 已重設用戶設定"
 												},
 												"set": {
-																"title": "✅ User settings updated"
+																"title": "✅ 已更新用戶設定"
 												},
 												"view": {
-																"title": "User settings"
+																"title": "用戶設定"
 												}
 								},
 								"weekday": {
-												"description": "Christmas Day is on a **{day}** in {year}.",
+												"description": "{year}年的聖誕節是在**{day}**。",
 												"title": ""
 								},
 								"weeks": {
 												"description": [
-																"There is **{weeks}** week left until Christmas!",
-																"There are **{weeks}** weeks left until Christmas!"
+																"聖誕前還有**{weeks}**週！",
+																"聖誕前還有**{weeks}**週！"
 												],
 												"title": [
-																"{weeks} week left",
-																"{weeks} weeks left"
+																"剩下{weeks}週",
+																"剩下{weeks}週"
 												]
 								}
 				},
 				"countdown": {
-								"christmas_day": "🎉 It's Christmas Day!",
-								"christmas_eve": "🎅 It's Christmas Eve!",
+								"christmas_day": "🎉 今天是聖誕節！",
+								"christmas_eve": "🎅 今天是平安夜！",
 								"disable": {
-												"description": "**Server administrators: use {toggle} to disable the countdown (and {server} to enable/disable the countdown automatically next time).**\n[Thank you for using this bot]({review}) and enjoy your Christmas! 🙂",
-												"title": "🎄 Merry Christmas"
+												"description": "服務器管理員：使用{toggle}禁用倒計時（並使用{server}自動啟用/禁用下一次倒計時）。\n[感謝您使用此機器人]（{review}），祝您聖誕快樂！ 🙂",
+												"title": "🎄 聖誕快樂"
 								},
-								"live": "View the live countdown at [{pretty}]({url}).",
-								"merry_christmas": "🎄 Merry Christmas!",
-								"server_timezone": "Server timezone: {timezone}",
-								"user_timezone": "User timezone: {timezone}"
+								"live": "在[{pretty}]({url})查看實時倒計時。",
+								"merry_christmas": "🎄 聖誕快樂！",
+								"server_timezone": "服務器時區：{timezone}",
+								"user_timezone": "用戶時區： {timezone}"
 				},
-				"disabled": "disabled",
+				"disabled": "已禁用",
 				"modals": {
 								"add_joke": {
 												"answer": {
-																"label": "Answer",
-																"placeholder": "Santa Paws!"
+																"label": "答案",
+																"placeholder": "聖誕狗！"
 												},
 												"question": {
-																"label": "Question",
-																"placeholder": "Who delivers presents to cats?"
+																"label": "問題",
+																"placeholder": "誰向貓送禮物？"
 												},
-												"title": "Add a Christmas joke"
+												"title": "添加一個聖誕笑話"
 								},
 								"suggest": {
 												"suggestion": {
-																"label": "Suggestion for Christmas Countdown",
-																"placeholder": "A suggestion for the Christmas Countdown bot, preferably in English."
+																"label": "對聖誕倒數的建議",
+																"placeholder": "對聖誕倒數機器人的建議，最好是英文。"
 												},
-												"title": "Suggestion"
+												"title": "提議"
 								}
 				},
 				"santa_tracker": {
-								"description": "Santa is currently delivering presents over **[{city}, {region}]({map})**.",
-								"ended": "Santa has finished delivering presents and is back in **{city}, {region}** for a rest.\n\n[Please vote for the bot]({vote}) if you enjoyed this feature.",
-								"starting": "Santa is departing **{city}, {region}** to start delivering presents.",
-								"title": "Santa Tracker"
+								"description": "聖誕老人目前正在**[{city}, {region}]({map})**送禮物。",
+								"ended": "聖誕老人已完成送禮物，正在**{city}，{region}**休息。\n\n如果您喜歡此功能，請[為機器人投票]（{vote}）。",
+								"starting": "聖誕老人正在從**{city}，{region}**出發，開始送禮物。",
+								"title": "聖誕老人追踪器"
 				},
 				"widget": {
-								"christmas_day": "🎄 Merry Christmas!",
+								"christmas_day": "🎄 聖誕快樂！",
 								"christmas_eve": [
-												"🎅 {hours} hour left",
-												"🎅 {hours} hours left"
+												"🎅 剩下{hours}小時",
+												"🎅 剩下{hours}小時"
 								],
-								"normal": "🎅 {sleeps} sleeps left"
+								"normal": "🎅 剩下{sleeps}夜"
 				}
 }
