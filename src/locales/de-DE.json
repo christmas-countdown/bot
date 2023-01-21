@@ -195,7 +195,7 @@
 								},
 								"setup": {
 												"channel_created": {
-																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
+																"description": "",
 																"title": "✅ Countdown-Widget erstellt"
 												},
 												"channel_permissions_error": {
