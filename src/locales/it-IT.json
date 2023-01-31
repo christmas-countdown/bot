@@ -16,7 +16,7 @@
 								},
 								"migrate": "Il bot per il Countdown Natalizio ora utilizza il comando con lo slash!\n**Per piacere invita di nuovo il bot da qua: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "Il bot richiede i seguenti permessi:\n{permissions}",
+												"description": "Il Christmas Countdown bot richiede i seguenti permessi:\n{permissions}",
 												"title": "Errore"
 								}
 				},
@@ -322,8 +322,8 @@
 								},
 								"suggest": {
 												"suggestion": {
-																"label": "Suggestion for Christmas Countdown",
-																"placeholder": "A suggestion for the Christmas Countdown bot, preferably in English."
+																"label": "Suggerimenti per Christmas Countdown",
+																"placeholder": "Un suggerimento per il Christmas Countdown bot, preferibilmente in inglese."
 												},
 												"title": "Suggestion"
 								}
