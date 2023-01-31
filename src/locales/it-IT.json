@@ -37,8 +37,8 @@
 												]
 								},
 								"donate": {
-												"description": "**[Dona]({url})** per sbloccare queste funzioni:\n\\⭐ `mention`/`role` opzione server\n\\⭐ `autotoggle` opzione server",
-												"title": "Diventa premium"
+												"description": "**[Dona]({url})**",
+												"title": "Donazione"
 								},
 								"help": {
 												"list": {
