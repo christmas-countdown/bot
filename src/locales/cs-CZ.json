@@ -78,90 +78,90 @@
 												"title": "Informace"
 								},
 								"invite": {
-												"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
-												"title": "Invite"
+												"description": "[Klikni zde]({url}) a přidej si Christmas Countdown na tvůj server.",
+												"title": "Pozvánka"
 								},
 								"joke": {
-												"answer": "Answer",
-												"button": "Get another joke",
-												"question": "Question"
+												"answer": "Odpověd",
+												"button": "Získat další vtip",
+												"question": "Otázka"
 								},
 								"minutes": {
 												"description": [
-																"There is **{minutes}** minute left until Christmas!",
-																"There are **{minutes}** minutes left until Christmas!"
+																"Zbývá **{minutes}** minuta!",
+																"Zbývá **{minutes}** minut do vánoc!"
 												],
 												"title": [
-																"{minutes} minute left",
-																"{minutes} minutes left"
+																"{minutes} minut zbývá",
+																"{minutes} minut zbývá"
 												]
 								},
 								"months": {
 												"description": [
-																"There is **{months}** month left until Christmas!",
-																"There are **{months}** months left until Christmas!"
+																"Zbývá **{months}** měsíc do vánoc!",
+																"Zbývá **{months}** měsíců do vánoc!"
 												],
 												"title": [
-																"{months} month left",
-																"{months} months left"
+																"{months} měsíc zbývá",
+																"{months} měsíců zbývá"
 												]
 								},
 								"ping": {
 												"calculating": "Calculating...",
 												"fields": {
-																"average_ping": "Avg. ping",
-																"latency": "Overall latency",
-																"shard_number": "Shard number",
-																"shard_ping": "Shard ping"
+																"average_ping": "Průměrná odezva",
+																"latency": "Celková odezva",
+																"shard_number": "Číslo shardu",
+																"shard_ping": "Odezva shardu"
 												},
 												"title": "🏓 Pong!"
 								},
 								"radio": {
-												"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
+												"description": "**[Přidej bota christmas Radio]({url})** a poslouchej na tvém serveru vánoční hudbu.",
 												"title": "Christmas Radio"
 								},
 								"seconds": {
 												"description": [
-																"There is **{seconds}** second left until Christmas!",
-																"There are **{seconds}** seconds left until Christmas!"
+																"Zbývá **{seconds}** sekunda do vánoc!",
+																"Zbývá **{seconds}** sekund do vánoc!"
 												],
 												"title": [
-																"{seconds} second left",
-																"{seconds} seconds left"
+																"{seconds} sekunda zbývá",
+																"{seconds} sekund zbývá"
 												]
 								},
 								"secret_santa": {
 												"blacklist": {
 																"add": {
 																				"added": {
-																								"description": "{member} has been added to the naughty list.",
-																								"title": "✅ Added"
+																								"description": "{member} byl přidán na seznam zlobivců.",
+																								"title": "✅ Přidán"
 																				}
 																},
-																"list": "The naughty list",
+																"list": "Seznam zlobivců",
 																"remove": {
 																				"cannot_remove": {
-																								"description": "{member} is not on the naughty list.",
-																								"title": "❌ Can't remove member"
+																								"description": "{member} není na seznamu zlobivců.",
+																								"title": "❌ Nemůžeš odstranit člena"
 																				},
 																				"removed": {
-																								"description": "{member} has been removed from the naughty list.",
-																								"title": "✅ Removed"
+																								"description": "{member} byl odstraněn ze seznamu zlobivých.",
+																								"title": "✅ Odstraněn"
 																				}
 																}
 												},
 												"no_event": {
-																"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
-																"title": "❌ Error"
+																"description": "Nejsou nastaveny žádná secret sanda událost. Postupuj podle [příručky]({url}) a nějakou vytvoř.",
+																"title": "❌ Chyba"
 												},
 												"not_enough_users": {
-																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
-																"title": "😦 Not enough participants"
+																"description": "Omlouváme se. Nebylo dostatek účastníků. Musí se připojit minimálně 3 lidi, aby mohl Secret Santa začít.",
+																"title": "😦 Nedostatek účastníků"
 												},
 												"show": {
 																"none": {
 																				"description": "You have not entered a Secret Santa event.",
-																				"title": "❌ Not assigned"
+																				"title": "❌ Nepřiděleno"
 																},
 																"show": {
 																				"description": "**You are {member}'s Santa.** Give them a gift, following the event guidelines set by the organiser.",
