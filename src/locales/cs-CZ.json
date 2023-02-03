@@ -2,7 +2,7 @@
 				"bot": {
 								"command_execution_error": {
 												"description": "Vyskytla se neočekávaná chyba. Prosím požádejte o pomoc v [the support server]({url}).",
-												"identifier": "Identifier",
+												"identifier": "Identifikátor",
 												"title": "Error"
 								},
 								"footer": "Christmas Countdown by eartharoid",
@@ -37,8 +37,8 @@
 												]
 								},
 								"donate": {
-												"description": "**[Přispěj]({url})** pro odemčení těchto funkcí:\n\\⭐ `mention`/`role` \n\\⭐ `autotoggle`",
-												"title": "Získat prémium"
+												"description": "**Přispěj na({url})**",
+												"title": "Přispěj"
 								},
 								"help": {
 												"list": {
@@ -59,23 +59,23 @@
 								"info": {
 												"description": "Vánoční Odpočet pro discord. Vytvořeno [eartharoid]({eartharoid}) a běží od listopadu roku 2018. [Zjistit více.]({about})",
 												"fields": {
-																"commands": "Commands used",
+																"commands": "Použité příkazy",
 																"counting_in": {
-																				"title": "Counting down in",
+																				"title": "Odpočítávám za",
 																				"value": [
 																								"{servers} server",
-																								"{servers} servers"
+																								"{servers} servery"
 																				]
 																},
 																"more": {
-																				"title": "More stats",
-																				"value": "[Click here]({url})"
+																				"title": "Více statistik",
+																				"value": "[Klikni zde]({url})"
 																},
-																"secret_santa_events": "Secret Santa events",
-																"secret_santa_users": "Secret Santa participants",
-																"servers": "Servers"
+																"secret_santa_events": "Secret Santa event",
+																"secret_santa_users": "Secret Santa účastníci",
+																"servers": "Servery"
 												},
-												"title": "Information"
+												"title": "Informace"
 								},
 								"invite": {
 												"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
