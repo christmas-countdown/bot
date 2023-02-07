@@ -175,7 +175,7 @@
 												},
 												"set": {
 																"cannot_enable": {
-																				"description": "Erstelle den Countdown-Webhook mit [`/countdown`]({url}).",
+																				"description": "Erstelle den Countdown-Webhook mit [`/setup`]({url}).",
 																				"title": "❌ Countdown konnte nicht aktiviert werden"
 																},
 																"invalid_locale": {
@@ -195,11 +195,11 @@
 								},
 								"setup": {
 												"channel_created": {
-																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
+																"description": "**Das Sprach-Channel Widget wurde erstellt.** Den Channel löschen, um das Widget zu deaktivieren.",
 																"title": "✅ Countdown-Widget erstellt"
 												},
 												"channel_permissions_error": {
-																"description": "An error occurred whilst creating the channel.\n[Try adding the bot again]({add}).\nIf it still doesn't work, [ask for help]({support}).",
+																"description": "Ein Fehler ist aufgetreten beim Erstellen des Channels.\n[Versuche erneut den Bot hinzuzufügen]({add}).\nWenn es immer noch nicht funktioniert, [bitte um Hilfe]({support}).",
 																"title": "❌ Kanal kann nicht erstellt werden"
 												},
 												"missing_permission:channel": {
@@ -208,19 +208,19 @@
 												},
 												"missing_permission:view": {
 																"description": "Bitte stellen Sie sicher, dass der Bot die Berechtigung hat, den Kanal zu sehen.",
-																"title": "❌ Can't create webhook"
+																"title": "❌ Webhook konnte nicht erstellt werden"
 												},
 												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
-																"title": "❌ Can't create webhook"
+																"description": "Der Bot hat keine Berechtigung um Webhooks zu verwalten.",
+																"title": "❌ Webhook kann nicht erstellt werden"
 												},
 												"webhook_created": {
-																"description": "**The countdown has been enabled**; a message will be sent to {channel} every morning between 5AM and 6AM.\n\nTo disable it, use {toggle}.",
-																"title": "✅ Countdown webhook created"
+																"description": "**Der Countdown wurde aktiviert**; eine Nachricht wird jeden Morgen zwischen 5 und 6 Uhr an {channel} geschickt werden.\n\nVerwende {toggle} zum Deaktivieren.",
+																"title": "✅ Countdown-Webhook erstellt"
 												},
 												"webhook_permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create webhook"
+																"description": "Ein Fehler ist aufgetreten, beim Erstellen des Webhooks.\n[Versuche, den Bot erneut hinzuzufügen]({add}) und vergewissere dich, dass er den Countdown-Channel sehen kann.\nWenn das immer noch nicht funktioniert, [bitte um Hilfe]({support}).",
+																"title": "❌ Webhook kann nicht erstellt werden"
 												}
 								},
 								"sleeps": {
@@ -299,7 +299,7 @@
 								"christmas_day": "🎉 Es ist Weihnachten!",
 								"christmas_eve": "🎅 Es ist Heiligabend!",
 								"disable": {
-												"description": "**Serveradministratoren: Mit [`/toggle`]({toggle}) könnt ihr den Countdown deaktivieren.**\nBewertet [hier]({review}) gerne den Bot.\nVielen Dank für das Nutzen dieses Bots und Frohe Weihnachten! 🙂",
+												"description": "**Serveradministratoren: Mit {toggle} könnt ihr den Countdown deaktivieren (und {server} um den Countdown das nächste Mal automatisch zu aktivieren/deaktivieren).**\n[Vielen Dank für das Nutzen dieses Bots]({review}) und Frohe Weihnachten! 🙂",
 												"title": "🎄 Frohe Weihnachten"
 								},
 								"live": "Auf [{pretty}]({url}) siehst du einen Live-Countdown.",
@@ -311,35 +311,35 @@
 				"modals": {
 								"add_joke": {
 												"answer": {
-																"label": "Answer",
+																"label": "Antworten",
 																"placeholder": "Santa Paws!"
 												},
 												"question": {
-																"label": "Question",
-																"placeholder": "Who delivers presents to cats?"
+																"label": "Frage",
+																"placeholder": "Wer liefert Geschenke an Katzen?"
 												},
-												"title": "Add a joke"
+												"title": "Einen Weihnachtswitz hinzufügen"
 								},
 								"suggest": {
 												"suggestion": {
-																"label": "Suggestion for Christmas Countdown",
-																"placeholder": "A suggestion for the Christmas Countdown bot, preferably in English."
+																"label": "Vorschlag für Christmas Countdown",
+																"placeholder": "Ein Vorschlag für den Christmas Countdown-Bot, bevorzugt auf Englisch"
 												},
-												"title": "Suggestion"
+												"title": "Vorschlag"
 								}
 				},
 				"santa_tracker": {
-								"description": "Der Weihnachtsmann befindet sich aktuell über **[{city} ({region})]({map})**.",
-								"ended": "Santa has finished delivering presents and is back in **{city}, {region}** for a rest.\n\n[Please vote for the bot]({vote}) if you enjoyed this feature.",
-								"starting": "Santa is departing **{city}, {region}** to start delivering presents.",
+								"description": "Der Weihnachtsmann liefert aktuell Geschenke über **[{city} ({region})]({map})**.",
+								"ended": "Santa ist fertig mit Geschenke ausliefern und zurück in **{city}, {region}** für eine Pause.\n\n[Bitte stimme für diesen Bot ab]({vote}) wenn dir diese Funktion gefallen hat.",
+								"starting": "Santa verlässt **{city}, {region}** und beginnt Geschenke auszuliefern.",
 								"title": "Santa Tracker"
 				},
 				"widget": {
-								"christmas_day": "🎄 Merry Christmas!",
+								"christmas_day": "🎄 Frohe Weihnachten!",
 								"christmas_eve": [
-												"🎅 {hours} hour left",
-												"🎅 {hours} hours left"
+												"🎅 noch {hours} Stunde",
+												"🎅 noch {hours} Stunden"
 								],
-								"normal": "🎅 {sleeps} sleeps left"
+								"normal": "🎅 noch {sleeps} mal schlafen"
 				}
 }
