@@ -23,323 +23,323 @@
 				"commands": {
 								"days": {
 												"days": [
-																"is **{days} day**",
-																"are **{days} days**"
+																"за **{days} днів**",
+																"за **{days} днів**"
 												],
-												"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "До Різдва залишилося {days} або {sleeps}[(?)]({url} «Яка різниця між днями та ночами?»)!",
 												"sleeps": [
-																"**{sleeps} sleep**",
-																"**{sleeps} sleeps**"
+																"**{sleeps} ніч**",
+																"**{sleeps} ночей**"
 												],
 												"title": [
-																"{days} day left",
-																"{days} days left"
+																"залишилося {days} днів",
+																"залишилося {days} днів"
 												]
 								},
 								"donate": {
-												"description": "**Donate at {url}**",
-												"title": "Donate"
+												"description": "**Підтримати - {url}**",
+												"title": "Пітримати"
 								},
 								"help": {
 												"list": {
-																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
-																"title": "Commands"
+																"description": "Клацніть на назву, щоб отримати більше інформації про певну команду. [Приєднайтеся до сервера підтримки]({discord}), якщо вам потрібна допомога.\n**[Натисніть тут, щоб увімкнути зворотний відлік.]({enable})**",
+																"title": "Команди"
 												}
 								},
 								"hours": {
 												"description": [
-																"There is **{hours}** hour left until Christmas!",
-																"There are **{hours}** hours left until Christmas!"
+																"До Різдва залишилось **{hours}** годин!",
+																"До Різдва залишилось **{hours}** годин!"
 												],
 												"title": [
-																"{hours} hour left",
-																"{hours} hours left"
+																"{hours} годин залишилося",
+																"{hours} годин залишилося"
 												]
 								},
 								"info": {
-												"description": "The Christmas Countdown bot for Discord by [eartharoid]({eartharoid}) has been running since November 2018. [Learn more.]({about})",
+												"description": "Discord бот Christmas Countdown від [eartharoid]({eartharoid}) працює з листопада 2018 року. [Дізнатися більше.]({about})",
 												"fields": {
-																"commands": "Commands used",
+																"commands": "Команд використано",
 																"counting_in": {
-																				"title": "Counting down in",
+																				"title": "Зворотній відлік за",
 																				"value": [
-																								"{servers} server",
-																								"{servers} servers"
+																								"{servers} сервер",
+																								"{servers} серверів"
 																				]
 																},
 																"more": {
-																				"title": "More stats",
-																				"value": "[Click here]({url})"
+																				"title": "Більше статистики",
+																				"value": "[Клацніть тут]({url})"
 																},
-																"secret_santa_events": "Secret Santa events",
-																"secret_santa_users": "Secret Santa participants",
-																"servers": "Servers"
+																"secret_santa_events": "Таємні події Санти",
+																"secret_santa_users": "Таємні учасники Санти",
+																"servers": "Серверів"
 												},
-												"title": "Information"
+												"title": "Інформація"
 								},
 								"invite": {
-												"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
-												"title": "Invite"
+												"description": "[Натисніть тут]({url}), щоб додати Christmas Countdown до свого сервера.",
+												"title": "Запросити"
 								},
 								"joke": {
-												"answer": "Answer",
-												"button": "Get another joke",
-												"question": "Question"
+												"answer": "Відповідь",
+												"button": "Отримати ще один жарт",
+												"question": "Запитання"
 								},
 								"minutes": {
 												"description": [
-																"There is **{minutes}** minute left until Christmas!",
-																"There are **{minutes}** minutes left until Christmas!"
+																"До Різдва залишилось **{minutes}** хвилин!",
+																"До Різдва залишилось **{minutes}** хвилин!"
 												],
 												"title": [
-																"{minutes} minute left",
-																"{minutes} minutes left"
+																"{minutes} хвилин залишилося",
+																"{minutes} хвилин залишилося"
 												]
 								},
 								"months": {
 												"description": [
-																"There is **{months}** month left until Christmas!",
-																"There are **{months}** months left until Christmas!"
+																"До Різдва залишилось **{months}** місяців!",
+																"До Різдва залишилось **{months}** місяців!"
 												],
 												"title": [
-																"{months} month left",
-																"{months} months left"
+																"{months} місяців залишилося",
+																"{months} місяців залишилося"
 												]
 								},
 								"ping": {
 												"calculating": "",
 												"fields": {
-																"average_ping": "Avg. ping",
-																"latency": "Overall latency",
-																"shard_number": "Shard number",
+																"average_ping": "Середня затримка",
+																"latency": "Загальна затримка",
+																"shard_number": "Номер фрагмента",
 																"shard_ping": "Shard ping"
 												},
-												"title": "🏓 Pong!"
+												"title": "🏓 Понг!"
 								},
 								"radio": {
-												"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
-												"title": "Christmas Radio"
+												"description": "**[Додайте бота Christmas Radio]({url})**, щоб слухати різдвяні пісні на вашому сервері.",
+												"title": "Різдвяне радіо"
 								},
 								"seconds": {
 												"description": [
-																"There is **{seconds}** second left until Christmas!",
-																"There are **{seconds}** seconds left until Christmas!"
+																"До Різдва залишилося **{seconds}** секунд!",
+																"До Різдва залишилося **{seconds}** секунд!"
 												],
 												"title": [
-																"{seconds} second left",
-																"{seconds} seconds left"
+																"{seconds} секунд залишилося",
+																"{seconds} секунд залишилося"
 												]
 								},
 								"secret_santa": {
 												"blacklist": {
 																"add": {
 																				"added": {
-																								"description": "{member} has been added to the naughty list.",
-																								"title": "✅ Added"
+																								"description": "{member} було додано до списку неслухів.",
+																								"title": "✅ Додано"
 																				}
 																},
-																"list": "The naughty list",
+																"list": "Список неслухів",
 																"remove": {
 																				"cannot_remove": {
-																								"description": "{member} is not on the naughty list.",
-																								"title": "❌ Can't remove member"
+																								"description": "{member} немає в списку неслухів.",
+																								"title": "❌ Неможливо вилучити учасника"
 																				},
 																				"removed": {
-																								"description": "{member} has been removed from the naughty list.",
-																								"title": "✅ Removed"
+																								"description": "{member} було вилучено зі списку неслухів.",
+																								"title": "✅ Вилучено"
 																				}
 																}
 												},
 												"no_event": {
-																"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
-																"title": "❌ Error"
+																"description": "Немає таємних подій Санти. Дотримуйтеся [посібника]({url}), щоб створити його.",
+																"title": "❌ Помилка"
 												},
 												"not_enough_users": {
-																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
-																"title": "😦 Not enough participants"
+																"description": "Вибачте, було недостатньо учасників. Принаймні 3 учасники мають приєднатися до таємної події Санти, щоб отримати призначення.",
+																"title": "😦 Не вистачає учасників"
 												},
 												"show": {
 																"none": {
-																				"description": "You have not entered a Secret Santa event.",
-																				"title": "❌ Not assigned"
+																				"description": "Ви не брали участь у події «Секрет Санти».",
+																				"title": "❌ Не призначено"
 																},
 																"show": {
-																				"description": "**You are {member}'s Santa.** Give them a gift, following the event guidelines set by the organiser.",
-																				"title": "Secret Santa"
+																				"description": "**Ви Санта користувача {member}.** Дай їм подарунок, дотримуючись інструкцій, встановлених організатором.",
+																				"title": "Таємниця Санти"
 																}
 												}
 								},
 								"server": {
 												"reset": {
-																"title": "✅ Server settings reset"
+																"title": "✅ Налаштування сервера скинуто"
 												},
 												"set": {
 																"cannot_enable": {
-																				"description": "Create the countdown webhook with [`/setup`]({url}).",
-																				"title": "❌ Can't enable countdown"
+																				"description": "Створіть вебхук зворотного відліку за допомогою [`/setup`]({url}).",
+																				"title": "❌ Не вдається ввімкнути зворотний відлік"
 																},
 																"invalid_locale": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid locale"
+																				"description": "Спробуйте ще раз, або [попросіть допомоги]({url}).",
+																				"title": "❌ Не правильна локалізація"
 																},
 																"invalid_timezone": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid timezone"
+																				"description": "Спробуйте ще раз, або [попросіть допомоги]({url}).",
+																				"title": "❌ Не правильний часовий пояс"
 																},
-																"title": "✅ Server settings updated"
+																"title": "✅ Налаштування сервера оновлено"
 												},
 												"view": {
-																"description": "Change your settings with `/server set`.",
-																"title": "Server settings"
+																"description": "Змініть налаштування за допомогою `/server set`.",
+																"title": "Налаштування сервера"
 												}
 								},
 								"setup": {
 												"channel_created": {
-																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
-																"title": "✅ Countdown widget created"
+																"description": "**Голосовий канал-віджет створено.** Щоб вимкнути віджет, видаліть канал.",
+																"title": "✅ Віджет зворотного відліку створено"
 												},
 												"channel_permissions_error": {
-																"description": "An error occurred whilst creating the channel.\n[Try adding the bot again]({add}).\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create channel"
+																"description": "Під час створення каналу сталася помилка.\n[Спробуйте додати бота знову]({add}).\nЯкщо все одно не працює, [попросіть допомоги]({support}).",
+																"title": "❌ Не вдається створити канал"
 												},
 												"missing_permission:channel": {
-																"description": "The bot does not have permission to manage channels.",
-																"title": "❌ Can't create channel"
+																"description": "Бот не має прав на керування каналами.",
+																"title": "❌ Не вдається створити канал"
 												},
 												"missing_permission:view": {
-																"description": "Please ensure the bot has permission to view the channel.",
-																"title": "❌ Can't create webhook"
+																"description": "Переконайтеся, що бот має дозвіл на перегляд каналу.",
+																"title": "❌ Не вдається створити вебхук"
 												},
 												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
-																"title": "❌ Can't create webhook"
+																"description": "Бот не має дозволу керувати вебхуками.",
+																"title": "❌ Не вдається створити вебхук"
 												},
 												"webhook_created": {
-																"description": "**The countdown has been enabled**; a message will be sent to {channel} every morning between 5AM and 6AM.\n\nTo disable it, use {toggle}.",
-																"title": "✅ Countdown webhook created"
+																"description": "**Зворотний відлік увімкнено**; повідомлення надсилатиметься в канал {channel} щоранку між 5 та 6 годин.\n\nTo disable it, use {toggle}.",
+																"title": "✅ Вебхук зворотного відліку створено"
 												},
 												"webhook_permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create webhook"
+																"description": "Під час створення вебхуку сталася помилка.\n[[Спробуйте додати бота ще раз]({add}) і переконайтеся, що він бачить канал зворотного відліку.\nЯкщо все одно не працює, [попросіть допомоги]({support}).",
+																"title": "❌ Не вдається створити вебхук"
 												}
 								},
 								"sleeps": {
 												"days": [
-																"**{days} day**",
-																"**{days} days**"
+																"**{days} днів**",
+																"**{days} днів**"
 												],
-												"description": "There {sleeps} or {days}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "До Різдва залишилося {sleeps} або {days}[(?)]({url} «Яка різниця між днями та ночами?»)!",
 												"sleeps": [
-																"is **{sleeps} sleep**",
-																"are **{sleeps} sleeps**"
+																"за **{sleeps} ночей**",
+																"за **{sleeps} ночей**"
 												],
 												"title": [
-																"{sleeps} sleep left",
-																"{sleeps} sleeps left"
+																"{sleeps} ночей залишилося",
+																"{sleeps} ночей залишилося"
 												]
 								},
 								"suggest": {
-												"description": "Thank you for your suggestion.",
-												"title": "✅ Submitted"
+												"description": "Дякуємо за вашу пропозицію.",
+												"title": "✅ Відправлено"
 								},
 								"toggle": {
-												"disabled": "✅ Countdown disabled",
-												"enabled": "✅ Countdown enabled"
+												"disabled": "✅ Зворотний відлік вимкнено",
+												"enabled": "✅ Зворотний відлік увімкнено"
 								},
 								"total": {
 												"days": [
-																"**{days} day**",
-																"**{days} days**"
+																"**{days} днів**",
+																"**{days} днів**"
 												],
 												"description": [
-																"There is {days}, {hours}, {minutes}, and {seconds} left until Christmas!",
-																"There are {days}, {hours}, {minutes}, and {seconds} left until Christmas!"
+																"До Різдва залишилося {days}, {hours}, {minutes} та {second}!",
+																"До Різдва залишилося {days}, {hours}, {minutes} та {seconds}!"
 												],
 												"hours": [
-																"**{hours} hour**",
-																"**{hours} hours**"
+																"**{hours} годин**",
+																"**{hours} годин**"
 												],
 												"minutes": [
-																"**{minutes} minute**",
-																"**{minutes} minutes**"
+																"**{minutes} хвилин**",
+																"**{minutes} хвилин**"
 												],
 												"seconds": [
-																"**{seconds} second**",
-																"**{seconds} seconds**"
+																"**{seconds} секунд**",
+																"**{seconds} секунд**"
 												],
-												"title": "{days}, {hours}, {minutes}, {seconds} left"
+												"title": "{days}, {hours}, {minutes}, {seconds} залишилося"
 								},
 								"user": {
 												"reset": {
-																"title": "✅ User settings reset"
+																"title": "✅ Налаштування користувача скинуто"
 												},
 												"set": {
-																"title": "✅ User settings updated"
+																"title": "✅ Налаштування користувача оновлено"
 												},
 												"view": {
-																"title": "User settings"
+																"title": "Налаштування користувача"
 												}
 								},
 								"weekday": {
-												"description": "Christmas Day is on a **{day}** in {year}.",
+												"description": "Різдво припадає на **{day}** в {year}.",
 												"title": ""
 								},
 								"weeks": {
 												"description": [
-																"There is **{weeks}** week left until Christmas!",
-																"There are **{weeks}** weeks left until Christmas!"
+																"До Різдва залишилося **{weeks}** тижнів!",
+																"До Різдва залишилося **{weeks}** тижнів!"
 												],
 												"title": [
-																"{weeks} week left",
-																"{weeks} weeks left"
+																"{weeks} тижнів залишилося",
+																"{weeks} тижнів залишилося"
 												]
 								}
 				},
 				"countdown": {
-								"christmas_day": "🎉 It's Christmas Day!",
-								"christmas_eve": "🎅 It's Christmas Eve!",
+								"christmas_day": "🎉 День Різдва!",
+								"christmas_eve": "🎅 Напередодні Різдва!",
 								"disable": {
-												"description": "**Server administrators: use {toggle} to disable the countdown (and {server} to enable/disable the countdown automatically next time).**\n[Thank you for using this bot]({review}) and enjoy your Christmas! 🙂",
-												"title": "🎄 Merry Christmas"
+												"description": "**Адміністратори сервера: використовуйте {toggle}, щоб вимкнути зворотний відлік (та {server}, щоб увімкнути/вимкнути автоматичний відлік наступного разу).**\n[Дякуємо за використання цього бота]({review}) та приємного Різдва!🙂",
+												"title": "🎄 Щасливого Різдва"
 								},
-								"live": "View the live countdown at [{pretty}]({url}).",
-								"merry_christmas": "🎄 Merry Christmas!",
-								"server_timezone": "Server timezone: {timezone}",
-								"user_timezone": "User timezone: {timezone}"
+								"live": "Перегляньте зворотний відлік у прямому ефірі на [{pretty}]({url}).",
+								"merry_christmas": "🎄 Щасливого Різдва!",
+								"server_timezone": "Часовий пояс сервера: {timezone}",
+								"user_timezone": "Часовий пояс користувача: {timezone}"
 				},
-				"disabled": "disabled",
+				"disabled": "вимкнуто",
 				"modals": {
 								"add_joke": {
 												"answer": {
-																"label": "Answer",
-																"placeholder": "Santa Paws!"
+																"label": "Відповідь",
+																"placeholder": "Лапки Санти!"
 												},
 												"question": {
-																"label": "Question",
-																"placeholder": "Who delivers presents to cats?"
+																"label": "Питання",
+																"placeholder": "Хто розносить подарунки котику?"
 												},
-												"title": "Add a Christmas joke"
+												"title": "Додати різдвяний жарт"
 								},
 								"suggest": {
 												"suggestion": {
-																"label": "Suggestion for Christmas Countdown",
-																"placeholder": "A suggestion for the Christmas Countdown bot, preferably in English."
+																"label": "Пропозиція для Christmas Countdown",
+																"placeholder": "Пропозиція щодо бота Christmas Countdown, бажано англійською мовою."
 												},
-												"title": "Suggestion"
+												"title": "Пропозиція"
 								}
 				},
 				"santa_tracker": {
-								"description": "Santa is currently delivering presents over **[{city}, {region}]({map})**.",
-								"ended": "Santa has finished delivering presents and is back in **{city}, {region}** for a rest.\n\n[Please vote for the bot]({vote}) if you enjoyed this feature.",
-								"starting": "Santa is departing **{city}, {region}** to start delivering presents.",
-								"title": "Santa Tracker"
+								"description": "Зараз Санта розносить подарунки **[{city}, {region}]({map})**.",
+								"ended": "Санта закінчив розносити подарунки й повернувся в **{city}, {region}** відпочити.\n\n[Будь ласка, проголосуйте за бота]({vote}), якщо вам сподобалася ця функція.",
+								"starting": "Санта вирушає з **{city}, {region}**, щоб почати розносити подарунки.",
+								"title": "Шанувальник Санти"
 				},
 				"widget": {
-								"christmas_day": "🎄 Merry Christmas!",
+								"christmas_day": "🎄 Щасливого Різдва!",
 								"christmas_eve": [
-												"🎅 {hours} hour left",
-												"🎅 {hours} hours left"
+												"🎅 {hours} залишилося годин",
+												"🎅 {hours} годин залишилося"
 								],
-								"normal": "🎅 {sleeps} sleeps left"
+								"normal": "🎅 {sleeps} ночей залишилося"
 				}
 }
