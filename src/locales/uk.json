@@ -7,17 +7,17 @@
 								},
 								"footer": "Лічильник до Різдва від eartharoid",
 								"guild_only": {
-												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
-												"title": "Error"
+												"description": "Цю команду можна використовувати лише в каналі сервера. [Додайте бота на свій сервер.]({invite})",
+												"title": "Помилка"
 								},
 								"member_missing_permissions": {
-												"description": "You need the following permissions to use this command:\n{permissions}",
-												"title": "Error"
+												"description": "Для використання цієї команди вам потрібні такі дозволи:\n{permissions}",
+												"title": "Помилка"
 								},
-								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
+								"migrate": "Бот Christmas Countdown тепер використовує команди косої риски!\n**Запросіть бота ще раз з відси: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
-												"title": "Error"
+												"description": "Боту Christmas Countdown потрібні такі дозволи:\n{permissions}",
+												"title": "Помилка"
 								}
 				},
 				"commands": {
