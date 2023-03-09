@@ -28,8 +28,8 @@
 												],
 												"description": "¡Quedan {days} o {sleeps}[(?)]({url} \" \"¿Cual es la diferencia entre días y noches?\") faltantes para Navidad!",
 												"sleeps": [
-																"**{sleeps} sleep**",
-																"**{sleeps} sleeps**"
+																"**{durmiendo} dormir**",
+																"**{duerme} duerme**"
 												],
 												"title": [
 																"{days} días restantes",
@@ -49,7 +49,7 @@
 								"hours": {
 												"description": [
 																"Hay **{hours}** horas restantes hasta Navidad!",
-																"There are **{hours}** hours left until Christmas!"
+																"Faltan **{horas}** horas hasta Navidad!"
 												],
 												"title": [
 																"{hours} horas restantes",
@@ -61,15 +61,15 @@
 												"fields": {
 																"commands": "Comandos usados",
 																"counting_in": {
-																				"title": "Counting down in",
+																				"title": "Cuenta regresiva en",
 																				"value": [
-																								"{servers} server",
-																								"{servers} servers"
+																								"{servidores} servidor",
+																								"{servidores} servidores"
 																				]
 																},
 																"more": {
 																				"title": "Mas estadísticas",
-																				"value": "[Click here]({url})"
+																				"value": "[Click aqui]({url})"
 																},
 																"secret_santa_events": "Eventos Santa Secreto",
 																"secret_santa_users": "Participantes Santa Secreto",
@@ -83,12 +83,12 @@
 								},
 								"joke": {
 												"answer": "Respuesta",
-												"button": "Get another joke",
+												"button": "Consigue otra broma",
 												"question": "Pregunta"
 								},
 								"minutes": {
 												"description": [
-																"There is **{minutes}** minute left until Christmas!",
+																"Faltan **{minutos}** minutos para Navidad!",
 																"There are **{minutes}** minutes left until Christmas!"
 												],
 												"title": [
