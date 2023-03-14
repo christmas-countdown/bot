@@ -89,7 +89,7 @@
 								"minutes": {
 												"description": [
 																"Faltan **{minutos}** minutos para Navidad!",
-																"There are **{minutes}** minutes left until Christmas!"
+																"Quedan **{minutos}**para Navidad!"
 												],
 												"title": [
 																"{minutes} minuto queda",
@@ -98,8 +98,8 @@
 								},
 								"months": {
 												"description": [
-																"There is **{months}** month left until Christmas!",
-																"There are **{months}** months left until Christmas!"
+																"Quedan **{meses}** para Navidad",
+																"Quedan **{meses}** meses para Navidad!"
 												],
 												"title": [
 																"{months} mes queda",
@@ -110,24 +110,24 @@
 												"calculating": "Calculating...",
 												"fields": {
 																"average_ping": "Avg. ping",
-																"latency": "Overall latency",
-																"shard_number": "Shard number",
-																"shard_ping": "Shard ping"
+																"latency": "Latencia general",
+																"shard_number": "Número de fragmento",
+																"shard_ping": "Ping de fragmento"
 												},
 												"title": "🏓 Pong!"
 								},
 								"radio": {
-												"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
-												"title": "Christmas Radio"
+												"description": "**[Añada el bot de Navidad radio]({url})** escuchar la música Navidad en usted servidor de discordia",
+												"title": "El radio de Navidad"
 								},
 								"seconds": {
 												"description": [
-																"There is **{seconds}** second left until Christmas!",
-																"There are **{seconds}** seconds left until Christmas!"
+																"Quedan **{segundos}** segundos para Navidad!",
+																"Quedan **{segundos}** segundos para Navidad!"
 												],
 												"title": [
-																"{seconds} second left",
-																"{seconds} seconds left"
+																"Quedan {Segundos} segundos",
+																"Quedan {segundos} segundos"
 												]
 								},
 								"secret_santa": {
