@@ -1,345 +1,345 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
-												"identifier": "Identifier",
-												"title": "Error"
+												"description": "Er is een onverwachte fout opgetreden. Vraag om hulp op [de ondersteuningsserver]({url}).",
+												"identifier": "Identificatie",
+												"title": "Foutmelding"
 								},
-								"footer": "Christmas Countdown by eartharoid",
+								"footer": "Christmas Countdown, gemaakt door eartharoid",
 								"guild_only": {
-												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
-												"title": "Error"
+												"description": "Deze opdracht kan alleen worden op gebruikt op een serverkanaal. [Voeg de bot toe op je server.]({invite})",
+												"title": "Foutmelding"
 								},
 								"member_missing_permissions": {
-												"description": "You need the following permissions to use this command:\n{permissions}",
-												"title": "Error"
+												"description": "Je dient over de volgende rechten te beschikken om deze opdracht te kunnen gebruiken:\n{permissions}",
+												"title": "Foutmelding"
 								},
-								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
+								"migrate": "De Christmas Countdown-bot ondersteunt voortaan slash-opdrachten!\n**Voeg de bot hier opnieuw toe: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
-												"title": "Error"
+												"description": "De Christmas Countdown-bot vereist de volgende rechten:\n{permissions}",
+												"title": "Foutmelding"
 								}
 				},
 				"commands": {
 								"days": {
 												"days": [
-																"is **{days} day**",
-																"are **{days} days**"
+																"is **{days} dag**",
+																"zijn **{days} dagen**"
 												],
-												"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "Over {days} of {sleeps}[(?)]({url} “Wat is het verschil tussen dagen en nachten slapen?\") is het Kerstmis!",
 												"sleeps": [
-																"**{sleeps} sleep**",
-																"**{sleeps} sleeps**"
+																"**{sleeps} nacht slapen**",
+																"**{sleeps} nachten slapen**"
 												],
 												"title": [
-																"{days} day left",
-																"{days} days left"
+																"Over {days} dag",
+																"Over {days} dagen"
 												]
 								},
 								"donate": {
-												"description": "**Donate at {url}**",
-												"title": "Donate"
+												"description": "**Doneer via {url}**",
+												"title": "Doneren"
 								},
 								"help": {
 												"list": {
-																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
-																"title": "Commands"
+																"description": "Klik op de naam om meer informatie over de opdracht te lezen. [Laat van je horen de ondersteuningsserver]({discord}) als je hulp nodig hebt.\n**[Klik hier om het aftellen te starten.]({enable})**",
+																"title": "Opdrachten"
 												}
 								},
 								"hours": {
 												"description": [
-																"There is **{hours}** hour left until Christmas!",
-																"There are **{hours}** hours left until Christmas!"
+																"Over **{hours}** uur is het Kerstmis!",
+																"Over **{hours}** uur is het Kerstmis!"
 												],
 												"title": [
-																"{hours} hour left",
-																"{hours} hours left"
+																"Over {hours} uur",
+																"Over {hours} uur"
 												]
 								},
 								"info": {
-												"description": "The Christmas Countdown bot for Discord by [eartharoid]({eartharoid}) has been running since November 2018. [Learn more.]({about})",
+												"description": "De Christmas Countdown-bot voor Discord, gemaakt door [eartharoid]({eartharoid}), is sinds november 2018 actief. [Meer informatie.]({about})",
 												"fields": {
-																"commands": "Commands used",
+																"commands": "Gebruikte opdrachten",
 																"counting_in": {
-																				"title": "Counting down in",
+																				"title": "Het aftellen begint over",
 																				"value": [
 																								"{servers} server",
 																								"{servers} servers"
 																				]
 																},
 																"more": {
-																				"title": "More stats",
-																				"value": "[Click here]({url})"
+																				"title": "Meer statistieken",
+																				"value": "[Klik hier]({url})"
 																},
-																"secret_santa_events": "Secret Santa events",
-																"secret_santa_users": "Secret Santa participants",
+																"secret_santa_events": "Lootjes trekken",
+																"secret_santa_users": "Deelnemers",
 																"servers": "Servers"
 												},
-												"title": "Information"
+												"title": "Informatie"
 								},
 								"invite": {
-												"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
-												"title": "Invite"
+												"description": "[Klik hier]({url}) om de Christmas Countdown-bot toe te voegen op je server.",
+												"title": "Uitnodiging"
 								},
 								"joke": {
-												"answer": "Answer",
-												"button": "Get another joke",
-												"question": "Question"
+												"answer": "Antwoord",
+												"button": "Nog een grap vertellen",
+												"question": "Vraag"
 								},
 								"minutes": {
 												"description": [
-																"There is **{minutes}** minute left until Christmas!",
-																"There are **{minutes}** minutes left until Christmas!"
+																"Over **{minutes}** minuut is het Kerstmis!",
+																"Over **{minutes}** minuten is het Kerstmis!"
 												],
 												"title": [
-																"{minutes} minute left",
-																"{minutes} minutes left"
+																"Over {minutes} minuut",
+																"Over {minutes} minuten"
 												]
 								},
 								"months": {
 												"description": [
-																"There is **{months}** month left until Christmas!",
-																"There are **{months}** months left until Christmas!"
+																"Over **{months}** maand is het Kerstmis!",
+																"Over **{months}** maanden is het Kerstmis!"
 												],
 												"title": [
-																"{months} month left",
-																"{months} months left"
+																"Over {months} maand",
+																"Over {months} maanden"
 												]
 								},
 								"ping": {
 												"calculating": "",
 												"fields": {
-																"average_ping": "Avg. ping",
-																"latency": "Overall latency",
-																"shard_number": "Shard number",
-																"shard_ping": "Shard ping"
+																"average_ping": "Gem. ping",
+																"latency": "Algehele vertraging",
+																"shard_number": "Shardnummer",
+																"shard_ping": "Shardping"
 												},
 												"title": "🏓 Pong!"
 								},
 								"radio": {
-												"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
+												"description": "**[Voeg de Christmas Radio-bot]({url})** toe om naar Kerstmuziek te luisteren op je discordserver.",
 												"title": "Christmas Radio"
 								},
 								"seconds": {
 												"description": [
-																"There is **{seconds}** second left until Christmas!",
-																"There are **{seconds}** seconds left until Christmas!"
+																"Over **{seconds}** seconde is het Kerstmis!",
+																"Over **{seconds}** seconden is het Kerstmis!"
 												],
 												"title": [
-																"{seconds} second left",
-																"{seconds} seconds left"
+																"Over {seconds} seconde",
+																"Over {seconds} seconden"
 												]
 								},
 								"secret_santa": {
 												"blacklist": {
 																"add": {
 																				"added": {
-																								"description": "{member} has been added to the naughty list.",
-																								"title": "✅ Added"
+																								"description": "{member} krijgt de roe.",
+																								"title": "✅ Toegevoegd"
 																				}
 																},
-																"list": "The naughty list",
+																"list": "De roe",
 																"remove": {
 																				"cannot_remove": {
-																								"description": "{member} is not on the naughty list.",
-																								"title": "❌ Can't remove member"
+																								"description": "{member} krijgt niet de roe.",
+																								"title": "❌ Verwijderen mislukt"
 																				},
 																				"removed": {
-																								"description": "{member} has been removed from the naughty list.",
-																								"title": "✅ Removed"
+																								"description": "{member} krijgt niet de roe.",
+																								"title": "✅ Verwijderd"
 																				}
 																}
 												},
 												"no_event": {
-																"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
-																"title": "❌ Error"
+																"description": "Er worden geen lootjes getrokken. Volg [het stappenplan]({url}) om lootjes aan te maken.",
+																"title": "❌ Foutmelding"
 												},
 												"not_enough_users": {
-																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
-																"title": "😦 Not enough participants"
+																"description": "Er waren niet genoeg deelnemers. Er zijn minimaal 3 deelnemers nodig om lootjes te kunnen trekken.",
+																"title": "😦 Niet genoeg deelnemers"
 												},
 												"show": {
 																"none": {
-																				"description": "You have not entered a Secret Santa event.",
-																				"title": "❌ Not assigned"
+																				"description": "Je hebt nog geen lootjes getrokken.",
+																				"title": "❌ Niet-toegewezen"
 																},
 																"show": {
-																				"description": "**You are {member}'s Santa.** Give them a gift, following the event guidelines set by the organiser.",
-																				"title": "Secret Santa"
+																				"description": "**Je hebt het lootje van {member} getrokken.** Geef ze een cadeau op basis van de richtlijnen van de organisator.",
+																				"title": "Lootjes trekken"
 																}
 												}
 								},
 								"server": {
 												"reset": {
-																"title": "✅ Server settings reset"
+																"title": "✅ Serverinstellingen hersteld"
 												},
 												"set": {
 																"cannot_enable": {
-																				"description": "Create the countdown webhook with [`/setup`]({url}).",
-																				"title": "❌ Can't enable countdown"
+																				"description": "Maak de aftel-webkoppeling aan met behulp van de [`/instelhulp`]({url}).",
+																				"title": "❌ Aftellen starten mislukt"
 																},
 																"invalid_locale": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid locale"
+																				"description": "Probeer het opnieuw of [vraag om hulp]({url}).",
+																				"title": "❌ Ongeldige taal"
 																},
 																"invalid_timezone": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid timezone"
+																				"description": "Probeer het opnieuw of [vraag om hulp]({url}).",
+																				"title": "❌ Ongeldige tijdzone"
 																},
-																"title": "✅ Server settings updated"
+																"title": "✅ Serverinstellingen bijgewerkt"
 												},
 												"view": {
-																"description": "Change your settings with `/server set`.",
-																"title": "Server settings"
+																"description": "Wijzig de instellingen met `/server set`.",
+																"title": "Serverinstellingen"
 												}
 								},
 								"setup": {
 												"channel_created": {
-																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
-																"title": "✅ Countdown widget created"
+																"description": "**Het widget-spraakkanaal is aangemaakt.** Verwijder het kanaal om de widget uit te schakelen.",
+																"title": "✅ Aftelwidget aangemaakt"
 												},
 												"channel_permissions_error": {
-																"description": "An error occurred whilst creating the channel.\n[Try adding the bot again]({add}).\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create channel"
+																"description": "Er is een fout opgetreden tijdens het aanmaken van het kanaal.\n[Probeer de bot opnieuw toe te voegen]({add}).\nAls het nog steeds niet werkt, [vraag dan om hulp]({support}).",
+																"title": "❌ Kanaal kan niet worden aangemaakt"
 												},
 												"missing_permission:channel": {
-																"description": "The bot does not have permission to manage channels.",
-																"title": "❌ Can't create channel"
+																"description": "De bot beschikt niet over de juiste rechten om kanalen te beheren.",
+																"title": "❌ Kan kanaal niet aanmaken"
 												},
 												"missing_permission:view": {
-																"description": "Please ensure the bot has permission to view the channel.",
-																"title": "❌ Can't create webhook"
+																"description": "Zorg er voor dat de bot bevoegd is om het kanaal te mogen bekijken.",
+																"title": "❌ Kan geen webkoppeling maken"
 												},
 												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
-																"title": "❌ Can't create webhook"
+																"description": "De bot beschikt niet over het recht om webkoppelingen te beheren.",
+																"title": "❌ Kan geen webkoppeling maken"
 												},
 												"webhook_created": {
-																"description": "**The countdown has been enabled**; a message will be sent to {channel} every morning between 5AM and 6AM.\n\nTo disable it, use {toggle}.",
-																"title": "✅ Countdown webhook created"
+																"description": "**Het aftellen is begonnen** - er wordt iedere ochtend tussen 5:00 en 6:00 een bericht gestuurd naar {channel}.\n\nGebruik {toggle} om uit te schakelen.",
+																"title": "✅ Aftelwebkoppeling aangemaakt"
 												},
 												"webhook_permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create webhook"
+																"description": "Er is een fout opgetreden tijdens het aanmaken van de webkoppeling.\n[Probeer de bot opnieuw toe te voegen]({add}) en zorg er voor dat de bot het aftelkanaal kan bekijken.\nAls het nog steeds niet werkt, [vraag dan om hulp]({support}).",
+																"title": "❌ Kan geen webkoppeling maken"
 												}
 								},
 								"sleeps": {
 												"days": [
-																"**{days} day**",
-																"**{days} days**"
+																"**{days} dag**",
+																"**{days} dagen**"
 												],
-												"description": "There {sleeps} or {days}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "Over {days} of {sleeps}[(?)]({url} “Wat is het verschil tussen dagen en nachten slapen?\") is het Kerstmis!",
 												"sleeps": [
-																"is **{sleeps} sleep**",
-																"are **{sleeps} sleeps**"
+																"is **{sleeps} slaap**",
+																"zijn **{sleeps} slapen**"
 												],
 												"title": [
-																"{sleeps} sleep left",
-																"{sleeps} sleeps left"
+																"Nog {sleeps} nachtje slapen",
+																"Nog {sleeps} nachtjes slapen"
 												]
 								},
 								"suggest": {
-												"description": "Thank you for your suggestion.",
-												"title": "✅ Submitted"
+												"description": "Bedankt voor je suggestie.",
+												"title": "✅ Ingediend"
 								},
 								"toggle": {
-												"disabled": "✅ Countdown disabled",
-												"enabled": "✅ Countdown enabled"
+												"disabled": "✅ Aftellen uitgeschakeld",
+												"enabled": "✅ Aftellen ingeschakeld"
 								},
 								"total": {
 												"days": [
-																"**{days} day**",
-																"**{days} days**"
+																"**{days} dag**",
+																"**{days} dagen**"
 												],
 												"description": [
-																"There is {days}, {hours}, {minutes}, and {seconds} left until Christmas!",
-																"There are {days}, {hours}, {minutes}, and {seconds} left until Christmas!"
+																"Over {days}, {hours}, {minutes} en {seconds} is het Kerstmis!",
+																"Over {days}, {hours}, {minutes} en {seconds} is het Kerstmis!"
 												],
 												"hours": [
-																"**{hours} hour**",
-																"**{hours} hours**"
+																"**{hours} uur**",
+																"**{hours} uur**"
 												],
 												"minutes": [
-																"**{minutes} minute**",
-																"**{minutes} minutes**"
+																"**{minutes} minuut**",
+																"**{minutes} minuten**"
 												],
 												"seconds": [
-																"**{seconds} second**",
-																"**{seconds} seconds**"
+																"**{seconds} seconde**",
+																"**{seconds} seconden**"
 												],
-												"title": "{days}, {hours}, {minutes}, {seconds} left"
+												"title": "Nog {days}, {hours}, {minutes}, {seconds} te gaan"
 								},
 								"user": {
 												"reset": {
-																"title": "✅ User settings reset"
+																"title": "✅ Gebruikersinstellingen hersteld"
 												},
 												"set": {
-																"title": "✅ User settings updated"
+																"title": "✅ Gebruikersinstellingen bijgewerkt"
 												},
 												"view": {
-																"title": "User settings"
+																"title": "Gebruikersinstellingen"
 												}
 								},
 								"weekday": {
-												"description": "Christmas Day is on a **{day}** in {year}.",
+												"description": "Kerstmis valt in {year} op **{day}**.",
 												"title": ""
 								},
 								"weeks": {
 												"description": [
-																"There is **{weeks}** week left until Christmas!",
-																"There are **{weeks}** weeks left until Christmas!"
+																"Over **{weeks}** week is het Kerstmis!",
+																"Over **{weeks}** weken is het Kerstmis!"
 												],
 												"title": [
-																"{weeks} week left",
-																"{weeks} weeks left"
+																"Nog {weeks} week te gaan",
+																"Nog {weeks} weken te gaan"
 												]
 								}
 				},
 				"countdown": {
-								"christmas_day": "🎉 It's Christmas Day!",
-								"christmas_eve": "🎅 It's Christmas Eve!",
+								"christmas_day": "🎉 Het is Eerste Kerstdag!",
+								"christmas_eve": "🎅 Het is Kerstavond!",
 								"disable": {
-												"description": "**Server administrators: use {toggle} to disable the countdown (and {server} to enable/disable the countdown automatically next time).**\n[Thank you for using this bot]({review}) and enjoy your Christmas! 🙂",
-												"title": "🎄 Merry Christmas"
+												"description": "**Serverbeheerders: gebruik {toggle} om het aftellen uit te schakelen (en {server} om automatisch in/uit te schakelen).**\n[Bedankt voor het gebruik van deze bot]({review}) en een fijne Kerst toegewenst! 🙂",
+												"title": "🎄 Vrolijk kerstfeest"
 								},
-								"live": "View the live countdown at [{pretty}]({url}).",
-								"merry_christmas": "🎄 Merry Christmas!",
-								"server_timezone": "Server timezone: {timezone}",
-								"user_timezone": "User timezone: {timezone}"
+								"live": "Volg het aftellen live op [{pretty}]({url}).",
+								"merry_christmas": "🎄 Vrolijk kerstfeest!",
+								"server_timezone": "Servertijdzone: {timezone}",
+								"user_timezone": "Gebruikerstijdzone: {timezone}"
 				},
-				"disabled": "disabled",
+				"disabled": "uitgeschakeld",
 				"modals": {
 								"add_joke": {
 												"answer": {
-																"label": "Answer",
-																"placeholder": "Santa Paws!"
+																"label": "Antwoord",
+																"placeholder": "Noord Pools!"
 												},
 												"question": {
-																"label": "Question",
-																"placeholder": "Who delivers presents to cats?"
+																"label": "Vraag",
+																"placeholder": "Welke nationaliteit heeft de kerstman?"
 												},
-												"title": "Add a Christmas joke"
+												"title": "Kerstgrap toevoegen"
 								},
 								"suggest": {
 												"suggestion": {
-																"label": "Suggestion for Christmas Countdown",
-																"placeholder": "A suggestion for the Christmas Countdown bot, preferably in English."
+																"label": "Suggestie aan Christmas Countdown",
+																"placeholder": "Een suggestie aan de Christmas Countdown-bot, bij voorkeur in het Engels."
 												},
-												"title": "Suggestion"
+												"title": "Suggestie"
 								}
 				},
 				"santa_tracker": {
-								"description": "Santa is currently delivering presents over **[{city}, {region}]({map})**.",
-								"ended": "Santa has finished delivering presents and is back in **{city}, {region}** for a rest.\n\n[Please vote for the bot]({vote}) if you enjoyed this feature.",
-								"starting": "Santa is departing **{city}, {region}** to start delivering presents.",
-								"title": "Santa Tracker"
+								"description": "De kerstman is momenteel pakjes aan het bezorgen in **[{city}, {region}]({map})**.",
+								"ended": "De kerstman is klaar met bezorgen en terug in **{city}, {region}** om uit te rusten.\n\nAls je deze functie leuk vindt, [stem dan op de bot]({vote}).",
+								"starting": "De kerstman staat op het punt van vertrekken uit **{city}, {region}** om pakjes te gaan bezorgen.",
+								"title": "Kerstman-volgsysteem"
 				},
 				"widget": {
-								"christmas_day": "🎄 Merry Christmas!",
+								"christmas_day": "🎄 Vrolijk kerstfeest!",
 								"christmas_eve": [
-												"🎅 {hours} hour left",
-												"🎅 {hours} hours left"
+												"Nog 🎅 {hours} uur te gaan",
+												"Nog 🎅 {hours} uur te gaan"
 								],
-								"normal": "🎅 {sleeps} sleeps left"
+								"normal": "Nog 🎅 {sleeps} nachten slapen"
 				}
 }
