@@ -107,7 +107,7 @@
 												]
 								},
 								"ping": {
-												"calculating": "",
+												"calculating": "Bezig met berekenen…",
 												"fields": {
 																"average_ping": "Gem. ping",
 																"latency": "Algehele vertraging",
@@ -282,7 +282,7 @@
 								},
 								"weekday": {
 												"description": "Kerstmis valt in {year} op **{day}**.",
-												"title": ""
+												"title": "Kerstmis is op…"
 								},
 								"weeks": {
 												"description": [
