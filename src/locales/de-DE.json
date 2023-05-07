@@ -323,7 +323,7 @@
 								"suggest": {
 												"suggestion": {
 																"label": "Vorschlag für Christmas Countdown",
-																"placeholder": "Ein Vorschlag für den Christmas Countdown-Bot, bevorzugt auf Englisch"
+																"placeholder": "Ein Vorschlag für den Christmas Countdown Bot, bevorzugt auf Englisch."
 												},
 												"title": "Vorschlag"
 								}
