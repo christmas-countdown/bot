@@ -107,7 +107,7 @@
 												]
 								},
 								"ping": {
-												"calculating": "",
+												"calculating": "Calculating…",
 												"fields": {
 																"average_ping": "Avg. ping",
 																"latency": "Overall latency",
@@ -282,7 +282,7 @@
 								},
 								"weekday": {
 												"description": "Christmas Day is on a **{day}** in {year}.",
-												"title": ""
+												"title": "Christmas is on…"
 								},
 								"weeks": {
 												"description": [
