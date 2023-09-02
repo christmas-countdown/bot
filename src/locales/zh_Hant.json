@@ -107,7 +107,7 @@
 												]
 								},
 								"ping": {
-												"calculating": "",
+												"calculating": "Calculating…",
 												"fields": {
 																"average_ping": "平均延遲",
 																"latency": "整體延遲",
@@ -282,7 +282,7 @@
 								},
 								"weekday": {
 												"description": "{year}年的聖誕節是在**{day}**。",
-												"title": ""
+												"title": "Christmas is on…"
 								},
 								"weeks": {
 												"description": [
