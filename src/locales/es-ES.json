@@ -11,12 +11,12 @@
 												"title": "Error"
 								},
 								"member_missing_permissions": {
-												"description": "Necesitas del siguente permiso para utilizar este comando:\n{permissions}",
+												"description": "Necesitas el siguiente permiso para utilizar este comando:\n{permissions}",
 												"title": "Error"
 								},
-								"migrate": "¡El bot Christmas Countdown ahora utiliza comandos con slash!\n**Por favor vuelve a añadir el bot aquí: https://christmascountdown.live/invite.**",
+								"migrate": "¡El bot Christmas Countdown ahora utiliza comandos de barra!\n**Por favor vuelve a añadir el bot aquí: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "El bot Christmas Countdown necesita de los siguientes permisos:\n{permissions}",
+												"description": "El bot Christmas Countdown necesita los siguientes permisos:\n{permissions}",
 												"title": "Error"
 								}
 				},
@@ -28,28 +28,28 @@
 												],
 												"description": "¡Quedan {days} o {sleeps}[(?)]({url} \" \"¿Cual es la diferencia entre días y noches?\") faltantes para Navidad!",
 												"sleeps": [
-																"**{durmiendo} dormir**",
-																"**{duerme} duerme**"
+																"**{sleeps} noche**",
+																"**{sleeps} noches**"
 												],
 												"title": [
-																"{days} días restantes",
-																"{days} dias restantes"
+																"Queda {days} día",
+																"Queda {days} días"
 												]
 								},
 								"donate": {
-												"description": "**Dona en {url}**",
+												"description": "**Donar en {url}**",
 												"title": "Donar"
 								},
 								"help": {
 												"list": {
-																"description": "Presiona en su nombre para tener mas información sobre un comando específico. [Unete al servidor de apoyo]({discord}) si necesitas ayuda.\n**[Presiona aquí para activar el contador.]({enable})**",
+																"description": "Haz clic en su nombre para obtener mas información sobre un comando específico. [Únete al servidor de soporte]({discord}) si necesitas ayuda.\n**[Haz clic aquí para activar el contador.]({enable})**",
 																"title": "Comandos"
 												}
 								},
 								"hours": {
 												"description": [
-																"Hay **{hours}** horas restantes hasta Navidad!",
-																"Faltan **{horas}** horas hasta Navidad!"
+																"¡Quedan **{hours}** horas hasta Navidad!",
+																"¡Quedan **{hours}** horas hasta Navidad!"
 												],
 												"title": [
 																"Quedan {hours} horas",
@@ -57,49 +57,49 @@
 												]
 								},
 								"info": {
-												"description": "El bot Christmas Countdown para Navidad para Discord por [eartharoid]({eartharoid}) ha estado corriendo desde Noviembre 2018. [Saber más.]({about})",
+												"description": "El bot Christmas Countdown para Discord por [eartharoid]({eartharoid}) ha estado funcionando desde Noviembre 2018. [Saber más.]({about})",
 												"fields": {
 																"commands": "Comandos usados",
 																"counting_in": {
-																				"title": "Cuenta regresiva en",
+																				"title": "Cuenta atrás en",
 																				"value": [
-																								"{servidores} servidor",
-																								"{servidores} servidores"
+																								"{servers} servidor",
+																								"{servers} servidores"
 																				]
 																},
 																"more": {
-																				"title": "Mas estadísticas",
-																				"value": "[Click aqui]({url})"
+																				"title": "Más estadísticas",
+																				"value": "[Clic aquí]({url})"
 																},
-																"secret_santa_events": "Eventos Santa Secreto",
-																"secret_santa_users": "Participantes Santa Secreto",
+																"secret_santa_events": "Eventos de Amigo Invisible",
+																"secret_santa_users": "Participantes Amigo Invisible",
 																"servers": "Servidores"
 												},
 												"title": "Información"
 								},
 								"invite": {
-												"description": "[Click here]({url}) para añadir the Christmas Countdown bot a tu propio servidor.",
+												"description": "[Haz clic aquí]({url}) para añadir el bot Christmas Countdown a tu propio servidor.",
 												"title": "Invitar"
 								},
 								"joke": {
-												"answer": "Respuesta",
+												"answer": "Responder",
 												"button": "Consigue otra broma",
-												"question": "Pregunta"
+												"question": "Preguntar"
 								},
 								"minutes": {
 												"description": [
-																"Faltan **{minutos}** minutos para Navidad!",
-																"Quedan **{minutos}**para Navidad!"
+																"¡Quedan**{minutes}** minutos para Navidad!",
+																"¡Quedan **{minutes}**para Navidad!"
 												],
 												"title": [
-																"{minutes} minuto queda",
-																"{minutes} minutos quedan"
+																"Queda {minutes} minuto",
+																"Queda {minutes} minutos"
 												]
 								},
 								"months": {
 												"description": [
 																"¡Queda **{months}** mes para Navidad!",
-																"Quedan **{meses}** meses para Navidad!"
+																"¡Quedan **{months}** meses para Navidad!"
 												],
 												"title": [
 																"Queda {months} mes",
@@ -118,44 +118,44 @@
 								},
 								"radio": {
 												"description": "**[Añade el bot Christmas Radio]({url})** para escuchar los villancicos en tu servidor de Discord.",
-												"title": "El radio de Navidad"
+												"title": "Christmas Radio"
 								},
 								"seconds": {
 												"description": [
-																"Queda **{segundos}** segundo para Navidad!",
-																"¡Quedan **{segundos}** segundos para Navidad!"
+																"¡Queda **{seconds}** segundo para Navidad!",
+																"¡Quedan **{seconds}** segundos para Navidad!"
 												],
 												"title": [
-																"Quedan {Segundos} segundos",
-																"Quedan {segundos} segundos"
+																"Quedan {seconds} segundos",
+																"Quedan {seconds} segundos"
 												]
 								},
 								"secret_santa": {
 												"blacklist": {
 																"add": {
 																				"added": {
-																								"description": "{member} ha sido añadido/a a la lista de traviesos.",
-																								"title": "✅ Agregado"
+																								"description": "{member} ha sido añadido a la lista de traviesos.",
+																								"title": "✅ Añadido"
 																				}
 																},
 																"list": "Lista de los traviesos",
 																"remove": {
 																				"cannot_remove": {
 																								"description": "{member} no está en la lista de los traviesos.",
-																								"title": "❌ No puedes remover al miembro"
+																								"title": "❌ No puedes eliminar al miembro"
 																				},
 																				"removed": {
-																								"description": "{member} ha sido removido de la lista de los traviesos.",
-																								"title": "✅ Removido"
+																								"description": "{member} ha sido eliminado de la lista de los traviesos.",
+																								"title": "✅ Eliminado"
 																				}
 																}
 												},
 												"no_event": {
-																"description": "No hay eventos de Secret Santa. Sigue [la guia]({url}) para crear una.",
+																"description": "No hay eventos de Amigo Invisible. Sigue [la guía]({url}) para crear una.",
 																"title": "❌ Error"
 												},
 												"not_enough_users": {
-																"description": "Perdón, no hay los suficientes participantes. Al menos 3 participantes necesitan entrar al evento de Secret Santa para ser asignados.",
+																"description": "Perdón, no hay suficientes participantes. Al menos 3 participantes tienen que unirse al evento de Amigo Invisible para ser asignados.",
 																"title": "😦 No suficientes participantes"
 												},
 												"show": {
@@ -335,7 +335,7 @@
 								"title": "Rastreador de Papá Noel"
 				},
 				"widget": {
-								"christmas_day": "🎄 Feliz Navidad!",
+								"christmas_day": "¡🎄 Feliz Navidad!",
 								"christmas_eve": [
 												"🎅 queda {hours} hora",
 												"🎅 quedan {hours} horas"
