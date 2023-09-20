@@ -48,11 +48,11 @@
 								},
 								"hours": {
 												"description": [
-																"¡Quedan **{hours}** horas hasta Navidad!",
+																"¡Queda **{hours}** hora hasta Navidad!",
 																"¡Quedan **{hours}** horas hasta Navidad!"
 												],
 												"title": [
-																"Quedan {hours} horas",
+																"Queda {hours} hora",
 																"Quedan {hours} horas"
 												]
 								},
@@ -126,7 +126,7 @@
 																"¡Quedan **{seconds}** segundos para Navidad!"
 												],
 												"title": [
-																"Quedan {seconds} segundos",
+																"Queda {seconds} segundo",
 																"Quedan {seconds} segundos"
 												]
 								},
