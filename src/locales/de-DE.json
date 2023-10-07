@@ -107,7 +107,7 @@
 												]
 								},
 								"ping": {
-												"calculating": "Berechne...",
+												"calculating": "Wird berechnet…",
 												"fields": {
 																"average_ping": "Durchschn. Ping",
 																"latency": "Durchschnittliche Latenz",
@@ -282,7 +282,7 @@
 								},
 								"weekday": {
 												"description": "Weihnachten ist {year} an einem **{day}**.",
-												"title": "Weihnachten ist am..."
+												"title": "Weihnachten ist am…"
 								},
 								"weeks": {
 												"description": [
