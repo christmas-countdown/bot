@@ -83,7 +83,7 @@
 								},
 								"joke": {
 												"answer": "Antwort",
-												"button": "Einen anderen Witz holen",
+												"button": "Bekomme einen weiteren Witz",
 												"question": "Frage"
 								},
 								"minutes": {
@@ -117,7 +117,7 @@
 												"title": "🏓 Pong!"
 								},
 								"radio": {
-												"description": "**[Den Christmas Radio Bot hinzufügen]({url})** um im eigenen Discord Server Weihnachtsmusik zu hören.",
+												"description": "**[Füge den Christmas Radio Bot hinzu]({url})** um auf deinem Discord Server Weihnachtsmusik zu hören.",
 												"title": "Christmas Radio"
 								},
 								"seconds": {
@@ -155,7 +155,7 @@
 																"title": "❌ Fehler"
 												},
 												"not_enough_users": {
-																"description": "Leider gab es nicht genügend Teilnehmer. Mindestens 3 Mitglieder müssen der Veranstaltung beitreten, damit die Wichtel zugewiesen werden können.",
+																"description": "Entschuldigung, es gab nicht genügend Teilnehmer. Es müssen mindestens 3 Mitglieder dem Event beitreten um als geheimer Weihnachtsmann auserwählt zu werden.",
 																"title": "😦 Nicht genügend Teilnehmer"
 												},
 												"show": {
@@ -195,19 +195,19 @@
 								},
 								"setup": {
 												"channel_created": {
-																"description": "**Das Sprach-Channel Widget wurde erstellt.** Den Channel löschen, um das Widget zu deaktivieren.",
+																"description": "**Der Widget Sprachkanal wurde erstellt.** Um das Widget zu deaktivieren, lösche den Kanal.",
 																"title": "✅ Countdown-Widget erstellt"
 												},
 												"channel_permissions_error": {
-																"description": "Ein Fehler ist aufgetreten beim Erstellen des Channels.\n[Versuche erneut den Bot hinzuzufügen]({add}).\nWenn es immer noch nicht funktioniert, [bitte um Hilfe]({support}).",
+																"description": "Ein Fehler ist während des Erstellens des Kanals aufgetreten.\n[Versuche den Bot erneut hinzuzufügen]({Hinzufügen}).\nWenn dies immer noch nicht funktioniert, [frage nach Hilfe]({Hilfe}).",
 																"title": "❌ Kanal kann nicht erstellt werden"
 												},
 												"missing_permission:channel": {
-																"description": "Der Bot hat nicht die Berechtigung, Kanäle zu verwalten.",
+																"description": "Der Bot hat keine Berechtigung um Kanäle zu verwalten.",
 																"title": "❌ Kanal kann nicht erstellt werden"
 												},
 												"missing_permission:view": {
-																"description": "Bitte stellen Sie sicher, dass der Bot die Berechtigung hat, den Kanal zu sehen.",
+																"description": "Bitte stelle sicher, dass der Bot Berechtigung hat den Kanal zu sehen.",
 																"title": "❌ Webhook konnte nicht erstellt werden"
 												},
 												"missing_permission:webhook": {
@@ -215,11 +215,11 @@
 																"title": "❌ Webhook kann nicht erstellt werden"
 												},
 												"webhook_created": {
-																"description": "**Der Countdown wurde aktiviert**; eine Nachricht wird jeden Morgen zwischen 5 und 6 Uhr an {channel} geschickt werden.\n\nVerwende {toggle} zum Deaktivieren.",
+																"description": "**Der Countdown wurde aktiviert**; eine Nachricht wird jeden Morgen zwischen 5 und 6 Uhr in {Kanal} gesendet.\n\nUm dies zu deaktivieren, benutze {toggle}.",
 																"title": "✅ Countdown-Webhook erstellt"
 												},
 												"webhook_permissions_error": {
-																"description": "Ein Fehler ist aufgetreten, beim Erstellen des Webhooks.\n[Versuche, den Bot erneut hinzuzufügen]({add}) und vergewissere dich, dass er den Countdown-Channel sehen kann.\nWenn das immer noch nicht funktioniert, [bitte um Hilfe]({support}).",
+																"description": "Ein Fehler ist während des Erstellens des Webhooks aufgetreten.\n[Versuche den Bot erneut hinzuzufügen]({add}) und stelle sicher, dass er den Countdown Kanal sehen kann.\nSollte dies nicht funktionieren, [frage nach Hilfe]({support}).",
 																"title": "❌ Webhook kann nicht erstellt werden"
 												}
 								},
@@ -311,19 +311,19 @@
 				"modals": {
 								"add_joke": {
 												"answer": {
-																"label": "Antworten",
+																"label": "Antwort",
 																"placeholder": "Santa Paws!"
 												},
 												"question": {
 																"label": "Frage",
 																"placeholder": "Wer liefert Geschenke an Katzen?"
 												},
-												"title": "Einen Weihnachtswitz hinzufügen"
+												"title": "Füge einen Weihnachtswitz hinzu"
 								},
 								"suggest": {
 												"suggestion": {
 																"label": "Vorschlag für Christmas Countdown",
-																"placeholder": "Ein Vorschlag für den Christmas Countdown Bot, bevorzugt auf Englisch."
+																"placeholder": "Ein Vorschlag für den Christmas Countdown bot, vorzugsweise auf Englisch."
 												},
 												"title": "Vorschlag"
 								}
