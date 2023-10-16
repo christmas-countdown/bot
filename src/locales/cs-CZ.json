@@ -5,7 +5,7 @@
 												"identifier": "Identifikátor",
 												"title": "Error"
 								},
-								"footer": "Christmas Countdown by eartharoid",
+								"footer": "Vánoční Countdown by Eartharoid",
 								"guild_only": {
 												"description": "Tento příkaz lze použít pouze v rámci serveru. [Přidat bota na tvůj server.]({invite})",
 												"title": "Error"
@@ -171,7 +171,7 @@
 								},
 								"server": {
 												"reset": {
-																"title": "✅ Server settings reset"
+																"title": "✅ Nastavení serveru resetováno"
 												},
 												"set": {
 																"cannot_enable": {
