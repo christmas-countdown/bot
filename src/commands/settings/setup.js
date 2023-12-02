@@ -82,7 +82,8 @@ module.exports = class SetupCommand extends Command {
 					},
 					where: { id: interaction.guild.id }
 				});
-			} catch {
+			} catch (error) {
+				this.client.log.error(error);
 				return await interaction.editReply({
 					embeds: [
 						new MessageEmbed()
