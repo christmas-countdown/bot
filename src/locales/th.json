@@ -1,115 +1,115 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
-												"identifier": "Identifier",
-												"title": "Error"
+												"description": "เกิดความผิดพลาดอย่างไม่ได้คาดคิด โปรดขอความช่วยเหลือใน [เซิร์ฟเวอร์สนับสนุน]({url})",
+												"identifier": "ตัวระบุ",
+												"title": "ข้อผิดพลาด"
 								},
-								"footer": "Christmas Countdown by eartharoid",
+								"footer": "Christmas Countdown โดย eartharoid",
 								"guild_only": {
-												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
-												"title": "Error"
+												"description": "คำสั่งนี้สามารถใช้ได้เฉพาะภายในช่องของเซิร์ฟเวอร์เท่านั้น [เพิ่มบอทไปยังเซิร์ฟเวอร์ของคุณ]({invite})",
+												"title": "ข้อผิดพลาด"
 								},
 								"member_missing_permissions": {
-												"description": "You need the following permissions to use this command:\n{permissions}",
-												"title": "Error"
+												"description": "คุณต้องมีสิทธิ์ต่อไปนี้เพื่อใช้คำสั่งนี้:\n{permissions}",
+												"title": "ข้อผิดพลาด"
 								},
-								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
+								"migrate": "ตอนนี้บอท Christmas Countdown ใช้คำสั่งสแลชได้แล้ว!\n**กรุณาเพิ่มบอทอีกครั้งโดยใช้ลิงค์นี่: https://christmascountdown.live/invite**",
 								"missing_permissions": {
-												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
-												"title": "Error"
+												"description": "บอท Christmas Countdown ต้องการการสิทธิ์ดังต่อไปนี้:\n{permissions}",
+												"title": "ข้อผิดพลาด"
 								}
 				},
 				"commands": {
 								"days": {
 												"days": [
-																"is **{days} day**",
-																"are **{days} days**"
+																"คือ **{days} วัน**",
+																"คือ **{days} วัน**"
 												],
-												"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "เหลือเวลาอีก {days} หรือ {sleeps}[(?)]({url} \"ความแตกต่างระหว่างวันและการหลับคืออะไร?\") เหลืออยู่จนถึงวันคริสต์มาส!",
 												"sleeps": [
-																"**{sleeps} sleep**",
-																"**{sleeps} sleeps**"
+																"**{sleeps} นอน**",
+																"**{sleeps} นอน**"
 												],
 												"title": [
-																"{days} day left",
-																"{days} days left"
+																"เหลืออีก {days} วัน",
+																"เหลืออีก {days} วัน"
 												]
 								},
 								"donate": {
-												"description": "**Donate at {url}**",
-												"title": "Donate"
+												"description": "**โดเนทได้ที่ {url}**",
+												"title": "โดเนท"
 								},
 								"help": {
 												"list": {
-																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
-																"title": "Commands"
+																"description": "คลิกที่ชื่อเพื่อรับข้อมูลเพิ่มเติมเกี่ยวกับคำสั่งเฉพาะ [เข้าร่วมเซิร์ฟเวอร์สนับสนุน]({discord}) หากคุณต้องการความช่วยเหลือ\n**[คลิกที่นี่เพื่อเปิดใช้งานการนับถอยหลัง]({enable})**",
+																"title": "คำสั่ง"
 												}
 								},
 								"hours": {
 												"description": [
-																"There is **{hours}** hour left until Christmas!",
-																"There are **{hours}** hours left until Christmas!"
+																"เหลืออีก **{hours}** ชั่วโมงจะถึงวันคริสต์มาส!",
+																"เหลืออีก **{hours}** ชั่วโมงจะถึงคริสต์มาส!"
 												],
 												"title": [
-																"{hours} hour left",
-																"{hours} hours left"
+																"เหลืออีก {hours} ชั่วโมง",
+																"เหลืออีก {hours} ชั่วโมง"
 												]
 								},
 								"info": {
-												"description": "The Christmas Countdown bot for Discord by [eartharoid]({eartharoid}) has been running since November 2018. [Learn more.]({about})",
+												"description": "บอท Christmas Countdown สำหรับ Discord โดย [eartharoid]({eartharoid}) เปิดใช้งานตั้งแต่เดือนพฤศจิกายน 2018 [เพิ่มเติม]({about})",
 												"fields": {
-																"commands": "Commands used",
+																"commands": "คำสั่งที่ใช้",
 																"counting_in": {
-																				"title": "Counting down in",
+																				"title": "นับถอยหลังใน",
 																				"value": [
-																								"{servers} server",
-																								"{servers} servers"
+																								"{servers} เซิร์ฟเวอร์",
+																								"{servers} เซิร์ฟเวอร์"
 																				]
 																},
 																"more": {
-																				"title": "More stats",
-																				"value": "[Click here]({url})"
+																				"title": "สถานะเพิ่มเติม",
+																				"value": "[คลิกที่นี่]({url})"
 																},
-																"secret_santa_events": "Secret Santa events",
-																"secret_santa_users": "Secret Santa participants",
-																"servers": "Servers"
+																"secret_santa_events": "กิจกรรมลับของซานต้า",
+																"secret_santa_users": "ผู้เข้ามีส่วนร่วมซานต้าลับ",
+																"servers": "เซิร์ฟเวอร์"
 												},
-												"title": "Information"
+												"title": "ข้อมูล"
 								},
 								"invite": {
-												"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
-												"title": "Invite"
+												"description": "[คลิกที่นี่]({url}) เพื่อเพิ่มบอท Christmas Countdown ไปยังเซิร์ฟเวอร์ของคุณเอง",
+												"title": "เชิญ"
 								},
 								"joke": {
-												"answer": "Answer",
-												"button": "Get another joke",
-												"question": "Question"
+												"answer": "คำตอบ",
+												"button": "เอาเรื่องตลกมาอีก",
+												"question": "คำถาม"
 								},
 								"minutes": {
 												"description": [
-																"There is **{minutes}** minute left until Christmas!",
-																"There are **{minutes}** minutes left until Christmas!"
+																"เหลืออีก **{minutes}** นาทีจะถึงวันคริสต์มาส!",
+																"เหลืออีก **{minutes}** นาทีจะถึงวันคริสต์มาส!"
 												],
 												"title": [
-																"{minutes} minute left",
-																"{minutes} minutes left"
+																"เหลือเวลาอีก {minutes} นาที",
+																"เหลืออีก {minutes} นาที"
 												]
 								},
 								"months": {
 												"description": [
-																"There is **{months}** month left until Christmas!",
-																"There are **{months}** months left until Christmas!"
+																"เหลืออีก **{months}** เดือนจะถึงวันคริสต์มาส!",
+																"เหลืออีก **{months}** เดือนจะถึงวันคริสต์มาส!"
 												],
 												"title": [
-																"{months} month left",
-																"{months} months left"
+																"เหลือเวลาอีก {months} เดือน",
+																"เหลือเวลาอีก {months} เดือน"
 												]
 								},
 								"ping": {
-												"calculating": "Calculating…",
+												"calculating": "กำลังคำนวณ…",
 												"fields": {
-																"average_ping": "Avg. ping",
+																"average_ping": "ปิงโดยเฉลี่ย",
 																"latency": "Overall latency",
 																"shard_number": "Shard number",
 																"shard_ping": "Shard ping"
