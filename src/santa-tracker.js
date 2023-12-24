@@ -21,23 +21,37 @@ module.exports.track = async (manager, prisma, log) => {
 		avatarURL = `https://cdn.discordapp.com/avatars/${id}/${avatar}.webp?size=64`;
 	}
 
-	const index = remaining.findIndex(location => {
-		const {
-			day,
-			hour,
-			minute
-		} = location.departure;
-		const now = spacetime.now('UTC');
-		let year = now.year();
-		if (now.month() === 11 && now.date() > 25) year++; // >25th, not 24th like the countdown
-		const departure = spacetime(`December ${day}, ${year} ${hour}:${minute}:00`, 'UTC');
-		return departure.isAfter(now);
-	});
+	let index;
+
+	if (remaining.length === 1) {
+		index = 0;
+		// reset it (although the bot will likely be restarted before next Christmas anyway)
+		remaining = [...locations];
+		messages = new Map();
+	} else {
+		index = remaining.findIndex(location => {
+			const {
+				day,
+				hour,
+				minute
+			} = location.departure;
+			const now = spacetime.now('UTC');
+			let year = now.year();
+			if (now.month() === 11 && now.date() > 25) year++; // >25th, not 24th like the countdown
+			const departure = spacetime(`December ${day}, ${year} ${hour}:${minute}:00`, 'UTC');
+			return departure.isAfter(now);
+		});
+	}
 
 	if (!index) return;
 
 	const location = remaining[remaining.length === locations.length ? 0 : index];
 	remaining.splice(0, index);
+
+	if (!location) {
+		log.warn('No location');
+		return;
+	}
 
 	const map = `https://www.google.com/maps/place/${location.city},+${location.region}/@${location.latitude},${location.longitude},10z`.replace(/\s/g, '+');
 
@@ -57,9 +71,6 @@ module.exports.track = async (manager, prisma, log) => {
 			.setTimestamp();
 
 		if (remaining.length <= 1) {
-			// first reset it (although the bot will likely be restarted before next Christmas anyway)
-			remaining = [...locations];
-			messages = new Map();
 			embed
 				.setDescription(getMessage('santa_tracker.ended', {
 					city: location.city,
