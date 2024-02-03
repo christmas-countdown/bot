@@ -1,13 +1,13 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "Une erreur inattendue est apparue. Veuillez demander de l'aide sur [le serveur d'assistance]({url}).",
+												"description": "Une erreur est survenue. Veuillez demander de l'aide sur [le serveur support]({url}).",
 												"identifier": "Identifiant",
 												"title": "Erreur"
 								},
 								"footer": "Christmas Countdown par eartharoid",
 								"guild_only": {
-												"description": "Cette commande ne peut être utilisée que dans un canal serveur. [Ajoutez le bot à votre serveur.]({invite})",
+												"description": "Cette commande ne peut être utilisée que dans un canal de serveur. [Ajoutez le bot à votre serveur.]({invite})",
 												"title": "Erreur"
 								},
 								"member_missing_permissions": {
