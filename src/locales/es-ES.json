@@ -5,7 +5,7 @@
 												"identifier": "Identificador",
 												"title": "Error"
 								},
-								"footer": "Christmas Countdown por eartharoid",
+								"footer": "Cuenta atrás navideña por eartharoid",
 								"guild_only": {
 												"description": "Este comando solo puede ser usado dentro de un canal de servidor. [Agrega el bot a tu servidor.]({invite})",
 												"title": "Error"
