@@ -256,15 +256,15 @@
 																"До Різдва залишилося {days}, {hours}, {minutes} та {seconds}!"
 												],
 												"hours": [
-																"**{hours} годин**",
+																"**{hours} година**",
 																"**{hours} годин**"
 												],
 												"minutes": [
-																"**{minutes} хвилин**",
+																"**{minutes} хвилина**",
 																"**{minutes} хвилин**"
 												],
 												"seconds": [
-																"**{seconds} секунд**",
+																"**{seconds} секунда**",
 																"**{seconds} секунд**"
 												],
 												"title": "{days}, {hours}, {minutes}, {seconds} залишилося"
