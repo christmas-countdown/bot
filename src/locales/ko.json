@@ -1,9 +1,9 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
+												"description": "예상치 못한 오류가 발생했습니다. [지원 서버]({url})에 도움을 요청하세요.",
 												"identifier": "Identifier",
-												"title": "Error"
+												"title": "오류"
 								},
 								"footer": "Christmas Countdown by eartharoid",
 								"guild_only": {
