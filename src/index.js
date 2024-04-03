@@ -39,11 +39,11 @@ prisma.$on('info', e => log.verbose.manager(e));
 prisma.$on('warn', e => log.warn.manager(e));
 prisma.$on('error', e => log.critical.manager(e));
 
-const Statcord = require('statcord.js');
-const statcord = new Statcord.ShardingClient({
-	key: process.env.STATCORD,
-	manager
-});
+// const Statcord = require('statcord.js');
+// const statcord = new Statcord.ShardingClient({
+// 	key: process.env.STATCORD,
+// 	manager
+// });
 
 manager.on('shardCreate', shard => {
 	log.info.manager(`Launched shard ${shard.id}`);
@@ -108,17 +108,17 @@ manager.spawn().then(async shards => {
 	}
 });
 
-statcord.registerCustomFieldHandler(1, async () => String(await prisma.guild.count({ where: { enabled: true } })));
-statcord.registerCustomFieldHandler(2, async () => String(await prisma.guild.count({ where: { voice_channel: { not: null } } })));
+// statcord.registerCustomFieldHandler(1, async () => String(await prisma.guild.count({ where: { enabled: true } })));
+// statcord.registerCustomFieldHandler(2, async () => String(await prisma.guild.count({ where: { voice_channel: { not: null } } })));
 
-statcord.on('autopost-start', () => {
-	log.info.manager('Automatic stats posting enabled');
-});
+// statcord.on('autopost-start', () => {
+// 	log.info.manager('Automatic stats posting enabled');
+// });
 
-statcord.on('post', error => {
-	if (error) log.error.manager(error);
-	else log.debug.manager('Posted stats');
-});
+// statcord.on('post', error => {
+// 	if (error) log.error.manager(error);
+// 	else log.debug.manager('Posted stats');
+// });
 
 process.on('unhandledRejection', error => {
 	log.notice.manager('An error was not caught');

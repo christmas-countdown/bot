@@ -8,7 +8,7 @@ const {
 	readdirSync,
 	statSync
 } = require('fs');
-const Statcord = require('statcord.js');
+// const Statcord = require('statcord.js');
 const { randomUUID } = require('crypto');
 
 module.exports = class CommandManager {
@@ -132,7 +132,7 @@ module.exports = class CommandManager {
 		try {
 			this.client.log.info(`Executing "${command.name}" command (invoked by ${interaction.user.tag})`);
 			await command.execute(interaction);
-			Statcord.ShardingClient.postCommand(interaction.commandName, interaction.user.id, this.client);
+			// Statcord.ShardingClient.postCommand(interaction.commandName, interaction.user.id, this.client);
 		} catch (error) {
 			const uuid = randomUUID();
 			this.client.log.warn(`An error occurred whilst executing the ${command.name} command`);
