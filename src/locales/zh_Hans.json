@@ -1,23 +1,23 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
-												"identifier": "Identifier",
-												"title": "Error"
+												"description": "出现意外错误。请到[支持服务器]({url})寻求帮助。",
+												"identifier": "标识",
+												"title": "错误"
 								},
-								"footer": "Christmas Countdown by eartharoid",
+								"footer": "圣诞倒计时 by eartharoid",
 								"guild_only": {
-												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
-												"title": "Error"
+												"description": "该命令只能在服务器频道内使用。[将机器人加入你的服务器]({invite})",
+												"title": "错误"
 								},
 								"member_missing_permissions": {
-												"description": "You need the following permissions to use this command:\n{permissions}",
-												"title": "Error"
+												"description": "使用此命令需要以下权限：\n{permissions}",
+												"title": "错误"
 								},
-								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
+								"migrate": "圣诞倒计时机器人现在使用斜线命令啦！\n**请在此处重新添加机器人：https://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
-												"title": "Error"
+												"description": "圣诞倒计时机器人需要以下权限：\n{permissions}",
+												"title": "错误"
 								}
 				},
 				"commands": {
@@ -32,13 +32,13 @@
 																"**{sleeps} sleeps**"
 												],
 												"title": [
-																"{days} day left",
-																"{days} days left"
+																"还剩{days}天",
+																"还剩{days}天"
 												]
 								},
 								"donate": {
-												"description": "**Donate at {url}**",
-												"title": "Donate"
+												"description": "** 在 {url} 捐赠**",
+												"title": "捐赠"
 								},
 								"help": {
 												"list": {
