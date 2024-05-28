@@ -5,7 +5,7 @@
 												"identifier": "標識碼",
 												"title": "錯誤"
 								},
-								"footer": "聖誕倒數由eartharoid提供的",
+								"footer": "Christmas Countdown 由 eartharoid 提供",
 								"guild_only": {
 												"description": "這指令只可在服務器頻道內使用。[新增機器人你的服務器]({invite})",
 												"title": "錯誤"
@@ -14,9 +14,9 @@
 												"description": "你需要以下權限以使用這指令：\n{permissions}",
 												"title": "錯誤"
 								},
-								"migrate": "聖誕倒數機器人現在使用斜槓命令！\n**請在此重新添加機器人：https://christmascountdown.live/invite。**",
+								"migrate": "Christmas Countdown 機器人現在使用斜槓命令！\n**請在此重新添加機器人：https://christmascountdown.live/invite。**",
 								"missing_permissions": {
-												"description": "這聖誕倒數機器人需要以下權限：\n{permissions}",
+												"description": "Christmas Countdown 機器人需要以下權限：\n{permissions}",
 												"title": "錯誤"
 								}
 				},
@@ -57,7 +57,7 @@
 												]
 								},
 								"info": {
-												"description": "這由[eartharoid]({eartharoid})提供的聖誕倒數機器人已由2018年11月運行至今。[了解更多]({about})",
+												"description": "這由 [eartharoid]({eartharoid}) 提供的 Christmas Countdown 機器人已由2018年11月運行至今。[了解更多]({about})",
 												"fields": {
 																"commands": "已使用指令",
 																"counting_in": {
@@ -78,7 +78,7 @@
 												"title": "信息"
 								},
 								"invite": {
-												"description": "[按此]({url}) 加入聖誕倒數機器人到你自己的服務器。",
+												"description": "[按此]({url})加入 Christmas Countdown 機器人到你自己的服務器。",
 												"title": "邀請"
 								},
 								"joke": {
@@ -322,8 +322,8 @@
 								},
 								"suggest": {
 												"suggestion": {
-																"label": "對聖誕倒數的建議",
-																"placeholder": "對聖誕倒數機器人的建議，最好是英文。"
+																"label": "對 Christmas Countdown 的建議",
+																"placeholder": "對 Christmas Countdown 機器人的建議，最好是英文。"
 												},
 												"title": "提議"
 								}
