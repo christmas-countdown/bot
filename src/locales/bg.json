@@ -3,28 +3,28 @@
 								"command_execution_error": {
 												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
 												"identifier": "Identifier",
-												"title": "Error"
+												"title": "Грешка"
 								},
 								"footer": "Christmas Countdown by eartharoid",
 								"guild_only": {
 												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
-												"title": "Error"
+												"title": "Грешка"
 								},
 								"member_missing_permissions": {
 												"description": "You need the following permissions to use this command:\n{permissions}",
-												"title": "Error"
+												"title": "Грешка"
 								},
 								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
 												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
-												"title": "Error"
+												"title": "Грешка"
 								}
 				},
 				"commands": {
 								"days": {
 												"days": [
-																"is **{days} day**",
-																"are **{days} days**"
+																"е **{days} ден**",
+																"са **{days} дни**"
 												],
 												"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
 												"sleeps": [
@@ -38,12 +38,12 @@
 								},
 								"donate": {
 												"description": "**Donate at {url}**",
-												"title": "Donate"
+												"title": "Дарете"
 								},
 								"help": {
 												"list": {
 																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
-																"title": "Commands"
+																"title": "Команди"
 												}
 								},
 								"hours": {
