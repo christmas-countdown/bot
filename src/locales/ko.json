@@ -8,16 +8,16 @@
 								"footer": "Christmas Countdown by eartharoid",
 								"guild_only": {
 												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
-												"title": "Error"
+												"title": "오류"
 								},
 								"member_missing_permissions": {
-												"description": "You need the following permissions to use this command:\n{permissions}",
-												"title": "Error"
+												"description": "이 명령어를 사용하려면 다음 권한이 필요합니다: \n{권한}",
+												"title": "오류"
 								},
-								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
+								"migrate": "크리스마스 카운트다운 봇이 이제 슬래시 (/) 명령어를 호환합니다!\n** 다음 링크에서 봇을 다시 추가하세요: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
-												"title": "Error"
+												"description": "크리스마스 카운트다운 봇을 사용하려면 다음 권한이 필요 합니다:\n{권한}",
+												"title": "오류"
 								}
 				},
 				"commands": {
