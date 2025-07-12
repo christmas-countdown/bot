@@ -14,7 +14,7 @@
 												"description": "使用此命令需要以下权限：\n{permissions}",
 												"title": "错误"
 								},
-								"migrate": "Christmas Countdown 机器人现在支持斜杠命令！\n**请在此重新添加该机器人：https://christmascountdown.live/invite**",
+								"migrate": "Christmas Countdown 机器人现在支持斜杠命令！\n**请在此重新添加该机器人：https://christmascountdown.live/invite。**",
 								"missing_permissions": {
 												"description": "Christmas Countdown 机器人需要以下权限：\n{permissions}",
 												"title": "错误"
@@ -32,8 +32,8 @@
 																"**{sleeps} 夜**"
 												],
 												"title": [
-																"还剩 {days} 天",
-																"还剩{days}天"
+																"还有 {days} 天",
+																"还有 {days} 天"
 												]
 								},
 								"donate": {
@@ -42,22 +42,22 @@
 								},
 								"help": {
 												"list": {
-																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
-																"title": "Commands"
+																"description": "点击其名称可获取关于特定命令的更多信息。如果需要帮助，请[加入支持服务器]({discord})。\n**[点击此处启用倒计时。]({enable})**",
+																"title": "指令"
 												}
 								},
 								"hours": {
 												"description": [
-																"There is **{hours}** hour left until Christmas!",
-																"There are **{hours}** hours left until Christmas!"
+																"离圣诞节还有 **{hours}** 小时！",
+																"离圣诞节还有 **{hours}** 个小时！"
 												],
 												"title": [
-																"{hours} hour left",
-																"{hours} hours left"
+																"还有 {hours} 小时",
+																"还剩 {hours} 小时"
 												]
 								},
 								"info": {
-												"description": "The Christmas Countdown bot for Discord by [eartharoid]({eartharoid}) has been running since November 2018. [Learn more.]({about})",
+												"description": "为 Discord 开发的 Christmas Countdown 机器人由 [eartharoid]({eartharoid}) 开发，自 2018 年 11 月起运行。[了解更多。]({about})",
 												"fields": {
 																"commands": "Commands used",
 																"counting_in": {
