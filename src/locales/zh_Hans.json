@@ -1,38 +1,38 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "出现意外错误。请到[支持服务器]({url})寻求帮助。",
-												"identifier": "标识",
+												"description": "出现意外错误。请在[支持服务器]({url})中寻求帮助。",
+												"identifier": "标识符",
 												"title": "错误"
 								},
-								"footer": "圣诞倒计时 by eartharoid",
+								"footer": "Christmas Countdown 由 eartharoid 开发",
 								"guild_only": {
-												"description": "该命令只能在服务器频道内使用。[将机器人加入你的服务器]({invite})",
+												"description": "此命令仅可在服务器频道内使用。[将机器人添加到您的服务器。]({invite})",
 												"title": "错误"
 								},
 								"member_missing_permissions": {
 												"description": "使用此命令需要以下权限：\n{permissions}",
 												"title": "错误"
 								},
-								"migrate": "圣诞倒计时机器人现在使用斜线命令啦！\n**请在此处重新添加机器人：https://christmascountdown.live/invite.**",
+								"migrate": "Christmas Countdown 机器人现在支持斜杠命令！\n**请在此重新添加该机器人：https://christmascountdown.live/invite**",
 								"missing_permissions": {
-												"description": "圣诞倒计时机器人需要以下权限：\n{permissions}",
+												"description": "Christmas Countdown 机器人需要以下权限：\n{permissions}",
 												"title": "错误"
 								}
 				},
 				"commands": {
 								"days": {
 												"days": [
-																"is **{days} day**",
-																"are **{days} days**"
+																"是 **{days} 日**",
+																"是 **{days} 日**"
 												],
-												"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "距离圣诞节还有 {days} 或 {sleeps}[(?)]({url} \"白天和夜晚有什么区别？\")！",
 												"sleeps": [
-																"**{sleeps} sleep**",
-																"**{sleeps} sleeps**"
+																"**{sleeps} 夜**",
+																"**{sleeps} 夜**"
 												],
 												"title": [
-																"还剩{days}天",
+																"还剩 {days} 天",
 																"还剩{days}天"
 												]
 								},
