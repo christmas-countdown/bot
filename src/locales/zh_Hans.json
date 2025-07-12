@@ -271,52 +271,52 @@
 								},
 								"user": {
 												"reset": {
-																"title": "✅  已重置用户设置"
+																"title": "✅ 已重置用户设置"
 												},
 												"set": {
-																"title": "✅ User settings updated"
+																"title": "✅ 已更新用户设置"
 												},
 												"view": {
-																"title": "User settings"
+																"title": "用户设置"
 												}
 								},
 								"weekday": {
-												"description": "Christmas Day is on a **{day}** in {year}.",
-												"title": "Christmas is on…"
+												"description": "{year} 年的圣诞节是在 **{day}**。",
+												"title": "圣诞节在…"
 								},
 								"weeks": {
 												"description": [
-																"There is **{weeks}** week left until Christmas!",
-																"There are **{weeks}** weeks left until Christmas!"
+																"距离圣诞节还有 **{weeks}** 周！",
+																"距离圣诞节还有 **{weeks}** 周！"
 												],
 												"title": [
-																"{weeks} week left",
-																"{weeks} weeks left"
+																"还剩 {weeks} 周",
+																"还剩 {weeks} 周"
 												]
 								}
 				},
 				"countdown": {
-								"christmas_day": "🎉 It's Christmas Day!",
-								"christmas_eve": "🎅 It's Christmas Eve!",
+								"christmas_day": "🎉 今天是圣诞节！",
+								"christmas_eve": "🎅 今天是平安夜！",
 								"disable": {
-												"description": "**Server administrators: use {toggle} to disable the countdown (and {server} to enable/disable the countdown automatically next time).**\n[Thank you for using this bot]({review}) and enjoy your Christmas! 🙂",
-												"title": "🎄 Merry Christmas"
+												"description": "**服务器管理员：使用 {toggle} 禁用倒计时（以及使用 {server} 自动启用/禁用下一次倒计时）。**\n[感谢使用此机器人]({review})，祝您圣诞快乐！🙂",
+												"title": "🎄 圣诞快乐"
 								},
-								"live": "View the live countdown at [{pretty}]({url}).",
-								"merry_christmas": "🎄 Merry Christmas!",
-								"server_timezone": "Server timezone: {timezone}",
-								"user_timezone": "User timezone: {timezone}"
+								"live": "在 [{pretty}]({url})} 查看实时倒计时。",
+								"merry_christmas": "🎄 圣诞快乐！",
+								"server_timezone": "服务器时区：{timezone}",
+								"user_timezone": "用户时区：{timezone}"
 				},
-				"disabled": "disabled",
+				"disabled": "已禁用",
 				"modals": {
 								"add_joke": {
 												"answer": {
-																"label": "Answer",
-																"placeholder": "Santa Paws!"
+																"label": "答案",
+																"placeholder": "圣诞爪爪！"
 												},
 												"question": {
-																"label": "Question",
-																"placeholder": "Who delivers presents to cats?"
+																"label": "问题",
+																"placeholder": "谁给猫咪送礼物？"
 												},
 												"title": "Add a Christmas joke"
 								},
