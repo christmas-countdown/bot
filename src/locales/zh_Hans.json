@@ -239,39 +239,39 @@
 												]
 								},
 								"suggest": {
-												"description": "感谢你的建议。",
-												"title": "✅ Submitted"
+												"description": "感谢您的建议。",
+												"title": "✅ 已提交"
 								},
 								"toggle": {
-												"disabled": "✅ Countdown disabled",
-												"enabled": "✅ Countdown enabled"
+												"disabled": "✅ 已禁用倒计时",
+												"enabled": "✅ 已启用倒计时"
 								},
 								"total": {
 												"days": [
-																"**{days} day**",
-																"**{days} days**"
+																"**{days} 日**",
+																"**{days} 日**"
 												],
 												"description": [
-																"There is {days}, {hours}, {minutes}, and {seconds} left until Christmas!",
-																"There are {days}, {hours}, {minutes}, and {seconds} left until Christmas!"
+																"距离圣诞节还有 {days}, {hours}, {minutes}, 和 {seconds} ！",
+																"距离圣诞节还有 {days}, {hours}, {minutes}, 和 {seconds} ！"
 												],
 												"hours": [
-																"**{hours} hour**",
-																"**{hours} hours**"
+																"**{hours} 小时**",
+																"**{hours} 小时**"
 												],
 												"minutes": [
-																"**{minutes} minute**",
-																"**{minutes} minutes**"
+																"**{minutes} 分钟**",
+																"**{minutes} 分钟**"
 												],
 												"seconds": [
-																"**{seconds} second**",
-																"**{seconds} seconds**"
+																"**{seconds} 秒**",
+																"**{seconds} 秒**"
 												],
-												"title": "{days}, {hours}, {minutes}, {seconds} left"
+												"title": "还剩 {days}, {hours}, {minutes}, {seconds}"
 								},
 								"user": {
 												"reset": {
-																"title": "✅ User settings reset"
+																"title": "✅  已重置用户设置"
 												},
 												"set": {
 																"title": "✅ User settings updated"
