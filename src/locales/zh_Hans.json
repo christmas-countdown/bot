@@ -43,7 +43,7 @@
 								"help": {
 												"list": {
 																"description": "点击其名称可获取关于特定命令的更多信息。如果需要帮助，请[加入支持服务器]({discord})。\n**[点击此处启用倒计时。]({enable})**",
-																"title": "指令"
+																"title": "命令"
 												}
 								},
 								"hours": {
@@ -59,47 +59,47 @@
 								"info": {
 												"description": "为 Discord 开发的 Christmas Countdown 机器人由 [eartharoid]({eartharoid}) 开发，自 2018 年 11 月起运行。[了解更多。]({about})",
 												"fields": {
-																"commands": "Commands used",
+																"commands": "已使用命令",
 																"counting_in": {
-																				"title": "Counting down in",
+																				"title": "倒数计时",
 																				"value": [
-																								"{servers} server",
-																								"{servers} servers"
+																								"{servers} 服务器",
+																								"{servers} 服务器"
 																				]
 																},
 																"more": {
-																				"title": "More stats",
-																				"value": "[Click here]({url})"
+																				"title": "更多统计",
+																				"value": "[点击此处]({url})"
 																},
-																"secret_santa_events": "Secret Santa events",
-																"secret_santa_users": "Secret Santa participants",
-																"servers": "Servers"
+																"secret_santa_events": "神秘圣诞老人活动",
+																"secret_santa_users": "神秘的圣诞参与者",
+																"servers": "服务器"
 												},
-												"title": "Information"
+												"title": "信息"
 								},
 								"invite": {
-												"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
-												"title": "Invite"
+												"description": "[点击此处]({url})将 Christmas Countdown 机器人添加到您自己的服务器。",
+												"title": "邀请"
 								},
 								"joke": {
-												"answer": "Answer",
-												"button": "Get another joke",
-												"question": "Question"
+												"answer": "答案",
+												"button": "再来一个笑话",
+												"question": "问题"
 								},
 								"minutes": {
 												"description": [
-																"There is **{minutes}** minute left until Christmas!",
-																"There are **{minutes}** minutes left until Christmas!"
+																"距离圣诞节还有 **{minutes}** 分钟！",
+																"距离圣诞节还有 **{minutes}** 分钟！"
 												],
 												"title": [
-																"{minutes} minute left",
-																"{minutes} minutes left"
+																"还剩 {minutes} 分钟",
+																"还剩 {minutes} 分钟"
 												]
 								},
 								"months": {
 												"description": [
-																"There is **{months}** month left until Christmas!",
-																"There are **{months}** months left until Christmas!"
+																"距离圣诞节还有 **{months}** 个月。",
+																"距离圣诞节还有 **{months}**个月！"
 												],
 												"title": [
 																"{months} month left",
