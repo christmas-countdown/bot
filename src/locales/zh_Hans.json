@@ -98,148 +98,148 @@
 								},
 								"months": {
 												"description": [
-																"距离圣诞节还有 **{months}** 个月。",
-																"距离圣诞节还有 **{months}**个月！"
+																"距离圣诞节还有 **{months}** 个月！",
+																"距离圣诞节还有 **{months}** 个月！"
 												],
 												"title": [
-																"{months} month left",
-																"{months} months left"
+																"还剩 {months} 个月",
+																"还剩 {months} 个月"
 												]
 								},
 								"ping": {
-												"calculating": "Calculating…",
+												"calculating": "正在计算中…",
 												"fields": {
-																"average_ping": "Avg. ping",
-																"latency": "Overall latency",
-																"shard_number": "Shard number",
-																"shard_ping": "Shard ping"
+																"average_ping": "平均延迟",
+																"latency": "总延迟",
+																"shard_number": "碎片数",
+																"shard_ping": "分片延迟"
 												},
-												"title": "🏓 Pong!"
+												"title": "🏓 乓！"
 								},
 								"radio": {
-												"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
-												"title": "Christmas Radio"
+												"description": "**[添加 Christmas Radio 机器人]({url})**，以便在您的 Discord 服务器中收听圣诞音乐。",
+												"title": "圣诞收音机"
 								},
 								"seconds": {
 												"description": [
-																"There is **{seconds}** second left until Christmas!",
-																"There are **{seconds}** seconds left until Christmas!"
+																"距离圣诞节还有 **{seconds}** 秒！",
+																"距离圣诞节还有 **{seconds}** 秒！"
 												],
 												"title": [
-																"{seconds} second left",
-																"{seconds} seconds left"
+																"还剩 {seconds} 秒",
+																"还剩 {seconds} 秒"
 												]
 								},
 								"secret_santa": {
 												"blacklist": {
 																"add": {
 																				"added": {
-																								"description": "{member} has been added to the naughty list.",
-																								"title": "✅ Added"
+																								"description": "{member} 已被添加到淘气名单中。",
+																								"title": "✅ 已加入"
 																				}
 																},
-																"list": "The naughty list",
+																"list": "淘气名单",
 																"remove": {
 																				"cannot_remove": {
-																								"description": "{member} is not on the naughty list.",
-																								"title": "❌ Can't remove member"
+																								"description": "{member} 不在淘气名单中。",
+																								"title": "❌ 不能移除成员"
 																				},
 																				"removed": {
-																								"description": "{member} has been removed from the naughty list.",
-																								"title": "✅ Removed"
+																								"description": "已从淘气名单中移除成员 {member}。",
+																								"title": "✅ 已移除"
 																				}
 																}
 												},
 												"no_event": {
-																"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
-																"title": "❌ Error"
+																"description": "目前没有神秘圣诞老人活动。请按照[指南]({url})创建一个。",
+																"title": "❌ 错误"
 												},
 												"not_enough_users": {
-																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
-																"title": "😦 Not enough participants"
+																"description": "抱歉，参与者数量不足。至少需要 3 名成员加入活动，才能分配神秘圣诞老人。",
+																"title": "😦 参与者数量不足"
 												},
 												"show": {
 																"none": {
-																				"description": "You have not entered a Secret Santa event.",
-																				"title": "❌ Not assigned"
+																				"description": "您尚未参加神秘圣诞老人活动。",
+																				"title": "❌ 未分配"
 																},
 																"show": {
-																				"description": "**You are {member}'s Santa.** Give them a gift, following the event guidelines set by the organiser.",
-																				"title": "Secret Santa"
+																				"description": "你是 {member} 的圣诞老人。 请按照组织者制定的活动规则，给他们一份礼物。",
+																				"title": "神秘圣诞老人"
 																}
 												}
 								},
 								"server": {
 												"reset": {
-																"title": "✅ Server settings reset"
+																"title": "✅ 重置服务器设置"
 												},
 												"set": {
 																"cannot_enable": {
-																				"description": "Create the countdown webhook with [`/setup`]({url}).",
-																				"title": "❌ Can't enable countdown"
+																				"description": "使用 [`/setup`]({url}) 创建倒计时 Webhook。",
+																				"title": "❌ 无法启用倒计时"
 																},
 																"invalid_locale": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid locale"
+																				"description": "再试一次，或[寻求帮助]({url})。",
+																				"title": "❌ 无效的地区设置"
 																},
 																"invalid_timezone": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid timezone"
+																				"description": "再试一次，或[寻求帮助]({url})。",
+																				"title": "❌ 无效的时区设置"
 																},
-																"title": "✅ Server settings updated"
+																"title": "✅ 服务器设置已更新"
 												},
 												"view": {
-																"description": "Change your settings with `/server set`.",
-																"title": "Server settings"
+																"description": "使用 `/server set` 更改您的设置。",
+																"title": "服务器设置"
 												}
 								},
 								"setup": {
 												"channel_created": {
-																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
-																"title": "✅ Countdown widget created"
+																"description": "**组件语音频道已创建。**若要禁用该组件，请删除此频道。",
+																"title": "✅ 倒计时组件已创建"
 												},
 												"channel_permissions_error": {
-																"description": "An error occurred whilst creating the channel.\n[Try adding the bot again]({add}).\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create channel"
+																"description": "创建频道时发生错误。\n[尝试重新添加机器人]({add})。\n如果仍然无法正常工作，请[寻求帮助]({support})。",
+																"title": "❌ 无法创建频道"
 												},
 												"missing_permission:channel": {
-																"description": "The bot does not have permission to manage channels.",
-																"title": "❌ Can't create channel"
+																"description": "机器人没有管理频道的权限。",
+																"title": "❌ 无法创建频道"
 												},
 												"missing_permission:view": {
-																"description": "Please ensure the bot has permission to view the channel.",
-																"title": "❌ Can't create webhook"
+																"description": "请确保机器人有权查看频道。",
+																"title": "❌ 无法创建 Webhook"
 												},
 												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
-																"title": "❌ Can't create webhook"
+																"description": "机器人没有管理 Webhook 的权限。",
+																"title": "❌ 无法创建 Webhook"
 												},
 												"webhook_created": {
-																"description": "**The countdown has been enabled**; a message will be sent to {channel} every morning between 5AM and 6AM.\n\nTo disable it, use {toggle}.",
-																"title": "✅ Countdown webhook created"
+																"description": "**倒计时已启用**；每天早上 5 点到 6 点之间，将向 {channel} 发送一条消息。\n \n要禁用它，请使用 {toggle}。",
+																"title": "✅ ✅ 倒计时 Webhook 已创建"
 												},
 												"webhook_permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create webhook"
+																"description": "创建 Webhook 时发生错误。\n[尝试重新添加机器人]({add})，并确保它能看到倒计时频道。\n如果仍然无法正常工作，请[寻求帮助]({support})。",
+																"title": "❌ 无法创建 Webhook"
 												}
 								},
 								"sleeps": {
 												"days": [
-																"**{days} day**",
-																"**{days} days**"
+																"**{days} 日**",
+																"**{days} 日**"
 												],
-												"description": "There {sleeps} or {days}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "距离圣诞节还有 {sleeps} 或 {days}[(?)]({url} \"白天和夜晚有什么区别？\")！",
 												"sleeps": [
-																"is **{sleeps} sleep**",
-																"are **{sleeps} sleeps**"
+																"是 **{sleeps} 夜**",
+																"是 **{sleeps} 夜**"
 												],
 												"title": [
-																"{sleeps} sleep left",
-																"{sleeps} sleeps left"
+																"还剩 {sleeps} 夜",
+																"还剩 {sleeps} 夜"
 												]
 								},
 								"suggest": {
-												"description": "Thank you for your suggestion.",
+												"description": "感谢你的建议。",
 												"title": "✅ Submitted"
 								},
 								"toggle": {
