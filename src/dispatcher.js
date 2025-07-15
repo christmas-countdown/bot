@@ -94,8 +94,8 @@ module.exports.dispatch = async (manager, prisma, log) => {
 			.setFooter(footer, avatarURL)
 			.setTimestamp();
 
-		const imageId = christmas.isToday(guild.timezone) ? 0 : sleeps <= 25 ? sleeps : null;
-		if (imageId !== null) embed.setImage(`https://static.eartharoid.me/christmas-countdown/sleeps-left/en/${imageId}@s.gif`);
+		const imageId = christmas.isToday(guild.timezone) ? 0 : sleeps < 25 ? sleeps : null;
+		if (imageId !== null) embed.setImage(`https://static.eartharoid.me/christmas-countdown/sleeps-left/v2/en/${imageId}-animated.webp`);
 
 		try {
 			const webhook = new WebhookClient({ url: guild.webhook });
