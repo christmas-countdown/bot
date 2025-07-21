@@ -1,22 +1,22 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
-												"identifier": "Identifier",
+												"description": "Настъпи неочаквана грешка. Моля, потърсете помощ в [сървъра за помощ]({url}).",
+												"identifier": "Идентификатор",
 												"title": "Грешка"
 								},
-								"footer": "Christmas Countdown by eartharoid",
+								"footer": "Christmas Countdown от eartharoid",
 								"guild_only": {
-												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
+												"description": "Можете да използвате тази команда единствено в сървърен канал. [Добавете бота към сървъра си.]({invite})",
 												"title": "Грешка"
 								},
 								"member_missing_permissions": {
-												"description": "You need the following permissions to use this command:\n{permissions}",
+												"description": "Нуждаете се от следните разрешения, за да използвате тази команда:\n{permissions}",
 												"title": "Грешка"
 								},
-								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
+								"migrate": "Ботът за Christmas Countdown вече използва команди с наклонена черта!\n**Моля добавете го отново от тук: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
+												"description": "Ботът за Christmas Countdown изисква следните разрешения:\n{permissions}",
 												"title": "Грешка"
 								}
 				},
