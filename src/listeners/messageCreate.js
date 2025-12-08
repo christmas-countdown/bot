@@ -1,14 +1,11 @@
-const {
-	colour,
-	haste_server
-} = require('../../config');
+const { colour } = require('../../config');
 const {
 	Message, // eslint-disable-line no-unused-vars
 	MessageEmbed
 } = require('discord.js');
 const EventListener = require('../modules/listeners/listener');
-const fetch = require('node-fetch');
 const { inspect } = require('util');
+const paste = require('../utils/paste');
 
 module.exports = class MessageCreateEventListener extends EventListener {
 	constructor(client) {
@@ -54,13 +51,7 @@ module.exports = class MessageCreateEventListener extends EventListener {
 				if (evaled.length < 100) {
 					evaled = evaled.replace(/`/g, '`' + String.fromCharCode(8203));
 				} else {
-					const res = await fetch(`${haste_server}/documents`, {
-						body: evaled,
-						method: 'POST'
-					});
-
-					if (res.ok) url = `${haste_server}/${(await res.json()).key}`;
-					else throw new Error('Failed to POST output');
+					url = await paste(evaled);
 				}
 
 				const title = `Output ${promise ? '(resolved `Promise`)' : ''}`;

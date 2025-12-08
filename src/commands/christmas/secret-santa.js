@@ -1,15 +1,12 @@
-const {
-	colour,
-	haste_server
-} = require('../../../config');
+const { colour } = require('../../../config');
 const Command = require('../../modules/commands/command');
 const {
 	CommandInteraction, // eslint-disable-line no-unused-vars
 	MessageEmbed,
 	Permissions
 } = require('discord.js');
-const fetch = require('node-fetch');
 const Table = require('ascii-table');
+const paste = require('../../utils/paste');
 
 module.exports = class SecretSantaCommand extends Command {
 	constructor(client) {
@@ -183,16 +180,11 @@ module.exports = class SecretSantaCommand extends Command {
 
 			for (const santa in event.users) table.addRow(santa, event.users[santa]);
 
-			const key = (await (await fetch(`${haste_server}/documents`, {
-				body: table,
-				method: 'POST'
-			}))?.json())?.key;
-
 			return await interaction.editReply({
 				embeds: [
 					new MessageEmbed()
 						.setColor(colour)
-						.setDescription(`${haste_server}/${key}`)
+						.setDescription(await paste(table))
 						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 				]
 			});
