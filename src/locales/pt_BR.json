@@ -1,34 +1,34 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
-												"identifier": "Identifier",
-												"title": "Error"
+												"description": "Ocorreu um erro inesperado. Por favor, peça ajuda no [servidor de suporte]({url}).",
+												"identifier": "Identificador",
+												"title": "Erro"
 								},
 								"footer": "Christmas Countdown by eartharoid",
 								"guild_only": {
-												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
-												"title": "Error"
+												"description": "Este comando só pode ser usado dentro de um canal de servidor. [Adicione o bot ao seu servidor.]({invite})",
+												"title": "Erro"
 								},
 								"member_missing_permissions": {
-												"description": "You need the following permissions to use this command:\n{permissions}",
-												"title": "Error"
+												"description": "Você precisa das seguintes permissões para usar este comando:\n{permissions}",
+												"title": "Erro"
 								},
-								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
+								"migrate": "O bot de contagem regressiva para o Natal agora usa comandos de barra!\n**Adicione o bot novamente aqui: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
-												"title": "Error"
+												"description": "O bot de contagem regressiva para o Natal requer as seguintes permissões:\n{permissions}",
+												"title": "Erro"
 								}
 				},
 				"commands": {
 								"days": {
 												"days": [
-																"is **{days} day**",
-																"are **{days} days**"
+																"é **{days} dia**",
+																"são **{days} dias**"
 												],
-												"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "Faltam {dias} ou {sonos}[(?)]({url} \"Qual a diferença entre dias e noites?\") para o Natal!",
 												"sleeps": [
-																"**{sleeps} sleep**",
+																"**{dorme} dorme**",
 																"**{sleeps} sleeps**"
 												],
 												"title": [
