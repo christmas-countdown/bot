@@ -74,7 +74,7 @@ module.exports = class SecretSantaCommand extends Command {
 		}
 
 		const event = await this.client.prisma.secretSanta.findFirst({
-			orderBy: { id: 'desc' },
+			orderBy: { id: 'asc' },
 			where: {
 				OR: [
 					{ status: 'ACTIVE' },
