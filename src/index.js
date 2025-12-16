@@ -75,36 +75,42 @@ manager.spawn().then(async shards => {
 	setInterval(() => tracker.track(manager, prisma, log), ms('1m'));
 
 	// server count posting
-	if (process.env.NODE_ENV === 'production') {
-		const botlists = require('blapi');
-		manager.fetchClientValues('user.id', 0).then(id => {
-			botlists.setLogging({
-				extended: false,
-				logger: {
-					error: log.error.manager,
-					info: log.info.manager,
-					warn: log.warn.manager
-				}
-			});
-			const keys = {
-				'botlist.space': process.env.BL_SPACE,
-				'botsfordiscord.com': process.env.BL_BFD,
-				'discord.bots.gg': process.env.BL_DBGG,
-				'discordapps.dev': process.env.BL_DADEV,
-				'discordbotlist.com': process.env.BL_DBL,
-				'discordservices.net': process.env.BL_DS,
-				'top.gg': process.env.BL_TOPGG,
-				'voidbots.net': process.env.BL_VOID
-			};
-			const post = async () => {
-				const shards = await manager.fetchClientValues('guilds.cache.size');
-				const guilds = shards.reduce((acc, count) => acc + count, 0);
-				botlists.manualPost(guilds, id, keys, 0, manager.shards.size, shards)
-					.then(() => log.success.manager(`Posted server count (${guilds} over ${shards.length} shards)`))
-					.catch(error => log.error.manager(error));
-			};
-			setInterval(post, ms('15m'));
+	if (process.env.NODE_ENV === 'production' && process.env.TOPGG) {
+		log.info.manager('Server count posting is enabled');
+		const { AutoPoster } = require('topgg-autoposter');
+		const poster = AutoPoster(process.env.TOPGG, manager);
+		poster.on('posted', () => {
+			log.success.manager('Posted server count');
 		});
+		// const botlists = require('blapi');
+		// manager.fetchClientValues('user.id', 0).then(id => {
+		// 	botlists.setLogging({
+		// 		extended: false,
+		// 		logger: {
+		// 			error: log.error.manager,
+		// 			info: log.info.manager,
+		// 			warn: log.warn.manager
+		// 		}1
+		// 	});
+		// 	const keys = {
+		// 		'botlist.space': process.env.BL_SPACE,
+		// 		'botsfordiscord.com': process.env.BL_BFD,
+		// 		'discord.bots.gg': process.env.BL_DBGG,
+		// 		'discordapps.dev': process.env.BL_DADEV,
+		// 		'discordbotlist.com': process.env.BL_DBL,
+		// 		'discordservices.net': process.env.BL_DS,
+		// 		'top.gg': process.env.BL_TOPGG,
+		// 		'voidbots.net': process.env.BL_VOID
+		// 	};
+		// 	const post = async () => {
+		// 		const shards = await manager.fetchClientValues('guilds.cache.size');
+		// 		const guilds = shards.reduce((acc, count) => acc + count, 0);
+		// 		botlists.manualPost(guilds, id, keys, 0, manager.shards.size, shards)
+		// 			.then(() => log.success.manager(`Posted server count (${guilds} over ${shards.length} shards)`))
+		// 			.catch(error => log.error.manager(error));
+		// 	};
+		// 	setInterval(post, ms('15m'));
+		// });
 	}
 });
 

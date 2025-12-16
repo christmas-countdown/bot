@@ -33,7 +33,8 @@
     "node-fetch": "^2.6.7",
     "spacetime": "^6.16.3",
     "statcord.js": "^3.4.3",
-    "timezone-soft": "^1.4.1"
+    "timezone-soft": "^1.4.1",
+    "topgg-autoposter": "^2.0.2"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.7",
