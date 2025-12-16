@@ -94,7 +94,7 @@ module.exports.dispatch = async (manager, prisma, log) => {
 			.setFooter(footer, avatarURL)
 			.setTimestamp();
 
-		const imageId = christmas.isToday(guild.timezone) ? 0 : sleeps < 25 ? sleeps : null;
+		const imageId = christmas.isToday(guild.timezone) ? '00' : sleeps < 25 ? String(sleeps).padStart(2, '0') : null;
 		if (imageId !== null) embed.setImage(`https://static.eartharoid.me/christmas-countdown/sleeps-left/v2/en/${imageId}-animated.webp`);
 
 		try {
