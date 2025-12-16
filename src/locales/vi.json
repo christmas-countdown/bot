@@ -1,345 +1,345 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
-												"identifier": "Identifier",
-												"title": "Error"
+												"description": "Đã xảy ra lỗi không mong muốn. Vui lòng yêu cầu trợ giúp trong [máy chủ trợ giúp]({url}).",
+												"identifier": "Mã định danh",
+												"title": "Lỗi"
 								},
-								"footer": "Christmas Countdown by eartharoid",
+								"footer": "Christmas Countdown bởi eartharoid",
 								"guild_only": {
-												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
-												"title": "Error"
+												"description": "Lệnh này chỉ có thể được sử dụng trong kênh máy chủ. [Thêm bot vào máy chủ của bạn.]({invite})",
+												"title": "Lỗi"
 								},
 								"member_missing_permissions": {
-												"description": "You need the following permissions to use this command:\n{permissions}",
-												"title": "Error"
+												"description": "Bạn cần có các quyền sau để sử dụng lệnh này:\n{permissions}",
+												"title": "Lỗi"
 								},
-								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
+								"migrate": "Christmas Countdown hiện sử dụng lệnh gạch chéo!\n**Vui lòng thêm lại bot tại đây: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
-												"title": "Error"
+												"description": "Bot Christmas Countdown yêu cầu các quyền sau:\n{permissions}",
+												"title": "Lỗi"
 								}
 				},
 				"commands": {
 								"days": {
 												"days": [
-																"is **{days} day**",
-																"are **{days} days**"
+																"là **{days} ngày**",
+																"là **{days} ngày**"
 												],
-												"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "Còn {days} hoặc {sleeps}[(?)]({url} \"Sự khác biệt giữa ngày và giấc ngủ là gì?\") cho đến Giáng sinh!",
 												"sleeps": [
-																"**{sleeps} sleep**",
-																"**{sleeps} sleeps**"
+																"**{sleeps} ngủ**",
+																"**{sleeps} ngủ**"
 												],
 												"title": [
-																"{days} day left",
-																"{days} days left"
+																"{days} ngày còn lại",
+																"{days} ngày còn lại"
 												]
 								},
 								"donate": {
-												"description": "**Donate at {url}**",
-												"title": "Donate"
+												"description": "**Quyên góp tại {url}**",
+												"title": "Quyên tặng"
 								},
 								"help": {
 												"list": {
-																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
-																"title": "Commands"
+																"description": "Nhấp vào tên của nó để biết thêm giới thiệu về một lệnh cụ thể. [Tham gia máy chủ trợ giúp]({discord}) nếu bạn cần trợ giúp.\n**[Nhấp vào đây để bật đếm ngược.]({enable})**",
+																"title": "Lệnh"
 												}
 								},
 								"hours": {
 												"description": [
-																"There is **{hours}** hour left until Christmas!",
-																"There are **{hours}** hours left until Christmas!"
+																"Còn **{hours}** giờ nữa là đến Giáng sinh!",
+																"Còn **{hours}** giờ nữa là đến Giáng sinh!"
 												],
 												"title": [
-																"{hours} hour left",
-																"{hours} hours left"
+																"{hours} giờ còn lại",
+																"{hours} giờ còn lại"
 												]
 								},
 								"info": {
-												"description": "The Christmas Countdown bot for Discord by [eartharoid]({eartharoid}) has been running since November 2018. [Learn more.]({about})",
+												"description": "Bot Christmas Countdown cho Discord của [eartharoid]({eartharoid}) đã chạy từ tháng 11 năm 2018. [Tìm hiểu thêm.]({about})",
 												"fields": {
-																"commands": "Commands used",
+																"commands": "Các lệnh được sử dụng",
 																"counting_in": {
-																				"title": "Counting down in",
+																				"title": "Đếm ngược vào",
 																				"value": [
-																								"{servers} server",
-																								"{servers} servers"
+																								"{servers} máy chủ",
+																								"{servers} máy chủ"
 																				]
 																},
 																"more": {
-																				"title": "More stats",
-																				"value": "[Click here]({url})"
+																				"title": "Thêm số liệu thống kê",
+																				"value": "[Bấm vào đây]({url})"
 																},
-																"secret_santa_events": "Secret Santa events",
-																"secret_santa_users": "Secret Santa participants",
-																"servers": "Servers"
+																"secret_santa_events": "Sự kiện bí mật của ông già Noel",
+																"secret_santa_users": "Những người tham gia ông già Noel bí mật",
+																"servers": "Máy chủ"
 												},
-												"title": "Information"
+												"title": "Thông tin"
 								},
 								"invite": {
-												"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
-												"title": "Invite"
+												"description": "[Nhấp vào đây]({url}) để thêm bot Christmas Countdown vào máy chủ của riêng bạn.",
+												"title": "Mời"
 								},
 								"joke": {
-												"answer": "Answer",
-												"button": "Get another joke",
-												"question": "Question"
+												"answer": "Trả lời",
+												"button": "Nhận một trò đùa khác",
+												"question": "Câu hỏi"
 								},
 								"minutes": {
 												"description": [
-																"There is **{minutes}** minute left until Christmas!",
-																"There are **{minutes}** minutes left until Christmas!"
+																"Còn **{minutes}** phút nữa là đến Giáng sinh!",
+																"Còn **{minutes}** phút nữa là đến Giáng sinh!"
 												],
 												"title": [
-																"{minutes} minute left",
-																"{minutes} minutes left"
+																"{minutes} phút còn lại",
+																"{minutes} phút còn lại"
 												]
 								},
 								"months": {
 												"description": [
-																"There is **{months}** month left until Christmas!",
-																"There are **{months}** months left until Christmas!"
+																"Còn tháng **{months}** nữa là đến Giáng sinh!",
+																"Còn **{months}** tháng nữa là đến Giáng sinh!"
 												],
 												"title": [
-																"{months} month left",
-																"{months} months left"
+																"{months} tháng còn lại",
+																"{months} tháng còn lại"
 												]
 								},
 								"ping": {
-												"calculating": "Calculating…",
+												"calculating": "Đang tính…",
 												"fields": {
-																"average_ping": "Avg. ping",
-																"latency": "Overall latency",
-																"shard_number": "Shard number",
-																"shard_ping": "Shard ping"
+																"average_ping": "Trung bình ping",
+																"latency": "Độ trễ tổng thể",
+																"shard_number": "Số mảnh",
+																"shard_ping": "Ping mảnh"
 												},
-												"title": "🏓 Pong!"
+												"title": "🏓 Bàng!"
 								},
 								"radio": {
-												"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
-												"title": "Christmas Radio"
+												"description": "**[Thêm bot Radio Giáng sinh]({url})** để nghe nhạc Giáng sinh trên máy chủ Discord của bạn.",
+												"title": "Đài phát thanh Giáng sinh"
 								},
 								"seconds": {
 												"description": [
-																"There is **{seconds}** second left until Christmas!",
-																"There are **{seconds}** seconds left until Christmas!"
+																"Còn **{seconds}** giây nữa là đến Giáng sinh!",
+																"Còn **{seconds}** giây nữa là đến Giáng sinh!"
 												],
 												"title": [
-																"{seconds} second left",
-																"{seconds} seconds left"
+																"{seconds} giây còn lại",
+																"{seconds} giây còn lại"
 												]
 								},
 								"secret_santa": {
 												"blacklist": {
 																"add": {
 																				"added": {
-																								"description": "{member} has been added to the naughty list.",
-																								"title": "✅ Added"
+																								"description": "{member} đã được thêm vào danh sách nghịch ngợm.",
+																								"title": "✅ Đã thêm"
 																				}
 																},
-																"list": "The naughty list",
+																"list": "Danh sách nghịch ngợm",
 																"remove": {
 																				"cannot_remove": {
-																								"description": "{member} is not on the naughty list.",
-																								"title": "❌ Can't remove member"
+																								"description": "{member} không có trong danh sách nghịch ngợm.",
+																								"title": "❌ Không thể xóa thành viên"
 																				},
 																				"removed": {
-																								"description": "{member} has been removed from the naughty list.",
-																								"title": "✅ Removed"
+																								"description": "{member} đã bị xóa khỏi danh sách nghịch ngợm.",
+																								"title": "✅ Đã xóa"
 																				}
 																}
 												},
 												"no_event": {
-																"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
-																"title": "❌ Error"
+																"description": "Không sự kiện ông già Noel bí mật nào cả. Hãy làm theo [hướng dẫn]({url}) để tạo một tài khoản.",
+																"title": "❌ lỗi"
 												},
 												"not_enough_users": {
-																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
-																"title": "😦 Not enough participants"
+																"description": "Rất tiếc, không có đủ người tham gia. Cần ít nhất 3 thành viên tham gia sự kiện để được chỉ định Ông già Noel bí mật.",
+																"title": "😦 Không đủ người tham gia"
 												},
 												"show": {
 																"none": {
-																				"description": "You have not entered a Secret Santa event.",
-																				"title": "❌ Not assigned"
+																				"description": "Bạn chưa tham gia sự kiện Bí mật ông già Noel.",
+																				"title": "❌ Chưa được chỉ định"
 																},
 																"show": {
-																				"description": "**You are {member}'s Santa.** Give them a gift, following the event guidelines set by the organiser.",
-																				"title": "Secret Santa"
+																				"description": "**Bạn là ông già Noel của {member}.** Hãy tặng quà cho họ theo đúng nguyên tắc sự kiện do ban tổ chức đặt ra.",
+																				"title": "Ông già Noel bí mật"
 																}
 												}
 								},
 								"server": {
 												"reset": {
-																"title": "✅ Server settings reset"
+																"title": "✅ Đặt lại cài đặt máy chủ"
 												},
 												"set": {
 																"cannot_enable": {
-																				"description": "Create the countdown webhook with [`/setup`]({url}).",
-																				"title": "❌ Can't enable countdown"
+																				"description": "Tạo webhook đếm ngược với [`/setup`]({url}).",
+																				"title": "❌ Không thể bật đếm ngược"
 																},
 																"invalid_locale": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid locale"
+																				"description": "Hãy thử lại hoặc [yêu cầu trợ giúp]({url}).",
+																				"title": "❌ Ngôn ngữ không hợp lệ"
 																},
 																"invalid_timezone": {
-																				"description": "Try again or [ask for help]({url}).",
-																				"title": "❌ Invalid timezone"
+																				"description": "Hãy thử lại hoặc [yêu cầu trợ giúp]({url}).",
+																				"title": "❌ Múi giờ không hợp lệ"
 																},
-																"title": "✅ Server settings updated"
+																"title": "✅ Đã cập nhật cài đặt máy chủ"
 												},
 												"view": {
-																"description": "Change your settings with `/server set`.",
-																"title": "Server settings"
+																"description": "Thay đổi cài đặt của bạn bằng `/server set`.",
+																"title": "Cài đặt máy chủ"
 												}
 								},
 								"setup": {
 												"channel_created": {
-																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
-																"title": "✅ Countdown widget created"
+																"description": "**Kênh thoại của tiện ích đã được tạo.** Để tắt tiện ích, hãy xóa kênh.",
+																"title": "✅ Đã tạo tiện ích đếm ngược"
 												},
 												"channel_permissions_error": {
-																"description": "An error occurred whilst creating the channel.\n[Try adding the bot again]({add}).\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create channel"
+																"description": "Đã xảy ra lỗi khi tạo kênh.\n[Thử thêm bot lần nữa]({add}).\nNếu vẫn không được, [yêu cầu trợ giúp]({support}).",
+																"title": "❌ Không tạo được kênh"
 												},
 												"missing_permission:channel": {
-																"description": "The bot does not have permission to manage channels.",
-																"title": "❌ Can't create channel"
+																"description": "Bot không có quyền quản lý kênh.",
+																"title": "❌ Không tạo được kênh"
 												},
 												"missing_permission:view": {
-																"description": "Please ensure the bot has permission to view the channel.",
-																"title": "❌ Can't create webhook"
+																"description": "Hãy đảm bảo bot có quyền xem kênh.",
+																"title": "❌ Không tạo được webhook"
 												},
 												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
-																"title": "❌ Can't create webhook"
+																"description": "Bot không có quyền quản lý webhook.",
+																"title": "❌ Không tạo được webhook"
 												},
 												"webhook_created": {
-																"description": "**The countdown has been enabled**; a message will be sent to {channel} every morning between 5AM and 6AM.\n\nTo disable it, use {toggle}.",
-																"title": "✅ Countdown webhook created"
+																"description": "**Tính năng đếm ngược đã bật**; một tin nhắn sẽ được gửi tới {channel} mỗi sáng từ 5 giờ sáng đến 6 giờ sáng.\n\nĐể tắt nó, hãy sử dụng {toggle}.",
+																"title": "✅ Đã tạo webhook đếm ngược"
 												},
 												"webhook_permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create webhook"
+																"description": "Đã xảy ra lỗi khi tạo webhook.\n[Thử thêm lại bot]({add}) và đảm bảo nó có thể nhìn thấy kênh đếm ngược.\nNếu vẫn không được, [yêu cầu trợ giúp]({support}).",
+																"title": "❌ Không tạo được webhook"
 												}
 								},
 								"sleeps": {
 												"days": [
-																"**{days} day**",
-																"**{days} days**"
+																"**{days} ngày**",
+																"**{days} ngày**"
 												],
-												"description": "There {sleeps} or {days}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "Còn {sleeps} hoặc {days}[(?)]({url} \"Sự khác biệt giữa ngày và giấc ngủ là gì?\") cho đến Giáng sinh!",
 												"sleeps": [
-																"is **{sleeps} sleep**",
-																"are **{sleeps} sleeps**"
+																"Đang **{sleeps} đang ngủ**",
+																"Đang **{sleeps} đang ngủ**"
 												],
 												"title": [
-																"{sleeps} sleep left",
-																"{sleeps} sleeps left"
+																"{sleeps} ngủ còn lại",
+																"{sleeps} ngủ còn lại"
 												]
 								},
 								"suggest": {
-												"description": "Thank you for your suggestion.",
-												"title": "✅ Submitted"
+												"description": "Cảm ơn bạn đã gợi ý của bạn.",
+												"title": "✅ Đã gửi"
 								},
 								"toggle": {
-												"disabled": "✅ Countdown disabled",
-												"enabled": "✅ Countdown enabled"
+												"disabled": "✅ Vô hiệu hóa đếm ngược",
+												"enabled": "✅ đã bật tính năng đếm ngược"
 								},
 								"total": {
 												"days": [
-																"**{days} day**",
-																"**{days} days**"
+																"**{days} ngày**",
+																"**{days} ngày**"
 												],
 												"description": [
-																"There is {days}, {hours}, {minutes}, and {seconds} left until Christmas!",
-																"There are {days}, {hours}, {minutes}, and {seconds} left until Christmas!"
+																"Còn {days}, {hours}, {minutes} và {seconds} cho đến Giáng sinh!",
+																"Còn {days}, {hours}, {minutes} và {seconds} cho đến Giáng sinh!"
 												],
 												"hours": [
-																"**{hours} hour**",
-																"**{hours} hours**"
+																"**{hours} giờ**",
+																"**{hours} giờ**"
 												],
 												"minutes": [
-																"**{minutes} minute**",
-																"**{minutes} minutes**"
+																"**{minutes} phút**",
+																"**{minutes} phút**"
 												],
 												"seconds": [
-																"**{seconds} second**",
-																"**{seconds} seconds**"
+																"**{seconds} giây**",
+																"**{seconds} giây**"
 												],
-												"title": "{days}, {hours}, {minutes}, {seconds} left"
+												"title": "{days}, {hours}, {minutes}, {seconds} còn lại"
 								},
 								"user": {
 												"reset": {
-																"title": "✅ User settings reset"
+																"title": "✅ Đặt lại cài đặt người dùng"
 												},
 												"set": {
-																"title": "✅ User settings updated"
+																"title": "✅ Đã cập nhật cài đặt người dùng"
 												},
 												"view": {
-																"title": "User settings"
+																"title": "Cài đặt người dùng"
 												}
 								},
 								"weekday": {
-												"description": "Christmas Day is on a **{day}** in {year}.",
-												"title": "Christmas is on…"
+												"description": "Ngày Giáng sinh diễn ra trên **{day}** ở {year}.",
+												"title": "Giáng sinh đang đến…"
 								},
 								"weeks": {
 												"description": [
-																"There is **{weeks}** week left until Christmas!",
-																"There are **{weeks}** weeks left until Christmas!"
+																"Còn tuần **{weeks}** nữa là đến Giáng sinh!",
+																"Còn **{weeks}** tuần nữa là đến Giáng sinh!"
 												],
 												"title": [
-																"{weeks} week left",
-																"{weeks} weeks left"
+																"{weeks} tuần còn lại",
+																"{weeks} tuần còn lại"
 												]
 								}
 				},
 				"countdown": {
-								"christmas_day": "🎉 It's Christmas Day!",
-								"christmas_eve": "🎅 It's Christmas Eve!",
+								"christmas_day": "🎉 Đó là ngày Giáng sinh!",
+								"christmas_eve": "🎅 Đó là đêm Giáng sinh!",
 								"disable": {
-												"description": "**Server administrators: use {toggle} to disable the countdown (and {server} to enable/disable the countdown automatically next time).**\n[Thank you for using this bot]({review}) and enjoy your Christmas! 🙂",
-												"title": "🎄 Merry Christmas"
+												"description": "**Quản trị viên máy chủ: sử dụng {toggle} để tắt đồng hồ đếm ngược (và {server} để tự động bật/tắt đồng hồ đếm ngược vào lần tiếp theo).**\n[Cảm ơn bạn đã sử dụng bot này]({review}) và chúc bạn Giáng sinh vui vẻ! 🙂",
+												"title": "🎄 Giáng sinh vui vẻ"
 								},
-								"live": "View the live countdown at [{pretty}]({url}).",
-								"merry_christmas": "🎄 Merry Christmas!",
-								"server_timezone": "Server timezone: {timezone}",
-								"user_timezone": "User timezone: {timezone}"
+								"live": "Xem đếm ngược trực tiếp tại [{pretty}]({url}).",
+								"merry_christmas": "🎄 Giáng sinh vui vẻ!",
+								"server_timezone": "Múi giờ của máy chủ: {timezone}",
+								"user_timezone": "Múi giờ của người dùng: {timezone}"
 				},
-				"disabled": "disabled",
+				"disabled": "đã tắt",
 				"modals": {
 								"add_joke": {
 												"answer": {
-																"label": "Answer",
-																"placeholder": "Santa Paws!"
+																"label": "Trả lời",
+																"placeholder": "Bàn chân ông già Noel!"
 												},
 												"question": {
-																"label": "Question",
-																"placeholder": "Who delivers presents to cats?"
+																"label": "Câu hỏi",
+																"placeholder": "Ai mang quà cho mèo?"
 												},
-												"title": "Add a Christmas joke"
+												"title": "Thêm một câu chuyện cười Giáng sinh"
 								},
 								"suggest": {
 												"suggestion": {
-																"label": "Suggestion for Christmas Countdown",
-																"placeholder": "A suggestion for the Christmas Countdown bot, preferably in English."
+																"label": "Gợi ý cho Christmas Countdown",
+																"placeholder": "Một gợi ý cho bot Christmas Countdown, tốt nhất là bằng tiếng Anh."
 												},
-												"title": "Suggestion"
+												"title": "Gợi ý"
 								}
 				},
 				"santa_tracker": {
-								"description": "Santa is currently delivering presents over **[{city}, {region}]({map})**.",
-								"ended": "Santa has finished delivering presents and is back in **{city}, {region}** for a rest.\n\n[Please vote for the bot]({vote}) if you enjoyed this feature.",
-								"starting": "Santa is departing **{city}, {region}** to start delivering presents.",
-								"title": "Santa Tracker"
+								"description": "Ông già Noel hiện đang phát quà vào **[{city}, {region}]({map})**.",
+								"ended": "Ông già Noel đã phát quà xong và quay lại **{city}, {region}** để nghỉ ngơi.\n\n[Hãy bỏ phiếu cho bot]({vote}) nếu bạn thích tính năng này.",
+								"starting": "Ông già Noel đang khởi hành **{city}, {region}** để bắt đầu phát quà.",
+								"title": "Theo dõi ông già Noel"
 				},
 				"widget": {
-								"christmas_day": "🎄 Merry Christmas!",
+								"christmas_day": "🎄 Giáng sinh vui vẻ!",
 								"christmas_eve": [
-												"🎅 {hours} hour left",
-												"🎅 {hours} hours left"
+												"🎅 {hours} giờ còn lại",
+												"🎅 {hours} giờ còn lại"
 								],
-								"normal": "🎅 {sleeps} sleeps left"
+								"normal": "🎅 {sleeps} ngủ còn lại"
 				}
 }
