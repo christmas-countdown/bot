@@ -21,13 +21,20 @@ module.exports.track = async (manager, prisma, log) => {
 		avatarURL = `https://cdn.discordapp.com/avatars/${id}/${avatar}.webp?size=64`;
 	}
 
-	let index;
+	const now = spacetime.now('UTC');
+	let index = -1;
+	let finished = false;
 
 	if (remaining.length === 1) {
-		index = 0;
-		// reset it (although the bot will likely be restarted before next Christmas anyway)
-		remaining = [...locations];
-		messages = new Map();
+		if (now.date() > 25) {
+			log.info('Resetting Santa Tracker');
+			finished = false;
+			index = 0;
+			remaining = [...locations];
+			messages = new Map();
+		} else {
+			finished = true;
+		}
 	} else {
 		index = remaining.findIndex(location => {
 			const {
@@ -35,7 +42,6 @@ module.exports.track = async (manager, prisma, log) => {
 				hour,
 				minute
 			} = location.departure;
-			const now = spacetime.now('UTC');
 			let year = now.year();
 			if (now.month() === 11 && now.date() > 25) year++; // >25th, not 24th like the countdown
 			const departure = spacetime(`December ${day}, ${year} ${hour}:${minute}:00`, 'UTC');
@@ -43,7 +49,7 @@ module.exports.track = async (manager, prisma, log) => {
 		});
 	}
 
-	if (!index) return;
+	if (index === -1) return;
 
 	const location = remaining[remaining.length === locations.length ? 0 : index];
 	remaining.splice(0, index);
@@ -70,7 +76,7 @@ module.exports.track = async (manager, prisma, log) => {
 			.setFooter(getMessage('bot.footer'), avatarURL)
 			.setTimestamp();
 
-		if (remaining.length <= 1) {
+		if (finished) {
 			embed
 				.setDescription(getMessage('santa_tracker.ended', {
 					city: location.city,
@@ -113,6 +119,9 @@ module.exports.track = async (manager, prisma, log) => {
 				});
 				messages.delete(guild.id);
 				log.info(`Removed dead webhook for guild ${guild.id}`);
+			} else if (error.message?.match(/Unknown Message/)) {
+				messages.delete(guild.id);
+				log.info(`Removed dead message for guild ${guild.id}`);
 			}
 		}
 	}
