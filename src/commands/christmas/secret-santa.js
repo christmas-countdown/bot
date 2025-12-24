@@ -109,116 +109,116 @@ module.exports = class SecretSantaCommand extends Command {
 		}
 
 		switch (subcommand) {
-			case 'blacklist': {
-				// if no add and no remove: list
-				const add = interaction.options.getMember('add');
-				const remove = interaction.options.getMember('remove');
+		case 'blacklist': {
+			// if no add and no remove: list
+			const add = interaction.options.getMember('add');
+			const remove = interaction.options.getMember('remove');
 
-				if (add) {
-					g_settings = await this.client.prisma.guild.update({
-						data: { secret_santa_blacklist: [...g_settings.secret_santa_blacklist, add.id] },
-						where: { id: interaction.guild.id }
-					});
-
-					return await interaction.editReply({
-						embeds: [
-							new MessageEmbed()
-								.setColor(colour)
-								.setTitle(i18n('commands.secret_santa.blacklist.add.added.title'))
-								.setDescription(i18n('commands.secret_santa.blacklist.add.added.description', { member: add.toString() }))
-								.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
-						]
-					});
-				} else if (remove) {
-					const list = [...g_settings.secret_santa_blacklist];
-					const index = list.findIndex(id => id === remove.id);
-
-					if (index === -1) {
-						return await interaction.editReply({
-							embeds: [
-								new MessageEmbed()
-									.setColor(colour)
-									.setTitle(i18n('commands.secret_santa.blacklist.remove.cannot_remove.title'))
-									.setDescription(i18n('commands.secret_santa.blacklist.remove.cannot_remove.description', { member: remove.toString() }))
-									.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
-							]
-						});
-					}
-
-					list.splice(index, 1);
-
-					g_settings = await this.client.prisma.guild.update({
-						data: { secret_santa_blacklist: list },
-						where: { id: interaction.guild.id }
-					});
-
-					return await interaction.editReply({
-						embeds: [
-							new MessageEmbed()
-								.setColor(colour)
-								.setTitle(i18n('commands.secret_santa.blacklist.remove.removed.title'))
-								.setDescription(i18n('commands.secret_santa.blacklist.remove.removed.description', { member: remove.toString() }))
-								.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
-						]
-					});
-				} else {
-					return await interaction.editReply({
-						embeds: [
-							new MessageEmbed()
-								.setColor(colour)
-								.setTitle(i18n('commands.secret_santa.blacklist.list'))
-								.setDescription(g_settings.secret_santa_blacklist.map(id => `<@${id}>`).join(', '))
-								.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
-						]
-					});
-				}
-				// break;
-			}
-			case 'list': {
-				const table = new Table(`${interaction.guild.name} Secret Santa participants`);
-				table.setHeading('Santa', 'Recipient');
-
-				for (const santa in event.users) table.addRow(santa, event.users[santa]);
+			if (add) {
+				g_settings = await this.client.prisma.guild.update({
+					data: { secret_santa_blacklist: [...g_settings.secret_santa_blacklist, add.id] },
+					where: { id: interaction.guild.id }
+				});
 
 				return await interaction.editReply({
 					embeds: [
 						new MessageEmbed()
 							.setColor(colour)
-							.setDescription(await paste(table))
+							.setTitle(i18n('commands.secret_santa.blacklist.add.added.title'))
+							.setDescription(i18n('commands.secret_santa.blacklist.add.added.description', { member: add.toString() }))
 							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
 					]
 				});
-				// break;
-			}
-			case 'show':
-			default: {
-				if (event.users[interaction.user.id]) {
+			} else if (remove) {
+				const list = [...g_settings.secret_santa_blacklist];
+				const index = list.findIndex(id => id === remove.id);
+
+				if (index === -1) {
 					return await interaction.editReply({
 						embeds: [
 							new MessageEmbed()
 								.setColor(colour)
-								.setTitle(i18n('commands.secret_santa.show.show.title'))
-								.setDescription(i18n('commands.secret_santa.show.show.description', { member: `<@${event.users[interaction.user.id]}>` }))
-								.setThumbnail('https://static.eartharoid.me/christmas-countdown/3d/gift-in-hand.png')
+								.setTitle(i18n('commands.secret_santa.blacklist.remove.cannot_remove.title'))
+								.setDescription(i18n('commands.secret_santa.blacklist.remove.cannot_remove.description', { member: remove.toString() }))
 								.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
-						],
-						ephemeral: true // VERY IMPORTANT!
-					});
-				} else {
-					return await interaction.editReply({
-						embeds: [
-							new MessageEmbed()
-								.setColor(colour)
-								.setTitle(i18n('commands.secret_santa.show.none.title'))
-								.setDescription(i18n('commands.secret_santa.show.none.description'))
-								.setThumbnail('https://static.eartharoid.me/christmas-countdown/3d/snowman.png')
-								.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
-						],
-						ephemeral: true
+						]
 					});
 				}
-				// break;
+
+				list.splice(index, 1);
+
+				g_settings = await this.client.prisma.guild.update({
+					data: { secret_santa_blacklist: list },
+					where: { id: interaction.guild.id }
+				});
+
+				return await interaction.editReply({
+					embeds: [
+						new MessageEmbed()
+							.setColor(colour)
+							.setTitle(i18n('commands.secret_santa.blacklist.remove.removed.title'))
+							.setDescription(i18n('commands.secret_santa.blacklist.remove.removed.description', { member: remove.toString() }))
+							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
+					]
+				});
+			} else {
+				return await interaction.editReply({
+					embeds: [
+						new MessageEmbed()
+							.setColor(colour)
+							.setTitle(i18n('commands.secret_santa.blacklist.list'))
+							.setDescription(g_settings.secret_santa_blacklist.map(id => `<@${id}>`).join(', '))
+							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
+					]
+				});
 			}
+			// break;
+		}
+		case 'list': {
+			const table = new Table(`${interaction.guild.name} Secret Santa participants`);
+			table.setHeading('Santa', 'Recipient');
+
+			for (const santa in event.users) table.addRow(santa, event.users[santa]);
+
+			return await interaction.editReply({
+				embeds: [
+					new MessageEmbed()
+						.setColor(colour)
+						.setDescription(await paste(table))
+						.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
+				]
+			});
+			// break;
+		}
+		case 'show':
+		default: {
+			if (event.users[interaction.user.id]) {
+				return await interaction.editReply({
+					embeds: [
+						new MessageEmbed()
+							.setColor(colour)
+							.setTitle(i18n('commands.secret_santa.show.show.title'))
+							.setDescription(i18n('commands.secret_santa.show.show.description', { member: `<@${event.users[interaction.user.id]}>` }))
+							.setThumbnail('https://static.eartharoid.me/christmas-countdown/3d/gift-in-hand.png')
+							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
+					],
+					ephemeral: true // VERY IMPORTANT!
+				});
+			} else {
+				return await interaction.editReply({
+					embeds: [
+						new MessageEmbed()
+							.setColor(colour)
+							.setTitle(i18n('commands.secret_santa.show.none.title'))
+							.setDescription(i18n('commands.secret_santa.show.none.description'))
+							.setThumbnail('https://static.eartharoid.me/christmas-countdown/3d/snowman.png')
+							.setFooter(i18n('bot.footer'), this.client.user.avatarURL())
+					],
+					ephemeral: true
+				});
+			}
+			// break;
+		}
 		}
 	}
 };
