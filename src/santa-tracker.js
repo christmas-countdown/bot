@@ -15,6 +15,9 @@ let id, avatarURL;
 
 module.exports.track = async (manager, prisma, log) => {
 
+	log.warn('SANTA TRACKER IS DISABLED BECAUSE THIS CODE SUCKS');
+	return;
+
 	if (!id || !avatarURL) {
 		id = await manager.fetchClientValues('user.id', 0);
 		const avatar = await manager.fetchClientValues('user.avatar', 0);
