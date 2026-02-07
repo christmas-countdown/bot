@@ -29,7 +29,7 @@
 												"description": "Faltam {dias} ou {sonos}[(?)]({url} \"Qual a diferença entre dias e noites?\") para o Natal!",
 												"sleeps": [
 																"**{dorme} dorme**",
-																"**{sleeps} sleeps**"
+																"**{dorme} dorme**"
 												],
 												"title": [
 																"{days} day left",
