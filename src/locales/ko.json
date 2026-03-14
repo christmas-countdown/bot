@@ -5,16 +5,16 @@
 												"identifier": "Identifier",
 												"title": "오류"
 								},
-								"footer": "Christmas Countdown by eartharoid",
+								"footer": "Eartharoid의 크리스마스 카운트 다운",
 								"guild_only": {
-												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
+												"description": "이 명령은 서버 채널 내에서만 사용할 수 있습니다. [보트를 서버에 추가하세요]",
 												"title": "오류"
 								},
 								"member_missing_permissions": {
 												"description": "이 명령어를 사용하려면 다음 권한이 필요합니다: \n{권한}",
 												"title": "오류"
 								},
-								"migrate": "크리스마스 카운트다운 봇이 이제 슬래시 (/) 명령어를 호환합니다!\n** 다음 링크에서 봇을 다시 추가하세요: https://christmascountdown.live/invite.**",
+								"migrate": "크리스마스 계산봇은 이제 슬래시 명령을 사용합니다! \n**보트를 다시 추가하시기 바랍니다: https://christmascountdown.live/invite. *",
 								"missing_permissions": {
 												"description": "크리스마스 카운트다운 봇을 사용하려면 다음 권한이 필요 합니다:\n{권한}",
 												"title": "오류"
@@ -26,7 +26,7 @@
 																"is **{days} day**",
 																"are **{days} days**"
 												],
-												"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "“그 날과 잠 사이의 차이점은 무엇입니까?”(요한복음)!",
 												"sleeps": [
 																"**{sleeps} sleep**",
 																"**{sleeps} sleeps**"
@@ -42,14 +42,14 @@
 								},
 								"help": {
 												"list": {
-																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
+																"description": "특정 명령에 대한 자세한 정보를 얻으려면 이름을 클릭합니다. [지원 서버에 가입하십시오]({discord}) 도움이 필요한 경우 \n* [이를 클릭하여 계산을 활성화하십시오.]({enable})",
 																"title": "Commands"
 												}
 								},
 								"hours": {
 												"description": [
-																"There is **{hours}** hour left until Christmas!",
-																"There are **{hours}** hours left until Christmas!"
+																"**{hours}** 크리스마스까지 남은 시간!",
+																"있다 **{hours}** 크리스마스까지 남은 시간!"
 												],
 												"title": [
 																"{hours} hour left",
@@ -57,7 +57,7 @@
 												]
 								},
 								"info": {
-												"description": "The Christmas Countdown bot for Discord by [eartharoid]({eartharoid}) has been running since November 2018. [Learn more.]({about})",
+												"description": "[eartharoid]에 의한 크리스마스 계산 보트(Christmas Countdown bot)는 2018년 11월부터 실행 중이다. [더 자세한 내용은 알아보기]",
 												"fields": {
 																"commands": "Commands used",
 																"counting_in": {
@@ -78,7 +78,7 @@
 												"title": "Information"
 								},
 								"invite": {
-												"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
+												"description": "[Click here]({url})를 클릭하여 자신의 서버에 크리스마스 카운트다운 봇을 추가합니다.",
 												"title": "Invite"
 								},
 								"joke": {
@@ -88,8 +88,8 @@
 								},
 								"minutes": {
 												"description": [
-																"There is **{minutes}** minute left until Christmas!",
-																"There are **{minutes}** minutes left until Christmas!"
+																"**{minutes} ** 크리스마스까지 왼쪽 분!",
+																"**{minutes} ** 크리스마스까지 남아있는 분!"
 												],
 												"title": [
 																"{minutes} minute left",
@@ -98,8 +98,8 @@
 								},
 								"months": {
 												"description": [
-																"There is **{months}** month left until Christmas!",
-																"There are **{months}** months left until Christmas!"
+																"* 크리스마스까지 남은 달이 있습니다!",
+																"거기는 **{months}** 달은 크리스마스까지 떠났습니다!"
 												],
 												"title": [
 																"{months} month left",
@@ -117,13 +117,13 @@
 												"title": "🏓 Pong!"
 								},
 								"radio": {
-												"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
+												"description": "**[크리스마스 라디오 보트를 추가]({url})** 크리스마스 음악을 귀하의 Discord 서버에서 듣기 위해.",
 												"title": "Christmas Radio"
 								},
 								"seconds": {
 												"description": [
-																"There is **{seconds}** second left until Christmas!",
-																"There are **{seconds}** seconds left until Christmas!"
+																"**{seconds}** 크리스마스까지 두 번째 왼쪽!",
+																"**{seconds}** 초가 크리스마스까지 남아 있습니다!"
 												],
 												"title": [
 																"{seconds} second left",
@@ -134,93 +134,93 @@
 												"blacklist": {
 																"add": {
 																				"added": {
-																								"description": "{member} has been added to the naughty list.",
+																								"description": "{member}는 장난 꾸러기 목록에 추가되었습니다.",
 																								"title": "✅ Added"
 																				}
 																},
 																"list": "The naughty list",
 																"remove": {
 																				"cannot_remove": {
-																								"description": "{member} is not on the naughty list.",
-																								"title": "❌ Can't remove member"
+																								"description": "{member}는 장난 꾸러기 목록에 없습니다.",
+																								"title": "· 회원을 제거할 수 없습니다"
 																				},
 																				"removed": {
-																								"description": "{member} has been removed from the naughty list.",
+																								"description": "{member}는 장난 꾸러기 목록에서 제거되었습니다.",
 																								"title": "✅ Removed"
 																				}
 																}
 												},
 												"no_event": {
-																"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
+																"description": "비밀 산타 이벤트는 없습니다. 하나를 창조하려는 길을 따르라.",
 																"title": "❌ Error"
 												},
 												"not_enough_users": {
-																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
-																"title": "😦 Not enough participants"
+																"description": "죄송하지만 참가자가 충분하지 않았다. Secret Santas가 할당되기 위해 최소 3명의 회원이 이벤트에 참여해야 합니다.",
+																"title": "· 참가자 수"
 												},
 												"show": {
 																"none": {
-																				"description": "You have not entered a Secret Santa event.",
+																				"description": "비밀 산타 이벤트에 입장하지 않았습니다.",
 																				"title": "❌ Not assigned"
 																},
 																"show": {
-																				"description": "**You are {member}'s Santa.** Give them a gift, following the event guidelines set by the organiser.",
+																				"description": "*당신은 성모님입니다. ** 이벤트 주최자가 설정한 지침에 따라 선물을 제공합니다.",
 																				"title": "Secret Santa"
 																}
 												}
 								},
 								"server": {
 												"reset": {
-																"title": "✅ Server settings reset"
+																"title": "· Server 설정 재설정"
 												},
 												"set": {
 																"cannot_enable": {
-																				"description": "Create the countdown webhook with [`/setup`]({url}).",
-																				"title": "❌ Can't enable countdown"
+																				"description": "Countdown webhook을 [`/setup`]({url})로 만듭니다.",
+																				"title": "· 카운트다운을 활성화할 수 없습니다"
 																},
 																"invalid_locale": {
-																				"description": "Try again or [ask for help]({url}).",
+																				"description": "다시 시도하거나 [ 도움이를위한 작업]({url}).",
 																				"title": "❌ Invalid locale"
 																},
 																"invalid_timezone": {
-																				"description": "Try again or [ask for help]({url}).",
+																				"description": "다시 시도하거나 [ 도움이를위한 작업]({url}).",
 																				"title": "❌ Invalid timezone"
 																},
-																"title": "✅ Server settings updated"
+																"title": "· Server 설정 업데이트"
 												},
 												"view": {
-																"description": "Change your settings with `/server set`.",
+																"description": "`/server set`로 설정 변경.",
 																"title": "Server settings"
 												}
 								},
 								"setup": {
 												"channel_created": {
-																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
-																"title": "✅ Countdown widget created"
+																"description": "* Widget 음성 채널이 만들어졌습니다. ** 위젯을 비활성화하려면 채널을 삭제합니다.",
+																"title": "✅ Countdown 위젯 생성"
 												},
 												"channel_permissions_error": {
-																"description": "An error occurred whilst creating the channel.\n[Try adding the bot again]({add}).\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create channel"
+																"description": "채널을 만들 때 오류가 발생했습니다. \n[또한  the을 다시 넣으십시오] \n아직 작동하지 않으시면 [자문 요청].",
+																"title": "· 채널을 만들 수 없습니다"
 												},
 												"missing_permission:channel": {
-																"description": "The bot does not have permission to manage channels.",
-																"title": "❌ Can't create channel"
+																"description": "봇은 채널을 관리할 권한이 없습니다.",
+																"title": "· 채널을 만들 수 없습니다"
 												},
 												"missing_permission:view": {
-																"description": "Please ensure the bot has permission to view the channel.",
-																"title": "❌ Can't create webhook"
+																"description": "봇은 채널을 볼 수 있는 권한이 있습니다.",
+																"title": "· webhook을 만들 수 없습니다"
 												},
 												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
-																"title": "❌ Can't create webhook"
+																"description": "봇은 웹 호크를 관리 할 수 없습니다.",
+																"title": "· webhook을 만들 수 없습니다"
 												},
 												"webhook_created": {
-																"description": "**The countdown has been enabled**; a message will be sent to {channel} every morning between 5AM and 6AM.\n\nTo disable it, use {toggle}.",
-																"title": "✅ Countdown webhook created"
+																"description": "** 다운 카운팅이 활성화되었으며, 매일 아침 오전 5시부터 오후 6시에 {channel}에 메세지가 전송됩니다. \n\n를 사용 하 여, 그것을 제거 합니다.",
+																"title": "✅ Countdown webhook 생성"
 												},
 												"webhook_permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create webhook"
+																"description": "Webhook를 만드는 동안 오류가 발생했습니다. \n[보트를 다시 추가하십시오]({add}) 그리고 그것이 계산 채널을 볼 수 있는지 확인합니다. \n만일 그것이 아직 작동하지 않는다면, [지원을 구하십시오].",
+																"title": "· webhook을 만들 수 없습니다"
 												}
 								},
 								"sleeps": {
@@ -228,7 +228,7 @@
 																"**{days} day**",
 																"**{days} days**"
 												],
-												"description": "There {sleeps} or {days}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
+												"description": "“그러나 그 날과 잠 사이의 차이점은 무엇입니까?”!",
 												"sleeps": [
 																"is **{sleeps} sleep**",
 																"are **{sleeps} sleeps**"
@@ -239,7 +239,7 @@
 												]
 								},
 								"suggest": {
-												"description": "Thank you for your suggestion.",
+												"description": "당신의 제안을 주셔서 감사합니다.",
 												"title": "✅ Submitted"
 								},
 								"toggle": {
@@ -252,8 +252,8 @@
 																"**{days} days**"
 												],
 												"description": [
-																"There is {days}, {hours}, {minutes}, and {seconds} left until Christmas!",
-																"There are {days}, {hours}, {minutes}, and {seconds} left until Christmas!"
+																"{days}, {hours}, {minutes} 및 {seconds}는 크리스마스까지 남아 있습니다!",
+																"{days}, {hours}, {minutes} 및 {seconds}는 크리스마스까지 남아 있습니다!"
 												],
 												"hours": [
 																"**{hours} hour**",
@@ -267,27 +267,27 @@
 																"**{seconds} second**",
 																"**{seconds} seconds**"
 												],
-												"title": "{days}, {hours}, {minutes}, {seconds} left"
+												"title": "{days}, {hours}, {minutes}, {seconds} 왼쪽"
 								},
 								"user": {
 												"reset": {
-																"title": "✅ User settings reset"
+																"title": "· 사용자 설정 재설정"
 												},
 												"set": {
-																"title": "✅ User settings updated"
+																"title": "· 사용자 설정 업데이트"
 												},
 												"view": {
 																"title": "User settings"
 												}
 								},
 								"weekday": {
-												"description": "Christmas Day is on a **{day}** in {year}.",
+												"description": "Christmas Day는 {year}에 있습니다.",
 												"title": "Christmas is on…"
 								},
 								"weeks": {
 												"description": [
-																"There is **{weeks}** week left until Christmas!",
-																"There are **{weeks}** weeks left until Christmas!"
+																"**{weeks}** 주가 크리스마스까지 남아 있습니다!",
+																"크리스마스까지 남아있는 ** {weeks}** 주가 있습니다!"
 												],
 												"title": [
 																"{weeks} week left",
@@ -296,16 +296,16 @@
 								}
 				},
 				"countdown": {
-								"christmas_day": "🎉 It's Christmas Day!",
-								"christmas_eve": "🎅 It's Christmas Eve!",
+								"christmas_day": "관련 기사 크리스마스의 날입니다!",
+								"christmas_eve": "· 그것은 크리스마스 이브입니다!",
 								"disable": {
-												"description": "**Server administrators: use {toggle} to disable the countdown (and {server} to enable/disable the countdown automatically next time).**\n[Thank you for using this bot]({review}) and enjoy your Christmas! 🙂",
+												"description": "* 서버 관리자: {toggle}를 사용하여 계산을 비활성화합니다 (그리고 {server}는 다음 번에 자동으로 계산을 활성화 / 비활성화합니다). * \n[이 봇을 사용해 주셔서 감사합니다]({review}) 그리고 크리스마스를 즐기십시오! 🙂",
 												"title": "🎄 Merry Christmas"
 								},
-								"live": "View the live countdown at [{pretty}]({url}).",
+								"live": "[{pretty}]({url})에서 라이브 카운트 다운을 확인하세요.",
 								"merry_christmas": "🎄 Merry Christmas!",
-								"server_timezone": "Server timezone: {timezone}",
-								"user_timezone": "User timezone: {timezone}"
+								"server_timezone": "서버 시간대: 이름 *",
+								"user_timezone": "사용자 시간대: {timezone}"
 				},
 				"disabled": "disabled",
 				"modals": {
@@ -316,22 +316,22 @@
 												},
 												"question": {
 																"label": "Question",
-																"placeholder": "Who delivers presents to cats?"
+																"placeholder": "누가 고양이에게 선물을 제공합니까?"
 												},
-												"title": "Add a Christmas joke"
+												"title": "크리스마스 농담 추가"
 								},
 								"suggest": {
 												"suggestion": {
 																"label": "Suggestion for Christmas Countdown",
-																"placeholder": "A suggestion for the Christmas Countdown bot, preferably in English."
+																"placeholder": "크리스마스 계산 보트에 대한 제안, 영어로 선호합니다."
 												},
 												"title": "Suggestion"
 								}
 				},
 				"santa_tracker": {
-								"description": "Santa is currently delivering presents over **[{city}, {region}]({map})**.",
-								"ended": "Santa has finished delivering presents and is back in **{city}, {region}** for a rest.\n\n[Please vote for the bot]({vote}) if you enjoyed this feature.",
-								"starting": "Santa is departing **{city}, {region}** to start delivering presents.",
+								"description": "Santa는 현재 **[{city}, {region}]({map})**를 제공합니다.",
+								"ended": "산타는 선물을 마무리하고 휴식을 취하기 위해 **{시티}, {지역}로 돌아 왔습니다. \n\n[보드에 투표하시기 바랍니다]({투표}) 이 기능이 마음에 들면.",
+								"starting": "산타는 선물을 제공하기 위해 떠나고 있습니다.",
 								"title": "Santa Tracker"
 				},
 				"widget": {
