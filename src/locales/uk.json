@@ -1,22 +1,22 @@
 {
 				"bot": {
 								"command_execution_error": {
-												"description": "Сталася несподівана помилка. Будь ласка, зверніться до [серверу підтримки]({url}.",
+												"description": "Сталася несподівана помилка. Будь ласка, зверніться до [серверу підтримки]({url}).",
 												"identifier": "Ідентифікатор",
 												"title": "Помилка"
 								},
 								"footer": "Christmas Countdown від eartharoid",
 								"guild_only": {
-												"description": "Цю команду можна використовувати лише в каналі сервера. [Додайте бота на свій сервер.]({invite})",
+												"description": "Цю команду можна використовувати лише в каналі сервера. [Додати бота на свій сервер.]({invite})",
 												"title": "Помилка"
 								},
 								"member_missing_permissions": {
 												"description": "Для використання цієї команди вам потрібні такі дозволи:\n{permissions}",
 												"title": "Помилка"
 								},
-								"migrate": "Бот Christmas Countdown тепер використовує команди косої риски!\n**Запросіть бота ще раз з відси: https://christmascountdown.live/invite.**",
+								"migrate": "Бот Christmas Countdown тепер використовує команди косої риски!\n**Будь-ласка заново додайте бота сюди: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "Боту Christmas Countdown потрібні такі дозволи:\n{permissions}",
+												"description": "Бот Christmas Countdown потребує таких дозволів:\n{permissions}",
 												"title": "Помилка"
 								}
 				},
