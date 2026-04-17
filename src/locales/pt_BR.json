@@ -26,33 +26,33 @@
 																"é **{days} dia**",
 																"são **{days} dias**"
 												],
-												"description": "Faltam {dias} ou {sonos}[(?)]({url} \"Qual a diferença entre dias e noites?\") para o Natal!",
+												"description": "Faltam {days} ou {sleeps}[(?)]({url} \"Qual a diferença entre dias e noites?\") para o Natal!",
 												"sleeps": [
-																"**{dorme} dorme**",
+																"**{sleeps} sonecas**",
 																"**{dorme} dorme**"
 												],
 												"title": [
-																"{days} day left",
-																"{days} days left"
+																"{days} dias restantes",
+																"{days} dias restantes"
 												]
 								},
 								"donate": {
-												"description": "**Donate at {url}**",
-												"title": "Donate"
+												"description": "**Doe pelo {url}**",
+												"title": "Doar"
 								},
 								"help": {
 												"list": {
 																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
-																"title": "Commands"
+																"title": "Comandos"
 												}
 								},
 								"hours": {
 												"description": [
-																"There is **{hours}** hour left until Christmas!",
-																"There are **{hours}** hours left until Christmas!"
+																"Faltam **{hours}** horas para o Natal!",
+																"Faltam **{hours}** horas para o Natal!"
 												],
 												"title": [
-																"{hours} hour left",
+																"{hours} horas restando",
 																"{hours} hours left"
 												]
 								},
