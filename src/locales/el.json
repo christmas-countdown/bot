@@ -42,7 +42,7 @@
 								},
 								"help": {
 												"list": {
-																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
+																"description": "Κάντε κλικ στο όνομα για να λάβετε περισσότερες πληροφορίες σχετικά με μια συγκεκριμένη εντολή. [Γίνετε μέλος του διακομιστή υποστήριξης]({discord}) εάν χρειάζεστε βοήθεια.\n**[Κάντε κλικ εδώ για να ενεργοποιήσετε την αντίστροφη μέτρηση.]({enable})**",
 																"title": "Εντολές"
 												}
 								},
@@ -57,9 +57,9 @@
 												]
 								},
 								"info": {
-												"description": "The Christmas Countdown bot for Discord by [eartharoid]({eartharoid}) has been running since November 2018. [Learn more.]({about})",
+												"description": "Το Christmas Countdown bot για Discord από τον [eartharoid]({eartharoid}) λειτουργεί από τον Νοέμβριο του 2018. [Μάθετε περισσότερα.]({about})",
 												"fields": {
-																"commands": "Commands used",
+																"commands": "Εντολές που χρησιμοποιούνται",
 																"counting_in": {
 																				"title": "Αντίστροφη μέτρηση σε",
 																				"value": [
@@ -83,7 +83,7 @@
 								},
 								"joke": {
 												"answer": "Απάντηση",
-												"button": "Get another joke",
+												"button": "Άλλο αστείο",
 												"question": "Ερώτηση"
 								},
 								"minutes": {
@@ -111,13 +111,13 @@
 												"fields": {
 																"average_ping": "Μέσο ping",
 																"latency": "Συνολική καθυστέρηση",
-																"shard_number": "Shard number",
-																"shard_ping": "Shard ping"
+																"shard_number": "Αριθμός θραύσματος",
+																"shard_ping": "Ping θραύσματος"
 												},
 												"title": "🏓 Πονγκ!"
 								},
 								"radio": {
-												"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
+												"description": "**[Προσθέστε το Christmas Radio bot]({url})** για να ακούτε χριστουγεννιάτικη μουσική στον διακομιστή Discord σας.",
 												"title": "Christmas Radio"
 								},
 								"seconds": {
@@ -134,48 +134,48 @@
 												"blacklist": {
 																"add": {
 																				"added": {
-																								"description": "{member} has been added to the naughty list.",
+																								"description": "Ο/Η {member} προστέθηκε στη λίστα των κακών.",
 																								"title": "✅ Προστέθηκε"
 																				}
 																},
-																"list": "The naughty list",
+																"list": "Η λίστα των κακών",
 																"remove": {
 																				"cannot_remove": {
-																								"description": "{member} is not on the naughty list.",
+																								"description": "Ο/Η {member} δεν είναι στη λίστα των κακών.",
 																								"title": "❌ Αδυναμία αφαίρεσης μέλους"
 																				},
 																				"removed": {
-																								"description": "{member} has been removed from the naughty list.",
+																								"description": "Ο/Η {member} αφαιρέθηκε στη λίστα των κακών.",
 																								"title": "✅ Αφαιρέθηκε"
 																				}
 																}
 												},
 												"no_event": {
-																"description": "There are no secret santa events. Follow [the guide]({url}) to create one.",
+																"description": "Δεν υπάρχουν εκδηλώσεις Secret Santa. Ακολουθήστε [τον οδηγό]({url}) για να δημιουργήσετε μία.",
 																"title": "❌ Σφάλμα"
 												},
 												"not_enough_users": {
-																"description": "Sorry, there weren't enough participants. At least 3 members need to join the event for Secret Santas to be assigned.",
+																"description": "Δυστυχώς, δεν υπάρχουν αρκετοί συμμετέχοντες. Απαιτούνται τουλάχιστον 3 μέλη για να ανατεθούν Secret Santa σε μια εκδήλωση.",
 																"title": "😦 Ανεπαρκείς συμμετέχοντες"
 												},
 												"show": {
 																"none": {
-																				"description": "You have not entered a Secret Santa event.",
-																				"title": "❌ Not assigned"
+																				"description": "Δεν είστε σε κάποια εκδήλωση Secret Santa.",
+																				"title": "❌ Δεν έχει ανατεθεί"
 																},
 																"show": {
-																				"description": "**You are {member}'s Santa.** Give them a gift, following the event guidelines set by the organiser.",
+																				"description": "**Είστε ο Άγιος Βασίλης του/της {member}.** Κάντε ένα δώρο, ακολουθώντας τους κανόνες της εκδήλωσης που έχουν καθοριστεί από τον διοργανωτή.",
 																				"title": "Secret Santa"
 																}
 												}
 								},
 								"server": {
 												"reset": {
-																"title": "✅ Server settings reset"
+																"title": "✅ Έγινε επαναφορά των ρυθμίσεων διακομιστή"
 												},
 												"set": {
 																"cannot_enable": {
-																				"description": "Create the countdown webhook with [`/setup`]({url}).",
+																				"description": "Δημιουργήστε το webhook αντίστροφης μέτρησης με το [`/setup`]({url}).",
 																				"title": "❌ Αδυναμία ενεργοποίησης αντίστροφης μέτρησης"
 																},
 																"invalid_locale": {
@@ -186,7 +186,7 @@
 																				"description": "Δοκιμάστε ξανά ή [ζητήστε βοήθεια]({url}).",
 																				"title": "❌ Μη έγκυρη ζώνη ώρας"
 																},
-																"title": "✅ Server settings updated"
+																"title": "✅ Ενημερώθηκαν οι ρυθμίσεις διακομιστή"
 												},
 												"view": {
 																"description": "Αλλάξτε τις ρυθμίσεις σας με το `/server set`.",
@@ -195,32 +195,32 @@
 								},
 								"setup": {
 												"channel_created": {
-																"description": "**The widget voice channel has been created.** To disable the widget, delete the channel.",
-																"title": "✅ Countdown widget created"
+																"description": "**Δημιουργήθηκε το κανάλι φωνής του γραφικού στοιχείου.** Για να απενεργοποιήσετε το γραφικό στοιχείο, διαγράψτε το κανάλι.",
+																"title": "✅ Δημιουργήθηκε γραφικό στοιχείο αντίστροφης μέτρησης"
 												},
 												"channel_permissions_error": {
-																"description": "An error occurred whilst creating the channel.\n[Try adding the bot again]({add}).\nIf it still doesn't work, [ask for help]({support}).",
+																"description": "Προέκυψε σφάλμα κατά τη δημιουργία του καναλιού.\n[Δοκιμάστε να προσθέσετε ξανά το bot]({add}).\nΕάν εξακολουθεί να μην λειτουργεί, [ζητήστε βοήθεια]({support}).",
 																"title": "❌ Αδυναμία δημιουργίας καναλιού"
 												},
 												"missing_permission:channel": {
-																"description": "The bot does not have permission to manage channels.",
+																"description": "Το bot δεν έχει άδεια διαχείρισης καναλιών.",
 																"title": "❌ Αδυναμία δημιουργίας καναλιού"
 												},
 												"missing_permission:view": {
-																"description": "Please ensure the bot has permission to view the channel.",
-																"title": "❌ Can't create webhook"
+																"description": "Βεβαιωθείτε ότι το bot έχει την άδεια προβολής του καναλιού.",
+																"title": "❌ Δεν είναι δυνατή η δημιουργία webhook"
 												},
 												"missing_permission:webhook": {
-																"description": "The bot does not have permission to manage webhooks.",
-																"title": "❌ Can't create webhook"
+																"description": "Το bot δεν έχει άδεια διαχείρισης webhook.",
+																"title": "❌ Δεν είναι δυνατή η δημιουργία webhook"
 												},
 												"webhook_created": {
-																"description": "**The countdown has been enabled**; a message will be sent to {channel} every morning between 5AM and 6AM.\n\nTo disable it, use {toggle}.",
-																"title": "✅ Countdown webhook created"
+																"description": "**Η αντίστροφη μέτρηση ενεργοποιήθηκε**· θα αποστέλλεται ένα μήνυμα στο {channel} κάθε πρωί μεταξύ 5 π.μ. και 6 π.μ.\n\nΓια να την απενεργοποιήσετε, χρησιμοποιήστε το {toggle}.",
+																"title": "✅ Δημιουργήθηκε webhook αντίστροφης μέτρησης"
 												},
 												"webhook_permissions_error": {
-																"description": "An error occurred whilst creating the webhook.\n[Try adding the bot again]({add}) and make sure it can see the countdown channel.\nIf it still doesn't work, [ask for help]({support}).",
-																"title": "❌ Can't create webhook"
+																"description": "Προέκυψε σφάλμα κατά τη δημιουργία του webhook.\n[Δοκιμάστε να προσθέσετε ξανά το bot]({add}) και βεβαιωθείτε ότι μπορεί να δει το κανάλι αντίστροφης μέτρησης.\nΕάν εξακολουθεί να μην λειτουργεί, [ζητήστε βοήθεια]({support}).",
+																"title": "❌ Δεν είναι δυνατή η δημιουργία webhook"
 												}
 								},
 								"sleeps": {
@@ -244,7 +244,7 @@
 								},
 								"toggle": {
 												"disabled": "✅ Η αντίστροφη μέτρηση απενεργοποιήθηκε",
-												"enabled": "✅ Countdown enabled"
+												"enabled": "✅ Η αντίστροφη μέτρηση ενεργοποιήθηκε"
 								},
 								"total": {
 												"days": [
@@ -267,22 +267,22 @@
 																"**{seconds} δευτερόλεπτο**",
 																"**{seconds} δευτερόλεπτα**"
 												],
-												"title": "{days}, {hours}, {minutes}, {seconds} left"
+												"title": "Απομένουν {days}, {hours}, {minutes}, {seconds}"
 								},
 								"user": {
 												"reset": {
-																"title": "✅ User settings reset"
+																"title": "✅ Έγινε επαναφορά των ρυθμίσεων χρήστη"
 												},
 												"set": {
-																"title": "✅ User settings updated"
+																"title": "✅ Ενημερώθηκαν οι ρυθμίσεις χρήστη"
 												},
 												"view": {
 																"title": "Ρυθμίσεις χρήστη"
 												}
 								},
 								"weekday": {
-												"description": "Christmas Day is on a **{day}** in {year}.",
-												"title": "Christmas is on…"
+												"description": "Τα Χριστούγεννα πέφτουν **{day}** το {year}.",
+												"title": "Τα Χριστούγεννα πέφτουν…"
 								},
 								"weeks": {
 												"description": [
@@ -299,7 +299,7 @@
 								"christmas_day": "🎉 Είναι Χριστούγεννα!",
 								"christmas_eve": "🎅 Είναι παραμονή Χριστουγέννων!",
 								"disable": {
-												"description": "**Server administrators: use {toggle} to disable the countdown (and {server} to enable/disable the countdown automatically next time).**\n[Thank you for using this bot]({review}) and enjoy your Christmas! 🙂",
+												"description": "**Διαχειριστές διακομιστών: χρησιμοποιήστε το {toggle} για να απενεργοποιήσετε την αντίστροφη μέτρηση (και το {server} για να ενεργοποιήσετε/απενεργοποιήσετε αυτόματα την αντίστροφη μέτρηση την επόμενη φορά).**\n[Ευχαριστώ που χρησιμοποιείτε αυτό το bot]({review}) και καλά Χριστούγεννα! 🙂",
 												"title": "🎄 Καλά Χριστούγεννα"
 								},
 								"live": "Δείτε τη ζωντανή αντίστροφη μέτρηση στο [{pretty}]({url}).",
@@ -312,13 +312,13 @@
 								"add_joke": {
 												"answer": {
 																"label": "Απάντηση",
-																"placeholder": "Santa Paws!"
+																"placeholder": "Ο Άγιος Γατίσιος!"
 												},
 												"question": {
 																"label": "Ερώτηση",
 																"placeholder": "Ποιος φέρνει δώρα στις γάτες;"
 												},
-												"title": "Add a Christmas joke"
+												"title": "Προσθήκη χριστουγεννιάτικου αστείου"
 								},
 								"suggest": {
 												"suggestion": {
@@ -329,8 +329,8 @@
 								}
 				},
 				"santa_tracker": {
-								"description": "Santa is currently delivering presents over **[{city}, {region}]({map})**.",
-								"ended": "Santa has finished delivering presents and is back in **{city}, {region}** for a rest.\n\n[Please vote for the bot]({vote}) if you enjoyed this feature.",
+								"description": "Αυτήν τη στιγμή, ο Άγιος Βασίλης παραδίδει δώρα στην πόλη **[{city}, {region}]({map})**.",
+								"ended": "Ο Άγιος Βασίλης τελείωσε την παράδοση των δώρων και επέστρεψε στην πόλη **{city}, {region}** για να ξεκουραστεί.\n\n[Ψηφίστε το bot]({vote}) αν απολαύσατε αυτήν τη λειτουργία.",
 								"starting": "Ο Άγιος Βασίλης αναχωρεί από την πόλη **{city}, {region}** για να ξεκινήσει την παράδοση των δώρων.",
 								"title": "Ιχνηλάτηση Άγιου Βασίλη"
 				},
