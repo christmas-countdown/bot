@@ -304,8 +304,8 @@
 								},
 								"live": "在[{pretty}]({url})查看實時倒計時。",
 								"merry_christmas": "🎄 聖誕快樂！",
-								"server_timezone": "服務器時區：{timezone}",
-								"user_timezone": "用戶時區： {timezone}"
+								"server_timezone": "伺服器時區：{timezone}",
+								"user_timezone": "使用者時區：{timezone}"
 				},
 				"disabled": "已禁用",
 				"modals": {
