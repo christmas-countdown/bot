@@ -42,7 +42,7 @@
 								},
 								"help": {
 												"list": {
-																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
+																"description": "Clique no nome dele para obter mais informações sobre um comando específico. [Participe do servidor de suporte]({discord}) se precisar de ajuda.\n**[Clique aqui para ativar a contagem regressiva.]({enable})**",
 																"title": "Comandos"
 												}
 								},
