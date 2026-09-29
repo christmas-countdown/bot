@@ -53,7 +53,7 @@
 												],
 												"title": [
 																"{hours} horas restando",
-																"{hours} hours left"
+																"{hours} horas restantes"
 												]
 								},
 								"info": {
