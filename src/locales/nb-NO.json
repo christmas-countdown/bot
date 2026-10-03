@@ -5,7 +5,7 @@
 												"identifier": "Identifikator",
 												"title": "Feil"
 								},
-								"footer": "Julenedtelling av eartharoid",
+								"footer": "Christmas Countdown by eartharoid",
 								"guild_only": {
 												"description": "Denne kommandoen kan kun brukes innen en tjenerkanal. [Legg til en håndtlanger på din tjener.]({invite})",
 												"title": "Feil"
@@ -14,9 +14,9 @@
 												"description": "Du trenger følgende tilganger for å bruke denne kommandoen:\n{permissions}",
 												"title": "Feil"
 								},
-								"migrate": "Julenedtelling bruker nå skråstrekskommandoer.\n**Legg til håndtlangeren igjen her: https://christmascountdown.live/invite.**",
+								"migrate": "Christmas Countdown-boten bruker nå skråstrekskommandoer.\n**Legg til håndtlangeren igjen her: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
-												"description": "Julenedtelling krever følgende tilganger:\n{permissions}",
+												"description": "Christmas Countdown-boten krever følgende tilganger:\n{permissions}",
 												"title": "Feil"
 								}
 				},
@@ -322,7 +322,7 @@
 								},
 								"suggest": {
 												"suggestion": {
-																"label": "Forslag for Julenedtelling",
+																"label": "Forslag for Christmas Countdown",
 																"placeholder": "Et forslag for Julenedtellingshåndtlangeren, fortrinnsvis på engelsk."
 												},
 												"title": "Forslag"
