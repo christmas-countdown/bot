@@ -3,28 +3,28 @@
 								"command_execution_error": {
 												"description": "An unexpected error occurred. Please ask for help in [the support server]({url}).",
 												"identifier": "Identifier",
-												"title": "Error"
+												"title": "Fazi"
 								},
-								"footer": "Christmas Countdown by eartharoid",
+								"footer": "Christmas Countdown gant eartharoid",
 								"guild_only": {
 												"description": "This command can only be used within a server channel. [Add the bot to your server.]({invite})",
-												"title": "Error"
+												"title": "Fazi"
 								},
 								"member_missing_permissions": {
 												"description": "You need the following permissions to use this command:\n{permissions}",
-												"title": "Error"
+												"title": "Fazi"
 								},
 								"migrate": "The Christmas Countdown bot now uses slash commands!\n**Please re-add the bot here: https://christmascountdown.live/invite.**",
 								"missing_permissions": {
 												"description": "The Christmas Countdown bot requires the following permissions:\n{permissions}",
-												"title": "Error"
+												"title": "Fazi"
 								}
 				},
 				"commands": {
 								"days": {
 												"days": [
-																"is **{days} day**",
-																"are **{days} days**"
+																"**{days} devezh**",
+																"**{days} devezh**"
 												],
 												"description": "There {days} or {sleeps}[(?)]({url} \"What's the difference between days and sleeps?\") left until Christmas!",
 												"sleeps": [
@@ -38,62 +38,62 @@
 								},
 								"donate": {
 												"description": "**Donate at {url}**",
-												"title": "Donate"
+												"title": "Ober un donezon"
 								},
 								"help": {
 												"list": {
 																"description": "Click on its name to get more information about a specific command. [Join the support server]({discord}) if you need help.\n**[Click here to enable the countdown.]({enable})**",
-																"title": "Commands"
+																"title": "Arc'hadoù"
 												}
 								},
 								"hours": {
 												"description": [
-																"There is **{hours}** hour left until Christmas!",
-																"There are **{hours}** hours left until Christmas!"
+																"Chom a ra **{hours}** eurvezh a-raok an Nedeleg !",
+																"Chom a ra **{hours}** eurvezh a-raok an Nedeleg !"
 												],
 												"title": [
-																"{hours} hour left",
-																"{hours} hours left"
+																"{hours} eurvezh a chom",
+																"{hours} eurvezh a chom"
 												]
 								},
 								"info": {
 												"description": "The Christmas Countdown bot for Discord by [eartharoid]({eartharoid}) has been running since November 2018. [Learn more.]({about})",
 												"fields": {
-																"commands": "Commands used",
+																"commands": "Arc'hadoù implijet",
 																"counting_in": {
 																				"title": "Counting down in",
 																				"value": [
-																								"{servers} server",
-																								"{servers} servers"
+																								"{servers} servijer",
+																								"{servers} servijer"
 																				]
 																},
 																"more": {
-																				"title": "More stats",
-																				"value": "[Click here]({url})"
+																				"title": "Muioc'h a stadegoù",
+																				"value": "[Klikit amañ]({url})"
 																},
-																"secret_santa_events": "Secret Santa events",
+																"secret_santa_events": "Darvoudoù kuzh Tad-kozh an Nedeleg",
 																"secret_santa_users": "Secret Santa participants",
 																"servers": "Servers"
 												},
-												"title": "Information"
+												"title": "Titouroù"
 								},
 								"invite": {
 												"description": "[Click here]({url}) to add the Christmas Countdown bot to your own server.",
-												"title": "Invite"
+												"title": "Pediñ"
 								},
 								"joke": {
-												"answer": "Answer",
+												"answer": "Respont",
 												"button": "Get another joke",
-												"question": "Question"
+												"question": "Goulenn"
 								},
 								"minutes": {
 												"description": [
-																"There is **{minutes}** minute left until Christmas!",
-																"There are **{minutes}** minutes left until Christmas!"
+																"Chom a ra **{minutes}** munutenn a-raok an Nedeleg !",
+																"Chom a ra **{minutes}** munutenn a-raok an Nedeleg !"
 												],
 												"title": [
-																"{minutes} minute left",
-																"{minutes} minutes left"
+																"{minutes} munutenn a chom",
+																"{minutes} munutenn a chom"
 												]
 								},
 								"months": {
