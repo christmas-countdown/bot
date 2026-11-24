@@ -71,7 +71,8 @@ const client = new Client({
 		Intents.FLAGS.GUILD_MESSAGES,
 		Intents.FLAGS.GUILD_WEBHOOKS,
 		Intents.FLAGS.GUILDS,
-		Intents.FLAGS.GUILD_SCHEDULED_EVENTS
+		Intents.FLAGS.GUILD_SCHEDULED_EVENTS,
+		Intents.FLAGS.GUILD_VOICE_STATES
 	],
 	makeCache: Options.cacheWithLimits({
 		GuildBanManager: 0,
@@ -87,8 +88,7 @@ const client = new Client({
 		ReactionManager: 0,
 		ReactionUserManager: 0,
 		ThreadManager: 0,
-		UserManager: 0,
-		VoiceStateManager: 0
+		UserManager: 0
 	}),
 	presence: { activities: [presences[Math.floor(Math.random() * presences.length)]] }
 });
