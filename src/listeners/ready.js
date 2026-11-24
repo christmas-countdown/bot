@@ -70,5 +70,34 @@ module.exports = class ReadyEventListener extends EventListener {
 		updateWidgets();
 		setInterval(() => updateWidgets(), ms('1h'));
 
+
+		const connect = () => {
+			const shard = this.client.ws.shards.first();
+			const socket = new WebSocket(
+				new URL(`/ws/${shard.id}`, process.env.VOICE_URL),
+				{ headers: { authorization: `Bearer ${process.env.VOICE_SECRET}` } }
+			);
+			socket.addEventListener('message', event => {
+				const data = JSON.parse(event.data);
+				if (data.op !== 4) {
+					this.client.log.warn('unexpected payload', data);
+					return;
+				}
+				shard.send(data);
+			});
+			socket.addEventListener('close', () => {
+				this.client.voiceSocket = null;
+				this.client.log.warn('disconnected from voice service');
+				this.client.guilds.cache.each(guild => {
+					guild.members.me?.voice?.disconnect('DTX connection closed');
+				});
+				setTimeout(connect, 5e3);
+			});
+			this.client.voiceSocket = socket;
+			this.client.log.success('connected to voice service');
+		};
+
+		connect();
+
 	}
 };
