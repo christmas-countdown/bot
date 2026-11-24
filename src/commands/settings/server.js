@@ -1,4 +1,4 @@
-const parseTZ = require('timezone-soft');
+const resolveTimezone = require('../../utils/timezone');
 const { colour } = require('../../../config');
 const Command = require('../../modules/commands/command');
 const {
@@ -107,7 +107,7 @@ module.exports = class ServerCommand extends Command {
 			}
 
 			const timezone = interaction.options.getString('timezone')
-				? parseTZ(interaction.options.getString('timezone'))[0]?.iana
+				? resolveTimezone(interaction.options.getString('timezone'))
 				: undefined;
 
 			if (interaction.options.getString('timezone') && !timezone) {
