@@ -11,6 +11,9 @@ log.info.manager('Shard manager is starting');
 const { ShardingManager } = require('discord.js');
 const manager = new ShardingManager('./src/bot.js');
 
+const { REST } = require('@discordjs/rest');
+const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
+
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient({
 	errorFormat: 'pretty',
@@ -74,6 +77,12 @@ manager.spawn().then(async shards => {
 	const tracker = require('./santa-tracker');
 	setInterval(() => tracker.track(manager, prisma, log), ms('1m'));
 
+	const { default: pThrottle } = require('p-throttle');
+	const throttle = pThrottle({
+		interval: 1000,
+		limit: 25
+	});
+
 	let previousSong;
 	setInterval(async () => {
 		const res = await fetch('https://www.radio-xmas.at/api/nowplaying.php');
@@ -85,8 +94,20 @@ manager.spawn().then(async shards => {
 		const currentSong = data.songs?.[0]?.raw;
 		if (currentSong !== previousSong) {
 			previousSong = currentSong;
+			// set presence
 			shards.each(shard => shard.send({ radioSongUpdate: currentSong }));
+			// set channel statuses
+			const setVoiceStatus = throttle(async id => {
+				await rest.put(`/channels/${id}/voice-status`, { body: { status: currentSong || null } }).catch(log.error.manager);
+			});
+			(await manager
+				.broadcastEval(client => client.guilds.cache
+					.map(guild => guild.members.me?.voice?.channel?.id)
+					.filter(id => !!id)))
+				.flat()
+				.forEach(setVoiceStatus);
 		}
+		// 10s is a bit long but the status actually changes several seconds before the audio anyway?
 	}, ms('10s'));
 
 	// server count posting

@@ -50,6 +50,9 @@ importers:
       node-fetch:
         specifier: ^2.6.7
         version: 2.6.7
+      p-throttle:
+        specifier: ^8.1.1
+        version: 8.1.1
       spacetime:
         specifier: ^6.16.3
         version: 6.16.3
@@ -663,6 +666,10 @@ packages:
   optionator@0.9.1:
     resolution: {integrity: sha512-74RlY5FCnhq4jRxVUPKDaRwrVNXMqsGsiW6AJw4XK8hmtm10wC0ypZBLw5IIp85NZMr91+qd1RvvENwg7jjRFw==}
     engines: {node: '>= 0.8.0'}
+
+  p-throttle@8.1.1:
+    resolution: {integrity: sha512-xxWFBUyvbrQ10XC3VAr0SoXoOCKXqCX/yvbFIkBE98upphHFwjIKR6AId13ZH3jngFfF6yK43QTOtrngYAmFMA==}
+    engines: {node: '>=20'}
 
   parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
@@ -1538,6 +1545,8 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
       word-wrap: 1.2.4
+
+  p-throttle@8.1.1: {}
 
   parent-module@1.0.1:
     dependencies:

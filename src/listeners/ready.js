@@ -2,9 +2,15 @@ const EventListener = require('../modules/listeners/listener');
 const { presences } = require('../../config');
 const ms = require('ms');
 const christmas = require('@eartharoid/christmas');
-const { REST } = require('@discordjs/rest');
 
-const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
+const { default: pThrottle } = require('p-throttle');
+const throttle = pThrottle({
+	interval: 1000,
+	limit: 10
+});
+const disconnect = throttle(async voiceState => {
+	await voiceState.disconnect('DTX connection closed').catch(this.client.log.error);
+});
 
 module.exports = class ReadyEventListener extends EventListener {
 	constructor(client) {
@@ -80,6 +86,10 @@ module.exports = class ReadyEventListener extends EventListener {
 				new URL(`/ws/${shard.id}`, process.env.VOICE_URL),
 				{ headers: { authorization: `Bearer ${process.env.VOICE_SECRET}` } }
 			);
+			socket.addEventListener('open', () => {
+				this.client.voiceSocket = socket;
+				this.client.log.success('connected to voice service');
+			});
 			socket.addEventListener('message', event => {
 				const data = JSON.parse(event.data);
 				if (data.op !== 4) {
@@ -88,17 +98,19 @@ module.exports = class ReadyEventListener extends EventListener {
 				}
 				shard.send(data);
 			});
-			socket.addEventListener('close', () => {
-				this.client.voiceSocket = null;
-				this.client.log.warn('disconnected from voice service');
-				// ! this might cause mega spam leading to global rate limits?
-				// this.client.guilds.cache.each(guild => {
-				// 	guild.members.me?.voice?.disconnect('DTX connection closed');
-				// });
+			socket.addEventListener('close', event => {
+				if (this.client.voiceSocket) {
+					this.client.voiceSocket = null;
+					this.client.log.warn(event);
+					this.client.log.warn('disconnected from voice service');
+					this.client.guilds.cache
+						.filter(guild => guild.members.me?.voice?.channel)
+						.map(guild => guild.members.me?.voice)
+						.forEach(disconnect);
+				}
+				// attempt to reconnect
 				setTimeout(connect, 5e3);
 			});
-			this.client.voiceSocket = socket;
-			this.client.log.success('connected to voice service');
 		};
 
 		connect();
@@ -111,11 +123,6 @@ module.exports = class ReadyEventListener extends EventListener {
 					type:'LISTENING'
 				}, presences[Math.floor(Math.random() * presences.length)]]
 			});
-			for (const guild of this.client.guilds.cache.values()) {
-				const channel = guild.members.me?.voice?.channel;
-				if (!channel) continue;
-				rest.put(`/channels/${channel.id}/voice-status`, { body: { status: message.radioSongUpdate || null } }).catch(this.client.log.error);
-			}
 		});
 
 	}
