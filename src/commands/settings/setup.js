@@ -146,6 +146,7 @@ module.exports = class SetupCommand extends Command {
 						? i18n('widget.christmas_eve', hours, { hours })
 						: i18n('widget.normal', { sleeps });
 				const channel = await interaction.guild.channels.create(name, {
+					bitrate: 96_000,
 					permissionOverwrites: [
 						{
 							allow: [Permissions.FLAGS.VIEW_CHANNEL, Permissions.FLAGS.CONNECT],
