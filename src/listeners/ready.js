@@ -106,7 +106,7 @@ module.exports = class ReadyEventListener extends EventListener {
 			if (!message.radioSongUpdate) return;
 			this.client.user.setPresence({
 				activities: [{
-					name: message.radioSongUpdate,
+					name: '🎶 ' + message.radioSongUpdate,
 					type:'LISTENING'
 				}, presences[Math.floor(Math.random() * presences.length)]]
 			});

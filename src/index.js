@@ -77,7 +77,10 @@ manager.spawn().then(async shards => {
 	let previousSong;
 	setInterval(async () => {
 		const res = await fetch('https://www.radio-xmas.at/api/nowplaying.php');
-		if (!res.ok) return;
+		if (!res.ok) {
+			log.warn.manager('now-playing request failed');
+			return;
+		}
 		const data = await res.json();
 		const currentSong = data.songs?.[0]?.raw;
 		if (currentSong !== previousSong) {

@@ -21,7 +21,7 @@ module.exports = class SetupCommand extends Command {
 							value: 'webhook'
 						},
 						{
-							name: 'Widget (voice channel)',
+							name: 'Widget-radio (voice channel)',
 							value: 'voice'
 						}
 					],
@@ -129,6 +129,14 @@ module.exports = class SetupCommand extends Command {
 			}
 
 			try {
+				if (g_settings.voice_channel) {
+					await interaction.guild.channels.cache.get(g_settings.voice_channel)?.delete('recreating');
+				}
+			} catch (_error) {
+				// ignore
+			}
+
+			try {
 				const timezone = u_settings?.timezone ?? g_settings?.timezone ?? 'UTC';
 				const sleeps = christmas.getSleeps(timezone);
 				const hours = Math.floor(christmas.getHours(timezone));
@@ -140,12 +148,12 @@ module.exports = class SetupCommand extends Command {
 				const channel = await interaction.guild.channels.create(name, {
 					permissionOverwrites: [
 						{
-							allow: [Permissions.FLAGS.VIEW_CHANNEL],
-							deny: [Permissions.FLAGS.CONNECT, Permissions.FLAGS.SEND_MESSAGES],
+							allow: [Permissions.FLAGS.VIEW_CHANNEL, Permissions.FLAGS.CONNECT],
+							deny: [Permissions.FLAGS.SPEAK, Permissions.FLAGS.SEND_MESSAGES],
 							id: interaction.guild.roles.everyone
 						},
 						{
-							allow: [Permissions.FLAGS.CONNECT, Permissions.FLAGS.MANAGE_CHANNELS],
+							allow: [Permissions.FLAGS.SPEAK, Permissions.FLAGS.SEND_MESSAGES, Permissions.FLAGS.MANAGE_CHANNELS],
 							deny: [],
 							id: interaction.guild.me
 						}

@@ -117,8 +117,14 @@
 												"title": "🏓 Pong!"
 								},
 								"radio": {
-												"description": "**[Add the Christmas Radio bot]({url})** to listen to Christmas music in your Discord server.",
-												"title": "Christmas Radio"
+									"join": {
+													"description": "Join {channel} to listen to Christmas music.",
+													"title": "Listen to the Christmas Radio"
+									},
+									"setup": {
+													"description": "Create the Widget-radio voice channel with {setup}.",
+													"title": "Set up the radio"
+									}
 								},
 								"seconds": {
 												"description": [
