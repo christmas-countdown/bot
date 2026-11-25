@@ -91,9 +91,10 @@ module.exports = class ReadyEventListener extends EventListener {
 			socket.addEventListener('close', () => {
 				this.client.voiceSocket = null;
 				this.client.log.warn('disconnected from voice service');
-				this.client.guilds.cache.each(guild => {
-					guild.members.me?.voice?.disconnect('DTX connection closed');
-				});
+				// ! this might cause mega spam leading to global rate limits?
+				// this.client.guilds.cache.each(guild => {
+				// 	guild.members.me?.voice?.disconnect('DTX connection closed');
+				// });
 				setTimeout(connect, 5e3);
 			});
 			this.client.voiceSocket = socket;
