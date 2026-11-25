@@ -2,6 +2,9 @@ const EventListener = require('../modules/listeners/listener');
 const { presences } = require('../../config');
 const ms = require('ms');
 const christmas = require('@eartharoid/christmas');
+const { REST } = require('@discordjs/rest');
+
+const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
 
 module.exports = class ReadyEventListener extends EventListener {
 	constructor(client) {
@@ -18,10 +21,10 @@ module.exports = class ReadyEventListener extends EventListener {
 		this.client.autocomplete.load();
 		this.client.secret_santa.startAutoCheck();
 
-		setInterval(() => {
-			this.client.log.debug('updating bot user presence');
-			this.client.user.setPresence({ activities: [presences[Math.floor(Math.random() * presences.length)]] });
-		}, ms('30s'));
+		// setInterval(() => {
+		// 	this.client.log.debug('updating bot user presence');
+		// 	this.client.user.setPresence({ activities: [presences[Math.floor(Math.random() * presences.length)]] });
+		// }, ms('30s'));
 
 		const updateWidgets = async () => {
 			this.client.log.info('Updating widgets');
@@ -98,6 +101,21 @@ module.exports = class ReadyEventListener extends EventListener {
 		};
 
 		connect();
+
+		process.on('message', async message => {
+			if (!message.radioSongUpdate) return;
+			this.client.user.setPresence({
+				activities: [{
+					name: message.radioSongUpdate,
+					type:'LISTENING'
+				}, presences[Math.floor(Math.random() * presences.length)]]
+			});
+			for (const guild of this.client.guilds.cache.values()) {
+				const channel = guild.members.me?.voice?.channel;
+				if (!channel) continue;
+				rest.put(`/channels/${channel.id}/voice-status`, { body: { status: message.radioSongUpdate || null } }).catch(this.client.log.error);
+			}
+		});
 
 	}
 };

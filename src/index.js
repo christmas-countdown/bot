@@ -74,6 +74,18 @@ manager.spawn().then(async shards => {
 	const tracker = require('./santa-tracker');
 	setInterval(() => tracker.track(manager, prisma, log), ms('1m'));
 
+	let previousSong;
+	setInterval(async () => {
+		const res = await fetch('https://www.radio-xmas.at/api/nowplaying.php');
+		if (!res.ok) return;
+		const data = await res.json();
+		const currentSong = data.songs?.[0]?.raw;
+		if (currentSong !== previousSong) {
+			previousSong = currentSong;
+			shards.each(shard => shard.send({ radioSongUpdate: currentSong }));
+		}
+	}, ms('10s'));
+
 	// server count posting
 	if (process.env.NODE_ENV === 'production' && process.env.TOPGG) {
 		log.info.manager('Server count posting is enabled');

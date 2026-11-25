@@ -11,7 +11,7 @@ module.exports = class ErrorEventListener extends EventListener {
 
 		let channelOfInterest = past.guild.members.me?.voice?.channel;
 
-		if (!channelOfInterest && present.channel.id === g_settings.voice_channel) {
+		if (!channelOfInterest && present.channel?.id === g_settings.voice_channel) {
 			channelOfInterest = present.channel;
 			return this.client.voiceSocket?.send(
 				JSON.stringify({
