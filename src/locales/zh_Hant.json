@@ -116,10 +116,6 @@
 												},
 												"title": "🏓 乓!"
 								},
-								"radio": {
-												"description": "**[加入聖誕倒數機器人]({url})** 以在你的Discord服務器播放聖誕音樂。",
-												"title": "聖誕收音機"
-								},
 								"seconds": {
 												"description": [
 																"聖誕前還有**{seconds}**秒！",

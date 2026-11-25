@@ -116,10 +116,6 @@
 												},
 												"title": "🏓 Pang!"
 								},
-								"radio": {
-												"description": "**[Legg til Juleradiohåndtlangeren]({url})** for å lytte til Julemusikk på din Discord-tjener.",
-												"title": "Juleradio"
-								},
 								"seconds": {
 												"description": [
 																"Det er **{seconds}** igjen til Jul!",

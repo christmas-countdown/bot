@@ -116,10 +116,6 @@
 												},
 												"title": "🏓 Pong!"
 								},
-								"radio": {
-												"description": "**[Přidej bota christmas Radio]({url})** a poslouchej na tvém serveru vánoční hudbu.",
-												"title": "Christmas Radio"
-								},
 								"seconds": {
 												"description": [
 																"Zbývá **{seconds}** sekunda do vánoc!",

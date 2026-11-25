@@ -116,10 +116,6 @@
 												},
 												"title": "🏓 Πονγκ!"
 								},
-								"radio": {
-												"description": "**[Προσθέστε το Christmas Radio bot]({url})** για να ακούτε χριστουγεννιάτικη μουσική στον διακομιστή Discord σας.",
-												"title": "Christmas Radio"
-								},
 								"seconds": {
 												"description": [
 																"Απομένει **{seconds}** δευτερόλεπτο μέχρι τα Χριστούγεννα!",

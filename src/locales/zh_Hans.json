@@ -116,10 +116,6 @@
 												},
 												"title": "🏓 乓！"
 								},
-								"radio": {
-												"description": "**[添加 Christmas Radio 机器人]({url})**，以便在您的 Discord 服务器中收听圣诞音乐。",
-												"title": "圣诞收音机"
-								},
 								"seconds": {
 												"description": [
 																"距离圣诞节还有 **{seconds}** 秒！",

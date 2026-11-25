@@ -116,10 +116,6 @@
 												},
 												"title": "🏓 Bàng!"
 								},
-								"radio": {
-												"description": "**[Thêm bot Radio Giáng sinh]({url})** để nghe nhạc Giáng sinh trên máy chủ Discord của bạn.",
-												"title": "Đài phát thanh Giáng sinh"
-								},
 								"seconds": {
 												"description": [
 																"Còn **{seconds}** giây nữa là đến Giáng sinh!",

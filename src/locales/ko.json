@@ -116,10 +116,6 @@
 												},
 												"title": "🏓 Pong!"
 								},
-								"radio": {
-												"description": "**[크리스마스 라디오 보트를 추가]({url})** 크리스마스 음악을 귀하의 Discord 서버에서 듣기 위해.",
-												"title": "Christmas Radio"
-								},
 								"seconds": {
 												"description": [
 																"**{seconds}** 크리스마스까지 두 번째 왼쪽!",

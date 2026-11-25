@@ -116,10 +116,6 @@
 												},
 												"title": "🏓 Pong !"
 								},
-								"radio": {
-												"description": "**[Ajouter le bot Christmas Radio]({url})** pour écouter de la musique de Noël sur votre serveur Discord.",
-												"title": "Radio de Noël"
-								},
 								"seconds": {
 												"description": [
 																"Il reste **{seconds}** seconde avant Noël !",

@@ -116,10 +116,6 @@
 												},
 												"title": "🏓 Pong!"
 								},
-								"radio": {
-												"description": "**[Voeg de Christmas Radio-bot]({url})** toe om naar Kerstmuziek te luisteren op je discordserver.",
-												"title": "Christmas Radio"
-								},
 								"seconds": {
 												"description": [
 																"Over **{seconds}** seconde is het Kerstmis!",
