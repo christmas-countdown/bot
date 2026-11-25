@@ -8,9 +8,6 @@ const throttle = pThrottle({
 	interval: 1000,
 	limit: 10
 });
-const disconnect = throttle(async voiceState => {
-	await voiceState.disconnect('DTX connection closed').catch(this.client.log.error);
-});
 
 module.exports = class ReadyEventListener extends EventListener {
 	constructor(client) {
@@ -79,6 +76,10 @@ module.exports = class ReadyEventListener extends EventListener {
 		updateWidgets();
 		setInterval(() => updateWidgets(), ms('1h'));
 
+
+		const disconnect = throttle(async voiceState => {
+			await voiceState.disconnect('DTX connection closed').catch(this.client.log.error);
+		});
 
 		const connect = () => {
 			const shard = this.client.ws.shards.first();
