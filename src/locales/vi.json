@@ -116,6 +116,16 @@
 												},
 												"title": "🏓 Bàng!"
 								},
+								"radio": {
+												"join": {
+																"description": "Join {channel} to listen to Christmas music.",
+																"title": "Listen to the Christmas Radio"
+												},
+												"setup": {
+																"description": "Create the Widget-radio voice channel with {setup}.",
+																"title": "Set up the radio"
+												}
+								},
 								"seconds": {
 												"description": [
 																"Còn **{seconds}** giây nữa là đến Giáng sinh!",
