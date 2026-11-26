@@ -122,7 +122,7 @@ module.exports = class ReadyEventListener extends EventListener {
 				activities: [{
 					name: '🎶 ' + message.radioSongUpdate,
 					type:'LISTENING'
-				}, presences[Math.floor(Math.random() * presences.length)]]
+				}]
 			});
 		});
 
