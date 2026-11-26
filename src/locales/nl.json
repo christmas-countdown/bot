@@ -118,12 +118,12 @@
 								},
 								"radio": {
 												"join": {
-																"description": "Join {channel} to listen to Christmas music.",
-																"title": "Listen to the Christmas Radio"
+																"description": "Neem deel aan {channel} om naar kerstmuziek te luisteren.",
+																"title": "Kerstradio beluisteren"
 												},
 												"setup": {
-																"description": "Create the Widget-radio voice channel with {setup}.",
-																"title": "Set up the radio"
+																"description": "Maak een widget-radiokanaal aan, aan de hand van {setup}.",
+																"title": "Radio instellen"
 												}
 								},
 								"seconds": {
